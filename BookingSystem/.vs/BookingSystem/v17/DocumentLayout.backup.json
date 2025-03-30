@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Strini\\source\\repos\\MajorGroupProject\\BookingSystem\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{3CA5BB77-2556-470B-8174-B02623B17109}|BookingSystem.csproj|C:\\Users\\Strini\\source\\repos\\MajorGroupProject\\BookingSystem\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{3CA5BB77-2556-470B-8174-B02623B17109}|BookingSystem.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3CA5BB77-2556-470B-8174-B02623B17109}|BookingSystem.csproj|c:\\users\\strini\\source\\repos\\majorgroupproject\\bookingsystem\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{3CA5BB77-2556-470B-8174-B02623B17109}|BookingSystem.csproj|solutionrelative:form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3CA5BB77-2556-470B-8174-B02623B17109}|BookingSystem.csproj|C:\\Users\\Strini\\source\\repos\\MajorGroupProject\\BookingSystem\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3CA5BB77-2556-470B-8174-B02623B17109}|BookingSystem.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3CA5BB77-2556-470B-8174-B02623B17109}|BookingSystem.csproj|C:\\Users\\Strini\\source\\repos\\MajorGroupProject\\BookingSystem\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{3CA5BB77-2556-470B-8174-B02623B17109}|BookingSystem.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,19 +22,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Form2.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Strini\\source\\repos\\MajorGroupProject\\BookingSystem\\Form2.cs",
               "RelativeDocumentMoniker": "Form2.cs",
@@ -46,7 +42,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\Strini\\source\\repos\\MajorGroupProject\\BookingSystem\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
@@ -59,7 +55,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Strini\\source\\repos\\MajorGroupProject\\BookingSystem\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",

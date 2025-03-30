@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\Strini\\source\\repos\\MajorGroupProject\\BookingSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3CA5BB77-2556-470B-8174-B02623B17109}|BookingSystem.csproj|C:\\Users\\Strini\\source\\repos\\MajorGroupProject\\BookingSystem\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{3CA5BB77-2556-470B-8174-B02623B17109}|BookingSystem.csproj|c:\\users\\strini\\source\\repos\\majorgroupproject\\bookingsystem\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{3CA5BB77-2556-470B-8174-B02623B17109}|BookingSystem.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3CA5BB77-2556-470B-8174-B02623B17109}|BookingSystem.csproj|c:\\users\\strini\\source\\repos\\majorgroupproject\\bookingsystem\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{3CA5BB77-2556-470B-8174-B02623B17109}|BookingSystem.csproj|C:\\Users\\Strini\\source\\repos\\MajorGroupProject\\BookingSystem\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{3CA5BB77-2556-470B-8174-B02623B17109}|BookingSystem.csproj|solutionrelative:form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -37,8 +37,7 @@
               "ToolTip": "C:\\Users\\Strini\\source\\repos\\MajorGroupProject\\BookingSystem\\Form2.cs [Design]",
               "RelativeToolTip": "Form2.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T11:21:24.387Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-03-27T11:21:24.387Z"
             },
             {
               "$type": "Document",
