@@ -28,24 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // textBox1
+            // label1
             // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.textBox1.Location = new System.Drawing.Point(122, 527);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(362, 40);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "Established @2025 by RoadMap Tech.\r\nAll rights reserved.";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(198, 536);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(215, 30);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Established @2025 By RoadMap Tech.\r\nAll Rights Reserved.";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
@@ -55,7 +51,7 @@
             this.BackgroundImage = global::BookingSystem.Properties.Resources.Logo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(605, 597);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
             this.Text = "StartUpForm";
@@ -66,7 +62,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label1;
     }
 }
 
