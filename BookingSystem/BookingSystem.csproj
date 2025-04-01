@@ -117,5 +117,14 @@
   <ItemGroup>
     <None Include="Resources\password.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pill button shape.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pill buttons.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
