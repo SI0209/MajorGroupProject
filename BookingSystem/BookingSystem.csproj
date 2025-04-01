@@ -65,6 +65,12 @@
     <Compile Include="Form3.Designer.cs">
       <DependentUpon>Form3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form4.Designer.cs">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -75,6 +81,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form3.resx">
       <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form4.resx">
+      <DependentUpon>Form4.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -167,6 +176,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\instructor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\panel logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dark blue.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\light blue.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\darker blue.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blue sky.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bleu.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
