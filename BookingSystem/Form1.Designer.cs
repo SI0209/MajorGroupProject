@@ -56,7 +56,7 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
-            this.Text = "StartUpForm";
+            this.Text = "StartUp";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -133,6 +133,16 @@ namespace BookingSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap profile {
+            get {
+                object obj = ResourceManager.GetObject("profile", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Profile_Icon {
             get {
                 object obj = ResourceManager.GetObject("Profile_Icon", resourceCulture);
@@ -146,6 +156,16 @@ namespace BookingSystem.Properties {
         internal static System.Drawing.Bitmap Profile_Icon1 {
             get {
                 object obj = ResourceManager.GetObject("Profile_Icon1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap profile1 {
+            get {
+                object obj = ResourceManager.GetObject("profile1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -176,6 +196,26 @@ namespace BookingSystem.Properties {
         internal static System.Drawing.Bitmap user_icon {
             get {
                 object obj = ResourceManager.GetObject("user icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap vehicle {
+            get {
+                object obj = ResourceManager.GetObject("vehicle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap white_profile {
+            get {
+                object obj = ResourceManager.GetObject("white profile", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -9,3 +9,4 @@ C:\Users\Strini\source\repos\MajorGroupProject\BookingSystem\obj\Debug\BookingSy
 C:\Users\Strini\source\repos\MajorGroupProject\BookingSystem\obj\Debug\BookingSystem.exe
 C:\Users\Strini\source\repos\MajorGroupProject\BookingSystem\obj\Debug\BookingSystem.pdb
 C:\Users\Strini\Source\Repos\MajorGroupProject\BookingSystem\obj\Debug\BookingSystem.LoginForm.resources
+C:\Users\Strini\Source\Repos\MajorGroupProject\BookingSystem\obj\Debug\BookingSystem.HomeForm.resources

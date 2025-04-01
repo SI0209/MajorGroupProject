@@ -192,7 +192,7 @@
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
             this.Name = "LoginForm";
-            this.Text = "LoginForm";
+            this.Text = "Login";
             this.Load += new System.EventHandler(this.LoginForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
