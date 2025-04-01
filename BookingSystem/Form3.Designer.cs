@@ -195,7 +195,7 @@
             // pictureBox7
             // 
             this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox7.BackgroundImage = global::BookingSystem.Properties.Resources.vehicle;
+            this.pictureBox7.BackgroundImage = global::BookingSystem.Properties.Resources.learner;
             this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox7.Location = new System.Drawing.Point(399, 275);
             this.pictureBox7.Name = "pictureBox7";
@@ -241,11 +241,11 @@
             // pictureBox11
             // 
             this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox11.BackgroundImage = global::BookingSystem.Properties.Resources.vehicle;
+            this.pictureBox11.BackgroundImage = global::BookingSystem.Properties.Resources.instructor;
             this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox11.Location = new System.Drawing.Point(161, 370);
             this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(30, 32);
+            this.pictureBox11.Size = new System.Drawing.Size(30, 28);
             this.pictureBox11.TabIndex = 24;
             this.pictureBox11.TabStop = false;
             // 
@@ -255,7 +255,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(194, 377);
+            this.label8.Location = new System.Drawing.Point(195, 377);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(85, 21);
             this.label8.TabIndex = 23;
