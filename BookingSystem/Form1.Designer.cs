@@ -35,10 +35,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(198, 536);
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(185, 536);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(215, 30);
+            this.label1.Size = new System.Drawing.Size(256, 38);
             this.label1.TabIndex = 0;
             this.label1.Text = "Established @2025 By RoadMap Tech.\r\nAll Rights Reserved.";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -48,10 +49,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.BackgroundImage = global::BookingSystem.Properties.Resources.Logo;
+            this.BackgroundImage = global::BookingSystem.Properties.Resources.Project_logo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(605, 597);
+            this.ClientSize = new System.Drawing.Size(627, 597);
             this.Controls.Add(this.label1);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
             this.Text = "StartUpForm";

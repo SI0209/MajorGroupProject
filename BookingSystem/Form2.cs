@@ -10,11 +10,26 @@ using System.Windows.Forms;
 
 namespace BookingSystem
 {
-    public partial class Form2 : Form
+    public partial class LoginForm : Form
     {
-        public Form2()
+        public LoginForm()
         {
             InitializeComponent();
+        }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
