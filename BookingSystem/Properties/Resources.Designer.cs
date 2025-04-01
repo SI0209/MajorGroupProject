@@ -93,6 +93,16 @@ namespace BookingSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap password {
+            get {
+                object obj = ResourceManager.GetObject("password", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Profile_Icon {
             get {
                 object obj = ResourceManager.GetObject("Profile_Icon", resourceCulture);
@@ -126,6 +136,16 @@ namespace BookingSystem.Properties {
         internal static System.Drawing.Bitmap Project_logo {
             get {
                 object obj = ResourceManager.GetObject("Project logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user_icon {
+            get {
+                object obj = ResourceManager.GetObject("user icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
