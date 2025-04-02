@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -39,7 +40,6 @@
             this.usernametextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -66,6 +66,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(444, 410);
             this.panel1.TabIndex = 0;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.Window;
+            this.label4.Location = new System.Drawing.Point(189, 320);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(62, 29);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Login";
             // 
             // pictureBox4
             // 
@@ -117,7 +128,7 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(139, 119);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(163, 48);
+            this.label3.Size = new System.Drawing.Size(159, 45);
             this.label3.TabIndex = 7;
             this.label3.Text = "Welcome";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -171,22 +182,11 @@
             this.label1.Text = "Username:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.Window;
-            this.label4.Location = new System.Drawing.Point(189, 320);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 29);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Login";
-            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::BookingSystem.Properties.Resources.Project_background;
+            this.BackgroundImage = global::BookingSystem.Properties.Resources.final_project_bg;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 565);
             this.Controls.Add(this.panel1);

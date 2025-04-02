@@ -127,6 +127,9 @@
   <data name="home" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\home.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Project_background_more_blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Project_background_more_blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="progress1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\progress1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -138,6 +141,9 @@
   </data>
   <data name="Project logo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Project logo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Project_background_blurred_white (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Project_background_blurred_white (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="lesson1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\lesson1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -172,6 +178,9 @@
   <data name="light blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\light blue.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Project_background_blurred_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Project_background_blurred_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Report" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Report.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -202,11 +211,17 @@
   <data name="panel logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\panel logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Project_background_darker_blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Project_background_darker_blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Bleu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Bleu.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Project background" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Project background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="log out" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\log out.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pill buttons" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pill buttons.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -217,10 +232,13 @@
   <data name="logo transparent" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo transparent.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Project_background_more_blue1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Project_background_more_blue1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Project logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Project logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="log out" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\log out.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="final project bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\final project bg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

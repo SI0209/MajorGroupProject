@@ -213,5 +213,23 @@
   <ItemGroup>
     <None Include="Resources\log out.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Project_background_blurred_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Project_background_darker_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Project_background_more_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Project_background_more_blue1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Project_background_blurred_white %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\final project bg.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

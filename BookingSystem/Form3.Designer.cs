@@ -332,7 +332,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::BookingSystem.Properties.Resources.Project_background;
+            this.BackgroundImage = global::BookingSystem.Properties.Resources.final_project_bg;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(650, 664);
             this.Controls.Add(this.pictureBox9);

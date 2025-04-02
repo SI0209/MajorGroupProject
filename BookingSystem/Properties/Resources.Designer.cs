@@ -123,6 +123,16 @@ namespace BookingSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap final_project_bg {
+            get {
+                object obj = ResourceManager.GetObject("final project bg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap home {
             get {
                 object obj = ResourceManager.GetObject("home", resourceCulture);
@@ -336,6 +346,56 @@ namespace BookingSystem.Properties {
         internal static System.Drawing.Bitmap Project_background {
             get {
                 object obj = ResourceManager.GetObject("Project background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Project_background_blurred_white {
+            get {
+                object obj = ResourceManager.GetObject("Project_background_blurred_white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Project_background_blurred_white__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Project_background_blurred_white (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Project_background_darker_blue {
+            get {
+                object obj = ResourceManager.GetObject("Project_background_darker_blue", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Project_background_more_blue {
+            get {
+                object obj = ResourceManager.GetObject("Project_background_more_blue", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Project_background_more_blue1 {
+            get {
+                object obj = ResourceManager.GetObject("Project_background_more_blue1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
