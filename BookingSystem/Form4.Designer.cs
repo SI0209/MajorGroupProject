@@ -147,8 +147,8 @@
             this.BackgroundImage = global::BookingSystem.Properties.Resources.Project_background_blurred_white__1_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.label3);
             this.DoubleBuffered = true;
             this.Name = "ProfileForm";
             this.Text = "Profile";
