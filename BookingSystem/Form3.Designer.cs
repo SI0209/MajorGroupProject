@@ -74,7 +74,7 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(226, 44);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 48);
+            this.label3.Size = new System.Drawing.Size(0, 45);
             this.label3.TabIndex = 8;
             // 
             // label1
@@ -279,7 +279,7 @@
             this.pictureBox15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox15.Location = new System.Drawing.Point(399, 370);
             this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(39, 39);
+            this.pictureBox15.Size = new System.Drawing.Size(30, 39);
             this.pictureBox15.TabIndex = 30;
             this.pictureBox15.TabStop = false;
             // 
@@ -300,7 +300,7 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(435, 370);
+            this.label11.Location = new System.Drawing.Point(426, 367);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(82, 42);
             this.label11.TabIndex = 34;

@@ -195,5 +195,23 @@
   <ItemGroup>
     <None Include="Resources\Bleu.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Transparent logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Project logo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo transparent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log out.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
