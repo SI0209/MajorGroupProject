@@ -10,16 +10,3 @@ C:\Users\Strini\source\repos\MajorGroupProject\BookingSystem\obj\Debug\BookingSy
 C:\Users\Strini\source\repos\MajorGroupProject\BookingSystem\obj\Debug\BookingSystem.pdb
 C:\Users\Strini\Source\Repos\MajorGroupProject\BookingSystem\obj\Debug\BookingSystem.LoginForm.resources
 C:\Users\Strini\Source\Repos\MajorGroupProject\BookingSystem\obj\Debug\BookingSystem.HomeForm.resources
-D:\University Work\Major Project\MajorGroupProject\BookingSystem\bin\Debug\BookingSystem.exe.config
-D:\University Work\Major Project\MajorGroupProject\BookingSystem\bin\Debug\BookingSystem.exe
-D:\University Work\Major Project\MajorGroupProject\BookingSystem\bin\Debug\BookingSystem.pdb
-D:\University Work\Major Project\MajorGroupProject\BookingSystem\obj\Debug\BookingSystem.csproj.AssemblyReference.cache
-D:\University Work\Major Project\MajorGroupProject\BookingSystem\obj\Debug\BookingSystem.Form1.resources
-D:\University Work\Major Project\MajorGroupProject\BookingSystem\obj\Debug\BookingSystem.LoginForm.resources
-D:\University Work\Major Project\MajorGroupProject\BookingSystem\obj\Debug\BookingSystem.HomeForm.resources
-D:\University Work\Major Project\MajorGroupProject\BookingSystem\obj\Debug\BookingSystem.ProfileForm.resources
-D:\University Work\Major Project\MajorGroupProject\BookingSystem\obj\Debug\BookingSystem.Properties.Resources.resources
-D:\University Work\Major Project\MajorGroupProject\BookingSystem\obj\Debug\BookingSystem.csproj.GenerateResource.cache
-D:\University Work\Major Project\MajorGroupProject\BookingSystem\obj\Debug\BookingSystem.csproj.CoreCompileInputs.cache
-D:\University Work\Major Project\MajorGroupProject\BookingSystem\obj\Debug\BookingSystem.exe
-D:\University Work\Major Project\MajorGroupProject\BookingSystem\obj\Debug\BookingSystem.pdb

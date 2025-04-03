@@ -19,10 +19,7 @@ namespace BookingSystem
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
-            this.BackgroundImage = null; // Remove the default background image
-            this.FormBorderStyle = FormBorderStyle.None;
-            this.BackColor = Color.FromArgb(50, 50, 50);
-            this.TransparencyKey = Color.FromArgb(50, 50, 50);
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -49,48 +46,5 @@ namespace BookingSystem
         {
 
         }
-
-        private bool isPainting = false;
-
-        private void LoginForm_Paint(object sender, PaintEventArgs e)
-        {
-            if (isPainting) return;
-
-            isPainting = true;
-            base.OnPaint(e);
-
-            // Create a gradient background
-            using (System.Drawing.Drawing2D.LinearGradientBrush brush = new System.Drawing.Drawing2D.LinearGradientBrush(
-                this.ClientRectangle,
-                Color.FromArgb((255/2), 1, 0, 69),  // Dark blue (left side)
-                Color.FromArgb((255/2), 2, 0, 196), // Lighter but dark blue (right side)
-                45F))  // Angle of the gradient
-            {
-                e.Graphics.FillRectangle(brush, this.ClientRectangle);
-            }
-
-            isPainting = false;
-        }
-
-
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-            base.OnPaint(e);
-
-            // Create a gradient background
-            using (System.Drawing.Drawing2D.LinearGradientBrush brush = new System.Drawing.Drawing2D.LinearGradientBrush(
-                this.ClientRectangle,
-                Color.FromArgb(255, 1, 0, 69),  // Dark blue (left side)
-                Color.FromArgb(255, 2, 0, 196), // Lighter but dark blue (right side)
-                0F))  // Angle of the gradient
-            {
-                e.Graphics.FillRectangle(brush, this.ClientRectangle);
-            }
-        }
     }
-    }
+}
