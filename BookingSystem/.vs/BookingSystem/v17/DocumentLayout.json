@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\University Work\\Major Project\\MajorGroupProject\\BookingSystem\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{3CA5BB77-2556-470B-8174-B02623B17109}|BookingSystem.csproj|d:\\university work\\major project\\majorgroupproject\\bookingsystem\\form5.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{3CA5BB77-2556-470B-8174-B02623B17109}|BookingSystem.csproj|solutionrelative:form5.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3CA5BB77-2556-470B-8174-B02623B17109}|BookingSystem.csproj|d:\\university work\\major project\\majorgroupproject\\bookingsystem\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{3CA5BB77-2556-470B-8174-B02623B17109}|BookingSystem.csproj|solutionrelative:form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
@@ -42,11 +46,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\University Work\\Major Project\\MajorGroupProject\\BookingSystem\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -58,12 +62,24 @@
               "IsPinned": true
             },
             {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form5.cs [Design]",
+              "DocumentMoniker": "D:\\University Work\\Major Project\\MajorGroupProject\\BookingSystem\\Form5.cs",
+              "RelativeDocumentMoniker": "Form5.cs",
+              "ToolTip": "D:\\University Work\\Major Project\\MajorGroupProject\\BookingSystem\\Form5.cs [Design]",
+              "RelativeToolTip": "Form5.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-04T19:25:05.011Z",
+              "EditorCaption": " [Design]"
+            },
+            {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Form2.cs [Design]",
               "DocumentMoniker": "D:\\University Work\\Major Project\\MajorGroupProject\\BookingSystem\\Form2.cs",
               "RelativeDocumentMoniker": "Form2.cs",
@@ -75,7 +91,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "D:\\University Work\\Major Project\\MajorGroupProject\\BookingSystem\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
@@ -86,7 +102,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Form2.Designer.cs",
               "DocumentMoniker": "D:\\University Work\\Major Project\\MajorGroupProject\\BookingSystem\\Form2.Designer.cs",
               "RelativeDocumentMoniker": "Form2.Designer.cs",
@@ -102,7 +118,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Form4.cs [Design]",
               "DocumentMoniker": "D:\\University Work\\Major Project\\MajorGroupProject\\BookingSystem\\Form4.cs",
               "RelativeDocumentMoniker": "Form4.cs",
@@ -113,7 +129,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Form2.cs",
               "DocumentMoniker": "D:\\University Work\\Major Project\\MajorGroupProject\\BookingSystem\\Form2.cs",
               "RelativeDocumentMoniker": "Form2.cs",
@@ -125,7 +141,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Resources.Designer.cs",
               "DocumentMoniker": "D:\\University Work\\Major Project\\MajorGroupProject\\BookingSystem\\Properties\\Resources.Designer.cs",
               "RelativeDocumentMoniker": "Properties\\Resources.Designer.cs",
@@ -137,7 +153,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Form3.cs [Design]",
               "DocumentMoniker": "D:\\University Work\\Major Project\\MajorGroupProject\\BookingSystem\\Form3.cs",
               "RelativeDocumentMoniker": "Form3.cs",
