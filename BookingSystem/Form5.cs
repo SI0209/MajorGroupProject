@@ -10,14 +10,24 @@ using System.Windows.Forms;
 
 namespace BookingSystem
 {
-    public partial class HomeForm : Form
+    public partial class Form5 : Form
     {
-        public HomeForm()
+        public Form5()
         {
             InitializeComponent();
         }
 
-        private void HomeForm_Load(object sender, EventArgs e)
+        private void Form5_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
