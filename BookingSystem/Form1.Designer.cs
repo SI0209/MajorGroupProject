@@ -39,7 +39,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(185, 536);
+            this.label1.Location = new System.Drawing.Point(185, 545);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(256, 38);
             this.label1.TabIndex = 0;
@@ -51,9 +51,9 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = global::BookingSystem.Properties.Resources.logo_transparent;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(99, 83);
+            this.pictureBox1.Location = new System.Drawing.Point(103, 81);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(429, 431);
+            this.pictureBox1.Size = new System.Drawing.Size(413, 359);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
