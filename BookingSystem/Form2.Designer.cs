@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.LoginButton = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -38,7 +39,6 @@
             this.usernametextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.LoginButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -64,6 +64,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(444, 410);
             this.panel1.TabIndex = 0;
+            // 
+            // LoginButton
+            // 
+            this.LoginButton.Font = new System.Drawing.Font("Comic Sans MS", 11F, System.Drawing.FontStyle.Bold);
+            this.LoginButton.Location = new System.Drawing.Point(166, 326);
+            this.LoginButton.Name = "LoginButton";
+            this.LoginButton.Size = new System.Drawing.Size(110, 50);
+            this.LoginButton.TabIndex = 11;
+            this.LoginButton.Text = "Login";
+            this.LoginButton.UseVisualStyleBackColor = true;
+            this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
             // 
             // pictureBox3
             // 
@@ -158,16 +169,6 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Username:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // LoginButton
-            // 
-            this.LoginButton.Font = new System.Drawing.Font("Comic Sans MS", 11F, System.Drawing.FontStyle.Bold);
-            this.LoginButton.Location = new System.Drawing.Point(166, 326);
-            this.LoginButton.Name = "LoginButton";
-            this.LoginButton.Size = new System.Drawing.Size(110, 50);
-            this.LoginButton.TabIndex = 11;
-            this.LoginButton.Text = "Login";
-            this.LoginButton.UseVisualStyleBackColor = true;
             // 
             // LoginForm
             // 
