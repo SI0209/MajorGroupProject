@@ -1,4 +1,4 @@
-﻿namespace BookingSystem
+﻿namespace DrivingSchoolBookingSystem
 {
     partial class LoginForm
     {
@@ -48,7 +48,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.BackgroundImage = global::BookingSystem.Properties.Resources.Blue_sky;
+            this.panel1.BackgroundImage = global::DrivingSchoolBookingSystem.Properties.Resources.Blue_sky;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.LoginButton);
             this.panel1.Controls.Add(this.pictureBox3);
@@ -78,7 +78,7 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.BackgroundImage = global::BookingSystem.Properties.Resources.password;
+            this.pictureBox3.BackgroundImage = global::DrivingSchoolBookingSystem.Properties.Resources.password;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox3.Location = new System.Drawing.Point(21, 246);
             this.pictureBox3.Name = "pictureBox3";
@@ -88,7 +88,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.BackgroundImage = global::BookingSystem.Properties.Resources.user_icon;
+            this.pictureBox2.BackgroundImage = global::DrivingSchoolBookingSystem.Properties.Resources.user_icon;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Location = new System.Drawing.Point(21, 197);
             this.pictureBox2.Name = "pictureBox2";
@@ -100,7 +100,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = global::BookingSystem.Properties.Resources.Profile_Icon;
+            this.pictureBox1.BackgroundImage = global::DrivingSchoolBookingSystem.Properties.Resources.Profile_Icon;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(165, 19);
             this.pictureBox1.Name = "pictureBox1";
@@ -175,7 +175,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.BackgroundImage = global::BookingSystem.Properties.Resources.Background_final;
+            this.BackgroundImage = global::DrivingSchoolBookingSystem.Properties.Resources.Background_final;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 565);
             this.Controls.Add(this.panel1);

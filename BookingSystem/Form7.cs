@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BookingSystem
+namespace DrivingSchoolBookingSystem
 {
     public partial class Form7 : Form
     {

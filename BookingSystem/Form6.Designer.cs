@@ -1,4 +1,4 @@
-﻿namespace BookingSystem
+﻿namespace DrivingSchoolBookingSystem
 {
     partial class Form6
     {
@@ -280,7 +280,7 @@
             // button1
             // 
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Image = global::BookingSystem.Properties.Resources.dark_blue;
+            this.button1.Image = global::DrivingSchoolBookingSystem.Properties.Resources.dark_blue;
             this.button1.Location = new System.Drawing.Point(807, 57);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
@@ -293,7 +293,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pictureBox1.Image = global::BookingSystem.Properties.Resources.learner;
+            this.pictureBox1.Image = global::DrivingSchoolBookingSystem.Properties.Resources.learner;
             this.pictureBox1.Location = new System.Drawing.Point(465, 403);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
@@ -305,7 +305,7 @@
             // button2
             // 
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Image = global::BookingSystem.Properties.Resources.dark_blue;
+            this.button2.Image = global::DrivingSchoolBookingSystem.Properties.Resources.dark_blue;
             this.button2.Location = new System.Drawing.Point(807, 108);
             this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
@@ -317,7 +317,7 @@
             // button3
             // 
             this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Image = global::BookingSystem.Properties.Resources.dark_blue;
+            this.button3.Image = global::DrivingSchoolBookingSystem.Properties.Resources.dark_blue;
             this.button3.Location = new System.Drawing.Point(807, 160);
             this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button3.Name = "button3";
@@ -330,7 +330,7 @@
             // button4
             // 
             this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button4.Image = global::BookingSystem.Properties.Resources.dark_blue;
+            this.button4.Image = global::DrivingSchoolBookingSystem.Properties.Resources.dark_blue;
             this.button4.Location = new System.Drawing.Point(807, 212);
             this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button4.Name = "button4";
@@ -342,7 +342,7 @@
             // button5
             // 
             this.button5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button5.Image = global::BookingSystem.Properties.Resources.dark_blue;
+            this.button5.Image = global::DrivingSchoolBookingSystem.Properties.Resources.dark_blue;
             this.button5.Location = new System.Drawing.Point(807, 262);
             this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button5.Name = "button5";
@@ -354,7 +354,7 @@
             // button6
             // 
             this.button6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button6.Image = global::BookingSystem.Properties.Resources.dark_blue;
+            this.button6.Image = global::DrivingSchoolBookingSystem.Properties.Resources.dark_blue;
             this.button6.Location = new System.Drawing.Point(807, 311);
             this.button6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button6.Name = "button6";
@@ -380,7 +380,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::BookingSystem.Properties.Resources.Background_final;
+            this.BackgroundImage = global::DrivingSchoolBookingSystem.Properties.Resources.Background_final;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.label11);

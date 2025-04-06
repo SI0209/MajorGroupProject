@@ -1,4 +1,4 @@
-﻿namespace BookingSystem
+﻿namespace DrivingSchoolBookingSystem
 {
     partial class Form7
     {
@@ -50,7 +50,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::BookingSystem.Properties.Resources.instructor;
+            this.pictureBox1.Image = global::DrivingSchoolBookingSystem.Properties.Resources.instructor;
             this.pictureBox1.Location = new System.Drawing.Point(323, 454);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
@@ -64,7 +64,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::BookingSystem.Properties.Resources.Background_final;
+            this.BackgroundImage = global::DrivingSchoolBookingSystem.Properties.Resources.Background_final;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1005, 599);
             this.Controls.Add(this.label11);

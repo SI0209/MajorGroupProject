@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BookingSystem
+namespace DrivingSchoolBookingSystem
 {
     internal static class Program
     {
@@ -16,7 +16,7 @@ namespace BookingSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new HomeForm());
+            Application.Run(new Form1());
         }
     }
 }

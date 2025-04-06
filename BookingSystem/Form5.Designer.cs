@@ -1,4 +1,4 @@
-﻿namespace BookingSystem
+﻿namespace DrivingSchoolBookingSystem
 {
     partial class Form5
     {
@@ -88,7 +88,7 @@
             // button4
             // 
             this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button4.Image = global::BookingSystem.Properties.Resources.dark_blue;
+            this.button4.Image = global::DrivingSchoolBookingSystem.Properties.Resources.dark_blue;
             this.button4.Location = new System.Drawing.Point(695, 283);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(93, 43);
@@ -99,7 +99,7 @@
             // button3
             // 
             this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Image = global::BookingSystem.Properties.Resources.dark_blue;
+            this.button3.Image = global::DrivingSchoolBookingSystem.Properties.Resources.dark_blue;
             this.button3.Location = new System.Drawing.Point(568, 283);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(93, 43);
@@ -110,7 +110,7 @@
             // button2
             // 
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Image = global::BookingSystem.Properties.Resources.dark_blue;
+            this.button2.Image = global::DrivingSchoolBookingSystem.Properties.Resources.dark_blue;
             this.button2.Location = new System.Drawing.Point(445, 283);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(93, 43);
@@ -121,7 +121,7 @@
             // button1
             // 
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Image = global::BookingSystem.Properties.Resources.dark_blue;
+            this.button1.Image = global::DrivingSchoolBookingSystem.Properties.Resources.dark_blue;
             this.button1.Location = new System.Drawing.Point(325, 283);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(93, 43);
@@ -245,7 +245,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Black;
-            this.pictureBox1.Image = global::BookingSystem.Properties.Resources.vehicle;
+            this.pictureBox1.Image = global::DrivingSchoolBookingSystem.Properties.Resources.vehicle;
             this.pictureBox1.Location = new System.Drawing.Point(384, 451);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(133, 79);
