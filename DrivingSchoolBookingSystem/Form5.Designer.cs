@@ -30,7 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form5));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -47,11 +50,10 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.dgvVehicle = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVehicle)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -59,6 +61,7 @@
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.dgvVehicle);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.button4);
@@ -79,28 +82,62 @@
             this.panel1.Controls.Add(this.textBox3);
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Location = new System.Drawing.Point(61, 29);
+            this.panel1.Location = new System.Drawing.Point(19, 29);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1070, 557);
+            this.panel1.Size = new System.Drawing.Size(1150, 630);
             this.panel1.TabIndex = 0;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label9.Location = new System.Drawing.Point(29, 134);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(84, 16);
+            this.label9.TabIndex = 20;
+            this.label9.Text = "Vehicle Year";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 10.25F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(523, 562);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(191, 25);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "MANAGE VEHICLES";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // button4
             // 
             this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button4.Image = global::DrivingSchoolBookingSystem.Properties.Resources.dark_blue;
-            this.button4.Location = new System.Drawing.Point(695, 283);
+            this.button4.Location = new System.Drawing.Point(1015, 489);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(93, 43);
             this.button4.TabIndex = 18;
             this.button4.Text = "SEARCH";
             this.button4.UseVisualStyleBackColor = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Black;
+            this.pictureBox1.Image = global::DrivingSchoolBookingSystem.Properties.Resources.vehicle;
+            this.pictureBox1.Location = new System.Drawing.Point(384, 529);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(133, 79);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // button3
             // 
             this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button3.Image = global::DrivingSchoolBookingSystem.Properties.Resources.dark_blue;
-            this.button3.Location = new System.Drawing.Point(568, 283);
+            this.button3.Location = new System.Drawing.Point(888, 489);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(93, 43);
             this.button3.TabIndex = 17;
@@ -111,7 +148,7 @@
             // 
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button2.Image = global::DrivingSchoolBookingSystem.Properties.Resources.dark_blue;
-            this.button2.Location = new System.Drawing.Point(445, 283);
+            this.button2.Location = new System.Drawing.Point(765, 489);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(93, 43);
             this.button2.TabIndex = 16;
@@ -122,7 +159,7 @@
             // 
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.Image = global::DrivingSchoolBookingSystem.Properties.Resources.dark_blue;
-            this.button1.Location = new System.Drawing.Point(325, 283);
+            this.button1.Location = new System.Drawing.Point(645, 489);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(93, 43);
             this.button1.TabIndex = 15;
@@ -242,39 +279,15 @@
             this.textBox1.Size = new System.Drawing.Size(100, 22);
             this.textBox1.TabIndex = 0;
             // 
-            // pictureBox1
+            // dgvVehicle
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Black;
-            this.pictureBox1.Image = global::DrivingSchoolBookingSystem.Properties.Resources.vehicle;
-            this.pictureBox1.Location = new System.Drawing.Point(384, 451);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(133, 79);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 10.25F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(523, 484);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(191, 25);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "MANAGE VEHICLES";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label9.Location = new System.Drawing.Point(29, 134);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(84, 16);
-            this.label9.TabIndex = 20;
-            this.label9.Text = "Vehicle Year";
+            this.dgvVehicle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvVehicle.Location = new System.Drawing.Point(487, 48);
+            this.dgvVehicle.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvVehicle.Name = "dgvVehicle";
+            this.dgvVehicle.RowHeadersWidth = 51;
+            this.dgvVehicle.Size = new System.Drawing.Size(639, 390);
+            this.dgvVehicle.TabIndex = 37;
             // 
             // Form5
             // 
@@ -293,6 +306,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVehicle)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -320,5 +334,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.DataGridView dgvVehicle;
     }
 }
