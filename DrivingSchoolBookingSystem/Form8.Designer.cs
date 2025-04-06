@@ -1,0 +1,705 @@
+﻿namespace DrivingSchoolBookingSystem
+{
+    partial class Form8
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form8));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.dailyStatisticsTxtBx = new System.Windows.Forms.RichTextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label18 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pbVehicle = new System.Windows.Forms.PictureBox();
+            this.pbBooking = new System.Windows.Forms.PictureBox();
+            this.pbLessonCode = new System.Windows.Forms.PictureBox();
+            this.pbUnavailableSlot = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbLearner = new System.Windows.Forms.PictureBox();
+            this.pbBack = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pbEmployee = new System.Windows.Forms.PictureBox();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.pieChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.panel6.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbVehicle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBooking)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLessonCode)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUnavailableSlot)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLearner)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBack)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEmployee)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pieChart)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.Font = new System.Drawing.Font("Ebrima", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.Black;
+            this.label14.Location = new System.Drawing.Point(71, 26);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(127, 50);
+            this.label14.TabIndex = 55;
+            this.label14.Text = "10000";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Ebrima", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label10.Location = new System.Drawing.Point(63, 0);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(220, 28);
+            this.label10.TabIndex = 52;
+            this.label10.Text = "Total Revenue Gained";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Ebrima", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Black;
+            this.label9.Location = new System.Drawing.Point(96, 26);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(127, 50);
+            this.label9.TabIndex = 54;
+            this.label9.Text = "10000";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Ebrima", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label12.Location = new System.Drawing.Point(47, 0);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(192, 28);
+            this.label12.TabIndex = 52;
+            this.label12.Text = "Lessons Completed";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Font = new System.Drawing.Font("Ebrima", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.Black;
+            this.label13.Location = new System.Drawing.Point(80, 26);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(127, 50);
+            this.label13.TabIndex = 54;
+            this.label13.Text = "10000";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Ebrima", 16.2F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(873, 193);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(525, 38);
+            this.label6.TabIndex = 57;
+            this.label6.Text = "Top 3 Instructors: Bookings completed";
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.button3.Location = new System.Drawing.Point(587, 572);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(299, 49);
+            this.button3.TabIndex = 49;
+            this.button3.Text = "Print Daily Report";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Ebrima", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label7.Location = new System.Drawing.Point(49, 0);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(211, 28);
+            this.label7.TabIndex = 52;
+            this.label7.Text = "Number Of Bookings";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Font = new System.Drawing.Font("Ebrima", 8.25F, System.Drawing.FontStyle.Bold);
+            this.textBox4.Location = new System.Drawing.Point(256, 108);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.ReadOnly = true;
+            this.textBox4.Size = new System.Drawing.Size(165, 25);
+            this.textBox4.TabIndex = 62;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Font = new System.Drawing.Font("Ebrima", 8.25F, System.Drawing.FontStyle.Bold);
+            this.textBox3.Location = new System.Drawing.Point(256, 82);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
+            this.textBox3.Size = new System.Drawing.Size(165, 25);
+            this.textBox3.TabIndex = 61;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Ebrima", 8.25F, System.Drawing.FontStyle.Bold);
+            this.textBox2.Location = new System.Drawing.Point(256, 52);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(165, 25);
+            this.textBox2.TabIndex = 60;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Ebrima", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(256, 25);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(165, 25);
+            this.textBox1.TabIndex = 59;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Ebrima", 16.2F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Black;
+            this.label11.Location = new System.Drawing.Point(268, 196);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(295, 38);
+            this.label11.TabIndex = 55;
+            this.label11.Text = "Number Of Bookings";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.Color.Transparent;
+            this.label17.Font = new System.Drawing.Font("Ebrima", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label17.Location = new System.Drawing.Point(5, 82);
+            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(213, 28);
+            this.label17.TabIndex = 57;
+            this.label17.Text = "Number Of Vehicles :";
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel6.Controls.Add(this.label14);
+            this.panel6.Controls.Add(this.label10);
+            this.panel6.Location = new System.Drawing.Point(544, 103);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(401, 85);
+            this.panel6.TabIndex = 54;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.Transparent;
+            this.label15.Font = new System.Drawing.Font("Ebrima", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label15.Location = new System.Drawing.Point(5, 52);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(237, 28);
+            this.label15.TabIndex = 56;
+            this.label15.Text = "Number Of Instructors :";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.Transparent;
+            this.label16.Font = new System.Drawing.Font("Ebrima", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label16.Location = new System.Drawing.Point(5, 23);
+            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(228, 28);
+            this.label16.TabIndex = 55;
+            this.label16.Text = "Number Of Bookings : ";
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel7.Controls.Add(this.label9);
+            this.panel7.Controls.Add(this.label12);
+            this.panel7.Location = new System.Drawing.Point(953, 103);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(449, 85);
+            this.panel7.TabIndex = 54;
+            // 
+            // dailyStatisticsTxtBx
+            // 
+            this.dailyStatisticsTxtBx.Location = new System.Drawing.Point(4, 206);
+            this.dailyStatisticsTxtBx.Margin = new System.Windows.Forms.Padding(4);
+            this.dailyStatisticsTxtBx.Name = "dailyStatisticsTxtBx";
+            this.dailyStatisticsTxtBx.ReadOnly = true;
+            this.dailyStatisticsTxtBx.Size = new System.Drawing.Size(300, 429);
+            this.dailyStatisticsTxtBx.TabIndex = 8;
+            this.dailyStatisticsTxtBx.Text = "";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Ebrima", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(4, -7);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(182, 32);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Total Counters";
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel5.Controls.Add(this.label13);
+            this.panel5.Controls.Add(this.label7);
+            this.panel5.Location = new System.Drawing.Point(113, 103);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(423, 85);
+            this.panel5.TabIndex = 51;
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.button2.Location = new System.Drawing.Point(587, 676);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(299, 49);
+            this.button2.TabIndex = 47;
+            this.button2.Text = "Print Monthly Report";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.button1.Location = new System.Drawing.Point(587, 623);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(299, 49);
+            this.button1.TabIndex = 48;
+            this.button1.Text = "Print Weekly Report";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel2.Controls.Add(this.textBox4);
+            this.panel2.Controls.Add(this.textBox3);
+            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.label18);
+            this.panel2.Controls.Add(this.label17);
+            this.panel2.Controls.Add(this.label15);
+            this.panel2.Controls.Add(this.label16);
+            this.panel2.Controls.Add(this.dailyStatisticsTxtBx);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Location = new System.Drawing.Point(115, 572);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(461, 154);
+            this.panel2.TabIndex = 23;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.Transparent;
+            this.label18.Font = new System.Drawing.Font("Ebrima", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label18.Location = new System.Drawing.Point(5, 108);
+            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(194, 28);
+            this.label18.TabIndex = 58;
+            this.label18.Text = "Payments Unpaid : ";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.panel1.BackgroundImage = global::DrivingSchoolBookingSystem.Properties.Resources.final_project_bg;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.pieChart);
+            this.panel1.Controls.Add(this.chart1);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.label11);
+            this.panel1.Controls.Add(this.panel6);
+            this.panel1.Controls.Add(this.panel7);
+            this.panel1.Controls.Add(this.panel5);
+            this.panel1.Controls.Add(this.pictureBox7);
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Location = new System.Drawing.Point(13, 60);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1427, 748);
+            this.panel1.TabIndex = 120;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Ebrima", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.label3.Location = new System.Drawing.Point(108, 55);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(99, 28);
+            this.label3.TabIndex = 22;
+            this.label3.Text = "Analytics";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(1249, 20);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(126, 37);
+            this.label1.TabIndex = 121;
+            this.label1.Text = "Manager";
+            // 
+            // pbVehicle
+            // 
+            this.pbVehicle.BackColor = System.Drawing.Color.Transparent;
+            this.pbVehicle.Image = ((System.Drawing.Image)(resources.GetObject("pbVehicle.Image")));
+            this.pbVehicle.Location = new System.Drawing.Point(-76, 432);
+            this.pbVehicle.Margin = new System.Windows.Forms.Padding(4);
+            this.pbVehicle.Name = "pbVehicle";
+            this.pbVehicle.Size = new System.Drawing.Size(52, 48);
+            this.pbVehicle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbVehicle.TabIndex = 130;
+            this.pbVehicle.TabStop = false;
+            // 
+            // pbBooking
+            // 
+            this.pbBooking.BackColor = System.Drawing.Color.Transparent;
+            this.pbBooking.Location = new System.Drawing.Point(-76, 179);
+            this.pbBooking.Margin = new System.Windows.Forms.Padding(4);
+            this.pbBooking.Name = "pbBooking";
+            this.pbBooking.Size = new System.Drawing.Size(52, 48);
+            this.pbBooking.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbBooking.TabIndex = 129;
+            this.pbBooking.TabStop = false;
+            // 
+            // pbLessonCode
+            // 
+            this.pbLessonCode.BackColor = System.Drawing.Color.Transparent;
+            this.pbLessonCode.Location = new System.Drawing.Point(-76, 617);
+            this.pbLessonCode.Margin = new System.Windows.Forms.Padding(4);
+            this.pbLessonCode.Name = "pbLessonCode";
+            this.pbLessonCode.Size = new System.Drawing.Size(52, 48);
+            this.pbLessonCode.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLessonCode.TabIndex = 128;
+            this.pbLessonCode.TabStop = false;
+            // 
+            // pbUnavailableSlot
+            // 
+            this.pbUnavailableSlot.BackColor = System.Drawing.Color.Transparent;
+            this.pbUnavailableSlot.Location = new System.Drawing.Point(-76, 524);
+            this.pbUnavailableSlot.Margin = new System.Windows.Forms.Padding(4);
+            this.pbUnavailableSlot.Name = "pbUnavailableSlot";
+            this.pbUnavailableSlot.Size = new System.Drawing.Size(52, 48);
+            this.pbUnavailableSlot.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbUnavailableSlot.TabIndex = 127;
+            this.pbUnavailableSlot.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Gray;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(1388, 6);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(52, 48);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 123;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pbLearner
+            // 
+            this.pbLearner.BackColor = System.Drawing.Color.Transparent;
+            this.pbLearner.Image = ((System.Drawing.Image)(resources.GetObject("pbLearner.Image")));
+            this.pbLearner.Location = new System.Drawing.Point(-76, 260);
+            this.pbLearner.Margin = new System.Windows.Forms.Padding(4);
+            this.pbLearner.Name = "pbLearner";
+            this.pbLearner.Size = new System.Drawing.Size(52, 48);
+            this.pbLearner.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLearner.TabIndex = 126;
+            this.pbLearner.TabStop = false;
+            // 
+            // pbBack
+            // 
+            this.pbBack.BackColor = System.Drawing.Color.Transparent;
+            this.pbBack.Image = ((System.Drawing.Image)(resources.GetObject("pbBack.Image")));
+            this.pbBack.Location = new System.Drawing.Point(-76, 762);
+            this.pbBack.Margin = new System.Windows.Forms.Padding(4);
+            this.pbBack.Name = "pbBack";
+            this.pbBack.Size = new System.Drawing.Size(52, 48);
+            this.pbBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbBack.TabIndex = 124;
+            this.pbBack.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox7.Image = global::DrivingSchoolBookingSystem.Properties.Resources.Report;
+            this.pictureBox7.Location = new System.Drawing.Point(4, 34);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(96, 85);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 50;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pbEmployee
+            // 
+            this.pbEmployee.BackColor = System.Drawing.Color.Transparent;
+            this.pbEmployee.Image = ((System.Drawing.Image)(resources.GetObject("pbEmployee.Image")));
+            this.pbEmployee.Location = new System.Drawing.Point(-76, 347);
+            this.pbEmployee.Margin = new System.Windows.Forms.Padding(4);
+            this.pbEmployee.Name = "pbEmployee";
+            this.pbEmployee.Size = new System.Drawing.Size(52, 48);
+            this.pbEmployee.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbEmployee.TabIndex = 125;
+            this.pbEmployee.TabStop = false;
+            // 
+            // chart1
+            // 
+            chartArea4.BackColor = System.Drawing.Color.DimGray;
+            chartArea4.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.DiagonalLeft;
+            chartArea4.BackSecondaryColor = System.Drawing.Color.Transparent;
+            chartArea4.BorderColor = System.Drawing.Color.Transparent;
+            chartArea4.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.chart1.Legends.Add(legend4);
+            this.chart1.Location = new System.Drawing.Point(113, 248);
+            this.chart1.Name = "chart1";
+            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
+            this.chart1.PaletteCustomColors = new System.Drawing.Color[] {
+        System.Drawing.Color.Blue};
+            series4.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.TopBottom;
+            series4.BackSecondaryColor = System.Drawing.Color.MidnightBlue;
+            series4.BorderColor = System.Drawing.Color.Black;
+            series4.BorderWidth = 2;
+            series4.ChartArea = "ChartArea1";
+            series4.Color = System.Drawing.Color.Blue;
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.chart1.Series.Add(series4);
+            this.chart1.Size = new System.Drawing.Size(714, 300);
+            this.chart1.TabIndex = 58;
+            this.chart1.Text = "chart1";
+            // 
+            // pieChart
+            // 
+            chartArea3.AxisX.TitleFont = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea3.AxisY.TitleFont = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea3.AxisY2.TitleFont = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea3.Name = "ChartArea1";
+            this.pieChart.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.pieChart.Legends.Add(legend3);
+            this.pieChart.Location = new System.Drawing.Point(887, 248);
+            this.pieChart.Margin = new System.Windows.Forms.Padding(4);
+            this.pieChart.Name = "pieChart";
+            this.pieChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
+            this.pieChart.PaletteCustomColors = new System.Drawing.Color[] {
+        System.Drawing.Color.DodgerBlue,
+        System.Drawing.Color.CornflowerBlue,
+        System.Drawing.Color.RoyalBlue,
+        System.Drawing.Color.MediumBlue,
+        System.Drawing.Color.DarkBlue,
+        System.Drawing.Color.MidnightBlue,
+        System.Drawing.Color.SlateBlue};
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series3.Legend = "Legend1";
+            series3.Name = "s1";
+            this.pieChart.Series.Add(series3);
+            this.pieChart.Size = new System.Drawing.Size(509, 318);
+            this.pieChart.TabIndex = 60;
+            this.pieChart.Text = "chart2";
+            // 
+            // Form8
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::DrivingSchoolBookingSystem.Properties.Resources.Background_final;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1460, 877);
+            this.Controls.Add(this.pbVehicle);
+            this.Controls.Add(this.pbBooking);
+            this.Controls.Add(this.pbLessonCode);
+            this.Controls.Add(this.pbUnavailableSlot);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pbLearner);
+            this.Controls.Add(this.pbBack);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pbEmployee);
+            this.Controls.Add(this.label1);
+            this.DoubleBuffered = true;
+            this.Name = "Form8";
+            this.Text = "Form8";
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbVehicle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBooking)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLessonCode)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUnavailableSlot)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLearner)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBack)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEmployee)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pieChart)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.PictureBox pbVehicle;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.RichTextBox dailyStatisticsTxtBx;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.PictureBox pbBooking;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.PictureBox pbLessonCode;
+        private System.Windows.Forms.PictureBox pbUnavailableSlot;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbLearner;
+        private System.Windows.Forms.PictureBox pbBack;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pbEmployee;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart pieChart;
+    }
+}
