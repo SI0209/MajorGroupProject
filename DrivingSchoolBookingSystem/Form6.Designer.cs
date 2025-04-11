@@ -417,7 +417,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::DrivingSchoolBookingSystem.Properties.Resources.learner;
             this.pictureBox1.Location = new System.Drawing.Point(639, 38);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
