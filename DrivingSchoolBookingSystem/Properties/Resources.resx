@@ -169,6 +169,9 @@
   <data name="learner" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\learner.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="final project bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\final project bg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Blue sky" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Blue sky.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -238,7 +241,7 @@
   <data name="Project logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Project logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="final project bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\final project bg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="analytics2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\analytics2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
