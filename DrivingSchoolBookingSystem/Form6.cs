@@ -51,5 +51,12 @@ namespace DrivingSchoolBookingSystem
         {
 
         }
+
+        private void Form6_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'bookingSystemDataSet.tblInstructors' table. You can move, or remove it, as needed.
+            this.tblInstructorsTableAdapter.Fill(this.bookingSystemDataSet.tblInstructors);
+
+        }
     }
 }
