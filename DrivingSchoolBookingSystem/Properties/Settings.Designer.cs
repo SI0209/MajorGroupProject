@@ -22,5 +22,16 @@ namespace DrivingSchoolBookingSystem.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=SUHAIL-LAPTOP\\SQLEXPRESS;Initial Catalog=BookingSystem;Integrated Sec" +
+            "urity=True;TrustServerCertificate=True")]
+        public string BookingSystemConnectionString {
+            get {
+                return ((string)(this["BookingSystemConnectionString"]));
+            }
+        }
     }
 }
