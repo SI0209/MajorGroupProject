@@ -54,7 +54,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.dgvVehicle = new System.Windows.Forms.DataGridView();
+            this.dgvInstructor = new System.Windows.Forms.DataGridView();
             this.label11 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -65,7 +65,15 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.bookingSystemDataSet = new DrivingSchoolBookingSystem.BookingSystemDataSet();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvVehicle)).BeginInit();
+            this.instructorIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.instructorFNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.instructorSurnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.instructorAgeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.instructorGenderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.instructorRaceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.instructorUsernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.instructorPasswordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInstructor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -393,16 +401,28 @@
             this.button6.Text = "ASSIGN STUDENT";
             this.button6.UseVisualStyleBackColor = true;
             // 
-            // dgvVehicle
+            // dgvInstructor
             // 
-            this.dgvVehicle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVehicle.Location = new System.Drawing.Point(733, 213);
-            this.dgvVehicle.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvVehicle.Name = "dgvVehicle";
-            this.dgvVehicle.RowHeadersWidth = 51;
-            this.dgvVehicle.Size = new System.Drawing.Size(792, 455);
-            this.dgvVehicle.TabIndex = 38;
-            this.dgvVehicle.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVehicle_CellContentClick);
+            this.dgvInstructor.AutoGenerateColumns = false;
+            this.dgvInstructor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvInstructor.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.instructorIDDataGridViewTextBoxColumn,
+            this.instructorFNameDataGridViewTextBoxColumn,
+            this.instructorSurnameDataGridViewTextBoxColumn,
+            this.instructorAgeDataGridViewTextBoxColumn,
+            this.instructorGenderDataGridViewTextBoxColumn,
+            this.instructorRaceDataGridViewTextBoxColumn,
+            this.instructorUsernameDataGridViewTextBoxColumn,
+            this.instructorPasswordDataGridViewTextBoxColumn});
+            this.dgvInstructor.DataMember = "tblInstructors";
+            this.dgvInstructor.DataSource = this.bookingSystemDataSet;
+            this.dgvInstructor.Location = new System.Drawing.Point(733, 213);
+            this.dgvInstructor.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvInstructor.Name = "dgvInstructor";
+            this.dgvInstructor.RowHeadersWidth = 51;
+            this.dgvInstructor.Size = new System.Drawing.Size(792, 455);
+            this.dgvInstructor.TabIndex = 38;
+            this.dgvInstructor.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVehicle_CellContentClick);
             // 
             // label11
             // 
@@ -520,6 +540,70 @@
             this.bookingSystemDataSet.DataSetName = "BookingSystemDataSet";
             this.bookingSystemDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // instructorIDDataGridViewTextBoxColumn
+            // 
+            this.instructorIDDataGridViewTextBoxColumn.DataPropertyName = "InstructorID";
+            this.instructorIDDataGridViewTextBoxColumn.HeaderText = "InstructorID";
+            this.instructorIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.instructorIDDataGridViewTextBoxColumn.Name = "instructorIDDataGridViewTextBoxColumn";
+            this.instructorIDDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // instructorFNameDataGridViewTextBoxColumn
+            // 
+            this.instructorFNameDataGridViewTextBoxColumn.DataPropertyName = "Instructor_FName";
+            this.instructorFNameDataGridViewTextBoxColumn.HeaderText = "Instructor_FName";
+            this.instructorFNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.instructorFNameDataGridViewTextBoxColumn.Name = "instructorFNameDataGridViewTextBoxColumn";
+            this.instructorFNameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // instructorSurnameDataGridViewTextBoxColumn
+            // 
+            this.instructorSurnameDataGridViewTextBoxColumn.DataPropertyName = "Instructor_Surname";
+            this.instructorSurnameDataGridViewTextBoxColumn.HeaderText = "Instructor_Surname";
+            this.instructorSurnameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.instructorSurnameDataGridViewTextBoxColumn.Name = "instructorSurnameDataGridViewTextBoxColumn";
+            this.instructorSurnameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // instructorAgeDataGridViewTextBoxColumn
+            // 
+            this.instructorAgeDataGridViewTextBoxColumn.DataPropertyName = "Instructor_Age";
+            this.instructorAgeDataGridViewTextBoxColumn.HeaderText = "Instructor_Age";
+            this.instructorAgeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.instructorAgeDataGridViewTextBoxColumn.Name = "instructorAgeDataGridViewTextBoxColumn";
+            this.instructorAgeDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // instructorGenderDataGridViewTextBoxColumn
+            // 
+            this.instructorGenderDataGridViewTextBoxColumn.DataPropertyName = "Instructor_Gender";
+            this.instructorGenderDataGridViewTextBoxColumn.HeaderText = "Instructor_Gender";
+            this.instructorGenderDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.instructorGenderDataGridViewTextBoxColumn.Name = "instructorGenderDataGridViewTextBoxColumn";
+            this.instructorGenderDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // instructorRaceDataGridViewTextBoxColumn
+            // 
+            this.instructorRaceDataGridViewTextBoxColumn.DataPropertyName = "Instructor_Race";
+            this.instructorRaceDataGridViewTextBoxColumn.HeaderText = "Instructor_Race";
+            this.instructorRaceDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.instructorRaceDataGridViewTextBoxColumn.Name = "instructorRaceDataGridViewTextBoxColumn";
+            this.instructorRaceDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // instructorUsernameDataGridViewTextBoxColumn
+            // 
+            this.instructorUsernameDataGridViewTextBoxColumn.DataPropertyName = "Instructor_Username";
+            this.instructorUsernameDataGridViewTextBoxColumn.HeaderText = "Instructor_Username";
+            this.instructorUsernameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.instructorUsernameDataGridViewTextBoxColumn.Name = "instructorUsernameDataGridViewTextBoxColumn";
+            this.instructorUsernameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // instructorPasswordDataGridViewTextBoxColumn
+            // 
+            this.instructorPasswordDataGridViewTextBoxColumn.DataPropertyName = "Instructor_Password";
+            this.instructorPasswordDataGridViewTextBoxColumn.HeaderText = "Instructor_Password";
+            this.instructorPasswordDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.instructorPasswordDataGridViewTextBoxColumn.Name = "instructorPasswordDataGridViewTextBoxColumn";
+            this.instructorPasswordDataGridViewTextBoxColumn.Width = 125;
+            // 
             // Form6
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -530,7 +614,7 @@
             this.Controls.Add(this.label11);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.dgvVehicle);
+            this.Controls.Add(this.dgvInstructor);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
@@ -561,7 +645,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form6";
             this.Text = "Form6";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvVehicle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInstructor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -603,7 +687,7 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.DataGridView dgvVehicle;
+        private System.Windows.Forms.DataGridView dgvInstructor;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox5;
@@ -614,5 +698,13 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel2;
         private BookingSystemDataSet bookingSystemDataSet;
+        private System.Windows.Forms.DataGridViewTextBoxColumn instructorIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn instructorFNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn instructorSurnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn instructorAgeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn instructorGenderDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn instructorRaceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn instructorUsernameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn instructorPasswordDataGridViewTextBoxColumn;
     }
 }
