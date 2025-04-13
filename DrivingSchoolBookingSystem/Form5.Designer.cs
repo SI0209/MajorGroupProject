@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form5));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -58,6 +59,15 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.bookingSystemDataSet = new DrivingSchoolBookingSystem.BookingSystemDataSet();
+            this.tblVehicleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tblVehicleTableAdapter = new DrivingSchoolBookingSystem.BookingSystemDataSetTableAdapters.tblVehicleTableAdapter();
+            this.vehicleIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vehicleNumberPlateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vehicleEngineNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vehicleMakeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vehicleModelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vehicleMileageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVehicle)).BeginInit();
@@ -66,6 +76,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookingSystemDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblVehicleBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -125,12 +137,21 @@
             // 
             // dgvVehicle
             // 
+            this.dgvVehicle.AutoGenerateColumns = false;
             this.dgvVehicle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVehicle.Location = new System.Drawing.Point(487, 200);
+            this.dgvVehicle.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.vehicleIDDataGridViewTextBoxColumn,
+            this.vehicleNumberPlateDataGridViewTextBoxColumn,
+            this.vehicleEngineNumberDataGridViewTextBoxColumn,
+            this.vehicleMakeDataGridViewTextBoxColumn,
+            this.vehicleModelDataGridViewTextBoxColumn,
+            this.vehicleMileageDataGridViewTextBoxColumn});
+            this.dgvVehicle.DataSource = this.tblVehicleBindingSource;
+            this.dgvVehicle.Location = new System.Drawing.Point(481, 200);
             this.dgvVehicle.Margin = new System.Windows.Forms.Padding(4);
             this.dgvVehicle.Name = "dgvVehicle";
             this.dgvVehicle.RowHeadersWidth = 51;
-            this.dgvVehicle.Size = new System.Drawing.Size(639, 390);
+            this.dgvVehicle.Size = new System.Drawing.Size(654, 390);
             this.dgvVehicle.TabIndex = 37;
             // 
             // label9
@@ -404,6 +425,68 @@
             this.pictureBox5.TabIndex = 11;
             this.pictureBox5.TabStop = false;
             // 
+            // bookingSystemDataSet
+            // 
+            this.bookingSystemDataSet.DataSetName = "BookingSystemDataSet";
+            this.bookingSystemDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tblVehicleBindingSource
+            // 
+            this.tblVehicleBindingSource.DataMember = "tblVehicle";
+            this.tblVehicleBindingSource.DataSource = this.bookingSystemDataSet;
+            // 
+            // tblVehicleTableAdapter
+            // 
+            this.tblVehicleTableAdapter.ClearBeforeFill = true;
+            // 
+            // vehicleIDDataGridViewTextBoxColumn
+            // 
+            this.vehicleIDDataGridViewTextBoxColumn.DataPropertyName = "VehicleID";
+            this.vehicleIDDataGridViewTextBoxColumn.HeaderText = "VehicleID";
+            this.vehicleIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.vehicleIDDataGridViewTextBoxColumn.Name = "vehicleIDDataGridViewTextBoxColumn";
+            this.vehicleIDDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // vehicleNumberPlateDataGridViewTextBoxColumn
+            // 
+            this.vehicleNumberPlateDataGridViewTextBoxColumn.DataPropertyName = "Vehicle_NumberPlate";
+            this.vehicleNumberPlateDataGridViewTextBoxColumn.HeaderText = "Vehicle_NumberPlate";
+            this.vehicleNumberPlateDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.vehicleNumberPlateDataGridViewTextBoxColumn.Name = "vehicleNumberPlateDataGridViewTextBoxColumn";
+            this.vehicleNumberPlateDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // vehicleEngineNumberDataGridViewTextBoxColumn
+            // 
+            this.vehicleEngineNumberDataGridViewTextBoxColumn.DataPropertyName = "Vehicle_EngineNumber";
+            this.vehicleEngineNumberDataGridViewTextBoxColumn.HeaderText = "Vehicle_EngineNumber";
+            this.vehicleEngineNumberDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.vehicleEngineNumberDataGridViewTextBoxColumn.Name = "vehicleEngineNumberDataGridViewTextBoxColumn";
+            this.vehicleEngineNumberDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // vehicleMakeDataGridViewTextBoxColumn
+            // 
+            this.vehicleMakeDataGridViewTextBoxColumn.DataPropertyName = "Vehicle_Make";
+            this.vehicleMakeDataGridViewTextBoxColumn.HeaderText = "Vehicle_Make";
+            this.vehicleMakeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.vehicleMakeDataGridViewTextBoxColumn.Name = "vehicleMakeDataGridViewTextBoxColumn";
+            this.vehicleMakeDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // vehicleModelDataGridViewTextBoxColumn
+            // 
+            this.vehicleModelDataGridViewTextBoxColumn.DataPropertyName = "Vehicle_Model";
+            this.vehicleModelDataGridViewTextBoxColumn.HeaderText = "Vehicle_Model";
+            this.vehicleModelDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.vehicleModelDataGridViewTextBoxColumn.Name = "vehicleModelDataGridViewTextBoxColumn";
+            this.vehicleModelDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // vehicleMileageDataGridViewTextBoxColumn
+            // 
+            this.vehicleMileageDataGridViewTextBoxColumn.DataPropertyName = "Vehicle_Mileage";
+            this.vehicleMileageDataGridViewTextBoxColumn.HeaderText = "Vehicle_Mileage";
+            this.vehicleMileageDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.vehicleMileageDataGridViewTextBoxColumn.Name = "vehicleMileageDataGridViewTextBoxColumn";
+            this.vehicleMileageDataGridViewTextBoxColumn.Width = 125;
+            // 
             // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -429,6 +512,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookingSystemDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblVehicleBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -464,5 +549,14 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private BookingSystemDataSet bookingSystemDataSet;
+        private System.Windows.Forms.BindingSource tblVehicleBindingSource;
+        private BookingSystemDataSetTableAdapters.tblVehicleTableAdapter tblVehicleTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn vehicleIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn vehicleNumberPlateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn vehicleEngineNumberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn vehicleMakeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn vehicleModelDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn vehicleMileageDataGridViewTextBoxColumn;
     }
 }

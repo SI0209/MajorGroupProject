@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgvVehicle = new System.Windows.Forms.DataGridView();
+            this.components = new System.ComponentModel.Container();
             this.button1 = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -39,30 +39,34 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvVehicle)).BeginInit();
+            this.bookingSystemDataSet = new DrivingSchoolBookingSystem.BookingSystemDataSet();
+            this.tblLearnersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tblLearnersTableAdapter = new DrivingSchoolBookingSystem.BookingSystemDataSetTableAdapters.tblLearnersTableAdapter();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.learnerIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.learnerFNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.learnerSurnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.learnerIDNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.learnerAgeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.learnerGenderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.learnerCellNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookingSystemDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblLearnersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dgvVehicle
-            // 
-            this.dgvVehicle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVehicle.Location = new System.Drawing.Point(596, 213);
-            this.dgvVehicle.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvVehicle.Name = "dgvVehicle";
-            this.dgvVehicle.RowHeadersWidth = 51;
-            this.dgvVehicle.Size = new System.Drawing.Size(734, 450);
-            this.dgvVehicle.TabIndex = 39;
             // 
             // button1
             // 
+            this.button1.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.Image = global::DrivingSchoolBookingSystem.Properties.Resources.dark_blue;
-            this.button1.Location = new System.Drawing.Point(862, 686);
+            this.button1.Location = new System.Drawing.Point(795, 702);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(243, 87);
@@ -181,6 +185,96 @@
             this.pictureBox5.TabIndex = 11;
             this.pictureBox5.TabStop = false;
             // 
+            // bookingSystemDataSet
+            // 
+            this.bookingSystemDataSet.DataSetName = "BookingSystemDataSet";
+            this.bookingSystemDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tblLearnersBindingSource
+            // 
+            this.tblLearnersBindingSource.DataMember = "tblLearners";
+            this.tblLearnersBindingSource.DataSource = this.bookingSystemDataSet;
+            // 
+            // tblLearnersTableAdapter
+            // 
+            this.tblLearnersTableAdapter.ClearBeforeFill = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.learnerIDDataGridViewTextBoxColumn,
+            this.learnerFNameDataGridViewTextBoxColumn,
+            this.learnerSurnameDataGridViewTextBoxColumn,
+            this.learnerIDNumberDataGridViewTextBoxColumn,
+            this.learnerAgeDataGridViewTextBoxColumn,
+            this.learnerGenderDataGridViewTextBoxColumn,
+            this.learnerCellNumberDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.tblLearnersBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(493, 204);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(847, 472);
+            this.dataGridView1.TabIndex = 44;
+            // 
+            // learnerIDDataGridViewTextBoxColumn
+            // 
+            this.learnerIDDataGridViewTextBoxColumn.DataPropertyName = "LearnerID";
+            this.learnerIDDataGridViewTextBoxColumn.HeaderText = "LearnerID";
+            this.learnerIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.learnerIDDataGridViewTextBoxColumn.Name = "learnerIDDataGridViewTextBoxColumn";
+            this.learnerIDDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // learnerFNameDataGridViewTextBoxColumn
+            // 
+            this.learnerFNameDataGridViewTextBoxColumn.DataPropertyName = "Learner_FName";
+            this.learnerFNameDataGridViewTextBoxColumn.HeaderText = "Learner_FName";
+            this.learnerFNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.learnerFNameDataGridViewTextBoxColumn.Name = "learnerFNameDataGridViewTextBoxColumn";
+            this.learnerFNameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // learnerSurnameDataGridViewTextBoxColumn
+            // 
+            this.learnerSurnameDataGridViewTextBoxColumn.DataPropertyName = "Learner_Surname";
+            this.learnerSurnameDataGridViewTextBoxColumn.HeaderText = "Learner_Surname";
+            this.learnerSurnameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.learnerSurnameDataGridViewTextBoxColumn.Name = "learnerSurnameDataGridViewTextBoxColumn";
+            this.learnerSurnameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // learnerIDNumberDataGridViewTextBoxColumn
+            // 
+            this.learnerIDNumberDataGridViewTextBoxColumn.DataPropertyName = "Learner_IDNumber";
+            this.learnerIDNumberDataGridViewTextBoxColumn.HeaderText = "Learner_IDNumber";
+            this.learnerIDNumberDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.learnerIDNumberDataGridViewTextBoxColumn.Name = "learnerIDNumberDataGridViewTextBoxColumn";
+            this.learnerIDNumberDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // learnerAgeDataGridViewTextBoxColumn
+            // 
+            this.learnerAgeDataGridViewTextBoxColumn.DataPropertyName = "Learner_Age";
+            this.learnerAgeDataGridViewTextBoxColumn.HeaderText = "Learner_Age";
+            this.learnerAgeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.learnerAgeDataGridViewTextBoxColumn.Name = "learnerAgeDataGridViewTextBoxColumn";
+            this.learnerAgeDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // learnerGenderDataGridViewTextBoxColumn
+            // 
+            this.learnerGenderDataGridViewTextBoxColumn.DataPropertyName = "Learner_Gender";
+            this.learnerGenderDataGridViewTextBoxColumn.HeaderText = "Learner_Gender";
+            this.learnerGenderDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.learnerGenderDataGridViewTextBoxColumn.Name = "learnerGenderDataGridViewTextBoxColumn";
+            this.learnerGenderDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // learnerCellNumberDataGridViewTextBoxColumn
+            // 
+            this.learnerCellNumberDataGridViewTextBoxColumn.DataPropertyName = "Learner_CellNumber";
+            this.learnerCellNumberDataGridViewTextBoxColumn.HeaderText = "Learner_CellNumber";
+            this.learnerCellNumberDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.learnerCellNumberDataGridViewTextBoxColumn.Name = "learnerCellNumberDataGridViewTextBoxColumn";
+            this.learnerCellNumberDataGridViewTextBoxColumn.Width = 125;
+            // 
             // Form7
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -188,15 +282,15 @@
             this.BackgroundImage = global::DrivingSchoolBookingSystem.Properties.Resources.Background_final;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1369, 836);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.dgvVehicle);
             this.DoubleBuffered = true;
             this.Name = "Form7";
             this.Text = "Form7";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvVehicle)).EndInit();
+            this.Load += new System.EventHandler(this.Form7_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -204,13 +298,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookingSystemDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblLearnersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dgvVehicle;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -221,5 +317,16 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private BookingSystemDataSet bookingSystemDataSet;
+        private System.Windows.Forms.BindingSource tblLearnersBindingSource;
+        private BookingSystemDataSetTableAdapters.tblLearnersTableAdapter tblLearnersTableAdapter;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn learnerIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn learnerFNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn learnerSurnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn learnerIDNumberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn learnerAgeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn learnerGenderDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn learnerCellNumberDataGridViewTextBoxColumn;
     }
 }
