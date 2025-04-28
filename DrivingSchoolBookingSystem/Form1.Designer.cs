@@ -51,9 +51,9 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = global::DrivingSchoolBookingSystem.Properties.Resources.logo_transparent;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(131, 100);
+            this.pictureBox1.Location = new System.Drawing.Point(130, 99);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(338, 301);
+            this.pictureBox1.Size = new System.Drawing.Size(348, 323);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
