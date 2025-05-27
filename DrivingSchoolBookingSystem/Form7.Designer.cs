@@ -39,9 +39,8 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.bookingSystemDataSet = new DrivingSchoolBookingSystem.BookingSystemDataSet();
             this.tblLearnersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tblLearnersTableAdapter = new DrivingSchoolBookingSystem.BookingSystemDataSetTableAdapters.tblLearnersTableAdapter();
+            //this.tblLearnersTableAdapter = new DrivingSchoolBookingSystem.BookingSystemDataSetTableAdapters.tblLearnersTableAdapter();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.learnerIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.learnerFNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,7 +55,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bookingSystemDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblLearnersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -187,17 +185,15 @@
             // 
             // bookingSystemDataSet
             // 
-            this.bookingSystemDataSet.DataSetName = "BookingSystemDataSet";
-            this.bookingSystemDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            //this.bookingSystemDataSet.DataSetName = "BookingSystemDataSet";
+            //this.bookingSystemDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tblLearnersBindingSource
             // 
             this.tblLearnersBindingSource.DataMember = "tblLearners";
-            this.tblLearnersBindingSource.DataSource = this.bookingSystemDataSet;
             // 
             // tblLearnersTableAdapter
             // 
-            this.tblLearnersTableAdapter.ClearBeforeFill = true;
             // 
             // dataGridView1
             // 
@@ -298,7 +294,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bookingSystemDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblLearnersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -317,9 +312,7 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private BookingSystemDataSet bookingSystemDataSet;
         private System.Windows.Forms.BindingSource tblLearnersBindingSource;
-        private BookingSystemDataSetTableAdapters.tblLearnersTableAdapter tblLearnersTableAdapter;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn learnerIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn learnerFNameDataGridViewTextBoxColumn;

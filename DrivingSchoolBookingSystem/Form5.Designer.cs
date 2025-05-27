@@ -34,14 +34,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dgvVehicle = new System.Windows.Forms.DataGridView();
-            this.vehicleIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vehicleNumberPlateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vehicleEngineNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vehicleMakeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vehicleModelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vehicleMileageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tblVehicleBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bookingSystemDataSet = new DrivingSchoolBookingSystem.BookingSystemDataSet();
             this.label9 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -67,17 +60,26 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.tblVehicleTableAdapter = new DrivingSchoolBookingSystem.BookingSystemDataSetTableAdapters.tblVehicleTableAdapter();
+            this.wstGrp2DataSet = new BookingSystem.WstGrp2DataSet();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vehicleRegNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vehicleEngineNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vehicleSizeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vehicleStatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.taVehicle = new BookingSystem.WstGrp2DataSetTableAdapters.tblVehicleTableAdapter();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVehicle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblVehicleBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bookingSystemDataSet)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wstGrp2DataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -141,12 +143,14 @@
             this.dgvVehicle.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvVehicle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVehicle.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.vehicleIDDataGridViewTextBoxColumn,
-            this.vehicleNumberPlateDataGridViewTextBoxColumn,
-            this.vehicleEngineNumberDataGridViewTextBoxColumn,
-            this.vehicleMakeDataGridViewTextBoxColumn,
-            this.vehicleModelDataGridViewTextBoxColumn,
-            this.vehicleMileageDataGridViewTextBoxColumn});
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.vehicleRegNumDataGridViewTextBoxColumn,
+            this.vehicleEngineNumDataGridViewTextBoxColumn,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.vehicleSizeDataGridViewTextBoxColumn,
+            this.vehicleStatusDataGridViewTextBoxColumn});
             this.dgvVehicle.DataSource = this.tblVehicleBindingSource;
             this.dgvVehicle.Location = new System.Drawing.Point(481, 200);
             this.dgvVehicle.Margin = new System.Windows.Forms.Padding(4);
@@ -155,63 +159,10 @@
             this.dgvVehicle.Size = new System.Drawing.Size(654, 390);
             this.dgvVehicle.TabIndex = 37;
             // 
-            // vehicleIDDataGridViewTextBoxColumn
-            // 
-            this.vehicleIDDataGridViewTextBoxColumn.DataPropertyName = "VehicleID";
-            this.vehicleIDDataGridViewTextBoxColumn.HeaderText = "VehicleID";
-            this.vehicleIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.vehicleIDDataGridViewTextBoxColumn.Name = "vehicleIDDataGridViewTextBoxColumn";
-            this.vehicleIDDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // vehicleNumberPlateDataGridViewTextBoxColumn
-            // 
-            this.vehicleNumberPlateDataGridViewTextBoxColumn.DataPropertyName = "Vehicle_NumberPlate";
-            this.vehicleNumberPlateDataGridViewTextBoxColumn.HeaderText = "Vehicle_NumberPlate";
-            this.vehicleNumberPlateDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.vehicleNumberPlateDataGridViewTextBoxColumn.Name = "vehicleNumberPlateDataGridViewTextBoxColumn";
-            this.vehicleNumberPlateDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // vehicleEngineNumberDataGridViewTextBoxColumn
-            // 
-            this.vehicleEngineNumberDataGridViewTextBoxColumn.DataPropertyName = "Vehicle_EngineNumber";
-            this.vehicleEngineNumberDataGridViewTextBoxColumn.HeaderText = "Vehicle_EngineNumber";
-            this.vehicleEngineNumberDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.vehicleEngineNumberDataGridViewTextBoxColumn.Name = "vehicleEngineNumberDataGridViewTextBoxColumn";
-            this.vehicleEngineNumberDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // vehicleMakeDataGridViewTextBoxColumn
-            // 
-            this.vehicleMakeDataGridViewTextBoxColumn.DataPropertyName = "Vehicle_Make";
-            this.vehicleMakeDataGridViewTextBoxColumn.HeaderText = "Vehicle_Make";
-            this.vehicleMakeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.vehicleMakeDataGridViewTextBoxColumn.Name = "vehicleMakeDataGridViewTextBoxColumn";
-            this.vehicleMakeDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // vehicleModelDataGridViewTextBoxColumn
-            // 
-            this.vehicleModelDataGridViewTextBoxColumn.DataPropertyName = "Vehicle_Model";
-            this.vehicleModelDataGridViewTextBoxColumn.HeaderText = "Vehicle_Model";
-            this.vehicleModelDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.vehicleModelDataGridViewTextBoxColumn.Name = "vehicleModelDataGridViewTextBoxColumn";
-            this.vehicleModelDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // vehicleMileageDataGridViewTextBoxColumn
-            // 
-            this.vehicleMileageDataGridViewTextBoxColumn.DataPropertyName = "Vehicle_Mileage";
-            this.vehicleMileageDataGridViewTextBoxColumn.HeaderText = "Vehicle_Mileage";
-            this.vehicleMileageDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.vehicleMileageDataGridViewTextBoxColumn.Name = "vehicleMileageDataGridViewTextBoxColumn";
-            this.vehicleMileageDataGridViewTextBoxColumn.Width = 125;
-            // 
             // tblVehicleBindingSource
             // 
             this.tblVehicleBindingSource.DataMember = "tblVehicle";
-            this.tblVehicleBindingSource.DataSource = this.bookingSystemDataSet;
-            // 
-            // bookingSystemDataSet
-            // 
-            this.bookingSystemDataSet.DataSetName = "BookingSystemDataSet";
-            this.bookingSystemDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.tblVehicleBindingSource.DataSource = this.wstGrp2DataSet;
             // 
             // label9
             // 
@@ -449,6 +400,7 @@
             this.label10.Size = new System.Drawing.Size(57, 25);
             this.label10.TabIndex = 12;
             this.label10.Text = "Home";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // pictureBox4
             // 
@@ -483,10 +435,81 @@
             this.pictureBox5.Size = new System.Drawing.Size(116, 85);
             this.pictureBox5.TabIndex = 11;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
-            // tblVehicleTableAdapter
+            // wstGrp2DataSet
             // 
-            this.tblVehicleTableAdapter.ClearBeforeFill = true;
+            this.wstGrp2DataSet.DataSetName = "WstGrp2DataSet";
+            this.wstGrp2DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "VehicleID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "VehicleID";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Vehicle_NumberPlate";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Vehicle_NumberPlate";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 125;
+            // 
+            // vehicleRegNumDataGridViewTextBoxColumn
+            // 
+            this.vehicleRegNumDataGridViewTextBoxColumn.DataPropertyName = "Vehicle_RegNum";
+            this.vehicleRegNumDataGridViewTextBoxColumn.HeaderText = "Vehicle_RegNum";
+            this.vehicleRegNumDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.vehicleRegNumDataGridViewTextBoxColumn.Name = "vehicleRegNumDataGridViewTextBoxColumn";
+            this.vehicleRegNumDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // vehicleEngineNumDataGridViewTextBoxColumn
+            // 
+            this.vehicleEngineNumDataGridViewTextBoxColumn.DataPropertyName = "Vehicle_EngineNum";
+            this.vehicleEngineNumDataGridViewTextBoxColumn.HeaderText = "Vehicle_EngineNum";
+            this.vehicleEngineNumDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.vehicleEngineNumDataGridViewTextBoxColumn.Name = "vehicleEngineNumDataGridViewTextBoxColumn";
+            this.vehicleEngineNumDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Vehicle_Make";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Vehicle_Make";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Vehicle_Model";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Vehicle_Model";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 125;
+            // 
+            // vehicleSizeDataGridViewTextBoxColumn
+            // 
+            this.vehicleSizeDataGridViewTextBoxColumn.DataPropertyName = "Vehicle_Size";
+            this.vehicleSizeDataGridViewTextBoxColumn.HeaderText = "Vehicle_Size";
+            this.vehicleSizeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.vehicleSizeDataGridViewTextBoxColumn.Name = "vehicleSizeDataGridViewTextBoxColumn";
+            this.vehicleSizeDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // vehicleStatusDataGridViewTextBoxColumn
+            // 
+            this.vehicleStatusDataGridViewTextBoxColumn.DataPropertyName = "Vehicle_Status";
+            this.vehicleStatusDataGridViewTextBoxColumn.HeaderText = "Vehicle_Status";
+            this.vehicleStatusDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.vehicleStatusDataGridViewTextBoxColumn.Name = "vehicleStatusDataGridViewTextBoxColumn";
+            this.vehicleStatusDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // taVehicle
+            // 
+            this.taVehicle.ClearBeforeFill = true;
             // 
             // Form5
             // 
@@ -508,13 +531,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVehicle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblVehicleBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bookingSystemDataSet)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wstGrp2DataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -550,14 +573,22 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private BookingSystemDataSet bookingSystemDataSet;
         private System.Windows.Forms.BindingSource tblVehicleBindingSource;
-        private BookingSystemDataSetTableAdapters.tblVehicleTableAdapter tblVehicleTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn vehicleIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn vehicleNumberPlateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn vehicleEngineNumberDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn vehicleMakeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn vehicleModelDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn vehicleMileageDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn vehicleRegNumDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn vehicleEngineNumDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn vehicleSizeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn vehicleStatusDataGridViewTextBoxColumn;
+        private BookingSystem.WstGrp2DataSet wstGrp2DataSet;
+        private BookingSystem.WstGrp2DataSetTableAdapters.tblVehicleTableAdapter taVehicle;
     }
 }

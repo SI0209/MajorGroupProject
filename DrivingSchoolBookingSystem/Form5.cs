@@ -19,8 +19,9 @@ namespace DrivingSchoolBookingSystem
 
         private void Form5_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'bookingSystemDataSet.tblVehicle' table. You can move, or remove it, as needed.
-            this.tblVehicleTableAdapter.Fill(this.bookingSystemDataSet.tblVehicle);
+            // TODO: This line of code loads data into the 'wstGrp2DataSet.tblVehicle' table. You can move, or remove it, as needed.
+            this.taVehicle.Fill(this.wstGrp2DataSet.tblVehicle);
+
 
         }
 
@@ -30,6 +31,16 @@ namespace DrivingSchoolBookingSystem
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
         {
 
         }

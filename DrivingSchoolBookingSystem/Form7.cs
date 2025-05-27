@@ -30,7 +30,7 @@ namespace DrivingSchoolBookingSystem
         private void Form7_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'bookingSystemDataSet.tblLearners' table. You can move, or remove it, as needed.
-            this.tblLearnersTableAdapter.Fill(this.bookingSystemDataSet.tblLearners);
+            //this.tblLearnersTableAdapter.Fill(this.bookingSystemDataSet.tblLearners);
 
         }
     }
