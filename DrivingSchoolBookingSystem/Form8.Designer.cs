@@ -689,7 +689,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::DrivingSchoolBookingSystem.Properties.Resources.Background_final;
+            this.BackgroundImage = global::DrivingSchoolBookingSystem.Properties.Resources.final_project_bg;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1835, 877);
             this.Controls.Add(this.panel3);

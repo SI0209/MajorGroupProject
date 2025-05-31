@@ -1,6 +1,6 @@
 ﻿namespace DrivingSchoolBookingSystem
 {
-    partial class Form7
+    partial class LearnerProgressForm
     {
         /// <summary>
         /// Required designer variable.
@@ -40,15 +40,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.tblLearnersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            //this.tblLearnersTableAdapter = new DrivingSchoolBookingSystem.BookingSystemDataSetTableAdapters.tblLearnersTableAdapter();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.learnerIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.learnerFNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.learnerSurnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.learnerIDNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.learnerAgeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.learnerGenderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.learnerCellNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -76,23 +68,23 @@
             // 
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Comic Sans MS", 10.25F, System.Drawing.FontStyle.Bold);
+            this.label11.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(641, 97);
+            this.label11.Location = new System.Drawing.Point(667, 91);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(199, 25);
+            this.label11.Size = new System.Drawing.Size(245, 29);
             this.label11.TabIndex = 42;
-            this.label11.Text = "LEARNER PROGRESS";
+            this.label11.Text = "Track Learner Progress";
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::DrivingSchoolBookingSystem.Properties.Resources.instructor;
-            this.pictureBox1.Location = new System.Drawing.Point(493, 46);
+            this.pictureBox1.Location = new System.Drawing.Point(546, 58);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(129, 122);
+            this.pictureBox1.Size = new System.Drawing.Size(113, 85);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 41;
             this.pictureBox1.TabStop = false;
@@ -183,30 +175,14 @@
             this.pictureBox5.TabIndex = 11;
             this.pictureBox5.TabStop = false;
             // 
-            // bookingSystemDataSet
-            // 
-            //this.bookingSystemDataSet.DataSetName = "BookingSystemDataSet";
-            //this.bookingSystemDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // tblLearnersBindingSource
             // 
             this.tblLearnersBindingSource.DataMember = "tblLearners";
-            // 
-            // tblLearnersTableAdapter
-            // 
             // 
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.learnerIDDataGridViewTextBoxColumn,
-            this.learnerFNameDataGridViewTextBoxColumn,
-            this.learnerSurnameDataGridViewTextBoxColumn,
-            this.learnerIDNumberDataGridViewTextBoxColumn,
-            this.learnerAgeDataGridViewTextBoxColumn,
-            this.learnerGenderDataGridViewTextBoxColumn,
-            this.learnerCellNumberDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.tblLearnersBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(493, 204);
             this.dataGridView1.Name = "dataGridView1";
@@ -215,67 +191,11 @@
             this.dataGridView1.Size = new System.Drawing.Size(847, 472);
             this.dataGridView1.TabIndex = 44;
             // 
-            // learnerIDDataGridViewTextBoxColumn
-            // 
-            this.learnerIDDataGridViewTextBoxColumn.DataPropertyName = "LearnerID";
-            this.learnerIDDataGridViewTextBoxColumn.HeaderText = "LearnerID";
-            this.learnerIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.learnerIDDataGridViewTextBoxColumn.Name = "learnerIDDataGridViewTextBoxColumn";
-            this.learnerIDDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // learnerFNameDataGridViewTextBoxColumn
-            // 
-            this.learnerFNameDataGridViewTextBoxColumn.DataPropertyName = "Learner_FName";
-            this.learnerFNameDataGridViewTextBoxColumn.HeaderText = "Learner_FName";
-            this.learnerFNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.learnerFNameDataGridViewTextBoxColumn.Name = "learnerFNameDataGridViewTextBoxColumn";
-            this.learnerFNameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // learnerSurnameDataGridViewTextBoxColumn
-            // 
-            this.learnerSurnameDataGridViewTextBoxColumn.DataPropertyName = "Learner_Surname";
-            this.learnerSurnameDataGridViewTextBoxColumn.HeaderText = "Learner_Surname";
-            this.learnerSurnameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.learnerSurnameDataGridViewTextBoxColumn.Name = "learnerSurnameDataGridViewTextBoxColumn";
-            this.learnerSurnameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // learnerIDNumberDataGridViewTextBoxColumn
-            // 
-            this.learnerIDNumberDataGridViewTextBoxColumn.DataPropertyName = "Learner_IDNumber";
-            this.learnerIDNumberDataGridViewTextBoxColumn.HeaderText = "Learner_IDNumber";
-            this.learnerIDNumberDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.learnerIDNumberDataGridViewTextBoxColumn.Name = "learnerIDNumberDataGridViewTextBoxColumn";
-            this.learnerIDNumberDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // learnerAgeDataGridViewTextBoxColumn
-            // 
-            this.learnerAgeDataGridViewTextBoxColumn.DataPropertyName = "Learner_Age";
-            this.learnerAgeDataGridViewTextBoxColumn.HeaderText = "Learner_Age";
-            this.learnerAgeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.learnerAgeDataGridViewTextBoxColumn.Name = "learnerAgeDataGridViewTextBoxColumn";
-            this.learnerAgeDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // learnerGenderDataGridViewTextBoxColumn
-            // 
-            this.learnerGenderDataGridViewTextBoxColumn.DataPropertyName = "Learner_Gender";
-            this.learnerGenderDataGridViewTextBoxColumn.HeaderText = "Learner_Gender";
-            this.learnerGenderDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.learnerGenderDataGridViewTextBoxColumn.Name = "learnerGenderDataGridViewTextBoxColumn";
-            this.learnerGenderDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // learnerCellNumberDataGridViewTextBoxColumn
-            // 
-            this.learnerCellNumberDataGridViewTextBoxColumn.DataPropertyName = "Learner_CellNumber";
-            this.learnerCellNumberDataGridViewTextBoxColumn.HeaderText = "Learner_CellNumber";
-            this.learnerCellNumberDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.learnerCellNumberDataGridViewTextBoxColumn.Name = "learnerCellNumberDataGridViewTextBoxColumn";
-            this.learnerCellNumberDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // Form7
+            // LearnerProgressForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::DrivingSchoolBookingSystem.Properties.Resources.Background_final;
+            this.BackgroundImage = global::DrivingSchoolBookingSystem.Properties.Resources.final_project_bg;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1369, 836);
             this.Controls.Add(this.dataGridView1);
@@ -284,8 +204,8 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
             this.DoubleBuffered = true;
-            this.Name = "Form7";
-            this.Text = "Form7";
+            this.Name = "LearnerProgressForm";
+            this.Text = "Tracl Learner Progress";
             this.Load += new System.EventHandler(this.Form7_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);

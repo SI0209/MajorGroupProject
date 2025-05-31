@@ -27,7 +27,6 @@ C:\Users\Strini\Source\Repos\MajorGroupProjectt\DrivingSchoolBookingSystem\obj\D
 C:\Users\Strini\Source\Repos\MajorGroupProjectt\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.ProfileForm.resources
 C:\Users\Strini\Source\Repos\MajorGroupProjectt\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.Form5.resources
 C:\Users\Strini\Source\Repos\MajorGroupProjectt\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.Form6.resources
-C:\Users\Strini\Source\Repos\MajorGroupProjectt\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.Form7.resources
 C:\Users\Strini\Source\Repos\MajorGroupProjectt\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.Form8.resources
 C:\Users\Strini\Source\Repos\MajorGroupProjectt\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.Form9.resources
 C:\Users\Strini\Source\Repos\MajorGroupProjectt\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.Properties.Resources.resources
@@ -36,3 +35,4 @@ C:\Users\Strini\Source\Repos\MajorGroupProjectt\DrivingSchoolBookingSystem\obj\D
 C:\Users\Strini\Source\Repos\MajorGroupProjectt\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.exe
 C:\Users\Strini\Source\Repos\MajorGroupProjectt\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.pdb
 C:\Users\Strini\Source\Repos\MajorGroupProjectt\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.LearnerForm.resources
+C:\Users\Strini\source\repos\MajorGroupProjectt\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.LearnerProgressForm.resources
