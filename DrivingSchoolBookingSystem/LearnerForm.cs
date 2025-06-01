@@ -48,5 +48,13 @@ namespace DrivingSchoolBookingSystem
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+            tblLearnerTableAdapter.Insert(textBox1.Text, textBox2.Text, textBox3.Text, Convert.ToInt16(textBox4.Text), textBox5.Text, textBox6.Text, textBox7.Text, comboBox1.Items, dateTimePicker1.Value, dateTimePicker2.Value,Convert.ToInt32(comboBox2.SelectedItem));
+        }
     }
 }
+    
+    
