@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace BookingSystem {
+namespace DrivingSchoolBookingSystem {
     
     
     /// <summary>
@@ -5901,7 +5901,7 @@ namespace BookingSystem {
         }
     }
 }
-namespace BookingSystem.WstGrp2DataSetTableAdapters {
+namespace DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters {
     
     
     /// <summary>
@@ -6054,8 +6054,10 @@ namespace BookingSystem.WstGrp2DataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_EmployeeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EmployeeID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[tblBooking] ([Booking_Date], [Booking_StartTime], [Booking_EndTime], [Booking_Status], [Booking_TotalCost], [Booking_FeeDue], [LearnerID], [Code_Type], [VehicleID], [EmployeeID]) VALUES (@Booking_Date, @Booking_StartTime, @Booking_EndTime, @Booking_Status, @Booking_TotalCost, @Booking_FeeDue, @LearnerID, @Code_Type, @VehicleID, @EmployeeID);
-SELECT BookingID, Booking_Date, Booking_StartTime, Booking_EndTime, Booking_Status, Booking_TotalCost, Booking_FeeDue, LearnerID, Code_Type, VehicleID, EmployeeID FROM tblBooking WHERE (BookingID = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"
+											INSERT INTO [dbo].[tblBooking] ([Booking_Date], [Booking_StartTime], [Booking_EndTime], [Booking_Status], [Booking_TotalCost], [Booking_FeeDue], [LearnerID], [Code_Type], [VehicleID], [EmployeeID]) VALUES (@Booking_Date, @Booking_StartTime, @Booking_EndTime, @Booking_Status, @Booking_TotalCost, @Booking_FeeDue, @LearnerID, @Code_Type, @VehicleID, @EmployeeID);
+											SELECT BookingID, Booking_Date, Booking_StartTime, Booking_EndTime, Booking_Status, Booking_TotalCost, Booking_FeeDue, LearnerID, Code_Type, VehicleID, EmployeeID FROM tblBooking WHERE (BookingID = SCOPE_IDENTITY())
+										";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Booking_Date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Booking_Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Booking_StartTime", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Booking_StartTime", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -6069,8 +6071,10 @@ SELECT BookingID, Booking_Date, Booking_StartTime, Booking_EndTime, Booking_Stat
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EmployeeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EmployeeID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[tblBooking] SET [Booking_Date] = @Booking_Date, [Booking_StartTime] = @Booking_StartTime, [Booking_EndTime] = @Booking_EndTime, [Booking_Status] = @Booking_Status, [Booking_TotalCost] = @Booking_TotalCost, [Booking_FeeDue] = @Booking_FeeDue, [LearnerID] = @LearnerID, [Code_Type] = @Code_Type, [VehicleID] = @VehicleID, [EmployeeID] = @EmployeeID WHERE (([BookingID] = @Original_BookingID) AND ([Booking_Date] = @Original_Booking_Date) AND ([Booking_StartTime] = @Original_Booking_StartTime) AND ([Booking_EndTime] = @Original_Booking_EndTime) AND ([Booking_Status] = @Original_Booking_Status) AND ([Booking_TotalCost] = @Original_Booking_TotalCost) AND ([Booking_FeeDue] = @Original_Booking_FeeDue) AND ([LearnerID] = @Original_LearnerID) AND ([Code_Type] = @Original_Code_Type) AND ([VehicleID] = @Original_VehicleID) AND ([EmployeeID] = @Original_EmployeeID));
-SELECT BookingID, Booking_Date, Booking_StartTime, Booking_EndTime, Booking_Status, Booking_TotalCost, Booking_FeeDue, LearnerID, Code_Type, VehicleID, EmployeeID FROM tblBooking WHERE (BookingID = @BookingID)";
+            this._adapter.UpdateCommand.CommandText = @"
+											UPDATE [dbo].[tblBooking] SET [Booking_Date] = @Booking_Date, [Booking_StartTime] = @Booking_StartTime, [Booking_EndTime] = @Booking_EndTime, [Booking_Status] = @Booking_Status, [Booking_TotalCost] = @Booking_TotalCost, [Booking_FeeDue] = @Booking_FeeDue, [LearnerID] = @LearnerID, [Code_Type] = @Code_Type, [VehicleID] = @VehicleID, [EmployeeID] = @EmployeeID WHERE (([BookingID] = @Original_BookingID) AND ([Booking_Date] = @Original_Booking_Date) AND ([Booking_StartTime] = @Original_Booking_StartTime) AND ([Booking_EndTime] = @Original_Booking_EndTime) AND ([Booking_Status] = @Original_Booking_Status) AND ([Booking_TotalCost] = @Original_Booking_TotalCost) AND ([Booking_FeeDue] = @Original_Booking_FeeDue) AND ([LearnerID] = @Original_LearnerID) AND ([Code_Type] = @Original_Code_Type) AND ([VehicleID] = @Original_VehicleID) AND ([EmployeeID] = @Original_EmployeeID));
+											SELECT BookingID, Booking_Date, Booking_StartTime, Booking_EndTime, Booking_Status, Booking_TotalCost, Booking_FeeDue, LearnerID, Code_Type, VehicleID, EmployeeID FROM tblBooking WHERE (BookingID = @BookingID)
+										";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Booking_Date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Booking_Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Booking_StartTime", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Booking_StartTime", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -6115,19 +6119,22 @@ SELECT BookingID, Booking_Date, Booking_StartTime, Booking_EndTime, Booking_Stat
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT        SUM(Booking_FeeDue) AS Expr1\r\nFROM            tblBooking;";
+            this._commandCollection[1].CommandText = "\r\n\t\t\t\t\t\t\t\t\t\t\tSELECT        SUM(Booking_FeeDue) AS Expr1\r\n\t\t\t\t\t\t\t\t\t\t\tFROM         " +
+                "   tblBooking;\r\n\t\t\t\t\t\t\t\t\t\t";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "SELECT COUNT(*)\r\nFROM tblBooking\r\nWHERE DATEPART(month, Booking_Date) = DATEPART(" +
-                "month, GETDATE())\r\nAND DATEPART(year, Booking_Date) = DATEPART(year, GETDATE());" +
-                "\r\n";
+            this._commandCollection[2].CommandText = "\r\n\t\t\t\t\t\t\t\t\t\t\tSELECT COUNT(*)\r\n\t\t\t\t\t\t\t\t\t\t\tFROM tblBooking\r\n\t\t\t\t\t\t\t\t\t\t\tWHERE DATEPA" +
+                "RT(month, Booking_Date) = DATEPART(month, GETDATE())\r\n\t\t\t\t\t\t\t\t\t\t\tAND DATEPART(ye" +
+                "ar, Booking_Date) = DATEPART(year, GETDATE());\r\n\t\t\t\t\t\t\t\t\t\t";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = @"SELECT        CASE WHEN SUM(CASE WHEN MONTH(Booking_Date) = MONTH(GETDATE()) THEN 1 ELSE 0 END) = 0 THEN NULL ELSE CAST(SUM(CASE WHEN Booking_Status = 'Not Complete' THEN 1 ELSE 0 END) AS FLOAT) 
-                         / SUM(CASE WHEN MONTH(Booking_Date) = MONTH(GETDATE()) THEN 1 ELSE 0 END) * 100 END AS Not_Completed_Rate
-FROM            tblBooking; ";
+            this._commandCollection[3].CommandText = @"
+											SELECT        CASE WHEN SUM(CASE WHEN MONTH(Booking_Date) = MONTH(GETDATE()) THEN 1 ELSE 0 END) = 0 THEN NULL ELSE CAST(SUM(CASE WHEN Booking_Status = 'Not Complete' THEN 1 ELSE 0 END) AS FLOAT)
+											/ SUM(CASE WHEN MONTH(Booking_Date) = MONTH(GETDATE()) THEN 1 ELSE 0 END) * 100 END AS Not_Completed_Rate
+											FROM            tblBooking;
+										";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -6622,8 +6629,10 @@ FROM            tblBooking; ";
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Code_Type", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Code_Type", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[tblEmployee] ([Employee_Name], [Employee_Surname], [Employee_ID], [Employee_Age], [Employee_Gender], [Employee_Race], [Employee_CellNumber], [Employee_StreetAddress], [Employee_Suburb], [Employee_Type], [Employee_Username], [Employee_Password], [Code_Type]) VALUES (@Employee_Name, @Employee_Surname, @Employee_ID, @Employee_Age, @Employee_Gender, @Employee_Race, @Employee_CellNumber, @Employee_StreetAddress, @Employee_Suburb, @Employee_Type, @Employee_Username, @Employee_Password, @Code_Type);
-SELECT EmployeeID, Employee_Name, Employee_Surname, Employee_ID, Employee_Age, Employee_Gender, Employee_Race, Employee_CellNumber, Employee_StreetAddress, Employee_Suburb, Employee_Type, Employee_Username, Employee_Password, Code_Type FROM tblEmployee WHERE (EmployeeID = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"
+											INSERT INTO [dbo].[tblEmployee] ([Employee_Name], [Employee_Surname], [Employee_ID], [Employee_Age], [Employee_Gender], [Employee_Race], [Employee_CellNumber], [Employee_StreetAddress], [Employee_Suburb], [Employee_Type], [Employee_Username], [Employee_Password], [Code_Type]) VALUES (@Employee_Name, @Employee_Surname, @Employee_ID, @Employee_Age, @Employee_Gender, @Employee_Race, @Employee_CellNumber, @Employee_StreetAddress, @Employee_Suburb, @Employee_Type, @Employee_Username, @Employee_Password, @Code_Type);
+											SELECT EmployeeID, Employee_Name, Employee_Surname, Employee_ID, Employee_Age, Employee_Gender, Employee_Race, Employee_CellNumber, Employee_StreetAddress, Employee_Suburb, Employee_Type, Employee_Username, Employee_Password, Code_Type FROM tblEmployee WHERE (EmployeeID = SCOPE_IDENTITY())
+										";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Employee_Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Employee_Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Employee_Surname", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Employee_Surname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -6640,26 +6649,26 @@ SELECT EmployeeID, Employee_Name, Employee_Surname, Employee_ID, Employee_Age, E
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Code_Type", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Code_Type", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[tblEmployee] SET [Employee_Name] = @Employee_Name, [Employee_Surnam" +
-                "e] = @Employee_Surname, [Employee_ID] = @Employee_ID, [Employee_Age] = @Employee" +
-                "_Age, [Employee_Gender] = @Employee_Gender, [Employee_Race] = @Employee_Race, [E" +
-                "mployee_CellNumber] = @Employee_CellNumber, [Employee_StreetAddress] = @Employee" +
-                "_StreetAddress, [Employee_Suburb] = @Employee_Suburb, [Employee_Type] = @Employe" +
-                "e_Type, [Employee_Username] = @Employee_Username, [Employee_Password] = @Employe" +
-                "e_Password, [Code_Type] = @Code_Type WHERE (([EmployeeID] = @Original_EmployeeID" +
-                ") AND ([Employee_Name] = @Original_Employee_Name) AND ([Employee_Surname] = @Ori" +
-                "ginal_Employee_Surname) AND ([Employee_ID] = @Original_Employee_ID) AND ([Employ" +
-                "ee_Age] = @Original_Employee_Age) AND ([Employee_Gender] = @Original_Employee_Ge" +
-                "nder) AND ([Employee_Race] = @Original_Employee_Race) AND ([Employee_CellNumber]" +
-                " = @Original_Employee_CellNumber) AND ([Employee_StreetAddress] = @Original_Empl" +
-                "oyee_StreetAddress) AND ([Employee_Suburb] = @Original_Employee_Suburb) AND ([Em" +
-                "ployee_Type] = @Original_Employee_Type) AND ([Employee_Username] = @Original_Emp" +
-                "loyee_Username) AND ([Employee_Password] = @Original_Employee_Password) AND ([Co" +
-                "de_Type] = @Original_Code_Type));\r\nSELECT EmployeeID, Employee_Name, Employee_Su" +
-                "rname, Employee_ID, Employee_Age, Employee_Gender, Employee_Race, Employee_CellN" +
-                "umber, Employee_StreetAddress, Employee_Suburb, Employee_Type, Employee_Username" +
-                ", Employee_Password, Code_Type FROM tblEmployee WHERE (EmployeeID = @EmployeeID)" +
-                "";
+            this._adapter.UpdateCommand.CommandText = "\r\n\t\t\t\t\t\t\t\t\t\t\tUPDATE [dbo].[tblEmployee] SET [Employee_Name] = @Employee_Name, [Em" +
+                "ployee_Surname] = @Employee_Surname, [Employee_ID] = @Employee_ID, [Employee_Age" +
+                "] = @Employee_Age, [Employee_Gender] = @Employee_Gender, [Employee_Race] = @Empl" +
+                "oyee_Race, [Employee_CellNumber] = @Employee_CellNumber, [Employee_StreetAddress" +
+                "] = @Employee_StreetAddress, [Employee_Suburb] = @Employee_Suburb, [Employee_Typ" +
+                "e] = @Employee_Type, [Employee_Username] = @Employee_Username, [Employee_Passwor" +
+                "d] = @Employee_Password, [Code_Type] = @Code_Type WHERE (([EmployeeID] = @Origin" +
+                "al_EmployeeID) AND ([Employee_Name] = @Original_Employee_Name) AND ([Employee_Su" +
+                "rname] = @Original_Employee_Surname) AND ([Employee_ID] = @Original_Employee_ID)" +
+                " AND ([Employee_Age] = @Original_Employee_Age) AND ([Employee_Gender] = @Origina" +
+                "l_Employee_Gender) AND ([Employee_Race] = @Original_Employee_Race) AND ([Employe" +
+                "e_CellNumber] = @Original_Employee_CellNumber) AND ([Employee_StreetAddress] = @" +
+                "Original_Employee_StreetAddress) AND ([Employee_Suburb] = @Original_Employee_Sub" +
+                "urb) AND ([Employee_Type] = @Original_Employee_Type) AND ([Employee_Username] = " +
+                "@Original_Employee_Username) AND ([Employee_Password] = @Original_Employee_Passw" +
+                "ord) AND ([Code_Type] = @Original_Code_Type));\r\n\t\t\t\t\t\t\t\t\t\t\tSELECT EmployeeID, Em" +
+                "ployee_Name, Employee_Surname, Employee_ID, Employee_Age, Employee_Gender, Emplo" +
+                "yee_Race, Employee_CellNumber, Employee_StreetAddress, Employee_Suburb, Employee" +
+                "_Type, Employee_Username, Employee_Password, Code_Type FROM tblEmployee WHERE (E" +
+                "mployeeID = @EmployeeID)\r\n\t\t\t\t\t\t\t\t\t\t";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Employee_Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Employee_Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Employee_Surname", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Employee_Surname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -6701,29 +6710,31 @@ SELECT EmployeeID, Employee_Name, Employee_Surname, Employee_ID, Employee_Age, E
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[5];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[8];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = @"SELECT EmployeeID, Employee_Name, Employee_Surname, Employee_ID, Employee_Age, Employee_Gender, Employee_Race, Employee_CellNumber, Employee_StreetAddress, Employee_Suburb, Employee_Type, Employee_Username, Employee_Password, Code_Type FROM dbo.tblEmployee";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "DELETE FROM tblEmployee\r\nWHERE  (EmployeeID = @Original_EmployeeID)";
+            this._commandCollection[1].CommandText = "\r\n\t\t\t\t\t\t\t\t\t\t\tDELETE FROM tblEmployee\r\n\t\t\t\t\t\t\t\t\t\t\tWHERE  (EmployeeID = @Original_E" +
+                "mployeeID)\r\n\t\t\t\t\t\t\t\t\t\t";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_EmployeeID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "EmployeeID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "SELECT        Employee_Name\r\nFROM            tblEmployee\r\nWHERE        (EmployeeI" +
-                "D = @Employee_ID)";
+            this._commandCollection[2].CommandText = "\r\n\t\t\t\t\t\t\t\t\t\t\tSELECT        Employee_Name\r\n\t\t\t\t\t\t\t\t\t\t\tFROM            tblEmployee\r" +
+                "\n\t\t\t\t\t\t\t\t\t\t\tWHERE        (EmployeeID = @Employee_ID)\r\n\t\t\t\t\t\t\t\t\t\t";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Employee_ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "EmployeeID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = @"INSERT INTO tblEmployee
-                  (Employee_Name, Employee_Surname, Employee_ID, Employee_Age, Employee_Gender, Employee_Race, Employee_CellNumber, Employee_StreetAddress, Employee_Suburb, Employee_Type, Employee_Username, 
-                  Employee_Password)
-VALUES (@Employee_Name,@Employee_Surname,@Employee_ID,@Employee_Age,@Employee_Gender,@Employee_Race,@Employee_CellNumber,@Employee_StreetAddress,@Employee_Suburb,@Employee_Type,@Employee_Username,@Employee_Password); 
-";
+            this._commandCollection[3].CommandText = @"
+											INSERT INTO tblEmployee
+											(Employee_Name, Employee_Surname, Employee_ID, Employee_Age, Employee_Gender, Employee_Race, Employee_CellNumber, Employee_StreetAddress, Employee_Suburb, Employee_Type, Employee_Username,
+											Employee_Password)
+											VALUES (@Employee_Name,@Employee_Surname,@Employee_ID,@Employee_Age,@Employee_Gender,@Employee_Race,@Employee_CellNumber,@Employee_StreetAddress,@Employee_Suburb,@Employee_Type,@Employee_Username,@Employee_Password);
+										";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Employee_Name", global::System.Data.SqlDbType.VarChar, 35, global::System.Data.ParameterDirection.Input, 0, 0, "Employee_Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Employee_Surname", global::System.Data.SqlDbType.VarChar, 35, global::System.Data.ParameterDirection.Input, 0, 0, "Employee_Surname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -6739,12 +6750,42 @@ VALUES (@Employee_Name,@Employee_Surname,@Employee_ID,@Employee_Age,@Employee_Ge
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Employee_Password", global::System.Data.SqlDbType.VarChar, 35, global::System.Data.ParameterDirection.Input, 0, 0, "Employee_Password", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[4].Connection = this.Connection;
-            this._commandCollection[4].CommandText = @"SELECT EmployeeID, Employee_Name, Employee_Surname, Employee_ID, Employee_Age, Employee_Gender, Employee_Race, Employee_CellNumber, Employee_StreetAddress, Employee_Suburb, Employee_Type, Employee_Username, 
-                  Employee_Password
-FROM     tblEmployee
-WHERE  (Employee_Surname LIKE @Surname + '%')";
+            this._commandCollection[4].CommandText = @"SELECT Code_Type, EmployeeID, Employee_Age, Employee_CellNumber, Employee_Gender, Employee_ID, Employee_Name, Employee_Password, Employee_Race, Employee_StreetAddress, Employee_Suburb, Employee_Surname, Employee_Type, Employee_Username FROM tblEmployee WHERE (Employee_Surname LIKE @Surname + '%')";
             this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Surname", global::System.Data.SqlDbType.VarChar, 35, global::System.Data.ParameterDirection.Input, 0, 0, "Employee_Surname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[5] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[5].Connection = this.Connection;
+            this._commandCollection[5].CommandText = "SELECT COUNT(*) AS Expr1\r\nFROM tblEmployee\r\nWHERE Employee_Type = \'Instructor\';\r\n" +
+                "";
+            this._commandCollection[5].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[6] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[6].Connection = this.Connection;
+            this._commandCollection[6].CommandText = "UPDATE tblEmployee\r\nSET          Employee_Password = @EmployeePass\r\nWHERE  (Emplo" +
+                "yee_Username = @Employee_username); \r\n";
+            this._commandCollection[6].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[6].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EmployeePass", global::System.Data.SqlDbType.VarChar, 35, global::System.Data.ParameterDirection.Input, 0, 0, "Employee_Password", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[6].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Employee_username", global::System.Data.SqlDbType.VarChar, 35, global::System.Data.ParameterDirection.Input, 0, 0, "Employee_Username", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[7] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[7].Connection = this.Connection;
+            this._commandCollection[7].CommandText = @"UPDATE tblEmployee
+SET          Employee_Name = @New_Employee_Name, Employee_Surname = @New_Employee_Surname, Employee_ID = @New_Employee_ID, Employee_Age = @New_Employee_Age, Employee_Gender = @New_Employee_Gender, 
+                  Employee_Race = @New_Employee_Race, Employee_CellNumber = @New_Employee_CellNumber, Employee_StreetAddress = @New_Employee_StreetAddress, Employee_Suburb = @New_Employee_Suburb, 
+                  Employee_Type = @New_Employee_Type, Employee_Username = @email
+WHERE  (EmployeeID = @ID); 
+";
+            this._commandCollection[7].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[7].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@New_Employee_Name", global::System.Data.SqlDbType.VarChar, 35, global::System.Data.ParameterDirection.Input, 0, 0, "Employee_Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[7].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@New_Employee_Surname", global::System.Data.SqlDbType.VarChar, 35, global::System.Data.ParameterDirection.Input, 0, 0, "Employee_Surname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[7].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@New_Employee_ID", global::System.Data.SqlDbType.VarChar, 13, global::System.Data.ParameterDirection.Input, 0, 0, "Employee_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[7].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@New_Employee_Age", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Employee_Age", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[7].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@New_Employee_Gender", global::System.Data.SqlDbType.VarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "Employee_Gender", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[7].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@New_Employee_Race", global::System.Data.SqlDbType.VarChar, 15, global::System.Data.ParameterDirection.Input, 0, 0, "Employee_Race", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[7].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@New_Employee_CellNumber", global::System.Data.SqlDbType.VarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "Employee_CellNumber", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[7].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@New_Employee_StreetAddress", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Employee_StreetAddress", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[7].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@New_Employee_Suburb", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Employee_Suburb", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[7].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@New_Employee_Type", global::System.Data.SqlDbType.VarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "Employee_Type", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[7].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@email", global::System.Data.SqlDbType.VarChar, 35, global::System.Data.ParameterDirection.Input, 0, 0, "Employee_Username", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[7].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "EmployeeID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7379,6 +7420,154 @@ WHERE  (Employee_Surname LIKE @Surname + '%')";
             }
             return returnValue;
         }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual global::System.Nullable<int> TotalEmployee() {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[5];
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            object returnValue;
+            try {
+                returnValue = command.ExecuteScalar();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            if (((returnValue == null) 
+                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
+                return new global::System.Nullable<int>();
+            }
+            else {
+                return new global::System.Nullable<int>(((int)(returnValue)));
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
+        public virtual int UpdateEmployeePassword(string EmployeePass, string Employee_username) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[6];
+            if ((EmployeePass == null)) {
+                throw new global::System.ArgumentNullException("EmployeePass");
+            }
+            else {
+                command.Parameters[0].Value = ((string)(EmployeePass));
+            }
+            if ((Employee_username == null)) {
+                throw new global::System.ArgumentNullException("Employee_username");
+            }
+            else {
+                command.Parameters[1].Value = ((string)(Employee_username));
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
+        public virtual int UpdateEmployeeQuery(string New_Employee_Name, string New_Employee_Surname, string New_Employee_ID, int New_Employee_Age, string New_Employee_Gender, string New_Employee_Race, string New_Employee_CellNumber, string New_Employee_StreetAddress, string New_Employee_Suburb, string New_Employee_Type, string email, int ID) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[7];
+            if ((New_Employee_Name == null)) {
+                throw new global::System.ArgumentNullException("New_Employee_Name");
+            }
+            else {
+                command.Parameters[0].Value = ((string)(New_Employee_Name));
+            }
+            if ((New_Employee_Surname == null)) {
+                throw new global::System.ArgumentNullException("New_Employee_Surname");
+            }
+            else {
+                command.Parameters[1].Value = ((string)(New_Employee_Surname));
+            }
+            if ((New_Employee_ID == null)) {
+                throw new global::System.ArgumentNullException("New_Employee_ID");
+            }
+            else {
+                command.Parameters[2].Value = ((string)(New_Employee_ID));
+            }
+            command.Parameters[3].Value = ((int)(New_Employee_Age));
+            if ((New_Employee_Gender == null)) {
+                throw new global::System.ArgumentNullException("New_Employee_Gender");
+            }
+            else {
+                command.Parameters[4].Value = ((string)(New_Employee_Gender));
+            }
+            if ((New_Employee_Race == null)) {
+                throw new global::System.ArgumentNullException("New_Employee_Race");
+            }
+            else {
+                command.Parameters[5].Value = ((string)(New_Employee_Race));
+            }
+            if ((New_Employee_CellNumber == null)) {
+                throw new global::System.ArgumentNullException("New_Employee_CellNumber");
+            }
+            else {
+                command.Parameters[6].Value = ((string)(New_Employee_CellNumber));
+            }
+            if ((New_Employee_StreetAddress == null)) {
+                throw new global::System.ArgumentNullException("New_Employee_StreetAddress");
+            }
+            else {
+                command.Parameters[7].Value = ((string)(New_Employee_StreetAddress));
+            }
+            if ((New_Employee_Suburb == null)) {
+                throw new global::System.ArgumentNullException("New_Employee_Suburb");
+            }
+            else {
+                command.Parameters[8].Value = ((string)(New_Employee_Suburb));
+            }
+            if ((New_Employee_Type == null)) {
+                throw new global::System.ArgumentNullException("New_Employee_Type");
+            }
+            else {
+                command.Parameters[9].Value = ((string)(New_Employee_Type));
+            }
+            if ((email == null)) {
+                throw new global::System.ArgumentNullException("email");
+            }
+            else {
+                command.Parameters[10].Value = ((string)(email));
+            }
+            command.Parameters[11].Value = ((int)(ID));
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
     }
     
     /// <summary>
@@ -7536,8 +7725,10 @@ WHERE  (Employee_Surname LIKE @Surname + '%')";
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Code_Type", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Code_Type", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[tblLearner] ([Learner_Name], [Learner_Surname], [Learner_IDNumber], [Learner_Age], [Learner_Gender], [Learner_Race], [Learner_CellNumber], [Learner_StreetAddress], [Learner_Suburb], [Learner_LearnersIssueDate], [Learner_LearnersExpiryDate], [Code_Type]) VALUES (@Learner_Name, @Learner_Surname, @Learner_IDNumber, @Learner_Age, @Learner_Gender, @Learner_Race, @Learner_CellNumber, @Learner_StreetAddress, @Learner_Suburb, @Learner_LearnersIssueDate, @Learner_LearnersExpiryDate, @Code_Type);
-SELECT LearnerID, Learner_Name, Learner_Surname, Learner_IDNumber, Learner_Age, Learner_Gender, Learner_Race, Learner_CellNumber, Learner_StreetAddress, Learner_Suburb, Learner_LearnersIssueDate, Learner_LearnersExpiryDate, Code_Type FROM tblLearner WHERE (LearnerID = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"
+											INSERT INTO [dbo].[tblLearner] ([Learner_Name], [Learner_Surname], [Learner_IDNumber], [Learner_Age], [Learner_Gender], [Learner_Race], [Learner_CellNumber], [Learner_StreetAddress], [Learner_Suburb], [Learner_LearnersIssueDate], [Learner_LearnersExpiryDate], [Code_Type]) VALUES (@Learner_Name, @Learner_Surname, @Learner_IDNumber, @Learner_Age, @Learner_Gender, @Learner_Race, @Learner_CellNumber, @Learner_StreetAddress, @Learner_Suburb, @Learner_LearnersIssueDate, @Learner_LearnersExpiryDate, @Code_Type);
+											SELECT LearnerID, Learner_Name, Learner_Surname, Learner_IDNumber, Learner_Age, Learner_Gender, Learner_Race, Learner_CellNumber, Learner_StreetAddress, Learner_Suburb, Learner_LearnersIssueDate, Learner_LearnersExpiryDate, Code_Type FROM tblLearner WHERE (LearnerID = SCOPE_IDENTITY())
+										";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Learner_Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Learner_Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Learner_Surname", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Learner_Surname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -7553,26 +7744,26 @@ SELECT LearnerID, Learner_Name, Learner_Surname, Learner_IDNumber, Learner_Age, 
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Code_Type", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Code_Type", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[tblLearner] SET [Learner_Name] = @Learner_Name, [Learner_Surname] =" +
-                " @Learner_Surname, [Learner_IDNumber] = @Learner_IDNumber, [Learner_Age] = @Lear" +
-                "ner_Age, [Learner_Gender] = @Learner_Gender, [Learner_Race] = @Learner_Race, [Le" +
-                "arner_CellNumber] = @Learner_CellNumber, [Learner_StreetAddress] = @Learner_Stre" +
-                "etAddress, [Learner_Suburb] = @Learner_Suburb, [Learner_LearnersIssueDate] = @Le" +
-                "arner_LearnersIssueDate, [Learner_LearnersExpiryDate] = @Learner_LearnersExpiryD" +
-                "ate, [Code_Type] = @Code_Type WHERE (([LearnerID] = @Original_LearnerID) AND ([L" +
-                "earner_Name] = @Original_Learner_Name) AND ([Learner_Surname] = @Original_Learne" +
-                "r_Surname) AND ([Learner_IDNumber] = @Original_Learner_IDNumber) AND ([Learner_A" +
-                "ge] = @Original_Learner_Age) AND ([Learner_Gender] = @Original_Learner_Gender) A" +
-                "ND ([Learner_Race] = @Original_Learner_Race) AND ([Learner_CellNumber] = @Origin" +
-                "al_Learner_CellNumber) AND ([Learner_StreetAddress] = @Original_Learner_StreetAd" +
-                "dress) AND ([Learner_Suburb] = @Original_Learner_Suburb) AND ([Learner_LearnersI" +
-                "ssueDate] = @Original_Learner_LearnersIssueDate) AND ([Learner_LearnersExpiryDat" +
-                "e] = @Original_Learner_LearnersExpiryDate) AND ((@IsNull_Code_Type = 1 AND [Code" +
-                "_Type] IS NULL) OR ([Code_Type] = @Original_Code_Type)));\r\nSELECT LearnerID, Lea" +
-                "rner_Name, Learner_Surname, Learner_IDNumber, Learner_Age, Learner_Gender, Learn" +
-                "er_Race, Learner_CellNumber, Learner_StreetAddress, Learner_Suburb, Learner_Lear" +
-                "nersIssueDate, Learner_LearnersExpiryDate, Code_Type FROM tblLearner WHERE (Lear" +
-                "nerID = @LearnerID)";
+            this._adapter.UpdateCommand.CommandText = "\r\n\t\t\t\t\t\t\t\t\t\t\tUPDATE [dbo].[tblLearner] SET [Learner_Name] = @Learner_Name, [Learn" +
+                "er_Surname] = @Learner_Surname, [Learner_IDNumber] = @Learner_IDNumber, [Learner" +
+                "_Age] = @Learner_Age, [Learner_Gender] = @Learner_Gender, [Learner_Race] = @Lear" +
+                "ner_Race, [Learner_CellNumber] = @Learner_CellNumber, [Learner_StreetAddress] = " +
+                "@Learner_StreetAddress, [Learner_Suburb] = @Learner_Suburb, [Learner_LearnersIss" +
+                "ueDate] = @Learner_LearnersIssueDate, [Learner_LearnersExpiryDate] = @Learner_Le" +
+                "arnersExpiryDate, [Code_Type] = @Code_Type WHERE (([LearnerID] = @Original_Learn" +
+                "erID) AND ([Learner_Name] = @Original_Learner_Name) AND ([Learner_Surname] = @Or" +
+                "iginal_Learner_Surname) AND ([Learner_IDNumber] = @Original_Learner_IDNumber) AN" +
+                "D ([Learner_Age] = @Original_Learner_Age) AND ([Learner_Gender] = @Original_Lear" +
+                "ner_Gender) AND ([Learner_Race] = @Original_Learner_Race) AND ([Learner_CellNumb" +
+                "er] = @Original_Learner_CellNumber) AND ([Learner_StreetAddress] = @Original_Lea" +
+                "rner_StreetAddress) AND ([Learner_Suburb] = @Original_Learner_Suburb) AND ([Lear" +
+                "ner_LearnersIssueDate] = @Original_Learner_LearnersIssueDate) AND ([Learner_Lear" +
+                "nersExpiryDate] = @Original_Learner_LearnersExpiryDate) AND ((@IsNull_Code_Type " +
+                "= 1 AND [Code_Type] IS NULL) OR ([Code_Type] = @Original_Code_Type)));\r\n\t\t\t\t\t\t\t\t" +
+                "\t\t\tSELECT LearnerID, Learner_Name, Learner_Surname, Learner_IDNumber, Learner_Ag" +
+                "e, Learner_Gender, Learner_Race, Learner_CellNumber, Learner_StreetAddress, Lear" +
+                "ner_Suburb, Learner_LearnersIssueDate, Learner_LearnersExpiryDate, Code_Type FRO" +
+                "M tblLearner WHERE (LearnerID = @LearnerID)\r\n\t\t\t\t\t\t\t\t\t\t";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Learner_Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Learner_Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Learner_Surname", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Learner_Surname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -7623,24 +7814,23 @@ SELECT LearnerID, Learner_Name, Learner_Surname, Learner_IDNumber, Learner_Age, 
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "DELETE FROM tblLearner\r\nWHERE  (LearnerID = @LearnerID)";
+            this._commandCollection[1].CommandText = "\r\n\t\t\t\t\t\t\t\t\t\t\tDELETE FROM tblLearner\r\n\t\t\t\t\t\t\t\t\t\t\tWHERE  (LearnerID = @LearnerID)\r\n" +
+                "\t\t\t\t\t\t\t\t\t\t";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LearnerID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "LearnerID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = @"SELECT LearnerID, Learner_Name, Learner_Surname, Learner_IDNumber, Learner_Age, Learner_Gender, Learner_Race, Learner_CellNumber, Learner_StreetAddress, Learner_Suburb, Learner_LearnersIssueDate, 
-                  Learner_LearnersExpiryDate, Code_Type
-FROM     tblLearner
-WHERE  (Learner_Surname LIKE @LearnerSurname + '%')";
+            this._commandCollection[2].CommandText = @"SELECT Code_Type, LearnerID, Learner_Age, Learner_CellNumber, Learner_Gender, Learner_IDNumber, Learner_LearnersExpiryDate, Learner_LearnersIssueDate, Learner_Name, Learner_Race, Learner_StreetAddress, Learner_Suburb, Learner_Surname FROM tblLearner WHERE (Learner_Surname LIKE @LearnerSurname + '%')";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LearnerSurname", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Learner_Surname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = @"UPDATE tblLearner
-SET          Learner_Name = @Name, Learner_Surname = @Surname, Learner_IDNumber = @IDNum, Learner_Age = @LearnerAge, Learner_Gender = @ClientGender, Learner_Race = @ClientRace, Learner_CellNumber = @PhoneNum, 
-                  Learner_StreetAddress = @Address, Learner_Suburb = @Suburb, Learner_LearnersIssueDate = @LearnerIssueDate, Learner_LearnersExpiryDate = @LearnerExpiryDate
-WHERE  (LearnerID = @LearnerID); 
-";
+            this._commandCollection[3].CommandText = @"
+											UPDATE tblLearner
+											SET          Learner_Name = @Name, Learner_Surname = @Surname, Learner_IDNumber = @IDNum, Learner_Age = @LearnerAge, Learner_Gender = @ClientGender, Learner_Race = @ClientRace, Learner_CellNumber = @PhoneNum,
+											Learner_StreetAddress = @Address, Learner_Suburb = @Suburb, Learner_LearnersIssueDate = @LearnerIssueDate, Learner_LearnersExpiryDate = @LearnerExpiryDate
+											WHERE  (LearnerID = @LearnerID);
+										";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Learner_Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Surname", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Learner_Surname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -8345,16 +8535,18 @@ WHERE  (LearnerID = @LearnerID);
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Code_PricePerHour", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 10, 2, "Code_PricePerHour", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[tblLessonCode] ([Code_Type], [Code_PricePerHour]) VALUES (@Cod" +
-                "e_Type, @Code_PricePerHour);\r\nSELECT Code_Type, Code_PricePerHour FROM tblLesson" +
-                "Code WHERE (Code_Type = @Code_Type)";
+            this._adapter.InsertCommand.CommandText = "\r\n\t\t\t\t\t\t\t\t\t\t\tINSERT INTO [dbo].[tblLessonCode] ([Code_Type], [Code_PricePerHour])" +
+                " VALUES (@Code_Type, @Code_PricePerHour);\r\n\t\t\t\t\t\t\t\t\t\t\tSELECT Code_Type, Code_Pri" +
+                "cePerHour FROM tblLessonCode WHERE (Code_Type = @Code_Type)\r\n\t\t\t\t\t\t\t\t\t\t";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Code_Type", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Code_Type", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Code_PricePerHour", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 10, 2, "Code_PricePerHour", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[tblLessonCode] SET [Code_Type] = @Code_Type, [Code_PricePerHour] = @Code_PricePerHour WHERE (([Code_Type] = @Original_Code_Type) AND ([Code_PricePerHour] = @Original_Code_PricePerHour));
-SELECT Code_Type, Code_PricePerHour FROM tblLessonCode WHERE (Code_Type = @Code_Type)";
+            this._adapter.UpdateCommand.CommandText = @"
+											UPDATE [dbo].[tblLessonCode] SET [Code_Type] = @Code_Type, [Code_PricePerHour] = @Code_PricePerHour WHERE (([Code_Type] = @Original_Code_Type) AND ([Code_PricePerHour] = @Original_Code_PricePerHour));
+											SELECT Code_Type, Code_PricePerHour FROM tblLessonCode WHERE (Code_Type = @Code_Type)
+										";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Code_Type", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Code_Type", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Code_PricePerHour", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 10, 2, "Code_PricePerHour", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -8379,13 +8571,14 @@ SELECT Code_Type, Code_PricePerHour FROM tblLessonCode WHERE (Code_Type = @Code_
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "DELETE FROM tblLessonCode\r\nWHERE  (Code_Type = @Code_Type)";
+            this._commandCollection[1].CommandText = "\r\n\t\t\t\t\t\t\t\t\t\t\tDELETE FROM tblLessonCode\r\n\t\t\t\t\t\t\t\t\t\t\tWHERE  (Code_Type = @Code_Type" +
+                ")\r\n\t\t\t\t\t\t\t\t\t\t";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Code_Type", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Code_Type", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "UPDATE tblLessonCode\r\nSET          Code_PricePerHour = @Code_PricePerHour\r\nWHERE " +
-                " (Code_Type = @Code_Type); \r\n";
+            this._commandCollection[2].CommandText = "\r\n\t\t\t\t\t\t\t\t\t\t\tUPDATE tblLessonCode\r\n\t\t\t\t\t\t\t\t\t\t\tSET          Code_PricePerHour = @C" +
+                "ode_PricePerHour\r\n\t\t\t\t\t\t\t\t\t\t\tWHERE  (Code_Type = @Code_Type);\r\n\t\t\t\t\t\t\t\t\t\t";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Code_PricePerHour", global::System.Data.SqlDbType.Decimal, 9, global::System.Data.ParameterDirection.Input, 10, 2, "Code_PricePerHour", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Code_Type", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Code_Type", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -8717,8 +8910,10 @@ SELECT Code_Type, Code_PricePerHour FROM tblLessonCode WHERE (Code_Type = @Code_
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_EmployeeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EmployeeID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[tblUnavailableSlot] ([Start_Date], [End_Date], [Start_Time], [End_Time], [Reason], [EmployeeID]) VALUES (@Start_Date, @End_Date, @Start_Time, @End_Time, @Reason, @EmployeeID);
-SELECT UnavailableSlotID, Start_Date, End_Date, Start_Time, End_Time, Reason, EmployeeID FROM tblUnavailableSlot WHERE (UnavailableSlotID = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"
+											INSERT INTO [dbo].[tblUnavailableSlot] ([Start_Date], [End_Date], [Start_Time], [End_Time], [Reason], [EmployeeID]) VALUES (@Start_Date, @End_Date, @Start_Time, @End_Time, @Reason, @EmployeeID);
+											SELECT UnavailableSlotID, Start_Date, End_Date, Start_Time, End_Time, Reason, EmployeeID FROM tblUnavailableSlot WHERE (UnavailableSlotID = SCOPE_IDENTITY())
+										";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Start_Date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Start_Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@End_Date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "End_Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -8728,8 +8923,10 @@ SELECT UnavailableSlotID, Start_Date, End_Date, Start_Time, End_Time, Reason, Em
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EmployeeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EmployeeID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[tblUnavailableSlot] SET [Start_Date] = @Start_Date, [End_Date] = @End_Date, [Start_Time] = @Start_Time, [End_Time] = @End_Time, [Reason] = @Reason, [EmployeeID] = @EmployeeID WHERE (([UnavailableSlotID] = @Original_UnavailableSlotID) AND ([Start_Date] = @Original_Start_Date) AND ([End_Date] = @Original_End_Date) AND ((@IsNull_Start_Time = 1 AND [Start_Time] IS NULL) OR ([Start_Time] = @Original_Start_Time)) AND ((@IsNull_End_Time = 1 AND [End_Time] IS NULL) OR ([End_Time] = @Original_End_Time)) AND ([Reason] = @Original_Reason) AND ([EmployeeID] = @Original_EmployeeID));
-SELECT UnavailableSlotID, Start_Date, End_Date, Start_Time, End_Time, Reason, EmployeeID FROM tblUnavailableSlot WHERE (UnavailableSlotID = @UnavailableSlotID)";
+            this._adapter.UpdateCommand.CommandText = @"
+											UPDATE [dbo].[tblUnavailableSlot] SET [Start_Date] = @Start_Date, [End_Date] = @End_Date, [Start_Time] = @Start_Time, [End_Time] = @End_Time, [Reason] = @Reason, [EmployeeID] = @EmployeeID WHERE (([UnavailableSlotID] = @Original_UnavailableSlotID) AND ([Start_Date] = @Original_Start_Date) AND ([End_Date] = @Original_End_Date) AND ((@IsNull_Start_Time = 1 AND [Start_Time] IS NULL) OR ([Start_Time] = @Original_Start_Time)) AND ((@IsNull_End_Time = 1 AND [End_Time] IS NULL) OR ([End_Time] = @Original_End_Time)) AND ([Reason] = @Original_Reason) AND ([EmployeeID] = @Original_EmployeeID));
+											SELECT UnavailableSlotID, Start_Date, End_Date, Start_Time, End_Time, Reason, EmployeeID FROM tblUnavailableSlot WHERE (UnavailableSlotID = @UnavailableSlotID)
+										";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Start_Date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Start_Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@End_Date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "End_Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -8767,9 +8964,11 @@ SELECT UnavailableSlotID, Start_Date, End_Date, Start_Time, End_Time, Reason, Em
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT COUNT(*) AS Expr1\r\nFROM     tblUnavailableSlot\r\nWHERE  (Start_Date = @Star" +
-                "tDate) AND (End_Date = @End_Date) AND (Start_Time = @StartTime) AND (End_Time = " +
-                "@End_Time) AND (Reason = @reason) AND (EmployeeID = @EmployeeID)";
+            this._commandCollection[1].CommandText = @"
+											SELECT COUNT(*) AS Expr1
+											FROM     tblUnavailableSlot
+											WHERE  (Start_Date = @StartDate) AND (End_Date = @End_Date) AND (Start_Time = @StartTime) AND (End_Time = @End_Time) AND (Reason = @reason) AND (EmployeeID = @EmployeeID)
+										";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@StartDate", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "Start_Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@End_Date", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "End_Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -8779,9 +8978,11 @@ SELECT UnavailableSlotID, Start_Date, End_Date, Start_Time, End_Time, Reason, Em
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EmployeeID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "EmployeeID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = @"SELECT COUNT(*) AS Expr1
-FROM     tblUnavailableSlot
-WHERE  (Start_Date = @StartDate) AND (End_Date = @End_Date) AND (Start_Time = @StartTime) AND (End_Time = @End_Time) AND (Reason = @reason) AND (EmployeeID = @EmployeeID) AND (UnavailableSlotID <> @UnavailableSlotID)";
+            this._commandCollection[2].CommandText = @"
+											SELECT COUNT(*) AS Expr1
+											FROM     tblUnavailableSlot
+											WHERE  (Start_Date = @StartDate) AND (End_Date = @End_Date) AND (Start_Time = @StartTime) AND (End_Time = @End_Time) AND (Reason = @reason) AND (EmployeeID = @EmployeeID) AND (UnavailableSlotID <> @UnavailableSlotID)
+										";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@StartDate", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "Start_Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@End_Date", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "End_Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -8792,9 +8993,11 @@ WHERE  (Start_Date = @StartDate) AND (End_Date = @End_Date) AND (Start_Time = @S
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UnavailableSlotID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "UnavailableSlotID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = "SELECT COUNT(*) AS Expr1\r\nFROM     tblUnavailableSlot\r\nWHERE  (EmployeeID = @empl" +
-                "oyeeID) AND (Start_Date <= @bookingDate) AND (End_Date >= @bookingDate) AND (Sta" +
-                "rt_Time <= @EndTime) AND (End_Time >= @StartTime)";
+            this._commandCollection[3].CommandText = @"
+											SELECT COUNT(*) AS Expr1
+											FROM     tblUnavailableSlot
+											WHERE  (EmployeeID = @employeeID) AND (Start_Date <= @bookingDate) AND (End_Date >= @bookingDate) AND (Start_Time <= @EndTime) AND (End_Time >= @StartTime)
+										";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@employeeID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "EmployeeID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@bookingDate", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "Start_Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -8802,8 +9005,8 @@ WHERE  (Start_Date = @StartDate) AND (End_Date = @End_Date) AND (Start_Time = @S
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@StartTime", global::System.Data.SqlDbType.Time, 5, global::System.Data.ParameterDirection.Input, 0, 0, "End_Time", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[4].Connection = this.Connection;
-            this._commandCollection[4].CommandText = "DELETE FROM tblUnavailableSlot\r\nWHERE  (UnavailableSlotID = @Original_Unavailable" +
-                "SlotID)";
+            this._commandCollection[4].CommandText = "\r\n\t\t\t\t\t\t\t\t\t\t\tDELETE FROM tblUnavailableSlot\r\n\t\t\t\t\t\t\t\t\t\t\tWHERE  (UnavailableSlotID" +
+                " = @Original_UnavailableSlotID)\r\n\t\t\t\t\t\t\t\t\t\t";
             this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UnavailableSlotID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "UnavailableSlotID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
@@ -9362,8 +9565,10 @@ WHERE  (Start_Date = @StartDate) AND (End_Date = @End_Date) AND (Start_Time = @S
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Vehicle_Status", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Vehicle_Status", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[tblVehicle] ([Vehicle_NumberPlate], [Vehicle_RegNum], [Vehicle_EngineNum], [Vehicle_Make], [Vehicle_Model], [Vehicle_Size], [Vehicle_Status]) VALUES (@Vehicle_NumberPlate, @Vehicle_RegNum, @Vehicle_EngineNum, @Vehicle_Make, @Vehicle_Model, @Vehicle_Size, @Vehicle_Status);
-SELECT VehicleID, Vehicle_NumberPlate, Vehicle_RegNum, Vehicle_EngineNum, Vehicle_Make, Vehicle_Model, Vehicle_Size, Vehicle_Status FROM tblVehicle WHERE (VehicleID = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"
+											INSERT INTO [dbo].[tblVehicle] ([Vehicle_NumberPlate], [Vehicle_RegNum], [Vehicle_EngineNum], [Vehicle_Make], [Vehicle_Model], [Vehicle_Size], [Vehicle_Status]) VALUES (@Vehicle_NumberPlate, @Vehicle_RegNum, @Vehicle_EngineNum, @Vehicle_Make, @Vehicle_Model, @Vehicle_Size, @Vehicle_Status);
+											SELECT VehicleID, Vehicle_NumberPlate, Vehicle_RegNum, Vehicle_EngineNum, Vehicle_Make, Vehicle_Model, Vehicle_Size, Vehicle_Status FROM tblVehicle WHERE (VehicleID = SCOPE_IDENTITY())
+										";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Vehicle_NumberPlate", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Vehicle_NumberPlate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Vehicle_RegNum", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Vehicle_RegNum", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -9374,8 +9579,10 @@ SELECT VehicleID, Vehicle_NumberPlate, Vehicle_RegNum, Vehicle_EngineNum, Vehicl
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Vehicle_Status", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Vehicle_Status", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[tblVehicle] SET [Vehicle_NumberPlate] = @Vehicle_NumberPlate, [Vehicle_RegNum] = @Vehicle_RegNum, [Vehicle_EngineNum] = @Vehicle_EngineNum, [Vehicle_Make] = @Vehicle_Make, [Vehicle_Model] = @Vehicle_Model, [Vehicle_Size] = @Vehicle_Size, [Vehicle_Status] = @Vehicle_Status WHERE (([VehicleID] = @Original_VehicleID) AND ([Vehicle_NumberPlate] = @Original_Vehicle_NumberPlate) AND ([Vehicle_RegNum] = @Original_Vehicle_RegNum) AND ([Vehicle_EngineNum] = @Original_Vehicle_EngineNum) AND ([Vehicle_Make] = @Original_Vehicle_Make) AND ([Vehicle_Model] = @Original_Vehicle_Model) AND ([Vehicle_Size] = @Original_Vehicle_Size) AND ([Vehicle_Status] = @Original_Vehicle_Status));
-SELECT VehicleID, Vehicle_NumberPlate, Vehicle_RegNum, Vehicle_EngineNum, Vehicle_Make, Vehicle_Model, Vehicle_Size, Vehicle_Status FROM tblVehicle WHERE (VehicleID = @VehicleID)";
+            this._adapter.UpdateCommand.CommandText = @"
+											UPDATE [dbo].[tblVehicle] SET [Vehicle_NumberPlate] = @Vehicle_NumberPlate, [Vehicle_RegNum] = @Vehicle_RegNum, [Vehicle_EngineNum] = @Vehicle_EngineNum, [Vehicle_Make] = @Vehicle_Make, [Vehicle_Model] = @Vehicle_Model, [Vehicle_Size] = @Vehicle_Size, [Vehicle_Status] = @Vehicle_Status WHERE (([VehicleID] = @Original_VehicleID) AND ([Vehicle_NumberPlate] = @Original_Vehicle_NumberPlate) AND ([Vehicle_RegNum] = @Original_Vehicle_RegNum) AND ([Vehicle_EngineNum] = @Original_Vehicle_EngineNum) AND ([Vehicle_Make] = @Original_Vehicle_Make) AND ([Vehicle_Model] = @Original_Vehicle_Model) AND ([Vehicle_Size] = @Original_Vehicle_Size) AND ([Vehicle_Status] = @Original_Vehicle_Status));
+											SELECT VehicleID, Vehicle_NumberPlate, Vehicle_RegNum, Vehicle_EngineNum, Vehicle_Make, Vehicle_Model, Vehicle_Size, Vehicle_Status FROM tblVehicle WHERE (VehicleID = @VehicleID)
+										";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Vehicle_NumberPlate", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Vehicle_NumberPlate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Vehicle_RegNum", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Vehicle_RegNum", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -9413,32 +9620,33 @@ SELECT VehicleID, Vehicle_NumberPlate, Vehicle_RegNum, Vehicle_EngineNum, Vehicl
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "DELETE FROM tblVehicle\r\nWHERE  (VehicleID = @Original_VehicleID)";
+            this._commandCollection[1].CommandText = "\r\n\t\t\t\t\t\t\t\t\t\t\tDELETE FROM tblVehicle\r\n\t\t\t\t\t\t\t\t\t\t\tWHERE  (VehicleID = @Original_Veh" +
+                "icleID)\r\n\t\t\t\t\t\t\t\t\t\t";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_VehicleID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "VehicleID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "SELECT VehicleID, Vehicle_NumberPlate, Vehicle_RegNum, Vehicle_EngineNum, Vehicle" +
-                "_Make, Vehicle_Model, Vehicle_Size, Vehicle_Status FROM dbo.tblVehicle\r\nWhere Ve" +
-                "hicle_Size = \'Medium\'";
+            this._commandCollection[2].CommandText = "SELECT VehicleID, Vehicle_EngineNum, Vehicle_Make, Vehicle_Model, Vehicle_NumberP" +
+                "late, Vehicle_RegNum, Vehicle_Size, Vehicle_Status FROM tblVehicle WHERE (Vehicl" +
+                "e_Size = \'Medium\')";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = "SELECT VehicleID, Vehicle_NumberPlate, Vehicle_RegNum, Vehicle_EngineNum, Vehicle" +
-                "_Make, Vehicle_Model, Vehicle_Size, Vehicle_Status FROM dbo.tblVehicle\r\nWhere Ve" +
-                "hicle_Size = \'Small\'";
+            this._commandCollection[3].CommandText = "SELECT VehicleID, Vehicle_EngineNum, Vehicle_Make, Vehicle_Model, Vehicle_NumberP" +
+                "late, Vehicle_RegNum, Vehicle_Size, Vehicle_Status FROM tblVehicle WHERE (Vehicl" +
+                "e_Size = \'Small\')";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[4].Connection = this.Connection;
-            this._commandCollection[4].CommandText = "SELECT VehicleID, Vehicle_NumberPlate, Vehicle_RegNum, Vehicle_EngineNum, Vehicle" +
-                "_Make, Vehicle_Model, Vehicle_Size, Vehicle_Status FROM dbo.tblVehicle\r\nWhere Ve" +
-                "hicle_Size = \'Large\'";
+            this._commandCollection[4].CommandText = "SELECT VehicleID, Vehicle_EngineNum, Vehicle_Make, Vehicle_Model, Vehicle_NumberP" +
+                "late, Vehicle_RegNum, Vehicle_Size, Vehicle_Status FROM tblVehicle WHERE (Vehicl" +
+                "e_Size = \'Large\')";
             this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[5] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[5].Connection = this.Connection;
-            this._commandCollection[5].CommandText = "SELECT VehicleID, Vehicle_NumberPlate, Vehicle_RegNum, Vehicle_EngineNum, Vehicle" +
-                "_Make, Vehicle_Model, Vehicle_Size, Vehicle_Status\r\nFROM     tblVehicle\r\nWHERE  " +
-                "(Vehicle_Make LIKE @make + \'%\')";
+            this._commandCollection[5].CommandText = "SELECT VehicleID, Vehicle_EngineNum, Vehicle_Make, Vehicle_Model, Vehicle_NumberP" +
+                "late, Vehicle_RegNum, Vehicle_Size, Vehicle_Status FROM tblVehicle WHERE (Vehicl" +
+                "e_Make LIKE @make + \'%\')";
             this._commandCollection[5].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@make", global::System.Data.SqlDbType.VarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, "Vehicle_Make", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[6] = new global::System.Data.SqlClient.SqlCommand();
@@ -9447,14 +9655,16 @@ SELECT VehicleID, Vehicle_NumberPlate, Vehicle_RegNum, Vehicle_EngineNum, Vehicl
             this._commandCollection[6].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[7] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[7].Connection = this.Connection;
-            this._commandCollection[7].CommandText = "SELECT        COUNT(*) AS Expr1\r\nFROM            tblVehicle";
+            this._commandCollection[7].CommandText = "\r\n\t\t\t\t\t\t\t\t\t\t\tSELECT        COUNT(*) AS Expr1\r\n\t\t\t\t\t\t\t\t\t\t\tFROM            tblVehic" +
+                "le\r\n\t\t\t\t\t\t\t\t\t\t";
             this._commandCollection[7].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[8] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[8].Connection = this.Connection;
-            this._commandCollection[8].CommandText = "UPDATE tblVehicle\r\nSET          Vehicle_NumberPlate = @NumPlate, Vehicle_RegNum =" +
-                " @RegNum, Vehicle_EngineNum = @EngineNum, Vehicle_Make = @Make, Vehicle_Model = " +
-                "@Model, Vehicle_Size = @Size, Vehicle_Status = @status\r\nWHERE  (VehicleID = @ID)" +
-                "";
+            this._commandCollection[8].CommandText = @"
+											UPDATE tblVehicle
+											SET          Vehicle_NumberPlate = @NumPlate, Vehicle_RegNum = @RegNum, Vehicle_EngineNum = @EngineNum, Vehicle_Make = @Make, Vehicle_Model = @Model, Vehicle_Size = @Size, Vehicle_Status = @status
+											WHERE  (VehicleID = @ID)
+										";
             this._commandCollection[8].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[8].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NumPlate", global::System.Data.SqlDbType.VarChar, 8, global::System.Data.ParameterDirection.Input, 0, 0, "Vehicle_NumberPlate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[8].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RegNum", global::System.Data.SqlDbType.NChar, 7, global::System.Data.ParameterDirection.Input, 0, 0, "Vehicle_RegNum", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -10186,36 +10396,42 @@ SELECT VehicleID, Vehicle_NumberPlate, Vehicle_RegNum, Vehicle_EngineNum, Vehicl
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT tblBooking.BookingID, tblBooking.Booking_Date, tblBooking.Booking_StartTime, tblBooking.Booking_EndTime, tblBooking.Booking_Status, tblBooking.Booking_TotalCost, tblBooking.Booking_FeeDue, tblBooking.LearnerID, 
-                  tblBooking.Code_Type, tblBooking.VehicleID, tblBooking.EmployeeID, tblEmployee.Employee_Name, tblEmployee.Employee_Surname, tblVehicle.Vehicle_Make, tblVehicle.Vehicle_Model, tblLearner.Learner_Name, 
-                  tblLearner.Learner_Surname
-FROM     tblBooking INNER JOIN
-                  tblEmployee ON tblBooking.EmployeeID = tblEmployee.EmployeeID INNER JOIN
-                  tblLearner ON tblBooking.LearnerID = tblLearner.LearnerID INNER JOIN
-                  tblVehicle ON tblBooking.VehicleID = tblVehicle.VehicleID";
+            this._commandCollection[0].CommandText = @"
+											SELECT tblBooking.BookingID, tblBooking.Booking_Date, tblBooking.Booking_StartTime, tblBooking.Booking_EndTime, tblBooking.Booking_Status, tblBooking.Booking_TotalCost, tblBooking.Booking_FeeDue, tblBooking.LearnerID,
+											tblBooking.Code_Type, tblBooking.VehicleID, tblBooking.EmployeeID, tblEmployee.Employee_Name, tblEmployee.Employee_Surname, tblVehicle.Vehicle_Make, tblVehicle.Vehicle_Model, tblLearner.Learner_Name,
+											tblLearner.Learner_Surname
+											FROM     tblBooking INNER JOIN
+											tblEmployee ON tblBooking.EmployeeID = tblEmployee.EmployeeID INNER JOIN
+											tblLearner ON tblBooking.LearnerID = tblLearner.LearnerID INNER JOIN
+											tblVehicle ON tblBooking.VehicleID = tblVehicle.VehicleID
+										";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[1].Connection = new global::System.Data.SqlClient.SqlConnection(global::DrivingSchoolBookingSystem.Properties.Settings.Default.WstGrp2ConnectionString);
-            this._commandCollection[1].CommandText = @"SELECT tblBooking.BookingID, tblBooking.Booking_Date, tblBooking.Booking_StartTime, tblBooking.Booking_EndTime, tblBooking.Booking_Status, tblBooking.Booking_TotalCost, tblBooking.Booking_FeeDue, tblBooking.LearnerID, 
-                  tblBooking.Code_Type, tblBooking.VehicleID, tblBooking.EmployeeID, tblEmployee.Employee_Name, tblEmployee.Employee_Surname, tblVehicle.Vehicle_Make, tblVehicle.Vehicle_Model, tblLearner.Learner_Name, 
-                  tblLearner.Learner_Surname
-FROM     tblBooking INNER JOIN
-                  tblEmployee ON tblBooking.EmployeeID = tblEmployee.EmployeeID INNER JOIN
-                  tblLearner ON tblBooking.LearnerID = tblLearner.LearnerID INNER JOIN
-                  tblVehicle ON tblBooking.VehicleID = tblVehicle.VehicleID
-WHERE  (Booking_Date = @date)";
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = @"
+											SELECT tblBooking.BookingID, tblBooking.Booking_Date, tblBooking.Booking_StartTime, tblBooking.Booking_EndTime, tblBooking.Booking_Status, tblBooking.Booking_TotalCost, tblBooking.Booking_FeeDue, tblBooking.LearnerID,
+											tblBooking.Code_Type, tblBooking.VehicleID, tblBooking.EmployeeID, tblEmployee.Employee_Name, tblEmployee.Employee_Surname, tblVehicle.Vehicle_Make, tblVehicle.Vehicle_Model, tblLearner.Learner_Name,
+											tblLearner.Learner_Surname
+											FROM     tblBooking INNER JOIN
+											tblEmployee ON tblBooking.EmployeeID = tblEmployee.EmployeeID INNER JOIN
+											tblLearner ON tblBooking.LearnerID = tblLearner.LearnerID INNER JOIN
+											tblVehicle ON tblBooking.VehicleID = tblVehicle.VehicleID
+											WHERE  (Booking_Date = @date)
+										";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@date", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "Booking_Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[2].Connection = new global::System.Data.SqlClient.SqlConnection(global::DrivingSchoolBookingSystem.Properties.Settings.Default.WstGrp2ConnectionString);
-            this._commandCollection[2].CommandText = @"SELECT tblBooking.BookingID, tblBooking.Booking_Date, tblBooking.Booking_StartTime, tblBooking.Booking_EndTime, tblBooking.Booking_Status, tblBooking.Booking_TotalCost, tblBooking.Booking_FeeDue, tblBooking.LearnerID, 
-                  tblBooking.Code_Type, tblBooking.VehicleID, tblBooking.EmployeeID, tblEmployee.Employee_Name, tblEmployee.Employee_Surname, tblVehicle.Vehicle_Make, tblVehicle.Vehicle_Model, tblLearner.Learner_Name, 
-                  tblLearner.Learner_Surname
-FROM     tblBooking INNER JOIN
-                  tblEmployee ON tblBooking.EmployeeID = tblEmployee.EmployeeID INNER JOIN
-                  tblLearner ON tblBooking.LearnerID = tblLearner.LearnerID INNER JOIN
-                  tblVehicle ON tblBooking.VehicleID = tblVehicle.VehicleID
-WHERE  (tblBooking.LearnerID = @LearnerID)";
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = @"
+											SELECT tblBooking.BookingID, tblBooking.Booking_Date, tblBooking.Booking_StartTime, tblBooking.Booking_EndTime, tblBooking.Booking_Status, tblBooking.Booking_TotalCost, tblBooking.Booking_FeeDue, tblBooking.LearnerID,
+											tblBooking.Code_Type, tblBooking.VehicleID, tblBooking.EmployeeID, tblEmployee.Employee_Name, tblEmployee.Employee_Surname, tblVehicle.Vehicle_Make, tblVehicle.Vehicle_Model, tblLearner.Learner_Name,
+											tblLearner.Learner_Surname
+											FROM     tblBooking INNER JOIN
+											tblEmployee ON tblBooking.EmployeeID = tblEmployee.EmployeeID INNER JOIN
+											tblLearner ON tblBooking.LearnerID = tblLearner.LearnerID INNER JOIN
+											tblVehicle ON tblBooking.VehicleID = tblVehicle.VehicleID
+											WHERE  (tblBooking.LearnerID = @LearnerID)
+										";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LearnerID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "LearnerID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
@@ -10452,18 +10668,22 @@ WHERE  (tblBooking.LearnerID = @LearnerID)";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT tblUnavailableSlot.UnavailableSlotID, tblUnavailableSlot.Start_Date, tblUnavailableSlot.End_Date, tblUnavailableSlot.Start_Time, tblUnavailableSlot.Reason, tblUnavailableSlot.End_Time, tblEmployee.Employee_Name, 
-                  tblEmployee.Employee_Surname
-FROM     tblUnavailableSlot INNER JOIN
-                  tblEmployee ON tblUnavailableSlot.EmployeeID = tblEmployee.EmployeeID";
+            this._commandCollection[0].CommandText = @"
+											SELECT tblUnavailableSlot.UnavailableSlotID, tblUnavailableSlot.Start_Date, tblUnavailableSlot.End_Date, tblUnavailableSlot.Start_Time, tblUnavailableSlot.Reason, tblUnavailableSlot.End_Time, tblEmployee.Employee_Name,
+											tblEmployee.Employee_Surname
+											FROM     tblUnavailableSlot INNER JOIN
+											tblEmployee ON tblUnavailableSlot.EmployeeID = tblEmployee.EmployeeID
+										";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[1].Connection = new global::System.Data.SqlClient.SqlConnection(global::DrivingSchoolBookingSystem.Properties.Settings.Default.WstGrp2ConnectionString);
-            this._commandCollection[1].CommandText = @"SELECT tblUnavailableSlot.UnavailableSlotID, tblUnavailableSlot.Start_Date, tblUnavailableSlot.End_Date, tblUnavailableSlot.Start_Time, tblUnavailableSlot.Reason, tblUnavailableSlot.End_Time, tblEmployee.Employee_Name, 
-                  tblEmployee.Employee_Surname
-FROM     tblUnavailableSlot INNER JOIN
-                  tblEmployee ON tblUnavailableSlot.EmployeeID = tblEmployee.EmployeeID
-Where Employee_Surname LIKE @Surname + '%'";
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = @"
+											SELECT tblUnavailableSlot.UnavailableSlotID, tblUnavailableSlot.Start_Date, tblUnavailableSlot.End_Date, tblUnavailableSlot.Start_Time, tblUnavailableSlot.Reason, tblUnavailableSlot.End_Time, tblEmployee.Employee_Name,
+											tblEmployee.Employee_Surname
+											FROM     tblUnavailableSlot INNER JOIN
+											tblEmployee ON tblUnavailableSlot.EmployeeID = tblEmployee.EmployeeID
+											Where Employee_Surname LIKE @Surname + '%'
+										";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Surname", global::System.Data.SqlDbType.VarChar, 35, global::System.Data.ParameterDirection.Input, 0, 0, "Employee_Surname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
@@ -10677,25 +10897,29 @@ Where Employee_Surname LIKE @Surname + '%'";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT tblBooking.Booking_Date, tblBooking.Booking_StartTime, tblBooking.Booking_EndTime, tblBooking.Booking_Status, tblBooking.Code_Type, tblEmployee.Employee_Name, tblEmployee.Employee_Surname, tblLearner_1.Learner_Name, 
-                  tblLearner_1.Learner_Surname, tblVehicle.Vehicle_Make, tblVehicle.Vehicle_Model
-FROM     tblBooking INNER JOIN
-                  tblEmployee ON tblBooking.EmployeeID = tblEmployee.EmployeeID INNER JOIN
-                  tblLearner AS tblLearner_1 ON tblBooking.LearnerID = tblLearner_1.LearnerID INNER JOIN
-                  tblVehicle ON tblBooking.VehicleID = tblVehicle.VehicleID
-WHERE  (tblBooking.EmployeeID = @EmployeeID) AND (tblBooking.Booking_Date = @date)";
+            this._commandCollection[0].CommandText = @"
+											SELECT tblBooking.Booking_Date, tblBooking.Booking_StartTime, tblBooking.Booking_EndTime, tblBooking.Booking_Status, tblBooking.Code_Type, tblEmployee.Employee_Name, tblEmployee.Employee_Surname, tblLearner_1.Learner_Name,
+											tblLearner_1.Learner_Surname, tblVehicle.Vehicle_Make, tblVehicle.Vehicle_Model
+											FROM     tblBooking INNER JOIN
+											tblEmployee ON tblBooking.EmployeeID = tblEmployee.EmployeeID INNER JOIN
+											tblLearner AS tblLearner_1 ON tblBooking.LearnerID = tblLearner_1.LearnerID INNER JOIN
+											tblVehicle ON tblBooking.VehicleID = tblVehicle.VehicleID
+											WHERE  (tblBooking.EmployeeID = @EmployeeID) AND (tblBooking.Booking_Date = @date)
+										";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EmployeeID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "EmployeeID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@date", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "Booking_Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[1].Connection = new global::System.Data.SqlClient.SqlConnection(global::DrivingSchoolBookingSystem.Properties.Settings.Default.WstGrp2ConnectionString);
-            this._commandCollection[1].CommandText = @"SELECT tblBooking.Booking_Date, tblBooking.Booking_StartTime, tblBooking.Booking_EndTime, tblBooking.Booking_Status, tblBooking.Code_Type, tblEmployee.Employee_Name, tblEmployee.Employee_Surname, tblLearner_1.Learner_Name, 
-                  tblLearner_1.Learner_Surname, tblVehicle.Vehicle_Make, tblVehicle.Vehicle_Model
-FROM     tblBooking INNER JOIN
-                  tblEmployee ON tblBooking.EmployeeID = tblEmployee.EmployeeID INNER JOIN
-                  tblLearner AS tblLearner_1 ON tblBooking.LearnerID = tblLearner_1.LearnerID INNER JOIN
-                  tblVehicle ON tblBooking.VehicleID = tblVehicle.VehicleID
-WHERE  (tblBooking.EmployeeID = @EmployeeID) AND (tblBooking.Booking_Date = @date)";
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = @"
+											SELECT tblBooking.Booking_Date, tblBooking.Booking_StartTime, tblBooking.Booking_EndTime, tblBooking.Booking_Status, tblBooking.Code_Type, tblEmployee.Employee_Name, tblEmployee.Employee_Surname, tblLearner_1.Learner_Name,
+											tblLearner_1.Learner_Surname, tblVehicle.Vehicle_Make, tblVehicle.Vehicle_Model
+											FROM     tblBooking INNER JOIN
+											tblEmployee ON tblBooking.EmployeeID = tblEmployee.EmployeeID INNER JOIN
+											tblLearner AS tblLearner_1 ON tblBooking.LearnerID = tblLearner_1.LearnerID INNER JOIN
+											tblVehicle ON tblBooking.VehicleID = tblVehicle.VehicleID
+											WHERE  (tblBooking.EmployeeID = @EmployeeID) AND (tblBooking.Booking_Date = @date)
+										";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EmployeeID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "EmployeeID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@date", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "Booking_Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));

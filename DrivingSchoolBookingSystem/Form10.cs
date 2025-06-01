@@ -1,4 +1,4 @@
-﻿using BookingSystem.WstGrp2DataSetTableAdapters;
+﻿using DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

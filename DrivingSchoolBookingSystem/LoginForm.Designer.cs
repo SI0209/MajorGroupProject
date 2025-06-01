@@ -41,8 +41,8 @@
             this.usernametextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.wstGrp2DataSet1 = new BookingSystem.WstGrp2DataSet();
-            this.tblEmployeeTableAdapter1 = new BookingSystem.WstGrp2DataSetTableAdapters.tblEmployeeTableAdapter();
+            this.wstGrp2DataSet1 = new DrivingSchoolBookingSystem.WstGrp2DataSet();
+            this.tblEmployeeTableAdapter1 = new DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters.tblEmployeeTableAdapter();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -200,9 +200,8 @@
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // wstGrp2DataSet1
-            // 
-            this.wstGrp2DataSet1.DataSetName = "WstGrp2DataSet";
-            this.wstGrp2DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            //             this.wstGrp2DataSet1.DataSetName = "WstGrp2DataSet";
+           this.wstGrp2DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tblEmployeeTableAdapter1
             // 
@@ -246,7 +245,7 @@
         private System.Windows.Forms.Button LoginButton;
         private System.Windows.Forms.Button FgtPassbtn;
         private System.Windows.Forms.Button button1;
-        private BookingSystem.WstGrp2DataSet wstGrp2DataSet1;
-        private BookingSystem.WstGrp2DataSetTableAdapters.tblEmployeeTableAdapter tblEmployeeTableAdapter1;
+        private DrivingSchoolBookingSystem.WstGrp2DataSet wstGrp2DataSet1;
+        private DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters.tblEmployeeTableAdapter tblEmployeeTableAdapter1;
     }
 }
