@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.FgtPassbtn = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.LoginButton = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -39,10 +41,13 @@
             this.usernametextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.wstGrp2DataSet1 = new BookingSystem.WstGrp2DataSet();
+            this.tblEmployeeTableAdapter1 = new BookingSystem.WstGrp2DataSetTableAdapters.tblEmployeeTableAdapter();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wstGrp2DataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -50,6 +55,8 @@
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.BackgroundImage = global::DrivingSchoolBookingSystem.Properties.Resources.Blue_sky;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.FgtPassbtn);
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.LoginButton);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.pictureBox2);
@@ -65,12 +72,32 @@
             this.panel1.Size = new System.Drawing.Size(444, 410);
             this.panel1.TabIndex = 0;
             // 
+            // FgtPassbtn
+            // 
+            this.FgtPassbtn.Location = new System.Drawing.Point(204, 353);
+            this.FgtPassbtn.Name = "FgtPassbtn";
+            this.FgtPassbtn.Size = new System.Drawing.Size(133, 37);
+            this.FgtPassbtn.TabIndex = 13;
+            this.FgtPassbtn.Text = "Forgot Password?";
+            this.FgtPassbtn.UseVisualStyleBackColor = true;
+            this.FgtPassbtn.Click += new System.EventHandler(this.FgtPassbtn_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(123, 353);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 37);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Clear";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // LoginButton
             // 
             this.LoginButton.Font = new System.Drawing.Font("Comic Sans MS", 11F, System.Drawing.FontStyle.Bold);
-            this.LoginButton.Location = new System.Drawing.Point(166, 326);
+            this.LoginButton.Location = new System.Drawing.Point(122, 297);
             this.LoginButton.Name = "LoginButton";
-            this.LoginButton.Size = new System.Drawing.Size(110, 50);
+            this.LoginButton.Size = new System.Drawing.Size(214, 50);
             this.LoginButton.TabIndex = 11;
             this.LoginButton.Text = "Login";
             this.LoginButton.UseVisualStyleBackColor = true;
@@ -132,6 +159,7 @@
             this.viewpasswordcheckBox.TabIndex = 6;
             this.viewpasswordcheckBox.Text = "View Password";
             this.viewpasswordcheckBox.UseVisualStyleBackColor = true;
+            this.viewpasswordcheckBox.CheckedChanged += new System.EventHandler(this.viewpasswordcheckBox_CheckedChanged);
             // 
             // passwordtextBox
             // 
@@ -146,6 +174,7 @@
             this.usernametextBox.Name = "usernametextBox";
             this.usernametextBox.Size = new System.Drawing.Size(129, 22);
             this.usernametextBox.TabIndex = 4;
+            this.usernametextBox.TextChanged += new System.EventHandler(this.usernametextBox_TextChanged);
             // 
             // label2
             // 
@@ -170,6 +199,15 @@
             this.label1.Text = "Username:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // wstGrp2DataSet1
+            // 
+            this.wstGrp2DataSet1.DataSetName = "WstGrp2DataSet";
+            this.wstGrp2DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tblEmployeeTableAdapter1
+            // 
+            this.tblEmployeeTableAdapter1.ClearBeforeFill = true;
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -188,6 +226,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wstGrp2DataSet1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -205,5 +244,9 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button LoginButton;
+        private System.Windows.Forms.Button FgtPassbtn;
+        private System.Windows.Forms.Button button1;
+        private BookingSystem.WstGrp2DataSet wstGrp2DataSet1;
+        private BookingSystem.WstGrp2DataSetTableAdapters.tblEmployeeTableAdapter tblEmployeeTableAdapter1;
     }
 }
