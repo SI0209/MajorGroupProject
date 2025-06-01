@@ -52,6 +52,7 @@ C:\Users\Strini\Source\Repos\MajorGroupProject3\DrivingSchoolBookingSystem\obj\D
 C:\Users\Strini\Source\Repos\MajorGroupProject3\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.csproj.CoreCompileInputs.cache
 C:\Users\Strini\Source\Repos\MajorGroupProject3\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.exe
 C:\Users\Strini\Source\Repos\MajorGroupProject3\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.pdb
+<<<<<<< HEAD
 C:\Users\DELL VOSTRO 15 3000\Source\Repos\SI0209\MajorGroupProject\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.csproj.AssemblyReference.cache
 C:\Users\DELL VOSTRO 15 3000\Source\Repos\SI0209\MajorGroupProject\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.Form1.resources
 C:\Users\DELL VOSTRO 15 3000\Source\Repos\SI0209\MajorGroupProject\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.LoginForm.resources
@@ -68,3 +69,5 @@ C:\Users\DELL VOSTRO 15 3000\Source\Repos\SI0209\MajorGroupProject\DrivingSchool
 C:\Users\DELL VOSTRO 15 3000\Source\Repos\SI0209\MajorGroupProject\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.csproj.CoreCompileInputs.cache
 C:\Users\DELL VOSTRO 15 3000\Source\Repos\SI0209\MajorGroupProject\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.exe
 C:\Users\DELL VOSTRO 15 3000\Source\Repos\SI0209\MajorGroupProject\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.pdb
+=======
+>>>>>>> b1096b5 (learner form)
