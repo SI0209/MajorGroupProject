@@ -36,9 +36,9 @@
             this.passwordformcheckboc = new System.Windows.Forms.CheckBox();
             this.clearbuttonpasswordform = new System.Windows.Forms.Button();
             this.backbtnpasswordform = new System.Windows.Forms.Button();
-            this.tblEmployeeTableAdapter1 = new BookingSystem.WstGrp2DataSetTableAdapters.tblEmployeeTableAdapter();
-            this.wstGrp2DataSet1 = new BookingSystem.WstGrp2DataSet();
-            ((System.ComponentModel.ISupportInitialize)(this.wstGrp2DataSet1)).BeginInit();
+            this.tblEmployeeTableAdapter1 = new DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters.tblEmployeeTableAdapter();
+            this.wstGrp2DataSet = new DrivingSchoolBookingSystem.WstGrp2DataSet();
+            ((System.ComponentModel.ISupportInitialize)(this.wstGrp2DataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // passwordUpdatetxtbox
@@ -133,8 +133,8 @@
             // 
             // wstGrp2DataSet1
             // 
-            this.wstGrp2DataSet1.DataSetName = "WstGrp2DataSet";
-            this.wstGrp2DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.wstGrp2DataSet.DataSetName = "WstGrp2DataSet";
+            this.wstGrp2DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // Password
             // 
@@ -152,7 +152,7 @@
             this.Controls.Add(this.passwordUpdatetxtbox);
             this.Name = "Password";
             this.Text = "Form10";
-            ((System.ComponentModel.ISupportInitialize)(this.wstGrp2DataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wstGrp2DataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -168,7 +168,7 @@
         private System.Windows.Forms.CheckBox passwordformcheckboc;
         private System.Windows.Forms.Button clearbuttonpasswordform;
         private System.Windows.Forms.Button backbtnpasswordform;
-        private BookingSystem.WstGrp2DataSetTableAdapters.tblEmployeeTableAdapter tblEmployeeTableAdapter1;
-        private BookingSystem.WstGrp2DataSet wstGrp2DataSet1;
+        private DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters.tblEmployeeTableAdapter tblEmployeeTableAdapter1;
+        private DrivingSchoolBookingSystem.WstGrp2DataSet wstGrp2DataSet;
     }
 }
