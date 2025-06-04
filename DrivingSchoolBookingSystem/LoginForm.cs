@@ -86,16 +86,14 @@ namespace DrivingSchoolBookingSystem
                     {
                         MessageBox.Show("Welcome to the Araf's Driving School Booking System! ", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Hide();
-                        Form6 mngEmployee = new Form6();
+                        ManageInstruc mngEmployee = new ManageInstruc();
                         mngEmployee.Show();
 
                     }
                     else
                     {
-                       // this.Hide();
-                       // InstructorSchedule mngEmployee = new InstructorSchedule(this);
-                        //mngEmployee.Show();
-                        //MessageBox.Show("Instructor Access Denied", "Security", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                      
+                        MessageBox.Show("Instructor Access Denied", "Security", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
 
 
