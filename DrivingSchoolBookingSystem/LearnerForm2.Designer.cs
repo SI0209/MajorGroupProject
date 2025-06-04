@@ -43,7 +43,9 @@
             this.learnerLearnersIssueDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.learnerLearnersExpiryDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codeTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tblLearnerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tblLearnerBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.wstGrp2DataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.wstGrp2DataSet1 = new DrivingSchoolBookingSystem.WstGrp2DataSet();
             this.wstGrp2DataSet = new DrivingSchoolBookingSystem.WstGrp2DataSet();
             this.tblLearnerTableAdapter = new DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters.tblLearnerTableAdapter();
             this.label1 = new System.Windows.Forms.Label();
@@ -60,10 +62,8 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.tblLearnerBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -71,10 +71,20 @@
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label14 = new System.Windows.Forms.Label();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblLearnerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblLearnerBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wstGrp2DataSet1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wstGrp2DataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wstGrp2DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblLearnerBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -95,7 +105,7 @@
             this.learnerLearnersIssueDateDataGridViewTextBoxColumn,
             this.learnerLearnersExpiryDateDataGridViewTextBoxColumn,
             this.codeTypeDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.tblLearnerBindingSource;
+            this.dataGridView1.DataSource = this.tblLearnerBindingSource1;
             this.dataGridView1.Location = new System.Drawing.Point(561, 109);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
@@ -208,10 +218,20 @@
             this.codeTypeDataGridViewTextBoxColumn.Name = "codeTypeDataGridViewTextBoxColumn";
             this.codeTypeDataGridViewTextBoxColumn.Width = 125;
             // 
-            // tblLearnerBindingSource
+            // tblLearnerBindingSource1
             // 
-            this.tblLearnerBindingSource.DataMember = "tblLearner";
-            this.tblLearnerBindingSource.DataSource = this.wstGrp2DataSet;
+            this.tblLearnerBindingSource1.DataMember = "tblLearner";
+            this.tblLearnerBindingSource1.DataSource = this.wstGrp2DataSet1BindingSource;
+            // 
+            // wstGrp2DataSet1BindingSource
+            // 
+            this.wstGrp2DataSet1BindingSource.DataSource = this.wstGrp2DataSet1;
+            this.wstGrp2DataSet1BindingSource.Position = 0;
+            // 
+            // wstGrp2DataSet1
+            // 
+            this.wstGrp2DataSet1.DataSetName = "WstGrp2DataSet";
+            this.wstGrp2DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // wstGrp2DataSet
             // 
@@ -382,63 +402,43 @@
             this.label12.TabIndex = 14;
             this.label12.Text = "Code Type:";
             // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(285, 223);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(167, 22);
-            this.textBox3.TabIndex = 15;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(285, 188);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(167, 22);
-            this.textBox4.TabIndex = 16;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(285, 387);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(167, 22);
-            this.textBox5.TabIndex = 17;
-            // 
             // comboBox1
             // 
+            this.comboBox1.DataSource = this.tblLearnerBindingSource2;
+            this.comboBox1.DisplayMember = "Learner_Gender";
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Male ",
-            "Female",
-            "Other"});
             this.comboBox1.Location = new System.Drawing.Point(285, 262);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(167, 24);
             this.comboBox1.TabIndex = 18;
+            this.comboBox1.ValueMember = "Learner_Gender";
+            // 
+            // tblLearnerBindingSource2
+            // 
+            this.tblLearnerBindingSource2.DataMember = "tblLearner";
+            this.tblLearnerBindingSource2.DataSource = this.wstGrp2DataSet;
             // 
             // comboBox2
             // 
+            this.comboBox2.DataSource = this.tblLearnerBindingSource2;
+            this.comboBox2.DisplayMember = "Learner_Race";
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "White",
-            "Indian",
-            "Black",
-            "Other"});
             this.comboBox2.Location = new System.Drawing.Point(285, 300);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(167, 24);
             this.comboBox2.TabIndex = 19;
+            this.comboBox2.ValueMember = "Learner_Race";
             // 
             // comboBox3
             // 
+            this.comboBox3.DataSource = this.tblLearnerBindingSource2;
+            this.comboBox3.DisplayMember = "Learner_Suburb";
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "Westville",
-            "Verulam",
-            "PMB"});
             this.comboBox3.Location = new System.Drawing.Point(285, 426);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(167, 24);
             this.comboBox3.TabIndex = 20;
+            this.comboBox3.ValueMember = "Learner_Suburb";
             // 
             // dateTimePicker1
             // 
@@ -456,15 +456,14 @@
             // 
             // comboBox4
             // 
+            this.comboBox4.DataSource = this.tblLearnerBindingSource2;
+            this.comboBox4.DisplayMember = "Code_Type";
             this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
-            "8",
-            "10",
-            "14"});
             this.comboBox4.Location = new System.Drawing.Point(285, 546);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(167, 24);
             this.comboBox4.TabIndex = 23;
+            this.comboBox4.ValueMember = "Code_Type";
             // 
             // button1
             // 
@@ -488,12 +487,71 @@
             this.label13.TabIndex = 25;
             this.label13.Text = "CellPhone no:";
             // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(285, 188);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(167, 22);
+            this.textBox3.TabIndex = 26;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(285, 223);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(167, 22);
+            this.textBox4.TabIndex = 27;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(285, 344);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(167, 22);
+            this.textBox5.TabIndex = 28;
+            // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(285, 341);
+            this.textBox6.Location = new System.Drawing.Point(285, 387);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(167, 22);
-            this.textBox6.TabIndex = 26;
+            this.textBox6.TabIndex = 29;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(272, 591);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 30;
+            this.button2.Text = "Delete";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(731, 71);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(136, 16);
+            this.label14.TabIndex = 31;
+            this.label14.Text = "Search by Learner ID:";
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(873, 68);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(118, 22);
+            this.textBox7.TabIndex = 32;
+            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(1024, 64);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(99, 28);
+            this.button4.TabIndex = 34;
+            this.button4.Text = "Reset";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // LearnerForm2
             // 
@@ -501,7 +559,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::DrivingSchoolBookingSystem.Properties.Resources.final_project_bg;
             this.ClientSize = new System.Drawing.Size(1276, 626);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.comboBox4);
@@ -510,9 +575,6 @@
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
@@ -532,8 +594,11 @@
             this.Text = "LearnerForm2";
             this.Load += new System.EventHandler(this.LearnerForm2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblLearnerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblLearnerBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wstGrp2DataSet1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wstGrp2DataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wstGrp2DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblLearnerBindingSource2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -543,7 +608,6 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private WstGrp2DataSet wstGrp2DataSet;
-        private System.Windows.Forms.BindingSource tblLearnerBindingSource;
         private WstGrp2DataSetTableAdapters.tblLearnerTableAdapter tblLearnerTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn learnerIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn learnerNameDataGridViewTextBoxColumn;
@@ -572,9 +636,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox3;
@@ -583,6 +644,17 @@
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox6;
+        private WstGrp2DataSet wstGrp2DataSet1;
+        private System.Windows.Forms.BindingSource wstGrp2DataSet1BindingSource;
+        private System.Windows.Forms.BindingSource tblLearnerBindingSource1;
+        private System.Windows.Forms.BindingSource tblLearnerBindingSource2;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Button button4;
     }
 }
