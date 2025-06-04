@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace DrivingSchoolBookingSystem
 {
@@ -102,18 +103,76 @@ namespace DrivingSchoolBookingSystem
                     MessageBox.Show("An error occurred: " + ex.Message);
                 }
 
-            
+            textBox1.Clear();
+            textBox2.Clear();
+            textBox3.Clear();
+            textBox4.Clear();
+            textBox5.Clear();
+            textBox6.Clear();
+
 
         }
 
         private void textBox7_TextChanged(object sender, EventArgs e)
         {
-            tblLearnerTableAdapter.FillByLearnerID(this.wstGrp2DataSet1.tblLearner, Convert.ToInt16(textBox7.Text));
+            string input = textBox7.Text.Trim();
+
+            if (textBox7.Text.Any(char.IsLetter))
+            {
+                MessageBox.Show("Please enter digits only for learner ID.");
+                return;
+            }
+
+
+            if (int.TryParse(input, out int learnerId))
+            {
+                tblLearnerTableAdapter.FillByLearnerID(this.wstGrp2DataSet1.tblLearner, learnerId);
+            }
+            else
+            {
+                
+            }
+            if (wstGrp2DataSet1.tblLearner.Rows.Count == 0)
+            {
+                MessageBox.Show("Invalid learner ID, please input a valid ID.");
+                tblLearnerTableAdapter.Fill(this.wstGrp2DataSet1.tblLearner);
+                return;
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             tblLearnerTableAdapter.Fill(this.wstGrp2DataSet1.tblLearner);
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            textBox1.Clear();
+            textBox2.Clear();
+            textBox3.Clear();
+            textBox4.Clear();
+            textBox5.Clear();
+            textBox6.Clear();
+        }
+
+        private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            textBox1.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            textBox2.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            textBox3.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+            textBox4.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+            textBox5.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
+            textBox6.Text = dataGridView1.CurrentRow.Cells[8].Value.ToString();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }
