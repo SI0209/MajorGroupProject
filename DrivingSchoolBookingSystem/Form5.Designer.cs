@@ -43,7 +43,7 @@
             this.vehicleSizeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vehicleStatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tblVehicleBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.wstGrp2DataSet = new BookingSystem.WstGrp2DataSet();
+            this.wstGrp2DataSet = new DrivingSchoolBookingSystem.WstGrp2DataSet();
             this.label9 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -69,7 +69,7 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.taVehicle = new BookingSystem.WstGrp2DataSetTableAdapters.tblVehicleTableAdapter();
+            this.taVehicle = new DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters.tblVehicleTableAdapter();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVehicle)).BeginInit();
@@ -588,7 +588,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn vehicleSizeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn vehicleStatusDataGridViewTextBoxColumn;
-        private BookingSystem.WstGrp2DataSet wstGrp2DataSet;
-        private BookingSystem.WstGrp2DataSetTableAdapters.tblVehicleTableAdapter taVehicle;
+        private DrivingSchoolBookingSystem.WstGrp2DataSet wstGrp2DataSet;
+        private DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters.tblVehicleTableAdapter taVehicle;
     }
 }
