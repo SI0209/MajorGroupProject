@@ -80,6 +80,8 @@
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.label15 = new System.Windows.Forms.Label();
+            this.textBox8 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblLearnerBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wstGrp2DataSet1BindingSource)).BeginInit();
@@ -568,12 +570,33 @@
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.Transparent;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Location = new System.Drawing.Point(146, 72);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(89, 20);
+            this.label15.TabIndex = 36;
+            this.label15.Text = "LearnerID:";
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(285, 72);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(167, 22);
+            this.textBox8.TabIndex = 37;
+            // 
             // LearnerForm2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::DrivingSchoolBookingSystem.Properties.Resources.final_project_bg;
             this.ClientSize = new System.Drawing.Size(1276, 663);
+            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.label15);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.textBox7);
@@ -673,5 +696,7 @@
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox textBox8;
     }
 }

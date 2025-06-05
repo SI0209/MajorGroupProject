@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -26,6 +27,8 @@ namespace DrivingSchoolBookingSystem
             
             // TODO: This line of code loads data into the 'wstGrp2DataSet.tblLearner' table. You can move, or remove it, as needed.
             this.tblLearnerTableAdapter.Fill(this.wstGrp2DataSet.tblLearner);
+            label15.Visible = false;
+            textBox8.Visible = false;
 
         }
 
@@ -162,17 +165,60 @@ namespace DrivingSchoolBookingSystem
 
         private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
+            textBox8.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
             textBox1.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
             textBox2.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
             textBox3.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
             textBox4.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
             textBox5.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
             textBox6.Text = dataGridView1.CurrentRow.Cells[8].Value.ToString();
+            label15.Visible = true;
+            textBox8.Visible = true;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-           
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                // Get the selected LearnerID from the DataGridView
+                int learnerID = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value);
+
+                DialogResult confirm = MessageBox.Show("Are you sure you want to delete this learner?",
+                                                       "Confirm Delete",
+                                                       MessageBoxButtons.YesNo,
+                                                       MessageBoxIcon.Warning);
+
+                if (confirm == DialogResult.Yes)
+                {
+                    DeleteLearnerFromDatabase(learnerID);
+                    // Optional: clear form fields
+                    tblLearnerTableAdapter.Fill(this.wstGrp2DataSet1.tblLearner);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a learner to delete.");
+            }
+        }
+        private void DeleteLearnerFromDatabase(int learnerID)
+        {
+            string connectionString = "Data Source=146.230.177.46;Initial Catalog=WstGrp2;Persist Security Info=True;User ID=WstGrp2;Password=d9jdh;TrustServerCertificate=True"; // Replace with your actual DB connection string
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                string query = "DELETE FROM tblLearner WHERE LearnerID = @LearnerID";
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@LearnerID", learnerID);
+
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                }
+            }
+
+            MessageBox.Show("Learner deleted successfully.");
         }
     }
 }
