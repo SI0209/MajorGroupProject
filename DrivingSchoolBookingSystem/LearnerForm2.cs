@@ -29,11 +29,16 @@ namespace DrivingSchoolBookingSystem
             this.tblLearnerTableAdapter.Fill(this.wstGrp2DataSet.tblLearner);
             label15.Visible = false;
             textBox8.Visible = false;
+            comboBox1.KeyPress += combox1_KeyPress;
 
             //gender combox
         
 
 
+        }
+        private void combox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true; // This blocks all typing
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -92,14 +97,14 @@ namespace DrivingSchoolBookingSystem
                         textBox2.Text,
                         textBox3.Text,
                         Convert.ToInt16(textBox4.Text),
-                        comboBox1.SelectedValue.ToString(),
-                        comboBox2.SelectedValue.ToString(),
+                        comboBox1.Text.ToString(),
+                        comboBox2.Text.ToString(),
                         textBox5.Text,
                         textBox6.Text,
-                        comboBox3.SelectedValue.ToString(),
+                        comboBox3.Text.ToString(),
                         dateTimePicker1.Value.ToString("yyyy-MM-dd"),
                         dateTimePicker2.Value.ToString("yyyy-MM-dd"),
-                        Convert.ToInt16(comboBox4.SelectedValue)
+                        Convert.ToInt16(comboBox4.Text)
                     );
 
                     tblLearnerTableAdapter.Fill(this.wstGrp2DataSet1.tblLearner);

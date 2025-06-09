@@ -412,14 +412,15 @@
             // 
             // comboBox1
             // 
-            this.comboBox1.DataSource = this.tblLearnerBindingSource2;
-            this.comboBox1.DisplayMember = "Learner_Gender";
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Male",
+            "Female",
+            "Other"});
             this.comboBox1.Location = new System.Drawing.Point(285, 262);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(167, 24);
             this.comboBox1.TabIndex = 18;
-            this.comboBox1.ValueMember = "Learner_Gender";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // tblLearnerBindingSource2
@@ -429,25 +430,28 @@
             // 
             // comboBox2
             // 
-            this.comboBox2.DataSource = this.tblLearnerBindingSource2;
-            this.comboBox2.DisplayMember = "Learner_Race";
             this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "White",
+            "Black",
+            "Indian",
+            "Colored"});
             this.comboBox2.Location = new System.Drawing.Point(285, 300);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(167, 24);
             this.comboBox2.TabIndex = 19;
-            this.comboBox2.ValueMember = "Learner_Race";
             // 
             // comboBox3
             // 
-            this.comboBox3.DataSource = this.tblLearnerBindingSource2;
-            this.comboBox3.DisplayMember = "Learner_Suburb";
             this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "Westville",
+            "Verulam",
+            "PMB"});
             this.comboBox3.Location = new System.Drawing.Point(285, 426);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(167, 24);
             this.comboBox3.TabIndex = 20;
-            this.comboBox3.ValueMember = "Learner_Suburb";
             // 
             // dateTimePicker1
             // 
@@ -466,14 +470,15 @@
             // 
             // comboBox4
             // 
-            this.comboBox4.DataSource = this.tblLearnerBindingSource2;
-            this.comboBox4.DisplayMember = "Code_Type";
             this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Items.AddRange(new object[] {
+            "8",
+            "10",
+            "14"});
             this.comboBox4.Location = new System.Drawing.Point(285, 546);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(167, 24);
             this.comboBox4.TabIndex = 23;
-            this.comboBox4.ValueMember = "Code_Type";
             // 
             // button1
             // 
@@ -601,7 +606,7 @@
             this.fillBy2ToolStripButton});
             this.fillBy2ToolStrip.Location = new System.Drawing.Point(0, 0);
             this.fillBy2ToolStrip.Name = "fillBy2ToolStrip";
-            this.fillBy2ToolStrip.Size = new System.Drawing.Size(1276, 31);
+            this.fillBy2ToolStrip.Size = new System.Drawing.Size(1276, 27);
             this.fillBy2ToolStrip.TabIndex = 39;
             this.fillBy2ToolStrip.Text = "fillBy2ToolStrip";
             // 
