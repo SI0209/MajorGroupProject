@@ -486,7 +486,7 @@ WHERE  (EmployeeID = @ID);
                   </DbCommand>
                 </DeleteCommand>
               </DbSource>
-              <DbSource ConnectionRef="WstGrp2ConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteQuery" Modifier="Public" Name="DeleteQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="DeleteQuery">
+              <DbSource ConnectionRef="WstGrp2ConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteQuery" Modifier="Public" Name="DeleteQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="DeleteQuery">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>DELETE FROM tblLearner
@@ -496,6 +496,39 @@ WHERE  (LearnerID = @learnerID)</CommandText>
                     </Parameters>
                   </DbCommand>
                 </DeleteCommand>
+              </DbSource>
+              <DbSource ConnectionRef="WstGrp2ConnectionString (Settings)" DbObjectName="WstGrp2.dbo.tblLearner" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy5" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT DISTINCT 
+                  LearnerID, Learner_Name, Learner_Surname, Learner_IDNumber, Learner_Age, Learner_Gender, Learner_Race, Learner_CellNumber, Learner_StreetAddress, Learner_Suburb, Learner_LearnersIssueDate, 
+                  Learner_LearnersExpiryDate, Code_Type
+FROM     tblLearner</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="WstGrp2ConnectionString (Settings)" DbObjectName="WstGrp2.dbo.tblLearner" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy1" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy1" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy6" UserSourceName="FillBy1">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT DISTINCT 
+                  LearnerID, Learner_Name, Learner_Surname, Learner_IDNumber, Learner_Age, Learner_Gender, Learner_Race, Learner_CellNumber, Learner_StreetAddress, Learner_Suburb, Learner_LearnersIssueDate, 
+                  Learner_LearnersExpiryDate, Code_Type
+FROM     tblLearner</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="WstGrp2ConnectionString (Settings)" DbObjectName="WstGrp2.dbo.tblLearner" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy2" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy2" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy7" UserSourceName="FillBy2">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT DISTINCT 
+                  LearnerID, Learner_Name, Learner_Surname, Learner_IDNumber, Learner_Age, Learner_Gender, Learner_Race, Learner_CellNumber, Learner_StreetAddress, Learner_Suburb, Learner_LearnersIssueDate, 
+                  Learner_LearnersExpiryDate, Code_Type
+FROM     tblLearner</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
               </DbSource>
               <DbSource ConnectionRef="WstGrp2ConnectionString (Settings)" DbObjectName="WstGrp2.dbo.tblLearner" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByLearnerID" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy3" GeneratorSourceName="FillByLearnerID" GetMethodModifier="Public" GetMethodName="GetDataBy3" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="FillByLearnerID">
                 <SelectCommand>
@@ -510,7 +543,7 @@ WHERE  (LearnerID LIKE @ID)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="WstGrp2ConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertNewLearner" Modifier="Public" Name="InsertNewLearner" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="InsertNewLearner">
+              <DbSource ConnectionRef="WstGrp2ConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertNewLearner" Modifier="Public" Name="InsertNewLearner" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="InsertNewLearner">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>INSERT INTO tblLearner
@@ -546,7 +579,7 @@ VALUES (@Learner_Name,@Learner_Surname,@Learner_IDNumber,@Learner_Age,@Learner_G
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="WstGrp2ConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateLearnerDetails" Modifier="Public" Name="UpdateLearnerDetails" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="UpdateLearnerDetails">
+              <DbSource ConnectionRef="WstGrp2ConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateLearnerDetails" Modifier="Public" Name="UpdateLearnerDetails" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="UpdateLearnerDetails">
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>

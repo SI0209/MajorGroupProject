@@ -30,6 +30,10 @@ namespace DrivingSchoolBookingSystem
             label15.Visible = false;
             textBox8.Visible = false;
 
+            //gender combox
+        
+
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -174,6 +178,7 @@ namespace DrivingSchoolBookingSystem
             textBox6.Text = dataGridView1.CurrentRow.Cells[8].Value.ToString();
             label15.Visible = true;
             textBox8.Visible = true;
+            textBox8.Enabled = false;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -219,6 +224,55 @@ namespace DrivingSchoolBookingSystem
             }
 
             MessageBox.Show("Learner deleted successfully.");
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void fillBy1ToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.tblLearnerTableAdapter.FillBy1(this.wstGrp2DataSet.tblLearner);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void fillBy2ToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.tblLearnerTableAdapter.FillBy2(this.wstGrp2DataSet.tblLearner);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void fillByToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.tblLearnerTableAdapter.FillBy(this.wstGrp2DataSet1.tblLearner);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
         }
     }
 }

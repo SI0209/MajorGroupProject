@@ -82,12 +82,15 @@
             this.button3 = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
+            this.fillBy2ToolStrip = new System.Windows.Forms.ToolStrip();
+            this.fillBy2ToolStripButton = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblLearnerBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wstGrp2DataSet1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wstGrp2DataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wstGrp2DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblLearnerBindingSource2)).BeginInit();
+            this.fillBy2ToolStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -115,6 +118,7 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(651, 307);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_RowHeaderMouseClick);
             // 
             // learnerIDDataGridViewTextBoxColumn
@@ -416,6 +420,7 @@
             this.comboBox1.Size = new System.Drawing.Size(167, 24);
             this.comboBox1.TabIndex = 18;
             this.comboBox1.ValueMember = "Learner_Gender";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // tblLearnerBindingSource2
             // 
@@ -589,12 +594,32 @@
             this.textBox8.Size = new System.Drawing.Size(167, 22);
             this.textBox8.TabIndex = 37;
             // 
+            // fillBy2ToolStrip
+            // 
+            this.fillBy2ToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.fillBy2ToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fillBy2ToolStripButton});
+            this.fillBy2ToolStrip.Location = new System.Drawing.Point(0, 0);
+            this.fillBy2ToolStrip.Name = "fillBy2ToolStrip";
+            this.fillBy2ToolStrip.Size = new System.Drawing.Size(1276, 31);
+            this.fillBy2ToolStrip.TabIndex = 39;
+            this.fillBy2ToolStrip.Text = "fillBy2ToolStrip";
+            // 
+            // fillBy2ToolStripButton
+            // 
+            this.fillBy2ToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.fillBy2ToolStripButton.Name = "fillBy2ToolStripButton";
+            this.fillBy2ToolStripButton.Size = new System.Drawing.Size(56, 24);
+            this.fillBy2ToolStripButton.Text = "FillBy2";
+            this.fillBy2ToolStripButton.Click += new System.EventHandler(this.fillBy2ToolStripButton_Click);
+            // 
             // LearnerForm2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::DrivingSchoolBookingSystem.Properties.Resources.final_project_bg;
             this.ClientSize = new System.Drawing.Size(1276, 663);
+            this.Controls.Add(this.fillBy2ToolStrip);
             this.Controls.Add(this.textBox8);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.button3);
@@ -638,6 +663,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.wstGrp2DataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wstGrp2DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblLearnerBindingSource2)).EndInit();
+            this.fillBy2ToolStrip.ResumeLayout(false);
+            this.fillBy2ToolStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -698,5 +725,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.ToolStrip fillBy2ToolStrip;
+        private System.Windows.Forms.ToolStripButton fillBy2ToolStripButton;
     }
 }
