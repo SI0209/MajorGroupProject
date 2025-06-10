@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -78,7 +79,14 @@ namespace DrivingSchoolBookingSystem
             textBox1.Enabled = false;
             textBox2.Enabled = false;
             textBox3.Enabled = false;
-          
+
+            dateTimePicker1.Value = DateTime.Now;
+            comboBox1.SelectedIndex = -1;
+            comboBox2.SelectedIndex=-1;
+            comboBox3.SelectedIndex=-1;
+            textBox5.Text = "";
+            textBox6.Text = "";
+            comboBox4.SelectedIndex=-1;
 
 
         }
@@ -151,22 +159,72 @@ namespace DrivingSchoolBookingSystem
                 MessageBox.Show("Please fill in all required fields.");
                 return;
             }
-            try
+            using (SqlConnection con = new SqlConnection("Data Source=146.230.177.46;Initial Catalog=WstGrp2;Persist Security Info=True;User ID=WstGrp2;Password=d9jdh;TrustServerCertificate=True"))
             {
-                //trackLearnerTableAdapter.UpdateQuery(Convert.ToInt32(textBox1.Text), textBox2.Text, textBox3.Text, dateTimePicker1.Value.ToString("yyyy-MM-dd"),
-                //  comboBox1.Text, comboBox2.Text, comboBox3.Text, textBox5.Text, textBox6.Text, comboBox4.Text);
-                trackLearnerTableAdapter.UpdateQuery(Convert.ToInt32(textBox1.Text), textBox2.Text, textBox3.Text, dateTimePicker1.Value.ToString("yyyy-MM-dd"),
-                  comboBox1.Text, comboBox2.Text, comboBox3.Text, textBox5.Text, textBox6.Text, comboBox4.Text, Convert.ToInt32(textBox4.Text));
+                try
+                {
+                    con.Open();
 
-                trackLearnerTableAdapter.Fill(this.wstGrp2DS2.TrackLearner);
-                MessageBox.Show("Learner progress has been updated successfully.");
-                return;
+                    string query = "UPDATE TrackLearner " +
+                     "SET LearnerID = @learnerID, " +
+                     "LearnerName = @learnerName, " +
+                     "LearnerSurname = @learnerSurname, " +
+                     "LessonDate = @lessonDate, " +
+                     "LessonTopic = @lessonTopic, " +
+                     "Attendance = @attendance, " +
+                     "Rating = @rating, " + 
+                     "ErrorsMade = @errorsMade, " + 
+                     "Comments = @comments, " +
+                     "PassStatus = @passStatus " +
+                     "WHERE ProgressID = @progressID";
+
+                    using (SqlCommand command = new SqlCommand(query, con))
+                    {
+                        //Use parameters to avoid SQL injection
+                        command.Parameters.AddWithValue("@learnerID", Convert.ToInt32(textBox1.Text));
+                        command.Parameters.AddWithValue("@learnerName", textBox2.Text);
+                        command.Parameters.AddWithValue("@learnerSurname", textBox3.Text);
+                        command.Parameters.AddWithValue("@lessonDate", dateTimePicker1.Value.ToString("yyyy-MM-dd"));
+                        command.Parameters.AddWithValue("@lessonTopic", comboBox1.Text);
+                        command.Parameters.AddWithValue("@attendance", comboBox2.Text);
+                        command.Parameters.AddWithValue("@rating", comboBox3.Text);
+                        command.Parameters.AddWithValue("@errorsMade", textBox5.Text);
+                        command.Parameters.AddWithValue("@comments", textBox6.Text);
+                        command.Parameters.AddWithValue("@passStatus", comboBox4.Text);
+                        command.Parameters.AddWithValue("@progressID", textBox4.Text);
+
+                        DialogResult dialogResult = MessageBox.Show("Are you sure you want to UPDATE learner " + textBox1.Text.ToString() + " details ?", "Confirmation", MessageBoxButtons.YesNo);
+                        if (dialogResult == DialogResult.Yes)
+                        {
+                            command.ExecuteNonQuery();
+                            MessageBox.Show("Learner has been updated successfully.");
+                            trackLearnerTableAdapter.Fill(wstGrp2DS2.TrackLearner);
+
+                            textBox1.Text = "";
+                            textBox2.Text = "";
+                            textBox3.Text = "";
+                            dateTimePicker1.Value = DateTime.Now;//default value
+                            comboBox1.Text = "";
+                            comboBox2.Text = "";
+                            comboBox3.Text = "";
+                            textBox5.Text = "";
+                            textBox6.Text = "";
+                            comboBox4.Text = "";
+                            
+
+                         
+                        }
+
+                    }
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show($"An error occurred: {ex.Message}");
+                }
+
+
             }
-            catch(Exception ex)
-            {
-                MessageBox.Show("An error occured:" + ex.Message);
-                return;
-            }
+
 
         }
 

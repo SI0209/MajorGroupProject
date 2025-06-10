@@ -39,21 +39,19 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.trackLearnerBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.wstGrp2DS2 = new DrivingSchoolBookingSystem.WstGrp2DS2();
-            this.learnerProgressBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.LearnerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LearnerSurname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.tblNewLearnerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.learnerProgressTableAdapter = new DrivingSchoolBookingSystem.WstGrp2DS2TableAdapters.LearnerProgressTableAdapter();
-            this.tblNewLearnerTableAdapter = new DrivingSchoolBookingSystem.WstGrp2DS2TableAdapters.tblNewLearnerTableAdapter();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
@@ -69,18 +67,19 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.learnerProgressBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.wstGrp2DataSet = new DrivingSchoolBookingSystem.WstGrp2DataSet();
             this.tblLearnerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tblLearnerTableAdapter = new DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters.tblLearnerTableAdapter();
-            this.trackLearnerTableAdapter = new DrivingSchoolBookingSystem.WstGrp2DS2TableAdapters.TrackLearnerTableAdapter();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.learnerNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tblNewLearnerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.wstGrp2DS2 = new DrivingSchoolBookingSystem.WstGrp2DS2();
             this.progressIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LearnerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LearnerSurname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lessonDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lessonTopicDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.attendanceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -88,11 +87,12 @@
             this.errorsMadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.commentsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.passStatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.learnerNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.trackLearnerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.learnerProgressBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.learnerProgressTableAdapter = new DrivingSchoolBookingSystem.WstGrp2DS2TableAdapters.LearnerProgressTableAdapter();
+            this.tblNewLearnerTableAdapter = new DrivingSchoolBookingSystem.WstGrp2DS2TableAdapters.tblNewLearnerTableAdapter();
+            this.learnerProgressBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.trackLearnerTableAdapter = new DrivingSchoolBookingSystem.WstGrp2DS2TableAdapters.TrackLearnerTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -100,16 +100,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackLearnerBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wstGrp2DS2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.learnerProgressBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblNewLearnerBindingSource)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.learnerProgressBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wstGrp2DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblLearnerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblNewLearnerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wstGrp2DS2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackLearnerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.learnerProgressBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.learnerProgressBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // label11
@@ -250,20 +250,21 @@
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_RowHeaderMouseClick);
             // 
-            // trackLearnerBindingSource
+            // LearnerName
             // 
-            this.trackLearnerBindingSource.DataMember = "TrackLearner";
-            this.trackLearnerBindingSource.DataSource = this.wstGrp2DS2;
+            this.LearnerName.DataPropertyName = "LearnerName";
+            this.LearnerName.HeaderText = "LearnerName";
+            this.LearnerName.MinimumWidth = 6;
+            this.LearnerName.Name = "LearnerName";
+            this.LearnerName.Width = 125;
             // 
-            // wstGrp2DS2
+            // LearnerSurname
             // 
-            this.wstGrp2DS2.DataSetName = "WstGrp2DS2";
-            this.wstGrp2DS2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // learnerProgressBindingSource
-            // 
-            this.learnerProgressBindingSource.DataMember = "LearnerProgress";
-            this.learnerProgressBindingSource.DataSource = this.wstGrp2DS2;
+            this.LearnerSurname.DataPropertyName = "LearnerSurname";
+            this.LearnerSurname.HeaderText = "LearnerSurname";
+            this.LearnerSurname.MinimumWidth = 6;
+            this.LearnerSurname.Name = "LearnerSurname";
+            this.LearnerSurname.Width = 125;
             // 
             // dataGridView2
             // 
@@ -282,11 +283,6 @@
             this.dataGridView2.TabIndex = 45;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             this.dataGridView2.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView2_RowHeaderMouseClick);
-            // 
-            // tblNewLearnerBindingSource
-            // 
-            this.tblNewLearnerBindingSource.DataMember = "tblNewLearner";
-            this.tblNewLearnerBindingSource.DataSource = this.wstGrp2DS2;
             // 
             // label1
             // 
@@ -319,6 +315,22 @@
             this.groupBox1.TabIndex = 47;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Learner Details";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(124, 130);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(155, 22);
+            this.textBox4.TabIndex = 8;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(7, 133);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(81, 16);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "Progress ID:";
             // 
             // textBox3
             // 
@@ -367,14 +379,6 @@
             this.label2.Size = new System.Drawing.Size(72, 16);
             this.label2.TabIndex = 0;
             this.label2.Text = "Learner ID:";
-            // 
-            // learnerProgressTableAdapter
-            // 
-            this.learnerProgressTableAdapter.ClearBeforeFill = true;
-            // 
-            // tblNewLearnerTableAdapter
-            // 
-            this.tblNewLearnerTableAdapter.ClearBeforeFill = true;
             // 
             // groupBox2
             // 
@@ -445,7 +449,8 @@
             "Basic driving techiques",
             "Test route",
             "Road signs and markings",
-            "Parking"});
+            "Parking",
+            "Alley Docking"});
             this.comboBox1.Location = new System.Drawing.Point(105, 64);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(155, 24);
@@ -538,11 +543,6 @@
             this.label8.TabIndex = 0;
             this.label8.Text = "Lesson Date:";
             // 
-            // learnerProgressBindingSource1
-            // 
-            this.learnerProgressBindingSource1.DataMember = "LearnerProgress";
-            this.learnerProgressBindingSource1.DataSource = this.wstGrp2DS2;
-            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(253, 796);
@@ -587,9 +587,40 @@
             // 
             this.tblLearnerTableAdapter.ClearBeforeFill = true;
             // 
-            // trackLearnerTableAdapter
+            // dataGridViewTextBoxColumn3
             // 
-            this.trackLearnerTableAdapter.ClearBeforeFill = true;
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "LearnerID";
+            this.dataGridViewTextBoxColumn3.HeaderText = "LearnerID";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 125;
+            // 
+            // learnerNameDataGridViewTextBoxColumn1
+            // 
+            this.learnerNameDataGridViewTextBoxColumn1.DataPropertyName = "Learner_Name";
+            this.learnerNameDataGridViewTextBoxColumn1.HeaderText = "Learner_Name";
+            this.learnerNameDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.learnerNameDataGridViewTextBoxColumn1.Name = "learnerNameDataGridViewTextBoxColumn1";
+            this.learnerNameDataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Learner_Surname";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Learner_Surname";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 125;
+            // 
+            // tblNewLearnerBindingSource
+            // 
+            this.tblNewLearnerBindingSource.DataMember = "tblNewLearner";
+            this.tblNewLearnerBindingSource.DataSource = this.wstGrp2DS2;
+            // 
+            // wstGrp2DS2
+            // 
+            this.wstGrp2DS2.DataSetName = "WstGrp2DS2";
+            this.wstGrp2DS2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // progressIDDataGridViewTextBoxColumn
             // 
@@ -608,22 +639,6 @@
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
             this.dataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // LearnerName
-            // 
-            this.LearnerName.DataPropertyName = "LearnerName";
-            this.LearnerName.HeaderText = "LearnerName";
-            this.LearnerName.MinimumWidth = 6;
-            this.LearnerName.Name = "LearnerName";
-            this.LearnerName.Width = 125;
-            // 
-            // LearnerSurname
-            // 
-            this.LearnerSurname.DataPropertyName = "LearnerSurname";
-            this.LearnerSurname.HeaderText = "LearnerSurname";
-            this.LearnerSurname.MinimumWidth = 6;
-            this.LearnerSurname.Name = "LearnerSurname";
-            this.LearnerSurname.Width = 125;
             // 
             // lessonDateDataGridViewTextBoxColumn
             // 
@@ -681,46 +696,32 @@
             this.passStatusDataGridViewTextBoxColumn.Name = "passStatusDataGridViewTextBoxColumn";
             this.passStatusDataGridViewTextBoxColumn.Width = 125;
             // 
-            // dataGridViewTextBoxColumn3
+            // trackLearnerBindingSource
             // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "LearnerID";
-            this.dataGridViewTextBoxColumn3.HeaderText = "LearnerID";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 125;
+            this.trackLearnerBindingSource.DataMember = "TrackLearner";
+            this.trackLearnerBindingSource.DataSource = this.wstGrp2DS2;
             // 
-            // learnerNameDataGridViewTextBoxColumn1
+            // learnerProgressBindingSource
             // 
-            this.learnerNameDataGridViewTextBoxColumn1.DataPropertyName = "Learner_Name";
-            this.learnerNameDataGridViewTextBoxColumn1.HeaderText = "Learner_Name";
-            this.learnerNameDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.learnerNameDataGridViewTextBoxColumn1.Name = "learnerNameDataGridViewTextBoxColumn1";
-            this.learnerNameDataGridViewTextBoxColumn1.Width = 125;
+            this.learnerProgressBindingSource.DataMember = "LearnerProgress";
+            this.learnerProgressBindingSource.DataSource = this.wstGrp2DS2;
             // 
-            // dataGridViewTextBoxColumn4
+            // learnerProgressTableAdapter
             // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Learner_Surname";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Learner_Surname";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Width = 125;
+            this.learnerProgressTableAdapter.ClearBeforeFill = true;
             // 
-            // label6
+            // tblNewLearnerTableAdapter
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(7, 133);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(81, 16);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "Progress ID:";
+            this.tblNewLearnerTableAdapter.ClearBeforeFill = true;
             // 
-            // textBox4
+            // learnerProgressBindingSource1
             // 
-            this.textBox4.Location = new System.Drawing.Point(124, 130);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(155, 22);
-            this.textBox4.TabIndex = 8;
+            this.learnerProgressBindingSource1.DataMember = "LearnerProgress";
+            this.learnerProgressBindingSource1.DataSource = this.wstGrp2DS2;
+            // 
+            // trackLearnerTableAdapter
+            // 
+            this.trackLearnerTableAdapter.ClearBeforeFill = true;
             // 
             // LearnerProgressForm
             // 
@@ -752,18 +753,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackLearnerBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wstGrp2DS2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.learnerProgressBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblNewLearnerBindingSource)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.learnerProgressBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wstGrp2DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblLearnerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblNewLearnerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wstGrp2DS2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackLearnerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.learnerProgressBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.learnerProgressBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
