@@ -1709,8 +1709,6 @@ namespace DrivingSchoolBookingSystem {
             
             private global::System.Data.DataColumn columnLearner_Surname;
             
-            private global::System.Data.DataColumn columnLearner_IDNumber;
-            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public tblNewLearnerDataTable() {
@@ -1770,14 +1768,6 @@ namespace DrivingSchoolBookingSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn Learner_IDNumberColumn {
-                get {
-                    return this.columnLearner_IDNumber;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1813,13 +1803,12 @@ namespace DrivingSchoolBookingSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public tblNewLearnerRow AddtblNewLearnerRow(string Learner_Name, string Learner_Surname, string Learner_IDNumber) {
+            public tblNewLearnerRow AddtblNewLearnerRow(string Learner_Name, string Learner_Surname) {
                 tblNewLearnerRow rowtblNewLearnerRow = ((tblNewLearnerRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         Learner_Name,
-                        Learner_Surname,
-                        Learner_IDNumber};
+                        Learner_Surname};
                 rowtblNewLearnerRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowtblNewLearnerRow);
                 return rowtblNewLearnerRow;
@@ -1852,7 +1841,6 @@ namespace DrivingSchoolBookingSystem {
                 this.columnLearnerID = base.Columns["LearnerID"];
                 this.columnLearner_Name = base.Columns["Learner_Name"];
                 this.columnLearner_Surname = base.Columns["Learner_Surname"];
-                this.columnLearner_IDNumber = base.Columns["Learner_IDNumber"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1864,8 +1852,6 @@ namespace DrivingSchoolBookingSystem {
                 base.Columns.Add(this.columnLearner_Name);
                 this.columnLearner_Surname = new global::System.Data.DataColumn("Learner_Surname", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnLearner_Surname);
-                this.columnLearner_IDNumber = new global::System.Data.DataColumn("Learner_IDNumber", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnLearner_IDNumber);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnLearnerID}, true));
                 this.columnLearnerID.AutoIncrement = true;
@@ -1878,8 +1864,6 @@ namespace DrivingSchoolBookingSystem {
                 this.columnLearner_Name.MaxLength = 50;
                 this.columnLearner_Surname.AllowDBNull = false;
                 this.columnLearner_Surname.MaxLength = 50;
-                this.columnLearner_IDNumber.AllowDBNull = false;
-                this.columnLearner_IDNumber.MaxLength = 13;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2535,17 +2519,6 @@ namespace DrivingSchoolBookingSystem {
                 }
                 set {
                     this[this.tabletblNewLearner.Learner_SurnameColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Learner_IDNumber {
-                get {
-                    return ((string)(this[this.tabletblNewLearner.Learner_IDNumberColumn]));
-                }
-                set {
-                    this[this.tabletblNewLearner.Learner_IDNumberColumn] = value;
                 }
             }
             
@@ -3512,12 +3485,46 @@ SELECT ProgressID, LearnerID, LearnerName, LearnerSurname, LessonDate, LessonTop
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT ProgressID, LearnerID, LearnerName, LearnerSurname, LessonDate, LessonTopi" +
                 "c, Attendance, Rating, ErrorsMade, Comments, PassStatus FROM dbo.TrackLearner";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = @"INSERT INTO [dbo].[TrackLearner] ([LearnerID], [LearnerName], [LearnerSurname], [LessonDate], [LessonTopic], [Attendance], [Rating], [ErrorsMade], [Comments], [PassStatus]) VALUES (@LearnerID, @LearnerName, @LearnerSurname, @LessonDate, @LessonTopic, @Attendance, @Rating, @ErrorsMade, @Comments, @PassStatus);
+SELECT ProgressID, LearnerID, LearnerName, LearnerSurname, LessonDate, LessonTopic, Attendance, Rating, ErrorsMade, Comments, PassStatus FROM TrackLearner WHERE (ProgressID = SCOPE_IDENTITY())";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LearnerID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "LearnerID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LearnerName", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "LearnerName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LearnerSurname", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "LearnerSurname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LessonDate", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "LessonDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LessonTopic", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "LessonTopic", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Attendance", global::System.Data.SqlDbType.NVarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, "Attendance", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Rating", global::System.Data.SqlDbType.NVarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "Rating", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ErrorsMade", global::System.Data.SqlDbType.NVarChar, 255, global::System.Data.ParameterDirection.Input, 0, 0, "ErrorsMade", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Comments", global::System.Data.SqlDbType.NVarChar, 255, global::System.Data.ParameterDirection.Input, 0, 0, "Comments", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PassStatus", global::System.Data.SqlDbType.NVarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "PassStatus", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = @"UPDATE TrackLearner
+SET          LearnerID = @LearnerID, LearnerName = @LearnerName, LearnerSurname = @LearnerSurname, LessonDate = @LessonDate, LessonTopic = @LessonTopic, Attendance = @Attendance, Rating = @Rating, ErrorsMade = @ErrorsMade, 
+                  Comments = @Comments, PassStatus = @PassStatus
+WHERE  (ProgressID = @Original_ProgressID); 
+)";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LearnerID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "LearnerID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LearnerName", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "LearnerName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LearnerSurname", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "LearnerSurname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LessonDate", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "LessonDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LessonTopic", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "LessonTopic", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Attendance", global::System.Data.SqlDbType.NVarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, "Attendance", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Rating", global::System.Data.SqlDbType.NVarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "Rating", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ErrorsMade", global::System.Data.SqlDbType.NVarChar, 255, global::System.Data.ParameterDirection.Input, 0, 0, "ErrorsMade", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Comments", global::System.Data.SqlDbType.NVarChar, 255, global::System.Data.ParameterDirection.Input, 0, 0, "Comments", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PassStatus", global::System.Data.SqlDbType.NVarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "PassStatus", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ProgressID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ProgressID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3889,6 +3896,163 @@ SELECT ProgressID, LearnerID, LearnerName, LearnerSurname, LessonDate, LessonTop
                     string Original_PassStatus) {
             return this.Update(LearnerID, LearnerName, LearnerSurname, LessonDate, LessonTopic, Attendance, Rating, ErrorsMade, Comments, PassStatus, Original_ProgressID, Original_LearnerID, Original_LearnerName, Original_LearnerSurname, Original_LessonDate, Original_LessonTopic, Original_Attendance, Original_Rating, Original_ErrorsMade, Original_Comments, Original_PassStatus, Original_ProgressID);
         }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
+        public virtual int InsertQuery(int LearnerID, string LearnerName, string LearnerSurname, string LessonDate, string LessonTopic, string Attendance, string Rating, string ErrorsMade, string Comments, string PassStatus) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
+            command.Parameters[0].Value = ((int)(LearnerID));
+            if ((LearnerName == null)) {
+                throw new global::System.ArgumentNullException("LearnerName");
+            }
+            else {
+                command.Parameters[1].Value = ((string)(LearnerName));
+            }
+            if ((LearnerSurname == null)) {
+                throw new global::System.ArgumentNullException("LearnerSurname");
+            }
+            else {
+                command.Parameters[2].Value = ((string)(LearnerSurname));
+            }
+            if ((LessonDate == null)) {
+                throw new global::System.ArgumentNullException("LessonDate");
+            }
+            else {
+                command.Parameters[3].Value = ((string)(LessonDate));
+            }
+            if ((LessonTopic == null)) {
+                throw new global::System.ArgumentNullException("LessonTopic");
+            }
+            else {
+                command.Parameters[4].Value = ((string)(LessonTopic));
+            }
+            if ((Attendance == null)) {
+                throw new global::System.ArgumentNullException("Attendance");
+            }
+            else {
+                command.Parameters[5].Value = ((string)(Attendance));
+            }
+            if ((Rating == null)) {
+                throw new global::System.ArgumentNullException("Rating");
+            }
+            else {
+                command.Parameters[6].Value = ((string)(Rating));
+            }
+            if ((ErrorsMade == null)) {
+                throw new global::System.ArgumentNullException("ErrorsMade");
+            }
+            else {
+                command.Parameters[7].Value = ((string)(ErrorsMade));
+            }
+            if ((Comments == null)) {
+                throw new global::System.ArgumentNullException("Comments");
+            }
+            else {
+                command.Parameters[8].Value = ((string)(Comments));
+            }
+            if ((PassStatus == null)) {
+                throw new global::System.ArgumentNullException("PassStatus");
+            }
+            else {
+                command.Parameters[9].Value = ((string)(PassStatus));
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
+        public virtual int UpdateQuery(int LearnerID, string LearnerName, string LearnerSurname, string LessonDate, string LessonTopic, string Attendance, string Rating, string ErrorsMade, string Comments, string PassStatus, int Original_ProgressID) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
+            command.Parameters[0].Value = ((int)(LearnerID));
+            if ((LearnerName == null)) {
+                throw new global::System.ArgumentNullException("LearnerName");
+            }
+            else {
+                command.Parameters[1].Value = ((string)(LearnerName));
+            }
+            if ((LearnerSurname == null)) {
+                throw new global::System.ArgumentNullException("LearnerSurname");
+            }
+            else {
+                command.Parameters[2].Value = ((string)(LearnerSurname));
+            }
+            if ((LessonDate == null)) {
+                throw new global::System.ArgumentNullException("LessonDate");
+            }
+            else {
+                command.Parameters[3].Value = ((string)(LessonDate));
+            }
+            if ((LessonTopic == null)) {
+                throw new global::System.ArgumentNullException("LessonTopic");
+            }
+            else {
+                command.Parameters[4].Value = ((string)(LessonTopic));
+            }
+            if ((Attendance == null)) {
+                throw new global::System.ArgumentNullException("Attendance");
+            }
+            else {
+                command.Parameters[5].Value = ((string)(Attendance));
+            }
+            if ((Rating == null)) {
+                throw new global::System.ArgumentNullException("Rating");
+            }
+            else {
+                command.Parameters[6].Value = ((string)(Rating));
+            }
+            if ((ErrorsMade == null)) {
+                throw new global::System.ArgumentNullException("ErrorsMade");
+            }
+            else {
+                command.Parameters[7].Value = ((string)(ErrorsMade));
+            }
+            if ((Comments == null)) {
+                throw new global::System.ArgumentNullException("Comments");
+            }
+            else {
+                command.Parameters[8].Value = ((string)(Comments));
+            }
+            if ((PassStatus == null)) {
+                throw new global::System.ArgumentNullException("PassStatus");
+            }
+            else {
+                command.Parameters[9].Value = ((string)(PassStatus));
+            }
+            command.Parameters[10].Value = ((int)(Original_ProgressID));
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
     }
     
     /// <summary>
@@ -4195,30 +4359,26 @@ FROM     tblLearner INNER JOIN
             tableMapping.ColumnMappings.Add("LearnerID", "LearnerID");
             tableMapping.ColumnMappings.Add("Learner_Name", "Learner_Name");
             tableMapping.ColumnMappings.Add("Learner_Surname", "Learner_Surname");
-            tableMapping.ColumnMappings.Add("Learner_IDNumber", "Learner_IDNumber");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
             this._adapter.DeleteCommand.CommandText = "DELETE FROM [tblLearner] WHERE (([LearnerID] = @Original_LearnerID) AND ([Learner" +
                 "_Name] = @Original_Learner_Name) AND ([Learner_Surname] = @Original_Learner_Surn" +
-                "ame) AND ([Learner_IDNumber] = @Original_Learner_IDNumber))";
+                "ame))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LearnerID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LearnerID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Learner_Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Learner_Name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Learner_Surname", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Learner_Surname", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Learner_IDNumber", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Learner_IDNumber", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [tblLearner] SET [Learner_Name] = @Learner_Name, [Learner_Surname] = @Learner_Surname, [Learner_IDNumber] = @Learner_IDNumber WHERE (([LearnerID] = @Original_LearnerID) AND ([Learner_Name] = @Original_Learner_Name) AND ([Learner_Surname] = @Original_Learner_Surname) AND ([Learner_IDNumber] = @Original_Learner_IDNumber));
-SELECT LearnerID, Learner_Name, Learner_Surname, Learner_IDNumber FROM tblLearner WHERE (LearnerID = @LearnerID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [tblLearner] SET [Learner_Name] = @Learner_Name, [Learner_Surname] = @Learner_Surname WHERE (([LearnerID] = @Original_LearnerID) AND ([Learner_Name] = @Original_Learner_Name) AND ([Learner_Surname] = @Original_Learner_Surname));
+SELECT LearnerID, Learner_Name, Learner_Surname FROM tblLearner WHERE (LearnerID = @LearnerID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Learner_Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Learner_Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Learner_Surname", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Learner_Surname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Learner_IDNumber", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Learner_IDNumber", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LearnerID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LearnerID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Learner_Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Learner_Name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Learner_Surname", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Learner_Surname", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Learner_IDNumber", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Learner_IDNumber", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LearnerID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "LearnerID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -4232,12 +4392,17 @@ SELECT LearnerID, Learner_Name, Learner_Surname, Learner_IDNumber FROM tblLearne
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT LearnerID, Learner_Name, Learner_Surname, Learner_IDNumber\nFROM     tblLea" +
-                "rner";
+            this._commandCollection[0].CommandText = "SELECT LearnerID, Learner_Name, Learner_Surname\r\nFROM     tblLearner";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT L.LearnerID, L.Learner_Name, L.Learner_Surname FROM tblLearner AS L LEFT O" +
+                "UTER JOIN TrackLearner AS T ON L.LearnerID = T.LearnerID WHERE (T.LearnerID IS N" +
+                "ULL)";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4259,6 +4424,30 @@ SELECT LearnerID, Learner_Name, Learner_Surname, Learner_IDNumber FROM tblLearne
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual WstGrp2DS2.tblNewLearnerDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            WstGrp2DS2.tblNewLearnerDataTable dataTable = new WstGrp2DS2.tblNewLearnerDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByNewLearner(WstGrp2DS2.tblNewLearnerDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual WstGrp2DS2.tblNewLearnerDataTable GetDataBy() {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
             WstGrp2DS2.tblNewLearnerDataTable dataTable = new WstGrp2DS2.tblNewLearnerDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -4297,7 +4486,7 @@ SELECT LearnerID, Learner_Name, Learner_Surname, Learner_IDNumber FROM tblLearne
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_LearnerID, string Original_Learner_Name, string Original_Learner_Surname, string Original_Learner_IDNumber) {
+        public virtual int Delete(int Original_LearnerID, string Original_Learner_Name, string Original_Learner_Surname) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_LearnerID));
             if ((Original_Learner_Name == null)) {
                 throw new global::System.ArgumentNullException("Original_Learner_Name");
@@ -4310,12 +4499,6 @@ SELECT LearnerID, Learner_Name, Learner_Surname, Learner_IDNumber FROM tblLearne
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Learner_Surname));
-            }
-            if ((Original_Learner_IDNumber == null)) {
-                throw new global::System.ArgumentNullException("Original_Learner_IDNumber");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_Learner_IDNumber));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -4337,7 +4520,7 @@ SELECT LearnerID, Learner_Name, Learner_Surname, Learner_IDNumber FROM tblLearne
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Learner_Name, string Learner_Surname, string Learner_IDNumber, int Original_LearnerID, string Original_Learner_Name, string Original_Learner_Surname, string Original_Learner_IDNumber, int LearnerID) {
+        public virtual int Update(string Learner_Name, string Learner_Surname, int Original_LearnerID, string Original_Learner_Name, string Original_Learner_Surname, int LearnerID) {
             if ((Learner_Name == null)) {
                 throw new global::System.ArgumentNullException("Learner_Name");
             }
@@ -4350,32 +4533,20 @@ SELECT LearnerID, Learner_Name, Learner_Surname, Learner_IDNumber FROM tblLearne
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Learner_Surname));
             }
-            if ((Learner_IDNumber == null)) {
-                throw new global::System.ArgumentNullException("Learner_IDNumber");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Learner_IDNumber));
-            }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_LearnerID));
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_LearnerID));
             if ((Original_Learner_Name == null)) {
                 throw new global::System.ArgumentNullException("Original_Learner_Name");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_Learner_Name));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Original_Learner_Name));
             }
             if ((Original_Learner_Surname == null)) {
                 throw new global::System.ArgumentNullException("Original_Learner_Surname");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_Learner_Surname));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_Learner_Surname));
             }
-            if ((Original_Learner_IDNumber == null)) {
-                throw new global::System.ArgumentNullException("Original_Learner_IDNumber");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_Learner_IDNumber));
-            }
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(LearnerID));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(LearnerID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4396,8 +4567,8 @@ SELECT LearnerID, Learner_Name, Learner_Surname, Learner_IDNumber FROM tblLearne
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Learner_Name, string Learner_Surname, string Learner_IDNumber, int Original_LearnerID, string Original_Learner_Name, string Original_Learner_Surname, string Original_Learner_IDNumber) {
-            return this.Update(Learner_Name, Learner_Surname, Learner_IDNumber, Original_LearnerID, Original_Learner_Name, Original_Learner_Surname, Original_Learner_IDNumber, Original_LearnerID);
+        public virtual int Update(string Learner_Name, string Learner_Surname, int Original_LearnerID, string Original_Learner_Name, string Original_Learner_Surname) {
+            return this.Update(Learner_Name, Learner_Surname, Original_LearnerID, Original_Learner_Name, Original_Learner_Surname, Original_LearnerID);
         }
     }
     

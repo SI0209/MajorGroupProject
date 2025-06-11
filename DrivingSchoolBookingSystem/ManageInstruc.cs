@@ -32,7 +32,7 @@ namespace DrivingSchoolBookingSystem
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
             loginForm1 = loginForm;
-            string username = loginForm1.Employee_Username;
+            string username = loginForm1.Employee_username;
             this.tblEmployeeTableAdapter.Fill(this.dsBookingSystem.tblEmployee);
             /*foreach (DataRow row in dsBookingSystem.tblEmployee.Rows)
             {
