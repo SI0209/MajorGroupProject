@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InstructorSchedule));
             this.label4 = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -68,7 +67,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Ebrima", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label4.ForeColor = System.Drawing.Color.LightSkyBlue;
             this.label4.Location = new System.Drawing.Point(696, 203);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
@@ -218,7 +217,7 @@
             // pbBack
             // 
             this.pbBack.BackColor = System.Drawing.Color.Transparent;
-            this.pbBack.Image = ((System.Drawing.Image)(resources.GetObject("pbBack.Image")));
+            this.pbBack.Image = global::DrivingSchoolBookingSystem.Properties.Resources.icons8_logout_50;
             this.pbBack.Location = new System.Drawing.Point(20, 782);
             this.pbBack.Margin = new System.Windows.Forms.Padding(4);
             this.pbBack.Name = "pbBack";
@@ -240,7 +239,7 @@
             this.label17.AutoSize = true;
             this.label17.BackColor = System.Drawing.Color.Transparent;
             this.label17.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label17.ForeColor = System.Drawing.Color.LightSkyBlue;
             this.label17.Location = new System.Drawing.Point(25, 148);
             this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
@@ -270,10 +269,13 @@
             // 
             // PictureBox3
             // 
-            this.PictureBox3.Location = new System.Drawing.Point(703, 12);
+            this.PictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.PictureBox3.BackgroundImage = global::DrivingSchoolBookingSystem.Properties.Resources.logo_transparent;
+            this.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PictureBox3.Location = new System.Drawing.Point(715, 18);
             this.PictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PictureBox3.Name = "PictureBox3";
-            this.PictureBox3.Size = new System.Drawing.Size(279, 183);
+            this.PictureBox3.Size = new System.Drawing.Size(234, 183);
             this.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PictureBox3.TabIndex = 55;
             this.PictureBox3.TabStop = false;
@@ -282,6 +284,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::DrivingSchoolBookingSystem.Properties.Resources.Background_final;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1592, 863);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.dtpDate);
@@ -290,6 +294,7 @@
             this.Controls.Add(this.PictureBox3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dataGridView1);
+            this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "InstructorSchedule";
             this.Text = "InstuctorSchcedule";

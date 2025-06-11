@@ -377,5 +377,8 @@
   <ItemGroup>
     <None Include="Resources\Instructors2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-logout-50.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
