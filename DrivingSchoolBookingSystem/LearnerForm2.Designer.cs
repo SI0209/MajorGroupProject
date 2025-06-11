@@ -84,6 +84,7 @@
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.fillBy2ToolStrip = new System.Windows.Forms.ToolStrip();
             this.fillBy2ToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblLearnerBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wstGrp2DataSet1BindingSource)).BeginInit();
@@ -572,7 +573,7 @@
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.Location = new System.Drawing.Point(395, 591);
+            this.button3.Location = new System.Drawing.Point(504, 591);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(88, 32);
             this.button3.TabIndex = 35;
@@ -618,12 +619,24 @@
             this.fillBy2ToolStripButton.Text = "FillBy2";
             this.fillBy2ToolStripButton.Click += new System.EventHandler(this.fillBy2ToolStripButton_Click);
             // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.Transparent;
+            this.button5.Location = new System.Drawing.Point(384, 591);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(88, 32);
+            this.button5.TabIndex = 40;
+            this.button5.Text = "Update";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // LearnerForm2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::DrivingSchoolBookingSystem.Properties.Resources.final_project_bg;
             this.ClientSize = new System.Drawing.Size(1276, 663);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.fillBy2ToolStrip);
             this.Controls.Add(this.textBox8);
             this.Controls.Add(this.label15);
@@ -732,5 +745,6 @@
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.ToolStrip fillBy2ToolStrip;
         private System.Windows.Forms.ToolStripButton fillBy2ToolStripButton;
+        private System.Windows.Forms.Button button5;
     }
 }

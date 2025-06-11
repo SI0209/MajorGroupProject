@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DrivingSchoolBookingSystem.WstGrp2DS2TableAdapters;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -179,11 +180,18 @@ namespace DrivingSchoolBookingSystem
             textBox2.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
             textBox3.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
             textBox4.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+            comboBox1.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+            comboBox2.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
             textBox5.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
             textBox6.Text = dataGridView1.CurrentRow.Cells[8].Value.ToString();
+            comboBox3.Text = dataGridView1.CurrentRow.Cells[9].Value.ToString();
+            dateTimePicker1.Value = Convert.ToDateTime(dataGridView1.CurrentRow.Cells[10].Value);
+            dateTimePicker2.Value = Convert.ToDateTime(dataGridView1.CurrentRow.Cells[11].Value);
+            comboBox4.Text = dataGridView1.CurrentRow.Cells[12].Value.ToString();
             label15.Visible = true;
             textBox8.Visible = true;
             textBox8.Enabled = false;
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -278,6 +286,79 @@ namespace DrivingSchoolBookingSystem
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
 
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+           if(string.IsNullOrWhiteSpace(textBox1.Text) || string.IsNullOrWhiteSpace(textBox2.Text) || string.IsNullOrWhiteSpace(textBox3.Text) 
+                || string.IsNullOrWhiteSpace(textBox4.Text) || string.IsNullOrWhiteSpace(comboBox1.Text) || string.IsNullOrWhiteSpace(comboBox2.Text)
+                || string.IsNullOrWhiteSpace(textBox5.Text) || string.IsNullOrWhiteSpace(textBox6.Text) || string.IsNullOrWhiteSpace(comboBox3.Text)
+                || dateTimePicker1.Value == dateTimePicker1.MinDate || dateTimePicker2.Value == dateTimePicker2.MinDate || string.IsNullOrWhiteSpace(comboBox4.Text)
+                || string.IsNullOrWhiteSpace(textBox8.Text))
+            {
+                MessageBox.Show("Please fill in all required fields");
+                return;
+            }
+            using (SqlConnection con = new SqlConnection("Data Source=146.230.177.46;Initial Catalog=WstGrp2;Persist Security Info=True;User ID=WstGrp2;Password=d9jdh;TrustServerCertificate=True"))
+            {
+                try
+                {
+                    con.Open();
+
+                    string query = "UPDATE tblLearner " +
+                     "SET Learner_Name = @learner_Name, " +
+                     "Learner_Surname = @learner_Surname, " +
+                     "Learner_IDNumber = @learner_IDNumber, " +
+                     "Learner_Age = @learner_Age, " +
+                     "Learner_Gender = @learner_Gender, " +
+                     "Learner_Race = @learner_Race, " +
+                     "Learner_CellNumber = @learner_CellNumber, " +
+                     "Learner_StreetAddress = @learner_StreetAddress, " +
+                     "Learner_Suburb = @learner_Suburb, " +
+                     "Learner_LearnersIssueDate = @learner_LearnersIssueDate, " +
+                     "Learner_LearnersExpiryDate = @learner_LearnersExpiryDate, " +
+                     "Code_Type = @code_Type " +
+                     "WHERE LearnerID = @learnerID";
+
+                    using (SqlCommand command = new SqlCommand(query, con))
+                    {
+                        //Use parameters to avoid SQL injection
+                        command.Parameters.AddWithValue("@learnerID", Convert.ToInt32(textBox8.Text));
+                        command.Parameters.AddWithValue("@learner_Name", textBox1.Text);
+                        command.Parameters.AddWithValue("@learner_Surname", textBox2.Text);
+                        command.Parameters.AddWithValue("@learner_IDNumber", textBox3.Text);
+                        command.Parameters.AddWithValue("@learner_Age",Convert.ToInt32(textBox4.Text));
+                        command.Parameters.AddWithValue("@learner_Gender", comboBox1.Text);
+                        command.Parameters.AddWithValue("@learner_Race", comboBox2.Text);
+                        command.Parameters.AddWithValue("@learner_CellNumber", textBox5.Text);
+                        command.Parameters.AddWithValue("@learner_StreetAddress", textBox6.Text);
+                        command.Parameters.AddWithValue("@learner_Suburb", comboBox3.Text);
+                        command.Parameters.AddWithValue("@learner_LearnersIssueDate", dateTimePicker1.Value);
+                        command.Parameters.AddWithValue("@learner_LearnersExpiryDate", dateTimePicker2.Value);
+                        command.Parameters.AddWithValue("@code_Type", Convert.ToInt32(comboBox4.Text));
+
+                        DialogResult dialogResult = MessageBox.Show("Are you sure you want to UPDATE learner  " + textBox8.Text.ToString() + " details ?", "Confirmation", MessageBoxButtons.YesNo);
+                        if (dialogResult == DialogResult.Yes)
+                        {
+                            command.ExecuteNonQuery();
+                            MessageBox.Show("Learner has been updated successfully.");
+                            tblLearnerTableAdapter.Fill(wstGrp2DataSet1.tblLearner);
+
+                           
+
+
+
+                        }
+
+                    }
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show($"An error occurred: {ex.Message}");
+                }
+
+
+            }
         }
     }
 }
