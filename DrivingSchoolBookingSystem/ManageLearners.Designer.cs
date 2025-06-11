@@ -1,6 +1,6 @@
 ﻿namespace DrivingSchoolBookingSystem
 {
-    partial class LearnerForm2
+    partial class ManageLearners
     {
         /// <summary>
         /// Required designer variable.

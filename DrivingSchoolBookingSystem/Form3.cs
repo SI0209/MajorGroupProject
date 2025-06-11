@@ -36,5 +36,10 @@ namespace DrivingSchoolBookingSystem
         {
 
         }
+
+        private void pictureBox6_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

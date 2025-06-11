@@ -65,10 +65,15 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.dsBookingSystem = new DrivingSchoolBookingSystem.WstGrp2DataSet();
+            this.tblEmployeeTableAdapter = new DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters.tblEmployeeTableAdapter();
+            this.taBooking = new DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters.tblBookingTableAdapter();
+            this.taUnavailableSlot = new DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters.tblUnavailableSlotTableAdapter();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAge)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsBookingSystem)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -112,7 +117,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1440, 769);
             this.panel1.TabIndex = 18;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // txtSearch
             // 
@@ -535,6 +539,23 @@
             this.label3.TabIndex = 22;
             this.label3.Text = "Manage Employees";
             // 
+            // dsBookingSystem
+            // 
+            this.dsBookingSystem.DataSetName = "WstGrp2DataSet";
+            this.dsBookingSystem.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tblEmployeeTableAdapter
+            // 
+            this.tblEmployeeTableAdapter.ClearBeforeFill = true;
+            // 
+            // taBooking
+            // 
+            this.taBooking.ClearBeforeFill = true;
+            // 
+            // taUnavailableSlot
+            // 
+            this.taUnavailableSlot.ClearBeforeFill = true;
+            // 
             // ManageInstruc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -545,11 +566,13 @@
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
             this.Name = "ManageInstruc";
+            this.Load += new System.EventHandler(this.ManageInstruc_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAge)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployee)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsBookingSystem)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -592,5 +615,9 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
+        private WstGrp2DataSet dsBookingSystem;
+        private WstGrp2DataSetTableAdapters.tblEmployeeTableAdapter tblEmployeeTableAdapter;
+        private WstGrp2DataSetTableAdapters.tblBookingTableAdapter taBooking;
+        private WstGrp2DataSetTableAdapters.tblUnavailableSlotTableAdapter taUnavailableSlot;
     }
 }

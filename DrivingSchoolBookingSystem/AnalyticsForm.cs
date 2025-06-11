@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DrivingSchoolBookingSystem
 {
-    public partial class Form8 : Form
+    public partial class AnalyticsForm : Form
     {
-        public Form8()
+        public AnalyticsForm()
         {
             InitializeComponent();
         }

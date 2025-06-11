@@ -13,6 +13,7 @@ namespace DrivingSchoolBookingSystem
 {
     public partial class LoginForm : Form
     {
+        public string Employee_Username;
         public LoginForm()
         {
             InitializeComponent();
@@ -56,7 +57,7 @@ namespace DrivingSchoolBookingSystem
 
     private void usernametextBox_TextChanged(object sender, EventArgs e)
         {
-            string Employee_Username = usernametextBox.Text;
+            Employee_Username = usernametextBox.Text;
             string passwordID = passwordtextBox.Text;
             Boolean isFound = false;
             Boolean isManager = false;

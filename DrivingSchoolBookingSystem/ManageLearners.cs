@@ -13,9 +13,9 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace DrivingSchoolBookingSystem
 {
-    public partial class LearnerForm2 : Form
+    public partial class ManageLearners : Form
     {
-        public LearnerForm2()
+        public ManageLearners()
         {
             InitializeComponent();
         }
