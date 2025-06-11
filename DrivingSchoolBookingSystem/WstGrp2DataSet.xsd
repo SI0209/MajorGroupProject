@@ -497,7 +497,7 @@ WHERE  (LearnerID = @learnerID)</CommandText>
                   </DbCommand>
                 </DeleteCommand>
               </DbSource>
-              <DbSource ConnectionRef="WstGrp2ConnectionString (Settings)" DbObjectName="WstGrp2.dbo.tblLearner" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy5" UserSourceName="FillBy">
+              <DbSource ConnectionRef="WstGrp2ConnectionString (Settings)" DbObjectName="WstGrp2.dbo.tblLearner" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="FillBy">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>SELECT DISTINCT 
@@ -508,7 +508,7 @@ FROM     tblLearner</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="WstGrp2ConnectionString (Settings)" DbObjectName="WstGrp2.dbo.tblLearner" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy1" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy1" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy6" UserSourceName="FillBy1">
+              <DbSource ConnectionRef="WstGrp2ConnectionString (Settings)" DbObjectName="WstGrp2.dbo.tblLearner" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy1" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy1" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="FillBy1">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>SELECT DISTINCT 
@@ -519,7 +519,7 @@ FROM     tblLearner</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="WstGrp2ConnectionString (Settings)" DbObjectName="WstGrp2.dbo.tblLearner" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy2" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy2" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy7" UserSourceName="FillBy2">
+              <DbSource ConnectionRef="WstGrp2ConnectionString (Settings)" DbObjectName="WstGrp2.dbo.tblLearner" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy2" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy2" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="FillBy2">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>SELECT DISTINCT 
@@ -530,7 +530,7 @@ FROM     tblLearner</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="WstGrp2ConnectionString (Settings)" DbObjectName="WstGrp2.dbo.tblLearner" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByLearnerID" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy3" GeneratorSourceName="FillByLearnerID" GetMethodModifier="Public" GetMethodName="GetDataBy3" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="FillByLearnerID">
+              <DbSource ConnectionRef="WstGrp2ConnectionString (Settings)" DbObjectName="WstGrp2.dbo.tblLearner" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByLearnerID" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy31" GeneratorSourceName="FillByLearnerID" GetMethodModifier="Public" GetMethodName="GetDataBy31" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy31" UserSourceName="FillByLearnerID">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT LearnerID, Learner_Name, Learner_Surname, Learner_IDNumber, Learner_Age, Learner_Gender, Learner_Race, Learner_CellNumber, Learner_StreetAddress, Learner_Suburb, Learner_LearnersIssueDate, 
@@ -543,7 +543,7 @@ WHERE  (LearnerID LIKE @ID)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="WstGrp2ConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertNewLearner" Modifier="Public" Name="InsertNewLearner" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="InsertNewLearner">
+              <DbSource ConnectionRef="WstGrp2ConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertNewLearner" Modifier="Public" Name="InsertNewLearner" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy5" UserSourceName="InsertNewLearner">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>INSERT INTO tblLearner
@@ -579,7 +579,7 @@ VALUES (@Learner_Name,@Learner_Surname,@Learner_IDNumber,@Learner_Age,@Learner_G
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="WstGrp2ConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateLearnerDetails" Modifier="Public" Name="UpdateLearnerDetails" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="UpdateLearnerDetails">
+              <DbSource ConnectionRef="WstGrp2ConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateLearnerDetails" Modifier="Public" Name="UpdateLearnerDetails" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy6" UserSourceName="UpdateLearnerDetails">
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>
@@ -835,6 +835,25 @@ VALUES (@Learner_Name,@Learner_Surname,@Learner_IDNumber,@Learner_Age,@Learner_G
                     </Parameters>
                   </DbCommand>
                 </DeleteCommand>
+              </DbSource>
+              <DbSource ConnectionRef="WstGrp2ConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateUnavailableSlot" Modifier="Public" Name="UpdateUnavailableSlot" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="UpdateUnavailableSlot">
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>UPDATE tblUnavailableSlot
+SET          Start_Date = @Start_Date, End_Date = @End_Date, Start_Time = @Start_Time, End_Time = @End_Time, Reason = @Reason, EmployeeID = @EmployeeID
+WHERE  (UnavailableSlotID = @UnavailableSlotID); 
+</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Start_Date" ColumnName="Start_Date" DataSourceName="WstGrp2.dbo.tblUnavailableSlot" DataTypeServer="date" DbType="AnsiString" Direction="Input" ParameterName="@Start_Date" Precision="0" ProviderType="Date" Scale="0" Size="3" SourceColumn="Start_Date" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="End_Date" ColumnName="End_Date" DataSourceName="WstGrp2.dbo.tblUnavailableSlot" DataTypeServer="date" DbType="AnsiString" Direction="Input" ParameterName="@End_Date" Precision="0" ProviderType="Date" Scale="0" Size="3" SourceColumn="End_Date" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Start_Time" ColumnName="Start_Time" DataSourceName="WstGrp2.dbo.tblUnavailableSlot" DataTypeServer="time" DbType="AnsiString" Direction="Input" ParameterName="@Start_Time" Precision="0" ProviderType="Time" Scale="0" Size="5" SourceColumn="Start_Time" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="End_Time" ColumnName="End_Time" DataSourceName="WstGrp2.dbo.tblUnavailableSlot" DataTypeServer="time" DbType="AnsiString" Direction="Input" ParameterName="@End_Time" Precision="0" ProviderType="Time" Scale="0" Size="5" SourceColumn="End_Time" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Reason" ColumnName="Reason" DataSourceName="WstGrp2.dbo.tblUnavailableSlot" DataTypeServer="varchar(100)" DbType="AnsiString" Direction="Input" ParameterName="@Reason" Precision="0" ProviderType="VarChar" Scale="0" Size="100" SourceColumn="Reason" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="EmployeeID" ColumnName="EmployeeID" DataSourceName="WstGrp2.dbo.tblUnavailableSlot" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@EmployeeID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="EmployeeID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="UnavailableSlotID" ColumnName="UnavailableSlotID" DataSourceName="WstGrp2.dbo.tblUnavailableSlot" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@UnavailableSlotID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="UnavailableSlotID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
               </DbSource>
             </Sources>
           </TableAdapter>
@@ -1654,12 +1673,12 @@ VALUES (@Learner_Name,@Learner_Surname,@Learner_IDNumber,@Learner_Age,@Learner_G
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK_tblUnavailableSlot_tblEmployee" msdata:parent="tblEmployee" msdata:child="tblUnavailableSlot" msdata:parentkey="EmployeeID" msdata:childkey="EmployeeID" msprop:Generator_UserParentTable="tblEmployee" msprop:Generator_UserChildTable="tblUnavailableSlot" msprop:Generator_RelationVarName="relationFK_tblUnavailableSlot_tblEmployee" msprop:Generator_ChildPropName="GettblUnavailableSlotRows" msprop:Generator_ParentPropName="tblEmployeeRow" msprop:Generator_UserRelationName="FK_tblUnavailableSlot_tblEmployee" />
-      <msdata:Relationship name="tblEmployee_tblBooking" msdata:parent="tblEmployee" msdata:child="tblBooking" msdata:parentkey="EmployeeID" msdata:childkey="EmployeeID" msprop:Generator_UserParentTable="tblEmployee" msprop:Generator_UserChildTable="tblBooking" msprop:Generator_RelationVarName="relationtblEmployee_tblBooking" msprop:Generator_ChildPropName="GettblBookingRows" msprop:Generator_UserRelationName="tblEmployee_tblBooking" msprop:Generator_ParentPropName="tblEmployeeRow" />
-      <msdata:Relationship name="tblLearner_tblBooking" msdata:parent="tblLearner" msdata:child="tblBooking" msdata:parentkey="LearnerID" msdata:childkey="LearnerID" msprop:Generator_UserParentTable="tblLearner" msprop:Generator_UserChildTable="tblBooking" msprop:Generator_RelationVarName="relationtblLearner_tblBooking" msprop:Generator_ChildPropName="GettblBookingRows" msprop:Generator_UserRelationName="tblLearner_tblBooking" msprop:Generator_ParentPropName="tblLearnerRow" />
-      <msdata:Relationship name="tblLessonCode_tblBooking" msdata:parent="tblLessonCode" msdata:child="tblBooking" msdata:parentkey="Code_Type" msdata:childkey="Code_Type" msprop:Generator_UserParentTable="tblLessonCode" msprop:Generator_UserChildTable="tblBooking" msprop:Generator_RelationVarName="relationtblLessonCode_tblBooking" msprop:Generator_ChildPropName="GettblBookingRows" msprop:Generator_UserRelationName="tblLessonCode_tblBooking" msprop:Generator_ParentPropName="tblLessonCodeRow" />
-      <msdata:Relationship name="tblVehicle_tblBooking" msdata:parent="tblVehicle" msdata:child="tblBooking" msdata:parentkey="VehicleID" msdata:childkey="VehicleID" msprop:Generator_UserParentTable="tblVehicle" msprop:Generator_UserChildTable="tblBooking" msprop:Generator_RelationVarName="relationtblVehicle_tblBooking" msprop:Generator_ChildPropName="GettblBookingRows" msprop:Generator_UserRelationName="tblVehicle_tblBooking" msprop:Generator_ParentPropName="tblVehicleRow" />
-      <msdata:Relationship name="tblLessonCode_tblLearner" msdata:parent="tblLessonCode" msdata:child="tblLearner" msdata:parentkey="Code_Type" msdata:childkey="Code_Type" msprop:Generator_UserParentTable="tblLessonCode" msprop:Generator_UserChildTable="tblLearner" msprop:Generator_RelationVarName="relationtblLessonCode_tblLearner" msprop:Generator_ChildPropName="GettblLearnerRows" msprop:Generator_UserRelationName="tblLessonCode_tblLearner" msprop:Generator_ParentPropName="tblLessonCodeRow" />
+      <msdata:Relationship name="FK_tblUnavailableSlot_tblEmployee" msdata:parent="tblEmployee" msdata:child="tblUnavailableSlot" msdata:parentkey="EmployeeID" msdata:childkey="EmployeeID" msprop:Generator_UserParentTable="tblEmployee" msprop:Generator_UserChildTable="tblUnavailableSlot" msprop:Generator_RelationVarName="relationFK_tblUnavailableSlot_tblEmployee" msprop:Generator_ChildPropName="GettblUnavailableSlotRows" msprop:Generator_UserRelationName="FK_tblUnavailableSlot_tblEmployee" msprop:Generator_ParentPropName="tblEmployeeRow" />
+      <msdata:Relationship name="tblEmployee_tblBooking" msdata:parent="tblEmployee" msdata:child="tblBooking" msdata:parentkey="EmployeeID" msdata:childkey="EmployeeID" msprop:Generator_UserParentTable="tblEmployee" msprop:Generator_UserChildTable="tblBooking" msprop:Generator_RelationVarName="relationtblEmployee_tblBooking" msprop:Generator_ChildPropName="GettblBookingRows" msprop:Generator_ParentPropName="tblEmployeeRow" msprop:Generator_UserRelationName="tblEmployee_tblBooking" />
+      <msdata:Relationship name="tblLearner_tblBooking" msdata:parent="tblLearner" msdata:child="tblBooking" msdata:parentkey="LearnerID" msdata:childkey="LearnerID" msprop:Generator_UserParentTable="tblLearner" msprop:Generator_UserChildTable="tblBooking" msprop:Generator_RelationVarName="relationtblLearner_tblBooking" msprop:Generator_ChildPropName="GettblBookingRows" msprop:Generator_ParentPropName="tblLearnerRow" msprop:Generator_UserRelationName="tblLearner_tblBooking" />
+      <msdata:Relationship name="tblLessonCode_tblBooking" msdata:parent="tblLessonCode" msdata:child="tblBooking" msdata:parentkey="Code_Type" msdata:childkey="Code_Type" msprop:Generator_UserParentTable="tblLessonCode" msprop:Generator_UserChildTable="tblBooking" msprop:Generator_RelationVarName="relationtblLessonCode_tblBooking" msprop:Generator_ChildPropName="GettblBookingRows" msprop:Generator_ParentPropName="tblLessonCodeRow" msprop:Generator_UserRelationName="tblLessonCode_tblBooking" />
+      <msdata:Relationship name="tblVehicle_tblBooking" msdata:parent="tblVehicle" msdata:child="tblBooking" msdata:parentkey="VehicleID" msdata:childkey="VehicleID" msprop:Generator_UserParentTable="tblVehicle" msprop:Generator_UserChildTable="tblBooking" msprop:Generator_RelationVarName="relationtblVehicle_tblBooking" msprop:Generator_ChildPropName="GettblBookingRows" msprop:Generator_ParentPropName="tblVehicleRow" msprop:Generator_UserRelationName="tblVehicle_tblBooking" />
+      <msdata:Relationship name="tblLessonCode_tblLearner" msdata:parent="tblLessonCode" msdata:child="tblLearner" msdata:parentkey="Code_Type" msdata:childkey="Code_Type" msprop:Generator_UserParentTable="tblLessonCode" msprop:Generator_UserChildTable="tblLearner" msprop:Generator_RelationVarName="relationtblLessonCode_tblLearner" msprop:Generator_ChildPropName="GettblLearnerRows" msprop:Generator_ParentPropName="tblLessonCodeRow" msprop:Generator_UserRelationName="tblLessonCode_tblLearner" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>
