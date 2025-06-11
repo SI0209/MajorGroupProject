@@ -36,9 +36,9 @@
             this.passwordformcheckboc = new System.Windows.Forms.CheckBox();
             this.clearbuttonpasswordform = new System.Windows.Forms.Button();
             this.backbtnpasswordform = new System.Windows.Forms.Button();
-            this.tblEmployeeTableAdapter1 = new DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters.tblEmployeeTableAdapter();
-            this.wstGrp2DataSet = new DrivingSchoolBookingSystem.WstGrp2DataSet();
-            ((System.ComponentModel.ISupportInitialize)(this.wstGrp2DataSet)).BeginInit();
+            this.taEmployee = new DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters.tblEmployeeTableAdapter();
+            this.dsBookingSystem = new DrivingSchoolBookingSystem.WstGrp2DataSet();
+            ((System.ComponentModel.ISupportInitialize)(this.dsBookingSystem)).BeginInit();
             this.SuspendLayout();
             // 
             // passwordUpdatetxtbox
@@ -127,14 +127,14 @@
             this.backbtnpasswordform.UseVisualStyleBackColor = true;
             this.backbtnpasswordform.Click += new System.EventHandler(this.backbtnpasswordform_Click);
             // 
-            // tblEmployeeTableAdapter1
+            // taEmployee
             // 
-            this.tblEmployeeTableAdapter1.ClearBeforeFill = true;
+            this.taEmployee.ClearBeforeFill = true;
             // 
-            // wstGrp2DataSet1
+            // dsBookingSystem
             // 
-            this.wstGrp2DataSet.DataSetName = "WstGrp2DataSet";
-            this.wstGrp2DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.dsBookingSystem.DataSetName = "WstGrp2DataSet";
+            this.dsBookingSystem.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // Password
             // 
@@ -152,7 +152,8 @@
             this.Controls.Add(this.passwordUpdatetxtbox);
             this.Name = "Password";
             this.Text = "Form10";
-            ((System.ComponentModel.ISupportInitialize)(this.wstGrp2DataSet)).EndInit();
+            this.Load += new System.EventHandler(this.Password_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dsBookingSystem)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -168,7 +169,7 @@
         private System.Windows.Forms.CheckBox passwordformcheckboc;
         private System.Windows.Forms.Button clearbuttonpasswordform;
         private System.Windows.Forms.Button backbtnpasswordform;
-        private DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters.tblEmployeeTableAdapter tblEmployeeTableAdapter1;
-        private DrivingSchoolBookingSystem.WstGrp2DataSet wstGrp2DataSet;
+        private DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters.tblEmployeeTableAdapter taEmployee;
+        private DrivingSchoolBookingSystem.WstGrp2DataSet dsBookingSystem;
     }
 }

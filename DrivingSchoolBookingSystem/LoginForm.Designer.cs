@@ -41,13 +41,13 @@
             this.usernametextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.wstGrp2DataSet1 = new DrivingSchoolBookingSystem.WstGrp2DataSet();
-            this.tblEmployeeTableAdapter1 = new DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters.tblEmployeeTableAdapter();
+            this.wstGrp2DataSet = new DrivingSchoolBookingSystem.WstGrp2DataSet();
+            this.taEmployee = new DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters.tblEmployeeTableAdapter();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wstGrp2DataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wstGrp2DataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -80,7 +80,6 @@
             this.FgtPassbtn.TabIndex = 13;
             this.FgtPassbtn.Text = "Forgot Password?";
             this.FgtPassbtn.UseVisualStyleBackColor = true;
-            this.FgtPassbtn.Click += new System.EventHandler(this.FgtPassbtn_Click);
             // 
             // button1
             // 
@@ -90,7 +89,6 @@
             this.button1.TabIndex = 12;
             this.button1.Text = "Clear";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // LoginButton
             // 
@@ -122,7 +120,6 @@
             this.pictureBox2.Size = new System.Drawing.Size(28, 26);
             this.pictureBox2.TabIndex = 9;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox1
             // 
@@ -134,7 +131,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(111, 109);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label3
             // 
@@ -146,7 +142,6 @@
             this.label3.Size = new System.Drawing.Size(159, 45);
             this.label3.TabIndex = 7;
             this.label3.Text = "Welcome";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // viewpasswordcheckBox
             // 
@@ -159,7 +154,6 @@
             this.viewpasswordcheckBox.TabIndex = 6;
             this.viewpasswordcheckBox.Text = "View Password";
             this.viewpasswordcheckBox.UseVisualStyleBackColor = true;
-            this.viewpasswordcheckBox.CheckedChanged += new System.EventHandler(this.viewpasswordcheckBox_CheckedChanged);
             // 
             // passwordtextBox
             // 
@@ -174,7 +168,6 @@
             this.usernametextBox.Name = "usernametextBox";
             this.usernametextBox.Size = new System.Drawing.Size(129, 22);
             this.usernametextBox.TabIndex = 4;
-            this.usernametextBox.TextChanged += new System.EventHandler(this.usernametextBox_TextChanged);
             // 
             // label2
             // 
@@ -197,15 +190,15 @@
             this.label1.Size = new System.Drawing.Size(104, 25);
             this.label1.TabIndex = 1;
             this.label1.Text = "Username:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // wstGrp2DataSet1
-            //             this.wstGrp2DataSet1.DataSetName = "WstGrp2DataSet";
-           this.wstGrp2DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // wstGrp2DataSet
             // 
-            // tblEmployeeTableAdapter1
+            this.wstGrp2DataSet.DataSetName = "WstGrp2DataSet";
+            this.wstGrp2DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            this.tblEmployeeTableAdapter1.ClearBeforeFill = true;
+            // taEmployee
+            // 
+            this.taEmployee.ClearBeforeFill = true;
             // 
             // LoginForm
             // 
@@ -225,7 +218,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wstGrp2DataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wstGrp2DataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -245,7 +238,7 @@
         private System.Windows.Forms.Button LoginButton;
         private System.Windows.Forms.Button FgtPassbtn;
         private System.Windows.Forms.Button button1;
-        private DrivingSchoolBookingSystem.WstGrp2DataSet wstGrp2DataSet1;
-        private DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters.tblEmployeeTableAdapter tblEmployeeTableAdapter1;
+        private DrivingSchoolBookingSystem.WstGrp2DataSet wstGrp2DataSet;
+        private DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters.tblEmployeeTableAdapter taEmployee;
     }
 }

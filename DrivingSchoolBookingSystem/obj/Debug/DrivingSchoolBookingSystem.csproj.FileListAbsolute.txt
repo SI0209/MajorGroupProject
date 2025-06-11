@@ -214,3 +214,11 @@ C:\Users\Strini\Source\Repos\MajorGroupProject35+\DrivingSchoolBookingSystem\obj
 C:\Users\Strini\Source\Repos\MajorGroupProject35+\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.csproj.CoreCompileInputs.cache
 C:\Users\Strini\Source\Repos\MajorGroupProject35+\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.exe
 C:\Users\Strini\Source\Repos\MajorGroupProject35+\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.pdb
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.Password.resources
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.InstructorSchedule.resources
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.ManageLearners.resources
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.ManageVehiclesForm.resources
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.LearnerProgressForm.resources
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.AnalyticsForm.resources
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.UnavailableTimeSlots.resources
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.ManageInstruc.resources

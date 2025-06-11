@@ -8,56 +8,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Globalization;
 
 namespace DrivingSchoolBookingSystem
 {
     public partial class LoginForm : Form
     {
-        public string Employee_Username;
+        public string Employee_username;
         public LoginForm()
         {
             InitializeComponent();
-        }
+            this.StartPosition = FormStartPosition.CenterScreen;
 
+        }
         private void LoginForm_Load(object sender, EventArgs e)
         {
-            
+            taEmployee.Fill(wstGrp2DataSet.tblEmployee);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+
+        private void Button2_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LoginButton_Click(object sender, EventArgs e)
-        {
-           
-
-    }
-
-    private void usernametextBox_TextChanged(object sender, EventArgs e)
-        {
-            Employee_Username = usernametextBox.Text;
+            Employee_username = usernametextBox.Text;
             string passwordID = passwordtextBox.Text;
             Boolean isFound = false;
             Boolean isManager = false;
@@ -68,9 +40,9 @@ namespace DrivingSchoolBookingSystem
             }
             else
             {
-                foreach (DataRow row in wstGrp2DataSet1.tblEmployee.Rows)
+                foreach (DataRow row in wstGrp2DataSet.tblEmployee.Rows)
                 {
-                    if (row["Employee_Username"].ToString().Equals("Employee_Username") && row["Employee_Password"].ToString().Equals(passwordID))
+                    if (row["Employee_Username"].ToString().Equals(Employee_username) && row["Employee_Password"].ToString().Equals(passwordID))
                     {
                         if (row["Employee_Type"].ToString().Equals("Manager"))
                         {
@@ -85,16 +57,18 @@ namespace DrivingSchoolBookingSystem
                 {
                     if (isManager)
                     {
-                        MessageBox.Show("Welcome to the Araf's Driving School Booking System! ", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Welcome to the Wyebank Driving School Booking System! ", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Hide();
-                        ManageInstruc mngEmployee = new ManageInstruc();
+                        ManageInstruc mngEmployee = new ManageInstruc(this);
                         mngEmployee.Show();
 
                     }
                     else
                     {
-                      
-                        MessageBox.Show("Instructor Access Denied", "Security", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        this.Hide();
+                        InstructorSchedule mngEmployee = new InstructorSchedule(this);
+                        mngEmployee.Show();
+                        //MessageBox.Show("Instructor Access Denied", "Security", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
 
 
@@ -110,8 +84,12 @@ namespace DrivingSchoolBookingSystem
             ManageInstruc mngEmployee = new ManageInstruc();
             mngEmployee.Show();*/
         }
+        private void pbExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
 
-        private void viewpasswordcheckBox_CheckedChanged(object sender, EventArgs e)
+        private void chkBxShowPas_CheckedChanged(object sender, EventArgs e)
         {
             if (viewpasswordcheckBox.Checked)
             {
@@ -121,27 +99,27 @@ namespace DrivingSchoolBookingSystem
             {
                 passwordtextBox.PasswordChar = '*';
             }
+
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void btnClear_Click(object sender, EventArgs e)
         {
             passwordtextBox.Text = "";
             usernametextBox.Text = "";
             usernametextBox.Focus();
-
         }
 
-        private void FgtPassbtn_Click(object sender, EventArgs e)
+        private void btnForgetPas_Click(object sender, EventArgs e)
         {
             if (usernametextBox.Text == "")
                 MessageBox.Show("Please enter a gmail address", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
             {
                 Boolean isUsernameValid = false;
-                string Employee_Username = usernametextBox.Text;
-                foreach (DataRow row in wstGrp2DataSet1.tblEmployee.Rows)
+                Employee_username = usernametextBox.Text;
+                foreach (DataRow row in wstGrp2DataSet.tblEmployee.Rows)
                 {
-                    if (row["Employee_Username"].ToString().Equals("Employee_Username"))
+                    if (row["Employee_Username"].ToString().Equals(Employee_username))
                     {
                         isUsernameValid = true;
                         break;
@@ -151,14 +129,24 @@ namespace DrivingSchoolBookingSystem
                 if (isUsernameValid)
                 {
                     this.Hide();
-                    Password newPassword = new Password();
+                    Password newPassword = new Password(this);
                     newPassword.Show();
                 }
                 else
                     MessageBox.Show("Please enter an existing gmail address!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void LoginButton_Click(object sender, EventArgs e)
+        {
 
         }
+
+        /* private void button1_Click(object sender, EventArgs e)
+         {
+             AnalyticsForm a1 = new AnalyticsForm();
+                 a1.Show();
+         }*/
     }
 }
 

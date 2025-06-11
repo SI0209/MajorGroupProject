@@ -14,9 +14,15 @@ namespace DrivingSchoolBookingSystem
 {
     public partial class Password : Form
     {
-        public Password()
+        LoginForm loginForm;
+        private string username;
+        public Password(LoginForm loginForm1)
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
+            loginForm = loginForm1;
+            username = loginForm.Employee_username;
+            taEmployee.Fill(dsBookingSystem.tblEmployee);
         }
 
         private void updatePasswordbtn_Click(object sender, EventArgs e)
@@ -69,6 +75,11 @@ namespace DrivingSchoolBookingSystem
             this.Hide();
             LoginForm backTologin = new LoginForm();
             backTologin.Show();
+
+        }
+
+        private void Password_Load(object sender, EventArgs e)
+        {
 
         }
     }
