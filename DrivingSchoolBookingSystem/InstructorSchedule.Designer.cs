@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label4 = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -64,12 +64,12 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Ebrima", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.LightSkyBlue;
             this.label4.Location = new System.Drawing.Point(715, 57);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(272, 38);
+            this.label4.Size = new System.Drawing.Size(289, 39);
             this.label4.TabIndex = 54;
             this.label4.Text = "Instructor Schedule";
             // 
@@ -114,9 +114,9 @@
             // bookingDateDataGridViewTextBoxColumn
             // 
             this.bookingDateDataGridViewTextBoxColumn.DataPropertyName = "Booking_Date";
-            dataGridViewCellStyle1.Format = "D";
-            dataGridViewCellStyle1.NullValue = null;
-            this.bookingDateDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Format = "D";
+            dataGridViewCellStyle2.NullValue = null;
+            this.bookingDateDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
             this.bookingDateDataGridViewTextBoxColumn.HeaderText = "Booking_Date";
             this.bookingDateDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.bookingDateDataGridViewTextBoxColumn.Name = "bookingDateDataGridViewTextBoxColumn";
@@ -236,12 +236,12 @@
             // 
             this.label17.AutoSize = true;
             this.label17.BackColor = System.Drawing.Color.Transparent;
-            this.label17.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Font = new System.Drawing.Font("Comic Sans MS", 12F);
             this.label17.ForeColor = System.Drawing.Color.LightSkyBlue;
             this.label17.Location = new System.Drawing.Point(25, 148);
             this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(141, 28);
+            this.label17.Size = new System.Drawing.Size(154, 28);
             this.label17.TabIndex = 106;
             this.label17.Text = "Search by date";
             // 
