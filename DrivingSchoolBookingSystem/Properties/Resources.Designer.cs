@@ -203,6 +203,16 @@ namespace DrivingSchoolBookingSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap image_removebg_preview__13_ {
+            get {
+                object obj = ResourceManager.GetObject("image-removebg-preview (13)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap image_removebg_preview__2_ {
             get {
                 object obj = ResourceManager.GetObject("image-removebg-preview (2)", resourceCulture);
