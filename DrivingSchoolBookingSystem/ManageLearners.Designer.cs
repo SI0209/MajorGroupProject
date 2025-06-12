@@ -501,12 +501,15 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.Lavender;
+            this.button1.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.button1.Location = new System.Drawing.Point(282, 773);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(97, 32);
             this.button1.TabIndex = 24;
             this.button1.Text = "Add";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label13
@@ -551,12 +554,15 @@
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.Lavender;
+            this.button2.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.button2.Location = new System.Drawing.Point(394, 773);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(89, 32);
             this.button2.TabIndex = 30;
             this.button2.Text = "Delete";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label14
@@ -565,7 +571,7 @@
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(733, 190);
+            this.label14.Location = new System.Drawing.Point(800, 190);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(195, 20);
             this.label14.TabIndex = 31;
@@ -574,25 +580,30 @@
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(1104, 190);
+            this.textBox7.Location = new System.Drawing.Point(1052, 190);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(127, 22);
+            this.textBox7.Size = new System.Drawing.Size(152, 22);
             this.textBox7.TabIndex = 32;
             this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(1286, 185);
+            this.button4.BackColor = System.Drawing.Color.Lavender;
+            this.button4.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button4.Location = new System.Drawing.Point(1269, 187);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(99, 28);
             this.button4.TabIndex = 34;
             this.button4.Text = "Reset";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
+            this.button3.BackColor = System.Drawing.Color.Lavender;
+            this.button3.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.button3.Location = new System.Drawing.Point(601, 773);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(88, 32);
@@ -641,7 +652,9 @@
             // 
             // button5
             // 
-            this.button5.BackColor = System.Drawing.Color.Transparent;
+            this.button5.BackColor = System.Drawing.Color.Lavender;
+            this.button5.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.button5.Location = new System.Drawing.Point(498, 773);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(88, 32);
@@ -669,7 +682,7 @@
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Font = new System.Drawing.Font("Comic Sans MS", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(305, 195);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(384, 555);
