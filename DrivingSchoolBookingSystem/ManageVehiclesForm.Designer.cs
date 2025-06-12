@@ -1,4 +1,4 @@
-﻿namespace DrivingSchoolBookingSystem
+namespace DrivingSchoolBookingSystem
 {
     partial class ManageVehiclesForm
     {
@@ -72,7 +72,7 @@
             this.taVehicle = new DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters.tblVehicleTableAdapter();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvVehicle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVehicles)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblVehicleBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wstGrp2DataSet)).BeginInit();
             this.panel2.SuspendLayout();
@@ -139,10 +139,10 @@
             // 
             // dgvVehicle
             // 
-            this.dgvVehicle.AutoGenerateColumns = false;
-            this.dgvVehicle.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgvVehicle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVehicle.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvVehicles.AutoGenerateColumns = false;
+            this.dgvVehicles.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvVehicles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvVehicles.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.vehicleRegNumDataGridViewTextBoxColumn,
@@ -151,13 +151,13 @@
             this.dataGridViewTextBoxColumn4,
             this.vehicleSizeDataGridViewTextBoxColumn,
             this.vehicleStatusDataGridViewTextBoxColumn});
-            this.dgvVehicle.DataSource = this.tblVehicleBindingSource;
-            this.dgvVehicle.Location = new System.Drawing.Point(481, 200);
-            this.dgvVehicle.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvVehicle.Name = "dgvVehicle";
-            this.dgvVehicle.RowHeadersWidth = 51;
-            this.dgvVehicle.Size = new System.Drawing.Size(654, 390);
-            this.dgvVehicle.TabIndex = 37;
+            this.dgvVehicles.DataSource = this.tblVehicleBindingSource;
+            this.dgvVehicles.Location = new System.Drawing.Point(481, 200);
+            this.dgvVehicles.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvVehicles.Name = "dgvVehicle";
+            this.dgvVehicles.RowHeadersWidth = 51;
+            this.dgvVehicles.Size = new System.Drawing.Size(654, 390);
+            this.dgvVehicles.TabIndex = 37;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -245,53 +245,53 @@
             this.label9.TabIndex = 20;
             this.label9.Text = "Vehicle Year";
             // 
-            // button4
+            // btnSearch
             // 
-            this.button4.Font = new System.Drawing.Font("Comic Sans MS", 8F, System.Drawing.FontStyle.Bold);
-            this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button4.Image = global::DrivingSchoolBookingSystem.Properties.Resources.dark_blue;
-            this.button4.Location = new System.Drawing.Point(959, 624);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(93, 43);
-            this.button4.TabIndex = 18;
-            this.button4.Text = "SEARCH";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnSearch.Font = new System.Drawing.Font("Comic Sans MS", 8F, System.Drawing.FontStyle.Bold);
+            this.btnSearch.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnSearch.Image = global::DrivingSchoolBookingSystem.Properties.Resources.dark_blue;
+            this.btnSearch.Location = new System.Drawing.Point(959, 624);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(93, 43);
+            this.btnSearch.TabIndex = 18;
+            this.btnSearch.Text = "SEARCH";
+            this.btnSearch.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnDelete
             // 
-            this.button3.Font = new System.Drawing.Font("Comic Sans MS", 8F, System.Drawing.FontStyle.Bold);
-            this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Image = global::DrivingSchoolBookingSystem.Properties.Resources.dark_blue;
-            this.button3.Location = new System.Drawing.Point(832, 624);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(93, 43);
-            this.button3.TabIndex = 17;
-            this.button3.Text = "DELETE";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnDelete.Font = new System.Drawing.Font("Comic Sans MS", 8F, System.Drawing.FontStyle.Bold);
+            this.btnDelete.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnDelete.Image = global::DrivingSchoolBookingSystem.Properties.Resources.dark_blue;
+            this.btnDelete.Location = new System.Drawing.Point(832, 624);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(93, 43);
+            this.btnDelete.TabIndex = 17;
+            this.btnDelete.Text = "DELETE";
+            this.btnDelete.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnUpdate
             // 
-            this.button2.Font = new System.Drawing.Font("Comic Sans MS", 8F, System.Drawing.FontStyle.Bold);
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Image = global::DrivingSchoolBookingSystem.Properties.Resources.dark_blue;
-            this.button2.Location = new System.Drawing.Point(709, 624);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(93, 43);
-            this.button2.TabIndex = 16;
-            this.button2.Text = "UPDATE";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnUpdate.Font = new System.Drawing.Font("Comic Sans MS", 8F, System.Drawing.FontStyle.Bold);
+            this.btnUpdate.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnUpdate.Image = global::DrivingSchoolBookingSystem.Properties.Resources.dark_blue;
+            this.btnUpdate.Location = new System.Drawing.Point(709, 624);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(93, 43);
+            this.btnUpdate.TabIndex = 16;
+            this.btnUpdate.Text = "UPDATE";
+            this.btnUpdate.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnAdd
             // 
-            this.button1.Font = new System.Drawing.Font("Comic Sans MS", 8F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Image = global::DrivingSchoolBookingSystem.Properties.Resources.dark_blue;
-            this.button1.Location = new System.Drawing.Point(589, 624);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(93, 43);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "ADD";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAdd.Font = new System.Drawing.Font("Comic Sans MS", 8F, System.Drawing.FontStyle.Bold);
+            this.btnAdd.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnAdd.Image = global::DrivingSchoolBookingSystem.Properties.Resources.dark_blue;
+            this.btnAdd.Location = new System.Drawing.Point(589, 624);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(93, 43);
+            this.btnAdd.TabIndex = 15;
+            this.btnAdd.Text = "ADD";
+            this.btnAdd.UseVisualStyleBackColor = true;
             // 
             // label8
             // 
@@ -304,14 +304,14 @@
             this.label8.TabIndex = 14;
             this.label8.Text = "Vehicle Status";
             // 
-            // comboBox2
+            // cmbVehicleStatus
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Comic Sans MS", 8F, System.Drawing.FontStyle.Bold);
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(337, 203);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 27);
-            this.comboBox2.TabIndex = 13;
+            this.cmbVehicleStatus.Font = new System.Drawing.Font("Comic Sans MS", 8F, System.Drawing.FontStyle.Bold);
+            this.cmbVehicleStatus.FormattingEnabled = true;
+            this.cmbVehicleStatus.Location = new System.Drawing.Point(337, 203);
+            this.cmbVehicleStatus.Name = "cmbVehicleStatus";
+            this.cmbVehicleStatus.Size = new System.Drawing.Size(121, 27);
+            this.cmbVehicleStatus.TabIndex = 13;
             // 
             // label7
             // 
@@ -324,14 +324,14 @@
             this.label7.TabIndex = 12;
             this.label7.Text = "Vehicle Type";
             // 
-            // comboBox1
+            // cmbVehicleType
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Comic Sans MS", 8F, System.Drawing.FontStyle.Bold);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(191, 203);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 27);
-            this.comboBox1.TabIndex = 11;
+            this.cmbVehicleType.Font = new System.Drawing.Font("Comic Sans MS", 8F, System.Drawing.FontStyle.Bold);
+            this.cmbVehicleType.FormattingEnabled = true;
+            this.cmbVehicleType.Location = new System.Drawing.Point(191, 203);
+            this.cmbVehicleType.Name = "cmbVehicleType";
+            this.cmbVehicleType.Size = new System.Drawing.Size(121, 27);
+            this.cmbVehicleType.TabIndex = 11;
             // 
             // label6
             // 
@@ -379,45 +379,45 @@
             this.label2.Text = "Vehicle Make";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // textBox5
+            // txtVIN
             // 
-            this.textBox5.Font = new System.Drawing.Font("Comic Sans MS", 8F, System.Drawing.FontStyle.Bold);
-            this.textBox5.Location = new System.Drawing.Point(29, 409);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 26);
-            this.textBox5.TabIndex = 4;
+            this.txtVIN.Font = new System.Drawing.Font("Comic Sans MS", 8F, System.Drawing.FontStyle.Bold);
+            this.txtVIN.Location = new System.Drawing.Point(29, 409);
+            this.txtVIN.Name = "txtVIN";
+            this.txtVIN.Size = new System.Drawing.Size(100, 26);
+            this.txtVIN.TabIndex = 4;
             // 
-            // textBox4
+            // txtVehicleReg
             // 
-            this.textBox4.Font = new System.Drawing.Font("Comic Sans MS", 8F, System.Drawing.FontStyle.Bold);
-            this.textBox4.Location = new System.Drawing.Point(30, 359);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 26);
-            this.textBox4.TabIndex = 3;
+            this.txtVehicleReg.Font = new System.Drawing.Font("Comic Sans MS", 8F, System.Drawing.FontStyle.Bold);
+            this.txtVehicleReg.Location = new System.Drawing.Point(30, 359);
+            this.txtVehicleReg.Name = "txtVehicleReg";
+            this.txtVehicleReg.Size = new System.Drawing.Size(100, 26);
+            this.txtVehicleReg.TabIndex = 3;
             // 
-            // textBox3
+            // txtVehicleYear
             // 
-            this.textBox3.Font = new System.Drawing.Font("Comic Sans MS", 8F, System.Drawing.FontStyle.Bold);
-            this.textBox3.Location = new System.Drawing.Point(29, 305);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 26);
-            this.textBox3.TabIndex = 2;
+            this.txtVehicleYear.Font = new System.Drawing.Font("Comic Sans MS", 8F, System.Drawing.FontStyle.Bold);
+            this.txtVehicleYear.Location = new System.Drawing.Point(29, 305);
+            this.txtVehicleYear.Name = "txtVehicleYear";
+            this.txtVehicleYear.Size = new System.Drawing.Size(100, 26);
+            this.txtVehicleYear.TabIndex = 2;
             // 
-            // textBox2
+            // txtVehicleModel
             // 
-            this.textBox2.Font = new System.Drawing.Font("Comic Sans MS", 8F, System.Drawing.FontStyle.Bold);
-            this.textBox2.Location = new System.Drawing.Point(29, 253);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 26);
-            this.textBox2.TabIndex = 1;
+            this.txtVehicleModel.Font = new System.Drawing.Font("Comic Sans MS", 8F, System.Drawing.FontStyle.Bold);
+            this.txtVehicleModel.Location = new System.Drawing.Point(29, 253);
+            this.txtVehicleModel.Name = "txtVehicleModel";
+            this.txtVehicleModel.Size = new System.Drawing.Size(100, 26);
+            this.txtVehicleModel.TabIndex = 1;
             // 
-            // textBox1
+            // txtVehicleMake
             // 
-            this.textBox1.Font = new System.Drawing.Font("Comic Sans MS", 8F, System.Drawing.FontStyle.Bold);
-            this.textBox1.Location = new System.Drawing.Point(29, 201);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 26);
-            this.textBox1.TabIndex = 0;
+            this.txtVehicleMake.Font = new System.Drawing.Font("Comic Sans MS", 8F, System.Drawing.FontStyle.Bold);
+            this.txtVehicleMake.Location = new System.Drawing.Point(29, 201);
+            this.txtVehicleMake.Name = "txtVehicleMake";
+            this.txtVehicleMake.Size = new System.Drawing.Size(100, 26);
+            this.txtVehicleMake.TabIndex = 0;
             // 
             // panel2
             // 
@@ -470,7 +470,6 @@
             this.label10.Size = new System.Drawing.Size(57, 25);
             this.label10.TabIndex = 12;
             this.label10.Text = "Home";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // pictureBox4
             // 
@@ -505,7 +504,6 @@
             this.pictureBox5.Size = new System.Drawing.Size(116, 85);
             this.pictureBox5.TabIndex = 11;
             this.pictureBox5.TabStop = false;
-            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // taVehicle
             // 
@@ -529,7 +527,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvVehicle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVehicles)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblVehicleBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wstGrp2DataSet)).EndInit();
             this.panel2.ResumeLayout(false);
@@ -545,25 +543,25 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtVIN;
+        private System.Windows.Forms.TextBox txtVehicleReg;
+        private System.Windows.Forms.TextBox txtVehicleYear;
+        private System.Windows.Forms.TextBox txtVehicleModel;
+        private System.Windows.Forms.TextBox txtVehicleMake;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbVehicleType;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cmbVehicleStatus;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.DataGridView dgvVehicle;
+        private System.Windows.Forms.DataGridView dgvVehicles;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label5;
@@ -592,3 +590,4 @@
         private DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters.tblVehicleTableAdapter taVehicle;
     }
 }
+
