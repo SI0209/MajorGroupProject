@@ -387,11 +387,19 @@ namespace DrivingSchoolBookingSystem
             this.Hide();
             LoginForm login = new LoginForm();
             login.Show();
+            
         }
 
         private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+           HomeForm home = new HomeForm(); 
+            home.Show();                             
+            this.Hide();
         }
     }
 }

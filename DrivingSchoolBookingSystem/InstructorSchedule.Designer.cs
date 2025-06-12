@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label4 = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -123,9 +123,9 @@
             // bookingDateDataGridViewTextBoxColumn
             // 
             this.bookingDateDataGridViewTextBoxColumn.DataPropertyName = "Booking_Date";
-            dataGridViewCellStyle16.Format = "D";
-            dataGridViewCellStyle16.NullValue = null;
-            this.bookingDateDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle1.Format = "D";
+            dataGridViewCellStyle1.NullValue = null;
+            this.bookingDateDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
             this.bookingDateDataGridViewTextBoxColumn.HeaderText = "Booking_Date";
             this.bookingDateDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.bookingDateDataGridViewTextBoxColumn.Name = "bookingDateDataGridViewTextBoxColumn";
@@ -295,6 +295,7 @@
             this.pictureBox2.Size = new System.Drawing.Size(116, 71);
             this.pictureBox2.TabIndex = 18;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // label18
             // 

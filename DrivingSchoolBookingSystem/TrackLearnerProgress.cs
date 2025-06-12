@@ -309,5 +309,12 @@ namespace DrivingSchoolBookingSystem
             trackLearnerTableAdapter.FillBy(this.wstGrp2DS2.TrackLearner);
             textBox8.Text = "";
         }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            HomeForm home = new HomeForm();
+            home.Show();
+            this.Hide();
+        }
     }
 }

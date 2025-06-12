@@ -1,4 +1,4 @@
-﻿namespace DrivingSchoolBookingSystem
+namespace DrivingSchoolBookingSystem
 {
     partial class ManageVehiclesForm
     {
@@ -590,3 +590,4 @@
         private DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters.tblVehicleTableAdapter taVehicle;
     }
 }
+
