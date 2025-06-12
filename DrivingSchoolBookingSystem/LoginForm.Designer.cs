@@ -74,6 +74,7 @@
             // 
             // FgtPassbtn
             // 
+            this.FgtPassbtn.Font = new System.Drawing.Font("Comic Sans MS", 8F);
             this.FgtPassbtn.Location = new System.Drawing.Point(204, 353);
             this.FgtPassbtn.Name = "FgtPassbtn";
             this.FgtPassbtn.Size = new System.Drawing.Size(133, 37);
@@ -83,6 +84,7 @@
             // 
             // button1
             // 
+            this.button1.Font = new System.Drawing.Font("Comic Sans MS", 8F);
             this.button1.Location = new System.Drawing.Point(123, 353);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 37);
