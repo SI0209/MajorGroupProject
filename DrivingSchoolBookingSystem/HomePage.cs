@@ -12,6 +12,7 @@ namespace DrivingSchoolBookingSystem
 {
     public partial class HomeForm : Form
     {
+        LoginForm login;
         public HomeForm()
         {
             InitializeComponent();
@@ -44,7 +45,56 @@ namespace DrivingSchoolBookingSystem
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            InstructorSchedule instructorschedule = new InstructorSchedule(login);
+            instructorschedule.ShowDialog();
+        }
 
+        private void pictureBox16_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ManageLearners learnerform = new ManageLearners();
+            learnerform.ShowDialog();
+        }
+
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ManageVehiclesForm vehicles = new ManageVehiclesForm();
+            vehicles.ShowDialog();
+        }
+
+        private void pictureBox12_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LearnerProgressForm LearnerProgress = new LearnerProgressForm();
+            LearnerProgress.ShowDialog();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AnalyticsForm analytics = new AnalyticsForm();
+            analytics.ShowDialog();
+        }
+
+        private void pictureBox14_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ManageInstruc instuctor = new ManageInstruc();
+            instuctor.ShowDialog();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            UnavailableTimeSlots unavailableTimeSlots = new UnavailableTimeSlots();
+            unavailableTimeSlots.ShowDialog();
         }
     }
 }
