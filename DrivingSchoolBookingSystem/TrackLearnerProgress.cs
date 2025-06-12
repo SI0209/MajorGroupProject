@@ -31,7 +31,7 @@ namespace DrivingSchoolBookingSystem
         private void Form7_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'wstGrp2DS2.TrackLearner' table. You can move, or remove it, as needed.
-            this.trackLearnerTableAdapter.Fill(this.wstGrp2DS2.TrackLearner);
+            this.trackLearnerTableAdapter.FillBy(this.wstGrp2DS2.TrackLearner);
             // TODO: This line of code loads data into the 'wstGrp2DataSet.tblLearner' table. You can move, or remove it, as needed.
             this.tblLearnerTableAdapter.Fill(this.wstGrp2DataSet.tblLearner);
             // TODO: This line of code loads data into the 'wstGrp2DS2.tblNewLearner' table. You can move, or remove it, as needed.
@@ -39,7 +39,7 @@ namespace DrivingSchoolBookingSystem
             // TODO: This line of code loads data into the 'wstGrp2DS2.LearnerProgress' table. You can move, or remove it, as needed.
             this.learnerProgressTableAdapter.Fill(this.wstGrp2DS2.LearnerProgress);
             // TODO: This line of code loads data into the 'wstGrp2DS21.LearnerProgress' table. You can move, or remove it, as needed.
-            this.trackLearnerTableAdapter.Fill(this.wstGrp2DS2.TrackLearner);
+            this.trackLearnerTableAdapter.FillBy(this.wstGrp2DS2.TrackLearner);
             // TODO: This line of code loads data into the 'wstGrp2DS2.LearnerProgress' table. You can move, or remove it, as needed.
             //zthis.learnerProgressTableAdapter.Fill(this.wstGrp2DS2.LearnerProgress);
             // TODO: This line of code loads data into the 'bookingSystemDataSet.tblLearners' table. You can move, or remove it, as needed.
@@ -79,6 +79,8 @@ namespace DrivingSchoolBookingSystem
             textBox1.Enabled = false;
             textBox2.Enabled = false;
             textBox3.Enabled = false;
+            textBox4.Visible = false;
+            label6.Visible = false;
 
             dateTimePicker1.Value = DateTime.Now;
             comboBox1.SelectedIndex = -1;
@@ -117,12 +119,13 @@ namespace DrivingSchoolBookingSystem
             textBox2.Text = "";
             textBox3.Text = "";
             dateTimePicker1.Value = DateTime.Now; //default value
-            comboBox1.Text = "";
-            comboBox2.Text = "";
-            comboBox3.Text = "";
+            comboBox1.SelectedIndex = -1; // Clear selection
+          comboBox2.SelectedIndex = -1; // Clear selection
+            comboBox3.SelectedIndex = -1; // Clear selection
+         comboBox4.SelectedIndex = -1; // Clear selection
             textBox5.Text = "";
             textBox6.Text = "";
-            comboBox4.Text = "";
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -138,7 +141,7 @@ namespace DrivingSchoolBookingSystem
                 trackLearnerTableAdapter.InsertQuery(Convert.ToInt32(textBox1.Text), textBox2.Text, textBox3.Text, dateTimePicker1.Value.ToString("yyyy-MM-dd"),
                     comboBox1.Text, comboBox2.Text, comboBox3.Text, textBox5.Text, textBox6.Text, comboBox4.Text);
 
-                trackLearnerTableAdapter.Fill(this.wstGrp2DS2.TrackLearner);
+                trackLearnerTableAdapter.FillBy(this.wstGrp2DS2.TrackLearner);
                 tblNewLearnerTableAdapter.Fill(this.wstGrp2DS2.tblNewLearner);
                 MessageBox.Show("New learner progress has been added successfully.");
                 return;
@@ -198,7 +201,7 @@ namespace DrivingSchoolBookingSystem
                         {
                             command.ExecuteNonQuery();
                             MessageBox.Show("Learner has been updated successfully.");
-                            trackLearnerTableAdapter.Fill(wstGrp2DS2.TrackLearner);
+                            trackLearnerTableAdapter.FillBy(wstGrp2DS2.TrackLearner);
 
                             textBox1.Text = "";
                             textBox2.Text = "";
@@ -256,6 +259,55 @@ namespace DrivingSchoolBookingSystem
             this.Hide();
             LoginForm login = new LoginForm();
             login.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            tblNewLearnerTableAdapter.FillByNewLearner(this.wstGrp2DS2.tblNewLearner);
+            textBox7.Text = "";
+        }
+
+        private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox7_TextChanged(object sender, EventArgs e)
+        {
+            string input = textBox7.Text.Trim();
+            if (input.All(char.IsLetter))
+            {
+                tblNewLearnerTableAdapter.FillByLearnerName(this.wstGrp2DS2.tblNewLearner, input);
+
+            }
+            else{
+                MessageBox.Show("Please enter a valid name.");
+            }
+        }
+
+        private void textBox8_TextChanged(object sender, EventArgs e)
+        {
+            string input = textBox8.Text.Trim();
+            if (input.All(char.IsLetter))
+            {
+                trackLearnerTableAdapter.FillByLearnerName(this.wstGrp2DS2.TrackLearner, input);
+
+            }
+            else
+            {
+                MessageBox.Show("Please enter a valid name.");
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            trackLearnerTableAdapter.FillBy(this.wstGrp2DS2.TrackLearner);
+            textBox8.Text = "";
         }
     }
 }

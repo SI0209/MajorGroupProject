@@ -103,8 +103,8 @@ namespace DrivingSchoolBookingSystem
                         textBox5.Text,
                         textBox6.Text,
                         comboBox3.Text.ToString(),
-                        dateTimePicker1.Value.ToString("yyyy-MM-dd"),
-                        dateTimePicker2.Value.ToString("yyyy-MM-dd"),
+                        IssuedateTimePicker1.Value.ToString("yyyy-MM-dd"),
+                        ExpdateTimePicker2.Value.ToString("yyyy-MM-dd"),
                         Convert.ToInt16(comboBox4.Text)
                     );
 
@@ -156,11 +156,22 @@ namespace DrivingSchoolBookingSystem
         private void button4_Click(object sender, EventArgs e)
         {
             tblLearnerTableAdapter.Fill(this.wstGrp2DataSet1.tblLearner);
+            textBox7.Clear();   
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
+            // Set expiry date constraints based on issue date
+            DateTime issueDate = IssuedateTimePicker1.Value;
 
+            ExpdateTimePicker2.MinDate = issueDate;
+            ExpdateTimePicker2.MaxDate = issueDate.AddYears(2);
+
+            // Optional: Auto-correct expiry date if it's out of range
+            if (ExpdateTimePicker2.Value < ExpdateTimePicker2.MinDate || ExpdateTimePicker2.Value > ExpdateTimePicker2.MaxDate)
+            {
+                ExpdateTimePicker2.Value = ExpdateTimePicker2.MinDate;
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -190,8 +201,8 @@ namespace DrivingSchoolBookingSystem
             textBox5.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
             textBox6.Text = dataGridView1.CurrentRow.Cells[8].Value.ToString();
             comboBox3.Text = dataGridView1.CurrentRow.Cells[9].Value.ToString();
-            dateTimePicker1.Value = Convert.ToDateTime(dataGridView1.CurrentRow.Cells[10].Value);
-            dateTimePicker2.Value = Convert.ToDateTime(dataGridView1.CurrentRow.Cells[11].Value);
+            IssuedateTimePicker1.Value = Convert.ToDateTime(dataGridView1.CurrentRow.Cells[10].Value);
+            ExpdateTimePicker2.Value = Convert.ToDateTime(dataGridView1.CurrentRow.Cells[11].Value);
             comboBox4.Text = dataGridView1.CurrentRow.Cells[12].Value.ToString();
             label15.Visible = true;
             textBox8.Visible = true;
@@ -298,7 +309,7 @@ namespace DrivingSchoolBookingSystem
            if(string.IsNullOrWhiteSpace(textBox1.Text) || string.IsNullOrWhiteSpace(textBox2.Text) || string.IsNullOrWhiteSpace(textBox3.Text) 
                 || string.IsNullOrWhiteSpace(textBox4.Text) || string.IsNullOrWhiteSpace(comboBox1.Text) || string.IsNullOrWhiteSpace(comboBox2.Text)
                 || string.IsNullOrWhiteSpace(textBox5.Text) || string.IsNullOrWhiteSpace(textBox6.Text) || string.IsNullOrWhiteSpace(comboBox3.Text)
-                || dateTimePicker1.Value == dateTimePicker1.MinDate || dateTimePicker2.Value == dateTimePicker2.MinDate || string.IsNullOrWhiteSpace(comboBox4.Text)
+                || IssuedateTimePicker1.Value == IssuedateTimePicker1.MinDate || ExpdateTimePicker2.Value == ExpdateTimePicker2.MinDate || string.IsNullOrWhiteSpace(comboBox4.Text)
                 || string.IsNullOrWhiteSpace(textBox8.Text))
             {
                 MessageBox.Show("Please fill in all required fields");
@@ -338,8 +349,8 @@ namespace DrivingSchoolBookingSystem
                         command.Parameters.AddWithValue("@learner_CellNumber", textBox5.Text);
                         command.Parameters.AddWithValue("@learner_StreetAddress", textBox6.Text);
                         command.Parameters.AddWithValue("@learner_Suburb", comboBox3.Text);
-                        command.Parameters.AddWithValue("@learner_LearnersIssueDate", dateTimePicker1.Value);
-                        command.Parameters.AddWithValue("@learner_LearnersExpiryDate", dateTimePicker2.Value);
+                        command.Parameters.AddWithValue("@learner_LearnersIssueDate", IssuedateTimePicker1.Value);
+                        command.Parameters.AddWithValue("@learner_LearnersExpiryDate", ExpdateTimePicker2.Value);
                         command.Parameters.AddWithValue("@code_Type", Convert.ToInt32(comboBox4.Text));
 
                         DialogResult dialogResult = MessageBox.Show("Are you sure you want to UPDATE learner  " + textBox8.Text.ToString() + " details ?", "Confirmation", MessageBoxButtons.YesNo);
@@ -376,6 +387,11 @@ namespace DrivingSchoolBookingSystem
             this.Hide();
             LoginForm login = new LoginForm();
             login.Show();
+        }
+
+        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

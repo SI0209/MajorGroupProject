@@ -66,8 +66,8 @@
             this.tblLearnerBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.IssuedateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.ExpdateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
@@ -89,12 +89,12 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label18 = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label17 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblLearnerBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wstGrp2DataSet1BindingSource)).BeginInit();
@@ -105,10 +105,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -276,7 +276,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(635, 72);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(284, 48);
+            this.label1.Size = new System.Drawing.Size(273, 45);
             this.label1.TabIndex = 1;
             this.label1.Text = "Manage Learner";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -472,20 +472,21 @@
             this.comboBox3.Size = new System.Drawing.Size(167, 24);
             this.comboBox3.TabIndex = 20;
             // 
-            // dateTimePicker1
+            // IssuedateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(474, 628);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(167, 22);
-            this.dateTimePicker1.TabIndex = 21;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            this.IssuedateTimePicker1.Location = new System.Drawing.Point(474, 628);
+            this.IssuedateTimePicker1.Name = "IssuedateTimePicker1";
+            this.IssuedateTimePicker1.Size = new System.Drawing.Size(167, 22);
+            this.IssuedateTimePicker1.TabIndex = 21;
+            this.IssuedateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
-            // dateTimePicker2
+            // ExpdateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(474, 676);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(167, 22);
-            this.dateTimePicker2.TabIndex = 22;
+            this.ExpdateTimePicker2.Location = new System.Drawing.Point(474, 676);
+            this.ExpdateTimePicker2.Name = "ExpdateTimePicker2";
+            this.ExpdateTimePicker2.Size = new System.Drawing.Size(167, 22);
+            this.ExpdateTimePicker2.TabIndex = 22;
+            this.ExpdateTimePicker2.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
             // 
             // comboBox4
             // 
@@ -569,11 +570,11 @@
             // 
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.White;
             this.label14.Location = new System.Drawing.Point(800, 190);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(195, 20);
+            this.label14.Size = new System.Drawing.Size(201, 25);
             this.label14.TabIndex = 31;
             this.label14.Text = "Search by Learner ID:";
             this.label14.Click += new System.EventHandler(this.label14_Click);
@@ -638,7 +639,7 @@
             this.fillBy2ToolStripButton});
             this.fillBy2ToolStrip.Location = new System.Drawing.Point(0, 0);
             this.fillBy2ToolStrip.Name = "fillBy2ToolStrip";
-            this.fillBy2ToolStrip.Size = new System.Drawing.Size(1432, 27);
+            this.fillBy2ToolStrip.Size = new System.Drawing.Size(1432, 31);
             this.fillBy2ToolStrip.TabIndex = 39;
             this.fillBy2ToolStrip.Text = "fillBy2ToolStrip";
             // 
@@ -705,6 +706,30 @@
             this.panel1.Size = new System.Drawing.Size(186, 811);
             this.panel1.TabIndex = 43;
             // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.Transparent;
+            this.label18.Font = new System.Drawing.Font("Comic Sans MS", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.White;
+            this.label18.Location = new System.Drawing.Point(54, 760);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(75, 25);
+            this.label18.TabIndex = 17;
+            this.label18.Text = "Log out";
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox5.BackgroundImage = global::DrivingSchoolBookingSystem.Properties.Resources.log_out;
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox5.Location = new System.Drawing.Point(53, 678);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(76, 79);
+            this.pictureBox5.TabIndex = 16;
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
@@ -752,30 +777,6 @@
             this.pictureBox2.TabIndex = 11;
             this.pictureBox2.TabStop = false;
             // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.BackColor = System.Drawing.Color.Transparent;
-            this.label18.Font = new System.Drawing.Font("Comic Sans MS", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(54, 760);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(75, 25);
-            this.label18.TabIndex = 17;
-            this.label18.Text = "Log out";
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.BackgroundImage = global::DrivingSchoolBookingSystem.Properties.Resources.log_out;
-            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox5.Location = new System.Drawing.Point(53, 678);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(76, 79);
-            this.pictureBox5.TabIndex = 16;
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
-            // 
             // ManageLearners
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -801,8 +802,8 @@
             this.Controls.Add(this.label13);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.comboBox4);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.ExpdateTimePicker2);
+            this.Controls.Add(this.IssuedateTimePicker1);
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
@@ -835,10 +836,10 @@
             this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -879,8 +880,8 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker IssuedateTimePicker1;
+        private System.Windows.Forms.DateTimePicker ExpdateTimePicker2;
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label13;
