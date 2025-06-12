@@ -49,18 +49,24 @@ namespace DrivingSchoolBookingSystem
 
         }
 
-        private void pbBack_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            LoginForm login = new LoginForm();
-            login.Show();
-
-        }
+        
 
         private void dtpDate_ValueChanged(object sender, EventArgs e)
         {
             string searchDate = dtpDate.Value.Date.ToShortDateString();
             taInstructorSchedule.SearchByDate(dsBookingSystem.tblInstuctorSchedule, EmployeeID, searchDate);
+        }
+
+        private void pbBack_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LoginForm login = new LoginForm();
+            login.Show();
         }
     }
 }
