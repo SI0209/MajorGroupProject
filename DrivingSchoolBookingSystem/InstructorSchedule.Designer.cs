@@ -54,12 +54,10 @@
             this.taVehicle = new DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters.tblVehicleTableAdapter();
             this.taEmployee = new DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters.tblEmployeeTableAdapter();
             this.taInstructorSchedule = new DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters.tblInstuctorScheduleTableAdapter();
-            this.PictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblInstuctorScheduleBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsBookingSystem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBack)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // label4
@@ -68,7 +66,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Ebrima", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.label4.Location = new System.Drawing.Point(696, 203);
+            this.label4.Location = new System.Drawing.Point(715, 57);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(272, 38);
@@ -105,12 +103,12 @@
             this.vehicleMakeDataGridViewTextBoxColumn,
             this.vehicleModelDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.tblInstuctorScheduleBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(20, 260);
+            this.dataGridView1.Location = new System.Drawing.Point(390, 287);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1511, 437);
+            this.dataGridView1.Size = new System.Drawing.Size(1125, 408);
             this.dataGridView1.TabIndex = 0;
             // 
             // bookingDateDataGridViewTextBoxColumn
@@ -267,31 +265,17 @@
             // 
             this.taInstructorSchedule.ClearBeforeFill = true;
             // 
-            // PictureBox3
-            // 
-            this.PictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.PictureBox3.BackgroundImage = global::DrivingSchoolBookingSystem.Properties.Resources.logo_transparent;
-            this.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.PictureBox3.Location = new System.Drawing.Point(715, 18);
-            this.PictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.PictureBox3.Name = "PictureBox3";
-            this.PictureBox3.Size = new System.Drawing.Size(234, 183);
-            this.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PictureBox3.TabIndex = 55;
-            this.PictureBox3.TabStop = false;
-            // 
             // InstructorSchedule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::DrivingSchoolBookingSystem.Properties.Resources.Background_final;
+            this.BackgroundImage = global::DrivingSchoolBookingSystem.Properties.Resources.final_project_bg;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1592, 863);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.dtpDate);
             this.Controls.Add(this.pbBack);
             this.Controls.Add(this.lblName);
-            this.Controls.Add(this.PictureBox3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dataGridView1);
             this.DoubleBuffered = true;
@@ -302,7 +286,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.tblInstuctorScheduleBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsBookingSystem)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBack)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -334,6 +317,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn learnerSurnameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn vehicleMakeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn vehicleModelDataGridViewTextBoxColumn;
-        internal System.Windows.Forms.PictureBox PictureBox3;
     }
 }
