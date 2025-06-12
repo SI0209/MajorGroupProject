@@ -141,9 +141,9 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = global::DrivingSchoolBookingSystem.Properties.Resources.image_removebg_preview__9_;
-            this.pictureBox3.Location = new System.Drawing.Point(558, 520);
+            this.pictureBox3.Location = new System.Drawing.Point(557, 510);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(240, 110);
+            this.pictureBox3.Size = new System.Drawing.Size(240, 99);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 49;
             this.pictureBox3.TabStop = false;
@@ -154,7 +154,7 @@
             this.pictureBox4.Image = global::DrivingSchoolBookingSystem.Properties.Resources.image_removebg_preview__11_;
             this.pictureBox4.Location = new System.Drawing.Point(234, 496);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(240, 146);
+            this.pictureBox4.Size = new System.Drawing.Size(240, 123);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 50;
             this.pictureBox4.TabStop = false;
