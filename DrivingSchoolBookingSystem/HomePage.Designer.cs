@@ -132,7 +132,7 @@
             this.pictureBox2.Image = global::DrivingSchoolBookingSystem.Properties.Resources.image_removebg_preview__8_;
             this.pictureBox2.Location = new System.Drawing.Point(396, 315);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(249, 145);
+            this.pictureBox2.Size = new System.Drawing.Size(249, 137);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 48;
             this.pictureBox2.TabStop = false;
@@ -141,7 +141,7 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = global::DrivingSchoolBookingSystem.Properties.Resources.image_removebg_preview__9_;
-            this.pictureBox3.Location = new System.Drawing.Point(689, 493);
+            this.pictureBox3.Location = new System.Drawing.Point(558, 520);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(240, 110);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -152,18 +152,19 @@
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.Image = global::DrivingSchoolBookingSystem.Properties.Resources.image_removebg_preview__11_;
-            this.pictureBox4.Location = new System.Drawing.Point(396, 482);
+            this.pictureBox4.Location = new System.Drawing.Point(234, 496);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(240, 146);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 50;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // HomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::DrivingSchoolBookingSystem.Properties.Resources.final_project_bg;
+            this.BackgroundImage = global::DrivingSchoolBookingSystem.Properties.Resources.Background_final;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1117, 737);
             this.Controls.Add(this.pictureBox4);
