@@ -38,42 +38,48 @@
             this.backbtnpasswordform = new System.Windows.Forms.Button();
             this.taEmployee = new DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters.tblEmployeeTableAdapter();
             this.dsBookingSystem = new DrivingSchoolBookingSystem.WstGrp2DataSet();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dsBookingSystem)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // passwordUpdatetxtbox
             // 
-            this.passwordUpdatetxtbox.Location = new System.Drawing.Point(39, 161);
+            this.passwordUpdatetxtbox.Font = new System.Drawing.Font("Comic Sans MS", 8F);
+            this.passwordUpdatetxtbox.Location = new System.Drawing.Point(226, 223);
             this.passwordUpdatetxtbox.Name = "passwordUpdatetxtbox";
-            this.passwordUpdatetxtbox.Size = new System.Drawing.Size(294, 22);
+            this.passwordUpdatetxtbox.Size = new System.Drawing.Size(294, 26);
             this.passwordUpdatetxtbox.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.SteelBlue;
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 8F);
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(40, 142);
+            this.label1.Location = new System.Drawing.Point(227, 204);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 16);
+            this.label1.Size = new System.Drawing.Size(118, 19);
             this.label1.TabIndex = 1;
             this.label1.Text = "Create Password";
             // 
             // confirmpasswordtxtbox
             // 
-            this.confirmpasswordtxtbox.Location = new System.Drawing.Point(39, 239);
+            this.confirmpasswordtxtbox.Font = new System.Drawing.Font("Comic Sans MS", 8F);
+            this.confirmpasswordtxtbox.Location = new System.Drawing.Point(226, 301);
             this.confirmpasswordtxtbox.Name = "confirmpasswordtxtbox";
-            this.confirmpasswordtxtbox.Size = new System.Drawing.Size(294, 22);
+            this.confirmpasswordtxtbox.Size = new System.Drawing.Size(294, 26);
             this.confirmpasswordtxtbox.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.SteelBlue;
+            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 8F);
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(40, 220);
+            this.label2.Location = new System.Drawing.Point(227, 282);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(115, 16);
+            this.label2.Size = new System.Drawing.Size(124, 19);
             this.label2.TabIndex = 3;
             this.label2.Text = "Confirm Password";
             // 
@@ -81,8 +87,9 @@
             // 
             this.updatePasswordbtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.updatePasswordbtn.BackgroundImage = global::DrivingSchoolBookingSystem.Properties.Resources.Background_final;
+            this.updatePasswordbtn.Font = new System.Drawing.Font("Comic Sans MS", 8F);
             this.updatePasswordbtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.updatePasswordbtn.Location = new System.Drawing.Point(300, 359);
+            this.updatePasswordbtn.Location = new System.Drawing.Point(298, 405);
             this.updatePasswordbtn.Name = "updatePasswordbtn";
             this.updatePasswordbtn.Size = new System.Drawing.Size(175, 46);
             this.updatePasswordbtn.TabIndex = 4;
@@ -94,9 +101,10 @@
             // 
             this.passwordformcheckboc.AutoSize = true;
             this.passwordformcheckboc.BackColor = System.Drawing.Color.Transparent;
-            this.passwordformcheckboc.Location = new System.Drawing.Point(396, 241);
+            this.passwordformcheckboc.Font = new System.Drawing.Font("Comic Sans MS", 8F);
+            this.passwordformcheckboc.Location = new System.Drawing.Point(583, 303);
             this.passwordformcheckboc.Name = "passwordformcheckboc";
-            this.passwordformcheckboc.Size = new System.Drawing.Size(125, 20);
+            this.passwordformcheckboc.Size = new System.Drawing.Size(129, 23);
             this.passwordformcheckboc.TabIndex = 5;
             this.passwordformcheckboc.Text = "Show Password";
             this.passwordformcheckboc.UseVisualStyleBackColor = false;
@@ -106,8 +114,9 @@
             // 
             this.clearbuttonpasswordform.BackColor = System.Drawing.Color.Transparent;
             this.clearbuttonpasswordform.BackgroundImage = global::DrivingSchoolBookingSystem.Properties.Resources.Background_final;
+            this.clearbuttonpasswordform.Font = new System.Drawing.Font("Comic Sans MS", 8F);
             this.clearbuttonpasswordform.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.clearbuttonpasswordform.Location = new System.Drawing.Point(642, 376);
+            this.clearbuttonpasswordform.Location = new System.Drawing.Point(640, 405);
             this.clearbuttonpasswordform.Name = "clearbuttonpasswordform";
             this.clearbuttonpasswordform.Size = new System.Drawing.Size(131, 48);
             this.clearbuttonpasswordform.TabIndex = 6;
@@ -118,8 +127,9 @@
             // backbtnpasswordform
             // 
             this.backbtnpasswordform.BackgroundImage = global::DrivingSchoolBookingSystem.Properties.Resources.Background_final;
+            this.backbtnpasswordform.Font = new System.Drawing.Font("Comic Sans MS", 8F);
             this.backbtnpasswordform.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.backbtnpasswordform.Location = new System.Drawing.Point(12, 376);
+            this.backbtnpasswordform.Location = new System.Drawing.Point(10, 405);
             this.backbtnpasswordform.Name = "backbtnpasswordform";
             this.backbtnpasswordform.Size = new System.Drawing.Size(126, 48);
             this.backbtnpasswordform.TabIndex = 7;
@@ -136,12 +146,26 @@
             this.dsBookingSystem.DataSetName = "WstGrp2DataSet";
             this.dsBookingSystem.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox1.Image = global::DrivingSchoolBookingSystem.Properties.Resources.logo_transparent;
+            this.pictureBox1.Location = new System.Drawing.Point(298, 30);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(175, 150);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
+            // 
             // Password
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::DrivingSchoolBookingSystem.Properties.Resources.Background_final;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 510);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.backbtnpasswordform);
             this.Controls.Add(this.clearbuttonpasswordform);
             this.Controls.Add(this.passwordformcheckboc);
@@ -150,10 +174,12 @@
             this.Controls.Add(this.confirmpasswordtxtbox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.passwordUpdatetxtbox);
+            this.DoubleBuffered = true;
             this.Name = "Password";
-            this.Text = "Form10";
+            this.Text = "Forgot Password";
             this.Load += new System.EventHandler(this.Password_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dsBookingSystem)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -171,5 +197,6 @@
         private System.Windows.Forms.Button backbtnpasswordform;
         private DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters.tblEmployeeTableAdapter taEmployee;
         private DrivingSchoolBookingSystem.WstGrp2DataSet dsBookingSystem;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
