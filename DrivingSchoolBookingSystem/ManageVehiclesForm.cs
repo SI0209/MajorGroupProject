@@ -77,7 +77,7 @@ namespace DrivingSchoolBookingSystem
             txtVehicleMake.Focus();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnAdd_Click(object sender, EventArgs e)
         {
             string message = null;
             if (!AllDataEntered())
@@ -267,11 +267,6 @@ namespace DrivingSchoolBookingSystem
                 MessageBox.Show("Vehicle details remain unchanged!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ClearForm();
             }
-        }
-    }
-}
-        {
-
         }
     }
 }
