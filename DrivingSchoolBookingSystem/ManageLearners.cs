@@ -171,6 +171,11 @@ namespace DrivingSchoolBookingSystem
             textBox4.Clear();
             textBox5.Clear();
             textBox6.Clear();
+            textBox8.Clear();
+            comboBox1.SelectedIndex = -1; // Reset to no selection
+            comboBox2.SelectedIndex = -1; // Reset to no selection
+            comboBox3.SelectedIndex = -1; // Reset to no selection
+            comboBox4.SelectedIndex = -1; // Reset to no selection
         }
 
         private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -364,6 +369,13 @@ namespace DrivingSchoolBookingSystem
         private void label14_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LoginForm login = new LoginForm();
+            login.Show();
         }
     }
 }

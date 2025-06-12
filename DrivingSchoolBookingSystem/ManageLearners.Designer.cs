@@ -130,7 +130,7 @@
             this.learnerLearnersExpiryDateDataGridViewTextBoxColumn,
             this.codeTypeDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.tblLearnerBindingSource1;
-            this.dataGridView1.Location = new System.Drawing.Point(734, 236);
+            this.dataGridView1.Location = new System.Drawing.Point(747, 236);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -272,11 +272,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(635, 72);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(272, 47);
+            this.label1.Size = new System.Drawing.Size(284, 48);
             this.label1.TabIndex = 1;
             this.label1.Text = "Manage Learner";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -409,7 +409,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label8.Location = new System.Drawing.Point(30, 483);
+            this.label8.Location = new System.Drawing.Point(30, 481);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(103, 21);
             this.label8.TabIndex = 10;
@@ -453,7 +453,8 @@
             "White",
             "Black",
             "Indian",
-            "Colored"});
+            "Colored",
+            "Asian"});
             this.comboBox2.Location = new System.Drawing.Point(474, 464);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(167, 24);
@@ -562,11 +563,11 @@
             // 
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.White;
             this.label14.Location = new System.Drawing.Point(733, 190);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(174, 20);
+            this.label14.Size = new System.Drawing.Size(195, 20);
             this.label14.TabIndex = 31;
             this.label14.Text = "Search by Learner ID:";
             this.label14.Click += new System.EventHandler(this.label14_Click);
@@ -667,7 +668,7 @@
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Font = new System.Drawing.Font("Comic Sans MS", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox1.Location = new System.Drawing.Point(305, 195);
             this.groupBox1.Name = "groupBox1";
@@ -760,6 +761,7 @@
             this.pictureBox5.Size = new System.Drawing.Size(76, 79);
             this.pictureBox5.TabIndex = 16;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // ManageLearners
             // 
