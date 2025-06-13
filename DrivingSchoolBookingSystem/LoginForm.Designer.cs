@@ -81,6 +81,7 @@
             this.FgtPassbtn.TabIndex = 13;
             this.FgtPassbtn.Text = "Forgot Password?";
             this.FgtPassbtn.UseVisualStyleBackColor = true;
+            this.FgtPassbtn.Click += new System.EventHandler(this.btnForgetPas_Click);
             // 
             // button1
             // 
@@ -91,6 +92,7 @@
             this.button1.TabIndex = 12;
             this.button1.Text = "Clear";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // LoginButton
             // 

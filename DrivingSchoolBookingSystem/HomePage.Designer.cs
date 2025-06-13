@@ -38,6 +38,8 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.lblUsernameInfo = new System.Windows.Forms.Label();
+            this.lblUserType = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
@@ -167,6 +169,32 @@
             this.pictureBox4.TabStop = false;
             this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
+            // lblUsernameInfo
+            // 
+            this.lblUsernameInfo.AutoSize = true;
+            this.lblUsernameInfo.BackColor = System.Drawing.Color.Transparent;
+            this.lblUsernameInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblUsernameInfo.Font = new System.Drawing.Font("Comic Sans MS", 15F, System.Drawing.FontStyle.Bold);
+            this.lblUsernameInfo.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.lblUsernameInfo.Location = new System.Drawing.Point(848, 51);
+            this.lblUsernameInfo.Name = "lblUsernameInfo";
+            this.lblUsernameInfo.Size = new System.Drawing.Size(248, 35);
+            this.lblUsernameInfo.TabIndex = 9;
+            this.lblUsernameInfo.Text = "Welcome Username";
+            // 
+            // lblUserType
+            // 
+            this.lblUserType.AutoSize = true;
+            this.lblUserType.BackColor = System.Drawing.Color.Transparent;
+            this.lblUserType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblUserType.Font = new System.Drawing.Font("Comic Sans MS", 15F, System.Drawing.FontStyle.Bold);
+            this.lblUserType.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.lblUserType.Location = new System.Drawing.Point(40, 53);
+            this.lblUserType.Name = "lblUserType";
+            this.lblUserType.Size = new System.Drawing.Size(117, 35);
+            this.lblUserType.TabIndex = 9;
+            this.lblUserType.Text = "Manager";
+            // 
             // HomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -179,6 +207,8 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox16);
             this.Controls.Add(this.pictureBox14);
+            this.Controls.Add(this.lblUserType);
+            this.Controls.Add(this.lblUsernameInfo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox10);
@@ -215,5 +245,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
+        public System.Windows.Forms.Label lblUsernameInfo;
+        public System.Windows.Forms.Label lblUserType;
     }
 }
