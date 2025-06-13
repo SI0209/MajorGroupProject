@@ -64,19 +64,26 @@ namespace DrivingSchoolBookingSystem
                         MessageBox.Show("Welcome to Araf's Driving School! ", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Hide();
                         HomeForm homepage = new HomeForm();
-                        homepage.Show();
                         homepage.Employee_Name = Employee_Name;
                         homepage.Employee_Surname = Employee_Surname;
                         homepage.Employee_Type = "Manager";
+<<<<<<< HEAD
+=======
+                        homepage.Show();
+                        
+>>>>>>> 9ad9e91 (LoginForm and HomePage)
                     }
                     else
                     {
                         this.Hide();
                         HomeForm homepage = new HomeForm();
-                        homepage.Show();
                         homepage.Employee_Name = Employee_Name;
                         homepage.Employee_Surname = Employee_Surname;
                         homepage.Employee_Type = "Instructor";
+<<<<<<< HEAD
+=======
+                        homepage.Show();
+>>>>>>> 9ad9e91 (LoginForm and HomePage)
                         //MessageBox.Show("Instructor Access Denied", "Security", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
 
