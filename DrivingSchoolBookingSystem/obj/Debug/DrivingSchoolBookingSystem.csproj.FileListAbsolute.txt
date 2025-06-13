@@ -285,6 +285,7 @@ C:\Users\Strini\Source\Repos\MajorGroupProject45\DrivingSchoolBookingSystem\obj\
 C:\Users\Strini\Source\Repos\MajorGroupProject45\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.pdb
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.LessonCodeForm.resources
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.ManageBooking.resources
+<<<<<<< HEAD
 C:\Users\Strini\Source\Repos\MajorGroupProjecto\DrivingSchoolBookingSystem\bin\Debug\DrivingSchoolBookingSystem.exe.config
 C:\Users\Strini\Source\Repos\MajorGroupProjecto\DrivingSchoolBookingSystem\bin\Debug\DrivingSchoolBookingSystem.exe
 C:\Users\Strini\Source\Repos\MajorGroupProjecto\DrivingSchoolBookingSystem\bin\Debug\DrivingSchoolBookingSystem.pdb
@@ -307,3 +308,6 @@ C:\Users\Strini\Source\Repos\MajorGroupProjecto\DrivingSchoolBookingSystem\obj\D
 C:\Users\Strini\Source\Repos\MajorGroupProjecto\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.csproj.CoreCompileInputs.cache
 C:\Users\Strini\Source\Repos\MajorGroupProjecto\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.exe
 C:\Users\Strini\Source\Repos\MajorGroupProjecto\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.pdb
+=======
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.StartUp.resources
+>>>>>>> 21b9f9a (Added User Type label and Welcome label to home page)
