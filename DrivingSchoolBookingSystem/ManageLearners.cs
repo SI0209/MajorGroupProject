@@ -161,16 +161,25 @@ namespace DrivingSchoolBookingSystem
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {// Restrict issue date range (in case user tries to set it via code)
-            IssuedateTimePicker1.MinDate = DateTime.Today.AddYears(-2);
-            IssuedateTimePicker1.MaxDate = DateTime.Today;
+            /*try
+            {
+                IssuedateTimePicker1.MinDate = DateTime.Today.AddYears(-2);
+                IssuedateTimePicker1.MaxDate = DateTime.Today;
 
-            // Set and lock expiry date
-            DateTime issueDate = IssuedateTimePicker1.Value;
-            DateTime expiryDate = issueDate.AddYears(2);
+                // Set and lock expiry date
+                DateTime issueDate = IssuedateTimePicker1.Value;
+                DateTime expiryDate = issueDate.AddYears(2);
 
-            ExpdateTimePicker2.MinDate = expiryDate;
-            ExpdateTimePicker2.MaxDate = expiryDate;
-            ExpdateTimePicker2.Value = expiryDate;
+                ExpdateTimePicker2.MinDate = expiryDate;
+                ExpdateTimePicker2.MaxDate = expiryDate;
+                ExpdateTimePicker2.Value = expiryDate;
+            }
+            catch  (Exception exception)
+            {
+                MessageBox.Show("An error occurred while setting the date: " + exception.Message);
+            }
+                    */
+
         }
 
         private void button3_Click(object sender, EventArgs e)
