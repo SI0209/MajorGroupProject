@@ -57,7 +57,7 @@ namespace DrivingSchoolBookingSystem
                 {
                     if (isManager)
                     {
-                        MessageBox.Show("Welcome to the Wyebank Driving School Booking System! ", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Welcome to Araf's Driving School! ", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Hide();
                         HomeForm homepage = new HomeForm();
                         homepage.Show();
