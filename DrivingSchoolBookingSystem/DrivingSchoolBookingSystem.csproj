@@ -92,6 +92,12 @@
     <Compile Include="LessonCodeForm.Designer.cs">
       <DependentUpon>LessonCodeForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManageBooking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageBooking.Designer.cs">
+      <DependentUpon>ManageBooking.cs</DependentUpon>
+    </Compile>
     <Compile Include="Password.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,6 +178,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LessonCodeForm.resx">
       <DependentUpon>LessonCodeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageBooking.resx">
+      <DependentUpon>ManageBooking.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Password.resx">
       <DependentUpon>Password.cs</DependentUpon>
