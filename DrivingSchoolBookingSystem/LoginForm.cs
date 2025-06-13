@@ -59,15 +59,15 @@ namespace DrivingSchoolBookingSystem
                     {
                         MessageBox.Show("Welcome to the Wyebank Driving School Booking System! ", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Hide();
-                        ManageInstruc mngEmployee = new ManageInstruc(this);
-                        mngEmployee.Show();
+                        HomeForm homepage = new HomeForm();
+                        homepage.Show();
 
                     }
                     else
                     {
                         this.Hide();
-                        InstructorSchedule mngEmployee = new InstructorSchedule(this);
-                        mngEmployee.Show();
+                        HomeForm homepage = new HomeForm();
+                        homepage.Show();
                         //MessageBox.Show("Instructor Access Denied", "Security", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
 
