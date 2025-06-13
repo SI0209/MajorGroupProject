@@ -283,3 +283,5 @@ C:\Users\Strini\Source\Repos\MajorGroupProject45\DrivingSchoolBookingSystem\obj\
 C:\Users\Strini\Source\Repos\MajorGroupProject45\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.csproj.CoreCompileInputs.cache
 C:\Users\Strini\Source\Repos\MajorGroupProject45\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.exe
 C:\Users\Strini\Source\Repos\MajorGroupProject45\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.pdb
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.LessonCodeForm.resources
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.ManageBooking.resources
