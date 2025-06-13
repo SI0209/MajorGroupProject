@@ -14,7 +14,7 @@ namespace DrivingSchoolBookingSystem
 {
     public partial class LoginForm : Form
     {
-        public string Employee_username;
+        public string Employee_username, Employee_Name, Employee_Surname;
         public LoginForm()
         {
             InitializeComponent();
@@ -47,6 +47,8 @@ namespace DrivingSchoolBookingSystem
                         if (row["Employee_Type"].ToString().Equals("Manager"))
                         {
                             isManager = true;
+                            Employee_Name = row["Employee_Name"].ToString();
+                            Employee_Surname = row["Employee_Surname"].ToString();
                         }
                         isFound = true;
                         break;
@@ -61,6 +63,8 @@ namespace DrivingSchoolBookingSystem
                         this.Hide();
                         HomeForm homepage = new HomeForm();
                         homepage.Show();
+                        homepage.lblUsernameInfo.Text = "Welcome " + Employee_Name + " " + Employee_Surname + "!";
+                        homepage.lblUserType.Text = "Manager";
 
                     }
                     else
@@ -68,6 +72,8 @@ namespace DrivingSchoolBookingSystem
                         this.Hide();
                         HomeForm homepage = new HomeForm();
                         homepage.Show();
+                        homepage.lblUsernameInfo.Text = "Welcome " + Employee_Name + " " + Employee_Surname + "!";
+                        homepage.lblUserType.Text = "Instructor";
                         //MessageBox.Show("Instructor Access Denied", "Security", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
 
