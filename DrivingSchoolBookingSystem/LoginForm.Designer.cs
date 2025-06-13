@@ -156,11 +156,13 @@
             this.viewpasswordcheckBox.TabIndex = 6;
             this.viewpasswordcheckBox.Text = "View Password";
             this.viewpasswordcheckBox.UseVisualStyleBackColor = true;
+            this.viewpasswordcheckBox.CheckedChanged += new System.EventHandler(this.chkBxShowPas_CheckedChanged);
             // 
             // passwordtextBox
             // 
             this.passwordtextBox.Location = new System.Drawing.Point(165, 254);
             this.passwordtextBox.Name = "passwordtextBox";
+            this.passwordtextBox.PasswordChar = '*';
             this.passwordtextBox.Size = new System.Drawing.Size(129, 22);
             this.passwordtextBox.TabIndex = 5;
             // 
