@@ -160,18 +160,17 @@ namespace DrivingSchoolBookingSystem
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-            // Set expiry date constraints based on issue date
+        {// Restrict issue date range (in case user tries to set it via code)
+            IssuedateTimePicker1.MinDate = DateTime.Today.AddYears(-2);
+            IssuedateTimePicker1.MaxDate = DateTime.Today;
+
+            // Set and lock expiry date
             DateTime issueDate = IssuedateTimePicker1.Value;
+            DateTime expiryDate = issueDate.AddYears(2);
 
-            ExpdateTimePicker2.MinDate = issueDate;
-            ExpdateTimePicker2.MaxDate = issueDate.AddYears(2);
-
-            // Optional: Auto-correct expiry date if it's out of range
-            if (ExpdateTimePicker2.Value < ExpdateTimePicker2.MinDate || ExpdateTimePicker2.Value > ExpdateTimePicker2.MaxDate)
-            {
-                ExpdateTimePicker2.Value = ExpdateTimePicker2.MinDate;
-            }
+            ExpdateTimePicker2.MinDate = expiryDate;
+            ExpdateTimePicker2.MaxDate = expiryDate;
+            ExpdateTimePicker2.Value = expiryDate;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -191,23 +190,30 @@ namespace DrivingSchoolBookingSystem
 
         private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            textBox8.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            textBox1.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            textBox2.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-            textBox3.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
-            textBox4.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
-            comboBox1.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
-            comboBox2.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
-            textBox5.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
-            textBox6.Text = dataGridView1.CurrentRow.Cells[8].Value.ToString();
-            comboBox3.Text = dataGridView1.CurrentRow.Cells[9].Value.ToString();
-            IssuedateTimePicker1.Value = Convert.ToDateTime(dataGridView1.CurrentRow.Cells[10].Value);
-            ExpdateTimePicker2.Value = Convert.ToDateTime(dataGridView1.CurrentRow.Cells[11].Value);
-            comboBox4.Text = dataGridView1.CurrentRow.Cells[12].Value.ToString();
-            label15.Visible = true;
-            textBox8.Visible = true;
-            textBox8.Enabled = false;
-            
+            try
+            {
+                textBox8.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                textBox1.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+                textBox2.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+                textBox3.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+                textBox4.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+                comboBox1.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+                comboBox2.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+                textBox5.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
+                textBox6.Text = dataGridView1.CurrentRow.Cells[8].Value.ToString();
+                comboBox3.Text = dataGridView1.CurrentRow.Cells[9].Value.ToString();
+                IssuedateTimePicker1.Value = Convert.ToDateTime(dataGridView1.CurrentRow.Cells[10].Value);
+                ExpdateTimePicker2.Value = Convert.ToDateTime(dataGridView1.CurrentRow.Cells[11].Value);
+                comboBox4.Text = dataGridView1.CurrentRow.Cells[12].Value.ToString();
+                label15.Visible = true;
+                textBox8.Visible = true;
+                textBox8.Enabled = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred while selecting the row: " + ex.Message);
+            }
+
         }
 
         private void button2_Click(object sender, EventArgs e)
