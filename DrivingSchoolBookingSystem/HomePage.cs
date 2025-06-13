@@ -22,8 +22,8 @@ namespace DrivingSchoolBookingSystem
 
         private void HomeForm_Load(object sender, EventArgs e)
         {
-              lblUsernameInfo.Text = "Welcome " + login.Employee_Name + " " + login.Employee_Surname + "!";
-              lblUserType.Text = login.Employee_Type;
+              lblUsernameInfo.Text = "Welcome " + Employee_Name + " " + Employee_Surname + "!";
+              lblUserType.Text = Employee_Type;
         }
         
 
