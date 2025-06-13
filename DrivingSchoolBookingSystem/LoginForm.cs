@@ -14,7 +14,7 @@ namespace DrivingSchoolBookingSystem
 {
     public partial class LoginForm : Form
     {
-        public string Employee_username, Employee_Name, Employee_Surname;
+        public string Employee_username, Employee_Name, Employee_Surname, Employee_Type;
         public LoginForm()
         {
             InitializeComponent();
@@ -49,8 +49,10 @@ namespace DrivingSchoolBookingSystem
                             isManager = true;
                             Employee_Name = row["Employee_Name"].ToString();
                             Employee_Surname = row["Employee_Surname"].ToString();
+                            Employee_Type = row["Employee_Type"].ToString();
                         }
                         isFound = true;
+                        Employee_Type = row["Employee_Type"].ToString();
                         break;
                     }
 
@@ -63,8 +65,6 @@ namespace DrivingSchoolBookingSystem
                         this.Hide();
                         HomeForm homepage = new HomeForm();
                         homepage.Show();
-                        homepage.lblUsernameInfo.Text = "Welcome " + Employee_Name + " " + Employee_Surname + "!";
-                        homepage.lblUserType.Text = "Manager";
 
                     }
                     else

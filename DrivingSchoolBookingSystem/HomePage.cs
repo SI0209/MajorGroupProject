@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,6 +14,7 @@ namespace DrivingSchoolBookingSystem
     public partial class HomeForm : Form
     {
         LoginForm login;
+        public string Employee_Name, Employee_Surname, Employee_Type;
         public HomeForm()
         {
             InitializeComponent();
@@ -20,8 +22,10 @@ namespace DrivingSchoolBookingSystem
 
         private void HomeForm_Load(object sender, EventArgs e)
         {
-
+              lblUsernameInfo.Text = "Welcome " + login.Employee_Name + " " + login.Employee_Surname + "!";
+              lblUserType.Text = login.Employee_Type;
         }
+        
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {

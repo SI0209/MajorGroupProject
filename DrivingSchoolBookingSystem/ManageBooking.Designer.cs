@@ -743,6 +743,7 @@
             this.pictureBox5.Size = new System.Drawing.Size(147, 94);
             this.pictureBox5.TabIndex = 11;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // ManageBooking
             // 
