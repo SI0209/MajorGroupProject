@@ -27,7 +27,7 @@ namespace DrivingSchoolBookingSystem
         }
 
 
-        private void Button2_Click(object sender, EventArgs e)
+        private void LoginButton_Click(object sender, EventArgs e)
         {
             Employee_username = usernametextBox.Text;
             string passwordID = passwordtextBox.Text;
@@ -137,10 +137,7 @@ namespace DrivingSchoolBookingSystem
             }
         }
 
-        private void LoginButton_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         /* private void button1_Click(object sender, EventArgs e)
          {
