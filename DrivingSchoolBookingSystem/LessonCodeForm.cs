@@ -22,9 +22,9 @@ namespace DrivingSchoolBookingSystem
         private void LessonCodeForm_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'wstGrp2DataSet.tblVehicle' table. You can move, or remove it, as needed.
-            this.tblVehicleTableAdapter.Fill(this.wstGrp2DataSet.tblVehicle);
+            this.taVehicle.Fill(this.dsBookingSystem.tblVehicle);
             // TODO: This line of code loads data into the 'wstGrp2DataSet.tblLessonCode' table. You can move, or remove it, as needed.
-            this.tblLessonCodeTableAdapter.Fill(this.wstGrp2DataSet.tblLessonCode);
+            this.taLessonCodes.Fill(this.dsBookingSystem.tblLessonCode);
 
         }
 

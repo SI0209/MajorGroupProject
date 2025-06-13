@@ -40,31 +40,32 @@
             this.vehicleSizeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vehicleStatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tblVehicleBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.wstGrp2DataSet = new DrivingSchoolBookingSystem.WstGrp2DataSet();
-            this.button4 = new System.Windows.Forms.Button();
+            this.dsBookingSystem = new DrivingSchoolBookingSystem.WstGrp2DataSet();
+            this.btnClear = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvLessonCode = new System.Windows.Forms.DataGridView();
             this.codeTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codePricePerHourDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tblLessonCodeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPricePerHour = new System.Windows.Forms.TextBox();
+            this.txtCodeType = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.tblLessonCodeTableAdapter = new DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters.tblLessonCodeTableAdapter();
+            this.taLessonCodes = new DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters.tblLessonCodeTableAdapter();
             this.tableAdapterManager = new DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters.TableAdapterManager();
-            this.tblVehicleTableAdapter = new DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters.tblVehicleTableAdapter();
+            this.taVehicle = new DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters.tblVehicleTableAdapter();
+            this.taBooking = new DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters.tblBookingTableAdapter();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblVehicleBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wstGrp2DataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsBookingSystem)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLessonCode)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblLessonCodeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -72,15 +73,15 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.dataGridView2);
-            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.btnClear);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.dgvLessonCode);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtPricePerHour);
+            this.panel1.Controls.Add(this.txtCodeType);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -179,21 +180,21 @@
             // tblVehicleBindingSource
             // 
             this.tblVehicleBindingSource.DataMember = "tblVehicle";
-            this.tblVehicleBindingSource.DataSource = this.wstGrp2DataSet;
+            this.tblVehicleBindingSource.DataSource = this.dsBookingSystem;
             // 
-            // wstGrp2DataSet
+            // dsBookingSystem
             // 
-            this.wstGrp2DataSet.DataSetName = "WstGrp2DataSet";
-            this.wstGrp2DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.dsBookingSystem.DataSetName = "WstGrp2DataSet";
+            this.dsBookingSystem.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // button4
+            // btnClear
             // 
-            this.button4.Location = new System.Drawing.Point(26, 414);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 12;
-            this.button4.Text = "Clear";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnClear.Location = new System.Drawing.Point(26, 414);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(75, 23);
+            this.btnClear.TabIndex = 12;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
             // 
             // label5
             // 
@@ -213,20 +214,20 @@
             this.label4.TabIndex = 10;
             this.label4.Text = "Lesson Codes";
             // 
-            // dataGridView1
+            // dgvLessonCode
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvLessonCode.AutoGenerateColumns = false;
+            this.dgvLessonCode.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLessonCode.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codeTypeDataGridViewTextBoxColumn,
             this.codePricePerHourDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.tblLessonCodeBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(207, 48);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(520, 162);
-            this.dataGridView1.TabIndex = 9;
+            this.dgvLessonCode.DataSource = this.tblLessonCodeBindingSource;
+            this.dgvLessonCode.Location = new System.Drawing.Point(207, 48);
+            this.dgvLessonCode.Name = "dgvLessonCode";
+            this.dgvLessonCode.RowHeadersWidth = 51;
+            this.dgvLessonCode.RowTemplate.Height = 24;
+            this.dgvLessonCode.Size = new System.Drawing.Size(520, 162);
+            this.dgvLessonCode.TabIndex = 9;
             // 
             // codeTypeDataGridViewTextBoxColumn
             // 
@@ -247,7 +248,7 @@
             // tblLessonCodeBindingSource
             // 
             this.tblLessonCodeBindingSource.DataMember = "tblLessonCode";
-            this.tblLessonCodeBindingSource.DataSource = this.wstGrp2DataSet;
+            this.tblLessonCodeBindingSource.DataSource = this.dsBookingSystem;
             // 
             // button3
             // 
@@ -276,19 +277,19 @@
             this.button1.Text = "Add";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // txtPricePerHour
             // 
-            this.textBox2.Location = new System.Drawing.Point(26, 198);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
-            this.textBox2.TabIndex = 5;
+            this.txtPricePerHour.Location = new System.Drawing.Point(26, 198);
+            this.txtPricePerHour.Name = "txtPricePerHour";
+            this.txtPricePerHour.Size = new System.Drawing.Size(100, 22);
+            this.txtPricePerHour.TabIndex = 5;
             // 
-            // textBox1
+            // txtCodeType
             // 
-            this.textBox1.Location = new System.Drawing.Point(26, 125);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 4;
+            this.txtCodeType.Location = new System.Drawing.Point(26, 125);
+            this.txtCodeType.Name = "txtCodeType";
+            this.txtCodeType.Size = new System.Drawing.Size(100, 22);
+            this.txtCodeType.TabIndex = 4;
             // 
             // label3
             // 
@@ -327,9 +328,9 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Manage Lesson Code";
             // 
-            // tblLessonCodeTableAdapter
+            // taLessonCodes
             // 
-            this.tblLessonCodeTableAdapter.ClearBeforeFill = true;
+            this.taLessonCodes.ClearBeforeFill = true;
             // 
             // tableAdapterManager
             // 
@@ -337,14 +338,18 @@
             this.tableAdapterManager.tblBookingTableAdapter = null;
             this.tableAdapterManager.tblEmployeeTableAdapter = null;
             this.tableAdapterManager.tblLearnerTableAdapter = null;
-            this.tableAdapterManager.tblLessonCodeTableAdapter = this.tblLessonCodeTableAdapter;
+            this.tableAdapterManager.tblLessonCodeTableAdapter = this.taLessonCodes;
             this.tableAdapterManager.tblUnavailableSlotTableAdapter = null;
-            this.tableAdapterManager.tblVehicleTableAdapter = this.tblVehicleTableAdapter;
+            this.tableAdapterManager.tblVehicleTableAdapter = this.taVehicle;
             this.tableAdapterManager.UpdateOrder = DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // tblVehicleTableAdapter
+            // taVehicle
             // 
-            this.tblVehicleTableAdapter.ClearBeforeFill = true;
+            this.taVehicle.ClearBeforeFill = true;
+            // 
+            // taBooking
+            // 
+            this.taBooking.ClearBeforeFill = true;
             // 
             // LessonCodeForm
             // 
@@ -362,8 +367,8 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblVehicleBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wstGrp2DataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsBookingSystem)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLessonCode)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblLessonCodeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -373,27 +378,27 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtCodeType;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvLessonCode;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox2;
-        private WstGrp2DataSet wstGrp2DataSet;
+        private System.Windows.Forms.TextBox txtPricePerHour;
+        private WstGrp2DataSet dsBookingSystem;
         private System.Windows.Forms.BindingSource tblLessonCodeBindingSource;
-        private WstGrp2DataSetTableAdapters.tblLessonCodeTableAdapter tblLessonCodeTableAdapter;
+        private WstGrp2DataSetTableAdapters.tblLessonCodeTableAdapter taLessonCodes;
         private WstGrp2DataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridViewTextBoxColumn codeTypeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn codePricePerHourDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Label label5;
-        private WstGrp2DataSetTableAdapters.tblVehicleTableAdapter tblVehicleTableAdapter;
+        private WstGrp2DataSetTableAdapters.tblVehicleTableAdapter taVehicle;
         private System.Windows.Forms.BindingSource tblVehicleBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn vehicleIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn vehicleNumberPlateDataGridViewTextBoxColumn;
@@ -403,5 +408,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn vehicleModelDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn vehicleSizeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn vehicleStatusDataGridViewTextBoxColumn;
+        private WstGrp2DataSetTableAdapters.tblBookingTableAdapter taBooking;
     }
 }
