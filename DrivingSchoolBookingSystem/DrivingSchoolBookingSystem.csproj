@@ -68,11 +68,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ErrorControl.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="StartUp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="StartUp.Designer.cs">
+      <DependentUpon>StartUp.cs</DependentUpon>
     </Compile>
     <Compile Include="InstructorSchedule.cs">
       <SubType>Form</SubType>
@@ -161,8 +161,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>WstGrp2DS2.xsd</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="StartUp.resx">
+      <DependentUpon>StartUp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InstructorSchedule.resx">
       <DependentUpon>InstructorSchedule.cs</DependentUpon>
