@@ -78,6 +78,11 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.AutoScroll = true;
+            this.panel1.AutoSize = true;
             this.panel1.Controls.Add(this.txtSearch);
             this.panel1.Controls.Add(this.label17);
             this.panel1.Controls.Add(this.txtPassword);
@@ -574,6 +579,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsBookingSystem)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

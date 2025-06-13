@@ -46,8 +46,6 @@ namespace DrivingSchoolBookingSystem {
         
         private global::System.Data.DataRelation relationtblEmployee_tblBooking;
         
-        private global::System.Data.DataRelation relationtblLearner_tblBooking;
-        
         private global::System.Data.DataRelation relationtblLessonCode_tblBooking;
         
         private global::System.Data.DataRelation relationtblVehicle_tblBooking;
@@ -400,7 +398,6 @@ namespace DrivingSchoolBookingSystem {
             }
             this.relationFK_tblUnavailableSlot_tblEmployee = this.Relations["FK_tblUnavailableSlot_tblEmployee"];
             this.relationtblEmployee_tblBooking = this.Relations["tblEmployee_tblBooking"];
-            this.relationtblLearner_tblBooking = this.Relations["tblLearner_tblBooking"];
             this.relationtblLessonCode_tblBooking = this.Relations["tblLessonCode_tblBooking"];
             this.relationtblVehicle_tblBooking = this.Relations["tblVehicle_tblBooking"];
             this.relationtblLessonCode_tblLearner = this.Relations["tblLessonCode_tblLearner"];
@@ -440,10 +437,6 @@ namespace DrivingSchoolBookingSystem {
                         this.tabletblEmployee.EmployeeIDColumn}, new global::System.Data.DataColumn[] {
                         this.tabletblBooking.EmployeeIDColumn}, false);
             this.Relations.Add(this.relationtblEmployee_tblBooking);
-            this.relationtblLearner_tblBooking = new global::System.Data.DataRelation("tblLearner_tblBooking", new global::System.Data.DataColumn[] {
-                        this.tabletblLearner.LearnerIDColumn}, new global::System.Data.DataColumn[] {
-                        this.tabletblBooking.LearnerIDColumn}, false);
-            this.Relations.Add(this.relationtblLearner_tblBooking);
             this.relationtblLessonCode_tblBooking = new global::System.Data.DataRelation("tblLessonCode_tblBooking", new global::System.Data.DataColumn[] {
                         this.tabletblLessonCode.Code_TypeColumn}, new global::System.Data.DataColumn[] {
                         this.tabletblBooking.Code_TypeColumn}, false);
@@ -611,17 +604,13 @@ namespace DrivingSchoolBookingSystem {
             
             private global::System.Data.DataColumn columnBooking_Status;
             
-            private global::System.Data.DataColumn columnBooking_TotalCost;
-            
-            private global::System.Data.DataColumn columnBooking_FeeDue;
-            
-            private global::System.Data.DataColumn columnLearnerID;
-            
             private global::System.Data.DataColumn columnCode_Type;
             
             private global::System.Data.DataColumn columnVehicleID;
             
             private global::System.Data.DataColumn columnEmployeeID;
+            
+            private global::System.Data.DataColumn columnLearnerID;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -698,30 +687,6 @@ namespace DrivingSchoolBookingSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn Booking_TotalCostColumn {
-                get {
-                    return this.columnBooking_TotalCost;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn Booking_FeeDueColumn {
-                get {
-                    return this.columnBooking_FeeDue;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn LearnerIDColumn {
-                get {
-                    return this.columnLearnerID;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public global::System.Data.DataColumn Code_TypeColumn {
                 get {
                     return this.columnCode_Type;
@@ -741,6 +706,14 @@ namespace DrivingSchoolBookingSystem {
             public global::System.Data.DataColumn EmployeeIDColumn {
                 get {
                     return this.columnEmployeeID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn LearnerIDColumn {
+                get {
+                    return this.columnLearnerID;
                 }
             }
             
@@ -781,7 +754,7 @@ namespace DrivingSchoolBookingSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public tblBookingRow AddtblBookingRow(System.DateTime Booking_Date, System.TimeSpan Booking_StartTime, System.TimeSpan Booking_EndTime, string Booking_Status, decimal Booking_TotalCost, decimal Booking_FeeDue, tblLearnerRow parenttblLearnerRowBytblLearner_tblBooking, tblLessonCodeRow parenttblLessonCodeRowBytblLessonCode_tblBooking, tblVehicleRow parenttblVehicleRowBytblVehicle_tblBooking, tblEmployeeRow parenttblEmployeeRowBytblEmployee_tblBooking) {
+            public tblBookingRow AddtblBookingRow(System.DateTime Booking_Date, System.TimeSpan Booking_StartTime, System.TimeSpan Booking_EndTime, string Booking_Status, tblLessonCodeRow parenttblLessonCodeRowBytblLessonCode_tblBooking, tblVehicleRow parenttblVehicleRowBytblVehicle_tblBooking, tblEmployeeRow parenttblEmployeeRowBytblEmployee_tblBooking, string LearnerID) {
                 tblBookingRow rowtblBookingRow = ((tblBookingRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -789,23 +762,18 @@ namespace DrivingSchoolBookingSystem {
                         Booking_StartTime,
                         Booking_EndTime,
                         Booking_Status,
-                        Booking_TotalCost,
-                        Booking_FeeDue,
                         null,
                         null,
                         null,
-                        null};
-                if ((parenttblLearnerRowBytblLearner_tblBooking != null)) {
-                    columnValuesArray[7] = parenttblLearnerRowBytblLearner_tblBooking[0];
-                }
+                        LearnerID};
                 if ((parenttblLessonCodeRowBytblLessonCode_tblBooking != null)) {
-                    columnValuesArray[8] = parenttblLessonCodeRowBytblLessonCode_tblBooking[0];
+                    columnValuesArray[5] = parenttblLessonCodeRowBytblLessonCode_tblBooking[0];
                 }
                 if ((parenttblVehicleRowBytblVehicle_tblBooking != null)) {
-                    columnValuesArray[9] = parenttblVehicleRowBytblVehicle_tblBooking[0];
+                    columnValuesArray[6] = parenttblVehicleRowBytblVehicle_tblBooking[0];
                 }
                 if ((parenttblEmployeeRowBytblEmployee_tblBooking != null)) {
-                    columnValuesArray[10] = parenttblEmployeeRowBytblEmployee_tblBooking[0];
+                    columnValuesArray[7] = parenttblEmployeeRowBytblEmployee_tblBooking[0];
                 }
                 rowtblBookingRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowtblBookingRow);
@@ -841,12 +809,10 @@ namespace DrivingSchoolBookingSystem {
                 this.columnBooking_StartTime = base.Columns["Booking_StartTime"];
                 this.columnBooking_EndTime = base.Columns["Booking_EndTime"];
                 this.columnBooking_Status = base.Columns["Booking_Status"];
-                this.columnBooking_TotalCost = base.Columns["Booking_TotalCost"];
-                this.columnBooking_FeeDue = base.Columns["Booking_FeeDue"];
-                this.columnLearnerID = base.Columns["LearnerID"];
                 this.columnCode_Type = base.Columns["Code_Type"];
                 this.columnVehicleID = base.Columns["VehicleID"];
                 this.columnEmployeeID = base.Columns["EmployeeID"];
+                this.columnLearnerID = base.Columns["LearnerID"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -862,18 +828,14 @@ namespace DrivingSchoolBookingSystem {
                 base.Columns.Add(this.columnBooking_EndTime);
                 this.columnBooking_Status = new global::System.Data.DataColumn("Booking_Status", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnBooking_Status);
-                this.columnBooking_TotalCost = new global::System.Data.DataColumn("Booking_TotalCost", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnBooking_TotalCost);
-                this.columnBooking_FeeDue = new global::System.Data.DataColumn("Booking_FeeDue", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnBooking_FeeDue);
-                this.columnLearnerID = new global::System.Data.DataColumn("LearnerID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnLearnerID);
                 this.columnCode_Type = new global::System.Data.DataColumn("Code_Type", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCode_Type);
                 this.columnVehicleID = new global::System.Data.DataColumn("VehicleID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnVehicleID);
                 this.columnEmployeeID = new global::System.Data.DataColumn("EmployeeID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEmployeeID);
+                this.columnLearnerID = new global::System.Data.DataColumn("LearnerID", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLearnerID);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnBookingID}, true));
                 this.columnBookingID.AutoIncrement = true;
@@ -887,12 +849,11 @@ namespace DrivingSchoolBookingSystem {
                 this.columnBooking_EndTime.AllowDBNull = false;
                 this.columnBooking_Status.AllowDBNull = false;
                 this.columnBooking_Status.MaxLength = 20;
-                this.columnBooking_TotalCost.AllowDBNull = false;
-                this.columnBooking_FeeDue.AllowDBNull = false;
-                this.columnLearnerID.AllowDBNull = false;
                 this.columnCode_Type.AllowDBNull = false;
                 this.columnVehicleID.AllowDBNull = false;
                 this.columnEmployeeID.AllowDBNull = false;
+                this.columnLearnerID.AllowDBNull = false;
+                this.columnLearnerID.MaxLength = 128;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4310,39 +4271,6 @@ namespace DrivingSchoolBookingSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public decimal Booking_TotalCost {
-                get {
-                    return ((decimal)(this[this.tabletblBooking.Booking_TotalCostColumn]));
-                }
-                set {
-                    this[this.tabletblBooking.Booking_TotalCostColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public decimal Booking_FeeDue {
-                get {
-                    return ((decimal)(this[this.tabletblBooking.Booking_FeeDueColumn]));
-                }
-                set {
-                    this[this.tabletblBooking.Booking_FeeDueColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int LearnerID {
-                get {
-                    return ((int)(this[this.tabletblBooking.LearnerIDColumn]));
-                }
-                set {
-                    this[this.tabletblBooking.LearnerIDColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public int Code_Type {
                 get {
                     return ((int)(this[this.tabletblBooking.Code_TypeColumn]));
@@ -4376,23 +4304,23 @@ namespace DrivingSchoolBookingSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string LearnerID {
+                get {
+                    return ((string)(this[this.tabletblBooking.LearnerIDColumn]));
+                }
+                set {
+                    this[this.tabletblBooking.LearnerIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public tblEmployeeRow tblEmployeeRow {
                 get {
                     return ((tblEmployeeRow)(this.GetParentRow(this.Table.ParentRelations["tblEmployee_tblBooking"])));
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["tblEmployee_tblBooking"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public tblLearnerRow tblLearnerRow {
-                get {
-                    return ((tblLearnerRow)(this.GetParentRow(this.Table.ParentRelations["tblLearner_tblBooking"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["tblLearner_tblBooking"]);
                 }
             }
             
@@ -4793,17 +4721,6 @@ namespace DrivingSchoolBookingSystem {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetCode_TypeNull() {
                 this[this.tabletblLearner.Code_TypeColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public tblBookingRow[] GettblBookingRows() {
-                if ((this.Table.ChildRelations["tblLearner_tblBooking"] == null)) {
-                    return new tblBookingRow[0];
-                }
-                else {
-                    return ((tblBookingRow[])(base.GetChildRows(this.Table.ChildRelations["tblLearner_tblBooking"])));
-                }
             }
         }
         
@@ -6030,58 +5947,46 @@ namespace DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters {
             tableMapping.ColumnMappings.Add("Booking_StartTime", "Booking_StartTime");
             tableMapping.ColumnMappings.Add("Booking_EndTime", "Booking_EndTime");
             tableMapping.ColumnMappings.Add("Booking_Status", "Booking_Status");
-            tableMapping.ColumnMappings.Add("Booking_TotalCost", "Booking_TotalCost");
-            tableMapping.ColumnMappings.Add("Booking_FeeDue", "Booking_FeeDue");
-            tableMapping.ColumnMappings.Add("LearnerID", "LearnerID");
             tableMapping.ColumnMappings.Add("Code_Type", "Code_Type");
             tableMapping.ColumnMappings.Add("VehicleID", "VehicleID");
             tableMapping.ColumnMappings.Add("EmployeeID", "EmployeeID");
+            tableMapping.ColumnMappings.Add("LearnerID", "LearnerID");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[tblBooking] WHERE (([BookingID] = @Original_BookingID) AND ([Booking_Date] = @Original_Booking_Date) AND ([Booking_StartTime] = @Original_Booking_StartTime) AND ([Booking_EndTime] = @Original_Booking_EndTime) AND ([Booking_Status] = @Original_Booking_Status) AND ([Booking_TotalCost] = @Original_Booking_TotalCost) AND ([Booking_FeeDue] = @Original_Booking_FeeDue) AND ([LearnerID] = @Original_LearnerID) AND ([Code_Type] = @Original_Code_Type) AND ([VehicleID] = @Original_VehicleID) AND ([EmployeeID] = @Original_EmployeeID))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[tblBooking] WHERE (([BookingID] = @Original_BookingID) AND ([Booking_Date] = @Original_Booking_Date) AND ([Booking_StartTime] = @Original_Booking_StartTime) AND ([Booking_EndTime] = @Original_Booking_EndTime) AND ([Booking_Status] = @Original_Booking_Status) AND ([LearnerID] = @Original_LearnerID) AND ([Code_Type] = @Original_Code_Type) AND ([VehicleID] = @Original_VehicleID) AND ([EmployeeID] = @Original_EmployeeID))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_BookingID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BookingID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Booking_Date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Booking_Date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Booking_StartTime", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Booking_StartTime", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Booking_EndTime", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Booking_EndTime", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Booking_Status", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Booking_Status", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Booking_TotalCost", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 10, 2, "Booking_TotalCost", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Booking_FeeDue", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 10, 2, "Booking_FeeDue", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LearnerID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LearnerID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Code_Type", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Code_Type", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_VehicleID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "VehicleID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_EmployeeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EmployeeID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"
-											INSERT INTO [dbo].[tblBooking] ([Booking_Date], [Booking_StartTime], [Booking_EndTime], [Booking_Status], [Booking_TotalCost], [Booking_FeeDue], [LearnerID], [Code_Type], [VehicleID], [EmployeeID]) VALUES (@Booking_Date, @Booking_StartTime, @Booking_EndTime, @Booking_Status, @Booking_TotalCost, @Booking_FeeDue, @LearnerID, @Code_Type, @VehicleID, @EmployeeID);
-											SELECT BookingID, Booking_Date, Booking_StartTime, Booking_EndTime, Booking_Status, Booking_TotalCost, Booking_FeeDue, LearnerID, Code_Type, VehicleID, EmployeeID FROM tblBooking WHERE (BookingID = SCOPE_IDENTITY())
-										";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[tblBooking] ([Booking_Date], [Booking_StartTime], [Booking_EndTime], [Booking_Status], [LearnerID], [Code_Type], [VehicleID], [EmployeeID]) VALUES (@Booking_Date, @Booking_StartTime, @Booking_EndTime, @Booking_Status, @LearnerID, @Code_Type, @VehicleID, @EmployeeID);
+SELECT BookingID, Booking_Date, Booking_StartTime, Booking_EndTime, Booking_Status, LearnerID, Code_Type, VehicleID, EmployeeID FROM tblBooking WHERE (BookingID = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Booking_Date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Booking_Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Booking_StartTime", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Booking_StartTime", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Booking_EndTime", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Booking_EndTime", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Booking_Status", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Booking_Status", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Booking_TotalCost", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 10, 2, "Booking_TotalCost", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Booking_FeeDue", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 10, 2, "Booking_FeeDue", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LearnerID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LearnerID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Code_Type", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Code_Type", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@VehicleID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "VehicleID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EmployeeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EmployeeID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"
-											UPDATE [dbo].[tblBooking] SET [Booking_Date] = @Booking_Date, [Booking_StartTime] = @Booking_StartTime, [Booking_EndTime] = @Booking_EndTime, [Booking_Status] = @Booking_Status, [Booking_TotalCost] = @Booking_TotalCost, [Booking_FeeDue] = @Booking_FeeDue, [LearnerID] = @LearnerID, [Code_Type] = @Code_Type, [VehicleID] = @VehicleID, [EmployeeID] = @EmployeeID WHERE (([BookingID] = @Original_BookingID) AND ([Booking_Date] = @Original_Booking_Date) AND ([Booking_StartTime] = @Original_Booking_StartTime) AND ([Booking_EndTime] = @Original_Booking_EndTime) AND ([Booking_Status] = @Original_Booking_Status) AND ([Booking_TotalCost] = @Original_Booking_TotalCost) AND ([Booking_FeeDue] = @Original_Booking_FeeDue) AND ([LearnerID] = @Original_LearnerID) AND ([Code_Type] = @Original_Code_Type) AND ([VehicleID] = @Original_VehicleID) AND ([EmployeeID] = @Original_EmployeeID));
-											SELECT BookingID, Booking_Date, Booking_StartTime, Booking_EndTime, Booking_Status, Booking_TotalCost, Booking_FeeDue, LearnerID, Code_Type, VehicleID, EmployeeID FROM tblBooking WHERE (BookingID = @BookingID)
-										";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[tblBooking] SET [Booking_Date] = @Booking_Date, [Booking_StartTime] = @Booking_StartTime, [Booking_EndTime] = @Booking_EndTime, [Booking_Status] = @Booking_Status, [LearnerID] = @LearnerID, [Code_Type] = @Code_Type, [VehicleID] = @VehicleID, [EmployeeID] = @EmployeeID WHERE (([BookingID] = @Original_BookingID) AND ([Booking_Date] = @Original_Booking_Date) AND ([Booking_StartTime] = @Original_Booking_StartTime) AND ([Booking_EndTime] = @Original_Booking_EndTime) AND ([Booking_Status] = @Original_Booking_Status) AND ([LearnerID] = @Original_LearnerID) AND ([Code_Type] = @Original_Code_Type) AND ([VehicleID] = @Original_VehicleID) AND ([EmployeeID] = @Original_EmployeeID));
+SELECT BookingID, Booking_Date, Booking_StartTime, Booking_EndTime, Booking_Status, LearnerID, Code_Type, VehicleID, EmployeeID FROM tblBooking WHERE (BookingID = @BookingID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Booking_Date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Booking_Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Booking_StartTime", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Booking_StartTime", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Booking_EndTime", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Booking_EndTime", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Booking_Status", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Booking_Status", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Booking_TotalCost", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 10, 2, "Booking_TotalCost", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Booking_FeeDue", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 10, 2, "Booking_FeeDue", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LearnerID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LearnerID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Code_Type", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Code_Type", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@VehicleID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "VehicleID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -6091,8 +5996,6 @@ namespace DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Booking_StartTime", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Booking_StartTime", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Booking_EndTime", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Booking_EndTime", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Booking_Status", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Booking_Status", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Booking_TotalCost", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 10, 2, "Booking_TotalCost", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Booking_FeeDue", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 10, 2, "Booking_FeeDue", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LearnerID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LearnerID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Code_Type", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Code_Type", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_VehicleID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "VehicleID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -6110,12 +6013,11 @@ namespace DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[4];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[26];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT BookingID, Booking_Date, Booking_StartTime, Booking_EndTime, Booking_Statu" +
-                "s, Booking_TotalCost, Booking_FeeDue, LearnerID, Code_Type, VehicleID, EmployeeI" +
-                "D FROM dbo.tblBooking";
+                "s, LearnerID, Code_Type, VehicleID, EmployeeID FROM dbo.tblBooking";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
@@ -6136,6 +6038,253 @@ namespace DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters {
 											FROM            tblBooking;
 										";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[4].Connection = this.Connection;
+            this._commandCollection[4].CommandText = @"SELECT        TOP (1) CAST(SUM(CASE WHEN Booking_Status = 'Not Complete' AND CONVERT(date, Booking_Date) = CONVERT(date, GETDATE()) THEN 1 ELSE 0 END) AS FLOAT) / NULLIF (SUM(CASE WHEN CONVERT(date, Booking_Date) 
+                         = CONVERT(date, GETDATE()) THEN 1 ELSE 0 END), 0) * 100 AS Not_Completed_Rate
+FROM            tblBooking;   ";
+            this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[5] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[5].Connection = this.Connection;
+            this._commandCollection[5].CommandText = @"SELECT        CASE WHEN SUM(CASE WHEN DATEPART(week, Booking_Date) = DATEPART(week, GETDATE()) THEN 1 ELSE 0 END) = 0 THEN NULL ELSE CAST(SUM(CASE WHEN Booking_Status = 'Not Complete' AND DATEPART(week, 
+                         Booking_Date) = DATEPART(week, GETDATE()) THEN 1 ELSE 0 END) AS FLOAT) / SUM(CASE WHEN DATEPART(week, Booking_Date) = DATEPART(week, GETDATE()) THEN 1 ELSE 0 END) * 100 END AS Not_Completed_Rate
+FROM            tblBooking; ";
+            this._commandCollection[5].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[6] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[6].Connection = this.Connection;
+            this._commandCollection[6].CommandText = "SELECT COUNT(*) FROM tblBooking WHERE CAST(Booking_Date AS DATE) = CAST(GETDATE()" +
+                " AS DATE);";
+            this._commandCollection[6].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[7] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[7].Connection = this.Connection;
+            this._commandCollection[7].CommandText = "SELECT        COUNT(*) AS Expr1\r\nFROM            tblBooking\r\nWHERE        (DATEPA" +
+                "RT(week, Booking_Date) = DATEPART(week, GETDATE())) AND (DATEPART(year, Booking_" +
+                "Date) = DATEPART(year, GETDATE()))";
+            this._commandCollection[7].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[8] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[8].Connection = this.Connection;
+            this._commandCollection[8].CommandText = "SELECT COUNT(*) AS Expr1\r\nFROM     tblBooking\r\nWHERE  (Booking_Date = @BookingDat" +
+                "e) AND (Booking_StartTime <= @endTime) AND (Booking_EndTime >= @StartTime) AND (" +
+                "EmployeeID = @EmployeeID)";
+            this._commandCollection[8].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[8].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BookingDate", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "Booking_Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[8].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@endTime", global::System.Data.SqlDbType.Time, 5, global::System.Data.ParameterDirection.Input, 0, 0, "Booking_StartTime", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[8].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@StartTime", global::System.Data.SqlDbType.Time, 5, global::System.Data.ParameterDirection.Input, 0, 0, "Booking_EndTime", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[8].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EmployeeID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "EmployeeID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[9] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[9].Connection = this.Connection;
+            this._commandCollection[9].CommandText = "SELECT COUNT(*) AS Expr1\r\nFROM     tblBooking\r\nWHERE  (Booking_Date = @BookingDat" +
+                "e) AND (Booking_StartTime <= @endTime) AND (Booking_EndTime >= @StartTime) AND (" +
+                "EmployeeID = @EmployeeID) AND (BookingID <> @BookingID)";
+            this._commandCollection[9].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[9].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BookingDate", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "Booking_Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[9].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@endTime", global::System.Data.SqlDbType.Time, 5, global::System.Data.ParameterDirection.Input, 0, 0, "Booking_StartTime", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[9].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@StartTime", global::System.Data.SqlDbType.Time, 5, global::System.Data.ParameterDirection.Input, 0, 0, "Booking_EndTime", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[9].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EmployeeID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "EmployeeID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[9].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BookingID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "BookingID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[10] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[10].Connection = this.Connection;
+            this._commandCollection[10].CommandText = "SELECT COUNT(*) AS Expr1\r\nFROM     tblBooking\r\nWHERE  (Booking_Date = @BookingDat" +
+                "e) AND (Booking_StartTime <= @endTime) AND (Booking_EndTime >= @StartTime) AND (" +
+                "LearnerID = @LearnerID)";
+            this._commandCollection[10].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[10].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BookingDate", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "Booking_Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[10].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@endTime", global::System.Data.SqlDbType.Time, 5, global::System.Data.ParameterDirection.Input, 0, 0, "Booking_StartTime", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[10].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@StartTime", global::System.Data.SqlDbType.Time, 5, global::System.Data.ParameterDirection.Input, 0, 0, "Booking_EndTime", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[10].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LearnerID", global::System.Data.SqlDbType.NVarChar, 128, global::System.Data.ParameterDirection.Input, 0, 0, "LearnerID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[11] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[11].Connection = this.Connection;
+            this._commandCollection[11].CommandText = "SELECT COUNT(*) AS Expr1\r\nFROM     tblBooking\r\nWHERE  (Booking_Date = @BookingDat" +
+                "e) AND (Booking_StartTime <= @endTime) AND (Booking_EndTime >= @StartTime) AND (" +
+                "LearnerID = @LearnerID) AND (BookingID <> @BookingID)";
+            this._commandCollection[11].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[11].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BookingDate", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "Booking_Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[11].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@endTime", global::System.Data.SqlDbType.Time, 5, global::System.Data.ParameterDirection.Input, 0, 0, "Booking_StartTime", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[11].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@StartTime", global::System.Data.SqlDbType.Time, 5, global::System.Data.ParameterDirection.Input, 0, 0, "Booking_EndTime", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[11].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LearnerID", global::System.Data.SqlDbType.NVarChar, 128, global::System.Data.ParameterDirection.Input, 0, 0, "LearnerID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[11].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BookingID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "BookingID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[12] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[12].Connection = this.Connection;
+            this._commandCollection[12].CommandText = "SELECT COUNT(*) AS Expr1\r\nFROM     tblBooking\r\nWHERE  (Booking_Date = @BookingDat" +
+                "e) AND (Booking_StartTime <= @endTime) AND (Booking_EndTime >= @StartTime) AND (" +
+                "VehicleID = @VehicleID)";
+            this._commandCollection[12].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[12].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BookingDate", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "Booking_Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[12].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@endTime", global::System.Data.SqlDbType.Time, 5, global::System.Data.ParameterDirection.Input, 0, 0, "Booking_StartTime", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[12].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@StartTime", global::System.Data.SqlDbType.Time, 5, global::System.Data.ParameterDirection.Input, 0, 0, "Booking_EndTime", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[12].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@VehicleID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "VehicleID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[13] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[13].Connection = this.Connection;
+            this._commandCollection[13].CommandText = "SELECT COUNT(*) AS Expr1\r\nFROM     tblBooking\r\nWHERE  (Booking_Date = @BookingDat" +
+                "e) AND (Booking_StartTime <= @endTime) AND (Booking_EndTime >= @StartTime) AND (" +
+                "VehicleID = @VehicleID) AND (BookingID <> @BookingID)";
+            this._commandCollection[13].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[13].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BookingDate", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "Booking_Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[13].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@endTime", global::System.Data.SqlDbType.Time, 5, global::System.Data.ParameterDirection.Input, 0, 0, "Booking_StartTime", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[13].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@StartTime", global::System.Data.SqlDbType.Time, 5, global::System.Data.ParameterDirection.Input, 0, 0, "Booking_EndTime", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[13].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@VehicleID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "VehicleID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[13].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BookingID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "BookingID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[14] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[14].Connection = this.Connection;
+            this._commandCollection[14].CommandText = "DELETE FROM tblBooking\r\nWHERE  (BookingID = @Original_BookingID)";
+            this._commandCollection[14].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[14].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_BookingID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "BookingID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[15] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[15].Connection = this.Connection;
+            this._commandCollection[15].CommandText = @"WITH MonthlyBookings AS (SELECT        DATEPART(YEAR, Booking_Date) AS BookingYear, DATEPART(MONTH, Booking_Date) AS BookingMonth, COUNT(*) AS MonthlyBookingCount
+                                                            FROM            tblBooking
+                                                            GROUP BY DATEPART(YEAR, Booking_Date), DATEPART(MONTH, Booking_Date))
+    SELECT        AVG(MonthlyBookingCount) AS AverageMonthlyBookings
+     FROM            MonthlyBookings AS MonthlyBookings_1; ";
+            this._commandCollection[15].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[16] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[16].Connection = this.Connection;
+            this._commandCollection[16].CommandText = @"WITH WeeklyBookings AS (SELECT        DATEPART(YEAR, Booking_Date) AS BookingYear, DATEPART(WEEK, Booking_Date) AS BookingWeek, COUNT(*) AS WeeklyBookingCount
+                                                           FROM            tblBooking
+                                                           GROUP BY DATEPART(YEAR, Booking_Date), DATEPART(WEEK, Booking_Date))
+    SELECT        AVG(WeeklyBookingCount) AS AverageWeeklyBookings
+     FROM            WeeklyBookings AS WeeklyBookings_1; ";
+            this._commandCollection[16].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[17] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[17].Connection = this.Connection;
+            this._commandCollection[17].CommandText = @"WITH TodayBookings AS (SELECT        EmployeeID, COUNT(*) AS LessonCount
+                                                        FROM            tblBooking
+                                                        WHERE        (Booking_Date = CAST(GETDATE() AS DATE)) AND (Booking_Status = 'Complete')
+                                                        GROUP BY EmployeeID)
+    SELECT        TOP (1) CAST(EmployeeID AS NVARCHAR) + ', ' + CAST(LessonCount AS NVARCHAR) AS ResultString
+     FROM            TodayBookings AS TodayBookings_1
+     ORDER BY LessonCount DESC
+";
+            this._commandCollection[17].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[18] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[18].Connection = this.Connection;
+            this._commandCollection[18].CommandText = @"WITH MonthlyBookings AS (SELECT        EmployeeID, COUNT(*) AS LessonCount
+                                                            FROM            tblBooking
+                                                            WHERE        (MONTH(Booking_Date) = MONTH(GETDATE())) AND (YEAR(Booking_Date) = YEAR(GETDATE())) AND (Booking_Status = 'Complete')
+                                                            GROUP BY EmployeeID)
+    SELECT        TOP (1) CAST(EmployeeID AS NVARCHAR) + ', ' + CAST(LessonCount AS NVARCHAR) AS ResultString
+     FROM            MonthlyBookings AS MonthlyBookings_1
+     ORDER BY LessonCount DESC;";
+            this._commandCollection[18].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[19] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[19].Connection = this.Connection;
+            this._commandCollection[19].CommandText = @"WITH WeeklyBookings AS (SELECT        EmployeeID, COUNT(*) AS LessonCount
+                                                           FROM            tblBooking
+                                                           WHERE        (DATEPART(week, Booking_Date) = DATEPART(week, GETDATE())) AND (Booking_Status = 'Complete')
+                                                           GROUP BY EmployeeID)
+    SELECT        TOP (1) CAST(EmployeeID AS NVARCHAR) + ', ' + CAST(LessonCount AS NVARCHAR) AS ResultString
+     FROM            WeeklyBookings AS WeeklyBookings_1
+     ORDER BY LessonCount DESC; 
+";
+            this._commandCollection[19].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[20] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[20].Connection = this.Connection;
+            this._commandCollection[20].CommandText = @"WITH MonthlyBookings AS (
+    SELECT 
+        EmployeeID, 
+        COUNT(*) AS LessonCount
+    FROM 
+        tblBooking
+    WHERE 
+       
+        (Booking_Status = 'Complete')
+    GROUP BY 
+        EmployeeID
+),
+RankedBookings AS (
+    SELECT 
+        EmployeeID, 
+        LessonCount,
+        ROW_NUMBER() OVER (ORDER BY LessonCount DESC) AS Rank
+    FROM 
+        MonthlyBookings
+)
+SELECT 
+    CAST(EmployeeID AS NVARCHAR) + ', ' + CAST(LessonCount AS NVARCHAR) AS ResultString
+FROM 
+    RankedBookings
+WHERE 
+    Rank = 2;
+";
+            this._commandCollection[20].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[21] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[21].Connection = this.Connection;
+            this._commandCollection[21].CommandText = @"WITH MonthlyBookings AS (
+    SELECT 
+        EmployeeID, 
+        COUNT(*) AS LessonCount
+    FROM 
+        tblBooking
+    WHERE 
+       
+         (Booking_Status = 'Complete')
+    GROUP BY 
+        EmployeeID
+),
+RankedBookings AS (
+    SELECT 
+        EmployeeID, 
+        LessonCount,
+        ROW_NUMBER() OVER (ORDER BY LessonCount DESC) AS Rank
+    FROM 
+        MonthlyBookings
+)
+SELECT 
+    CAST(EmployeeID AS NVARCHAR) + ', ' + CAST(LessonCount AS NVARCHAR) AS ResultString
+FROM 
+    RankedBookings
+WHERE 
+    Rank = 3;
+";
+            this._commandCollection[21].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[22] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[22].Connection = this.Connection;
+            this._commandCollection[22].CommandText = @"WITH MonthlyBookings AS (
+    SELECT
+        EmployeeID,
+        COUNT(*) AS LessonCount
+    FROM
+        tblBooking
+    WHERE
+     Booking_Status = 'Complete'
+    GROUP BY
+        EmployeeID
+)
+SELECT
+    TOP (1) 
+    CAST(EmployeeID AS NVARCHAR) + ', ' + CAST(LessonCount AS NVARCHAR) AS ResultString
+FROM
+    MonthlyBookings
+ORDER BY
+    LessonCount DESC;
+";
+            this._commandCollection[22].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[23] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[23].Connection = this.Connection;
+            this._commandCollection[23].CommandText = "SELECT        COUNT(*) AS total_bookings\r\nFROM            tblBooking; \r\n";
+            this._commandCollection[23].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[24] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[24].Connection = this.Connection;
+            this._commandCollection[24].CommandText = "SELECT        COUNT(*) AS total_completed_lessons\r\nFROM            tblBooking\r\nWH" +
+                "ERE        (Booking_Status = \'Complete\');  \r\n";
+            this._commandCollection[24].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[25] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[25].Connection = this.Connection;
+            this._commandCollection[25].CommandText = @"UPDATE tblBooking
+SET          Booking_Date = @Booking_Date, Booking_StartTime = @Booking_StartTime, Booking_EndTime = @Booking_EndTime, Booking_Status = @Booking_Status, LearnerID = @LearnerID, Code_Type = @Code_Type, VehicleID = @VehicleID, 
+                  EmployeeID = @EmployeeID
+WHERE  (BookingID = @BookingID);  
+SELECT BookingID, Booking_Date, Booking_StartTime, Booking_EndTime, Booking_Status, LearnerID, Code_Type, VehicleID, EmployeeID FROM tblBooking WHERE (BookingID = @BookingID)";
+            this._commandCollection[25].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[25].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Booking_Date", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "Booking_Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[25].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Booking_StartTime", global::System.Data.SqlDbType.Time, 5, global::System.Data.ParameterDirection.Input, 0, 0, "Booking_StartTime", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[25].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Booking_EndTime", global::System.Data.SqlDbType.Time, 5, global::System.Data.ParameterDirection.Input, 0, 0, "Booking_EndTime", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[25].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Booking_Status", global::System.Data.SqlDbType.VarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, "Booking_Status", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[25].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LearnerID", global::System.Data.SqlDbType.NVarChar, 128, global::System.Data.ParameterDirection.Input, 0, 0, "LearnerID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[25].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Code_Type", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Code_Type", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[25].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@VehicleID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "VehicleID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[25].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EmployeeID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "EmployeeID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[25].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BookingID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "BookingID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6195,7 +6344,7 @@ namespace DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_BookingID, System.DateTime Original_Booking_Date, System.TimeSpan Original_Booking_StartTime, System.TimeSpan Original_Booking_EndTime, string Original_Booking_Status, decimal Original_Booking_TotalCost, decimal Original_Booking_FeeDue, string Original_LearnerID, int Original_Code_Type, int Original_VehicleID, int Original_EmployeeID) {
+        public virtual int Delete(int Original_BookingID, System.DateTime Original_Booking_Date, System.TimeSpan Original_Booking_StartTime, System.TimeSpan Original_Booking_EndTime, string Original_Booking_Status, string Original_LearnerID, int Original_Code_Type, int Original_VehicleID, int Original_EmployeeID) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_BookingID));
             this.Adapter.DeleteCommand.Parameters[1].Value = ((System.DateTime)(Original_Booking_Date));
             this.Adapter.DeleteCommand.Parameters[2].Value = ((System.TimeSpan)(Original_Booking_StartTime));
@@ -6206,17 +6355,15 @@ namespace DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters {
             else {
                 this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_Booking_Status));
             }
-            this.Adapter.DeleteCommand.Parameters[5].Value = ((decimal)(Original_Booking_TotalCost));
-            this.Adapter.DeleteCommand.Parameters[6].Value = ((decimal)(Original_Booking_FeeDue));
             if ((Original_LearnerID == null)) {
                 throw new global::System.ArgumentNullException("Original_LearnerID");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((string)(Original_LearnerID));
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_LearnerID));
             }
-            this.Adapter.DeleteCommand.Parameters[8].Value = ((int)(Original_Code_Type));
-            this.Adapter.DeleteCommand.Parameters[9].Value = ((int)(Original_VehicleID));
-            this.Adapter.DeleteCommand.Parameters[10].Value = ((int)(Original_EmployeeID));
+            this.Adapter.DeleteCommand.Parameters[6].Value = ((int)(Original_Code_Type));
+            this.Adapter.DeleteCommand.Parameters[7].Value = ((int)(Original_VehicleID));
+            this.Adapter.DeleteCommand.Parameters[8].Value = ((int)(Original_EmployeeID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -6237,7 +6384,7 @@ namespace DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(System.DateTime Booking_Date, System.TimeSpan Booking_StartTime, System.TimeSpan Booking_EndTime, string Booking_Status, decimal Booking_TotalCost, decimal Booking_FeeDue, string LearnerID, int Code_Type, int VehicleID, int EmployeeID) {
+        public virtual int Insert(System.DateTime Booking_Date, System.TimeSpan Booking_StartTime, System.TimeSpan Booking_EndTime, string Booking_Status, string LearnerID, int Code_Type, int VehicleID, int EmployeeID) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((System.DateTime)(Booking_Date));
             this.Adapter.InsertCommand.Parameters[1].Value = ((System.TimeSpan)(Booking_StartTime));
             this.Adapter.InsertCommand.Parameters[2].Value = ((System.TimeSpan)(Booking_EndTime));
@@ -6247,17 +6394,15 @@ namespace DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Booking_Status));
             }
-            this.Adapter.InsertCommand.Parameters[4].Value = ((decimal)(Booking_TotalCost));
-            this.Adapter.InsertCommand.Parameters[5].Value = ((decimal)(Booking_FeeDue));
             if ((LearnerID == null)) {
                 throw new global::System.ArgumentNullException("LearnerID");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(LearnerID));
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(LearnerID));
             }
-            this.Adapter.InsertCommand.Parameters[7].Value = ((int)(Code_Type));
-            this.Adapter.InsertCommand.Parameters[8].Value = ((int)(VehicleID));
-            this.Adapter.InsertCommand.Parameters[9].Value = ((int)(EmployeeID));
+            this.Adapter.InsertCommand.Parameters[5].Value = ((int)(Code_Type));
+            this.Adapter.InsertCommand.Parameters[6].Value = ((int)(VehicleID));
+            this.Adapter.InsertCommand.Parameters[7].Value = ((int)(EmployeeID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -6283,8 +6428,6 @@ namespace DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters {
                     System.TimeSpan Booking_StartTime, 
                     System.TimeSpan Booking_EndTime, 
                     string Booking_Status, 
-                    decimal Booking_TotalCost, 
-                    decimal Booking_FeeDue, 
                     string LearnerID, 
                     int Code_Type, 
                     int VehicleID, 
@@ -6294,8 +6437,6 @@ namespace DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters {
                     System.TimeSpan Original_Booking_StartTime, 
                     System.TimeSpan Original_Booking_EndTime, 
                     string Original_Booking_Status, 
-                    decimal Original_Booking_TotalCost, 
-                    decimal Original_Booking_FeeDue, 
                     string Original_LearnerID, 
                     int Original_Code_Type, 
                     int Original_VehicleID, 
@@ -6310,39 +6451,35 @@ namespace DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Booking_Status));
             }
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((decimal)(Booking_TotalCost));
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((decimal)(Booking_FeeDue));
             if ((LearnerID == null)) {
                 throw new global::System.ArgumentNullException("LearnerID");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(LearnerID));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(LearnerID));
             }
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Code_Type));
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(VehicleID));
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(EmployeeID));
-            this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Original_BookingID));
-            this.Adapter.UpdateCommand.Parameters[11].Value = ((System.DateTime)(Original_Booking_Date));
-            this.Adapter.UpdateCommand.Parameters[12].Value = ((System.TimeSpan)(Original_Booking_StartTime));
-            this.Adapter.UpdateCommand.Parameters[13].Value = ((System.TimeSpan)(Original_Booking_EndTime));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Code_Type));
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(VehicleID));
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(EmployeeID));
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_BookingID));
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((System.DateTime)(Original_Booking_Date));
+            this.Adapter.UpdateCommand.Parameters[10].Value = ((System.TimeSpan)(Original_Booking_StartTime));
+            this.Adapter.UpdateCommand.Parameters[11].Value = ((System.TimeSpan)(Original_Booking_EndTime));
             if ((Original_Booking_Status == null)) {
                 throw new global::System.ArgumentNullException("Original_Booking_Status");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_Booking_Status));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_Booking_Status));
             }
-            this.Adapter.UpdateCommand.Parameters[15].Value = ((decimal)(Original_Booking_TotalCost));
-            this.Adapter.UpdateCommand.Parameters[16].Value = ((decimal)(Original_Booking_FeeDue));
             if ((Original_LearnerID == null)) {
                 throw new global::System.ArgumentNullException("Original_LearnerID");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_LearnerID));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_LearnerID));
             }
-            this.Adapter.UpdateCommand.Parameters[18].Value = ((int)(Original_Code_Type));
-            this.Adapter.UpdateCommand.Parameters[19].Value = ((int)(Original_VehicleID));
-            this.Adapter.UpdateCommand.Parameters[20].Value = ((int)(Original_EmployeeID));
-            this.Adapter.UpdateCommand.Parameters[21].Value = ((int)(BookingID));
+            this.Adapter.UpdateCommand.Parameters[14].Value = ((int)(Original_Code_Type));
+            this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(Original_VehicleID));
+            this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(Original_EmployeeID));
+            this.Adapter.UpdateCommand.Parameters[17].Value = ((int)(BookingID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -6368,8 +6505,6 @@ namespace DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters {
                     System.TimeSpan Booking_StartTime, 
                     System.TimeSpan Booking_EndTime, 
                     string Booking_Status, 
-                    decimal Booking_TotalCost, 
-                    decimal Booking_FeeDue, 
                     string LearnerID, 
                     int Code_Type, 
                     int VehicleID, 
@@ -6379,13 +6514,11 @@ namespace DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters {
                     System.TimeSpan Original_Booking_StartTime, 
                     System.TimeSpan Original_Booking_EndTime, 
                     string Original_Booking_Status, 
-                    decimal Original_Booking_TotalCost, 
-                    decimal Original_Booking_FeeDue, 
                     string Original_LearnerID, 
                     int Original_Code_Type, 
                     int Original_VehicleID, 
                     int Original_EmployeeID) {
-            return this.Update(Booking_Date, Booking_StartTime, Booking_EndTime, Booking_Status, Booking_TotalCost, Booking_FeeDue, LearnerID, Code_Type, VehicleID, EmployeeID, Original_BookingID, Original_Booking_Date, Original_Booking_StartTime, Original_Booking_EndTime, Original_Booking_Status, Original_Booking_TotalCost, Original_Booking_FeeDue, Original_LearnerID, Original_Code_Type, Original_VehicleID, Original_EmployeeID, Original_BookingID);
+            return this.Update(Booking_Date, Booking_StartTime, Booking_EndTime, Booking_Status, LearnerID, Code_Type, VehicleID, EmployeeID, Original_BookingID, Original_Booking_Date, Original_Booking_StartTime, Original_Booking_EndTime, Original_Booking_Status, Original_LearnerID, Original_Code_Type, Original_VehicleID, Original_EmployeeID, Original_BookingID);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6470,6 +6603,774 @@ namespace DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters {
             else {
                 return new global::System.Nullable<double>(((double)(returnValue)));
             }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual global::System.Nullable<double> BookingsNotCompletedToday() {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[4];
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            object returnValue;
+            try {
+                returnValue = command.ExecuteScalar();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            if (((returnValue == null) 
+                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
+                return new global::System.Nullable<double>();
+            }
+            else {
+                return new global::System.Nullable<double>(((double)(returnValue)));
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual global::System.Nullable<double> BookingsNotCompletedWeekly() {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[5];
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            object returnValue;
+            try {
+                returnValue = command.ExecuteScalar();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            if (((returnValue == null) 
+                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
+                return new global::System.Nullable<double>();
+            }
+            else {
+                return new global::System.Nullable<double>(((double)(returnValue)));
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual global::System.Nullable<int> BookingsToday() {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[6];
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            object returnValue;
+            try {
+                returnValue = command.ExecuteScalar();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            if (((returnValue == null) 
+                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
+                return new global::System.Nullable<int>();
+            }
+            else {
+                return new global::System.Nullable<int>(((int)(returnValue)));
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual global::System.Nullable<int> BookingsWeekly() {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[7];
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            object returnValue;
+            try {
+                returnValue = command.ExecuteScalar();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            if (((returnValue == null) 
+                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
+                return new global::System.Nullable<int>();
+            }
+            else {
+                return new global::System.Nullable<int>(((int)(returnValue)));
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual object CheckEmployeeBookedAlready(string BookingDate, string endTime, string StartTime, int EmployeeID) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[8];
+            if ((BookingDate == null)) {
+                throw new global::System.ArgumentNullException("BookingDate");
+            }
+            else {
+                command.Parameters[0].Value = ((string)(BookingDate));
+            }
+            if ((endTime == null)) {
+                throw new global::System.ArgumentNullException("endTime");
+            }
+            else {
+                command.Parameters[1].Value = ((string)(endTime));
+            }
+            if ((StartTime == null)) {
+                throw new global::System.ArgumentNullException("StartTime");
+            }
+            else {
+                command.Parameters[2].Value = ((string)(StartTime));
+            }
+            command.Parameters[3].Value = ((int)(EmployeeID));
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            object returnValue;
+            try {
+                returnValue = command.ExecuteScalar();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            if (((returnValue == null) 
+                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
+                return null;
+            }
+            else {
+                return ((object)(returnValue));
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual object CheckEmployeeBookedAlreadyForUpdate(string BookingDate, string endTime, string StartTime, int EmployeeID, int BookingID) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[9];
+            if ((BookingDate == null)) {
+                throw new global::System.ArgumentNullException("BookingDate");
+            }
+            else {
+                command.Parameters[0].Value = ((string)(BookingDate));
+            }
+            if ((endTime == null)) {
+                throw new global::System.ArgumentNullException("endTime");
+            }
+            else {
+                command.Parameters[1].Value = ((string)(endTime));
+            }
+            if ((StartTime == null)) {
+                throw new global::System.ArgumentNullException("StartTime");
+            }
+            else {
+                command.Parameters[2].Value = ((string)(StartTime));
+            }
+            command.Parameters[3].Value = ((int)(EmployeeID));
+            command.Parameters[4].Value = ((int)(BookingID));
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            object returnValue;
+            try {
+                returnValue = command.ExecuteScalar();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            if (((returnValue == null) 
+                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
+                return null;
+            }
+            else {
+                return ((object)(returnValue));
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual object CheckLearnerBookedAlready(string BookingDate, string endTime, string StartTime, string LearnerID) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[10];
+            if ((BookingDate == null)) {
+                throw new global::System.ArgumentNullException("BookingDate");
+            }
+            else {
+                command.Parameters[0].Value = ((string)(BookingDate));
+            }
+            if ((endTime == null)) {
+                throw new global::System.ArgumentNullException("endTime");
+            }
+            else {
+                command.Parameters[1].Value = ((string)(endTime));
+            }
+            if ((StartTime == null)) {
+                throw new global::System.ArgumentNullException("StartTime");
+            }
+            else {
+                command.Parameters[2].Value = ((string)(StartTime));
+            }
+            if ((LearnerID == null)) {
+                throw new global::System.ArgumentNullException("LearnerID");
+            }
+            else {
+                command.Parameters[3].Value = ((string)(LearnerID));
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            object returnValue;
+            try {
+                returnValue = command.ExecuteScalar();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            if (((returnValue == null) 
+                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
+                return null;
+            }
+            else {
+                return ((object)(returnValue));
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual object CheckLearnerBookedAlreadyForUpdate(string BookingDate, string endTime, string StartTime, string LearnerID, int BookingID) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[11];
+            if ((BookingDate == null)) {
+                throw new global::System.ArgumentNullException("BookingDate");
+            }
+            else {
+                command.Parameters[0].Value = ((string)(BookingDate));
+            }
+            if ((endTime == null)) {
+                throw new global::System.ArgumentNullException("endTime");
+            }
+            else {
+                command.Parameters[1].Value = ((string)(endTime));
+            }
+            if ((StartTime == null)) {
+                throw new global::System.ArgumentNullException("StartTime");
+            }
+            else {
+                command.Parameters[2].Value = ((string)(StartTime));
+            }
+            if ((LearnerID == null)) {
+                throw new global::System.ArgumentNullException("LearnerID");
+            }
+            else {
+                command.Parameters[3].Value = ((string)(LearnerID));
+            }
+            command.Parameters[4].Value = ((int)(BookingID));
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            object returnValue;
+            try {
+                returnValue = command.ExecuteScalar();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            if (((returnValue == null) 
+                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
+                return null;
+            }
+            else {
+                return ((object)(returnValue));
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual object CheckVehicleBookedAlready(string BookingDate, string endTime, string StartTime, int VehicleID) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[12];
+            if ((BookingDate == null)) {
+                throw new global::System.ArgumentNullException("BookingDate");
+            }
+            else {
+                command.Parameters[0].Value = ((string)(BookingDate));
+            }
+            if ((endTime == null)) {
+                throw new global::System.ArgumentNullException("endTime");
+            }
+            else {
+                command.Parameters[1].Value = ((string)(endTime));
+            }
+            if ((StartTime == null)) {
+                throw new global::System.ArgumentNullException("StartTime");
+            }
+            else {
+                command.Parameters[2].Value = ((string)(StartTime));
+            }
+            command.Parameters[3].Value = ((int)(VehicleID));
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            object returnValue;
+            try {
+                returnValue = command.ExecuteScalar();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            if (((returnValue == null) 
+                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
+                return null;
+            }
+            else {
+                return ((object)(returnValue));
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual object CheckVehicleBookedAlreadyForUpdate(string BookingDate, string endTime, string StartTime, int VehicleID, int BookingID) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[13];
+            if ((BookingDate == null)) {
+                throw new global::System.ArgumentNullException("BookingDate");
+            }
+            else {
+                command.Parameters[0].Value = ((string)(BookingDate));
+            }
+            if ((endTime == null)) {
+                throw new global::System.ArgumentNullException("endTime");
+            }
+            else {
+                command.Parameters[1].Value = ((string)(endTime));
+            }
+            if ((StartTime == null)) {
+                throw new global::System.ArgumentNullException("StartTime");
+            }
+            else {
+                command.Parameters[2].Value = ((string)(StartTime));
+            }
+            command.Parameters[3].Value = ((int)(VehicleID));
+            command.Parameters[4].Value = ((int)(BookingID));
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            object returnValue;
+            try {
+                returnValue = command.ExecuteScalar();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            if (((returnValue == null) 
+                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
+                return null;
+            }
+            else {
+                return ((object)(returnValue));
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, false)]
+        public virtual int DeleteBooking(int Original_BookingID) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[14];
+            command.Parameters[0].Value = ((int)(Original_BookingID));
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual global::System.Nullable<int> GetAverageMonthlyBookings() {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[15];
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            object returnValue;
+            try {
+                returnValue = command.ExecuteScalar();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            if (((returnValue == null) 
+                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
+                return new global::System.Nullable<int>();
+            }
+            else {
+                return new global::System.Nullable<int>(((int)(returnValue)));
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual global::System.Nullable<int> GetAverageWeeklyBookings() {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[16];
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            object returnValue;
+            try {
+                returnValue = command.ExecuteScalar();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            if (((returnValue == null) 
+                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
+                return new global::System.Nullable<int>();
+            }
+            else {
+                return new global::System.Nullable<int>(((int)(returnValue)));
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual string MostInstructorLessonsToday() {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[17];
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            object returnValue;
+            try {
+                returnValue = command.ExecuteScalar();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            if (((returnValue == null) 
+                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
+                return null;
+            }
+            else {
+                return ((string)(returnValue));
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual string MostMonthlyInstructorLessons() {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[18];
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            object returnValue;
+            try {
+                returnValue = command.ExecuteScalar();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            if (((returnValue == null) 
+                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
+                return null;
+            }
+            else {
+                return ((string)(returnValue));
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual string MostWeeklyInstructorLessons() {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[19];
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            object returnValue;
+            try {
+                returnValue = command.ExecuteScalar();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            if (((returnValue == null) 
+                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
+                return null;
+            }
+            else {
+                return ((string)(returnValue));
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual string SecondBestInstructor() {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[20];
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            object returnValue;
+            try {
+                returnValue = command.ExecuteScalar();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            if (((returnValue == null) 
+                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
+                return null;
+            }
+            else {
+                return ((string)(returnValue));
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual string ThirdBestInstructor() {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[21];
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            object returnValue;
+            try {
+                returnValue = command.ExecuteScalar();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            if (((returnValue == null) 
+                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
+                return null;
+            }
+            else {
+                return ((string)(returnValue));
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual string TopInstructorOfAllTime() {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[22];
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            object returnValue;
+            try {
+                returnValue = command.ExecuteScalar();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            if (((returnValue == null) 
+                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
+                return null;
+            }
+            else {
+                return ((string)(returnValue));
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual global::System.Nullable<int> TotalBookings() {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[23];
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            object returnValue;
+            try {
+                returnValue = command.ExecuteScalar();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            if (((returnValue == null) 
+                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
+                return new global::System.Nullable<int>();
+            }
+            else {
+                return new global::System.Nullable<int>(((int)(returnValue)));
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual global::System.Nullable<int> TotalBookingsCompleted() {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[24];
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            object returnValue;
+            try {
+                returnValue = command.ExecuteScalar();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            if (((returnValue == null) 
+                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
+                return new global::System.Nullable<int>();
+            }
+            else {
+                return new global::System.Nullable<int>(((int)(returnValue)));
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
+        public virtual int UpdateBooking(string Booking_Date, string Booking_StartTime, string Booking_EndTime, string Booking_Status, string LearnerID, int Code_Type, int VehicleID, int EmployeeID, int BookingID) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[25];
+            if ((Booking_Date == null)) {
+                throw new global::System.ArgumentNullException("Booking_Date");
+            }
+            else {
+                command.Parameters[0].Value = ((string)(Booking_Date));
+            }
+            if ((Booking_StartTime == null)) {
+                throw new global::System.ArgumentNullException("Booking_StartTime");
+            }
+            else {
+                command.Parameters[1].Value = ((string)(Booking_StartTime));
+            }
+            if ((Booking_EndTime == null)) {
+                throw new global::System.ArgumentNullException("Booking_EndTime");
+            }
+            else {
+                command.Parameters[2].Value = ((string)(Booking_EndTime));
+            }
+            if ((Booking_Status == null)) {
+                throw new global::System.ArgumentNullException("Booking_Status");
+            }
+            else {
+                command.Parameters[3].Value = ((string)(Booking_Status));
+            }
+            if ((LearnerID == null)) {
+                throw new global::System.ArgumentNullException("LearnerID");
+            }
+            else {
+                command.Parameters[4].Value = ((string)(LearnerID));
+            }
+            command.Parameters[5].Value = ((int)(Code_Type));
+            command.Parameters[6].Value = ((int)(VehicleID));
+            command.Parameters[7].Value = ((int)(EmployeeID));
+            command.Parameters[8].Value = ((int)(BookingID));
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
         }
     }
     
@@ -11507,15 +12408,6 @@ VALUES (@Learner_Name,@Learner_Surname,@Learner_IDNumber,@Learner_Age,@Learner_G
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private int UpdateUpdatedRows(WstGrp2DataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._tblLessonCodeTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.tblLessonCode.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._tblLessonCodeTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._tblEmployeeTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.tblEmployee.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -11525,12 +12417,12 @@ VALUES (@Learner_Name,@Learner_Surname,@Learner_IDNumber,@Learner_Age,@Learner_G
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._tblLearnerTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.tblLearner.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._tblLessonCodeTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.tblLessonCode.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._tblLearnerTableAdapter.Update(updatedRows));
+                    result = (result + this._tblLessonCodeTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -11549,6 +12441,15 @@ VALUES (@Learner_Name,@Learner_Surname,@Learner_IDNumber,@Learner_Age,@Learner_G
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._tblBookingTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._tblLearnerTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.tblLearner.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._tblLearnerTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -11571,14 +12472,6 @@ VALUES (@Learner_Name,@Learner_Surname,@Learner_IDNumber,@Learner_Age,@Learner_G
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private int UpdateInsertedRows(WstGrp2DataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._tblLessonCodeTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.tblLessonCode.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._tblLessonCodeTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._tblEmployeeTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.tblEmployee.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -11587,11 +12480,11 @@ VALUES (@Learner_Name,@Learner_Surname,@Learner_IDNumber,@Learner_Age,@Learner_G
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._tblLearnerTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.tblLearner.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._tblLessonCodeTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.tblLessonCode.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._tblLearnerTableAdapter.Update(addedRows));
+                    result = (result + this._tblLessonCodeTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -11608,6 +12501,14 @@ VALUES (@Learner_Name,@Learner_Surname,@Learner_IDNumber,@Learner_Age,@Learner_G
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._tblBookingTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._tblLearnerTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.tblLearner.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._tblLearnerTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -11637,6 +12538,14 @@ VALUES (@Learner_Name,@Learner_Surname,@Learner_IDNumber,@Learner_Age,@Learner_G
                     allChangedRows.AddRange(deletedRows);
                 }
             }
+            if ((this._tblLearnerTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.tblLearner.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._tblLearnerTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._tblBookingTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.tblBooking.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -11653,11 +12562,11 @@ VALUES (@Learner_Name,@Learner_Surname,@Learner_IDNumber,@Learner_Age,@Learner_G
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._tblLearnerTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.tblLearner.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._tblLessonCodeTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.tblLessonCode.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._tblLearnerTableAdapter.Update(deletedRows));
+                    result = (result + this._tblLessonCodeTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -11666,14 +12575,6 @@ VALUES (@Learner_Name,@Learner_Surname,@Learner_IDNumber,@Learner_Age,@Learner_G
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._tblEmployeeTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._tblLessonCodeTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.tblLessonCode.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._tblLessonCodeTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
