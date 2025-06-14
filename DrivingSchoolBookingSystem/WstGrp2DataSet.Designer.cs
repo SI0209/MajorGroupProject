@@ -2918,10 +2918,6 @@ namespace DrivingSchoolBookingSystem {
             
             private global::System.Data.DataColumn columnBooking_Status;
             
-            private global::System.Data.DataColumn columnBooking_TotalCost;
-            
-            private global::System.Data.DataColumn columnBooking_FeeDue;
-            
             private global::System.Data.DataColumn columnCode_Type;
             
             private global::System.Data.DataColumn columnVehicleID;
@@ -3012,22 +3008,6 @@ namespace DrivingSchoolBookingSystem {
             public global::System.Data.DataColumn Booking_StatusColumn {
                 get {
                     return this.columnBooking_Status;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn Booking_TotalCostColumn {
-                get {
-                    return this.columnBooking_TotalCost;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn Booking_FeeDueColumn {
-                get {
-                    return this.columnBooking_FeeDue;
                 }
             }
             
@@ -3148,23 +3128,7 @@ namespace DrivingSchoolBookingSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public tblBookingInnerJoinRow AddtblBookingInnerJoinRow(
-                        System.DateTime Booking_Date, 
-                        System.TimeSpan Booking_StartTime, 
-                        System.TimeSpan Booking_EndTime, 
-                        string Booking_Status, 
-                        decimal Booking_TotalCost, 
-                        decimal Booking_FeeDue, 
-                        int Code_Type, 
-                        int VehicleID, 
-                        int EmployeeID, 
-                        string Employee_Name, 
-                        string Employee_Surname, 
-                        string Learner_Name, 
-                        string Learner_Surname, 
-                        string Vehicle_Make, 
-                        string Vehicle_Model, 
-                        string LearnerID) {
+            public tblBookingInnerJoinRow AddtblBookingInnerJoinRow(System.DateTime Booking_Date, System.TimeSpan Booking_StartTime, System.TimeSpan Booking_EndTime, string Booking_Status, int Code_Type, int VehicleID, int EmployeeID, string Employee_Name, string Employee_Surname, string Learner_Name, string Learner_Surname, string Vehicle_Make, string Vehicle_Model, string LearnerID) {
                 tblBookingInnerJoinRow rowtblBookingInnerJoinRow = ((tblBookingInnerJoinRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -3172,8 +3136,6 @@ namespace DrivingSchoolBookingSystem {
                         Booking_StartTime,
                         Booking_EndTime,
                         Booking_Status,
-                        Booking_TotalCost,
-                        Booking_FeeDue,
                         Code_Type,
                         VehicleID,
                         EmployeeID,
@@ -3218,8 +3180,6 @@ namespace DrivingSchoolBookingSystem {
                 this.columnBooking_StartTime = base.Columns["Booking_StartTime"];
                 this.columnBooking_EndTime = base.Columns["Booking_EndTime"];
                 this.columnBooking_Status = base.Columns["Booking_Status"];
-                this.columnBooking_TotalCost = base.Columns["Booking_TotalCost"];
-                this.columnBooking_FeeDue = base.Columns["Booking_FeeDue"];
                 this.columnCode_Type = base.Columns["Code_Type"];
                 this.columnVehicleID = base.Columns["VehicleID"];
                 this.columnEmployeeID = base.Columns["EmployeeID"];
@@ -3245,10 +3205,6 @@ namespace DrivingSchoolBookingSystem {
                 base.Columns.Add(this.columnBooking_EndTime);
                 this.columnBooking_Status = new global::System.Data.DataColumn("Booking_Status", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnBooking_Status);
-                this.columnBooking_TotalCost = new global::System.Data.DataColumn("Booking_TotalCost", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnBooking_TotalCost);
-                this.columnBooking_FeeDue = new global::System.Data.DataColumn("Booking_FeeDue", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnBooking_FeeDue);
                 this.columnCode_Type = new global::System.Data.DataColumn("Code_Type", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCode_Type);
                 this.columnVehicleID = new global::System.Data.DataColumn("VehicleID", typeof(int), null, global::System.Data.MappingType.Element);
@@ -3282,8 +3238,6 @@ namespace DrivingSchoolBookingSystem {
                 this.columnBooking_EndTime.AllowDBNull = false;
                 this.columnBooking_Status.AllowDBNull = false;
                 this.columnBooking_Status.MaxLength = 20;
-                this.columnBooking_TotalCost.AllowDBNull = false;
-                this.columnBooking_FeeDue.AllowDBNull = false;
                 this.columnCode_Type.AllowDBNull = false;
                 this.columnVehicleID.AllowDBNull = false;
                 this.columnEmployeeID.AllowDBNull = false;
@@ -5105,28 +5059,6 @@ namespace DrivingSchoolBookingSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public decimal Booking_TotalCost {
-                get {
-                    return ((decimal)(this[this.tabletblBookingInnerJoin.Booking_TotalCostColumn]));
-                }
-                set {
-                    this[this.tabletblBookingInnerJoin.Booking_TotalCostColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public decimal Booking_FeeDue {
-                get {
-                    return ((decimal)(this[this.tabletblBookingInnerJoin.Booking_FeeDueColumn]));
-                }
-                set {
-                    this[this.tabletblBookingInnerJoin.Booking_FeeDueColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public int Code_Type {
                 get {
                     return ((int)(this[this.tabletblBookingInnerJoin.Code_TypeColumn]));
@@ -6271,15 +6203,17 @@ ORDER BY
             this._commandCollection[25] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[25].Connection = this.Connection;
             this._commandCollection[25].CommandText = @"UPDATE tblBooking
-SET          Booking_Date = @Booking_Date, Booking_StartTime = @Booking_StartTime, Booking_EndTime = @Booking_EndTime, Booking_Status = @Booking_Status, LearnerID = @LearnerID, Code_Type = @Code_Type, VehicleID = @VehicleID, 
-                  EmployeeID = @EmployeeID
-WHERE  (BookingID = @BookingID);  
-SELECT BookingID, Booking_Date, Booking_StartTime, Booking_EndTime, Booking_Status, LearnerID, Code_Type, VehicleID, EmployeeID FROM tblBooking WHERE (BookingID = @BookingID)";
+SET          Booking_Date = @Booking_Date, Booking_StartTime = @Booking_StartTime, Booking_EndTime = @Booking_EndTime, Booking_Status = @Booking_Status, Booking_TotalCost = @Booking_TotalCost, 
+                  Booking_FeeDue = @Booking_FeeDue, LearnerID = @LearnerID, Code_Type = @Code_Type, VehicleID = @VehicleID, EmployeeID = @EmployeeID
+WHERE  (BookingID = @BookingID); 
+SELECT BookingID, Booking_Date, Booking_StartTime, Booking_EndTime, Booking_Status, Booking_TotalCost, Booking_FeeDue, LearnerID, Code_Type, VehicleID, EmployeeID FROM tblBooking WHERE (BookingID = @BookingID)";
             this._commandCollection[25].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[25].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Booking_Date", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "Booking_Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[25].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Booking_StartTime", global::System.Data.SqlDbType.Time, 5, global::System.Data.ParameterDirection.Input, 0, 0, "Booking_StartTime", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[25].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Booking_EndTime", global::System.Data.SqlDbType.Time, 5, global::System.Data.ParameterDirection.Input, 0, 0, "Booking_EndTime", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[25].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Booking_Status", global::System.Data.SqlDbType.VarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, "Booking_Status", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[25].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Booking_TotalCost", global::System.Data.SqlDbType.Decimal, 9, global::System.Data.ParameterDirection.Input, 10, 2, "Booking_TotalCost", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[25].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Booking_FeeDue", global::System.Data.SqlDbType.Decimal, 9, global::System.Data.ParameterDirection.Input, 10, 2, "Booking_FeeDue", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[25].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LearnerID", global::System.Data.SqlDbType.NVarChar, 128, global::System.Data.ParameterDirection.Input, 0, 0, "LearnerID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[25].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Code_Type", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Code_Type", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[25].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@VehicleID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "VehicleID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -7320,7 +7254,7 @@ SELECT BookingID, Booking_Date, Booking_StartTime, Booking_EndTime, Booking_Stat
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
-        public virtual int UpdateBooking(string Booking_Date, string Booking_StartTime, string Booking_EndTime, string Booking_Status, string LearnerID, int Code_Type, int VehicleID, int EmployeeID, int BookingID) {
+        public virtual int UpdateBooking(string Booking_Date, string Booking_StartTime, string Booking_EndTime, string Booking_Status, decimal Booking_TotalCost, decimal Booking_FeeDue, string LearnerID, int Code_Type, int VehicleID, int EmployeeID, int BookingID) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[25];
             if ((Booking_Date == null)) {
                 throw new global::System.ArgumentNullException("Booking_Date");
@@ -7346,16 +7280,18 @@ SELECT BookingID, Booking_Date, Booking_StartTime, Booking_EndTime, Booking_Stat
             else {
                 command.Parameters[3].Value = ((string)(Booking_Status));
             }
+            command.Parameters[4].Value = ((decimal)(Booking_TotalCost));
+            command.Parameters[5].Value = ((decimal)(Booking_FeeDue));
             if ((LearnerID == null)) {
                 throw new global::System.ArgumentNullException("LearnerID");
             }
             else {
-                command.Parameters[4].Value = ((string)(LearnerID));
+                command.Parameters[6].Value = ((string)(LearnerID));
             }
-            command.Parameters[5].Value = ((int)(Code_Type));
-            command.Parameters[6].Value = ((int)(VehicleID));
-            command.Parameters[7].Value = ((int)(EmployeeID));
-            command.Parameters[8].Value = ((int)(BookingID));
+            command.Parameters[7].Value = ((int)(Code_Type));
+            command.Parameters[8].Value = ((int)(VehicleID));
+            command.Parameters[9].Value = ((int)(EmployeeID));
+            command.Parameters[10].Value = ((int)(BookingID));
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -11566,8 +11502,6 @@ VALUES (@Learner_Name,@Learner_Surname,@Learner_IDNumber,@Learner_Age,@Learner_G
             tableMapping.ColumnMappings.Add("Booking_StartTime", "Booking_StartTime");
             tableMapping.ColumnMappings.Add("Booking_EndTime", "Booking_EndTime");
             tableMapping.ColumnMappings.Add("Booking_Status", "Booking_Status");
-            tableMapping.ColumnMappings.Add("Booking_TotalCost", "Booking_TotalCost");
-            tableMapping.ColumnMappings.Add("Booking_FeeDue", "Booking_FeeDue");
             tableMapping.ColumnMappings.Add("Code_Type", "Code_Type");
             tableMapping.ColumnMappings.Add("VehicleID", "VehicleID");
             tableMapping.ColumnMappings.Add("EmployeeID", "EmployeeID");
@@ -11595,7 +11529,7 @@ VALUES (@Learner_Name,@Learner_Surname,@Learner_IDNumber,@Learner_Age,@Learner_G
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = @"
-											SELECT tblBooking.BookingID, tblBooking.Booking_Date, tblBooking.Booking_StartTime, tblBooking.Booking_EndTime, tblBooking.Booking_Status, tblBooking.Booking_TotalCost, tblBooking.Booking_FeeDue, tblBooking.LearnerID,
+											SELECT tblBooking.BookingID, tblBooking.Booking_Date, tblBooking.Booking_StartTime, tblBooking.Booking_EndTime, tblBooking.Booking_Status, tblBooking.LearnerID,
 											tblBooking.Code_Type, tblBooking.VehicleID, tblBooking.EmployeeID, tblEmployee.Employee_Name, tblEmployee.Employee_Surname, tblVehicle.Vehicle_Make, tblVehicle.Vehicle_Model, tblLearner.Learner_Name,
 											tblLearner.Learner_Surname
 											FROM     tblBooking INNER JOIN
