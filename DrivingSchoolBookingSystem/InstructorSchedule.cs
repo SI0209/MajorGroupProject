@@ -71,13 +71,10 @@ namespace DrivingSchoolBookingSystem
             this.Hide();
         }
 
-<<<<<<< HEAD
+
         private void label18_Click(object sender, EventArgs e)
         {
 
         }
-=======
-        
->>>>>>> e708781 (Instructor Schedule)
     }
 }
