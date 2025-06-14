@@ -88,7 +88,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(85, 37);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(742, 458);
+            this.panel1.Size = new System.Drawing.Size(828, 458);
             this.panel1.TabIndex = 0;
             // 
             // dataGridView2
@@ -109,7 +109,7 @@
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(520, 177);
+            this.dataGridView2.Size = new System.Drawing.Size(601, 177);
             this.dataGridView2.TabIndex = 13;
             // 
             // vehicleIDDataGridViewTextBoxColumn
@@ -226,7 +226,7 @@
             this.dgvLessonCode.Name = "dgvLessonCode";
             this.dgvLessonCode.RowHeadersWidth = 51;
             this.dgvLessonCode.RowTemplate.Height = 24;
-            this.dgvLessonCode.Size = new System.Drawing.Size(520, 162);
+            this.dgvLessonCode.Size = new System.Drawing.Size(601, 162);
             this.dgvLessonCode.TabIndex = 9;
             // 
             // codeTypeDataGridViewTextBoxColumn
@@ -357,7 +357,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::DrivingSchoolBookingSystem.Properties.Resources.Background_final;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(839, 507);
+            this.ClientSize = new System.Drawing.Size(945, 507);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
             this.Name = "LessonCodeForm";
