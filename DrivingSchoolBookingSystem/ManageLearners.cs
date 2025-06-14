@@ -161,7 +161,7 @@ namespace DrivingSchoolBookingSystem
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {// Restrict issue date range (in case user tries to set it via code)
-            /*try
+            try
             {
                 IssuedateTimePicker1.MinDate = DateTime.Today.AddYears(-2);
                 IssuedateTimePicker1.MaxDate = DateTime.Today;
@@ -176,9 +176,9 @@ namespace DrivingSchoolBookingSystem
             }
             catch  (Exception exception)
             {
-                MessageBox.Show("An error occurred while setting the date: " + exception.Message);
+                MessageBox.Show("Clear Dates before choosing a new one");
             }
-                    */
+                    
 
         }
 
@@ -195,6 +195,8 @@ namespace DrivingSchoolBookingSystem
             comboBox2.SelectedIndex = -1; // Reset to no selection
             comboBox3.SelectedIndex = -1; // Reset to no selection
             comboBox4.SelectedIndex = -1; // Reset to no selection
+            IssuedateTimePicker1.Value = DateTime.Now; // Reset to current date
+            ExpdateTimePicker2.Value = DateTime.Now.AddYears(2); // Optionally reset expiry as well
         }
 
         private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -415,6 +417,11 @@ namespace DrivingSchoolBookingSystem
            HomeForm home = new HomeForm(); 
             home.Show();                             
             this.Hide();
+        }
+
+        private void fillBy2ToolStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }

@@ -93,6 +93,7 @@
             this.label18 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label16 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblLearnerBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wstGrp2DataSet1BindingSource)).BeginInit();
@@ -127,7 +128,7 @@
             this.learnerLearnersExpiryDateDataGridViewTextBoxColumn,
             this.codeTypeDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.tblLearnerBindingSource1;
-            this.dataGridView1.Location = new System.Drawing.Point(848, 273);
+            this.dataGridView1.Location = new System.Drawing.Point(847, 454);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -476,19 +477,19 @@
             // 
             // IssuedateTimePicker1
             // 
-            this.IssuedateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IssuedateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IssuedateTimePicker1.Location = new System.Drawing.Point(232, 472);
             this.IssuedateTimePicker1.Name = "IssuedateTimePicker1";
-            this.IssuedateTimePicker1.Size = new System.Drawing.Size(167, 27);
+            this.IssuedateTimePicker1.Size = new System.Drawing.Size(167, 24);
             this.IssuedateTimePicker1.TabIndex = 21;
             this.IssuedateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // ExpdateTimePicker2
             // 
-            this.ExpdateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExpdateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ExpdateTimePicker2.Location = new System.Drawing.Point(232, 517);
             this.ExpdateTimePicker2.Name = "ExpdateTimePicker2";
-            this.ExpdateTimePicker2.Size = new System.Drawing.Size(167, 27);
+            this.ExpdateTimePicker2.Size = new System.Drawing.Size(167, 24);
             this.ExpdateTimePicker2.TabIndex = 22;
             this.ExpdateTimePicker2.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
             // 
@@ -581,7 +582,7 @@
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(1020, 220);
+            this.label14.Location = new System.Drawing.Point(1075, 389);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(239, 29);
             this.label14.TabIndex = 31;
@@ -591,7 +592,7 @@
             // textBox7
             // 
             this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(1320, 224);
+            this.textBox7.Location = new System.Drawing.Point(1392, 393);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(152, 27);
             this.textBox7.TabIndex = 32;
@@ -602,7 +603,7 @@
             this.button4.BackColor = System.Drawing.Color.Lavender;
             this.button4.Font = new System.Drawing.Font("Comic Sans MS", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button4.Location = new System.Drawing.Point(1555, 220);
+            this.button4.Location = new System.Drawing.Point(1752, 393);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(92, 40);
             this.button4.TabIndex = 34;
@@ -653,6 +654,7 @@
             this.fillBy2ToolStrip.Size = new System.Drawing.Size(1924, 27);
             this.fillBy2ToolStrip.TabIndex = 39;
             this.fillBy2ToolStrip.Text = "fillBy2ToolStrip";
+            this.fillBy2ToolStrip.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.fillBy2ToolStrip_ItemClicked);
             // 
             // fillBy2ToolStripButton
             // 
@@ -785,6 +787,15 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(1583, 103);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(51, 16);
+            this.label16.TabIndex = 44;
+            this.label16.Text = "label16";
+            // 
             // ManageLearners
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -792,6 +803,7 @@
             this.BackgroundImage = global::DrivingSchoolBookingSystem.Properties.Resources.Background_final;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1924, 1055);
+            this.Controls.Add(this.label16);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.button5);
@@ -896,5 +908,6 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label16;
     }
 }
