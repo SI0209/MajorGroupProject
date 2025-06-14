@@ -31,14 +31,25 @@ namespace DrivingSchoolBookingSystem
             label15.Visible = false;
             textBox8.Visible = false;
             comboBox1.KeyPress += combox1_KeyPress;
+            comboBox2.KeyPress += combox2_KeyPress;
+            comboBox3.KeyPress += combox3_KeyPress;
 
             //gender combox
 
             IssuedateTimePicker1.MinDate = DateTime.Today.AddYears(-2);
             IssuedateTimePicker1.MaxDate = DateTime.Today;
 
+
         }
         private void combox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true; // This blocks all typing
+        }
+        private void combox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true; // This blocks all typing
+        }
+        private void combox3_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = true; // This blocks all typing
         }
@@ -179,7 +190,7 @@ namespace DrivingSchoolBookingSystem
             {
                 MessageBox.Show("Clear Dates before choosing a new one");
             }
-            
+          
 
         }
 
@@ -196,8 +207,24 @@ namespace DrivingSchoolBookingSystem
             comboBox2.SelectedIndex = -1; // Reset to no selection
             comboBox3.SelectedIndex = -1; // Reset to no selection
             comboBox4.SelectedIndex = -1; // Reset to no selection
-            IssuedateTimePicker1.Value = DateTime.Now; // Reset to current date
-            ExpdateTimePicker2.Value = DateTime.Now.AddYears(2); // Optionally reset expiry as well
+            try
+            {
+                // Remove date restrictions or set to a broader range
+                IssuedateTimePicker1.MinDate = DateTimePicker.MinimumDateTime;  // removes min limit
+                IssuedateTimePicker1.MaxDate = DateTimePicker.MaximumDateTime;  // removes max limit
+
+                // Reset to today's date or any default
+                IssuedateTimePicker1.Value = DateTime.Today;
+
+                // Reset expiry date picker to default or empty (if possible)
+                ExpdateTimePicker2.MinDate = DateTimePicker.MinimumDateTime;
+                ExpdateTimePicker2.MaxDate = DateTimePicker.MaximumDateTime;
+                ExpdateTimePicker2.Value = DateTime.Today;  // or some default/reset value
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error resetting dates: " + ex.Message);
+            }
         }
 
         private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -421,6 +448,11 @@ namespace DrivingSchoolBookingSystem
         }
 
         private void fillBy2ToolStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
