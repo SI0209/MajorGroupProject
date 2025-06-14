@@ -1583,7 +1583,11 @@ WHERE  (tblBooking.LearnerID = @LearnerID)</CommandText>
               <xs:element name="Code_Type" msprop:Generator_ColumnPropNameInTable="Code_TypeColumn" msprop:Generator_ColumnPropNameInRow="Code_Type" msprop:Generator_UserColumnName="Code_Type" msprop:Generator_ColumnVarNameInTable="columnCode_Type" type="xs:int" />
               <xs:element name="VehicleID" msprop:Generator_ColumnPropNameInTable="VehicleIDColumn" msprop:Generator_ColumnPropNameInRow="VehicleID" msprop:Generator_UserColumnName="VehicleID" msprop:Generator_ColumnVarNameInTable="columnVehicleID" type="xs:int" />
               <xs:element name="EmployeeID" msprop:Generator_ColumnPropNameInTable="EmployeeIDColumn" msprop:Generator_ColumnPropNameInRow="EmployeeID" msprop:Generator_UserColumnName="EmployeeID" msprop:Generator_ColumnVarNameInTable="columnEmployeeID" type="xs:int" />
+<<<<<<< HEAD
               <xs:element name="LearnerID" msprop:Generator_ColumnPropNameInTable="LearnerIDColumn" msprop:Generator_ColumnPropNameInRow="LearnerID" msprop:Generator_UserColumnName="LearnerID" msprop:Generator_ColumnVarNameInTable="columnLearnerID" type="xs:int" />
+=======
+              <xs:element name="LearnerID" msprop:Generator_ColumnPropNameInTable="LearnerIDColumn" msprop:Generator_ColumnPropNameInRow="LearnerID" msprop:Generator_UserColumnName="LearnerID" msprop:Generator_ColumnVarNameInTable="columnLearnerID" type="xs:string" />
+>>>>>>> db31f0e (Edited Dataset and bug fixing)
             </xs:sequence>
           </xs:complexType>
         </xs:element>
