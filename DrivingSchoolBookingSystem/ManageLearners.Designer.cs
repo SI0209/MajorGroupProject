@@ -647,6 +647,7 @@
             // 
             // fillBy2ToolStrip
             // 
+            this.fillBy2ToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.fillBy2ToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.fillBy2ToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fillBy2ToolStripButton});
@@ -655,6 +656,7 @@
             this.fillBy2ToolStrip.Size = new System.Drawing.Size(1924, 27);
             this.fillBy2ToolStrip.TabIndex = 39;
             this.fillBy2ToolStrip.Text = "fillBy2ToolStrip";
+            this.fillBy2ToolStrip.Visible = false;
             this.fillBy2ToolStrip.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.fillBy2ToolStrip_ItemClicked);
             // 
             // fillBy2ToolStripButton
@@ -808,7 +810,6 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.fillBy2ToolStrip);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.textBox7);
@@ -818,6 +819,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.fillBy2ToolStrip);
             this.DoubleBuffered = true;
             this.Name = "ManageLearners";
             this.Text = "LearnerForm2";

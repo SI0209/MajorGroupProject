@@ -15,6 +15,8 @@ namespace DrivingSchoolBookingSystem
 {
     public partial class ManageLearners : Form
     {
+        private bool suppressDateEvents = false;
+
         public ManageLearners()
         {
             InitializeComponent();
@@ -33,6 +35,7 @@ namespace DrivingSchoolBookingSystem
             comboBox1.KeyPress += combox1_KeyPress;
             comboBox2.KeyPress += combox2_KeyPress;
             comboBox3.KeyPress += combox3_KeyPress;
+            comboBox4.KeyPress += combox4_KeyPress;
 
             //gender combox
 
@@ -50,6 +53,10 @@ namespace DrivingSchoolBookingSystem
             e.Handled = true; // This blocks all typing
         }
         private void combox3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true; // This blocks all typing
+        }
+        private void combox4_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = true; // This blocks all typing
         }
@@ -173,12 +180,13 @@ namespace DrivingSchoolBookingSystem
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {// Restrict issue date range (in case user tries to set it via code)
+            if (suppressDateEvents) return; // Prevent running this code during programmatic updates
+
             try
             {
                 IssuedateTimePicker1.MinDate = DateTime.Today.AddYears(-2);
                 IssuedateTimePicker1.MaxDate = DateTime.Today;
 
-                // Set and lock expiry date
                 DateTime issueDate = IssuedateTimePicker1.Value;
                 DateTime expiryDate = issueDate.AddYears(2);
 
@@ -186,11 +194,11 @@ namespace DrivingSchoolBookingSystem
                 ExpdateTimePicker2.MaxDate = expiryDate;
                 ExpdateTimePicker2.Value = expiryDate;
             }
-            catch  (Exception exception)
+            catch (Exception)
             {
                 MessageBox.Show("Clear Dates before choosing a new one");
             }
-          
+
 
         }
 
@@ -246,8 +254,36 @@ namespace DrivingSchoolBookingSystem
                 textBox5.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
                 textBox6.Text = dataGridView1.CurrentRow.Cells[8].Value.ToString();
                 comboBox3.Text = dataGridView1.CurrentRow.Cells[9].Value.ToString();
-                IssuedateTimePicker1.Value = Convert.ToDateTime(dataGridView1.CurrentRow.Cells[10].Value);
-                ExpdateTimePicker2.Value = Convert.ToDateTime(dataGridView1.CurrentRow.Cells[11].Value);
+                try
+                {
+                    suppressDateEvents = true; // Disable ValueChanged event
+
+                    // Temporarily remove restrictions
+                    IssuedateTimePicker1.MinDate = DateTimePicker.MinimumDateTime;
+                    IssuedateTimePicker1.MaxDate = DateTimePicker.MaximumDateTime;
+
+                    // Set issue date
+                    DateTime issueDate = Convert.ToDateTime(dataGridView1.CurrentRow.Cells[10].Value);
+                    IssuedateTimePicker1.Value = issueDate;
+
+                    // Reapply restriction after setting
+                    IssuedateTimePicker1.MinDate = DateTime.Today.AddYears(-2);
+                    IssuedateTimePicker1.MaxDate = DateTime.Today;
+
+                    // Set and lock expiry date
+                    DateTime expiryDate = Convert.ToDateTime(dataGridView1.CurrentRow.Cells[11].Value);
+                    ExpdateTimePicker2.MinDate = expiryDate;
+                    ExpdateTimePicker2.MaxDate = expiryDate;
+                    ExpdateTimePicker2.Value = expiryDate;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error loading date: " + ex.Message);
+                }
+                finally
+                {
+                    suppressDateEvents = false; // Re-enable event after done
+                }
                 comboBox4.Text = dataGridView1.CurrentRow.Cells[12].Value.ToString();
                 label15.Visible = true;
                 textBox8.Visible = true;
