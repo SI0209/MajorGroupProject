@@ -228,6 +228,7 @@
             this.dtpDate.Name = "dtpDate";
             this.dtpDate.Size = new System.Drawing.Size(340, 30);
             this.dtpDate.TabIndex = 104;
+            this.dtpDate.ValueChanged += new System.EventHandler(this.dtpDate_ValueChanged);
             // 
             // taBooking
             // 
