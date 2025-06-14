@@ -147,39 +147,16 @@ namespace DrivingSchoolBookingSystem
 
         private void textBox7_TextChanged(object sender, EventArgs e)
         {
-            /*string input = textBox7.Text.Trim();
-
-            if (textBox7.Text.Any(char.IsLetter))
-            {
-                MessageBox.Show("Please enter digits only for learner ID.");
-                return;
-            }
-
-
-            if (int.TryParse(input, out int learnerId))
-            {
-                tblLearnerTableAdapter.FillByLearnerID(this.wstGrp2DataSet1.tblLearner, learnerId);
-            }
-            else
-            {
-                
-            }
-            if (wstGrp2DataSet1.tblLearner.Rows.Count == 0)
-            {
-                MessageBox.Show("Invalid learner ID, please input a valid ID.");
-                tblLearnerTableAdapter.Fill(this.wstGrp2DataSet1.tblLearner);
-                return;
-            }*/
+           
 
 
             string input = textBox7.Text.Trim();
 
             try
             {
-                if (string.IsNullOrWhiteSpace(input))
+                bool isTextBox7Empty = string.IsNullOrWhiteSpace(input);
                 {
-                    MessageBox.Show("Please enter a search value.");
-                    return;
+                   tblLearnerTableAdapter.Fill(this.wstGrp2DataSet1.tblLearner);
                 }
 
                 // Search by LearnerID if input is numeric
