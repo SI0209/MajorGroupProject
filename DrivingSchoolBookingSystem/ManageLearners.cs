@@ -48,9 +48,17 @@ namespace DrivingSchoolBookingSystem
         }
         private void SetIssueDatePickerRange()
         {
-            IssuedateTimePicker1.MinDate = DateTime.Today.AddYears(-2);
-            IssuedateTimePicker1.MaxDate = DateTime.Today;
-            IssuedateTimePicker1.Value = DateTime.Today;
+            DateTime minDate = DateTime.Today.AddYears(-2);
+            DateTime maxDate = DateTime.Today;
+
+            IssuedateTimePicker1.MinDate = minDate;
+            IssuedateTimePicker1.MaxDate = maxDate;
+
+            // Ensure value is within new range
+            if (IssuedateTimePicker1.Value < minDate || IssuedateTimePicker1.Value > maxDate)
+            {
+                IssuedateTimePicker1.Value = maxDate;
+            }
         }
         private void combox1_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -244,25 +252,37 @@ namespace DrivingSchoolBookingSystem
                 MessageBox.Show("Clear dates before selecting a new one.");
             }*/
 
-            if (suppressDateEvents || !autoDateHandlingEnabled)
-                return; // Don't run logic if suppressed or auto handling disabled
+            if (!autoDateHandlingEnabled || suppressDateEvents)
+                return;
 
             try
             {
+                suppressDateEvents = true; // prevent reentry or other events
+
+                /*  DateTime issueDate = IssuedateTimePicker1.Value;
+                  DateTime expiryDate = issueDate.AddYears(2);
+
+                  ExpdateTimePicker2.MinDate = expiryDate;
+                  ExpdateTimePicker2.MaxDate = expiryDate;
+                  ExpdateTimePicker2.Value = expiryDate;*/
+                IssuedateTimePicker1.MinDate = DateTime.Today.AddYears(-2);
+                IssuedateTimePicker1.MaxDate = DateTime.Today;
+
                 DateTime issueDate = IssuedateTimePicker1.Value;
                 DateTime expiryDate = issueDate.AddYears(2);
-
-                suppressDateEvents = true; // Suppress events while setting expiryDate picker
 
                 ExpdateTimePicker2.MinDate = expiryDate;
                 ExpdateTimePicker2.MaxDate = expiryDate;
                 ExpdateTimePicker2.Value = expiryDate;
-
-                suppressDateEvents = false;
             }
-            catch (Exception)
+            
+            catch
             {
                 MessageBox.Show("Clear dates before selecting a new one.");
+            }
+            finally
+            {
+                suppressDateEvents = false;
             }
 
 
@@ -270,44 +290,59 @@ namespace DrivingSchoolBookingSystem
 
         private void button3_Click(object sender, EventArgs e)
         {
-            textBox1.Clear();
-            textBox2.Clear();
-            textBox3.Clear();
-            textBox4.Clear();
-            textBox5.Clear();
-            textBox6.Clear();
-            textBox8.Clear();
-            comboBox1.SelectedIndex = -1; // Reset to no selection
-            comboBox2.SelectedIndex = -1; // Reset to no selection
-            comboBox3.SelectedIndex = -1; // Reset to no selection
-            comboBox4.SelectedIndex = -1; // Reset to no selection
             try
             {
-                suppressDateEvents = true;   // Suppress event while resetting dates
-                autoDateHandlingEnabled = true;  // Re-enable auto handling
+              
 
-                SetIssueDatePickerRange();
+                // Reset textboxes and comboboxes
+                textBox1.Clear();
+                textBox2.Clear();
+                textBox3.Clear();
+                textBox4.Clear();
+                textBox5.Clear();
+                textBox6.Clear();
+                textBox8.Clear();
 
-                // Reset expiry date picker to 2 years after issue date
-                DateTime expiryDate = IssuedateTimePicker1.Value.AddYears(2);
-                ExpdateTimePicker2.MinDate = expiryDate;
-                ExpdateTimePicker2.MaxDate = expiryDate;
-                ExpdateTimePicker2.Value = expiryDate;
+                comboBox1.SelectedIndex = -1;
+                comboBox2.SelectedIndex = -1;
+                comboBox3.SelectedIndex = -1;
+                comboBox4.SelectedIndex = -1;
+                DateTime today = DateTime.Today;
+
+                // Reset Issue Date picker range and value
+                IssuedateTimePicker1.MinDate = today.AddYears(-2);
+                IssuedateTimePicker1.MaxDate = today;
+                IssuedateTimePicker1.Value = today;
+
+                // Calculate expiry date as 2 years after issue date
+                DateTime expiry = IssuedateTimePicker1.Value.AddYears(2);
+
+                // Set Expiry Date picker range and value based on issue date
+                ExpdateTimePicker2.MinDate = expiry;
+                ExpdateTimePicker2.MaxDate = expiry;
+                ExpdateTimePicker2.Value = expiry;
+
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error resetting dates: " + ex.Message);
+                MessageBox.Show("An error occurred while clearing the form: " + ex.Message);
             }
             finally
+
             {
-                suppressDateEvents = false;  // Re-enable events after resetting
+                autoDateHandlingEnabled = true;
+                label15.Visible = false;
+                textBox8.Visible = false;
+                textBox8.Enabled = true; // Re-enable textbox for new entries
             }
+
         }
 
         private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             try
             {
+                // Populate all textboxes and combo boxes from the selected row
                 textBox8.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
                 textBox1.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
                 textBox2.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
@@ -318,50 +353,48 @@ namespace DrivingSchoolBookingSystem
                 textBox5.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
                 textBox6.Text = dataGridView1.CurrentRow.Cells[8].Value.ToString();
                 comboBox3.Text = dataGridView1.CurrentRow.Cells[9].Value.ToString();
-                try
+                comboBox4.Text = dataGridView1.CurrentRow.Cells[12].Value?.ToString();
+
+                label15.Visible = true;
+                textBox8.Visible = true;
+                textBox8.Enabled = false;
+
+                // Disable automatic date handling during row population
+                suppressDateEvents = true;
+                autoDateHandlingEnabled = false;
+
+                // Temporarily remove restrictions to set historical values
+                IssuedateTimePicker1.MinDate = DateTimePicker.MinimumDateTime;
+                IssuedateTimePicker1.MaxDate = DateTimePicker.MaximumDateTime;
+
+                DateTime issueDate = Convert.ToDateTime(dataGridView1.CurrentRow.Cells[10].Value);
+                IssuedateTimePicker1.Value = issueDate;
+
+                // Set expiry date, if available
+                if (dataGridView1.CurrentRow.Cells[11].Value != DBNull.Value)
                 {
-                    // Disable auto date update
-                    autoDateHandlingEnabled = false;
+                    DateTime expiryDate = Convert.ToDateTime(dataGridView1.CurrentRow.Cells[11].Value);
 
-                    // Remove range restrictions temporarily so out-of-range dates can load
-                    IssuedateTimePicker1.MinDate = DateTimePicker.MinimumDateTime;
-                    IssuedateTimePicker1.MaxDate = DateTimePicker.MaximumDateTime;
+                    ExpdateTimePicker2.MinDate = DateTimePicker.MinimumDateTime;
+                    ExpdateTimePicker2.MaxDate = DateTimePicker.MaximumDateTime;
 
-                    DateTime issueDate = Convert.ToDateTime(dataGridView1.CurrentRow.Cells[10].Value);
-                    IssuedateTimePicker1.Value = issueDate;
+                    ExpdateTimePicker2.Value = expiryDate;
 
-                    // Same for expiry date
-                    if (dataGridView1.CurrentRow.Cells[11].Value != DBNull.Value)
-                    {
-                        DateTime expiryDate = Convert.ToDateTime(dataGridView1.CurrentRow.Cells[11].Value);
-
-                        ExpdateTimePicker2.MinDate = DateTimePicker.MinimumDateTime;
-                        ExpdateTimePicker2.MaxDate = DateTimePicker.MaximumDateTime;
-
-                        ExpdateTimePicker2.Value = expiryDate;
-
-                        // Lock expiry date picker to selected expiry date if desired
-                        ExpdateTimePicker2.MinDate = expiryDate;
-                        ExpdateTimePicker2.MaxDate = expiryDate;
-                    }
-
-                    // Other UI updates here...
-                    comboBox4.Text = dataGridView1.CurrentRow.Cells[12].Value?.ToString();
-                    label15.Visible = true;
-                    textBox8.Visible = true;
-                    textBox8.Enabled = false;
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("An error occurred while selecting the row: " + ex.Message);
-                }
-
-            }
-            catch(Exception ex) 
-                {
-                MessageBox.Show(ex.Message);
+                    // Lock expiry date picker to that exact date
+                    ExpdateTimePicker2.MinDate = expiryDate;
+                    ExpdateTimePicker2.MaxDate = expiryDate;
                 }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred while selecting the row: " + ex.Message);
+            }
+            finally
+            {
+                suppressDateEvents = false;
+                // DO NOT re-enable autoDateHandlingEnabled here — wait for Clear button to do that
+            }
+        }
 
         private void button2_Click(object sender, EventArgs e)
         {
