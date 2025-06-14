@@ -272,8 +272,8 @@ namespace DrivingSchoolBookingSystem
                 DateTime issueDate = IssuedateTimePicker1.Value;
                 DateTime expiryDate = issueDate.AddYears(2);
 
-                ExpdateTimePicker2.MinDate = expiryDate;
-                ExpdateTimePicker2.MaxDate = expiryDate;
+               /* ExpdateTimePicker2.MinDate = expiryDate;
+                ExpdateTimePicker2.MaxDate = expiryDate;*/
                 ExpdateTimePicker2.Value = expiryDate;
             }
             
@@ -312,17 +312,20 @@ namespace DrivingSchoolBookingSystem
                 comboBox4.SelectedIndex = -1;
 
                 // Set Issue Date picker range and value
-                DateTime today = DateTime.Today;
+                SetIssueDatePickerRange();
+
+               /* DateTime today = DateTime.Today;
                 IssuedateTimePicker1.MinDate = today.AddYears(-2);
                 IssuedateTimePicker1.MaxDate = today;
-                IssuedateTimePicker1.Value = today;
+                IssuedateTimePicker1.Value = today;*/
+
 
                 // Calculate expiry date as 2 years after issue date
                 DateTime expiryDate = IssuedateTimePicker1.Value.AddYears(2);
 
                 // Set Expiry Date picker min, max, and value accordingly
-                ExpdateTimePicker2.MinDate = expiryDate;
-                ExpdateTimePicker2.MaxDate = expiryDate;
+                /*ExpdateTimePicker2.MinDate = expiryDate;
+                ExpdateTimePicker2.MaxDate = expiryDate;*/
                 ExpdateTimePicker2.Value = expiryDate;
             }
             catch (Exception ex)
