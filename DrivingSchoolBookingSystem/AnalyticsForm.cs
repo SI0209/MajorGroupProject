@@ -21,5 +21,12 @@ namespace DrivingSchoolBookingSystem
         {
 
         }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            HomeForm home = new HomeForm();
+            home.ShowDialog();
+        }
     }
 }
