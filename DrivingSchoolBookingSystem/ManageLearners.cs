@@ -147,7 +147,7 @@ namespace DrivingSchoolBookingSystem
 
         private void textBox7_TextChanged(object sender, EventArgs e)
         {
-            string input = textBox7.Text.Trim();
+            /*string input = textBox7.Text.Trim();
 
             if (textBox7.Text.Any(char.IsLetter))
             {
@@ -169,6 +169,45 @@ namespace DrivingSchoolBookingSystem
                 MessageBox.Show("Invalid learner ID, please input a valid ID.");
                 tblLearnerTableAdapter.Fill(this.wstGrp2DataSet1.tblLearner);
                 return;
+            }*/
+
+
+            string input = textBox7.Text.Trim();
+
+            try
+            {
+                if (string.IsNullOrWhiteSpace(input))
+                {
+                    MessageBox.Show("Please enter a search value.");
+                    return;
+                }
+
+                // Search by LearnerID if input is numeric
+                if (input.All(char.IsDigit))
+                {
+                    if (int.TryParse(input, out int learnerId))
+                    {
+                        tblLearnerTableAdapter.FillByLearnerID(this.wstGrp2DataSet1.tblLearner, learnerId);
+                    }
+                }
+                else
+                {
+                    // Search by Name or Surname (partial match with wildcards)
+                    string keyword = $"%{input}%";
+                    tblLearnerTableAdapter.FillByNameOrSurname(this.wstGrp2DataSet1.tblLearner, keyword);
+                }
+
+                // If no results found
+                if (wstGrp2DataSet1.tblLearner.Rows.Count == 0)
+                {
+                    MessageBox.Show("No matching learner found. Reloading full list.");
+                    tblLearnerTableAdapter.Fill(this.wstGrp2DataSet1.tblLearner); // Load all learners
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred while searching: " + ex.Message);
+                tblLearnerTableAdapter.Fill(this.wstGrp2DataSet1.tblLearner); // Load all learners in case of error
             }
         }
 
