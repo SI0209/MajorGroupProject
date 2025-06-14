@@ -32,6 +32,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -97,9 +98,9 @@
             this.learnerProgressBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.trackLearnerTableAdapter = new DrivingSchoolBookingSystem.WstGrp2DS2TableAdapters.TrackLearnerTableAdapter();
             this.button6 = new System.Windows.Forms.Button();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -113,7 +114,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.tblLearnerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.learnerProgressBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.learnerProgressBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // label11
@@ -155,6 +155,18 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(211, 1059);
             this.panel2.TabIndex = 43;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.BackgroundImage = global::DrivingSchoolBookingSystem.Properties.Resources.logo_transparent;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox3.Location = new System.Drawing.Point(21, 32);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(161, 144);
+            this.pictureBox3.TabIndex = 16;
+            this.pictureBox3.TabStop = false;
             // 
             // label5
             // 
@@ -805,18 +817,6 @@
             this.button6.Text = "Save as PDF";
             this.button6.UseVisualStyleBackColor = false;
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.BackgroundImage = global::DrivingSchoolBookingSystem.Properties.Resources.logo_transparent;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox3.Location = new System.Drawing.Point(21, 32);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(161, 144);
-            this.pictureBox3.TabIndex = 16;
-            this.pictureBox3.TabStop = false;
-            // 
             // LearnerProgressForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -849,6 +849,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -864,7 +865,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.tblLearnerBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.learnerProgressBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.learnerProgressBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

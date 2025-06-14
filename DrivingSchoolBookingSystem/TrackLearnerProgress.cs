@@ -279,14 +279,37 @@ namespace DrivingSchoolBookingSystem
 
         private void textBox7_TextChanged(object sender, EventArgs e)
         {
-            string input = textBox7.Text.Trim();
-            if (input.All(char.IsLetter))
-            {
-                tblNewLearnerTableAdapter.FillByLearnerName(this.wstGrp2DS2.tblNewLearner, input);
+            /*  string input = textBox7.Text.Trim();
+              if (input.All(char.IsLetter))
+              {
+                  tblNewLearnerTableAdapter.FillByLearnerName(this.wstGrp2DS2.tblNewLearner, input);
 
+              }
+              else{
+                  MessageBox.Show("Please enter a valid name.");
+              }*/
+            string input = textBox8.Text.Trim();
+
+            if (!string.IsNullOrWhiteSpace(input))
+            {
+                try
+                {
+                    string searchPattern = "%" + input + "%";
+                    trackLearnerTableAdapter.FillByMulti(this.wstGrp2DS2.TrackLearner, searchPattern);
+
+                    if (wstGrp2DS2.TrackLearner.Rows.Count == 0)
+                    {
+                        MessageBox.Show("No matches found. Please try a different keyword.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Search failed: " + ex.Message);
+                }
             }
-            else{
-                MessageBox.Show("Please enter a valid name.");
+            else
+            {
+                MessageBox.Show("Please enter a name, surname, or topic to search.");
             }
         }
 

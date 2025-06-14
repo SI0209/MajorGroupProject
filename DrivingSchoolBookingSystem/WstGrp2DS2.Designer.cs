@@ -3485,7 +3485,7 @@ SELECT ProgressID, LearnerID, LearnerName, LearnerSurname, LessonDate, LessonTop
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[4];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[5];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT ProgressID, LearnerID, LearnerName, LearnerSurname, LessonDate, LessonTopi" +
@@ -3501,26 +3501,17 @@ SELECT ProgressID, LearnerID, LearnerName, LearnerSurname, LessonDate, LessonTop
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = @"INSERT INTO [dbo].[TrackLearner] ([LearnerID], [LearnerName], [LearnerSurname], [LessonDate], [LessonTopic], [Attendance], [Rating], [ErrorsMade], [Comments], [PassStatus]) VALUES (@LearnerID, @LearnerName, @LearnerSurname, @LessonDate, @LessonTopic, @Attendance, @Rating, @ErrorsMade, @Comments, @PassStatus);
-SELECT ProgressID, LearnerID, LearnerName, LearnerSurname, LessonDate, LessonTopic, Attendance, Rating, ErrorsMade, Comments, PassStatus FROM TrackLearner WHERE (ProgressID = SCOPE_IDENTITY())";
+            this._commandCollection[2].CommandText = @"SELECT ProgressID, LearnerID, LearnerName, LearnerSurname, LessonDate, LessonTopic, Attendance, Rating, ErrorsMade, Comments, PassStatus
+FROM     TrackLearner
+WHERE  (LearnerName LIKE @search) OR
+                  (LearnerSurname LIKE @search) OR
+                  (LessonTopic LIKE @search)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LearnerID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "LearnerID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LearnerName", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "LearnerName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LearnerSurname", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "LearnerSurname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LessonDate", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "LessonDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LessonTopic", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "LessonTopic", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Attendance", global::System.Data.SqlDbType.NVarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, "Attendance", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Rating", global::System.Data.SqlDbType.NVarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "Rating", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ErrorsMade", global::System.Data.SqlDbType.NVarChar, 255, global::System.Data.ParameterDirection.Input, 0, 0, "ErrorsMade", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Comments", global::System.Data.SqlDbType.NVarChar, 255, global::System.Data.ParameterDirection.Input, 0, 0, "Comments", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PassStatus", global::System.Data.SqlDbType.NVarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "PassStatus", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@search", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "LearnerName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = @"UPDATE TrackLearner
-SET          LearnerID = @LearnerID, LearnerName = @LearnerName, LearnerSurname = @LearnerSurname, LessonDate = @LessonDate, LessonTopic = @LessonTopic, Attendance = @Attendance, Rating = @Rating, ErrorsMade = @ErrorsMade, 
-                  Comments = @Comments, PassStatus = @PassStatus
-WHERE  (ProgressID = @Original_ProgressID); 
-)";
+            this._commandCollection[3].CommandText = @"INSERT INTO [dbo].[TrackLearner] ([LearnerID], [LearnerName], [LearnerSurname], [LessonDate], [LessonTopic], [Attendance], [Rating], [ErrorsMade], [Comments], [PassStatus]) VALUES (@LearnerID, @LearnerName, @LearnerSurname, @LessonDate, @LessonTopic, @Attendance, @Rating, @ErrorsMade, @Comments, @PassStatus);
+SELECT ProgressID, LearnerID, LearnerName, LearnerSurname, LessonDate, LessonTopic, Attendance, Rating, ErrorsMade, Comments, PassStatus FROM TrackLearner WHERE (ProgressID = SCOPE_IDENTITY())";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LearnerID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "LearnerID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LearnerName", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "LearnerName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -3532,7 +3523,25 @@ WHERE  (ProgressID = @Original_ProgressID);
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ErrorsMade", global::System.Data.SqlDbType.NVarChar, 255, global::System.Data.ParameterDirection.Input, 0, 0, "ErrorsMade", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Comments", global::System.Data.SqlDbType.NVarChar, 255, global::System.Data.ParameterDirection.Input, 0, 0, "Comments", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PassStatus", global::System.Data.SqlDbType.NVarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "PassStatus", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ProgressID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ProgressID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[4].Connection = this.Connection;
+            this._commandCollection[4].CommandText = @"UPDATE TrackLearner
+SET          LearnerID = @LearnerID, LearnerName = @LearnerName, LearnerSurname = @LearnerSurname, LessonDate = @LessonDate, LessonTopic = @LessonTopic, Attendance = @Attendance, Rating = @Rating, ErrorsMade = @ErrorsMade, 
+                  Comments = @Comments, PassStatus = @PassStatus
+WHERE  (ProgressID = @Original_ProgressID); 
+)";
+            this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LearnerID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "LearnerID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LearnerName", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "LearnerName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LearnerSurname", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "LearnerSurname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LessonDate", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "LessonDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LessonTopic", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "LessonTopic", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Attendance", global::System.Data.SqlDbType.NVarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, "Attendance", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Rating", global::System.Data.SqlDbType.NVarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "Rating", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ErrorsMade", global::System.Data.SqlDbType.NVarChar, 255, global::System.Data.ParameterDirection.Input, 0, 0, "ErrorsMade", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Comments", global::System.Data.SqlDbType.NVarChar, 255, global::System.Data.ParameterDirection.Input, 0, 0, "Comments", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PassStatus", global::System.Data.SqlDbType.NVarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "PassStatus", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ProgressID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ProgressID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3590,6 +3599,42 @@ WHERE  (ProgressID = @Original_ProgressID);
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
         public virtual WstGrp2DS2.TrackLearnerDataTable GetDataBy2() {
             this.Adapter.SelectCommand = this.CommandCollection[1];
+            WstGrp2DS2.TrackLearnerDataTable dataTable = new WstGrp2DS2.TrackLearnerDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByMulti(WstGrp2DS2.TrackLearnerDataTable dataTable, string search) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            if ((search == null)) {
+                throw new global::System.ArgumentNullException("search");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(search));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual WstGrp2DS2.TrackLearnerDataTable GetDataBy3(string search) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            if ((search == null)) {
+                throw new global::System.ArgumentNullException("search");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(search));
+            }
             WstGrp2DS2.TrackLearnerDataTable dataTable = new WstGrp2DS2.TrackLearnerDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -3946,7 +3991,7 @@ WHERE  (ProgressID = @Original_ProgressID);
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
         public virtual int InsertQuery(int LearnerID, string LearnerName, string LearnerSurname, string LessonDate, string LessonTopic, string Attendance, string Rating, string ErrorsMade, string Comments, string PassStatus) {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[3];
             command.Parameters[0].Value = ((int)(LearnerID));
             if ((LearnerName == null)) {
                 throw new global::System.ArgumentNullException("LearnerName");
@@ -4024,7 +4069,7 @@ WHERE  (ProgressID = @Original_ProgressID);
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
         public virtual int UpdateQuery(int LearnerID, string LearnerName, string LearnerSurname, string LessonDate, string LessonTopic, string Attendance, string Rating, string ErrorsMade, string Comments, string PassStatus, int Original_ProgressID) {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[3];
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[4];
             command.Parameters[0].Value = ((int)(LearnerID));
             if ((LearnerName == null)) {
                 throw new global::System.ArgumentNullException("LearnerName");
