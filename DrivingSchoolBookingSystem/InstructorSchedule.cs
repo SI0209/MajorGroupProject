@@ -42,12 +42,7 @@ namespace DrivingSchoolBookingSystem
 
         }
 
-        private void InstuctorShcedule_Load(object sender, EventArgs e)
-        {
-
-
-
-        }
+        
 
         
 
@@ -76,9 +71,13 @@ namespace DrivingSchoolBookingSystem
             this.Hide();
         }
 
+<<<<<<< HEAD
         private void label18_Click(object sender, EventArgs e)
         {
 
         }
+=======
+        
+>>>>>>> e708781 (Instructor Schedule)
     }
 }
