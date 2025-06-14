@@ -1580,21 +1580,17 @@ WHERE  (tblBooking.LearnerID = @LearnerID)</CommandText>
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+			  <xs:element name="LearnerID" msprop:Generator_ColumnPropNameInTable="LearnerIDColumn" msprop:Generator_ColumnPropNameInRow="LearnerID" msprop:Generator_UserColumnName="LearnerID" msprop:Generator_ColumnVarNameInTable="columnLearnerID" type="xs:string" />
               <xs:element name="Code_Type" msprop:Generator_ColumnPropNameInTable="Code_TypeColumn" msprop:Generator_ColumnPropNameInRow="Code_Type" msprop:Generator_UserColumnName="Code_Type" msprop:Generator_ColumnVarNameInTable="columnCode_Type" type="xs:int" />
               <xs:element name="VehicleID" msprop:Generator_ColumnPropNameInTable="VehicleIDColumn" msprop:Generator_ColumnPropNameInRow="VehicleID" msprop:Generator_UserColumnName="VehicleID" msprop:Generator_ColumnVarNameInTable="columnVehicleID" type="xs:int" />
               <xs:element name="EmployeeID" msprop:Generator_ColumnPropNameInTable="EmployeeIDColumn" msprop:Generator_ColumnPropNameInRow="EmployeeID" msprop:Generator_UserColumnName="EmployeeID" msprop:Generator_ColumnVarNameInTable="columnEmployeeID" type="xs:int" />
-<<<<<<< HEAD
-              <xs:element name="LearnerID" msprop:Generator_ColumnPropNameInTable="LearnerIDColumn" msprop:Generator_ColumnPropNameInRow="LearnerID" msprop:Generator_UserColumnName="LearnerID" msprop:Generator_ColumnVarNameInTable="columnLearnerID" type="xs:int" />
-=======
-              <xs:element name="LearnerID" msprop:Generator_ColumnPropNameInTable="LearnerIDColumn" msprop:Generator_ColumnPropNameInRow="LearnerID" msprop:Generator_UserColumnName="LearnerID" msprop:Generator_ColumnVarNameInTable="columnLearnerID" type="xs:string" />
->>>>>>> db31f0e (Edited Dataset and bug fixing)
             </xs:sequence>
           </xs:complexType>
         </xs:element>
         <xs:element name="tblEmployee" msprop:Generator_RowEvHandlerName="tblEmployeeRowChangeEventHandler" msprop:Generator_RowDeletedName="tblEmployeeRowDeleted" msprop:Generator_RowDeletingName="tblEmployeeRowDeleting" msprop:Generator_RowEvArgName="tblEmployeeRowChangeEvent" msprop:Generator_TablePropName="tblEmployee" msprop:Generator_RowChangedName="tblEmployeeRowChanged" msprop:Generator_UserTableName="tblEmployee" msprop:Generator_RowChangingName="tblEmployeeRowChanging" msprop:Generator_RowClassName="tblEmployeeRow" msprop:Generator_TableClassName="tblEmployeeDataTable" msprop:Generator_TableVarName="tabletblEmployee">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="EmployeeID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInTable="EmployeeIDColumn" msprop:Generator_ColumnPropNameInRow="EmployeeID" msprop:Generator_UserColumnName="EmployeeID" msprop:Generator_ColumnVarNameInTable="columnEmployeeID" type="xs:int" />
+              <xs:element name="EmployeeID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInTable="EmployeeIDColumn" msprop:Generator_ColumnPropNameInRow="EmployeeID" msprop:Generator_UserColumnName="EmployeeID" msprop:Generator_ColumnVarNameInTable="columnEmployeeID" type="xs:int" /> 
               <xs:element name="Employee_Name" msprop:Generator_ColumnPropNameInTable="Employee_NameColumn" msprop:Generator_ColumnPropNameInRow="Employee_Name" msprop:Generator_UserColumnName="Employee_Name" msprop:Generator_ColumnVarNameInTable="columnEmployee_Name">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
