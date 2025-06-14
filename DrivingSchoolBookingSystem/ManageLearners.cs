@@ -180,7 +180,7 @@ namespace DrivingSchoolBookingSystem
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {// Restrict issue date range (in case user tries to set it via code)
-            if (suppressDateEvents) return; // Prevent running this code during programmatic updates
+            if (suppressDateEvents) return;
 
             try
             {
@@ -254,40 +254,42 @@ namespace DrivingSchoolBookingSystem
                 textBox5.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
                 textBox6.Text = dataGridView1.CurrentRow.Cells[8].Value.ToString();
                 comboBox3.Text = dataGridView1.CurrentRow.Cells[9].Value.ToString();
-                try
+                // Safely get the clicked row
+                if (dataGridView1.CurrentRow == null || dataGridView1.CurrentRow.Cells[10].Value == DBNull.Value)
+                    return;
+
+                suppressDateEvents = true; // Disable ValueChanged temporarily
+
+                // Temporarily lift restrictions on issue date
+                IssuedateTimePicker1.MinDate = DateTimePicker.MinimumDateTime;
+                IssuedateTimePicker1.MaxDate = DateTimePicker.MaximumDateTime;
+
+                DateTime issueDate = Convert.ToDateTime(dataGridView1.CurrentRow.Cells[10].Value);
+                IssuedateTimePicker1.Value = issueDate;
+
+                // Re-apply range: 2 years ago up to today
+                IssuedateTimePicker1.MinDate = DateTime.Today.AddYears(-2);
+                IssuedateTimePicker1.MaxDate = DateTime.Today;
+
+                // Set expiry date and lock it
+                if (dataGridView1.CurrentRow.Cells[11].Value != DBNull.Value)
                 {
-                    suppressDateEvents = true; // Disable ValueChanged event
-
-                    // Temporarily remove restrictions
-                    IssuedateTimePicker1.MinDate = DateTimePicker.MinimumDateTime;
-                    IssuedateTimePicker1.MaxDate = DateTimePicker.MaximumDateTime;
-
-                    // Set issue date
-                    DateTime issueDate = Convert.ToDateTime(dataGridView1.CurrentRow.Cells[10].Value);
-                    IssuedateTimePicker1.Value = issueDate;
-
-                    // Reapply restriction after setting
-                    IssuedateTimePicker1.MinDate = DateTime.Today.AddYears(-2);
-                    IssuedateTimePicker1.MaxDate = DateTime.Today;
-
-                    // Set and lock expiry date
                     DateTime expiryDate = Convert.ToDateTime(dataGridView1.CurrentRow.Cells[11].Value);
+
+                    // Temporarily remove restriction
+                    ExpdateTimePicker2.MinDate = DateTimePicker.MinimumDateTime;
+                    ExpdateTimePicker2.MaxDate = DateTimePicker.MaximumDateTime;
+
+                    ExpdateTimePicker2.Value = expiryDate;
+
+                    // Lock it to this value
                     ExpdateTimePicker2.MinDate = expiryDate;
                     ExpdateTimePicker2.MaxDate = expiryDate;
-                    ExpdateTimePicker2.Value = expiryDate;
+                    comboBox4.Text = dataGridView1.CurrentRow.Cells[12].Value.ToString();
+                    label15.Visible = true;
+                    textBox8.Visible = true;
+                    textBox8.Enabled = false;
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error loading date: " + ex.Message);
-                }
-                finally
-                {
-                    suppressDateEvents = false; // Re-enable event after done
-                }
-                comboBox4.Text = dataGridView1.CurrentRow.Cells[12].Value.ToString();
-                label15.Visible = true;
-                textBox8.Visible = true;
-                textBox8.Enabled = false;
             }
             catch (Exception ex)
             {

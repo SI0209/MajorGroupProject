@@ -793,11 +793,12 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(1583, 103);
+            this.label16.ForeColor = System.Drawing.Color.Black;
+            this.label16.Location = new System.Drawing.Point(1601, 62);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(51, 16);
+            this.label16.Size = new System.Drawing.Size(192, 16);
             this.label16.TabIndex = 44;
-            this.label16.Text = "label16";
+            this.label16.Text = "Click here for further instructions";
             // 
             // ManageLearners
             // 
