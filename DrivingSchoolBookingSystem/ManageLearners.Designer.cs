@@ -67,7 +67,6 @@
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.IssuedateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.ExpdateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
@@ -95,6 +94,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
+            this.ExpdateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.textBox9 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblLearnerBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wstGrp2DataSet1BindingSource)).BeginInit();
@@ -486,15 +487,6 @@
             this.IssuedateTimePicker1.TabIndex = 21;
             this.IssuedateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
-            // ExpdateTimePicker2
-            // 
-            this.ExpdateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ExpdateTimePicker2.Location = new System.Drawing.Point(232, 517);
-            this.ExpdateTimePicker2.Name = "ExpdateTimePicker2";
-            this.ExpdateTimePicker2.Size = new System.Drawing.Size(167, 22);
-            this.ExpdateTimePicker2.TabIndex = 22;
-            this.ExpdateTimePicker2.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
-            // 
             // comboBox4
             // 
             this.comboBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -815,6 +807,23 @@
             this.label17.TabIndex = 45;
             this.label17.Text = "Click here for further instructions";
             // 
+            // ExpdateTimePicker2
+            // 
+            this.ExpdateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExpdateTimePicker2.Location = new System.Drawing.Point(232, 517);
+            this.ExpdateTimePicker2.Name = "ExpdateTimePicker2";
+            this.ExpdateTimePicker2.Size = new System.Drawing.Size(167, 22);
+            this.ExpdateTimePicker2.TabIndex = 22;
+            this.ExpdateTimePicker2.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
+            // 
+            // textBox9
+            // 
+            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox9.Location = new System.Drawing.Point(537, 808);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(167, 27);
+            this.textBox9.TabIndex = 38;
+            // 
             // ManageLearners
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -822,6 +831,7 @@
             this.BackgroundImage = global::DrivingSchoolBookingSystem.Properties.Resources.Background_final;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1924, 1055);
+            this.Controls.Add(this.textBox9);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.panel1);
@@ -898,7 +908,6 @@
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.DateTimePicker IssuedateTimePicker1;
-        private System.Windows.Forms.DateTimePicker ExpdateTimePicker2;
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label13;
@@ -930,5 +939,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.DateTimePicker ExpdateTimePicker2;
+        private System.Windows.Forms.TextBox textBox9;
     }
 }

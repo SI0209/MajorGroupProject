@@ -265,18 +265,19 @@ namespace DrivingSchoolBookingSystem
             {
                 suppressDateEvents = true; // prevent reentry or other events
 
-               
+
                 IssuedateTimePicker1.MinDate = DateTime.Today.AddYears(-2);
                 IssuedateTimePicker1.MaxDate = DateTime.Today;
 
                 DateTime issueDate = IssuedateTimePicker1.Value;
                 DateTime expiryDate = issueDate.AddYears(2);
-
-               /* ExpdateTimePicker2.MinDate = expiryDate;
-                ExpdateTimePicker2.MaxDate = expiryDate;*/
-                ExpdateTimePicker2.Value = expiryDate;
+                /*/ExpdateTimePicker2.MinDate = expiryDate;
+                 ExpdateTimePicker2.MaxDate = expiryDate;*/
+                textBox9.Text = expiryDate.ToString("yyyy-MM-dd");
             }
-            
+
+
+
             catch
             {
                 MessageBox.Show("Clear dates before selecting a new one.");
@@ -293,11 +294,11 @@ namespace DrivingSchoolBookingSystem
         {
             try
             {
-                // Disable event handling to prevent triggering other logic during reset
+                // Disable event handling to prevent triggering other logic during reset  
                 autoDateHandlingEnabled = false;
                 suppressDateEvents = true;
 
-                // Clear all textboxes and combo boxes
+                // Clear all textboxes and combo boxes  
                 textBox1.Clear();
                 textBox2.Clear();
                 textBox3.Clear();
@@ -311,22 +312,14 @@ namespace DrivingSchoolBookingSystem
                 comboBox3.SelectedIndex = -1;
                 comboBox4.SelectedIndex = -1;
 
-                // Set Issue Date picker range and value
+                // Set Issue Date picker range and value  
                 SetIssueDatePickerRange();
 
-               /* DateTime today = DateTime.Today;
-                IssuedateTimePicker1.MinDate = today.AddYears(-2);
-                IssuedateTimePicker1.MaxDate = today;
-                IssuedateTimePicker1.Value = today;*/
-
-
-                // Calculate expiry date as 2 years after issue date
+                // Calculate expiry date as 2 years after issue date  
                 DateTime expiryDate = IssuedateTimePicker1.Value.AddYears(2);
 
-                // Set Expiry Date picker min, max, and value accordingly
-                /*ExpdateTimePicker2.MinDate = expiryDate;
-                ExpdateTimePicker2.MaxDate = expiryDate;*/
-                ExpdateTimePicker2.Value = expiryDate;
+                // Fix: Convert DateTime to string before assigning to textBox9.Text  
+                textBox9.Text = expiryDate.ToString("yyyy-MM-dd");
             }
             catch (Exception ex)
             {
@@ -334,11 +327,11 @@ namespace DrivingSchoolBookingSystem
             }
             finally
             {
-                // Re-enable event handling after reset is done
+                // Re-enable event handling after reset is done  
                 suppressDateEvents = false;
                 autoDateHandlingEnabled = true;
 
-                // Reset UI elements visibility/enabled states as needed
+                // Reset UI elements visibility/enabled states as needed  
                 label15.Visible = false;
                 textBox8.Visible = false;
                 textBox8.Enabled = true;
