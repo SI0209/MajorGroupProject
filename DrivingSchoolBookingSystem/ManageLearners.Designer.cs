@@ -583,17 +583,17 @@
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(1075, 389);
+            this.label14.Location = new System.Drawing.Point(908, 389);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(239, 29);
+            this.label14.Size = new System.Drawing.Size(488, 29);
             this.label14.TabIndex = 31;
-            this.label14.Text = "Search by Learner ID:";
+            this.label14.Text = "Search by Learner ID, First Name or Surname:";
             this.label14.Click += new System.EventHandler(this.label14_Click);
             // 
             // textBox7
             // 
             this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(1392, 393);
+            this.textBox7.Location = new System.Drawing.Point(1426, 393);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(152, 27);
             this.textBox7.TabIndex = 32;
@@ -604,7 +604,7 @@
             this.button4.BackColor = System.Drawing.Color.Lavender;
             this.button4.Font = new System.Drawing.Font("Comic Sans MS", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button4.Location = new System.Drawing.Point(1752, 393);
+            this.button4.Location = new System.Drawing.Point(1657, 385);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(92, 40);
             this.button4.TabIndex = 34;
