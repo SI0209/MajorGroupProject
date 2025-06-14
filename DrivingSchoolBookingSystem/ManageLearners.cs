@@ -141,6 +141,31 @@ namespace DrivingSchoolBookingSystem
             textBox4.Clear();
             textBox5.Clear();
             textBox6.Clear();
+            comboBox1.SelectedIndex = -1; // Reset to no selection          
+            comboBox2.SelectedIndex = -1; // Reset to no selection
+            comboBox3.SelectedIndex = -1; // Reset to no selection
+            comboBox4.SelectedIndex = -1; // Reset to no selection
+            try
+            {
+                // Temporarily remove the event handler
+                IssuedateTimePicker1.ValueChanged -= dateTimePicker1_ValueChanged;
+                // Remove date restrictions or reset
+                IssuedateTimePicker1.MinDate = DateTimePicker.MinimumDateTime;
+                IssuedateTimePicker1.MaxDate = DateTimePicker.MaximumDateTime;
+                IssuedateTimePicker1.Value = DateTime.Today;
+                ExpdateTimePicker2.MinDate = DateTimePicker.MinimumDateTime;
+                ExpdateTimePicker2.MaxDate = DateTimePicker.MaximumDateTime;
+                ExpdateTimePicker2.Value = DateTime.Today;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error resetting dates: " + ex.Message);
+            }
+            finally
+            {
+                // Re-attach the event handler after resetting
+                IssuedateTimePicker1.ValueChanged += dateTimePicker1_ValueChanged;
+            }
 
 
         }
