@@ -754,7 +754,7 @@ namespace DrivingSchoolBookingSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public tblBookingRow AddtblBookingRow(System.DateTime Booking_Date, System.TimeSpan Booking_StartTime, System.TimeSpan Booking_EndTime, string Booking_Status, tblLessonCodeRow parenttblLessonCodeRowBytblLessonCode_tblBooking, tblVehicleRow parenttblVehicleRowBytblVehicle_tblBooking, tblEmployeeRow parenttblEmployeeRowBytblEmployee_tblBooking, string LearnerID) {
+            public tblBookingRow AddtblBookingRow(System.DateTime Booking_Date, System.TimeSpan Booking_StartTime, System.TimeSpan Booking_EndTime, string Booking_Status, tblLessonCodeRow parenttblLessonCodeRowBytblLessonCode_tblBooking, tblVehicleRow parenttblVehicleRowBytblVehicle_tblBooking, tblEmployeeRow parenttblEmployeeRowBytblEmployee_tblBooking, int LearnerID) {
                 tblBookingRow rowtblBookingRow = ((tblBookingRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -834,7 +834,7 @@ namespace DrivingSchoolBookingSystem {
                 base.Columns.Add(this.columnVehicleID);
                 this.columnEmployeeID = new global::System.Data.DataColumn("EmployeeID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEmployeeID);
-                this.columnLearnerID = new global::System.Data.DataColumn("LearnerID", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnLearnerID = new global::System.Data.DataColumn("LearnerID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnLearnerID);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnBookingID}, true));
@@ -853,7 +853,6 @@ namespace DrivingSchoolBookingSystem {
                 this.columnVehicleID.AllowDBNull = false;
                 this.columnEmployeeID.AllowDBNull = false;
                 this.columnLearnerID.AllowDBNull = false;
-                this.columnLearnerID.MaxLength = 128;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4258,9 +4257,9 @@ namespace DrivingSchoolBookingSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string LearnerID {
+            public int LearnerID {
                 get {
-                    return ((string)(this[this.tabletblBooking.LearnerIDColumn]));
+                    return ((int)(this[this.tabletblBooking.LearnerIDColumn]));
                 }
                 set {
                     this[this.tabletblBooking.LearnerIDColumn] = value;
