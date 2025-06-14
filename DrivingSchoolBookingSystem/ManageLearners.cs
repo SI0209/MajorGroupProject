@@ -33,8 +33,9 @@ namespace DrivingSchoolBookingSystem
             comboBox1.KeyPress += combox1_KeyPress;
 
             //gender combox
-        
 
+            IssuedateTimePicker1.MinDate = DateTime.Today.AddYears(-2);
+            IssuedateTimePicker1.MaxDate = DateTime.Today;
 
         }
         private void combox1_KeyPress(object sender, KeyPressEventArgs e)
@@ -178,7 +179,7 @@ namespace DrivingSchoolBookingSystem
             {
                 MessageBox.Show("Clear Dates before choosing a new one");
             }
-                    
+            
 
         }
 
