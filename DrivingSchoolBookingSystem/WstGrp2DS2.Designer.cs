@@ -862,8 +862,6 @@ namespace DrivingSchoolBookingSystem {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class TrackLearnerDataTable : global::System.Data.TypedTableBase<TrackLearnerRow> {
             
-            private global::System.Data.DataColumn columnProgressID;
-            
             private global::System.Data.DataColumn columnLearnerID;
             
             private global::System.Data.DataColumn columnLearnerName;
@@ -915,14 +913,6 @@ namespace DrivingSchoolBookingSystem {
             protected TrackLearnerDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn ProgressIDColumn {
-                get {
-                    return this.columnProgressID;
-                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1046,7 +1036,6 @@ namespace DrivingSchoolBookingSystem {
                 TrackLearnerRow rowTrackLearnerRow = ((TrackLearnerRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        null,
                         LearnerName,
                         LearnerSurname,
                         LessonDate,
@@ -1057,18 +1046,11 @@ namespace DrivingSchoolBookingSystem {
                         Comments,
                         PassStatus};
                 if ((parenttblLearnerRowByFK_TrackLearner_tblLearner != null)) {
-                    columnValuesArray[1] = parenttblLearnerRowByFK_TrackLearner_tblLearner[0];
+                    columnValuesArray[0] = parenttblLearnerRowByFK_TrackLearner_tblLearner[0];
                 }
                 rowTrackLearnerRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowTrackLearnerRow);
                 return rowTrackLearnerRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public TrackLearnerRow FindByProgressID(int ProgressID) {
-                return ((TrackLearnerRow)(this.Rows.Find(new object[] {
-                            ProgressID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1088,7 +1070,6 @@ namespace DrivingSchoolBookingSystem {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnProgressID = base.Columns["ProgressID"];
                 this.columnLearnerID = base.Columns["LearnerID"];
                 this.columnLearnerName = base.Columns["LearnerName"];
                 this.columnLearnerSurname = base.Columns["LearnerSurname"];
@@ -1104,8 +1085,6 @@ namespace DrivingSchoolBookingSystem {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnProgressID = new global::System.Data.DataColumn("ProgressID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnProgressID);
                 this.columnLearnerID = new global::System.Data.DataColumn("LearnerID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnLearnerID);
                 this.columnLearnerName = new global::System.Data.DataColumn("LearnerName", typeof(string), null, global::System.Data.MappingType.Element);
@@ -1126,14 +1105,6 @@ namespace DrivingSchoolBookingSystem {
                 base.Columns.Add(this.columnComments);
                 this.columnPassStatus = new global::System.Data.DataColumn("PassStatus", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPassStatus);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnProgressID}, true));
-                this.columnProgressID.AutoIncrement = true;
-                this.columnProgressID.AutoIncrementSeed = -1;
-                this.columnProgressID.AutoIncrementStep = -1;
-                this.columnProgressID.AllowDBNull = false;
-                this.columnProgressID.ReadOnly = true;
-                this.columnProgressID.Unique = true;
                 this.columnLearnerID.AllowDBNull = false;
                 this.columnLearnerName.AllowDBNull = false;
                 this.columnLearnerName.MaxLength = 50;
@@ -2169,17 +2140,6 @@ namespace DrivingSchoolBookingSystem {
             internal TrackLearnerRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
                 this.tableTrackLearner = ((TrackLearnerDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int ProgressID {
-                get {
-                    return ((int)(this[this.tableTrackLearner.ProgressIDColumn]));
-                }
-                set {
-                    this[this.tableTrackLearner.ProgressIDColumn] = value;
-                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3402,7 +3362,6 @@ SELECT LearnerID, Learner_Name, Learner_Surname, Learner_IDNumber, Learner_Age, 
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "TrackLearner";
-            tableMapping.ColumnMappings.Add("ProgressID", "ProgressID");
             tableMapping.ColumnMappings.Add("LearnerID", "LearnerID");
             tableMapping.ColumnMappings.Add("LearnerName", "LearnerName");
             tableMapping.ColumnMappings.Add("LearnerSurname", "LearnerSurname");
@@ -3431,8 +3390,7 @@ SELECT LearnerID, Learner_Name, Learner_Surname, Learner_IDNumber, Learner_Age, 
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PassStatus", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PassStatus", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [TrackLearner] ([LearnerID], [LearnerName], [LearnerSurname], [LessonDate], [LessonTopic], [Attendance], [Rating], [ErrorsMade], [Comments], [PassStatus]) VALUES (@LearnerID, @LearnerName, @LearnerSurname, @LessonDate, @LessonTopic, @Attendance, @Rating, @ErrorsMade, @Comments, @PassStatus);
-SELECT ProgressID, LearnerID, LearnerName, LearnerSurname, LessonDate, LessonTopic, Attendance, Rating, ErrorsMade, Comments, PassStatus FROM TrackLearner WHERE (ProgressID = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [TrackLearner] ([LearnerID], [LearnerName], [LearnerSurname], [LessonDate], [LessonTopic], [Attendance], [Rating], [ErrorsMade], [Comments], [PassStatus]) VALUES (@LearnerID, @LearnerName, @LearnerSurname, @LessonDate, @LessonTopic, @Attendance, @Rating, @ErrorsMade, @Comments, @PassStatus)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LearnerID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LearnerID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LearnerName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LearnerName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -3486,24 +3444,21 @@ SELECT ProgressID, LearnerID, LearnerName, LearnerSurname, LessonDate, LessonTop
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[5];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ProgressID, LearnerID, LearnerName, LearnerSurname, LessonDate, LessonTopi" +
-                "c, Attendance, Rating, ErrorsMade, Comments, PassStatus\r\nFROM     TrackLearner\r\n" +
-                "WHERE  (LearnerName LIKE @name + \'%\')";
+            this._commandCollection[0].CommandText = "SELECT LearnerID, LearnerName, LearnerSurname, LessonDate, LessonTopic, Attendanc" +
+                "e, Rating, ErrorsMade, Comments, PassStatus FROM TrackLearner WHERE (LearnerName" +
+                " LIKE @name + \'%\')";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "LearnerName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT ProgressID, LearnerID, LearnerName, LearnerSurname, LessonDate, LessonTopi" +
-                "c, Attendance, Rating, ErrorsMade, Comments, PassStatus\r\nFROM     TrackLearner\r\n" +
-                "";
+            this._commandCollection[1].CommandText = "SELECT LearnerID, LearnerName, LearnerSurname, LessonDate, LessonTopic, Attendanc" +
+                "e, Rating, ErrorsMade, Comments, PassStatus FROM TrackLearner";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = @"SELECT ProgressID, LearnerID, LearnerName, LearnerSurname, LessonDate, LessonTopic, Attendance, Rating, ErrorsMade, Comments, PassStatus
-FROM     TrackLearner
-WHERE  (LearnerName LIKE @search) OR
-                  (LearnerSurname LIKE @search) OR
-                  (LessonTopic LIKE @search)";
+            this._commandCollection[2].CommandText = "SELECT LearnerID, LearnerName, LearnerSurname, LessonDate, LessonTopic, Attendanc" +
+                "e, Rating, ErrorsMade, Comments, PassStatus FROM TrackLearner WHERE (LearnerName" +
+                " LIKE @search) OR (LearnerSurname LIKE @search) OR (LessonTopic LIKE @search)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@search", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "LearnerName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
@@ -3953,35 +3908,6 @@ WHERE  (ProgressID = @Original_ProgressID);
                     this.Adapter.UpdateCommand.Connection.Close();
                 }
             }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(
-                    int LearnerID, 
-                    string LearnerName, 
-                    string LearnerSurname, 
-                    System.DateTime LessonDate, 
-                    string LessonTopic, 
-                    string Attendance, 
-                    string Rating, 
-                    string ErrorsMade, 
-                    string Comments, 
-                    string PassStatus, 
-                    int Original_ProgressID, 
-                    int Original_LearnerID, 
-                    string Original_LearnerName, 
-                    string Original_LearnerSurname, 
-                    System.DateTime Original_LessonDate, 
-                    string Original_LessonTopic, 
-                    string Original_Attendance, 
-                    string Original_Rating, 
-                    string Original_ErrorsMade, 
-                    string Original_Comments, 
-                    string Original_PassStatus) {
-            return this.Update(LearnerID, LearnerName, LearnerSurname, LessonDate, LessonTopic, Attendance, Rating, ErrorsMade, Comments, PassStatus, Original_ProgressID, Original_LearnerID, Original_LearnerName, Original_LearnerSurname, Original_LessonDate, Original_LessonTopic, Original_Attendance, Original_Rating, Original_ErrorsMade, Original_Comments, Original_PassStatus, Original_ProgressID);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

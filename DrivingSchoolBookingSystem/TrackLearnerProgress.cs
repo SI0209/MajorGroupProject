@@ -34,14 +34,14 @@ namespace DrivingSchoolBookingSystem
             // TODO: This line of code loads data into the 'wstGrp2DS2.TrackLearner' table. You can move, or remove it, as needed.
             this.trackLearnerTableAdapter.FillBy(this.wstGrp2DS2.TrackLearner);
             // TODO: This line of code loads data into the 'wstGrp2DataSet.tblLearner' table. You can move, or remove it, as needed.
-            this.tblLearnerTableAdapter.Fill(this.wstGrp2DataSet.tblLearner);
+            //this.tblLearnerTableAdapter.Fill(this.wstGrp2DataSet.tblLearner);
             // TODO: This line of code loads data into the 'wstGrp2DS2.tblNewLearner' table. You can move, or remove it, as needed.
-            this.tblNewLearnerTableAdapter.FillByNewLearner(this.wstGrp2DS2.tblNewLearner);
+           this.tblNewLearnerTableAdapter.FillByNewLearner(this.wstGrp2DS2.tblNewLearner);
             
             // TODO: This line of code loads data into the 'wstGrp2DS21.LearnerProgress' table. You can move, or remove it, as needed.
-            this.trackLearnerTableAdapter.FillBy(this.wstGrp2DS2.TrackLearner);
+            //this.trackLearnerTableAdapter.FillBy(this.wstGrp2DS2.TrackLearner);
             // TODO: This line of code loads data into the 'wstGrp2DS2.LearnerProgress' table. You can move, or remove it, as needed.
-            this.learnerProgressTableAdapter.Fill(this.wstGrp2DS2.LearnerProgress);
+            //this.learnerProgressTableAdapter.Fill(this.wstGrp2DS2.LearnerProgress);
             // TODO: This line of code loads data into the 'bookingSystemDataSet.tblLearners' table. You can move, or remove it, as needed.
             // this.tblLearnersTableAdapter.Fill(this.bookingSystemDataSet.tblLearners);
 
