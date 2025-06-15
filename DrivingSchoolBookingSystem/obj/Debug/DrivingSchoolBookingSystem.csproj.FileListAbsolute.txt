@@ -1,357 +1,3 @@
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\bin\Debug\DrivingSchoolBookingSystem.exe.config
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\bin\Debug\DrivingSchoolBookingSystem.exe
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\bin\Debug\DrivingSchoolBookingSystem.pdb
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\bin\Debug\Microsoft.Extensions.Logging.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\bin\Debug\Microsoft.Extensions.Options.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\bin\Debug\Microsoft.Extensions.Primitives.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\bin\Debug\MigraDoc.DocumentObjectModel.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\bin\Debug\MigraDoc.Rendering.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\bin\Debug\MigraDoc.RtfRendering.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.BarCodes.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Charting.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Cryptography.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Quality.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Shared.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Snippets.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.System.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.WPFonts.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\bin\Debug\System.Buffers.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\bin\Debug\System.Diagnostics.DiagnosticSource.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\bin\Debug\System.Memory.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\bin\Debug\System.Numerics.Vectors.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\bin\Debug\System.Security.Cryptography.Pkcs.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\bin\Debug\System.Threading.Tasks.Extensions.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\bin\Debug\System.ValueTuple.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\bin\Debug\Microsoft.Extensions.Logging.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\bin\Debug\Microsoft.Extensions.Options.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\bin\Debug\Microsoft.Extensions.Primitives.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\bin\Debug\MigraDoc.DocumentObjectModel.pdb
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\bin\Debug\MigraDoc.DocumentObjectModel.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\bin\Debug\MigraDoc.Rendering.pdb
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\bin\Debug\MigraDoc.Rendering.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\bin\Debug\MigraDoc.RtfRendering.pdb
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\bin\Debug\MigraDoc.RtfRendering.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.pdb
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.BarCodes.pdb
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.BarCodes.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Charting.pdb
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Charting.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Cryptography.pdb
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Cryptography.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Quality.pdb
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Quality.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Shared.pdb
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Shared.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Snippets.pdb
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.System.pdb
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.System.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.WPFonts.pdb
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.WPFonts.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\bin\Debug\System.Buffers.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\bin\Debug\System.Diagnostics.DiagnosticSource.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\bin\Debug\System.Memory.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\bin\Debug\System.Numerics.Vectors.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\bin\Debug\System.Security.Cryptography.Pkcs.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\bin\Debug\System.Threading.Tasks.Extensions.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\bin\Debug\System.ValueTuple.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.csproj.AssemblyReference.cache
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.StartUp.resources
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.InstructorSchedule.resources
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.LessonCodeForm.resources
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.ManageBooking.resources
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.Password.resources
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.ManageLearners.resources
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.LoginForm.resources
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.HomeForm.resources
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.ManageVehiclesForm.resources
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.LearnerProgressForm.resources
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.AnalyticsForm.resources
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.UnavailableTimeSlots.resources
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.ManageInstruc.resources
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.Properties.Resources.resources
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.csproj.GenerateResource.cache
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.csproj.CoreCompileInputs.cache
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\obj\Debug\DrivingS.9670A750.Up2Date
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.exe
-C:\Users\Strini\Source\Repos\MajorGroupProject545\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.pdb
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\bin\Debug\DrivingSchoolBookingSystem.exe.config
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\bin\Debug\DrivingSchoolBookingSystem.exe
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\bin\Debug\DrivingSchoolBookingSystem.pdb
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\bin\Debug\Microsoft.Extensions.Logging.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\bin\Debug\Microsoft.Extensions.Options.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\bin\Debug\Microsoft.Extensions.Primitives.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\bin\Debug\MigraDoc.DocumentObjectModel.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\bin\Debug\MigraDoc.Rendering.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\bin\Debug\MigraDoc.RtfRendering.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.BarCodes.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Charting.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Cryptography.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Quality.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Shared.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Snippets.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.System.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.WPFonts.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\bin\Debug\System.Buffers.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\bin\Debug\System.Diagnostics.DiagnosticSource.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\bin\Debug\System.Memory.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\bin\Debug\System.Numerics.Vectors.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\bin\Debug\System.Security.Cryptography.Pkcs.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\bin\Debug\System.Threading.Tasks.Extensions.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\bin\Debug\System.ValueTuple.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\bin\Debug\Microsoft.Extensions.Logging.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\bin\Debug\Microsoft.Extensions.Options.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\bin\Debug\Microsoft.Extensions.Primitives.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\bin\Debug\MigraDoc.DocumentObjectModel.pdb
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\bin\Debug\MigraDoc.DocumentObjectModel.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\bin\Debug\MigraDoc.Rendering.pdb
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\bin\Debug\MigraDoc.Rendering.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\bin\Debug\MigraDoc.RtfRendering.pdb
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\bin\Debug\MigraDoc.RtfRendering.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.pdb
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.BarCodes.pdb
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.BarCodes.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Charting.pdb
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Charting.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Cryptography.pdb
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Cryptography.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Quality.pdb
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Quality.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Shared.pdb
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Shared.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Snippets.pdb
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.System.pdb
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.System.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.WPFonts.pdb
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.WPFonts.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\bin\Debug\System.Buffers.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\bin\Debug\System.Diagnostics.DiagnosticSource.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\bin\Debug\System.Memory.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\bin\Debug\System.Numerics.Vectors.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\bin\Debug\System.Security.Cryptography.Pkcs.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\bin\Debug\System.Threading.Tasks.Extensions.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\bin\Debug\System.ValueTuple.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.csproj.AssemblyReference.cache
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.StartUp.resources
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.InstructorSchedule.resources
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.LessonCodeForm.resources
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.ManageBooking.resources
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.Password.resources
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.ManageLearners.resources
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.LoginForm.resources
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.HomeForm.resources
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.ManageVehiclesForm.resources
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.LearnerProgressForm.resources
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.AnalyticsForm.resources
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.UnavailableTimeSlots.resources
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.ManageInstruc.resources
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.Properties.Resources.resources
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.csproj.GenerateResource.cache
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.csproj.CoreCompileInputs.cache
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\obj\Debug\DrivingS.9670A750.Up2Date
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.exe
-C:\Users\Strini\Source\Repos\MajorGroupProject5\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.pdb
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\bin\Debug\DrivingSchoolBookingSystem.exe.config
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\bin\Debug\DrivingSchoolBookingSystem.exe
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\bin\Debug\DrivingSchoolBookingSystem.pdb
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\bin\Debug\Microsoft.Extensions.Logging.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\bin\Debug\Microsoft.Extensions.Options.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\bin\Debug\Microsoft.Extensions.Primitives.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\bin\Debug\MigraDoc.DocumentObjectModel.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\bin\Debug\MigraDoc.Rendering.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\bin\Debug\MigraDoc.RtfRendering.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.BarCodes.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Charting.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Cryptography.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Quality.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Shared.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Snippets.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.System.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.WPFonts.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\bin\Debug\System.Buffers.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\bin\Debug\System.Diagnostics.DiagnosticSource.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\bin\Debug\System.Memory.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\bin\Debug\System.Numerics.Vectors.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\bin\Debug\System.Security.Cryptography.Pkcs.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\bin\Debug\System.Threading.Tasks.Extensions.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\bin\Debug\System.ValueTuple.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\bin\Debug\Microsoft.Extensions.Logging.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\bin\Debug\Microsoft.Extensions.Options.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\bin\Debug\Microsoft.Extensions.Primitives.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\bin\Debug\MigraDoc.DocumentObjectModel.pdb
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\bin\Debug\MigraDoc.DocumentObjectModel.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\bin\Debug\MigraDoc.Rendering.pdb
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\bin\Debug\MigraDoc.Rendering.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\bin\Debug\MigraDoc.RtfRendering.pdb
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\bin\Debug\MigraDoc.RtfRendering.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.pdb
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.BarCodes.pdb
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.BarCodes.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Charting.pdb
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Charting.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Cryptography.pdb
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Cryptography.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Quality.pdb
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Quality.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Shared.pdb
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Shared.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Snippets.pdb
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.System.pdb
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.System.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.WPFonts.pdb
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.WPFonts.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\bin\Debug\System.Buffers.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\bin\Debug\System.Diagnostics.DiagnosticSource.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\bin\Debug\System.Memory.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\bin\Debug\System.Numerics.Vectors.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\bin\Debug\System.Security.Cryptography.Pkcs.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\bin\Debug\System.Threading.Tasks.Extensions.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\bin\Debug\System.ValueTuple.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.csproj.AssemblyReference.cache
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.StartUp.resources
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.InstructorSchedule.resources
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.LessonCodeForm.resources
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.ManageBooking.resources
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.Password.resources
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.ManageLearners.resources
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.LoginForm.resources
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.HomeForm.resources
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.ManageVehiclesForm.resources
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.LearnerProgressForm.resources
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.AnalyticsForm.resources
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.UnavailableTimeSlots.resources
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.ManageInstruc.resources
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.Properties.Resources.resources
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.csproj.GenerateResource.cache
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.csproj.CoreCompileInputs.cache
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\obj\Debug\DrivingS.9670A750.Up2Date
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.exe
-C:\Users\Strini\Source\Repos\MajorGroupProject453\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.pdb
-<<<<<<< HEAD
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\bin\Debug\DrivingSchoolBookingSystem.exe.config
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\bin\Debug\DrivingSchoolBookingSystem.exe
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\bin\Debug\DrivingSchoolBookingSystem.pdb
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\bin\Debug\Microsoft.Extensions.Logging.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\bin\Debug\Microsoft.Extensions.Options.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\bin\Debug\Microsoft.Extensions.Primitives.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\bin\Debug\MigraDoc.DocumentObjectModel.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\bin\Debug\MigraDoc.Rendering.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\bin\Debug\MigraDoc.RtfRendering.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.BarCodes.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Charting.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Cryptography.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Quality.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Shared.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Snippets.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.System.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.WPFonts.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\bin\Debug\System.Buffers.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\bin\Debug\System.Diagnostics.DiagnosticSource.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\bin\Debug\System.Memory.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\bin\Debug\System.Numerics.Vectors.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\bin\Debug\System.Security.Cryptography.Pkcs.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\bin\Debug\System.Threading.Tasks.Extensions.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\bin\Debug\System.ValueTuple.dll
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\bin\Debug\Microsoft.Extensions.Logging.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\bin\Debug\Microsoft.Extensions.Options.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\bin\Debug\Microsoft.Extensions.Primitives.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\bin\Debug\MigraDoc.DocumentObjectModel.pdb
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\bin\Debug\MigraDoc.DocumentObjectModel.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\bin\Debug\MigraDoc.Rendering.pdb
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\bin\Debug\MigraDoc.Rendering.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\bin\Debug\MigraDoc.RtfRendering.pdb
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\bin\Debug\MigraDoc.RtfRendering.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.pdb
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.BarCodes.pdb
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.BarCodes.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Charting.pdb
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Charting.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Cryptography.pdb
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Cryptography.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Quality.pdb
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Quality.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Shared.pdb
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Shared.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Snippets.pdb
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.System.pdb
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.System.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.WPFonts.pdb
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.WPFonts.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\bin\Debug\System.Buffers.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\bin\Debug\System.Diagnostics.DiagnosticSource.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\bin\Debug\System.Memory.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\bin\Debug\System.Numerics.Vectors.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\bin\Debug\System.Security.Cryptography.Pkcs.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\bin\Debug\System.Threading.Tasks.Extensions.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\bin\Debug\System.ValueTuple.xml
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.csproj.AssemblyReference.cache
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.StartUp.resources
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.InstructorSchedule.resources
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.LessonCodeForm.resources
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.ManageBooking.resources
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.Password.resources
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.ManageLearners.resources
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.LoginForm.resources
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.HomeForm.resources
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.ManageVehiclesForm.resources
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.LearnerProgressForm.resources
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.AnalyticsForm.resources
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.UnavailableTimeSlots.resources
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.ManageInstruc.resources
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.Properties.Resources.resources
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.csproj.GenerateResource.cache
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.csproj.CoreCompileInputs.cache
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\obj\Debug\DrivingS.9670A750.Up2Date
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.exe
-C:\Users\Strini\Source\Repos\MajorGroupProject83\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.pdb
-=======
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\DrivingSchoolBookingSystem.exe.config
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\DrivingSchoolBookingSystem.exe
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\DrivingSchoolBookingSystem.pdb
@@ -363,14 +9,21 @@ D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bi
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\Microsoft.Extensions.Options.dll
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\Microsoft.Extensions.Primitives.dll
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\MigraDoc.DocumentObjectModel.dll
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\MigraDoc.Rendering-gdi.dll
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\MigraDoc.Rendering.dll
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\MigraDoc.RtfRendering-gdi.dll
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\MigraDoc.RtfRendering.dll
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\PdfSharp-gdi.dll
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.BarCodes-gdi.dll
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.BarCodes.dll
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Charting-gdi.dll
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Charting.dll
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Cryptography.dll
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.dll
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Quality-gdi.dll
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Quality.dll
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Shared.dll
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Snippets-gdi.dll
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Snippets.dll
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.System.dll
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.WPFonts.dll
@@ -393,21 +46,34 @@ D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bi
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\MigraDoc.DocumentObjectModel.xml
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\MigraDoc.Rendering.pdb
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\MigraDoc.Rendering.xml
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\MigraDoc.Rendering-gdi.pdb
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\MigraDoc.Rendering-gdi.xml
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\MigraDoc.RtfRendering.pdb
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\MigraDoc.RtfRendering.xml
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\MigraDoc.RtfRendering-gdi.pdb
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\MigraDoc.RtfRendering-gdi.xml
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.pdb
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.xml
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\PdfSharp-gdi.pdb
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\PdfSharp-gdi.xml
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.BarCodes.pdb
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.BarCodes.xml
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.BarCodes-gdi.pdb
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.BarCodes-gdi.xml
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Charting.pdb
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Charting.xml
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Charting-gdi.pdb
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Charting-gdi.xml
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Cryptography.pdb
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Cryptography.xml
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Quality.pdb
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Quality.xml
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Quality-gdi.pdb
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Quality-gdi.xml
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Shared.pdb
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Shared.xml
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Snippets.pdb
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Snippets-gdi.pdb
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.System.pdb
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.System.xml
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.WPFonts.pdb
@@ -421,6 +87,7 @@ D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bi
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\System.Threading.Tasks.Extensions.xml
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\System.ValueTuple.xml
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.csproj.AssemblyReference.cache
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.exe.config
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.StartUp.resources
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.InstructorSchedule.resources
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.LessonCodeForm.resources
@@ -440,25 +107,3 @@ D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\ob
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\obj\Debug\DrivingS.9670A750.Up2Date
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.exe
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.pdb
-D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.exe.config
->>>>>>> 9e97c30 (Fixing Manage Booking form and dataset)
-D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\MigraDoc.Rendering-gdi.dll
-D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\MigraDoc.RtfRendering-gdi.dll
-D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\PdfSharp-gdi.dll
-D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.BarCodes-gdi.dll
-D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Charting-gdi.dll
-D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Quality-gdi.dll
-D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Snippets-gdi.dll
-D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\MigraDoc.Rendering-gdi.pdb
-D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\MigraDoc.Rendering-gdi.xml
-D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\MigraDoc.RtfRendering-gdi.pdb
-D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\MigraDoc.RtfRendering-gdi.xml
-D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\PdfSharp-gdi.pdb
-D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\PdfSharp-gdi.xml
-D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.BarCodes-gdi.pdb
-D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.BarCodes-gdi.xml
-D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Charting-gdi.pdb
-D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Charting-gdi.xml
-D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Quality-gdi.pdb
-D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Quality-gdi.xml
-D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Snippets-gdi.pdb
