@@ -179,7 +179,7 @@ namespace DrivingSchoolBookingSystem
 
             // Cell‑phone style length check (ErrorsMade & Comments aren’t numeric, so skipped)
 
-            if (textBox5.Text.Length > 250)   // example guard against excessively long “Errors” text
+            if (textBox5.Text.Length > 30)   // example guard against excessively long “Errors” text
             {
                 MessageBox.Show("The Errors field is too long; please shorten it.",
                                 "Input Too Long", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -190,7 +190,7 @@ namespace DrivingSchoolBookingSystem
                3) CONFIRMATION
             ------------------------------------------------------------------ */
             DialogResult confirm = MessageBox.Show(
-                $"Add a new progress record for learner ID {textBox1.Text}\n" +
+                $"Are you sure you want to add a new progress record for learner ID {textBox1.Text}\n" +
                 $"{textBox2.Text} {textBox3.Text}?",
                 "Confirm Add",
                 MessageBoxButtons.YesNo,
@@ -219,7 +219,7 @@ namespace DrivingSchoolBookingSystem
 
                 // Refresh grids / lists
                 trackLearnerTableAdapter.FillBy(this.wstGrp2DS2.TrackLearner);
-                tblNewLearnerTableAdapter.Fill(this.wstGrp2DS2.tblNewLearner);
+                tblNewLearnerTableAdapter.FillByNewLearner(this.wstGrp2DS2.tblNewLearner);
 
                 MessageBox.Show("New learner progress has been added successfully.",
                                 "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -408,8 +408,14 @@ namespace DrivingSchoolBookingSystem
 
         private void button4_Click(object sender, EventArgs e)
         {
+            /* tblNewLearnerTableAdapter.FillByNewLearner(this.wstGrp2DS2.tblNewLearner);
+             textBox7.Text = "";*/
+
+            // Clear the search box
+            textBox7.Clear();
+
+            // Refill the table with learners who are NOT in the TrackLearner table
             tblNewLearnerTableAdapter.FillByNewLearner(this.wstGrp2DS2.tblNewLearner);
-            textBox7.Text = "";
         }
 
         private void textBox6_TextChanged(object sender, EventArgs e)
@@ -427,9 +433,9 @@ namespace DrivingSchoolBookingSystem
               string input = textBox7.Text.Trim();
               if (input.All(char.IsLetter))
               {
-                  tblNewLearnerTableAdapter.FillByLearnerName(this.wstGrp2DS2.tblNewLearner, input);
+                tblNewLearnerTableAdapter.FillByNewLearner(this.wstGrp2DS2.tblNewLearner);
 
-              }
+            }
               else{
                   MessageBox.Show("Please enter a valid name.");
               }
