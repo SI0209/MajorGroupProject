@@ -10,9 +10,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using MigraDoc.DocumentObjectModel;
-using PdfSharp.Pdf;
-using System.Diagnostics;
 using MigraDoc.DocumentObjectModel.Tables;
+using MigraDoc.Rendering;
+using System.Diagnostics;
+using System.IO;
 
 namespace DrivingSchoolBookingSystem
 {
@@ -40,8 +41,8 @@ namespace DrivingSchoolBookingSystem
             // TODO: This line of code loads data into the 'wstGrp2DataSet.tblLearner' table. You can move, or remove it, as needed.
             //this.tblLearnerTableAdapter.Fill(this.wstGrp2DataSet.tblLearner);
             // TODO: This line of code loads data into the 'wstGrp2DS2.tblNewLearner' table. You can move, or remove it, as needed.
-           this.tblNewLearnerTableAdapter.FillByNewLearner(this.wstGrp2DS2.tblNewLearner);
-            
+            this.tblNewLearnerTableAdapter.FillByNewLearner(this.wstGrp2DS2.tblNewLearner);
+
             // TODO: This line of code loads data into the 'wstGrp2DS21.LearnerProgress' table. You can move, or remove it, as needed.
             //this.trackLearnerTableAdapter.FillBy(this.wstGrp2DS2.TrackLearner);
             // TODO: This line of code loads data into the 'wstGrp2DS2.LearnerProgress' table. You can move, or remove it, as needed.
@@ -49,7 +50,7 @@ namespace DrivingSchoolBookingSystem
             // TODO: This line of code loads data into the 'bookingSystemDataSet.tblLearners' table. You can move, or remove it, as needed.
             // this.tblLearnersTableAdapter.Fill(this.bookingSystemDataSet.tblLearners);
 
-           
+
             comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox2.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox3.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -77,20 +78,20 @@ namespace DrivingSchoolBookingSystem
             textBox1.Text = dataGridView2.CurrentRow.Cells[0].Value.ToString();
             textBox2.Text = dataGridView2.CurrentRow.Cells[1].Value.ToString();
             textBox3.Text = dataGridView2.CurrentRow.Cells[2].Value.ToString();
-            
+
 
             textBox1.Enabled = false;
             textBox2.Enabled = false;
             textBox3.Enabled = false;
-           button2.Visible = false; // Disable Update button when selecting a learner from the new learners list
+            button2.Visible = false; // Disable Update button when selecting a learner from the new learners list
 
             dateTimePicker1.Value = DateTime.Now;
             comboBox1.SelectedIndex = -1;
-            comboBox2.SelectedIndex=-1;
-            comboBox3.SelectedIndex=-1;
+            comboBox2.SelectedIndex = -1;
+            comboBox3.SelectedIndex = -1;
             textBox5.Text = "";
             textBox6.Text = "";
-            comboBox4.SelectedIndex=-1;
+            comboBox4.SelectedIndex = -1;
 
 
         }
@@ -122,12 +123,12 @@ namespace DrivingSchoolBookingSystem
             textBox3.Text = "";
             dateTimePicker1.Value = DateTime.Now; //default value
             comboBox1.SelectedIndex = -1; // Clear selection
-          comboBox2.SelectedIndex = -1; // Clear selection
+            comboBox2.SelectedIndex = -1; // Clear selection
             comboBox3.SelectedIndex = -1; // Clear selection
-         comboBox4.SelectedIndex = -1; // Clear selection
+            comboBox4.SelectedIndex = -1; // Clear selection
             textBox5.Text = "";
             textBox6.Text = "";
-            
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -250,7 +251,7 @@ namespace DrivingSchoolBookingSystem
                 MessageBox.Show("An error occurred while adding the progress record:\n\n" + ex.Message,
                                 "Insert Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        
+
 
         }
 
@@ -350,7 +351,7 @@ namespace DrivingSchoolBookingSystem
                         command.Parameters.AddWithValue("@comments", textBox6.Text.Trim());
                         command.Parameters.AddWithValue("@passStatus", comboBox4.Text.Trim());
 
-                        DialogResult dialogResult = MessageBox.Show($"Are you sure you want to UPDATE learner ID:" + textBox1.Text + "," + " " + textBox2.Text + " " + textBox3.Text  + " " + "details?", "Confirm Update", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        DialogResult dialogResult = MessageBox.Show($"Are you sure you want to UPDATE learner ID:" + textBox1.Text + "," + " " + textBox2.Text + " " + textBox3.Text + " " + "details?", "Confirm Update", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                         if (dialogResult == DialogResult.Yes)
                         {
                             command.ExecuteNonQuery();
@@ -364,7 +365,7 @@ namespace DrivingSchoolBookingSystem
                             textBox2.Clear();
                             textBox3.Clear();
                             dateTimePicker1.Value = DateTime.Now;
-                           comboBox1.SelectedIndex = -1;
+                            comboBox1.SelectedIndex = -1;
                             comboBox2
                                 .SelectedIndex = -1;
                             comboBox3.SelectedIndex = -1;
@@ -387,7 +388,7 @@ namespace DrivingSchoolBookingSystem
             textBox1.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
             textBox2.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
             textBox3.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-           
+
             dateTimePicker1.Value = Convert.ToDateTime(dataGridView1.CurrentRow.Cells[3].Value);
             comboBox1.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
             comboBox2.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
@@ -435,16 +436,17 @@ namespace DrivingSchoolBookingSystem
 
         private void textBox7_TextChanged(object sender, EventArgs e)
         {
-              string input = textBox7.Text.Trim();
-              if (input.All(char.IsLetter))
-              {
+            string input = textBox7.Text.Trim();
+            if (input.All(char.IsLetter))
+            {
                 tblNewLearnerTableAdapter.FillByNewLearner(this.wstGrp2DS2.tblNewLearner);
 
             }
-              else{
-                  MessageBox.Show("Please enter a valid name.");
-              }
-            
+            else
+            {
+                MessageBox.Show("Please enter a valid name.");
+            }
+
         }
 
         private void textBox8_TextChanged(object sender, EventArgs e)
@@ -516,13 +518,15 @@ namespace DrivingSchoolBookingSystem
         {
 
         }
-        private void ExportDataGridViewToPdf()
+        // Remove or avoid using MigraDoc.Rendering-gdi namespace in the file to prevent ambiguity
+
+       /* private void ExportDataGridViewToPdf()
         {
-            // Create the document
+            // Create a new MigraDoc document
             Document doc = new Document();
             Section section = doc.AddSection();
 
-            // Add a heading
+            // Add a title
             Paragraph title = section.AddParagraph("Learner Progress Report");
             title.Format.Font.Size = 14;
             title.Format.Font.Bold = true;
@@ -563,16 +567,25 @@ namespace DrivingSchoolBookingSystem
             }
 
             section.Add(table);
-MigraDoc.Rendering.Gdi.PdfDocumentRenderer renderer = new MigraDoc.Rendering.Gdi.PdfDocumentRenderer(true)
-{
-    Document = doc
-};
-            string filename = "LearnerProgressReport.pdf";
+
+            // Use the correct renderer (MigraDoc.Rendering namespace)
+            var renderer = new PdfDocumentRenderer(true)
+            {
+                Document = doc
+            };
+
+            renderer.RenderDocument();
+
+            // Save to desktop
+            string desktop = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            string filename = Path.Combine(desktop, "LearnerProgressReport.pdf");
             renderer.PdfDocument.Save(filename);
 
-            // Open the PDF file
+            // Open PDF
             Process.Start(new ProcessStartInfo(filename) { UseShellExecute = true });
-        }
+        }*/
+
+
         private void button6_Click(object sender, EventArgs e)
         {
 
