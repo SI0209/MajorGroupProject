@@ -212,7 +212,25 @@ namespace DrivingSchoolBookingSystem
         private void button4_Click(object sender, EventArgs e)
         {
             tblLearnerTableAdapter.Fill(this.wstGrp2DataSet1.tblLearner);
-            textBox7.Clear();   
+            textBox7.Clear();
+            textBox1.Clear();
+            textBox2.Clear();
+            textBox3.Clear();
+            textBox4.Clear();
+            textBox5.Clear();
+            textBox6.Clear();
+            textBox8.Clear();
+
+            comboBox1.SelectedIndex = -1;
+            comboBox2.SelectedIndex = -1;
+            comboBox3.SelectedIndex = -1;
+            comboBox4.SelectedIndex = -1;
+            IssuedateTimePicker1.Value = DateTime.Today;
+            // Calculate expiry date as 2 years after issue date  
+            DateTime expiryDate = IssuedateTimePicker1.Value.AddYears(2);
+
+            // Fix: Convert DateTime to string before assigning to textBox9.Text  
+            textBox9.Text = expiryDate.ToString("yyyy-MM-dd");
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
@@ -314,7 +332,7 @@ namespace DrivingSchoolBookingSystem
 
                 // Set Issue Date picker range and value  
                 SetIssueDatePickerRange();
-
+                IssuedateTimePicker1.Value = DateTime.Today;
                 // Calculate expiry date as 2 years after issue date  
                 DateTime expiryDate = IssuedateTimePicker1.Value.AddYears(2);
 
