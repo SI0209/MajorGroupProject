@@ -3463,8 +3463,10 @@ SELECT ProgressID, LearnerID, LearnerName, LearnerSurname, LessonDate, LessonTop
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@searchPattern", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Learner_Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = @"INSERT INTO [dbo].[TrackLearner] ([LearnerID], [LearnerName], [LearnerSurname], [LessonDate], [LessonTopic], [Attendance], [Rating], [ErrorsMade], [Comments], [PassStatus]) VALUES (@LearnerID, @LearnerName, @LearnerSurname, @LessonDate, @LessonTopic, @Attendance, @Rating, @ErrorsMade, @Comments, @PassStatus);
-SELECT ProgressID, LearnerID, LearnerName, LearnerSurname, LessonDate, LessonTopic, Attendance, Rating, ErrorsMade, Comments, PassStatus FROM TrackLearner WHERE (ProgressID = SCOPE_IDENTITY())";
+            this._commandCollection[3].CommandText = @"INSERT INTO [dbo].[TrackLearner] 
+([LearnerID], [LearnerName], [LearnerSurname], [LessonDate], [LessonTopic], [Attendance], [Rating], [ErrorsMade], [Comments], [PassStatus]) 
+VALUES 
+(@LearnerID, @LearnerName, @LearnerSurname, @LessonDate, @LessonTopic, @Attendance, @Rating, @ErrorsMade, @Comments, @PassStatus);";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LearnerID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "LearnerID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LearnerName", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "LearnerName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));

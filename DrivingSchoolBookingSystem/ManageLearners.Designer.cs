@@ -436,8 +436,7 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Male",
-            "Female",
-            "Other"});
+            "Female"});
             this.comboBox1.Location = new System.Drawing.Point(232, 274);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(167, 28);
@@ -493,8 +492,7 @@
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.Items.AddRange(new object[] {
             "8",
-            "10",
-            "14"});
+            "10"});
             this.comboBox4.Location = new System.Drawing.Point(232, 554);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(167, 28);

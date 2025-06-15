@@ -128,28 +128,126 @@ namespace DrivingSchoolBookingSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(comboBox1.Text) || string.IsNullOrWhiteSpace(comboBox2.Text) || string.IsNullOrWhiteSpace(comboBox3.Text)
-                || string.IsNullOrWhiteSpace(textBox5.Text) || string.IsNullOrWhiteSpace(textBox6.Text) || string.IsNullOrWhiteSpace(comboBox4.Text))
+            /*   if (string.IsNullOrWhiteSpace(comboBox1.Text) || string.IsNullOrWhiteSpace(comboBox2.Text) || string.IsNullOrWhiteSpace(comboBox3.Text)
+                   || string.IsNullOrWhiteSpace(textBox5.Text) || string.IsNullOrWhiteSpace(textBox6.Text) || string.IsNullOrWhiteSpace(comboBox4.Text))
+               {
+                   MessageBox.Show("Please fill in all required fields.");
+                   return;
+               }
+               try
+               {
+                   trackLearnerTableAdapter.InsertQuery(Convert.ToInt32(textBox1.Text), textBox2.Text, textBox3.Text, dateTimePicker1.Value.ToString("yyyy-MM-dd"),
+                       comboBox1.Text, comboBox2.Text, comboBox3.Text, textBox5.Text, textBox6.Text, comboBox4.Text);
+
+                   trackLearnerTableAdapter.FillBy(this.wstGrp2DS2.TrackLearner);
+                   tblNewLearnerTableAdapter.Fill(this.wstGrp2DS2.tblNewLearner);
+                   MessageBox.Show("New learner progress has been added successfully.");
+                   return;
+               }
+               catch(Exception ex)
+               {
+                   MessageBox.Show("An error occured:" + ex.Message);
+                   return;
+               }*/
+            /* ------------------------------------------------------------------
+       1) BASIC “REQUIRED FIELDS” VALIDATION
+    ------------------------------------------------------------------ */
+            if (string.IsNullOrWhiteSpace(textBox2.Text) ||            // LearnerName
+                string.IsNullOrWhiteSpace(textBox3.Text) ||            // LearnerSurname
+                string.IsNullOrWhiteSpace(comboBox1.Text) ||           // LessonTopic
+                string.IsNullOrWhiteSpace(comboBox2.Text) ||           // Attendance
+                string.IsNullOrWhiteSpace(comboBox3.Text) ||           // Rating
+                string.IsNullOrWhiteSpace(textBox5.Text) ||            // ErrorsMade
+                string.IsNullOrWhiteSpace(textBox6.Text) ||            // Comments
+                string.IsNullOrWhiteSpace(comboBox4.Text))             // PassStatus
             {
-                MessageBox.Show("Please fill in all required fields.");
+                MessageBox.Show("Please fill in all required fields.",
+                                "Missing Fields", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+
+            /* ------------------------------------------------------------------
+               2) CONTENT‑SPECIFIC CHECKS
+            ------------------------------------------------------------------ */
+            // Names should not contain digits
+            if (textBox2.Text.Any(char.IsDigit) || textBox3.Text.Any(char.IsDigit))
+            {
+                MessageBox.Show("Name and surname cannot contain numbers.",
+                                "Invalid Name", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Cell‑phone style length check (ErrorsMade & Comments aren’t numeric, so skipped)
+
+            if (textBox5.Text.Length > 250)   // example guard against excessively long “Errors” text
+            {
+                MessageBox.Show("The Errors field is too long; please shorten it.",
+                                "Input Too Long", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            /* ------------------------------------------------------------------
+               3) CONFIRMATION
+            ------------------------------------------------------------------ */
+            DialogResult confirm = MessageBox.Show(
+                $"Add a new progress record for learner ID {textBox1.Text}\n" +
+                $"{textBox2.Text} {textBox3.Text}?",
+                "Confirm Add",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+
+            if (confirm != DialogResult.Yes) return;
+
+            /* ------------------------------------------------------------------
+               4) DATABASE INSERT
+            ------------------------------------------------------------------ */
             try
             {
-                trackLearnerTableAdapter.InsertQuery(Convert.ToInt32(textBox1.Text), textBox2.Text, textBox3.Text, dateTimePicker1.Value.ToString("yyyy-MM-dd"),
-                    comboBox1.Text, comboBox2.Text, comboBox3.Text, textBox5.Text, textBox6.Text, comboBox4.Text);
+                int learnerID = int.Parse(textBox1.Text);   // textBox1 is LearnerID (read‑only)
 
+                trackLearnerTableAdapter.InsertQuery(
+                    learnerID,
+                    textBox2.Text.Trim(),                       // LearnerName
+                    textBox3.Text.Trim(),                       // LearnerSurname
+                    dateTimePicker1.Value.ToString("yyyy-MM-dd"),
+                    comboBox1.Text.Trim(),                      // LessonTopic
+                    comboBox2.Text.Trim(),                      // Attendance
+                    comboBox3.Text.Trim(),                      // Rating
+                    textBox5.Text.Trim(),                       // ErrorsMade
+                    textBox6.Text.Trim(),                       // Comments
+                    comboBox4.Text.Trim());                     // PassStatus
+
+                // Refresh grids / lists
                 trackLearnerTableAdapter.FillBy(this.wstGrp2DS2.TrackLearner);
                 tblNewLearnerTableAdapter.Fill(this.wstGrp2DS2.tblNewLearner);
-                MessageBox.Show("New learner progress has been added successfully.");
-                return;
+
+                MessageBox.Show("New learner progress has been added successfully.",
+                                "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                /* --------------------------------------------------------------
+                   5) CLEAR ENTRY FIELDS FOR NEXT INPUT
+                -------------------------------------------------------------- */
+                dateTimePicker1.Value = DateTime.Today;
+                comboBox1.SelectedIndex = -1;
+                comboBox2.SelectedIndex = -1;
+                comboBox3.SelectedIndex = -1;
+                comboBox4.SelectedIndex = -1;
+                textBox5.Clear();
+                textBox6.Clear();
+                textBox1.Clear
+                    ();
+                textBox2.Clear();
+                textBox3.Clear();
+
+                // Note: textBox1/2/3 remain because they show the currently‑selected learner
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                MessageBox.Show("An error occured:" + ex.Message);
-                return;
+                MessageBox.Show("An error occurred while adding the progress record:\n\n" + ex.Message,
+                                "Insert Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
+        
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -394,6 +492,16 @@ namespace DrivingSchoolBookingSystem
         }
 
         private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
 
         }
