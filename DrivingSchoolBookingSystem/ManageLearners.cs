@@ -125,6 +125,11 @@ namespace DrivingSchoolBookingSystem
                 MessageBox.Show("Cell phone number cannot contain letters.");
                 return;
             }
+            DialogResult confirm = MessageBox.Show("Are you sure you want to add the new learner:" + " " + textBox1.Text.ToString() + " " + textBox2.Text.ToString() + " ?",
+                                                       "Confirm New Learner",
+                                                       MessageBoxButtons.YesNo);
+            if (confirm == DialogResult.Yes)
+            {
                 try
                 {
                     // insert null-check block here
@@ -146,24 +151,29 @@ namespace DrivingSchoolBookingSystem
 
                     tblLearnerTableAdapter.Fill(this.wstGrp2DataSet1.tblLearner);
                     MessageBox.Show("Learner has been added successfully!");
+                    textBox1.Clear();
+                    textBox2.Clear();
+                    textBox3.Clear();
+                    textBox4.Clear();
+                    textBox5.Clear();
+                    textBox6.Clear(); 
+                    textBox9.Clear();
+                    comboBox1.SelectedIndex = -1; // Reset to no selection          
+                    comboBox2.SelectedIndex = -1; // Reset to no selection
+                    comboBox3.SelectedIndex = -1; // Reset to no selection
+                    comboBox4.SelectedIndex = -1; // Reset to no selection
+                
+                    IssuedateTimePicker1.Value = DateTime.Today; // Reset issue date to today
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("An error occurred: " + ex.Message);
                 }
+            }
+            else if (confirm == DialogResult.No)
+            { }
 
-            textBox1.Clear();
-            textBox2.Clear();
-            textBox3.Clear();
-            textBox4.Clear();
-            textBox5.Clear();
-            textBox6.Clear();
-            comboBox1.SelectedIndex = -1; // Reset to no selection          
-            comboBox2.SelectedIndex = -1; // Reset to no selection
-            comboBox3.SelectedIndex = -1; // Reset to no selection
-            comboBox4.SelectedIndex = -1; // Reset to no selection
-            textBox9.Clear(); // Clear expiry date textbox
-            IssuedateTimePicker1.Value = DateTime.Today; // Reset issue date to today
+                
 
 
 
