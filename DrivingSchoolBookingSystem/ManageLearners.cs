@@ -139,7 +139,7 @@ namespace DrivingSchoolBookingSystem
                         textBox6.Text,
                         comboBox3.Text.ToString(),
                         IssuedateTimePicker1.Value.ToString("yyyy-MM-dd"),
-                        ExpdateTimePicker2.Value.ToString("yyyy-MM-dd"),
+                       Convert.ToString(textBox9.Text),
                         Convert.ToInt16(comboBox4.Text)
                     );
 
@@ -495,7 +495,7 @@ namespace DrivingSchoolBookingSystem
            if(string.IsNullOrWhiteSpace(textBox1.Text) || string.IsNullOrWhiteSpace(textBox2.Text) || string.IsNullOrWhiteSpace(textBox3.Text) 
                 || string.IsNullOrWhiteSpace(textBox4.Text) || string.IsNullOrWhiteSpace(comboBox1.Text) || string.IsNullOrWhiteSpace(comboBox2.Text)
                 || string.IsNullOrWhiteSpace(textBox5.Text) || string.IsNullOrWhiteSpace(textBox6.Text) || string.IsNullOrWhiteSpace(comboBox3.Text)
-                || IssuedateTimePicker1.Value == IssuedateTimePicker1.MinDate || ExpdateTimePicker2.Value == ExpdateTimePicker2.MinDate || string.IsNullOrWhiteSpace(comboBox4.Text)
+                || IssuedateTimePicker1.Value == IssuedateTimePicker1.MinDate || string.IsNullOrWhiteSpace(textBox9.Text) || string.IsNullOrWhiteSpace(comboBox4.Text)
                 || string.IsNullOrWhiteSpace(textBox8.Text))
             {
                 MessageBox.Show("Please fill in all required fields");

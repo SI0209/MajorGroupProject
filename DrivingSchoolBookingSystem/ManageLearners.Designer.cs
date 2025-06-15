@@ -94,7 +94,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.ExpdateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.textBox9 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblLearnerBindingSource1)).BeginInit();
@@ -687,6 +686,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.textBox9);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label8);
@@ -695,7 +695,6 @@
             this.groupBox1.Controls.Add(this.textBox8);
             this.groupBox1.Controls.Add(this.IssuedateTimePicker1);
             this.groupBox1.Controls.Add(this.comboBox4);
-            this.groupBox1.Controls.Add(this.ExpdateTimePicker2);
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label3);
@@ -807,19 +806,10 @@
             this.label17.TabIndex = 45;
             this.label17.Text = "Click here for further instructions";
             // 
-            // ExpdateTimePicker2
-            // 
-            this.ExpdateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ExpdateTimePicker2.Location = new System.Drawing.Point(232, 517);
-            this.ExpdateTimePicker2.Name = "ExpdateTimePicker2";
-            this.ExpdateTimePicker2.Size = new System.Drawing.Size(167, 22);
-            this.ExpdateTimePicker2.TabIndex = 22;
-            this.ExpdateTimePicker2.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
-            // 
             // textBox9
             // 
             this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(537, 808);
+            this.textBox9.Location = new System.Drawing.Point(232, 515);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(167, 27);
             this.textBox9.TabIndex = 38;
@@ -831,7 +821,6 @@
             this.BackgroundImage = global::DrivingSchoolBookingSystem.Properties.Resources.Background_final;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1924, 1055);
-            this.Controls.Add(this.textBox9);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.panel1);
@@ -939,7 +928,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.DateTimePicker ExpdateTimePicker2;
         private System.Windows.Forms.TextBox textBox9;
     }
 }
