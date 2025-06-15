@@ -43,6 +43,7 @@ namespace DrivingSchoolBookingSystem
 
             IssuedateTimePicker1.MinDate = DateTime.Today.AddYears(-2);
             IssuedateTimePicker1.MaxDate = DateTime.Today;
+            textBox9.Clear();
 
 
         }
@@ -161,7 +162,9 @@ namespace DrivingSchoolBookingSystem
             comboBox2.SelectedIndex = -1; // Reset to no selection
             comboBox3.SelectedIndex = -1; // Reset to no selection
             comboBox4.SelectedIndex = -1; // Reset to no selection
-            
+            textBox9.Clear(); // Clear expiry date textbox
+            IssuedateTimePicker1.Value = DateTime.Today; // Reset issue date to today
+
 
 
         }
@@ -200,6 +203,7 @@ namespace DrivingSchoolBookingSystem
                 {
                     MessageBox.Show("No matching learner found. Reloading full list.");
                     tblLearnerTableAdapter.Fill(this.wstGrp2DataSet1.tblLearner); // Load all learners
+                    textBox7.Clear(); // Clear search boxS
                 }
             }
             catch (Exception ex)
@@ -404,8 +408,8 @@ namespace DrivingSchoolBookingSystem
                 // Get the selected LearnerID from the DataGridView
                 int learnerID = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value);
 
-                DialogResult confirm = MessageBox.Show("Are you sure you want to delete this learner?",
-                                                       "Confirm Delete",
+                DialogResult confirm = MessageBox.Show("Are you sure you want to delete" + " " + "Learner ID:" + textBox8.Text.ToString() + "," + " " +  textBox1.Text.ToString() + " " + textBox2.Text.ToString() + " ?",
+                                                       "Confirm Deletion",
                                                        MessageBoxButtons.YesNo,
                                                        MessageBoxIcon.Warning);
 
@@ -414,11 +418,28 @@ namespace DrivingSchoolBookingSystem
                     DeleteLearnerFromDatabase(learnerID);
                     // Optional: clear form fields
                     tblLearnerTableAdapter.Fill(this.wstGrp2DataSet1.tblLearner);
+
+                    // Clear all textboxes and combo boxes  
+                    textBox1.Clear();
+                    textBox2.Clear();
+                    textBox3.Clear();
+                    textBox4.Clear();
+                    textBox5.Clear();
+                    textBox6.Clear();
+                    textBox8.Clear();
+                    textBox9.Clear();
+                    IssuedateTimePicker1.Value = DateTime.Today;
+
+                    comboBox1.SelectedIndex = -1;
+                    comboBox2.SelectedIndex = -1;
+                    comboBox3.SelectedIndex = -1;
+                    comboBox4.SelectedIndex = -1;
+
                 }
             }
             else
             {
-                MessageBox.Show("Please select a learner to delete.");
+                MessageBox.Show("Please select a learner to delete."," No Learner Selected!");
             }
         }
         private void DeleteLearnerFromDatabase(int learnerID)
