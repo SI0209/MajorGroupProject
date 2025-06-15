@@ -2917,6 +2917,8 @@ namespace DrivingSchoolBookingSystem {
             
             private global::System.Data.DataColumn columnBooking_Status;
             
+            private global::System.Data.DataColumn columnLearnerID;
+            
             private global::System.Data.DataColumn columnCode_Type;
             
             private global::System.Data.DataColumn columnVehicleID;
@@ -2934,8 +2936,6 @@ namespace DrivingSchoolBookingSystem {
             private global::System.Data.DataColumn columnVehicle_Make;
             
             private global::System.Data.DataColumn columnVehicle_Model;
-            
-            private global::System.Data.DataColumn columnLearnerID;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -3007,6 +3007,14 @@ namespace DrivingSchoolBookingSystem {
             public global::System.Data.DataColumn Booking_StatusColumn {
                 get {
                     return this.columnBooking_Status;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn LearnerIDColumn {
+                get {
+                    return this.columnLearnerID;
                 }
             }
             
@@ -3084,14 +3092,6 @@ namespace DrivingSchoolBookingSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn LearnerIDColumn {
-                get {
-                    return this.columnLearnerID;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -3127,7 +3127,7 @@ namespace DrivingSchoolBookingSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public tblBookingInnerJoinRow AddtblBookingInnerJoinRow(System.DateTime Booking_Date, System.TimeSpan Booking_StartTime, System.TimeSpan Booking_EndTime, string Booking_Status, int Code_Type, int VehicleID, int EmployeeID, string Employee_Name, string Employee_Surname, string Learner_Name, string Learner_Surname, string Vehicle_Make, string Vehicle_Model, string LearnerID) {
+            public tblBookingInnerJoinRow AddtblBookingInnerJoinRow(System.DateTime Booking_Date, System.TimeSpan Booking_StartTime, System.TimeSpan Booking_EndTime, string Booking_Status, string LearnerID, int Code_Type, int VehicleID, int EmployeeID, string Employee_Name, string Employee_Surname, string Learner_Name, string Learner_Surname, string Vehicle_Make, string Vehicle_Model) {
                 tblBookingInnerJoinRow rowtblBookingInnerJoinRow = ((tblBookingInnerJoinRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -3135,6 +3135,7 @@ namespace DrivingSchoolBookingSystem {
                         Booking_StartTime,
                         Booking_EndTime,
                         Booking_Status,
+                        LearnerID,
                         Code_Type,
                         VehicleID,
                         EmployeeID,
@@ -3143,8 +3144,7 @@ namespace DrivingSchoolBookingSystem {
                         Learner_Name,
                         Learner_Surname,
                         Vehicle_Make,
-                        Vehicle_Model,
-                        LearnerID};
+                        Vehicle_Model};
                 rowtblBookingInnerJoinRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowtblBookingInnerJoinRow);
                 return rowtblBookingInnerJoinRow;
@@ -3179,6 +3179,7 @@ namespace DrivingSchoolBookingSystem {
                 this.columnBooking_StartTime = base.Columns["Booking_StartTime"];
                 this.columnBooking_EndTime = base.Columns["Booking_EndTime"];
                 this.columnBooking_Status = base.Columns["Booking_Status"];
+                this.columnLearnerID = base.Columns["LearnerID"];
                 this.columnCode_Type = base.Columns["Code_Type"];
                 this.columnVehicleID = base.Columns["VehicleID"];
                 this.columnEmployeeID = base.Columns["EmployeeID"];
@@ -3188,7 +3189,6 @@ namespace DrivingSchoolBookingSystem {
                 this.columnLearner_Surname = base.Columns["Learner_Surname"];
                 this.columnVehicle_Make = base.Columns["Vehicle_Make"];
                 this.columnVehicle_Model = base.Columns["Vehicle_Model"];
-                this.columnLearnerID = base.Columns["LearnerID"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3204,6 +3204,8 @@ namespace DrivingSchoolBookingSystem {
                 base.Columns.Add(this.columnBooking_EndTime);
                 this.columnBooking_Status = new global::System.Data.DataColumn("Booking_Status", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnBooking_Status);
+                this.columnLearnerID = new global::System.Data.DataColumn("LearnerID", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLearnerID);
                 this.columnCode_Type = new global::System.Data.DataColumn("Code_Type", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCode_Type);
                 this.columnVehicleID = new global::System.Data.DataColumn("VehicleID", typeof(int), null, global::System.Data.MappingType.Element);
@@ -3222,8 +3224,6 @@ namespace DrivingSchoolBookingSystem {
                 base.Columns.Add(this.columnVehicle_Make);
                 this.columnVehicle_Model = new global::System.Data.DataColumn("Vehicle_Model", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnVehicle_Model);
-                this.columnLearnerID = new global::System.Data.DataColumn("LearnerID", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnLearnerID);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnBookingID}, true));
                 this.columnBookingID.AutoIncrement = true;
@@ -3237,6 +3237,8 @@ namespace DrivingSchoolBookingSystem {
                 this.columnBooking_EndTime.AllowDBNull = false;
                 this.columnBooking_Status.AllowDBNull = false;
                 this.columnBooking_Status.MaxLength = 20;
+                this.columnLearnerID.AllowDBNull = false;
+                this.columnLearnerID.MaxLength = 128;
                 this.columnCode_Type.AllowDBNull = false;
                 this.columnVehicleID.AllowDBNull = false;
                 this.columnEmployeeID.AllowDBNull = false;
@@ -3252,8 +3254,6 @@ namespace DrivingSchoolBookingSystem {
                 this.columnVehicle_Make.MaxLength = 20;
                 this.columnVehicle_Model.AllowDBNull = false;
                 this.columnVehicle_Model.MaxLength = 30;
-                this.columnLearnerID.AllowDBNull = false;
-                this.columnLearnerID.MaxLength = 128;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5058,6 +5058,17 @@ namespace DrivingSchoolBookingSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string LearnerID {
+                get {
+                    return ((string)(this[this.tabletblBookingInnerJoin.LearnerIDColumn]));
+                }
+                set {
+                    this[this.tabletblBookingInnerJoin.LearnerIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public int Code_Type {
                 get {
                     return ((int)(this[this.tabletblBookingInnerJoin.Code_TypeColumn]));
@@ -5152,17 +5163,6 @@ namespace DrivingSchoolBookingSystem {
                 }
                 set {
                     this[this.tabletblBookingInnerJoin.Vehicle_ModelColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string LearnerID {
-                get {
-                    return ((string)(this[this.tabletblBookingInnerJoin.LearnerIDColumn]));
-                }
-                set {
-                    this[this.tabletblBookingInnerJoin.LearnerIDColumn] = value;
                 }
             }
         }
@@ -5892,7 +5892,7 @@ namespace DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Booking_StartTime", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Booking_StartTime", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Booking_EndTime", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Booking_EndTime", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Booking_Status", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Booking_Status", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LearnerID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LearnerID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LearnerID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LearnerID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Code_Type", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Code_Type", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_VehicleID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "VehicleID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_EmployeeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EmployeeID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -5905,7 +5905,7 @@ SELECT BookingID, Booking_Date, Booking_StartTime, Booking_EndTime, Booking_Stat
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Booking_StartTime", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Booking_StartTime", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Booking_EndTime", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Booking_EndTime", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Booking_Status", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Booking_Status", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LearnerID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LearnerID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LearnerID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LearnerID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Code_Type", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Code_Type", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@VehicleID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "VehicleID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EmployeeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EmployeeID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -5918,7 +5918,7 @@ SELECT BookingID, Booking_Date, Booking_StartTime, Booking_EndTime, Booking_Stat
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Booking_StartTime", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Booking_StartTime", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Booking_EndTime", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Booking_EndTime", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Booking_Status", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Booking_Status", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LearnerID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LearnerID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LearnerID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LearnerID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Code_Type", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Code_Type", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@VehicleID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "VehicleID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EmployeeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EmployeeID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -5927,7 +5927,7 @@ SELECT BookingID, Booking_Date, Booking_StartTime, Booking_EndTime, Booking_Stat
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Booking_StartTime", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Booking_StartTime", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Booking_EndTime", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Booking_EndTime", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Booking_Status", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Booking_Status", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LearnerID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LearnerID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LearnerID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LearnerID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Code_Type", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Code_Type", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_VehicleID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "VehicleID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_EmployeeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EmployeeID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -11534,15 +11534,12 @@ VALUES (@Learner_Name,@Learner_Surname,@Learner_IDNumber,@Learner_Age,@Learner_G
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"
-											SELECT tblBooking.BookingID, tblBooking.Booking_Date, tblBooking.Booking_StartTime, tblBooking.Booking_EndTime, tblBooking.Booking_Status, tblBooking.LearnerID,
-											tblBooking.Code_Type, tblBooking.VehicleID, tblBooking.EmployeeID, tblEmployee.Employee_Name, tblEmployee.Employee_Surname, tblVehicle.Vehicle_Make, tblVehicle.Vehicle_Model, tblLearner.Learner_Name,
-											tblLearner.Learner_Surname
-											FROM     tblBooking INNER JOIN
-											tblEmployee ON tblBooking.EmployeeID = tblEmployee.EmployeeID INNER JOIN
-											tblLearner ON tblBooking.LearnerID = tblLearner.LearnerID INNER JOIN
-											tblVehicle ON tblBooking.VehicleID = tblVehicle.VehicleID
-										";
+            this._commandCollection[0].CommandText = @"SELECT tblBooking.BookingID, tblBooking.Booking_Date, tblBooking.Booking_StartTime, tblBooking.Booking_EndTime, tblBooking.Booking_Status, tblBooking.LearnerID, tblBooking.Code_Type, tblBooking.VehicleID, tblBooking.EmployeeID, 
+                  tblEmployee.Employee_Name, tblEmployee.Employee_Surname, tblVehicle.Vehicle_Make, tblVehicle.Vehicle_Model, tblLearner.Learner_Name, tblLearner.Learner_Surname
+FROM     tblBooking INNER JOIN
+                  tblEmployee ON tblBooking.EmployeeID = tblEmployee.EmployeeID INNER JOIN
+                  tblLearner ON tblBooking.LearnerID = tblLearner.LearnerID INNER JOIN
+                  tblVehicle ON tblBooking.VehicleID = tblVehicle.VehicleID";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
