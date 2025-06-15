@@ -97,17 +97,7 @@ namespace DrivingSchoolBookingSystem
                     return;
                 }
 
-                decimal pricePerHour = 0;
-                foreach (DataRow row in dsBookingSystem.tblLessonCode.Rows)
-                {
-                    if (Convert.ToInt16(row["Code_Type"]) == lessonCodeID)
-                    {
-                        pricePerHour = (decimal)row["Code_PricePerHour"];
-                        break;
-                    }
-                }
-                decimal totalCost = pricePerHour * (endTime - startTime);
-                decimal feeDue = totalCost;
+                
                 TimeSpan tStartTime = TimeSpan.FromHours(startTime);
                 TimeSpan tEndTime = TimeSpan.FromHours(endTime);
 
