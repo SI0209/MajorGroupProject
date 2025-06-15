@@ -442,3 +442,23 @@ D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\ob
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.pdb
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.exe.config
 >>>>>>> 9e97c30 (Fixing Manage Booking form and dataset)
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\MigraDoc.Rendering-gdi.dll
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\MigraDoc.RtfRendering-gdi.dll
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\PdfSharp-gdi.dll
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.BarCodes-gdi.dll
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Charting-gdi.dll
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Quality-gdi.dll
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Snippets-gdi.dll
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\MigraDoc.Rendering-gdi.pdb
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\MigraDoc.Rendering-gdi.xml
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\MigraDoc.RtfRendering-gdi.pdb
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\MigraDoc.RtfRendering-gdi.xml
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\PdfSharp-gdi.pdb
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\PdfSharp-gdi.xml
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.BarCodes-gdi.pdb
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.BarCodes-gdi.xml
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Charting-gdi.pdb
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Charting-gdi.xml
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Quality-gdi.pdb
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Quality-gdi.xml
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\PdfSharp.Snippets-gdi.pdb

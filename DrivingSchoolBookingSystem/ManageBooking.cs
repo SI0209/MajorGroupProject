@@ -171,7 +171,6 @@ namespace DrivingSchoolBookingSystem
             taBooking.Fill(dsBookingSystem.tblBooking);
             taBookingInnerJoin.Fill(dsBookingSystem.tblBookingInnerJoin);
             taLearner.Fill(dsBookingSystem.tblLearner);
-            txtSearch.Clear();
             cbxVehicleID.Items.Clear();
             foreach (DataRow row in dsBookingSystem.tblVehicle.Rows)
             {
