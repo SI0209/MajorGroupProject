@@ -735,7 +735,7 @@
             this.button5.BackColor = System.Drawing.Color.Lavender;
             this.button5.Font = new System.Drawing.Font("Comic Sans MS", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button5.Location = new System.Drawing.Point(1422, 150);
+            this.button5.Location = new System.Drawing.Point(1373, 154);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(92, 40);
             this.button5.TabIndex = 63;
@@ -758,11 +758,11 @@
             this.label17.BackColor = System.Drawing.Color.Transparent;
             this.label17.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label17.Location = new System.Drawing.Point(764, 154);
+            this.label17.Location = new System.Drawing.Point(582, 154);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(324, 29);
+            this.label17.Size = new System.Drawing.Size(494, 29);
             this.label17.TabIndex = 61;
-            this.label17.Text = "Search by Learner First Name:";
+            this.label17.Text = "Search by learner first name or by lesson topic:";
             // 
             // learnerProgressBindingSource
             // 

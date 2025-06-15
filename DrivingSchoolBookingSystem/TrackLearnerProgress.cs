@@ -350,27 +350,31 @@ namespace DrivingSchoolBookingSystem
             }*/
             string input = textBox8.Text.Trim();
 
-            if (!string.IsNullOrWhiteSpace(input))
+            try
             {
-                try
+                if (string.IsNullOrWhiteSpace(input))
                 {
-                    // Only match items that start with the input
-                    string searchPattern = input + "%";
-                    trackLearnerTableAdapter.FillByMulti(this.wstGrp2DS2.TrackLearner, searchPattern);
-
-                    if (wstGrp2DS2.TrackLearner.Rows.Count == 0)
-                    {
-                        MessageBox.Show("No matches found starting with that letter.");
-                    }
+                    // Load all records if the search box is empty
+                    trackLearnerTableAdapter.FillBy(this.wstGrp2DS2.TrackLearner);
+                    return;
                 }
-                catch (Exception ex)
+
+                // Only match items that start with the input
+                string keyword = input + "%";
+                trackLearnerTableAdapter.FillByMulti(this.wstGrp2DS2.TrackLearner, keyword);
+
+                if (wstGrp2DS2.TrackLearner.Rows.Count == 0)
                 {
-                    MessageBox.Show("Search failed: " + ex.Message);
+                    MessageBox.Show("No results starting with your input were found. Reloading full list.", "No Matches Found", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    trackLearnerTableAdapter.FillBy(this.wstGrp2DS2.TrackLearner); // Reload full list
+                    textBox8.Clear();
                 }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Please enter a starting letter or word to search.");
+                MessageBox.Show("An error occurred during the search. Please try again.\n\nDetails: " + ex.Message,
+                                "Search Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                trackLearnerTableAdapter.FillBy(this.wstGrp2DS2.TrackLearner); // Fallback to full list
             }
         }
 
