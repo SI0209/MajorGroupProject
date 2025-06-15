@@ -181,45 +181,35 @@ namespace DrivingSchoolBookingSystem
 
         private void textBox7_TextChanged(object sender, EventArgs e)
         {
-           
 
 
             string input = textBox7.Text.Trim();
 
             try
             {
-                bool isTextBox7Empty = string.IsNullOrWhiteSpace(input);
+                if (string.IsNullOrWhiteSpace(input))
                 {
-                   tblLearnerTableAdapter.Fill(this.wstGrp2DataSet1.tblLearner);
+                    // Load all learners if the search box is empty
+                    tblLearnerTableAdapter.Fill(this.wstGrp2DataSet1.tblLearner);
+                    return;
                 }
 
-                // Search by LearnerID if input is numeric
-                if (input.All(char.IsDigit))
-                {
-                    if (int.TryParse(input, out int learnerId))
-                    {
-                        tblLearnerTableAdapter.FillByLearnerID(this.wstGrp2DataSet1.tblLearner, learnerId);
-                    }
-                }
-                else
-                {
-                    // Search by Name or Surname (partial match with wildcards)
-                    string keyword = $"%{input}%";
-                    tblLearnerTableAdapter.FillByNameOrSurname(this.wstGrp2DataSet1.tblLearner, keyword);
-                }
+                // Use wildcard for partial search
+                string keyword = $"%{input}%";
+                tblLearnerTableAdapter.FillByPartialMatch(this.wstGrp2DataSet1.tblLearner, keyword);
 
                 // If no results found
                 if (wstGrp2DataSet1.tblLearner.Rows.Count == 0)
                 {
-                    MessageBox.Show("No matching learner found. Reloading full list.");
-                    tblLearnerTableAdapter.Fill(this.wstGrp2DataSet1.tblLearner); // Load all learners
-                    textBox7.Clear(); // Clear search boxS
+                    MessageBox.Show("No learners matched your search. The full list will now be shown.", "No Results Found", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    tblLearnerTableAdapter.Fill(this.wstGrp2DataSet1.tblLearner); // Reload all
+                    textBox7.Clear();
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("An error occurred while searching: " + ex.Message);
-                tblLearnerTableAdapter.Fill(this.wstGrp2DataSet1.tblLearner); // Load all learners in case of error
+                MessageBox.Show("Something went wrong while searching. Please try again.\n\nDetails: " + ex.Message, "Search Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                tblLearnerTableAdapter.Fill(this.wstGrp2DataSet1.tblLearner); // Fallback to full list
             }
         }
 
