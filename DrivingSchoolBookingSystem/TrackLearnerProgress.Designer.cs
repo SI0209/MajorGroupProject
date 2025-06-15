@@ -130,7 +130,7 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(633, 37);
+            this.label11.Location = new System.Drawing.Point(794, 37);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(337, 39);
@@ -141,7 +141,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::DrivingSchoolBookingSystem.Properties.Resources.instructor;
-            this.pictureBox1.Location = new System.Drawing.Point(536, 13);
+            this.pictureBox1.Location = new System.Drawing.Point(679, 13);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(98, 74);
@@ -846,6 +846,7 @@
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "ON";
             this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // radioButton2
             // 
@@ -859,18 +860,20 @@
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "OFF";
             this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.label19);
             this.panel1.Controls.Add(this.radioButton1);
             this.panel1.Controls.Add(this.radioButton2);
             this.panel1.Font = new System.Drawing.Font("Comic Sans MS", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel1.Location = new System.Drawing.Point(823, 656);
+            this.panel1.Location = new System.Drawing.Point(265, 253);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(157, 121);
             this.panel1.TabIndex = 70;

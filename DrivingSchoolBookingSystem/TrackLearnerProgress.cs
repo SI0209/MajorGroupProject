@@ -49,6 +49,19 @@ namespace DrivingSchoolBookingSystem
             //this.learnerProgressTableAdapter.Fill(this.wstGrp2DS2.LearnerProgress);
             // TODO: This line of code loads data into the 'bookingSystemDataSet.tblLearners' table. You can move, or remove it, as needed.
             // this.tblLearnersTableAdapter.Fill(this.bookingSystemDataSet.tblLearners);
+            button1.Enabled= false;
+            button2.Enabled = false;
+            button3.Enabled = false;
+            textBox1.Enabled = false; // LearnerID should not be editable
+            textBox2.Enabled = false; // LearnerName should not be editable
+            textBox3.Enabled = false;
+            textBox6.Enabled = false; // Comments should not be editable
+            textBox5.Enabled = false; // ErrorsMade should not be editable
+            comboBox1.Enabled = false; // LessonTopic should not be editable
+            comboBox2.Enabled = false; // Attendance should not be editable
+            comboBox3.Enabled = false; // Rating should not be editable
+            comboBox4.Enabled = false; // PassStatus should not be editable
+            dateTimePicker1.Enabled = false; // LessonDate should not be editable
 
 
             comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -590,5 +603,50 @@ namespace DrivingSchoolBookingSystem
         {
 
         }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton2.Checked)
+            {
+                button1.Enabled = false;
+                button2.Enabled = false;
+                button3.Enabled = false;
+                textBox1.Enabled = false; // LearnerID should not be editable
+                textBox2.Enabled = false; // LearnerName should not be editable
+                textBox3.Enabled = false;
+                textBox6.Enabled = false; // Comments should not be editable
+                textBox5.Enabled = false; // ErrorsMade should not be editable
+                comboBox1.Enabled = false; // LessonTopic should not be editable
+                comboBox2.Enabled = false; // Attendance should not be editable
+                comboBox3.Enabled = false; // Rating should not be editable
+                comboBox4.Enabled = false; // PassStatus should not be editable
+                dateTimePicker1.Enabled = false; // LessonDate should not be editable
+
+            }
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton1.Checked)
+            {
+                button1.Enabled = true;
+                button2.Enabled = true;
+                button3.Enabled = true;
+
+                textBox1.Enabled = true; // LearnerID now editable
+                textBox2.Enabled = true; // LearnerName now editable
+                textBox3.Enabled = true;
+                textBox6.Enabled = true; // Comments now editable
+                textBox5.Enabled = true; // ErrorsMade now editable
+
+                comboBox1.Enabled = true; // LessonTopic now editable
+                comboBox2.Enabled = true; // Attendance now editable
+                comboBox3.Enabled = true; // Rating now editable
+                comboBox4.Enabled = true; // PassStatus now editable
+
+                dateTimePicker1.Enabled = true; // LessonDate now editable
+
+            }
+            }
     }
 }
