@@ -754,7 +754,7 @@ namespace DrivingSchoolBookingSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public tblBookingRow AddtblBookingRow(System.DateTime Booking_Date, System.TimeSpan Booking_StartTime, System.TimeSpan Booking_EndTime, string Booking_Status, int LearnerID, tblLessonCodeRow parenttblLessonCodeRowBytblLessonCode_tblBooking, tblVehicleRow parenttblVehicleRowBytblVehicle_tblBooking, tblEmployeeRow parenttblEmployeeRowBytblEmployee_tblBooking) {
+            public tblBookingRow AddtblBookingRow(System.DateTime Booking_Date, System.TimeSpan Booking_StartTime, System.TimeSpan Booking_EndTime, string Booking_Status, string LearnerID, tblLessonCodeRow parenttblLessonCodeRowBytblLessonCode_tblBooking, tblVehicleRow parenttblVehicleRowBytblVehicle_tblBooking, tblEmployeeRow parenttblEmployeeRowBytblEmployee_tblBooking) {
                 tblBookingRow rowtblBookingRow = ((tblBookingRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -828,7 +828,7 @@ namespace DrivingSchoolBookingSystem {
                 base.Columns.Add(this.columnBooking_EndTime);
                 this.columnBooking_Status = new global::System.Data.DataColumn("Booking_Status", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnBooking_Status);
-                this.columnLearnerID = new global::System.Data.DataColumn("LearnerID", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnLearnerID = new global::System.Data.DataColumn("LearnerID", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnLearnerID);
                 this.columnCode_Type = new global::System.Data.DataColumn("Code_Type", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCode_Type);
@@ -4224,9 +4224,9 @@ namespace DrivingSchoolBookingSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int LearnerID {
+            public string LearnerID {
                 get {
-                    return ((int)(this[this.tabletblBooking.LearnerIDColumn]));
+                    return ((string)(this[this.tabletblBooking.LearnerIDColumn]));
                 }
                 set {
                     this[this.tabletblBooking.LearnerIDColumn] = value;
