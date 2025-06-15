@@ -226,11 +226,7 @@ namespace DrivingSchoolBookingSystem
             comboBox3.SelectedIndex = -1;
             comboBox4.SelectedIndex = -1;
             IssuedateTimePicker1.Value = DateTime.Today;
-            // Calculate expiry date as 2 years after issue date  
-            DateTime expiryDate = IssuedateTimePicker1.Value.AddYears(2);
-
-            // Fix: Convert DateTime to string before assigning to textBox9.Text  
-            textBox9.Text = expiryDate.ToString("yyyy-MM-dd");
+            textBox9.Clear();
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
@@ -291,7 +287,7 @@ namespace DrivingSchoolBookingSystem
                 DateTime expiryDate = issueDate.AddYears(2);
                 /*/ExpdateTimePicker2.MinDate = expiryDate;
                  ExpdateTimePicker2.MaxDate = expiryDate;*/
-                textBox9.Text = expiryDate.ToString("yyyy-MM-dd");
+                textBox9.Text = expiryDate.ToLongDateString();
             }
 
 

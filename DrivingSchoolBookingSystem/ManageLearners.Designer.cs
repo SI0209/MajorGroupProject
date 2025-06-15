@@ -479,10 +479,10 @@
             // 
             // IssuedateTimePicker1
             // 
-            this.IssuedateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IssuedateTimePicker1.Location = new System.Drawing.Point(232, 472);
+            this.IssuedateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IssuedateTimePicker1.Location = new System.Drawing.Point(210, 473);
             this.IssuedateTimePicker1.Name = "IssuedateTimePicker1";
-            this.IssuedateTimePicker1.Size = new System.Drawing.Size(167, 22);
+            this.IssuedateTimePicker1.Size = new System.Drawing.Size(204, 24);
             this.IssuedateTimePicker1.TabIndex = 21;
             this.IssuedateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
