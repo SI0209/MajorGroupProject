@@ -63,6 +63,16 @@ namespace DrivingSchoolBookingSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _93e241e2_73ec_43e4_b747_256d58409018_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("93e241e2-73ec-43e4-b747-256d58409018-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap analytics2 {
             get {
                 object obj = ResourceManager.GetObject("analytics2", resourceCulture);
@@ -106,6 +116,16 @@ namespace DrivingSchoolBookingSystem.Properties {
         internal static System.Drawing.Bitmap button {
             get {
                 object obj = ResourceManager.GetObject("button", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap d96d3352_b857_4aa9_ab18_05236196ade2_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("d96d3352-b857-4aa9-ab18-05236196ade2-removebg-preview", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

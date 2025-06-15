@@ -9,11 +9,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-using MigraDoc.DocumentObjectModel;
+/*using MigraDoc.DocumentObjectModel;
 using MigraDoc.DocumentObjectModel.Tables;
 using MigraDoc.Rendering;
 using System.Diagnostics;
-using System.IO;
+using System.IO;*/
 
 namespace DrivingSchoolBookingSystem
 {
