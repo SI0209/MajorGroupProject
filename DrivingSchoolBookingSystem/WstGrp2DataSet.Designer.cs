@@ -754,7 +754,7 @@ namespace DrivingSchoolBookingSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public tblBookingRow AddtblBookingRow(System.DateTime Booking_Date, System.TimeSpan Booking_StartTime, System.TimeSpan Booking_EndTime, string Booking_Status, string LearnerID, tblLessonCodeRow parenttblLessonCodeRowBytblLessonCode_tblBooking, tblVehicleRow parenttblVehicleRowBytblVehicle_tblBooking, tblEmployeeRow parenttblEmployeeRowBytblEmployee_tblBooking) {
+            public tblBookingRow AddtblBookingRow(System.DateTime Booking_Date, System.TimeSpan Booking_StartTime, System.TimeSpan Booking_EndTime, string Booking_Status, int LearnerID, tblLessonCodeRow parenttblLessonCodeRowBytblLessonCode_tblBooking, tblVehicleRow parenttblVehicleRowBytblVehicle_tblBooking, tblEmployeeRow parenttblEmployeeRowBytblEmployee_tblBooking) {
                 tblBookingRow rowtblBookingRow = ((tblBookingRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -828,7 +828,7 @@ namespace DrivingSchoolBookingSystem {
                 base.Columns.Add(this.columnBooking_EndTime);
                 this.columnBooking_Status = new global::System.Data.DataColumn("Booking_Status", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnBooking_Status);
-                this.columnLearnerID = new global::System.Data.DataColumn("LearnerID", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnLearnerID = new global::System.Data.DataColumn("LearnerID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnLearnerID);
                 this.columnCode_Type = new global::System.Data.DataColumn("Code_Type", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCode_Type);
@@ -3127,7 +3127,7 @@ namespace DrivingSchoolBookingSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public tblBookingInnerJoinRow AddtblBookingInnerJoinRow(System.DateTime Booking_Date, System.TimeSpan Booking_StartTime, System.TimeSpan Booking_EndTime, string Booking_Status, string LearnerID, int Code_Type, int VehicleID, int EmployeeID, string Employee_Name, string Employee_Surname, string Learner_Name, string Learner_Surname, string Vehicle_Make, string Vehicle_Model) {
+            public tblBookingInnerJoinRow AddtblBookingInnerJoinRow(System.DateTime Booking_Date, System.TimeSpan Booking_StartTime, System.TimeSpan Booking_EndTime, string Booking_Status, int LearnerID, int Code_Type, int VehicleID, int EmployeeID, string Employee_Name, string Employee_Surname, string Learner_Name, string Learner_Surname, string Vehicle_Make, string Vehicle_Model) {
                 tblBookingInnerJoinRow rowtblBookingInnerJoinRow = ((tblBookingInnerJoinRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -3204,7 +3204,7 @@ namespace DrivingSchoolBookingSystem {
                 base.Columns.Add(this.columnBooking_EndTime);
                 this.columnBooking_Status = new global::System.Data.DataColumn("Booking_Status", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnBooking_Status);
-                this.columnLearnerID = new global::System.Data.DataColumn("LearnerID", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnLearnerID = new global::System.Data.DataColumn("LearnerID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnLearnerID);
                 this.columnCode_Type = new global::System.Data.DataColumn("Code_Type", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCode_Type);
@@ -3238,7 +3238,6 @@ namespace DrivingSchoolBookingSystem {
                 this.columnBooking_Status.AllowDBNull = false;
                 this.columnBooking_Status.MaxLength = 20;
                 this.columnLearnerID.AllowDBNull = false;
-                this.columnLearnerID.MaxLength = 128;
                 this.columnCode_Type.AllowDBNull = false;
                 this.columnVehicleID.AllowDBNull = false;
                 this.columnEmployeeID.AllowDBNull = false;
@@ -4224,9 +4223,9 @@ namespace DrivingSchoolBookingSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string LearnerID {
+            public int LearnerID {
                 get {
-                    return ((string)(this[this.tabletblBooking.LearnerIDColumn]));
+                    return ((int)(this[this.tabletblBooking.LearnerIDColumn]));
                 }
                 set {
                     this[this.tabletblBooking.LearnerIDColumn] = value;
@@ -5058,9 +5057,9 @@ namespace DrivingSchoolBookingSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string LearnerID {
+            public int LearnerID {
                 get {
-                    return ((string)(this[this.tabletblBookingInnerJoin.LearnerIDColumn]));
+                    return ((int)(this[this.tabletblBookingInnerJoin.LearnerIDColumn]));
                 }
                 set {
                     this[this.tabletblBookingInnerJoin.LearnerIDColumn] = value;
@@ -11501,7 +11500,7 @@ VALUES (@Learner_Name,@Learner_Surname,@Learner_IDNumber,@Learner_Age,@Learner_G
                   tblEmployee.Employee_Name, tblEmployee.Employee_Surname, tblLearner.Learner_Name, tblLearner.Learner_Surname, tblVehicle.Vehicle_Make, tblVehicle.Vehicle_Model
 FROM     tblBooking INNER JOIN
                   tblEmployee ON tblBooking.EmployeeID = tblEmployee.EmployeeID INNER JOIN
-                  tblLearner ON tblBooking.LearnerID = CAST(tblLearner.LearnerID AS NVARCHAR(128)) INNER JOIN
+                  tblLearner ON tblBooking.LearnerID = tblLearner.LearnerID INNER JOIN
                   tblVehicle ON tblBooking.VehicleID = tblVehicle.VehicleID";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
@@ -11510,7 +11509,7 @@ FROM     tblBooking INNER JOIN
                   tblEmployee.Employee_Name, tblEmployee.Employee_Surname, tblVehicle.Vehicle_Make, tblVehicle.Vehicle_Model, tblLearner.Learner_Name, tblLearner.Learner_Surname
 FROM     tblBooking INNER JOIN
                   tblEmployee ON tblBooking.EmployeeID = tblEmployee.EmployeeID INNER JOIN
-                  tblLearner ON tblBooking.LearnerID = CAST(tblLearner.LearnerID AS NVARCHAR(128)) INNER JOIN
+                  tblLearner ON tblBooking.LearnerID = tblLearner.LearnerID INNER JOIN
                   tblVehicle ON tblBooking.VehicleID = tblVehicle.VehicleID
 WHERE  (tblBooking.Booking_Date = @date)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
@@ -11521,11 +11520,11 @@ WHERE  (tblBooking.Booking_Date = @date)";
                   tblEmployee.Employee_Name, tblEmployee.Employee_Surname, tblVehicle.Vehicle_Make, tblVehicle.Vehicle_Model, tblLearner.Learner_Name, tblLearner.Learner_Surname
 FROM     tblBooking INNER JOIN
                   tblEmployee ON tblBooking.EmployeeID = tblEmployee.EmployeeID INNER JOIN
-                  tblLearner ON tblBooking.LearnerID = CAST(tblLearner.LearnerID AS NVARCHAR(128)) INNER JOIN
+                  tblLearner ON tblBooking.LearnerID = tblLearner.LearnerID INNER JOIN
                   tblVehicle ON tblBooking.VehicleID = tblVehicle.VehicleID
 WHERE  (tblBooking.LearnerID = @LearnerID)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LearnerID", global::System.Data.SqlDbType.NVarChar, 128, global::System.Data.ParameterDirection.Input, 0, 0, "LearnerID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LearnerID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "LearnerID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11592,14 +11591,9 @@ WHERE  (tblBooking.LearnerID = @LearnerID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillByLearner(WstGrp2DataSet.tblBookingInnerJoinDataTable dataTable, string LearnerID) {
+        public virtual int FillByLearner(WstGrp2DataSet.tblBookingInnerJoinDataTable dataTable, int LearnerID) {
             this.Adapter.SelectCommand = this.CommandCollection[2];
-            if ((LearnerID == null)) {
-                throw new global::System.ArgumentNullException("LearnerID");
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(LearnerID));
-            }
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(LearnerID));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -11611,14 +11605,9 @@ WHERE  (tblBooking.LearnerID = @LearnerID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual WstGrp2DataSet.tblBookingInnerJoinDataTable GetDataBy1(string LearnerID) {
+        public virtual WstGrp2DataSet.tblBookingInnerJoinDataTable GetDataBy1(int LearnerID) {
             this.Adapter.SelectCommand = this.CommandCollection[2];
-            if ((LearnerID == null)) {
-                throw new global::System.ArgumentNullException("LearnerID");
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(LearnerID));
-            }
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(LearnerID));
             WstGrp2DataSet.tblBookingInnerJoinDataTable dataTable = new WstGrp2DataSet.tblBookingInnerJoinDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;

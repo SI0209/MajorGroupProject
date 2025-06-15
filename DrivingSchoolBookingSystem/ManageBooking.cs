@@ -197,9 +197,7 @@ namespace DrivingSchoolBookingSystem
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
-            string searchDate = dateTimePicker1.Value.Date.ToShortDateString();
-            taBookingInnerJoin.FillBy(dsBookingSystem.tblBookingInnerJoin, searchDate);
-
+            taBookingInnerJoin.FillBy(dsBookingSystem.tblBookingInnerJoin, dateTimePicker1.Value.Date.ToShortDateString());
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -216,10 +214,10 @@ namespace DrivingSchoolBookingSystem
             nudStartTime.Text = dgvBooking.CurrentRow.Cells[2].Value.ToString().Substring(0, 2);
             nudEndTime.Text = dgvBooking.CurrentRow.Cells[3].Value.ToString().Substring(0, 2);
             cbxBookingStatus.Text = dgvBooking.CurrentRow.Cells[4].Value.ToString();
-            cbxLearnerID.Text = dgvBooking.CurrentRow.Cells[5].Value.ToString() + " ";
-            cbxLessonCodes.Text = dgvBooking.CurrentRow.Cells[6].Value.ToString() + " ";
-            cbxVehicleID.Text = dgvBooking.CurrentRow.Cells[7].Value.ToString() + " ";
-            cbxEmployeeID.Text = dgvBooking.CurrentRow.Cells[8].Value.ToString() + " ";
+            cbxLearnerID.Text = dgvBooking.CurrentRow.Cells[8].Value.ToString() + " ";
+            cbxLessonCodes.Text = dgvBooking.CurrentRow.Cells[5].Value.ToString() + " ";
+            cbxVehicleID.Text = dgvBooking.CurrentRow.Cells[6].Value.ToString() + " ";
+            cbxEmployeeID.Text = dgvBooking.CurrentRow.Cells[7].Value.ToString() + " ";
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -424,40 +422,8 @@ namespace DrivingSchoolBookingSystem
             return message;
         }
 
-        private void label16_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cbxVehicleID_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label15_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+     
+       
 
         private void pbHelpBooking_Click(object sender, EventArgs e)
         {
@@ -481,10 +447,7 @@ namespace DrivingSchoolBookingSystem
             MessageBox.Show(helpText, "Help", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void txtSearch_TextChanged(object sender, EventArgs e)
-        {
-            taLearner.SearchBySurname(dsBookingSystem.tblLearner, txtSearch.Text);
-        }
+        
 
         private void cbxLessonCodes_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -534,9 +497,6 @@ namespace DrivingSchoolBookingSystem
             home.ShowDialog();
         }
 
-        private void panel1_Paint_1(object sender, PaintEventArgs e)
-        {
-
-        }
+        
     }
 }
