@@ -373,6 +373,7 @@ namespace DrivingSchoolBookingSystem
                 label15.Visible = true;
                 textBox8.Visible = true;
                 textBox8.Enabled = false;
+                button1.Enabled = false; // Disable Add button when editing a row
 
                 // Disable automatic date handling during row population  
                 suppressDateEvents = true;

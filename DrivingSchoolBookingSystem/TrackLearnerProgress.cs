@@ -78,7 +78,7 @@ namespace DrivingSchoolBookingSystem
             textBox1.Enabled = false;
             textBox2.Enabled = false;
             textBox3.Enabled = false;
-           
+           button2.Enabled=false; // Disable Update button when selecting a learner from the new learners list
 
             dateTimePicker1.Value = DateTime.Now;
             comboBox1.SelectedIndex = -1;
@@ -395,8 +395,9 @@ namespace DrivingSchoolBookingSystem
             textBox1.Enabled = false;
             textBox2.Enabled = false;
             textBox3.Enabled = false;
-            
-            
+            button1.Enabled = false; // Disable Add button when editing
+
+
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
