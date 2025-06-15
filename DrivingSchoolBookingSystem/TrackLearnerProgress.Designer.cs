@@ -37,17 +37,6 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.progressIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LearnerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LearnerSurname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lessonDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lessonTopicDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.attendanceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ratingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.errorsMadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.commentsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.passStatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.trackLearnerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.wstGrp2DS2 = new DrivingSchoolBookingSystem.WstGrp2DS2();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
@@ -57,8 +46,6 @@
             this.tblNewLearnerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -98,6 +85,16 @@
             this.learnerProgressBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.trackLearnerTableAdapter = new DrivingSchoolBookingSystem.WstGrp2DS2TableAdapters.TrackLearnerTableAdapter();
             this.button6 = new System.Windows.Forms.Button();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LearnerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LearnerSurname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lessonDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lessonTopicDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.attendanceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ratingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.errorsMadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.commentsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.passStatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -174,7 +171,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(50, 933);
+            this.label5.Location = new System.Drawing.Point(50, 907);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(96, 32);
             this.label5.TabIndex = 15;
@@ -186,7 +183,7 @@
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.BackgroundImage = global::DrivingSchoolBookingSystem.Properties.Resources.log_out;
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Location = new System.Drawing.Point(40, 832);
+            this.pictureBox4.Location = new System.Drawing.Point(40, 784);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(106, 97);
             this.pictureBox4.TabIndex = 14;
@@ -210,7 +207,6 @@
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.progressIDDataGridViewTextBoxColumn,
             this.dataGridViewTextBoxColumn1,
             this.LearnerName,
             this.LearnerSurname,
@@ -230,96 +226,6 @@
             this.dataGridView1.TabIndex = 44;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_RowHeaderMouseClick);
-            // 
-            // progressIDDataGridViewTextBoxColumn
-            // 
-            this.progressIDDataGridViewTextBoxColumn.DataPropertyName = "ProgressID";
-            this.progressIDDataGridViewTextBoxColumn.HeaderText = "ProgressID";
-            this.progressIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.progressIDDataGridViewTextBoxColumn.Name = "progressIDDataGridViewTextBoxColumn";
-            this.progressIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.progressIDDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "LearnerID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "LearnerID";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // LearnerName
-            // 
-            this.LearnerName.DataPropertyName = "LearnerName";
-            this.LearnerName.HeaderText = "LearnerName";
-            this.LearnerName.MinimumWidth = 6;
-            this.LearnerName.Name = "LearnerName";
-            this.LearnerName.Width = 125;
-            // 
-            // LearnerSurname
-            // 
-            this.LearnerSurname.DataPropertyName = "LearnerSurname";
-            this.LearnerSurname.HeaderText = "LearnerSurname";
-            this.LearnerSurname.MinimumWidth = 6;
-            this.LearnerSurname.Name = "LearnerSurname";
-            this.LearnerSurname.Width = 125;
-            // 
-            // lessonDateDataGridViewTextBoxColumn
-            // 
-            this.lessonDateDataGridViewTextBoxColumn.DataPropertyName = "LessonDate";
-            this.lessonDateDataGridViewTextBoxColumn.HeaderText = "LessonDate";
-            this.lessonDateDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.lessonDateDataGridViewTextBoxColumn.Name = "lessonDateDataGridViewTextBoxColumn";
-            this.lessonDateDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // lessonTopicDataGridViewTextBoxColumn
-            // 
-            this.lessonTopicDataGridViewTextBoxColumn.DataPropertyName = "LessonTopic";
-            this.lessonTopicDataGridViewTextBoxColumn.HeaderText = "LessonTopic";
-            this.lessonTopicDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.lessonTopicDataGridViewTextBoxColumn.Name = "lessonTopicDataGridViewTextBoxColumn";
-            this.lessonTopicDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // attendanceDataGridViewTextBoxColumn
-            // 
-            this.attendanceDataGridViewTextBoxColumn.DataPropertyName = "Attendance";
-            this.attendanceDataGridViewTextBoxColumn.HeaderText = "Attendance";
-            this.attendanceDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.attendanceDataGridViewTextBoxColumn.Name = "attendanceDataGridViewTextBoxColumn";
-            this.attendanceDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // ratingDataGridViewTextBoxColumn
-            // 
-            this.ratingDataGridViewTextBoxColumn.DataPropertyName = "Rating";
-            this.ratingDataGridViewTextBoxColumn.HeaderText = "Rating";
-            this.ratingDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.ratingDataGridViewTextBoxColumn.Name = "ratingDataGridViewTextBoxColumn";
-            this.ratingDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // errorsMadeDataGridViewTextBoxColumn
-            // 
-            this.errorsMadeDataGridViewTextBoxColumn.DataPropertyName = "ErrorsMade";
-            this.errorsMadeDataGridViewTextBoxColumn.HeaderText = "ErrorsMade";
-            this.errorsMadeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.errorsMadeDataGridViewTextBoxColumn.Name = "errorsMadeDataGridViewTextBoxColumn";
-            this.errorsMadeDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // commentsDataGridViewTextBoxColumn
-            // 
-            this.commentsDataGridViewTextBoxColumn.DataPropertyName = "Comments";
-            this.commentsDataGridViewTextBoxColumn.HeaderText = "Comments";
-            this.commentsDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.commentsDataGridViewTextBoxColumn.Name = "commentsDataGridViewTextBoxColumn";
-            this.commentsDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // passStatusDataGridViewTextBoxColumn
-            // 
-            this.passStatusDataGridViewTextBoxColumn.DataPropertyName = "PassStatus";
-            this.passStatusDataGridViewTextBoxColumn.HeaderText = "PassStatus";
-            this.passStatusDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.passStatusDataGridViewTextBoxColumn.Name = "passStatusDataGridViewTextBoxColumn";
-            this.passStatusDataGridViewTextBoxColumn.Width = 125;
             // 
             // trackLearnerBindingSource
             // 
@@ -396,8 +302,6 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.textBox3);
             this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Controls.Add(this.textBox1);
@@ -408,28 +312,10 @@
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(409, 452);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(333, 218);
+            this.groupBox1.Size = new System.Drawing.Size(333, 173);
             this.groupBox1.TabIndex = 47;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Learner Details";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(161, 160);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(155, 27);
-            this.textBox4.TabIndex = 8;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
-            // 
-            // label6
-            // 
-            this.label6.Font = new System.Drawing.Font("Comic Sans MS", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(21, 159);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(113, 37);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "Progress ID:";
             // 
             // textBox3
             // 
@@ -501,7 +387,7 @@
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.White;
-            this.groupBox2.Location = new System.Drawing.Point(408, 676);
+            this.groupBox2.Location = new System.Drawing.Point(409, 656);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(334, 311);
             this.groupBox2.TabIndex = 48;
@@ -817,6 +703,87 @@
             this.button6.Text = "Save as PDF";
             this.button6.UseVisualStyleBackColor = false;
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "LearnerID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "LearnerID";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // LearnerName
+            // 
+            this.LearnerName.DataPropertyName = "LearnerName";
+            this.LearnerName.HeaderText = "LearnerName";
+            this.LearnerName.MinimumWidth = 6;
+            this.LearnerName.Name = "LearnerName";
+            this.LearnerName.Width = 125;
+            // 
+            // LearnerSurname
+            // 
+            this.LearnerSurname.DataPropertyName = "LearnerSurname";
+            this.LearnerSurname.HeaderText = "LearnerSurname";
+            this.LearnerSurname.MinimumWidth = 6;
+            this.LearnerSurname.Name = "LearnerSurname";
+            this.LearnerSurname.Width = 125;
+            // 
+            // lessonDateDataGridViewTextBoxColumn
+            // 
+            this.lessonDateDataGridViewTextBoxColumn.DataPropertyName = "LessonDate";
+            this.lessonDateDataGridViewTextBoxColumn.HeaderText = "LessonDate";
+            this.lessonDateDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.lessonDateDataGridViewTextBoxColumn.Name = "lessonDateDataGridViewTextBoxColumn";
+            this.lessonDateDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // lessonTopicDataGridViewTextBoxColumn
+            // 
+            this.lessonTopicDataGridViewTextBoxColumn.DataPropertyName = "LessonTopic";
+            this.lessonTopicDataGridViewTextBoxColumn.HeaderText = "LessonTopic";
+            this.lessonTopicDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.lessonTopicDataGridViewTextBoxColumn.Name = "lessonTopicDataGridViewTextBoxColumn";
+            this.lessonTopicDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // attendanceDataGridViewTextBoxColumn
+            // 
+            this.attendanceDataGridViewTextBoxColumn.DataPropertyName = "Attendance";
+            this.attendanceDataGridViewTextBoxColumn.HeaderText = "Attendance";
+            this.attendanceDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.attendanceDataGridViewTextBoxColumn.Name = "attendanceDataGridViewTextBoxColumn";
+            this.attendanceDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // ratingDataGridViewTextBoxColumn
+            // 
+            this.ratingDataGridViewTextBoxColumn.DataPropertyName = "Rating";
+            this.ratingDataGridViewTextBoxColumn.HeaderText = "Rating";
+            this.ratingDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.ratingDataGridViewTextBoxColumn.Name = "ratingDataGridViewTextBoxColumn";
+            this.ratingDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // errorsMadeDataGridViewTextBoxColumn
+            // 
+            this.errorsMadeDataGridViewTextBoxColumn.DataPropertyName = "ErrorsMade";
+            this.errorsMadeDataGridViewTextBoxColumn.HeaderText = "ErrorsMade";
+            this.errorsMadeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.errorsMadeDataGridViewTextBoxColumn.Name = "errorsMadeDataGridViewTextBoxColumn";
+            this.errorsMadeDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // commentsDataGridViewTextBoxColumn
+            // 
+            this.commentsDataGridViewTextBoxColumn.DataPropertyName = "Comments";
+            this.commentsDataGridViewTextBoxColumn.HeaderText = "Comments";
+            this.commentsDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.commentsDataGridViewTextBoxColumn.Name = "commentsDataGridViewTextBoxColumn";
+            this.commentsDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // passStatusDataGridViewTextBoxColumn
+            // 
+            this.passStatusDataGridViewTextBoxColumn.DataPropertyName = "PassStatus";
+            this.passStatusDataGridViewTextBoxColumn.HeaderText = "PassStatus";
+            this.passStatusDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.passStatusDataGridViewTextBoxColumn.Name = "passStatusDataGridViewTextBoxColumn";
+            this.passStatusDataGridViewTextBoxColumn.Width = 125;
+            // 
             // LearnerProgressForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -922,7 +889,18 @@
         private System.Windows.Forms.BindingSource learnerProgressBindingSource1;
         private System.Windows.Forms.BindingSource trackLearnerBindingSource;
         private WstGrp2DS2TableAdapters.TrackLearnerTableAdapter trackLearnerTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn progressIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn learnerNameDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn LearnerName;
         private System.Windows.Forms.DataGridViewTextBoxColumn LearnerSurname;
@@ -933,19 +911,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn errorsMadeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn commentsDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn passStatusDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn learnerNameDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

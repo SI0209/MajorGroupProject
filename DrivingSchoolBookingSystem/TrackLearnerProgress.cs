@@ -45,8 +45,7 @@ namespace DrivingSchoolBookingSystem
             // TODO: This line of code loads data into the 'bookingSystemDataSet.tblLearners' table. You can move, or remove it, as needed.
             // this.tblLearnersTableAdapter.Fill(this.bookingSystemDataSet.tblLearners);
 
-            label6.Visible = false;
-            textBox4.Visible = false;
+           
             comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox2.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox3.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -79,8 +78,7 @@ namespace DrivingSchoolBookingSystem
             textBox1.Enabled = false;
             textBox2.Enabled = false;
             textBox3.Enabled = false;
-            textBox4.Visible = false;
-            label6.Visible = false;
+           
 
             dateTimePicker1.Value = DateTime.Now;
             comboBox1.SelectedIndex = -1;
@@ -194,7 +192,7 @@ namespace DrivingSchoolBookingSystem
                         command.Parameters.AddWithValue("@errorsMade", textBox5.Text);
                         command.Parameters.AddWithValue("@comments", textBox6.Text);
                         command.Parameters.AddWithValue("@passStatus", comboBox4.Text);
-                        command.Parameters.AddWithValue("@progressID", textBox4.Text);
+                        
 
                         DialogResult dialogResult = MessageBox.Show("Are you sure you want to UPDATE learner " + textBox1.Text.ToString() + " details ?", "Confirmation", MessageBoxButtons.YesNo);
                         if (dialogResult == DialogResult.Yes)
@@ -236,7 +234,7 @@ namespace DrivingSchoolBookingSystem
             textBox1.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
             textBox2.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
             textBox3.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
-            textBox4.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+           
             dateTimePicker1.Value = Convert.ToDateTime(dataGridView1.CurrentRow.Cells[4].Value);
             comboBox1.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
             comboBox2.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
@@ -248,9 +246,7 @@ namespace DrivingSchoolBookingSystem
             textBox1.Enabled = false;
             textBox2.Enabled = false;
             textBox3.Enabled = false;
-            label6.Visible = true;
-            textBox4.Visible = true;
-            textBox4.Enabled = false;
+            
             
         }
 
