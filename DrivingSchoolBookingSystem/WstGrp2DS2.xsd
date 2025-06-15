@@ -276,11 +276,11 @@ WHERE  (ProgressID = @Original_ProgressID);
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="LearnerProgressTableAdapter" GeneratorDataComponentClassName="LearnerProgressTableAdapter" Name="LearnerProgress" UserDataComponentName="LearnerProgressTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="WstGrp2ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="WstGrp2ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT TrackLearner.ProgressID, tblLearner.LearnerID, tblLearner.Learner_Name, tblLearner.Learner_Surname, TrackLearner.LessonDate, TrackLearner.LessonTopic, TrackLearner.Attendance, TrackLearner.Rating, 
-                  TrackLearner.ErrorsMade, TrackLearner.Comments, TrackLearner.PassStatus
+                    <CommandText>SELECT tblLearner.LearnerID, tblLearner.Learner_Name, tblLearner.Learner_Surname, TrackLearner.LessonDate, TrackLearner.LessonTopic, TrackLearner.Attendance, TrackLearner.Rating, TrackLearner.ErrorsMade, TrackLearner.Comments, 
+                  TrackLearner.PassStatus
 FROM     tblLearner INNER JOIN
                   TrackLearner ON tblLearner.LearnerID = TrackLearner.LearnerID</CommandText>
                     <Parameters />
@@ -289,7 +289,6 @@ FROM     tblLearner INNER JOIN
               </DbSource>
             </MainSource>
             <Mappings>
-              <Mapping SourceColumn="ProgressID" DataSetColumn="ProgressID" />
               <Mapping SourceColumn="LearnerID" DataSetColumn="LearnerID" />
               <Mapping SourceColumn="Learner_Name" DataSetColumn="Learner_Name" />
               <Mapping SourceColumn="Learner_Surname" DataSetColumn="Learner_Surname" />
@@ -378,7 +377,6 @@ WHERE  (Learner_Name LIKE @name + '%')</CommandText>
         <xs:element name="LearnerProgress" msprop:Generator_RowEvHandlerName="LearnerProgressRowChangeEventHandler" msprop:Generator_RowDeletedName="LearnerProgressRowDeleted" msprop:Generator_RowDeletingName="LearnerProgressRowDeleting" msprop:Generator_RowEvArgName="LearnerProgressRowChangeEvent" msprop:Generator_TablePropName="LearnerProgress" msprop:Generator_RowChangedName="LearnerProgressRowChanged" msprop:Generator_UserTableName="LearnerProgress" msprop:Generator_RowChangingName="LearnerProgressRowChanging" msprop:Generator_RowClassName="LearnerProgressRow" msprop:Generator_TableClassName="LearnerProgressDataTable" msprop:Generator_TableVarName="tableLearnerProgress">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="ProgressID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInTable="ProgressIDColumn" msprop:Generator_ColumnPropNameInRow="ProgressID" msprop:Generator_UserColumnName="ProgressID" msprop:Generator_ColumnVarNameInTable="columnProgressID" type="xs:int" />
               <xs:element name="LearnerID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInTable="LearnerIDColumn" msprop:Generator_ColumnPropNameInRow="LearnerID" msprop:Generator_UserColumnName="LearnerID" msprop:Generator_ColumnVarNameInTable="columnLearnerID" type="xs:int" />
               <xs:element name="Learner_Name" msprop:Generator_ColumnPropNameInTable="Learner_NameColumn" msprop:Generator_ColumnPropNameInRow="Learner_Name" msprop:Generator_UserColumnName="Learner_Name" msprop:Generator_ColumnVarNameInTable="columnLearner_Name">
                 <xs:simpleType>
@@ -597,7 +595,6 @@ WHERE  (Learner_Name LIKE @name + '%')</CommandText>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:LearnerProgress" />
-      <xs:field xpath="mstns:ProgressID" />
       <xs:field xpath="mstns:LearnerID" />
     </xs:unique>
     <xs:unique name="tblLearner_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
@@ -615,9 +612,10 @@ WHERE  (Learner_Name LIKE @name + '%')</CommandText>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK_TrackLearner_tblLearner1" msdata:parent="tblLearner" msdata:child="LearnerProgress" msdata:parentkey="LearnerID" msdata:childkey="LearnerID" msprop:Generator_UserParentTable="tblLearner" msprop:Generator_UserChildTable="LearnerProgress" msprop:Generator_RelationVarName="relationFK_TrackLearner_tblLearner1" msprop:Generator_ChildPropName="GetLearnerProgressRows" msprop:Generator_UserRelationName="FK_TrackLearner_tblLearner1" msprop:Generator_ParentPropName="tblLearnerRow" />
-      <msdata:Relationship name="FK_TrackLearner_tblLearner" msdata:parent="tblLearner" msdata:child="TrackLearner" msdata:parentkey="LearnerID" msdata:childkey="LearnerID" msprop:Generator_UserParentTable="tblLearner" msprop:Generator_UserChildTable="TrackLearner" msprop:Generator_RelationVarName="relationFK_TrackLearner_tblLearner" msprop:Generator_ChildPropName="GetTrackLearnerRows" msprop:Generator_ParentPropName="tblLearnerRow" msprop:Generator_UserRelationName="FK_TrackLearner_tblLearner" />
-      <msdata:Relationship name="FK_TrackLearner_tblLearner2" msdata:parent="tblNewLearner" msdata:child="TrackLearner" msdata:parentkey="LearnerID" msdata:childkey="LearnerID" msprop:Generator_UserParentTable="tblNewLearner" msprop:Generator_UserChildTable="TrackLearner" msprop:Generator_RelationVarName="relationFK_TrackLearner_tblLearner2" msprop:Generator_ChildPropName="GetTrackLearnerRows" msprop:Generator_UserRelationName="FK_TrackLearner_tblLearner2" msprop:Generator_ParentPropName="tblNewLearnerRow" />
+      <msdata:Relationship name="FK_TrackLearner_tblLearner1" msdata:parent="tblLearner" msdata:child="LearnerProgress" msdata:parentkey="LearnerID" msdata:childkey="LearnerID" msprop:Generator_UserParentTable="tblLearner" msprop:Generator_UserChildTable="LearnerProgress" msprop:Generator_RelationVarName="relationFK_TrackLearner_tblLearner1" msprop:Generator_ChildPropName="GetLearnerProgressRows" msprop:Generator_ParentPropName="tblLearnerRow" msprop:Generator_UserRelationName="FK_TrackLearner_tblLearner1" />
+      <msdata:Relationship name="FK_TrackLearner_tblLearner" msdata:parent="tblLearner" msdata:child="TrackLearner" msdata:parentkey="LearnerID" msdata:childkey="LearnerID" msprop:Generator_UserParentTable="tblLearner" msprop:Generator_UserChildTable="TrackLearner" msprop:Generator_RelationVarName="relationFK_TrackLearner_tblLearner" msprop:Generator_ChildPropName="GetTrackLearnerRows" msprop:Generator_UserRelationName="FK_TrackLearner_tblLearner" msprop:Generator_ParentPropName="tblLearnerRow" />
+      <msdata:Relationship name="FK_TrackLearner_tblLearner2" msdata:parent="tblNewLearner" msdata:child="TrackLearner" msdata:parentkey="LearnerID" msdata:childkey="LearnerID" msprop:Generator_UserParentTable="tblNewLearner" msprop:Generator_UserChildTable="TrackLearner" msprop:Generator_RelationVarName="relationFK_TrackLearner_tblLearner2" msprop:Generator_ChildPropName="GetTrackLearnerRows" msprop:Generator_ParentPropName="tblNewLearnerRow" msprop:Generator_UserRelationName="FK_TrackLearner_tblLearner2" />
+      <msdata:Relationship name="FK_TrackLearner_tblLearner3" msdata:parent="tblNewLearner" msdata:child="LearnerProgress" msdata:parentkey="LearnerID" msdata:childkey="LearnerID" msprop:Generator_UserParentTable="tblNewLearner" msprop:Generator_UserChildTable="LearnerProgress" msprop:Generator_RelationVarName="relationFK_TrackLearner_tblLearner3" msprop:Generator_UserRelationName="FK_TrackLearner_tblLearner3" msprop:Generator_ChildPropName="GetLearnerProgressRows" msprop:Generator_ParentPropName="tblNewLearnerRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

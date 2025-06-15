@@ -38,6 +38,8 @@ namespace DrivingSchoolBookingSystem {
         
         private global::System.Data.DataRelation relationFK_TrackLearner_tblLearner2;
         
+        private global::System.Data.DataRelation relationFK_TrackLearner_tblLearner3;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -275,6 +277,7 @@ namespace DrivingSchoolBookingSystem {
             this.relationFK_TrackLearner_tblLearner1 = this.Relations["FK_TrackLearner_tblLearner1"];
             this.relationFK_TrackLearner_tblLearner = this.Relations["FK_TrackLearner_tblLearner"];
             this.relationFK_TrackLearner_tblLearner2 = this.Relations["FK_TrackLearner_tblLearner2"];
+            this.relationFK_TrackLearner_tblLearner3 = this.Relations["FK_TrackLearner_tblLearner3"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -305,6 +308,10 @@ namespace DrivingSchoolBookingSystem {
                         this.tabletblNewLearner.LearnerIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableTrackLearner.LearnerIDColumn}, false);
             this.Relations.Add(this.relationFK_TrackLearner_tblLearner2);
+            this.relationFK_TrackLearner_tblLearner3 = new global::System.Data.DataRelation("FK_TrackLearner_tblLearner3", new global::System.Data.DataColumn[] {
+                        this.tabletblNewLearner.LearnerIDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableLearnerProgress.LearnerIDColumn}, false);
+            this.Relations.Add(this.relationFK_TrackLearner_tblLearner3);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1278,8 +1285,6 @@ namespace DrivingSchoolBookingSystem {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class LearnerProgressDataTable : global::System.Data.TypedTableBase<LearnerProgressRow> {
             
-            private global::System.Data.DataColumn columnProgressID;
-            
             private global::System.Data.DataColumn columnLearnerID;
             
             private global::System.Data.DataColumn columnLearner_Name;
@@ -1331,14 +1336,6 @@ namespace DrivingSchoolBookingSystem {
             protected LearnerProgressDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn ProgressIDColumn {
-                get {
-                    return this.columnProgressID;
-                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1462,7 +1459,6 @@ namespace DrivingSchoolBookingSystem {
                 LearnerProgressRow rowLearnerProgressRow = ((LearnerProgressRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        null,
                         Learner_Name,
                         Learner_Surname,
                         LessonDate,
@@ -1479,9 +1475,8 @@ namespace DrivingSchoolBookingSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public LearnerProgressRow FindByProgressIDLearnerID(int ProgressID, int LearnerID) {
+            public LearnerProgressRow FindByLearnerID(int LearnerID) {
                 return ((LearnerProgressRow)(this.Rows.Find(new object[] {
-                            ProgressID,
                             LearnerID})));
             }
             
@@ -1502,7 +1497,6 @@ namespace DrivingSchoolBookingSystem {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnProgressID = base.Columns["ProgressID"];
                 this.columnLearnerID = base.Columns["LearnerID"];
                 this.columnLearner_Name = base.Columns["Learner_Name"];
                 this.columnLearner_Surname = base.Columns["Learner_Surname"];
@@ -1518,8 +1512,6 @@ namespace DrivingSchoolBookingSystem {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnProgressID = new global::System.Data.DataColumn("ProgressID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnProgressID);
                 this.columnLearnerID = new global::System.Data.DataColumn("LearnerID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnLearnerID);
                 this.columnLearner_Name = new global::System.Data.DataColumn("Learner_Name", typeof(string), null, global::System.Data.MappingType.Element);
@@ -1541,18 +1533,13 @@ namespace DrivingSchoolBookingSystem {
                 this.columnPassStatus = new global::System.Data.DataColumn("PassStatus", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPassStatus);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnProgressID,
                                 this.columnLearnerID}, true));
-                this.columnProgressID.AutoIncrement = true;
-                this.columnProgressID.AutoIncrementSeed = -1;
-                this.columnProgressID.AutoIncrementStep = -1;
-                this.columnProgressID.AllowDBNull = false;
-                this.columnProgressID.ReadOnly = true;
                 this.columnLearnerID.AutoIncrement = true;
                 this.columnLearnerID.AutoIncrementSeed = -1;
                 this.columnLearnerID.AutoIncrementStep = -1;
                 this.columnLearnerID.AllowDBNull = false;
                 this.columnLearnerID.ReadOnly = true;
+                this.columnLearnerID.Unique = true;
                 this.columnLearner_Name.AllowDBNull = false;
                 this.columnLearner_Name.MaxLength = 50;
                 this.columnLearner_Surname.AllowDBNull = false;
@@ -2344,17 +2331,6 @@ namespace DrivingSchoolBookingSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int ProgressID {
-                get {
-                    return ((int)(this[this.tableLearnerProgress.ProgressIDColumn]));
-                }
-                set {
-                    this[this.tableLearnerProgress.ProgressIDColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public int LearnerID {
                 get {
                     return ((int)(this[this.tableLearnerProgress.LearnerIDColumn]));
@@ -2473,6 +2449,17 @@ namespace DrivingSchoolBookingSystem {
                     this.SetParentRow(value, this.Table.ParentRelations["FK_TrackLearner_tblLearner1"]);
                 }
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public tblNewLearnerRow tblNewLearnerRow {
+                get {
+                    return ((tblNewLearnerRow)(this.GetParentRow(this.Table.ParentRelations["FK_TrackLearner_tblLearner3"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_TrackLearner_tblLearner3"]);
+                }
+            }
         }
         
         /// <summary>
@@ -2530,6 +2517,17 @@ namespace DrivingSchoolBookingSystem {
                 }
                 else {
                     return ((TrackLearnerRow[])(base.GetChildRows(this.Table.ChildRelations["FK_TrackLearner_tblLearner2"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public LearnerProgressRow[] GetLearnerProgressRows() {
+                if ((this.Table.ChildRelations["FK_TrackLearner_tblLearner3"] == null)) {
+                    return new LearnerProgressRow[0];
+                }
+                else {
+                    return ((LearnerProgressRow[])(base.GetChildRows(this.Table.ChildRelations["FK_TrackLearner_tblLearner3"])));
                 }
             }
         }
@@ -4265,7 +4263,6 @@ WHERE  (ProgressID = @Original_ProgressID);
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "LearnerProgress";
-            tableMapping.ColumnMappings.Add("ProgressID", "ProgressID");
             tableMapping.ColumnMappings.Add("LearnerID", "LearnerID");
             tableMapping.ColumnMappings.Add("Learner_Name", "Learner_Name");
             tableMapping.ColumnMappings.Add("Learner_Surname", "Learner_Surname");
@@ -4292,8 +4289,8 @@ WHERE  (ProgressID = @Original_ProgressID);
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT TrackLearner.ProgressID, tblLearner.LearnerID, tblLearner.Learner_Name, tblLearner.Learner_Surname, TrackLearner.LessonDate, TrackLearner.LessonTopic, TrackLearner.Attendance, TrackLearner.Rating, 
-                  TrackLearner.ErrorsMade, TrackLearner.Comments, TrackLearner.PassStatus
+            this._commandCollection[0].CommandText = @"SELECT tblLearner.LearnerID, tblLearner.Learner_Name, tblLearner.Learner_Surname, TrackLearner.LessonDate, TrackLearner.LessonTopic, TrackLearner.Attendance, TrackLearner.Rating, TrackLearner.ErrorsMade, TrackLearner.Comments, 
+                  TrackLearner.PassStatus
 FROM     tblLearner INNER JOIN
                   TrackLearner ON tblLearner.LearnerID = TrackLearner.LearnerID";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;

@@ -37,12 +37,11 @@ namespace DrivingSchoolBookingSystem
             this.tblLearnerTableAdapter.Fill(this.wstGrp2DataSet.tblLearner);
             // TODO: This line of code loads data into the 'wstGrp2DS2.tblNewLearner' table. You can move, or remove it, as needed.
             this.tblNewLearnerTableAdapter.FillByNewLearner(this.wstGrp2DS2.tblNewLearner);
-            // TODO: This line of code loads data into the 'wstGrp2DS2.LearnerProgress' table. You can move, or remove it, as needed.
-            this.learnerProgressTableAdapter.Fill(this.wstGrp2DS2.LearnerProgress);
+            
             // TODO: This line of code loads data into the 'wstGrp2DS21.LearnerProgress' table. You can move, or remove it, as needed.
             this.trackLearnerTableAdapter.FillBy(this.wstGrp2DS2.TrackLearner);
             // TODO: This line of code loads data into the 'wstGrp2DS2.LearnerProgress' table. You can move, or remove it, as needed.
-            //zthis.learnerProgressTableAdapter.Fill(this.wstGrp2DS2.LearnerProgress);
+            this.learnerProgressTableAdapter.Fill(this.wstGrp2DS2.LearnerProgress);
             // TODO: This line of code loads data into the 'bookingSystemDataSet.tblLearners' table. You can move, or remove it, as needed.
             // this.tblLearnersTableAdapter.Fill(this.bookingSystemDataSet.tblLearners);
 
@@ -171,18 +170,17 @@ namespace DrivingSchoolBookingSystem
                 return;
             }
 
-            // Get original values from the selected DataGridView row
             var selectedRow = dataGridView1.CurrentRow;
 
-            string originalLearnerName = selectedRow.Cells["LearnerName"].Value?.ToString() ?? "";
-            string originalLearnerSurname = selectedRow.Cells["LearnerSurname"].Value?.ToString() ?? "";
-            DateTime originalLessonDate = Convert.ToDateTime(selectedRow.Cells["LessonDate"].Value);
-            string originalLessonTopic = selectedRow.Cells["LessonTopic"].Value?.ToString() ?? "";
-            string originalAttendance = selectedRow.Cells["Attendance"].Value?.ToString() ?? "";
-            string originalRating = selectedRow.Cells["Rating"].Value?.ToString() ?? "";
-            string originalErrorsMade = selectedRow.Cells["ErrorsMade"].Value?.ToString() ?? "";
-            string originalComments = selectedRow.Cells["Comments"].Value?.ToString() ?? "";
-            string originalPassStatus = selectedRow.Cells["PassStatus"].Value?.ToString() ?? "";
+            string originalLearnerName = selectedRow.Cells[1].Value?.ToString() ?? "";
+            string originalLearnerSurname = selectedRow.Cells[2].Value?.ToString() ?? "";
+            DateTime originalLessonDate = Convert.ToDateTime(selectedRow.Cells[3].Value);
+            string originalLessonTopic = selectedRow.Cells[4].Value?.ToString() ?? "";
+            string originalAttendance = selectedRow.Cells[5].Value?.ToString() ?? "";
+            string originalRating = selectedRow.Cells[6].Value?.ToString() ?? "";
+            string originalErrorsMade = selectedRow.Cells[7].Value?.ToString() ?? "";
+            string originalComments = selectedRow.Cells[8].Value?.ToString() ?? "";
+            string originalPassStatus = selectedRow.Cells[9].Value?.ToString() ?? "";
 
             // Compare original values with current input values
             bool noChange =
