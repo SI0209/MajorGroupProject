@@ -248,7 +248,7 @@ namespace DrivingSchoolBookingSystem
                         command.Parameters.AddWithValue("@comments", textBox6.Text.Trim());
                         command.Parameters.AddWithValue("@passStatus", comboBox4.Text.Trim());
 
-                        DialogResult dialogResult = MessageBox.Show($"Are you sure you want to UPDATE learner {textBox1.Text} details?", "Confirm Update", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        DialogResult dialogResult = MessageBox.Show($"Are you sure you want to UPDATE learner ID:" + textBox1.Text + "," + " " + textBox2.Text + " " + textBox3.Text  + " " + "details?", "Confirm Update", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                         if (dialogResult == DialogResult.Yes)
                         {
                             command.ExecuteNonQuery();
@@ -262,12 +262,14 @@ namespace DrivingSchoolBookingSystem
                             textBox2.Clear();
                             textBox3.Clear();
                             dateTimePicker1.Value = DateTime.Now;
-                            comboBox1.Text = "";
-                            comboBox2.Text = "";
-                            comboBox3.Text = "";
+                           comboBox1.SelectedIndex = -1;
+                            comboBox2
+                                .SelectedIndex = -1;
+                            comboBox3.SelectedIndex = -1;
                             textBox5.Clear();
                             textBox6.Clear();
-                            comboBox4.Text = "";
+                            comboBox4.SelectedIndex = -1;
+
                         }
                     }
                 }

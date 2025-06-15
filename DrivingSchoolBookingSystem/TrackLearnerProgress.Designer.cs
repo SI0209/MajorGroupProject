@@ -760,9 +760,9 @@
             this.label17.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label17.Location = new System.Drawing.Point(582, 154);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(494, 29);
+            this.label17.Size = new System.Drawing.Size(462, 29);
             this.label17.TabIndex = 61;
-            this.label17.Text = "Search by learner first name or by lesson topic:";
+            this.label17.Text = "Search by learner first name or lesson topic:";
             // 
             // learnerProgressBindingSource
             // 
