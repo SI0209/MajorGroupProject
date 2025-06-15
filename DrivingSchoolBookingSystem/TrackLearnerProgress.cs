@@ -354,12 +354,13 @@ namespace DrivingSchoolBookingSystem
             {
                 try
                 {
-                    string searchPattern = "%" + input + "%";
+                    // Only match items that start with the input
+                    string searchPattern = input + "%";
                     trackLearnerTableAdapter.FillByMulti(this.wstGrp2DS2.TrackLearner, searchPattern);
 
                     if (wstGrp2DS2.TrackLearner.Rows.Count == 0)
                     {
-                        MessageBox.Show("No matches found. Please try a different keyword.");
+                        MessageBox.Show("No matches found starting with that letter.");
                     }
                 }
                 catch (Exception ex)
@@ -369,9 +370,8 @@ namespace DrivingSchoolBookingSystem
             }
             else
             {
-                MessageBox.Show("Please enter a name or surname to search.");
+                MessageBox.Show("Please enter a starting letter or word to search.");
             }
-
         }
 
         private void button5_Click(object sender, EventArgs e)

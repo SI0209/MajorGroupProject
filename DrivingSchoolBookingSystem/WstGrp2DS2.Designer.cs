@@ -3456,11 +3456,11 @@ SELECT ProgressID, LearnerID, LearnerName, LearnerSurname, LessonDate, LessonTop
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "SELECT LearnerID, LearnerName, LearnerSurname, LessonDate, LessonTopic, Attendanc" +
-                "e, Rating, ErrorsMade, Comments, PassStatus FROM TrackLearner WHERE (LearnerName" +
-                " LIKE @search) OR (LearnerSurname LIKE @search) OR (LessonTopic LIKE @search)";
+            this._commandCollection[2].CommandText = "SELECT *\r\nFROM TrackLearner\r\nINNER JOIN tblLearner ON TrackLearner.LearnerID = tb" +
+                "lLearner.LearnerID\r\nWHERE tblLearner.Learner_Name LIKE @searchPattern\r\n   OR Tra" +
+                "ckLearner.LessonTopic LIKE @searchPattern";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@search", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "LearnerName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@searchPattern", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Learner_Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
             this._commandCollection[3].CommandText = @"INSERT INTO [dbo].[TrackLearner] ([LearnerID], [LearnerName], [LearnerSurname], [LessonDate], [LessonTopic], [Attendance], [Rating], [ErrorsMade], [Comments], [PassStatus]) VALUES (@LearnerID, @LearnerName, @LearnerSurname, @LessonDate, @LessonTopic, @Attendance, @Rating, @ErrorsMade, @Comments, @PassStatus);
@@ -3561,13 +3561,13 @@ WHERE  (ProgressID = @Original_ProgressID);
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillByMulti(WstGrp2DS2.TrackLearnerDataTable dataTable, string search) {
+        public virtual int FillByMulti(WstGrp2DS2.TrackLearnerDataTable dataTable, string searchPattern) {
             this.Adapter.SelectCommand = this.CommandCollection[2];
-            if ((search == null)) {
-                throw new global::System.ArgumentNullException("search");
+            if ((searchPattern == null)) {
+                throw new global::System.ArgumentNullException("searchPattern");
             }
             else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(search));
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(searchPattern));
             }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -3580,13 +3580,13 @@ WHERE  (ProgressID = @Original_ProgressID);
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual WstGrp2DS2.TrackLearnerDataTable GetDataBy3(string search) {
+        public virtual WstGrp2DS2.TrackLearnerDataTable GetDataBy3(string searchPattern) {
             this.Adapter.SelectCommand = this.CommandCollection[2];
-            if ((search == null)) {
-                throw new global::System.ArgumentNullException("search");
+            if ((searchPattern == null)) {
+                throw new global::System.ArgumentNullException("searchPattern");
             }
             else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(search));
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(searchPattern));
             }
             WstGrp2DS2.TrackLearnerDataTable dataTable = new WstGrp2DS2.TrackLearnerDataTable();
             this.Adapter.Fill(dataTable);
