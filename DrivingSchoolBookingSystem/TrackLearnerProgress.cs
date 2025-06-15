@@ -9,6 +9,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using MigraDoc.DocumentObjectModel;
+using PdfSharp.Pdf;
+using System.Diagnostics;
+using MigraDoc.DocumentObjectModel.Tables;
 
 namespace DrivingSchoolBookingSystem
 {
@@ -509,6 +513,67 @@ namespace DrivingSchoolBookingSystem
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void ExportDataGridViewToPdf()
+        {
+            // Create the document
+            Document doc = new Document();
+            Section section = doc.AddSection();
+
+            // Add a heading
+            Paragraph title = section.AddParagraph("Learner Progress Report");
+            title.Format.Font.Size = 14;
+            title.Format.Font.Bold = true;
+            title.Format.SpaceAfter = "1cm";
+
+            // Create table and set borders
+            Table table = new Table();
+            table.Borders.Width = 0.75;
+
+            // Add columns
+            foreach (DataGridViewColumn col in dataGridView1.Columns)
+            {
+                table.AddColumn(Unit.FromCentimeter(4));
+            }
+
+            // Add header row
+            Row headerRow = table.AddRow();
+            headerRow.Shading.Color = Colors.LightGray;
+            headerRow.Format.Font.Bold = true;
+
+            for (int i = 0; i < dataGridView1.Columns.Count; i++)
+            {
+                headerRow.Cells[i].AddParagraph(dataGridView1.Columns[i].HeaderText);
+            }
+
+            // Add data rows
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                if (!row.IsNewRow)
+                {
+                    Row dataRow = table.AddRow();
+                    for (int i = 0; i < dataGridView1.Columns.Count; i++)
+                    {
+                        string cellValue = row.Cells[i].Value?.ToString() ?? "";
+                        dataRow.Cells[i].AddParagraph(cellValue);
+                    }
+                }
+            }
+
+            section.Add(table);
+MigraDoc.Rendering.Gdi.PdfDocumentRenderer renderer = new MigraDoc.Rendering.Gdi.PdfDocumentRenderer(true)
+{
+    Document = doc
+};
+            string filename = "LearnerProgressReport.pdf";
+            renderer.PdfDocument.Save(filename);
+
+            // Open the PDF file
+            Process.Start(new ProcessStartInfo(filename) { UseShellExecute = true });
+        }
+        private void button6_Click(object sender, EventArgs e)
         {
 
         }

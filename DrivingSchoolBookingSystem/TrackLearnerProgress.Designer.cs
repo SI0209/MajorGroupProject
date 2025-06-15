@@ -671,6 +671,7 @@
             this.button6.TabIndex = 64;
             this.button6.Text = "Save as PDF";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // label6
             // 
