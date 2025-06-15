@@ -95,6 +95,8 @@
             this.errorsMadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.commentsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.passStatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -204,7 +206,10 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowDrop = true;
+            this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -218,11 +223,11 @@
             this.commentsDataGridViewTextBoxColumn,
             this.passStatusDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.trackLearnerBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(555, 212);
+            this.dataGridView1.Location = new System.Drawing.Point(511, 212);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1053, 212);
+            this.dataGridView1.Size = new System.Drawing.Size(1109, 212);
             this.dataGridView1.TabIndex = 44;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_RowHeaderMouseClick);
@@ -710,7 +715,7 @@
             this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 125;
+            this.dataGridViewTextBoxColumn1.Width = 95;
             // 
             // LearnerName
             // 
@@ -718,7 +723,7 @@
             this.LearnerName.HeaderText = "LearnerName";
             this.LearnerName.MinimumWidth = 6;
             this.LearnerName.Name = "LearnerName";
-            this.LearnerName.Width = 125;
+            this.LearnerName.Width = 119;
             // 
             // LearnerSurname
             // 
@@ -726,7 +731,7 @@
             this.LearnerSurname.HeaderText = "LearnerSurname";
             this.LearnerSurname.MinimumWidth = 6;
             this.LearnerSurname.Name = "LearnerSurname";
-            this.LearnerSurname.Width = 125;
+            this.LearnerSurname.Width = 136;
             // 
             // lessonDateDataGridViewTextBoxColumn
             // 
@@ -734,7 +739,7 @@
             this.lessonDateDataGridViewTextBoxColumn.HeaderText = "LessonDate";
             this.lessonDateDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.lessonDateDataGridViewTextBoxColumn.Name = "lessonDateDataGridViewTextBoxColumn";
-            this.lessonDateDataGridViewTextBoxColumn.Width = 125;
+            this.lessonDateDataGridViewTextBoxColumn.Width = 109;
             // 
             // lessonTopicDataGridViewTextBoxColumn
             // 
@@ -742,7 +747,7 @@
             this.lessonTopicDataGridViewTextBoxColumn.HeaderText = "LessonTopic";
             this.lessonTopicDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.lessonTopicDataGridViewTextBoxColumn.Name = "lessonTopicDataGridViewTextBoxColumn";
-            this.lessonTopicDataGridViewTextBoxColumn.Width = 125;
+            this.lessonTopicDataGridViewTextBoxColumn.Width = 115;
             // 
             // attendanceDataGridViewTextBoxColumn
             // 
@@ -750,7 +755,7 @@
             this.attendanceDataGridViewTextBoxColumn.HeaderText = "Attendance";
             this.attendanceDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.attendanceDataGridViewTextBoxColumn.Name = "attendanceDataGridViewTextBoxColumn";
-            this.attendanceDataGridViewTextBoxColumn.Width = 125;
+            this.attendanceDataGridViewTextBoxColumn.Width = 104;
             // 
             // ratingDataGridViewTextBoxColumn
             // 
@@ -758,7 +763,7 @@
             this.ratingDataGridViewTextBoxColumn.HeaderText = "Rating";
             this.ratingDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.ratingDataGridViewTextBoxColumn.Name = "ratingDataGridViewTextBoxColumn";
-            this.ratingDataGridViewTextBoxColumn.Width = 125;
+            this.ratingDataGridViewTextBoxColumn.Width = 75;
             // 
             // errorsMadeDataGridViewTextBoxColumn
             // 
@@ -766,7 +771,7 @@
             this.errorsMadeDataGridViewTextBoxColumn.HeaderText = "ErrorsMade";
             this.errorsMadeDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.errorsMadeDataGridViewTextBoxColumn.Name = "errorsMadeDataGridViewTextBoxColumn";
-            this.errorsMadeDataGridViewTextBoxColumn.Width = 125;
+            this.errorsMadeDataGridViewTextBoxColumn.Width = 107;
             // 
             // commentsDataGridViewTextBoxColumn
             // 
@@ -774,7 +779,6 @@
             this.commentsDataGridViewTextBoxColumn.HeaderText = "Comments";
             this.commentsDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.commentsDataGridViewTextBoxColumn.Name = "commentsDataGridViewTextBoxColumn";
-            this.commentsDataGridViewTextBoxColumn.Width = 125;
             // 
             // passStatusDataGridViewTextBoxColumn
             // 
@@ -782,7 +786,33 @@
             this.passStatusDataGridViewTextBoxColumn.HeaderText = "PassStatus";
             this.passStatusDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.passStatusDataGridViewTextBoxColumn.Name = "passStatusDataGridViewTextBoxColumn";
-            this.passStatusDataGridViewTextBoxColumn.Width = 125;
+            this.passStatusDataGridViewTextBoxColumn.Width = 104;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(1556, 48);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(298, 24);
+            this.label6.TabIndex = 65;
+            this.label6.Text = "Click here for further instructions";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(1505, 98);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(485, 24);
+            this.label10.TabIndex = 66;
+            this.label10.Text = "Auto deletes learners that were deleted in learner table";
             // 
             // LearnerProgressForm
             // 
@@ -791,6 +821,8 @@
             this.BackgroundImage = global::DrivingSchoolBookingSystem.Properties.Resources.Background_final;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1924, 1008);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.textBox8);
@@ -911,5 +943,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn errorsMadeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn commentsDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn passStatusDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label10;
     }
 }

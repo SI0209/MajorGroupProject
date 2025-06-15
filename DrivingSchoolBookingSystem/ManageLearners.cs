@@ -510,16 +510,14 @@ namespace DrivingSchoolBookingSystem
 
         private void button5_Click(object sender, EventArgs e)
         {
-    
-
 
             if (string.IsNullOrWhiteSpace(textBox1.Text) || string.IsNullOrWhiteSpace(textBox2.Text) || string.IsNullOrWhiteSpace(textBox3.Text)
-       || string.IsNullOrWhiteSpace(textBox4.Text) || string.IsNullOrWhiteSpace(comboBox1.Text) || string.IsNullOrWhiteSpace(comboBox2.Text)
-       || string.IsNullOrWhiteSpace(textBox5.Text) || string.IsNullOrWhiteSpace(textBox6.Text) || string.IsNullOrWhiteSpace(comboBox3.Text)
-       || IssuedateTimePicker1.Value == IssuedateTimePicker1.MinDate || string.IsNullOrWhiteSpace(textBox9.Text) || string.IsNullOrWhiteSpace(comboBox4.Text)
-       || string.IsNullOrWhiteSpace(textBox8.Text))
+     || string.IsNullOrWhiteSpace(textBox4.Text) || string.IsNullOrWhiteSpace(comboBox1.Text) || string.IsNullOrWhiteSpace(comboBox2.Text)
+     || string.IsNullOrWhiteSpace(textBox5.Text) || string.IsNullOrWhiteSpace(textBox6.Text) || string.IsNullOrWhiteSpace(comboBox3.Text)
+     || IssuedateTimePicker1.Value == IssuedateTimePicker1.MinDate || string.IsNullOrWhiteSpace(textBox9.Text) || string.IsNullOrWhiteSpace(comboBox4.Text)
+     || string.IsNullOrWhiteSpace(textBox8.Text))
             {
-                MessageBox.Show("Please fill in all required fields");
+                MessageBox.Show("Please complete all required fields before updating.", "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -529,7 +527,6 @@ namespace DrivingSchoolBookingSystem
                 {
                     con.Open();
 
-                    // STEP 1: Compare current values with database
                     string selectQuery = "SELECT * FROM tblLearner WHERE LearnerID = @learnerID";
                     using (SqlCommand selectCmd = new SqlCommand(selectQuery, con))
                     {
@@ -555,62 +552,62 @@ namespace DrivingSchoolBookingSystem
 
                                 if (!hasChanges)
                                 {
-                                    MessageBox.Show("No changes detected. Learner information is already up to date.", "No Update Needed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    MessageBox.Show("No changes were made. Learner information is already up to date.", "No Changes Detected", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     return;
                                 }
                             }
                             else
                             {
-                                MessageBox.Show("Learner not found in the database.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                MessageBox.Show("Learner not found. Please check the ID and try again.", "Learner Not Found", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 return;
                             }
                         }
                     }
 
-                    // STEP 2: Proceed to update since changes exist
-                    string query = "UPDATE tblLearner " +
-                                   "SET Learner_Name = @learner_Name, " +
-                                   "Learner_Surname = @learner_Surname, " +
-                                   "Learner_IDNumber = @learner_IDNumber, " +
-                                   "Learner_Age = @learner_Age, " +
-                                   "Learner_Gender = @learner_Gender, " +
-                                   "Learner_Race = @learner_Race, " +
-                                   "Learner_CellNumber = @learner_CellNumber, " +
-                                   "Learner_StreetAddress = @learner_StreetAddress, " +
-                                   "Learner_Suburb = @learner_Suburb, " +
-                                   "Learner_LearnersIssueDate = @learner_LearnersIssueDate, " +
-                                   "Learner_LearnersExpiryDate = @learner_LearnersExpiryDate, " +
-                                   "Code_Type = @code_Type " +
-                                   "WHERE LearnerID = @learnerID";
+                    // Proceed with update
+                    string query = "UPDATE tblLearner SET " +
+                        "Learner_Name = @learner_Name, " +
+                        "Learner_Surname = @learner_Surname, " +
+                        "Learner_IDNumber = @learner_IDNumber, " +
+                        "Learner_Age = @learner_Age, " +
+                        "Learner_Gender = @learner_Gender, " +
+                        "Learner_Race = @learner_Race, " +
+                        "Learner_CellNumber = @learner_CellNumber, " +
+                        "Learner_StreetAddress = @learner_StreetAddress, " +
+                        "Learner_Suburb = @learner_Suburb, " +
+                        "Learner_LearnersIssueDate = @learner_LearnersIssueDate, " +
+                        "Learner_LearnersExpiryDate = @learner_LearnersExpiryDate, " +
+                        "Code_Type = @code_Type " +
+                        "WHERE LearnerID = @learnerID";
 
                     using (SqlCommand command = new SqlCommand(query, con))
                     {
                         command.Parameters.AddWithValue("@learnerID", Convert.ToInt32(textBox8.Text));
-                        command.Parameters.AddWithValue("@learner_Name", textBox1.Text);
-                        command.Parameters.AddWithValue("@learner_Surname", textBox2.Text);
-                        command.Parameters.AddWithValue("@learner_IDNumber", textBox3.Text);
+                        command.Parameters.AddWithValue("@learner_Name", textBox1.Text.Trim());
+                        command.Parameters.AddWithValue("@learner_Surname", textBox2.Text.Trim());
+                        command.Parameters.AddWithValue("@learner_IDNumber", textBox3.Text.Trim());
                         command.Parameters.AddWithValue("@learner_Age", Convert.ToInt32(textBox4.Text));
-                        command.Parameters.AddWithValue("@learner_Gender", comboBox1.Text);
-                        command.Parameters.AddWithValue("@learner_Race", comboBox2.Text);
-                        command.Parameters.AddWithValue("@learner_CellNumber", textBox5.Text);
-                        command.Parameters.AddWithValue("@learner_StreetAddress", textBox6.Text);
-                        command.Parameters.AddWithValue("@learner_Suburb", comboBox3.Text);
+                        command.Parameters.AddWithValue("@learner_Gender", comboBox1.Text.Trim());
+                        command.Parameters.AddWithValue("@learner_Race", comboBox2.Text.Trim());
+                        command.Parameters.AddWithValue("@learner_CellNumber", textBox5.Text.Trim());
+                        command.Parameters.AddWithValue("@learner_StreetAddress", textBox6.Text.Trim());
+                        command.Parameters.AddWithValue("@learner_Suburb", comboBox3.Text.Trim());
                         command.Parameters.AddWithValue("@learner_LearnersIssueDate", IssuedateTimePicker1.Value);
-                        command.Parameters.AddWithValue("@learner_LearnersExpiryDate", textBox9.Text);
+                        command.Parameters.AddWithValue("@learner_LearnersExpiryDate", Convert.ToDateTime(textBox9.Text));
                         command.Parameters.AddWithValue("@code_Type", Convert.ToInt32(comboBox4.Text));
 
-                        DialogResult dialogResult = MessageBox.Show("Are you sure you want to UPDATE learner " + textBox8.Text.ToString() + "?", "Confirm Update", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        DialogResult dialogResult = MessageBox.Show("Are you sure you want to update learner " + textBox8.Text + "?", "Confirm Update", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                         if (dialogResult == DialogResult.Yes)
                         {
                             command.ExecuteNonQuery();
-                            MessageBox.Show("Learner has been updated successfully.", "Update Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Learner information has been updated successfully.", "Update Complete", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             tblLearnerTableAdapter.Fill(wstGrp2DataSet1.tblLearner);
                         }
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("An error occurred while updating the learner: " + ex.Message, "Update Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Something went wrong while updating. Please try again.\n\nDetails: " + ex.Message, "Update Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }

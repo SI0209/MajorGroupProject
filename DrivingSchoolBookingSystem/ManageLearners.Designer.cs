@@ -86,6 +86,7 @@
             this.button5 = new System.Windows.Forms.Button();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -94,7 +95,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblLearnerBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wstGrp2DataSet1BindingSource)).BeginInit();
@@ -113,6 +113,7 @@
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.learnerIDDataGridViewTextBoxColumn,
@@ -129,11 +130,11 @@
             this.learnerLearnersExpiryDateDataGridViewTextBoxColumn,
             this.codeTypeDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.tblLearnerBindingSource1;
-            this.dataGridView1.Location = new System.Drawing.Point(847, 454);
+            this.dataGridView1.Location = new System.Drawing.Point(801, 462);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1048, 307);
+            this.dataGridView1.Size = new System.Drawing.Size(1095, 307);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_RowHeaderMouseClick);
@@ -145,7 +146,7 @@
             this.learnerIDDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.learnerIDDataGridViewTextBoxColumn.Name = "learnerIDDataGridViewTextBoxColumn";
             this.learnerIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.learnerIDDataGridViewTextBoxColumn.Width = 125;
+            this.learnerIDDataGridViewTextBoxColumn.Width = 95;
             // 
             // learnerNameDataGridViewTextBoxColumn
             // 
@@ -153,7 +154,7 @@
             this.learnerNameDataGridViewTextBoxColumn.HeaderText = "Learner_Name";
             this.learnerNameDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.learnerNameDataGridViewTextBoxColumn.Name = "learnerNameDataGridViewTextBoxColumn";
-            this.learnerNameDataGridViewTextBoxColumn.Width = 125;
+            this.learnerNameDataGridViewTextBoxColumn.Width = 126;
             // 
             // learnerSurnameDataGridViewTextBoxColumn
             // 
@@ -161,7 +162,7 @@
             this.learnerSurnameDataGridViewTextBoxColumn.HeaderText = "Learner_Surname";
             this.learnerSurnameDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.learnerSurnameDataGridViewTextBoxColumn.Name = "learnerSurnameDataGridViewTextBoxColumn";
-            this.learnerSurnameDataGridViewTextBoxColumn.Width = 125;
+            this.learnerSurnameDataGridViewTextBoxColumn.Width = 143;
             // 
             // learnerIDNumberDataGridViewTextBoxColumn
             // 
@@ -169,7 +170,7 @@
             this.learnerIDNumberDataGridViewTextBoxColumn.HeaderText = "Learner_IDNumber";
             this.learnerIDNumberDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.learnerIDNumberDataGridViewTextBoxColumn.Name = "learnerIDNumberDataGridViewTextBoxColumn";
-            this.learnerIDNumberDataGridViewTextBoxColumn.Width = 125;
+            this.learnerIDNumberDataGridViewTextBoxColumn.Width = 150;
             // 
             // learnerAgeDataGridViewTextBoxColumn
             // 
@@ -177,7 +178,7 @@
             this.learnerAgeDataGridViewTextBoxColumn.HeaderText = "Learner_Age";
             this.learnerAgeDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.learnerAgeDataGridViewTextBoxColumn.Name = "learnerAgeDataGridViewTextBoxColumn";
-            this.learnerAgeDataGridViewTextBoxColumn.Width = 125;
+            this.learnerAgeDataGridViewTextBoxColumn.Width = 114;
             // 
             // learnerGenderDataGridViewTextBoxColumn
             // 
@@ -185,7 +186,7 @@
             this.learnerGenderDataGridViewTextBoxColumn.HeaderText = "Learner_Gender";
             this.learnerGenderDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.learnerGenderDataGridViewTextBoxColumn.Name = "learnerGenderDataGridViewTextBoxColumn";
-            this.learnerGenderDataGridViewTextBoxColumn.Width = 125;
+            this.learnerGenderDataGridViewTextBoxColumn.Width = 134;
             // 
             // learnerRaceDataGridViewTextBoxColumn
             // 
@@ -193,7 +194,7 @@
             this.learnerRaceDataGridViewTextBoxColumn.HeaderText = "Learner_Race";
             this.learnerRaceDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.learnerRaceDataGridViewTextBoxColumn.Name = "learnerRaceDataGridViewTextBoxColumn";
-            this.learnerRaceDataGridViewTextBoxColumn.Width = 125;
+            this.learnerRaceDataGridViewTextBoxColumn.Width = 122;
             // 
             // learnerCellNumberDataGridViewTextBoxColumn
             // 
@@ -201,7 +202,7 @@
             this.learnerCellNumberDataGridViewTextBoxColumn.HeaderText = "Learner_CellNumber";
             this.learnerCellNumberDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.learnerCellNumberDataGridViewTextBoxColumn.Name = "learnerCellNumberDataGridViewTextBoxColumn";
-            this.learnerCellNumberDataGridViewTextBoxColumn.Width = 125;
+            this.learnerCellNumberDataGridViewTextBoxColumn.Width = 160;
             // 
             // learnerStreetAddressDataGridViewTextBoxColumn
             // 
@@ -209,7 +210,7 @@
             this.learnerStreetAddressDataGridViewTextBoxColumn.HeaderText = "Learner_StreetAddress";
             this.learnerStreetAddressDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.learnerStreetAddressDataGridViewTextBoxColumn.Name = "learnerStreetAddressDataGridViewTextBoxColumn";
-            this.learnerStreetAddressDataGridViewTextBoxColumn.Width = 125;
+            this.learnerStreetAddressDataGridViewTextBoxColumn.Width = 175;
             // 
             // learnerSuburbDataGridViewTextBoxColumn
             // 
@@ -217,7 +218,7 @@
             this.learnerSuburbDataGridViewTextBoxColumn.HeaderText = "Learner_Suburb";
             this.learnerSuburbDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.learnerSuburbDataGridViewTextBoxColumn.Name = "learnerSuburbDataGridViewTextBoxColumn";
-            this.learnerSuburbDataGridViewTextBoxColumn.Width = 125;
+            this.learnerSuburbDataGridViewTextBoxColumn.Width = 132;
             // 
             // learnerLearnersIssueDateDataGridViewTextBoxColumn
             // 
@@ -225,7 +226,7 @@
             this.learnerLearnersIssueDateDataGridViewTextBoxColumn.HeaderText = "Learner_LearnersIssueDate";
             this.learnerLearnersIssueDateDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.learnerLearnersIssueDateDataGridViewTextBoxColumn.Name = "learnerLearnersIssueDateDataGridViewTextBoxColumn";
-            this.learnerLearnersIssueDateDataGridViewTextBoxColumn.Width = 125;
+            this.learnerLearnersIssueDateDataGridViewTextBoxColumn.Width = 203;
             // 
             // learnerLearnersExpiryDateDataGridViewTextBoxColumn
             // 
@@ -233,7 +234,7 @@
             this.learnerLearnersExpiryDateDataGridViewTextBoxColumn.HeaderText = "Learner_LearnersExpiryDate";
             this.learnerLearnersExpiryDateDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.learnerLearnersExpiryDateDataGridViewTextBoxColumn.Name = "learnerLearnersExpiryDateDataGridViewTextBoxColumn";
-            this.learnerLearnersExpiryDateDataGridViewTextBoxColumn.Width = 125;
+            this.learnerLearnersExpiryDateDataGridViewTextBoxColumn.Width = 208;
             // 
             // codeTypeDataGridViewTextBoxColumn
             // 
@@ -241,7 +242,7 @@
             this.codeTypeDataGridViewTextBoxColumn.HeaderText = "Code_Type";
             this.codeTypeDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.codeTypeDataGridViewTextBoxColumn.Name = "codeTypeDataGridViewTextBoxColumn";
-            this.codeTypeDataGridViewTextBoxColumn.Width = 125;
+            this.codeTypeDataGridViewTextBoxColumn.Width = 108;
             // 
             // tblLearnerBindingSource1
             // 
@@ -721,6 +722,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Learner Details";
             // 
+            // textBox9
+            // 
+            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox9.Location = new System.Drawing.Point(232, 515);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(167, 27);
+            this.textBox9.TabIndex = 38;
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
@@ -805,14 +814,6 @@
             this.label17.Size = new System.Drawing.Size(298, 24);
             this.label17.TabIndex = 45;
             this.label17.Text = "Click here for further instructions";
-            // 
-            // textBox9
-            // 
-            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(232, 515);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(167, 27);
-            this.textBox9.TabIndex = 38;
             // 
             // ManageLearners
             // 

@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace DrivingSchoolBookingSystem
 {
@@ -154,94 +155,144 @@ namespace DrivingSchoolBookingSystem
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(comboBox1.Text) || string.IsNullOrWhiteSpace(comboBox2.Text) || string.IsNullOrWhiteSpace(comboBox3.Text)
+            // Validate required fields
+            if (string.IsNullOrWhiteSpace(textBox1.Text) || string.IsNullOrWhiteSpace(textBox2.Text) || string.IsNullOrWhiteSpace(textBox3.Text)
+                || string.IsNullOrWhiteSpace(comboBox1.Text) || string.IsNullOrWhiteSpace(comboBox2.Text) || string.IsNullOrWhiteSpace(comboBox3.Text)
                 || string.IsNullOrWhiteSpace(textBox5.Text) || string.IsNullOrWhiteSpace(textBox6.Text) || string.IsNullOrWhiteSpace(comboBox4.Text))
             {
-                MessageBox.Show("Please fill in all required fields.");
+                MessageBox.Show("Please complete all required fields before updating.", "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+
+            // Check if a row is selected in the DataGridView
+            if (dataGridView1.CurrentRow == null)
+            {
+                MessageBox.Show("Please select a learner record to update.", "No Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Get original values from the selected DataGridView row
+            var selectedRow = dataGridView1.CurrentRow;
+
+            string originalLearnerName = selectedRow.Cells["LearnerName"].Value?.ToString() ?? "";
+            string originalLearnerSurname = selectedRow.Cells["LearnerSurname"].Value?.ToString() ?? "";
+            DateTime originalLessonDate = Convert.ToDateTime(selectedRow.Cells["LessonDate"].Value);
+            string originalLessonTopic = selectedRow.Cells["LessonTopic"].Value?.ToString() ?? "";
+            string originalAttendance = selectedRow.Cells["Attendance"].Value?.ToString() ?? "";
+            string originalRating = selectedRow.Cells["Rating"].Value?.ToString() ?? "";
+            string originalErrorsMade = selectedRow.Cells["ErrorsMade"].Value?.ToString() ?? "";
+            string originalComments = selectedRow.Cells["Comments"].Value?.ToString() ?? "";
+            string originalPassStatus = selectedRow.Cells["PassStatus"].Value?.ToString() ?? "";
+
+            // Compare original values with current input values
+            bool noChange =
+                originalLearnerName == textBox2.Text.Trim() &&
+                originalLearnerSurname == textBox3.Text.Trim() &&
+                originalLessonDate.Date == dateTimePicker1.Value.Date &&
+                originalLessonTopic == comboBox1.Text.Trim() &&
+                originalAttendance == comboBox2.Text.Trim() &&
+                originalRating == comboBox3.Text.Trim() &&
+                originalErrorsMade == textBox5.Text.Trim() &&
+                originalComments == textBox6.Text.Trim() &&
+                originalPassStatus == comboBox4.Text.Trim();
+
+            if (noChange)
+            {
+                MessageBox.Show("No changes detected, update cancelled.", "No Changes", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            // Now proceed with database update
             using (SqlConnection con = new SqlConnection("Data Source=146.230.177.46;Initial Catalog=WstGrp2;Persist Security Info=True;User ID=WstGrp2;Password=d9jdh;TrustServerCertificate=True"))
             {
                 try
                 {
                     con.Open();
 
-                    string query = "UPDATE TrackLearner " +
-                     "SET LearnerID = @learnerID, " +
-                     "LearnerName = @learnerName, " +
-                     "LearnerSurname = @learnerSurname, " +
-                     "LessonDate = @lessonDate, " +
-                     "LessonTopic = @lessonTopic, " +
-                     "Attendance = @attendance, " +
-                     "Rating = @rating, " + 
-                     "ErrorsMade = @errorsMade, " + 
-                     "Comments = @comments, " +
-                     "PassStatus = @passStatus " +
-                     "WHERE ProgressID = @progressID";
+                    // Check if LearnerID exists
+                    string selectQuery = "SELECT * FROM TrackLearner WHERE LearnerID = @learnerID";
+                    using (SqlCommand selectCmd = new SqlCommand(selectQuery, con))
+                    {
+                        selectCmd.Parameters.AddWithValue("@learnerID", Convert.ToInt32(textBox1.Text));
+                        using (SqlDataReader reader = selectCmd.ExecuteReader())
+                        {
+                            if (!reader.HasRows)
+                            {
+                                MessageBox.Show("Learner not found. Please check the Learner ID and try again.", "Not Found", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                return;
+                            }
+                        }
+                    }
+
+                    // Prepare update command
+                    string query = "UPDATE TrackLearner SET " +
+                        "LearnerName = @learnerName, " +
+                        "LearnerSurname = @learnerSurname, " +
+                        "LessonDate = @lessonDate, " +
+                        "LessonTopic = @lessonTopic, " +
+                        "Attendance = @attendance, " +
+                        "Rating = @rating, " +
+                        "ErrorsMade = @errorsMade, " +
+                        "Comments = @comments, " +
+                        "PassStatus = @passStatus " +
+                        "WHERE LearnerID = @learnerID";
 
                     using (SqlCommand command = new SqlCommand(query, con))
                     {
-                        //Use parameters to avoid SQL injection
                         command.Parameters.AddWithValue("@learnerID", Convert.ToInt32(textBox1.Text));
-                        command.Parameters.AddWithValue("@learnerName", textBox2.Text);
-                        command.Parameters.AddWithValue("@learnerSurname", textBox3.Text);
-                        command.Parameters.AddWithValue("@lessonDate", dateTimePicker1.Value.ToString("yyyy-MM-dd"));
-                        command.Parameters.AddWithValue("@lessonTopic", comboBox1.Text);
-                        command.Parameters.AddWithValue("@attendance", comboBox2.Text);
-                        command.Parameters.AddWithValue("@rating", comboBox3.Text);
-                        command.Parameters.AddWithValue("@errorsMade", textBox5.Text);
-                        command.Parameters.AddWithValue("@comments", textBox6.Text);
-                        command.Parameters.AddWithValue("@passStatus", comboBox4.Text);
-                        
+                        command.Parameters.AddWithValue("@learnerName", textBox2.Text.Trim());
+                        command.Parameters.AddWithValue("@learnerSurname", textBox3.Text.Trim());
+                        command.Parameters.AddWithValue("@lessonDate", dateTimePicker1.Value.Date);
+                        command.Parameters.AddWithValue("@lessonTopic", comboBox1.Text.Trim());
+                        command.Parameters.AddWithValue("@attendance", comboBox2.Text.Trim());
+                        command.Parameters.AddWithValue("@rating", comboBox3.Text.Trim());
+                        command.Parameters.AddWithValue("@errorsMade", textBox5.Text.Trim());
+                        command.Parameters.AddWithValue("@comments", textBox6.Text.Trim());
+                        command.Parameters.AddWithValue("@passStatus", comboBox4.Text.Trim());
 
-                        DialogResult dialogResult = MessageBox.Show("Are you sure you want to UPDATE learner " + textBox1.Text.ToString() + " details ?", "Confirmation", MessageBoxButtons.YesNo);
+                        DialogResult dialogResult = MessageBox.Show($"Are you sure you want to UPDATE learner {textBox1.Text} details?", "Confirm Update", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                         if (dialogResult == DialogResult.Yes)
                         {
                             command.ExecuteNonQuery();
-                            MessageBox.Show("Learner has been updated successfully.");
+                            MessageBox.Show("Learner has been updated successfully.", "Update Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            // Refresh your data source here if you have a TableAdapter or similar
                             trackLearnerTableAdapter.FillBy(wstGrp2DS2.TrackLearner);
 
-                            textBox1.Text = "";
-                            textBox2.Text = "";
-                            textBox3.Text = "";
-                            dateTimePicker1.Value = DateTime.Now;//default value
+                            // Clear inputs
+                            textBox1.Clear();
+                            textBox2.Clear();
+                            textBox3.Clear();
+                            dateTimePicker1.Value = DateTime.Now;
                             comboBox1.Text = "";
                             comboBox2.Text = "";
                             comboBox3.Text = "";
-                            textBox5.Text = "";
-                            textBox6.Text = "";
+                            textBox5.Clear();
+                            textBox6.Clear();
                             comboBox4.Text = "";
-                            
-
-                         
                         }
-
                     }
                 }
-                catch (SqlException ex)
+                catch (Exception ex)
                 {
-                    MessageBox.Show($"An error occurred: {ex.Message}");
+                    MessageBox.Show("An error occurred while updating: " + ex.Message, "Update Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-
-
             }
-
-
         }
 
         private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            textBox1.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            textBox2.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-            textBox3.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+            textBox1.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            textBox2.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            textBox3.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
            
-            dateTimePicker1.Value = Convert.ToDateTime(dataGridView1.CurrentRow.Cells[4].Value);
-            comboBox1.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
-            comboBox2.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
-            comboBox3.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
-            textBox5.Text = dataGridView1.CurrentRow.Cells[8].Value.ToString();
-            textBox6.Text = dataGridView1.CurrentRow.Cells[9].Value.ToString();
-            comboBox4.Text = dataGridView1.CurrentRow.Cells[10].Value.ToString();
+            dateTimePicker1.Value = Convert.ToDateTime(dataGridView1.CurrentRow.Cells[3].Value);
+            comboBox1.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+            comboBox2.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+            comboBox3.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+            textBox5.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
+            textBox6.Text = dataGridView1.CurrentRow.Cells[8].Value.ToString();
+            comboBox4.Text = dataGridView1.CurrentRow.Cells[9].Value.ToString();
 
             textBox1.Enabled = false;
             textBox2.Enabled = false;
