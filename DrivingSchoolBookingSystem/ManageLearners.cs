@@ -342,7 +342,7 @@ namespace DrivingSchoolBookingSystem
         {
             try
             {
-                // Populate all textboxes and combo boxes from the selected row
+                // Populate all textboxes and combo boxes from the selected row  
                 textBox8.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
                 textBox1.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
                 textBox2.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
@@ -359,31 +359,18 @@ namespace DrivingSchoolBookingSystem
                 textBox8.Visible = true;
                 textBox8.Enabled = false;
 
-                // Disable automatic date handling during row population
+                // Disable automatic date handling during row population  
                 suppressDateEvents = true;
                 autoDateHandlingEnabled = false;
 
-                // Temporarily remove restrictions to set historical values
+                // Temporarily remove restrictions to set historical values  
                 IssuedateTimePicker1.MinDate = DateTimePicker.MinimumDateTime;
                 IssuedateTimePicker1.MaxDate = DateTimePicker.MaximumDateTime;
 
                 DateTime issueDate = Convert.ToDateTime(dataGridView1.CurrentRow.Cells[10].Value);
                 IssuedateTimePicker1.Value = issueDate;
 
-                // Set expiry date, if available
-                if (dataGridView1.CurrentRow.Cells[11].Value != DBNull.Value)
-                {
-                    DateTime expiryDate = Convert.ToDateTime(dataGridView1.CurrentRow.Cells[11].Value);
-
-                    ExpdateTimePicker2.MinDate = DateTimePicker.MinimumDateTime;
-                    ExpdateTimePicker2.MaxDate = DateTimePicker.MaximumDateTime;
-
-                    ExpdateTimePicker2.Value = expiryDate;
-
-                    // Lock expiry date picker to that exact date
-                    ExpdateTimePicker2.MinDate = expiryDate;
-                    ExpdateTimePicker2.MaxDate = expiryDate;
-                }
+                textBox9.Text = Convert.ToDateTime(dataGridView1.CurrentRow.Cells[11].Value).ToString("yyyy-MM-dd");
             }
             catch (Exception ex)
             {
@@ -392,7 +379,7 @@ namespace DrivingSchoolBookingSystem
             finally
             {
                 suppressDateEvents = false;
-                // DO NOT re-enable autoDateHandlingEnabled here — wait for Clear button to do that
+                // DO NOT re-enable autoDateHandlingEnabled here — wait for Clear button to do that  
             }
         }
 
@@ -536,7 +523,7 @@ namespace DrivingSchoolBookingSystem
                         command.Parameters.AddWithValue("@learner_StreetAddress", textBox6.Text);
                         command.Parameters.AddWithValue("@learner_Suburb", comboBox3.Text);
                         command.Parameters.AddWithValue("@learner_LearnersIssueDate", IssuedateTimePicker1.Value);
-                        command.Parameters.AddWithValue("@learner_LearnersExpiryDate", ExpdateTimePicker2.Value);
+                        command.Parameters.AddWithValue("@learner_LearnersExpiryDate",textBox9.Text);
                         command.Parameters.AddWithValue("@code_Type", Convert.ToInt32(comboBox4.Text));
 
                         DialogResult dialogResult = MessageBox.Show("Are you sure you want to UPDATE learner  " + textBox8.Text.ToString() + " details ?", "Confirmation", MessageBoxButtons.YesNo);
