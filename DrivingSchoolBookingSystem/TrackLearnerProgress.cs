@@ -324,7 +324,7 @@ namespace DrivingSchoolBookingSystem
 
         private void textBox7_TextChanged(object sender, EventArgs e)
         {
-            /*  string input = textBox7.Text.Trim();
+              string input = textBox7.Text.Trim();
               if (input.All(char.IsLetter))
               {
                   tblNewLearnerTableAdapter.FillByLearnerName(this.wstGrp2DS2.tblNewLearner, input);
@@ -332,7 +332,22 @@ namespace DrivingSchoolBookingSystem
               }
               else{
                   MessageBox.Show("Please enter a valid name.");
-              }*/
+              }
+            
+        }
+
+        private void textBox8_TextChanged(object sender, EventArgs e)
+        {
+            /*string input = textBox8.Text.Trim();
+            if (input.All(char.IsLetter))
+            {
+                trackLearnerTableAdapter.FillByLearnerName(this.wstGrp2DS2.TrackLearner, input);
+
+            }
+            else
+            {
+                MessageBox.Show("Please enter a valid name.");
+            }*/
             string input = textBox8.Text.Trim();
 
             if (!string.IsNullOrWhiteSpace(input))
@@ -354,22 +369,9 @@ namespace DrivingSchoolBookingSystem
             }
             else
             {
-                MessageBox.Show("Please enter a name, surname, or topic to search.");
+                MessageBox.Show("Please enter a name or surname to search.");
             }
-        }
 
-        private void textBox8_TextChanged(object sender, EventArgs e)
-        {
-            string input = textBox8.Text.Trim();
-            if (input.All(char.IsLetter))
-            {
-                trackLearnerTableAdapter.FillByLearnerName(this.wstGrp2DS2.TrackLearner, input);
-
-            }
-            else
-            {
-                MessageBox.Show("Please enter a valid name.");
-            }
         }
 
         private void button5_Click(object sender, EventArgs e)

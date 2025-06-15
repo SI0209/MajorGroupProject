@@ -47,9 +47,9 @@
             this.errorsMadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.commentsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.passStatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.learnerProgressBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.wstGrp2DS2 = new DrivingSchoolBookingSystem.WstGrp2DS2();
             this.trackLearnerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.wstGrp2DS2 = new DrivingSchoolBookingSystem.WstGrp2DS2();
+            this.learnerProgressBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.learnerNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -104,9 +104,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.learnerProgressBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wstGrp2DS2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackLearnerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wstGrp2DS2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.learnerProgressBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblNewLearnerBindingSource)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -314,20 +314,20 @@
             this.passStatusDataGridViewTextBoxColumn.Name = "passStatusDataGridViewTextBoxColumn";
             this.passStatusDataGridViewTextBoxColumn.Width = 104;
             // 
-            // learnerProgressBindingSource2
+            // trackLearnerBindingSource
             // 
-            this.learnerProgressBindingSource2.DataMember = "LearnerProgress";
-            this.learnerProgressBindingSource2.DataSource = this.wstGrp2DS2;
+            this.trackLearnerBindingSource.DataMember = "TrackLearner";
+            this.trackLearnerBindingSource.DataSource = this.wstGrp2DS2;
             // 
             // wstGrp2DS2
             // 
             this.wstGrp2DS2.DataSetName = "WstGrp2DS2";
             this.wstGrp2DS2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // trackLearnerBindingSource
+            // learnerProgressBindingSource2
             // 
-            this.trackLearnerBindingSource.DataMember = "TrackLearner";
-            this.trackLearnerBindingSource.DataSource = this.wstGrp2DS2;
+            this.learnerProgressBindingSource2.DataMember = "LearnerProgress";
+            this.learnerProgressBindingSource2.DataSource = this.wstGrp2DS2;
             // 
             // dataGridView2
             // 
@@ -343,7 +343,7 @@
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(422, 150);
+            this.dataGridView2.Size = new System.Drawing.Size(446, 150);
             this.dataGridView2.TabIndex = 45;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             this.dataGridView2.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView2_RowHeaderMouseClick);
@@ -862,9 +862,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.learnerProgressBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wstGrp2DS2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackLearnerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wstGrp2DS2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.learnerProgressBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblNewLearnerBindingSource)).EndInit();
             this.groupBox1.ResumeLayout(false);
