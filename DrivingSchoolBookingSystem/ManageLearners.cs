@@ -333,11 +333,8 @@ namespace DrivingSchoolBookingSystem
                 // Set Issue Date picker range and value  
                 SetIssueDatePickerRange();
                 IssuedateTimePicker1.Value = DateTime.Today;
-                // Calculate expiry date as 2 years after issue date  
-                DateTime expiryDate = IssuedateTimePicker1.Value.AddYears(2);
+                textBox9.Clear();
 
-                // Fix: Convert DateTime to string before assigning to textBox9.Text  
-                textBox9.Text = expiryDate.ToString("yyyy-MM-dd");
             }
             catch (Exception ex)
             {
