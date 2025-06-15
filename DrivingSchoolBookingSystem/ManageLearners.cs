@@ -415,18 +415,18 @@ namespace DrivingSchoolBookingSystem
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                // Get the selected LearnerID from the DataGridView
+                // Get the selected LearnerID from the DataGridView  
                 int learnerID = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value);
 
-                DialogResult confirm = MessageBox.Show("Are you sure you want to delete" + " " + "Learner ID:" + textBox8.Text.ToString() + "," + " " +  textBox1.Text.ToString() + " " + textBox2.Text.ToString() + " ?",
+                DialogResult confirm = MessageBox.Show("Are you sure you want to delete" + " " + "Learner ID:" + textBox8.Text.ToString() + "," + " " + textBox1.Text.ToString() + " " + textBox2.Text.ToString() + " ?",
                                                        "Confirm Deletion",
-                                                       MessageBoxButtons.YesNo,
+                                                       MessageBoxButtons.YesNo, // Corrected argument  
                                                        MessageBoxIcon.Warning);
 
                 if (confirm == DialogResult.Yes)
                 {
                     DeleteLearnerFromDatabase(learnerID);
-                    // Optional: clear form fields
+                    // Optional: clear form fields  
                     tblLearnerTableAdapter.Fill(this.wstGrp2DataSet1.tblLearner);
 
                     // Clear all textboxes and combo boxes  
@@ -444,12 +444,11 @@ namespace DrivingSchoolBookingSystem
                     comboBox2.SelectedIndex = -1;
                     comboBox3.SelectedIndex = -1;
                     comboBox4.SelectedIndex = -1;
-
                 }
             }
             else
             {
-                MessageBox.Show("Please select a learner to delete."," No Learner Selected!");
+                MessageBox.Show("Please select a learner to delete.", "No Learner Selected!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); // Corrected argument  
             }
         }
         private void DeleteLearnerFromDatabase(int learnerID)
@@ -524,74 +523,108 @@ namespace DrivingSchoolBookingSystem
 
         private void button5_Click(object sender, EventArgs e)
         {
-           if(string.IsNullOrWhiteSpace(textBox1.Text) || string.IsNullOrWhiteSpace(textBox2.Text) || string.IsNullOrWhiteSpace(textBox3.Text) 
-                || string.IsNullOrWhiteSpace(textBox4.Text) || string.IsNullOrWhiteSpace(comboBox1.Text) || string.IsNullOrWhiteSpace(comboBox2.Text)
-                || string.IsNullOrWhiteSpace(textBox5.Text) || string.IsNullOrWhiteSpace(textBox6.Text) || string.IsNullOrWhiteSpace(comboBox3.Text)
-                || IssuedateTimePicker1.Value == IssuedateTimePicker1.MinDate || string.IsNullOrWhiteSpace(textBox9.Text) || string.IsNullOrWhiteSpace(comboBox4.Text)
-                || string.IsNullOrWhiteSpace(textBox8.Text))
+    
+
+
+            if (string.IsNullOrWhiteSpace(textBox1.Text) || string.IsNullOrWhiteSpace(textBox2.Text) || string.IsNullOrWhiteSpace(textBox3.Text)
+       || string.IsNullOrWhiteSpace(textBox4.Text) || string.IsNullOrWhiteSpace(comboBox1.Text) || string.IsNullOrWhiteSpace(comboBox2.Text)
+       || string.IsNullOrWhiteSpace(textBox5.Text) || string.IsNullOrWhiteSpace(textBox6.Text) || string.IsNullOrWhiteSpace(comboBox3.Text)
+       || IssuedateTimePicker1.Value == IssuedateTimePicker1.MinDate || string.IsNullOrWhiteSpace(textBox9.Text) || string.IsNullOrWhiteSpace(comboBox4.Text)
+       || string.IsNullOrWhiteSpace(textBox8.Text))
             {
                 MessageBox.Show("Please fill in all required fields");
                 return;
             }
+
             using (SqlConnection con = new SqlConnection("Data Source=146.230.177.46;Initial Catalog=WstGrp2;Persist Security Info=True;User ID=WstGrp2;Password=d9jdh;TrustServerCertificate=True"))
             {
                 try
                 {
                     con.Open();
 
+                    // STEP 1: Compare current values with database
+                    string selectQuery = "SELECT * FROM tblLearner WHERE LearnerID = @learnerID";
+                    using (SqlCommand selectCmd = new SqlCommand(selectQuery, con))
+                    {
+                        selectCmd.Parameters.AddWithValue("@learnerID", Convert.ToInt32(textBox8.Text));
+                        using (SqlDataReader reader = selectCmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                bool hasChanges = false;
+
+                                hasChanges |= !reader["Learner_Name"].ToString().Trim().Equals(textBox1.Text.Trim());
+                                hasChanges |= !reader["Learner_Surname"].ToString().Trim().Equals(textBox2.Text.Trim());
+                                hasChanges |= !reader["Learner_IDNumber"].ToString().Trim().Equals(textBox3.Text.Trim());
+                                hasChanges |= Convert.ToInt32(reader["Learner_Age"]) != Convert.ToInt32(textBox4.Text);
+                                hasChanges |= !reader["Learner_Gender"].ToString().Trim().Equals(comboBox1.Text.Trim());
+                                hasChanges |= !reader["Learner_Race"].ToString().Trim().Equals(comboBox2.Text.Trim());
+                                hasChanges |= !reader["Learner_CellNumber"].ToString().Trim().Equals(textBox5.Text.Trim());
+                                hasChanges |= !reader["Learner_StreetAddress"].ToString().Trim().Equals(textBox6.Text.Trim());
+                                hasChanges |= !reader["Learner_Suburb"].ToString().Trim().Equals(comboBox3.Text.Trim());
+                                hasChanges |= Convert.ToDateTime(reader["Learner_LearnersIssueDate"]).Date != IssuedateTimePicker1.Value.Date;
+                                hasChanges |= Convert.ToDateTime(reader["Learner_LearnersExpiryDate"]).Date != Convert.ToDateTime(textBox9.Text).Date;
+                                hasChanges |= Convert.ToInt32(reader["Code_Type"]) != Convert.ToInt32(comboBox4.Text);
+
+                                if (!hasChanges)
+                                {
+                                    MessageBox.Show("No changes detected. Learner information is already up to date.", "No Update Needed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    return;
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("Learner not found in the database.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                return;
+                            }
+                        }
+                    }
+
+                    // STEP 2: Proceed to update since changes exist
                     string query = "UPDATE tblLearner " +
-                     "SET Learner_Name = @learner_Name, " +
-                     "Learner_Surname = @learner_Surname, " +
-                     "Learner_IDNumber = @learner_IDNumber, " +
-                     "Learner_Age = @learner_Age, " +
-                     "Learner_Gender = @learner_Gender, " +
-                     "Learner_Race = @learner_Race, " +
-                     "Learner_CellNumber = @learner_CellNumber, " +
-                     "Learner_StreetAddress = @learner_StreetAddress, " +
-                     "Learner_Suburb = @learner_Suburb, " +
-                     "Learner_LearnersIssueDate = @learner_LearnersIssueDate, " +
-                     "Learner_LearnersExpiryDate = @learner_LearnersExpiryDate, " +
-                     "Code_Type = @code_Type " +
-                     "WHERE LearnerID = @learnerID";
+                                   "SET Learner_Name = @learner_Name, " +
+                                   "Learner_Surname = @learner_Surname, " +
+                                   "Learner_IDNumber = @learner_IDNumber, " +
+                                   "Learner_Age = @learner_Age, " +
+                                   "Learner_Gender = @learner_Gender, " +
+                                   "Learner_Race = @learner_Race, " +
+                                   "Learner_CellNumber = @learner_CellNumber, " +
+                                   "Learner_StreetAddress = @learner_StreetAddress, " +
+                                   "Learner_Suburb = @learner_Suburb, " +
+                                   "Learner_LearnersIssueDate = @learner_LearnersIssueDate, " +
+                                   "Learner_LearnersExpiryDate = @learner_LearnersExpiryDate, " +
+                                   "Code_Type = @code_Type " +
+                                   "WHERE LearnerID = @learnerID";
 
                     using (SqlCommand command = new SqlCommand(query, con))
                     {
-                        //Use parameters to avoid SQL injection
                         command.Parameters.AddWithValue("@learnerID", Convert.ToInt32(textBox8.Text));
                         command.Parameters.AddWithValue("@learner_Name", textBox1.Text);
                         command.Parameters.AddWithValue("@learner_Surname", textBox2.Text);
                         command.Parameters.AddWithValue("@learner_IDNumber", textBox3.Text);
-                        command.Parameters.AddWithValue("@learner_Age",Convert.ToInt32(textBox4.Text));
+                        command.Parameters.AddWithValue("@learner_Age", Convert.ToInt32(textBox4.Text));
                         command.Parameters.AddWithValue("@learner_Gender", comboBox1.Text);
                         command.Parameters.AddWithValue("@learner_Race", comboBox2.Text);
                         command.Parameters.AddWithValue("@learner_CellNumber", textBox5.Text);
                         command.Parameters.AddWithValue("@learner_StreetAddress", textBox6.Text);
                         command.Parameters.AddWithValue("@learner_Suburb", comboBox3.Text);
                         command.Parameters.AddWithValue("@learner_LearnersIssueDate", IssuedateTimePicker1.Value);
-                        command.Parameters.AddWithValue("@learner_LearnersExpiryDate",textBox9.Text);
+                        command.Parameters.AddWithValue("@learner_LearnersExpiryDate", textBox9.Text);
                         command.Parameters.AddWithValue("@code_Type", Convert.ToInt32(comboBox4.Text));
 
-                        DialogResult dialogResult = MessageBox.Show("Are you sure you want to UPDATE learner  " + textBox8.Text.ToString() + " details ?", "Confirmation", MessageBoxButtons.YesNo);
+                        DialogResult dialogResult = MessageBox.Show("Are you sure you want to UPDATE learner " + textBox8.Text.ToString() + "?", "Confirm Update", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                         if (dialogResult == DialogResult.Yes)
                         {
                             command.ExecuteNonQuery();
-                            MessageBox.Show("Learner has been updated successfully.");
+                            MessageBox.Show("Learner has been updated successfully.", "Update Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             tblLearnerTableAdapter.Fill(wstGrp2DataSet1.tblLearner);
-
-                           
-
-
-
                         }
-
                     }
                 }
-                catch (SqlException ex)
+                catch (Exception ex)
                 {
-                    MessageBox.Show($"An error occurred: {ex.Message}");
+                    MessageBox.Show("An error occurred while updating the learner: " + ex.Message, "Update Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-
-
             }
         }
 
