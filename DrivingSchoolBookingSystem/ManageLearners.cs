@@ -24,6 +24,7 @@ namespace DrivingSchoolBookingSystem
             InitializeComponent();
             SetIssueDatePickerRange();
 
+
             // Make label16 look like a hyperlinkAdd commentMore actions
             label16.Text = "Click here for instructions";
             label16.ForeColor = Color.Blue;
