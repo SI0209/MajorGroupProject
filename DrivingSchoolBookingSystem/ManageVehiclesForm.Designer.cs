@@ -48,7 +48,6 @@ namespace DrivingSchoolBookingSystem
             this.tblVehicleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.wstGrp2DataSet = new DrivingSchoolBookingSystem.WstGrp2DataSet();
             this.label9 = new System.Windows.Forms.Label();
-            this.btnSearch = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -71,6 +70,7 @@ namespace DrivingSchoolBookingSystem
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.taVehicle = new DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters.tblVehicleTableAdapter();
+            this.label11 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVehicles)).BeginInit();
@@ -88,6 +88,7 @@ namespace DrivingSchoolBookingSystem
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.BackgroundImage = global::DrivingSchoolBookingSystem.Properties.Resources.Background_final;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.btnClear);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.txtEngineNum);
@@ -96,7 +97,6 @@ namespace DrivingSchoolBookingSystem
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.dgvVehicles);
             this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.btnSearch);
             this.panel1.Controls.Add(this.btnDelete);
             this.panel1.Controls.Add(this.btnUpdate);
             this.panel1.Controls.Add(this.btnAdd);
@@ -287,18 +287,6 @@ namespace DrivingSchoolBookingSystem
             this.label9.Size = new System.Drawing.Size(99, 19);
             this.label9.TabIndex = 20;
             this.label9.Text = "Vehicle Make";
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Font = new System.Drawing.Font("Comic Sans MS", 8F, System.Drawing.FontStyle.Bold);
-            this.btnSearch.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSearch.Image = global::DrivingSchoolBookingSystem.Properties.Resources.dark_blue;
-            this.btnSearch.Location = new System.Drawing.Point(455, 171);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(181, 43);
-            this.btnSearch.TabIndex = 18;
-            this.btnSearch.Text = "SEARCH BY MAKE";
-            this.btnSearch.UseVisualStyleBackColor = true;
             // 
             // btnDelete
             // 
@@ -540,6 +528,18 @@ namespace DrivingSchoolBookingSystem
             // 
             this.taVehicle.ClearBeforeFill = true;
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Comic Sans MS", 8F, System.Drawing.FontStyle.Bold);
+            this.label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label11.Location = new System.Drawing.Point(453, 183);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(176, 19);
+            this.label11.TabIndex = 44;
+            this.label11.Text = "Search Vehicle By Make";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // ManageVehiclesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -586,7 +586,6 @@ namespace DrivingSchoolBookingSystem
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cmbVehicleStatus;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Label label9;
@@ -621,6 +620,7 @@ namespace DrivingSchoolBookingSystem
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtEngineNum;
         private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Label label11;
     }
 }
 

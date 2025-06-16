@@ -1,8 +1,10 @@
-using PdfSharp.Drawing;
+using DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters;
+using DrivingSchoolBookingSystem.WstGrp2DS2TableAdapters;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -16,6 +18,8 @@ namespace DrivingSchoolBookingSystem
     {
         private int VehicleID = -1;
         private ErrorControl errorControl = new ErrorControl();
+        tblBookingTableAdapter taBooking = new tblBookingTableAdapter();
+
         public ManageVehiclesForm()
         {
             InitializeComponent();
@@ -256,57 +260,7 @@ namespace DrivingSchoolBookingSystem
             else
                 MessageBox.Show("Please select a Vehicle from the vehicle list!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
-
-        private void pbUnavailableSlot_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            UnavailableTimeSlots unavailableTimeSlots = new UnavailableTimeSlots();
-            unavailableTimeSlots.Show();
-        }
-
-        private void pbLearner_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            ManageLearners manageLearners = new ManageLearners();
-            manageLearners.Show();
-        }
-
-        private void pbAnalytics_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            AnalyticsForm analyticsForm = new AnalyticsForm();
-            analyticsForm.Show();
-        }
-
-        private void pbEmployee_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            ManageInstruc manageEmployees = new ManageInstruc();
-            manageEmployees.Show();
-        }
-
-        private void pbBack_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            LoginForm loginForm = new LoginForm();
-            loginForm.Show();
-        }
-
-        private void pbBooking_Click_1(object sender, EventArgs e)
-        {
-            this.Hide();
-            ManageBooking manageBooking = new ManageBooking();
-            manageBooking.Show();
-        }
-
-        private void pbLessonCode_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            LessonCodeForm lessonCodes = new LessonCodeForm();
-            lessonCodes.Show();
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void txtSearch_TextChanged(object sender, EventArgs e)
         {
             string make = txtSearch.Text;
             taVehicle.SearchByMake(this.wstGrp2DataSet.tblVehicle, make);
