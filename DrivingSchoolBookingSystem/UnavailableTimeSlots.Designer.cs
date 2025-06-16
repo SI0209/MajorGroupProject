@@ -49,7 +49,11 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
+<<<<<<< HEAD
             this.dtpDate = new System.Windows.Forms.DateTimePicker();
+=======
+            this.dtpStartDate = new System.Windows.Forms.DateTimePicker();
+>>>>>>> 5338b28 (Adjusted UnavailableTimeSlot table)
             this.rtbReason = new System.Windows.Forms.RichTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -62,6 +66,8 @@
             this.taUnavailableSlot = new DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters.tblUnavailableSlotTableAdapter();
             this.taUnavailableSlotInnerJoin = new DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters.tblUnavailableSlotInnerJoinTableAdapter();
             this.taEmployee = new DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters.tblEmployeeTableAdapter();
+            this.dtpEndDate = new System.Windows.Forms.DateTimePicker();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -223,6 +229,7 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(340, 34);
             this.txtSearch.TabIndex = 62;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged_1);
             // 
             // label9
             // 
@@ -356,6 +363,7 @@
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
             // 
+<<<<<<< HEAD
             // dtpDate
             // 
             this.dtpDate.Font = new System.Drawing.Font("Yu Gothic UI", 12F);
@@ -364,6 +372,16 @@
             this.dtpDate.Name = "dtpDate";
             this.dtpDate.Size = new System.Drawing.Size(333, 34);
             this.dtpDate.TabIndex = 48;
+=======
+            // dtpStartDate
+            // 
+            this.dtpStartDate.Font = new System.Drawing.Font("Yu Gothic UI", 12F);
+            this.dtpStartDate.Location = new System.Drawing.Point(42, 151);
+            this.dtpStartDate.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpStartDate.Name = "dtpStartDate";
+            this.dtpStartDate.Size = new System.Drawing.Size(333, 34);
+            this.dtpStartDate.TabIndex = 48;
+>>>>>>> 5338b28 (Adjusted UnavailableTimeSlot table)
             // 
             // rtbReason
             // 
@@ -481,6 +499,28 @@
             // 
             this.taEmployee.ClearBeforeFill = true;
             // 
+            // dtpEndDate
+            // 
+            this.dtpEndDate.Font = new System.Drawing.Font("Yu Gothic UI", 12F);
+            this.dtpEndDate.Location = new System.Drawing.Point(42, 221);
+            this.dtpEndDate.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpEndDate.Name = "dtpEndDate";
+            this.dtpEndDate.Size = new System.Drawing.Size(333, 34);
+            this.dtpEndDate.TabIndex = 49;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.MediumBlue;
+            this.label6.Location = new System.Drawing.Point(46, 189);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(91, 28);
+            this.label6.TabIndex = 28;
+            this.label6.Text = "End Date";
+            // 
             // UnavailableTimeSlots
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -535,7 +575,11 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnAdd;
+<<<<<<< HEAD
         private System.Windows.Forms.DateTimePicker dtpDate;
+=======
+        private System.Windows.Forms.DateTimePicker dtpStartDate;
+>>>>>>> 5338b28 (Adjusted UnavailableTimeSlot table)
         private System.Windows.Forms.RichTextBox rtbReason;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
@@ -548,5 +592,7 @@
         private WstGrp2DataSetTableAdapters.tblUnavailableSlotTableAdapter taUnavailableSlot;
         private WstGrp2DataSetTableAdapters.tblUnavailableSlotInnerJoinTableAdapter taUnavailableSlotInnerJoin;
         private WstGrp2DataSetTableAdapters.tblEmployeeTableAdapter taEmployee;
+        private System.Windows.Forms.DateTimePicker dtpEndDate;
+        private System.Windows.Forms.Label label6;
     }
 }

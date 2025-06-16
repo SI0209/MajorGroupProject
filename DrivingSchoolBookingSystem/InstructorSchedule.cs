@@ -13,8 +13,9 @@ namespace DrivingSchoolBookingSystem
     public partial class InstructorSchedule : Form
     {
         LoginForm loginform;
-        string name;
-        string surname;
+        public string name;
+        public string surname;
+        public string Employee_Type;
         int EmployeeID;
         public InstructorSchedule(LoginForm login)
         {
@@ -25,13 +26,11 @@ namespace DrivingSchoolBookingSystem
             {
                 if (row["Employee_Username"].ToString().Equals(login.Employee_username))
                 {
-                    name = row["Employee_Name"].ToString();
-                    surname = row["Employee_Surname"].ToString();
                     EmployeeID = Convert.ToInt16(row["EmployeeID"]);
                     break;
                 }
             }
-            string today = DateTime.Now.Date.ToString("yyyy-MM-dd");
+            string today = DateTime.Now.Date.ToShortDateString();
             //MessageBox.Show(today);
             taInstructorSchedule.Fill(dsBookingSystem.tblInstuctorSchedule, EmployeeID, today);
             this.StartPosition = FormStartPosition.CenterScreen;
@@ -48,11 +47,6 @@ namespace DrivingSchoolBookingSystem
             taInstructorSchedule.SearchByDate(dsBookingSystem.tblInstuctorSchedule, EmployeeID, dtpDate.Value.ToShortDateString());
         }
 
-        private void pbBack_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void pictureBox5_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -63,8 +57,8 @@ namespace DrivingSchoolBookingSystem
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             HomeForm home = new HomeForm(loginform);
-            home.lblUsernameInfo.Text = "Welcome " + loginform.Employee_Name + " " + loginform.Employee_Surname + "!";
-            home.lblUserType.Text = loginform.Employee_Type;
+            home.lblUsernameInfo.Text = "Welcome " + name + " " + surname + "!";
+            home.lblUserType.Text = Employee_Type;
             home.Show();
             this.Hide();
         }

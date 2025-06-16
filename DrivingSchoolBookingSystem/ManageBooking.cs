@@ -427,7 +427,7 @@ namespace DrivingSchoolBookingSystem
             return message;
         }
 
-        private string isEmployeeUnavailable(string bookingDate, string bookingStartTime, string bookingEndTime, int employeeID)
+        private string isEmployeeUnavailable(string bookingDate, string bookingEndTime, string bookingStartTime, int employeeID)
         {
             string message = null;
             int count = 0;

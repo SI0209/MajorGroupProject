@@ -32,8 +32,6 @@ namespace DrivingSchoolBookingSystem {
         
         private tblLessonCodeDataTable tabletblLessonCode;
         
-        private tblUnavailableSlotDataTable tabletblUnavailableSlot;
-        
         private tblVehicleDataTable tabletblVehicle;
         
         private tblBookingInnerJoinDataTable tabletblBookingInnerJoin;
@@ -42,7 +40,7 @@ namespace DrivingSchoolBookingSystem {
         
         private tblInstuctorScheduleDataTable tabletblInstuctorSchedule;
         
-        private global::System.Data.DataRelation relationFK_tblUnavailableSlot_tblEmployee;
+        private tblUnavailableSlotDataTable tabletblUnavailableSlot;
         
         private global::System.Data.DataRelation relationtblEmployee_tblBooking;
         
@@ -51,6 +49,8 @@ namespace DrivingSchoolBookingSystem {
         private global::System.Data.DataRelation relationtblVehicle_tblBooking;
         
         private global::System.Data.DataRelation relationtblLessonCode_tblLearner;
+        
+        private global::System.Data.DataRelation relationFK_tblUnavailableSlot_tblEmployee;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -92,9 +92,6 @@ namespace DrivingSchoolBookingSystem {
                 if ((ds.Tables["tblLessonCode"] != null)) {
                     base.Tables.Add(new tblLessonCodeDataTable(ds.Tables["tblLessonCode"]));
                 }
-                if ((ds.Tables["tblUnavailableSlot"] != null)) {
-                    base.Tables.Add(new tblUnavailableSlotDataTable(ds.Tables["tblUnavailableSlot"]));
-                }
                 if ((ds.Tables["tblVehicle"] != null)) {
                     base.Tables.Add(new tblVehicleDataTable(ds.Tables["tblVehicle"]));
                 }
@@ -106,6 +103,9 @@ namespace DrivingSchoolBookingSystem {
                 }
                 if ((ds.Tables["tblInstuctorSchedule"] != null)) {
                     base.Tables.Add(new tblInstuctorScheduleDataTable(ds.Tables["tblInstuctorSchedule"]));
+                }
+                if ((ds.Tables["tblUnavailableSlot"] != null)) {
+                    base.Tables.Add(new tblUnavailableSlotDataTable(ds.Tables["tblUnavailableSlot"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -169,16 +169,6 @@ namespace DrivingSchoolBookingSystem {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public tblUnavailableSlotDataTable tblUnavailableSlot {
-            get {
-                return this.tabletblUnavailableSlot;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Browsable(false)]
-        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
         public tblVehicleDataTable tblVehicle {
             get {
                 return this.tabletblVehicle;
@@ -212,6 +202,16 @@ namespace DrivingSchoolBookingSystem {
         public tblInstuctorScheduleDataTable tblInstuctorSchedule {
             get {
                 return this.tabletblInstuctorSchedule;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public tblUnavailableSlotDataTable tblUnavailableSlot {
+            get {
+                return this.tabletblUnavailableSlot;
             }
         }
         
@@ -294,9 +294,6 @@ namespace DrivingSchoolBookingSystem {
                 if ((ds.Tables["tblLessonCode"] != null)) {
                     base.Tables.Add(new tblLessonCodeDataTable(ds.Tables["tblLessonCode"]));
                 }
-                if ((ds.Tables["tblUnavailableSlot"] != null)) {
-                    base.Tables.Add(new tblUnavailableSlotDataTable(ds.Tables["tblUnavailableSlot"]));
-                }
                 if ((ds.Tables["tblVehicle"] != null)) {
                     base.Tables.Add(new tblVehicleDataTable(ds.Tables["tblVehicle"]));
                 }
@@ -308,6 +305,9 @@ namespace DrivingSchoolBookingSystem {
                 }
                 if ((ds.Tables["tblInstuctorSchedule"] != null)) {
                     base.Tables.Add(new tblInstuctorScheduleDataTable(ds.Tables["tblInstuctorSchedule"]));
+                }
+                if ((ds.Tables["tblUnavailableSlot"] != null)) {
+                    base.Tables.Add(new tblUnavailableSlotDataTable(ds.Tables["tblUnavailableSlot"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -366,12 +366,6 @@ namespace DrivingSchoolBookingSystem {
                     this.tabletblLessonCode.InitVars();
                 }
             }
-            this.tabletblUnavailableSlot = ((tblUnavailableSlotDataTable)(base.Tables["tblUnavailableSlot"]));
-            if ((initTable == true)) {
-                if ((this.tabletblUnavailableSlot != null)) {
-                    this.tabletblUnavailableSlot.InitVars();
-                }
-            }
             this.tabletblVehicle = ((tblVehicleDataTable)(base.Tables["tblVehicle"]));
             if ((initTable == true)) {
                 if ((this.tabletblVehicle != null)) {
@@ -396,11 +390,17 @@ namespace DrivingSchoolBookingSystem {
                     this.tabletblInstuctorSchedule.InitVars();
                 }
             }
-            this.relationFK_tblUnavailableSlot_tblEmployee = this.Relations["FK_tblUnavailableSlot_tblEmployee"];
+            this.tabletblUnavailableSlot = ((tblUnavailableSlotDataTable)(base.Tables["tblUnavailableSlot"]));
+            if ((initTable == true)) {
+                if ((this.tabletblUnavailableSlot != null)) {
+                    this.tabletblUnavailableSlot.InitVars();
+                }
+            }
             this.relationtblEmployee_tblBooking = this.Relations["tblEmployee_tblBooking"];
             this.relationtblLessonCode_tblBooking = this.Relations["tblLessonCode_tblBooking"];
             this.relationtblVehicle_tblBooking = this.Relations["tblVehicle_tblBooking"];
             this.relationtblLessonCode_tblLearner = this.Relations["tblLessonCode_tblLearner"];
+            this.relationFK_tblUnavailableSlot_tblEmployee = this.Relations["FK_tblUnavailableSlot_tblEmployee"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -419,8 +419,6 @@ namespace DrivingSchoolBookingSystem {
             base.Tables.Add(this.tabletblLearner);
             this.tabletblLessonCode = new tblLessonCodeDataTable();
             base.Tables.Add(this.tabletblLessonCode);
-            this.tabletblUnavailableSlot = new tblUnavailableSlotDataTable();
-            base.Tables.Add(this.tabletblUnavailableSlot);
             this.tabletblVehicle = new tblVehicleDataTable();
             base.Tables.Add(this.tabletblVehicle);
             this.tabletblBookingInnerJoin = new tblBookingInnerJoinDataTable();
@@ -429,10 +427,8 @@ namespace DrivingSchoolBookingSystem {
             base.Tables.Add(this.tabletblUnavailableSlotInnerJoin);
             this.tabletblInstuctorSchedule = new tblInstuctorScheduleDataTable();
             base.Tables.Add(this.tabletblInstuctorSchedule);
-            this.relationFK_tblUnavailableSlot_tblEmployee = new global::System.Data.DataRelation("FK_tblUnavailableSlot_tblEmployee", new global::System.Data.DataColumn[] {
-                        this.tabletblEmployee.EmployeeIDColumn}, new global::System.Data.DataColumn[] {
-                        this.tabletblUnavailableSlot.EmployeeIDColumn}, false);
-            this.Relations.Add(this.relationFK_tblUnavailableSlot_tblEmployee);
+            this.tabletblUnavailableSlot = new tblUnavailableSlotDataTable();
+            base.Tables.Add(this.tabletblUnavailableSlot);
             this.relationtblEmployee_tblBooking = new global::System.Data.DataRelation("tblEmployee_tblBooking", new global::System.Data.DataColumn[] {
                         this.tabletblEmployee.EmployeeIDColumn}, new global::System.Data.DataColumn[] {
                         this.tabletblBooking.EmployeeIDColumn}, false);
@@ -449,6 +445,10 @@ namespace DrivingSchoolBookingSystem {
                         this.tabletblLessonCode.Code_TypeColumn}, new global::System.Data.DataColumn[] {
                         this.tabletblLearner.Code_TypeColumn}, false);
             this.Relations.Add(this.relationtblLessonCode_tblLearner);
+            this.relationFK_tblUnavailableSlot_tblEmployee = new global::System.Data.DataRelation("FK_tblUnavailableSlot_tblEmployee", new global::System.Data.DataColumn[] {
+                        this.tabletblEmployee.EmployeeIDColumn}, new global::System.Data.DataColumn[] {
+                        this.tabletblUnavailableSlot.EmployeeIDColumn}, false);
+            this.Relations.Add(this.relationFK_tblUnavailableSlot_tblEmployee);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -477,12 +477,6 @@ namespace DrivingSchoolBookingSystem {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializetblUnavailableSlot() {
-            return false;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private bool ShouldSerializetblVehicle() {
             return false;
         }
@@ -502,6 +496,12 @@ namespace DrivingSchoolBookingSystem {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private bool ShouldSerializetblInstuctorSchedule() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private bool ShouldSerializetblUnavailableSlot() {
             return false;
         }
         
@@ -573,9 +573,6 @@ namespace DrivingSchoolBookingSystem {
         public delegate void tblLessonCodeRowChangeEventHandler(object sender, tblLessonCodeRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void tblUnavailableSlotRowChangeEventHandler(object sender, tblUnavailableSlotRowChangeEvent e);
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public delegate void tblVehicleRowChangeEventHandler(object sender, tblVehicleRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -586,6 +583,9 @@ namespace DrivingSchoolBookingSystem {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public delegate void tblInstuctorScheduleRowChangeEventHandler(object sender, tblInstuctorScheduleRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public delegate void tblUnavailableSlotRowChangeEventHandler(object sender, tblUnavailableSlotRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -2177,6 +2177,7 @@ namespace DrivingSchoolBookingSystem {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+<<<<<<< HEAD
         public partial class tblUnavailableSlotDataTable : global::System.Data.TypedTableBase<tblUnavailableSlotRow> {
             
             private global::System.Data.DataColumn columnUnavailableSlotID;
@@ -2502,6 +2503,8 @@ namespace DrivingSchoolBookingSystem {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+=======
+>>>>>>> 5338b28 (Adjusted UnavailableTimeSlot table)
         public partial class tblVehicleDataTable : global::System.Data.TypedTableBase<tblVehicleRow> {
             
             private global::System.Data.DataColumn columnVehicleID;
@@ -4079,6 +4082,360 @@ namespace DrivingSchoolBookingSystem {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class tblUnavailableSlotDataTable : global::System.Data.TypedTableBase<tblUnavailableSlotRow> {
+            
+            private global::System.Data.DataColumn columnUnavailableSlotID;
+            
+            private global::System.Data.DataColumn columnStart_Date;
+            
+            private global::System.Data.DataColumn columnEnd_Date;
+            
+            private global::System.Data.DataColumn columnStart_Time;
+            
+            private global::System.Data.DataColumn columnEnd_Time;
+            
+            private global::System.Data.DataColumn columnReason;
+            
+            private global::System.Data.DataColumn columnEmployeeID;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public tblUnavailableSlotDataTable() {
+                this.TableName = "tblUnavailableSlot";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal tblUnavailableSlotDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected tblUnavailableSlotDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn UnavailableSlotIDColumn {
+                get {
+                    return this.columnUnavailableSlotID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Start_DateColumn {
+                get {
+                    return this.columnStart_Date;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn End_DateColumn {
+                get {
+                    return this.columnEnd_Date;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Start_TimeColumn {
+                get {
+                    return this.columnStart_Time;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn End_TimeColumn {
+                get {
+                    return this.columnEnd_Time;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ReasonColumn {
+                get {
+                    return this.columnReason;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn EmployeeIDColumn {
+                get {
+                    return this.columnEmployeeID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public tblUnavailableSlotRow this[int index] {
+                get {
+                    return ((tblUnavailableSlotRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event tblUnavailableSlotRowChangeEventHandler tblUnavailableSlotRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event tblUnavailableSlotRowChangeEventHandler tblUnavailableSlotRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event tblUnavailableSlotRowChangeEventHandler tblUnavailableSlotRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event tblUnavailableSlotRowChangeEventHandler tblUnavailableSlotRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void AddtblUnavailableSlotRow(tblUnavailableSlotRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public tblUnavailableSlotRow AddtblUnavailableSlotRow(System.DateTime Start_Date, System.DateTime End_Date, System.TimeSpan Start_Time, System.TimeSpan End_Time, string Reason, tblEmployeeRow parenttblEmployeeRowByFK_tblUnavailableSlot_tblEmployee) {
+                tblUnavailableSlotRow rowtblUnavailableSlotRow = ((tblUnavailableSlotRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        Start_Date,
+                        End_Date,
+                        Start_Time,
+                        End_Time,
+                        Reason,
+                        null};
+                if ((parenttblEmployeeRowByFK_tblUnavailableSlot_tblEmployee != null)) {
+                    columnValuesArray[6] = parenttblEmployeeRowByFK_tblUnavailableSlot_tblEmployee[0];
+                }
+                rowtblUnavailableSlotRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowtblUnavailableSlotRow);
+                return rowtblUnavailableSlotRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public tblUnavailableSlotRow FindByUnavailableSlotID(int UnavailableSlotID) {
+                return ((tblUnavailableSlotRow)(this.Rows.Find(new object[] {
+                            UnavailableSlotID})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                tblUnavailableSlotDataTable cln = ((tblUnavailableSlotDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new tblUnavailableSlotDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal void InitVars() {
+                this.columnUnavailableSlotID = base.Columns["UnavailableSlotID"];
+                this.columnStart_Date = base.Columns["Start_Date"];
+                this.columnEnd_Date = base.Columns["End_Date"];
+                this.columnStart_Time = base.Columns["Start_Time"];
+                this.columnEnd_Time = base.Columns["End_Time"];
+                this.columnReason = base.Columns["Reason"];
+                this.columnEmployeeID = base.Columns["EmployeeID"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            private void InitClass() {
+                this.columnUnavailableSlotID = new global::System.Data.DataColumn("UnavailableSlotID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnUnavailableSlotID);
+                this.columnStart_Date = new global::System.Data.DataColumn("Start_Date", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnStart_Date);
+                this.columnEnd_Date = new global::System.Data.DataColumn("End_Date", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEnd_Date);
+                this.columnStart_Time = new global::System.Data.DataColumn("Start_Time", typeof(global::System.TimeSpan), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnStart_Time);
+                this.columnEnd_Time = new global::System.Data.DataColumn("End_Time", typeof(global::System.TimeSpan), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEnd_Time);
+                this.columnReason = new global::System.Data.DataColumn("Reason", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnReason);
+                this.columnEmployeeID = new global::System.Data.DataColumn("EmployeeID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEmployeeID);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnUnavailableSlotID}, true));
+                this.columnUnavailableSlotID.AutoIncrement = true;
+                this.columnUnavailableSlotID.AutoIncrementSeed = -1;
+                this.columnUnavailableSlotID.AutoIncrementStep = -1;
+                this.columnUnavailableSlotID.AllowDBNull = false;
+                this.columnUnavailableSlotID.ReadOnly = true;
+                this.columnUnavailableSlotID.Unique = true;
+                this.columnStart_Date.AllowDBNull = false;
+                this.columnEnd_Date.AllowDBNull = false;
+                this.columnReason.AllowDBNull = false;
+                this.columnReason.MaxLength = 100;
+                this.columnEmployeeID.AllowDBNull = false;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public tblUnavailableSlotRow NewtblUnavailableSlotRow() {
+                return ((tblUnavailableSlotRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new tblUnavailableSlotRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(tblUnavailableSlotRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.tblUnavailableSlotRowChanged != null)) {
+                    this.tblUnavailableSlotRowChanged(this, new tblUnavailableSlotRowChangeEvent(((tblUnavailableSlotRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.tblUnavailableSlotRowChanging != null)) {
+                    this.tblUnavailableSlotRowChanging(this, new tblUnavailableSlotRowChangeEvent(((tblUnavailableSlotRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.tblUnavailableSlotRowDeleted != null)) {
+                    this.tblUnavailableSlotRowDeleted(this, new tblUnavailableSlotRowChangeEvent(((tblUnavailableSlotRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.tblUnavailableSlotRowDeleting != null)) {
+                    this.tblUnavailableSlotRowDeleting(this, new tblUnavailableSlotRowChangeEvent(((tblUnavailableSlotRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void RemovetblUnavailableSlotRow(tblUnavailableSlotRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                WstGrp2DataSet ds = new WstGrp2DataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "tblUnavailableSlotDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class tblBookingRow : global::System.Data.DataRow {
@@ -4395,23 +4752,23 @@ namespace DrivingSchoolBookingSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public tblUnavailableSlotRow[] GettblUnavailableSlotRows() {
-                if ((this.Table.ChildRelations["FK_tblUnavailableSlot_tblEmployee"] == null)) {
-                    return new tblUnavailableSlotRow[0];
-                }
-                else {
-                    return ((tblUnavailableSlotRow[])(base.GetChildRows(this.Table.ChildRelations["FK_tblUnavailableSlot_tblEmployee"])));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public tblBookingRow[] GettblBookingRows() {
                 if ((this.Table.ChildRelations["tblEmployee_tblBooking"] == null)) {
                     return new tblBookingRow[0];
                 }
                 else {
                     return ((tblBookingRow[])(base.GetChildRows(this.Table.ChildRelations["tblEmployee_tblBooking"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public tblUnavailableSlotRow[] GettblUnavailableSlotRows() {
+                if ((this.Table.ChildRelations["FK_tblUnavailableSlot_tblEmployee"] == null)) {
+                    return new tblUnavailableSlotRow[0];
+                }
+                else {
+                    return ((tblUnavailableSlotRow[])(base.GetChildRows(this.Table.ChildRelations["FK_tblUnavailableSlot_tblEmployee"])));
                 }
             }
         }
@@ -4664,6 +5021,7 @@ namespace DrivingSchoolBookingSystem {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
+<<<<<<< HEAD
         public partial class tblUnavailableSlotRow : global::System.Data.DataRow {
             
             private tblUnavailableSlotDataTable tabletblUnavailableSlot;
@@ -4762,6 +5120,8 @@ namespace DrivingSchoolBookingSystem {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
+=======
+>>>>>>> 5338b28 (Adjusted UnavailableTimeSlot table)
         public partial class tblVehicleRow : global::System.Data.DataRow {
             
             private tblVehicleDataTable tabletblVehicle;
@@ -5296,6 +5656,143 @@ namespace DrivingSchoolBookingSystem {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class tblUnavailableSlotRow : global::System.Data.DataRow {
+            
+            private tblUnavailableSlotDataTable tabletblUnavailableSlot;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal tblUnavailableSlotRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tabletblUnavailableSlot = ((tblUnavailableSlotDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int UnavailableSlotID {
+                get {
+                    return ((int)(this[this.tabletblUnavailableSlot.UnavailableSlotIDColumn]));
+                }
+                set {
+                    this[this.tabletblUnavailableSlot.UnavailableSlotIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.DateTime Start_Date {
+                get {
+                    return ((global::System.DateTime)(this[this.tabletblUnavailableSlot.Start_DateColumn]));
+                }
+                set {
+                    this[this.tabletblUnavailableSlot.Start_DateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.DateTime End_Date {
+                get {
+                    return ((global::System.DateTime)(this[this.tabletblUnavailableSlot.End_DateColumn]));
+                }
+                set {
+                    this[this.tabletblUnavailableSlot.End_DateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.TimeSpan Start_Time {
+                get {
+                    try {
+                        return ((global::System.TimeSpan)(this[this.tabletblUnavailableSlot.Start_TimeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Start_Time\' in table \'tblUnavailableSlot\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletblUnavailableSlot.Start_TimeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.TimeSpan End_Time {
+                get {
+                    try {
+                        return ((global::System.TimeSpan)(this[this.tabletblUnavailableSlot.End_TimeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'End_Time\' in table \'tblUnavailableSlot\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletblUnavailableSlot.End_TimeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Reason {
+                get {
+                    return ((string)(this[this.tabletblUnavailableSlot.ReasonColumn]));
+                }
+                set {
+                    this[this.tabletblUnavailableSlot.ReasonColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int EmployeeID {
+                get {
+                    return ((int)(this[this.tabletblUnavailableSlot.EmployeeIDColumn]));
+                }
+                set {
+                    this[this.tabletblUnavailableSlot.EmployeeIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public tblEmployeeRow tblEmployeeRow {
+                get {
+                    return ((tblEmployeeRow)(this.GetParentRow(this.Table.ParentRelations["FK_tblUnavailableSlot_tblEmployee"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_tblUnavailableSlot_tblEmployee"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsStart_TimeNull() {
+                return this.IsNull(this.tabletblUnavailableSlot.Start_TimeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetStart_TimeNull() {
+                this[this.tabletblUnavailableSlot.Start_TimeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsEnd_TimeNull() {
+                return this.IsNull(this.tabletblUnavailableSlot.End_TimeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetEnd_TimeNull() {
+                this[this.tabletblUnavailableSlot.End_TimeColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -5435,40 +5932,6 @@ namespace DrivingSchoolBookingSystem {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class tblUnavailableSlotRowChangeEvent : global::System.EventArgs {
-            
-            private tblUnavailableSlotRow eventRow;
-            
-            private global::System.Data.DataRowAction eventAction;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public tblUnavailableSlotRowChangeEvent(tblUnavailableSlotRow row, global::System.Data.DataRowAction action) {
-                this.eventRow = row;
-                this.eventAction = action;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public tblUnavailableSlotRow Row {
-                get {
-                    return this.eventRow;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataRowAction Action {
-                get {
-                    return this.eventAction;
-                }
-            }
-        }
-        
-        /// <summary>
-        ///Row event argument class
-        ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public class tblVehicleRowChangeEvent : global::System.EventArgs {
             
             private tblVehicleRow eventRow;
@@ -5587,6 +6050,40 @@ namespace DrivingSchoolBookingSystem {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public tblInstuctorScheduleRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public class tblUnavailableSlotRowChangeEvent : global::System.EventArgs {
+            
+            private tblUnavailableSlotRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public tblUnavailableSlotRowChangeEvent(tblUnavailableSlotRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public tblUnavailableSlotRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -9662,6 +10159,7 @@ VALUES (@Learner_Name,@Learner_Surname,@Learner_IDNumber,@Learner_Age,@Learner_G
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+<<<<<<< HEAD
     public partial class tblUnavailableSlotTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
@@ -10283,6 +10781,8 @@ SELECT UnavailableSlotID, Date, Time, Reason, EmployeeID FROM tblUnavailableSlot
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+=======
+>>>>>>> 5338b28 (Adjusted UnavailableTimeSlot table)
     public partial class tblVehicleTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
@@ -11883,6 +12383,719 @@ WHERE  (tblBooking.LearnerID = @LearnerID)";
     }
     
     /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class tblUnavailableSlotTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public tblUnavailableSlotTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "tblUnavailableSlot";
+            tableMapping.ColumnMappings.Add("UnavailableSlotID", "UnavailableSlotID");
+            tableMapping.ColumnMappings.Add("Start_Date", "Start_Date");
+            tableMapping.ColumnMappings.Add("End_Date", "End_Date");
+            tableMapping.ColumnMappings.Add("Start_Time", "Start_Time");
+            tableMapping.ColumnMappings.Add("End_Time", "End_Time");
+            tableMapping.ColumnMappings.Add("Reason", "Reason");
+            tableMapping.ColumnMappings.Add("EmployeeID", "EmployeeID");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [tblUnavailableSlot] WHERE (([UnavailableSlotID] = @Original_UnavailableSlotID) AND ([Start_Date] = @Original_Start_Date) AND ([End_Date] = @Original_End_Date) AND ((@IsNull_Start_Time = 1 AND [Start_Time] IS NULL) OR ([Start_Time] = @Original_Start_Time)) AND ((@IsNull_End_Time = 1 AND [End_Time] IS NULL) OR ([End_Time] = @Original_End_Time)) AND ([Reason] = @Original_Reason) AND ([EmployeeID] = @Original_EmployeeID))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UnavailableSlotID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UnavailableSlotID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Start_Date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Start_Date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_End_Date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "End_Date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Start_Time", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Start_Time", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Start_Time", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Start_Time", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_End_Time", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "End_Time", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_End_Time", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "End_Time", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Reason", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Reason", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_EmployeeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EmployeeID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [tblUnavailableSlot] ([Start_Date], [End_Date], [Start_Time], [End_Time], [Reason], [EmployeeID]) VALUES (@Start_Date, @End_Date, @Start_Time, @End_Time, @Reason, @EmployeeID);
+SELECT UnavailableSlotID, Start_Date, End_Date, Start_Time, End_Time, Reason, EmployeeID FROM tblUnavailableSlot WHERE (UnavailableSlotID = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Start_Date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Start_Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@End_Date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "End_Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Start_Time", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Start_Time", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@End_Time", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "End_Time", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Reason", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Reason", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EmployeeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EmployeeID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [tblUnavailableSlot] SET [Start_Date] = @Start_Date, [End_Date] = @End_Date, [Start_Time] = @Start_Time, [End_Time] = @End_Time, [Reason] = @Reason, [EmployeeID] = @EmployeeID WHERE (([UnavailableSlotID] = @Original_UnavailableSlotID) AND ([Start_Date] = @Original_Start_Date) AND ([End_Date] = @Original_End_Date) AND ((@IsNull_Start_Time = 1 AND [Start_Time] IS NULL) OR ([Start_Time] = @Original_Start_Time)) AND ((@IsNull_End_Time = 1 AND [End_Time] IS NULL) OR ([End_Time] = @Original_End_Time)) AND ([Reason] = @Original_Reason) AND ([EmployeeID] = @Original_EmployeeID));
+SELECT UnavailableSlotID, Start_Date, End_Date, Start_Time, End_Time, Reason, EmployeeID FROM tblUnavailableSlot WHERE (UnavailableSlotID = @UnavailableSlotID)";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Start_Date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Start_Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@End_Date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "End_Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Start_Time", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Start_Time", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@End_Time", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "End_Time", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Reason", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Reason", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EmployeeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EmployeeID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UnavailableSlotID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UnavailableSlotID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Start_Date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Start_Date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_End_Date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "End_Date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Start_Time", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Start_Time", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Start_Time", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Start_Time", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_End_Time", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "End_Time", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_End_Time", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "End_Time", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Reason", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Reason", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_EmployeeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EmployeeID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UnavailableSlotID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "UnavailableSlotID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::DrivingSchoolBookingSystem.Properties.Settings.Default.WstGrp2ConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[6];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT UnavailableSlotID, Start_Date, End_Date, Start_Time, End_Time, Reason, Emp" +
+                "loyeeID\r\nFROM     tblUnavailableSlot";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT COUNT(*) AS Expr1\r\nFROM     tblUnavailableSlot\r\nWHERE  (Start_Date = @Star" +
+                "tDate) AND (End_Date = @End_Date) AND (Start_Time = @StartTime) AND (End_Time = " +
+                "@End_Time) AND (Reason = @reason) AND (EmployeeID = @EmployeeID)";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@StartDate", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "Start_Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@End_Date", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "End_Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@StartTime", global::System.Data.SqlDbType.Time, 5, global::System.Data.ParameterDirection.Input, 0, 0, "Start_Time", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@End_Time", global::System.Data.SqlDbType.Time, 5, global::System.Data.ParameterDirection.Input, 0, 0, "End_Time", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@reason", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "Reason", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EmployeeID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "EmployeeID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = @"SELECT COUNT(*) AS Expr1
+FROM     tblUnavailableSlot
+WHERE  (Start_Date = @StartDate) AND (End_Date = @End_Date) AND (Start_Time = @StartTime) AND (End_Time = @End_Time) AND (Reason = @reason) AND (EmployeeID = @EmployeeID) AND (UnavailableSlotID <> @UnavailableSlotID)";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@StartDate", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "Start_Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@End_Date", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "End_Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@StartTime", global::System.Data.SqlDbType.Time, 5, global::System.Data.ParameterDirection.Input, 0, 0, "Start_Time", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@End_Time", global::System.Data.SqlDbType.Time, 5, global::System.Data.ParameterDirection.Input, 0, 0, "End_Time", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@reason", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "Reason", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EmployeeID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "EmployeeID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UnavailableSlotID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "UnavailableSlotID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[3].Connection = this.Connection;
+            this._commandCollection[3].CommandText = "SELECT COUNT(*) AS Expr1\r\nFROM     tblUnavailableSlot\r\nWHERE  (EmployeeID = @empl" +
+                "oyeeID) AND (Start_Date <= @bookingDate) AND (End_Date >= @bookingDate) AND (Sta" +
+                "rt_Time <= @EndTime) AND (End_Time >= @StartTime)";
+            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@employeeID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "EmployeeID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@bookingDate", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "Start_Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EndTime", global::System.Data.SqlDbType.Time, 5, global::System.Data.ParameterDirection.Input, 0, 0, "Start_Time", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@StartTime", global::System.Data.SqlDbType.Time, 5, global::System.Data.ParameterDirection.Input, 0, 0, "End_Time", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[4].Connection = this.Connection;
+            this._commandCollection[4].CommandText = "DELETE FROM tblUnavailableSlot\r\nWHERE  (UnavailableSlotID = @Original_Unavailable" +
+                "SlotID)";
+            this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UnavailableSlotID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "UnavailableSlotID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[5] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[5].Connection = this.Connection;
+            this._commandCollection[5].CommandText = "UPDATE tblUnavailableSlot\r\nSET          Start_Date = @Start_Date, End_Date = @End" +
+                "_Date, Start_Time = @Start_Time, End_Time = @End_Time, Reason = @Reason, Employe" +
+                "eID = @EmployeeID\r\nWHERE  (UnavailableSlotID = @UnavailableSlotID); \r\n";
+            this._commandCollection[5].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Start_Date", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "Start_Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@End_Date", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "End_Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Start_Time", global::System.Data.SqlDbType.Time, 5, global::System.Data.ParameterDirection.Input, 0, 0, "Start_Time", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@End_Time", global::System.Data.SqlDbType.Time, 5, global::System.Data.ParameterDirection.Input, 0, 0, "End_Time", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Reason", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "Reason", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EmployeeID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "EmployeeID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UnavailableSlotID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "UnavailableSlotID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(WstGrp2DataSet.tblUnavailableSlotDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual WstGrp2DataSet.tblUnavailableSlotDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            WstGrp2DataSet.tblUnavailableSlotDataTable dataTable = new WstGrp2DataSet.tblUnavailableSlotDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(WstGrp2DataSet.tblUnavailableSlotDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(WstGrp2DataSet dataSet) {
+            return this.Adapter.Update(dataSet, "tblUnavailableSlot");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(int Original_UnavailableSlotID, System.DateTime Original_Start_Date, System.DateTime Original_End_Date, global::System.Nullable<global::System.TimeSpan> Original_Start_Time, global::System.Nullable<global::System.TimeSpan> Original_End_Time, string Original_Reason, int Original_EmployeeID) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_UnavailableSlotID));
+            this.Adapter.DeleteCommand.Parameters[1].Value = ((System.DateTime)(Original_Start_Date));
+            this.Adapter.DeleteCommand.Parameters[2].Value = ((System.DateTime)(Original_End_Date));
+            if ((Original_Start_Time.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((System.TimeSpan)(Original_Start_Time.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((Original_End_Time.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((System.TimeSpan)(Original_End_Time.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Reason == null)) {
+                throw new global::System.ArgumentNullException("Original_Reason");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((string)(Original_Reason));
+            }
+            this.Adapter.DeleteCommand.Parameters[8].Value = ((int)(Original_EmployeeID));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(System.DateTime Start_Date, System.DateTime End_Date, global::System.Nullable<global::System.TimeSpan> Start_Time, global::System.Nullable<global::System.TimeSpan> End_Time, string Reason, int EmployeeID) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((System.DateTime)(Start_Date));
+            this.Adapter.InsertCommand.Parameters[1].Value = ((System.DateTime)(End_Date));
+            if ((Start_Time.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((System.TimeSpan)(Start_Time.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((End_Time.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((System.TimeSpan)(End_Time.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((Reason == null)) {
+                throw new global::System.ArgumentNullException("Reason");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(Reason));
+            }
+            this.Adapter.InsertCommand.Parameters[5].Value = ((int)(EmployeeID));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(System.DateTime Start_Date, System.DateTime End_Date, global::System.Nullable<global::System.TimeSpan> Start_Time, global::System.Nullable<global::System.TimeSpan> End_Time, string Reason, int EmployeeID, int Original_UnavailableSlotID, System.DateTime Original_Start_Date, System.DateTime Original_End_Date, global::System.Nullable<global::System.TimeSpan> Original_Start_Time, global::System.Nullable<global::System.TimeSpan> Original_End_Time, string Original_Reason, int Original_EmployeeID, int UnavailableSlotID) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((System.DateTime)(Start_Date));
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((System.DateTime)(End_Date));
+            if ((Start_Time.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((System.TimeSpan)(Start_Time.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((End_Time.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((System.TimeSpan)(End_Time.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((Reason == null)) {
+                throw new global::System.ArgumentNullException("Reason");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Reason));
+            }
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(EmployeeID));
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_UnavailableSlotID));
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((System.DateTime)(Original_Start_Date));
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((System.DateTime)(Original_End_Date));
+            if ((Original_Start_Time.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((System.TimeSpan)(Original_Start_Time.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            if ((Original_End_Time.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((System.TimeSpan)(Original_End_Time.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Reason == null)) {
+                throw new global::System.ArgumentNullException("Original_Reason");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_Reason));
+            }
+            this.Adapter.UpdateCommand.Parameters[14].Value = ((int)(Original_EmployeeID));
+            this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(UnavailableSlotID));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(System.DateTime Start_Date, System.DateTime End_Date, global::System.Nullable<global::System.TimeSpan> Start_Time, global::System.Nullable<global::System.TimeSpan> End_Time, string Reason, int EmployeeID, int Original_UnavailableSlotID, System.DateTime Original_Start_Date, System.DateTime Original_End_Date, global::System.Nullable<global::System.TimeSpan> Original_Start_Time, global::System.Nullable<global::System.TimeSpan> Original_End_Time, string Original_Reason, int Original_EmployeeID) {
+            return this.Update(Start_Date, End_Date, Start_Time, End_Time, Reason, EmployeeID, Original_UnavailableSlotID, Original_Start_Date, Original_End_Date, Original_Start_Time, Original_End_Time, Original_Reason, Original_EmployeeID, Original_UnavailableSlotID);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual object CheckDuplicateRecords(string StartDate, string End_Date, string StartTime, string End_Time, string reason, int EmployeeID) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
+            if ((StartDate == null)) {
+                throw new global::System.ArgumentNullException("StartDate");
+            }
+            else {
+                command.Parameters[0].Value = ((string)(StartDate));
+            }
+            if ((End_Date == null)) {
+                throw new global::System.ArgumentNullException("End_Date");
+            }
+            else {
+                command.Parameters[1].Value = ((string)(End_Date));
+            }
+            if ((StartTime == null)) {
+                command.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[2].Value = ((string)(StartTime));
+            }
+            if ((End_Time == null)) {
+                command.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[3].Value = ((string)(End_Time));
+            }
+            if ((reason == null)) {
+                throw new global::System.ArgumentNullException("reason");
+            }
+            else {
+                command.Parameters[4].Value = ((string)(reason));
+            }
+            command.Parameters[5].Value = ((int)(EmployeeID));
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            object returnValue;
+            try {
+                returnValue = command.ExecuteScalar();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            if (((returnValue == null) 
+                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
+                return null;
+            }
+            else {
+                return ((object)(returnValue));
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual object CheckDuplicateRecordsForUpdate(string StartDate, string End_Date, string StartTime, string End_Time, string reason, int EmployeeID, int UnavailableSlotID) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
+            if ((StartDate == null)) {
+                throw new global::System.ArgumentNullException("StartDate");
+            }
+            else {
+                command.Parameters[0].Value = ((string)(StartDate));
+            }
+            if ((End_Date == null)) {
+                throw new global::System.ArgumentNullException("End_Date");
+            }
+            else {
+                command.Parameters[1].Value = ((string)(End_Date));
+            }
+            if ((StartTime == null)) {
+                command.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[2].Value = ((string)(StartTime));
+            }
+            if ((End_Time == null)) {
+                command.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[3].Value = ((string)(End_Time));
+            }
+            if ((reason == null)) {
+                throw new global::System.ArgumentNullException("reason");
+            }
+            else {
+                command.Parameters[4].Value = ((string)(reason));
+            }
+            command.Parameters[5].Value = ((int)(EmployeeID));
+            command.Parameters[6].Value = ((int)(UnavailableSlotID));
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            object returnValue;
+            try {
+                returnValue = command.ExecuteScalar();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            if (((returnValue == null) 
+                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
+                return null;
+            }
+            else {
+                return ((object)(returnValue));
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual object CheckEmployeeUnavailable(int employeeID, string bookingDate, string EndTime, string StartTime) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[3];
+            command.Parameters[0].Value = ((int)(employeeID));
+            if ((bookingDate == null)) {
+                throw new global::System.ArgumentNullException("bookingDate");
+            }
+            else {
+                command.Parameters[1].Value = ((string)(bookingDate));
+            }
+            if ((EndTime == null)) {
+                command.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[2].Value = ((string)(EndTime));
+            }
+            if ((StartTime == null)) {
+                command.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[3].Value = ((string)(StartTime));
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            object returnValue;
+            try {
+                returnValue = command.ExecuteScalar();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            if (((returnValue == null) 
+                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
+                return null;
+            }
+            else {
+                return ((object)(returnValue));
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, false)]
+        public virtual int DeleteUnavailableSlot(int Original_UnavailableSlotID) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[4];
+            command.Parameters[0].Value = ((int)(Original_UnavailableSlotID));
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
+        public virtual int UpdateUnavailableSlot(string Start_Date, string End_Date, string Start_Time, string End_Time, string Reason, int EmployeeID, int UnavailableSlotID) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[5];
+            if ((Start_Date == null)) {
+                throw new global::System.ArgumentNullException("Start_Date");
+            }
+            else {
+                command.Parameters[0].Value = ((string)(Start_Date));
+            }
+            if ((End_Date == null)) {
+                throw new global::System.ArgumentNullException("End_Date");
+            }
+            else {
+                command.Parameters[1].Value = ((string)(End_Date));
+            }
+            if ((Start_Time == null)) {
+                command.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[2].Value = ((string)(Start_Time));
+            }
+            if ((End_Time == null)) {
+                command.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[3].Value = ((string)(End_Time));
+            }
+            if ((Reason == null)) {
+                throw new global::System.ArgumentNullException("Reason");
+            }
+            else {
+                command.Parameters[4].Value = ((string)(Reason));
+            }
+            command.Parameters[5].Value = ((int)(EmployeeID));
+            command.Parameters[6].Value = ((int)(UnavailableSlotID));
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
+    }
+    
+    /// <summary>
     ///TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
     ///</summary>
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11902,9 +13115,9 @@ WHERE  (tblBooking.LearnerID = @LearnerID)";
         
         private tblLessonCodeTableAdapter _tblLessonCodeTableAdapter;
         
-        private tblUnavailableSlotTableAdapter _tblUnavailableSlotTableAdapter;
-        
         private tblVehicleTableAdapter _tblVehicleTableAdapter;
+        
+        private tblUnavailableSlotTableAdapter _tblUnavailableSlotTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -11982,12 +13195,12 @@ WHERE  (tblBooking.LearnerID = @LearnerID)";
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public tblUnavailableSlotTableAdapter tblUnavailableSlotTableAdapter {
+        public tblVehicleTableAdapter tblVehicleTableAdapter {
             get {
-                return this._tblUnavailableSlotTableAdapter;
+                return this._tblVehicleTableAdapter;
             }
             set {
-                this._tblUnavailableSlotTableAdapter = value;
+                this._tblVehicleTableAdapter = value;
             }
         }
         
@@ -11996,12 +13209,12 @@ WHERE  (tblBooking.LearnerID = @LearnerID)";
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public tblVehicleTableAdapter tblVehicleTableAdapter {
+        public tblUnavailableSlotTableAdapter tblUnavailableSlotTableAdapter {
             get {
-                return this._tblVehicleTableAdapter;
+                return this._tblUnavailableSlotTableAdapter;
             }
             set {
-                this._tblVehicleTableAdapter = value;
+                this._tblUnavailableSlotTableAdapter = value;
             }
         }
         
@@ -12040,13 +13253,13 @@ WHERE  (tblBooking.LearnerID = @LearnerID)";
                             && (this._tblLessonCodeTableAdapter.Connection != null))) {
                     return this._tblLessonCodeTableAdapter.Connection;
                 }
-                if (((this._tblUnavailableSlotTableAdapter != null) 
-                            && (this._tblUnavailableSlotTableAdapter.Connection != null))) {
-                    return this._tblUnavailableSlotTableAdapter.Connection;
-                }
                 if (((this._tblVehicleTableAdapter != null) 
                             && (this._tblVehicleTableAdapter.Connection != null))) {
                     return this._tblVehicleTableAdapter.Connection;
+                }
+                if (((this._tblUnavailableSlotTableAdapter != null) 
+                            && (this._tblUnavailableSlotTableAdapter.Connection != null))) {
+                    return this._tblUnavailableSlotTableAdapter.Connection;
                 }
                 return null;
             }
@@ -12073,10 +13286,10 @@ WHERE  (tblBooking.LearnerID = @LearnerID)";
                 if ((this._tblLessonCodeTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._tblUnavailableSlotTableAdapter != null)) {
+                if ((this._tblVehicleTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._tblVehicleTableAdapter != null)) {
+                if ((this._tblUnavailableSlotTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -12319,13 +13532,13 @@ WHERE  (tblBooking.LearnerID = @LearnerID)";
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
-            if (((this._tblUnavailableSlotTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._tblUnavailableSlotTableAdapter.Connection) == false))) {
+            if (((this._tblVehicleTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._tblVehicleTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
-            if (((this._tblVehicleTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._tblVehicleTableAdapter.Connection) == false))) {
+            if (((this._tblUnavailableSlotTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._tblUnavailableSlotTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -12397,15 +13610,6 @@ WHERE  (tblBooking.LearnerID = @LearnerID)";
                         adaptersWithAcceptChangesDuringUpdate.Add(this._tblLessonCodeTableAdapter.Adapter);
                     }
                 }
-                if ((this._tblUnavailableSlotTableAdapter != null)) {
-                    revertConnections.Add(this._tblUnavailableSlotTableAdapter, this._tblUnavailableSlotTableAdapter.Connection);
-                    this._tblUnavailableSlotTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._tblUnavailableSlotTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._tblUnavailableSlotTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._tblUnavailableSlotTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._tblUnavailableSlotTableAdapter.Adapter);
-                    }
-                }
                 if ((this._tblVehicleTableAdapter != null)) {
                     revertConnections.Add(this._tblVehicleTableAdapter, this._tblVehicleTableAdapter.Connection);
                     this._tblVehicleTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
@@ -12413,6 +13617,15 @@ WHERE  (tblBooking.LearnerID = @LearnerID)";
                     if (this._tblVehicleTableAdapter.Adapter.AcceptChangesDuringUpdate) {
                         this._tblVehicleTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
                         adaptersWithAcceptChangesDuringUpdate.Add(this._tblVehicleTableAdapter.Adapter);
+                    }
+                }
+                if ((this._tblUnavailableSlotTableAdapter != null)) {
+                    revertConnections.Add(this._tblUnavailableSlotTableAdapter, this._tblUnavailableSlotTableAdapter.Connection);
+                    this._tblUnavailableSlotTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._tblUnavailableSlotTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._tblUnavailableSlotTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._tblUnavailableSlotTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._tblUnavailableSlotTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -12489,13 +13702,13 @@ WHERE  (tblBooking.LearnerID = @LearnerID)";
                     this._tblLessonCodeTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._tblLessonCodeTableAdapter]));
                     this._tblLessonCodeTableAdapter.Transaction = null;
                 }
-                if ((this._tblUnavailableSlotTableAdapter != null)) {
-                    this._tblUnavailableSlotTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._tblUnavailableSlotTableAdapter]));
-                    this._tblUnavailableSlotTableAdapter.Transaction = null;
-                }
                 if ((this._tblVehicleTableAdapter != null)) {
                     this._tblVehicleTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._tblVehicleTableAdapter]));
                     this._tblVehicleTableAdapter.Transaction = null;
+                }
+                if ((this._tblUnavailableSlotTableAdapter != null)) {
+                    this._tblUnavailableSlotTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._tblUnavailableSlotTableAdapter]));
+                    this._tblUnavailableSlotTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

@@ -56,12 +56,15 @@ namespace DrivingSchoolBookingSystem
         {
             this.Hide();
             InstructorSchedule instructorschedule = new InstructorSchedule(loginForm);
+            instructorschedule.name = Employee_Name;
+            instructorschedule.surname = Employee_Surname;
+            instructorschedule.Employee_Type = Employee_Type;
             instructorschedule.ShowDialog();
         }
 
         private void pictureBox16_Click(object sender, EventArgs e)
         {
-           ;
+           
         }
 
         private void pictureBox8_Click(object sender, EventArgs e)
