@@ -233,6 +233,26 @@ namespace DrivingSchoolBookingSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap image_removebg_preview__14_ {
+            get {
+                object obj = ResourceManager.GetObject("image-removebg-preview (14)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap image_removebg_preview__14_1 {
+            get {
+                object obj = ResourceManager.GetObject("image-removebg-preview (14)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap image_removebg_preview__2_ {
             get {
                 object obj = ResourceManager.GetObject("image-removebg-preview (2)", resourceCulture);
@@ -616,6 +636,16 @@ namespace DrivingSchoolBookingSystem.Properties {
         internal static System.Drawing.Bitmap Screenshot_2025_06_16_204837_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("Screenshot_2025-06-16_204837-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Screenshot_2025_06_16_204837_removebg_preview1 {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot_2025-06-16_204837-removebg-preview1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
