@@ -23,14 +23,15 @@ namespace DrivingSchoolBookingSystem
         public ManageVehiclesForm()
         {
             InitializeComponent();
+
+            cmbSize.Items.AddRange(new string[] { "Small", "Medium", "Large" });
+            cmbVehicleStatus.Items.AddRange(new string[] { "Available", "Unavailable" });
         }
 
         private void Form5_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'wstGrp2DataSet.tblVehicle' table. You can move, or remove it, as needed.
             this.taVehicle.Fill(this.wstGrp2DataSet.tblVehicle);
-
-
         }
         public Boolean AllDataEntered()
         {
@@ -54,7 +55,7 @@ namespace DrivingSchoolBookingSystem
 
         private void btnAdd_Click_1(object sender, EventArgs e)
         {
-            string message = null;
+            string message = "";
             if (!AllDataEntered())
             {
                 MessageBox.Show("Please enter data in all fields!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -66,8 +67,8 @@ namespace DrivingSchoolBookingSystem
                 string make = txtMake.Text;
                 string model = txtModel.Text;
                 string engineNum = txtEngineNum.Text;
-                string vehicleSize = cmbSize.SelectedItem.ToString();
-                string vehicleStatus = cmbVehicleStatus.SelectedItem.ToString();
+                string vehicleSize = cmbSize.SelectedItem?.ToString() ?? "";
+                string vehicleStatus = cmbVehicleStatus.SelectedItem?.ToString() ?? "";
                 if (errorControl.ValidateNumberPlate(numPlate) != null)
                     message += errorControl.ValidateNumberPlate(numPlate) + "\n";
                 if (errorControl.ValidateRegNum(regNum) != null)
@@ -80,7 +81,7 @@ namespace DrivingSchoolBookingSystem
                     message += errorControl.ValidateModel(model) + "\n";
                 if (RegNumberExists(regNum))
                     message += "Invalid! Cannot have two vehicles with the same registration number";
-                if (message != null)
+                if (!string.IsNullOrEmpty(message))
                 {
                     MessageBox.Show(message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -89,12 +90,17 @@ namespace DrivingSchoolBookingSystem
                     DialogResult result = MessageBox.Show("Are you sure you would like to add this Vehicle?", "Confirmation", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
                     if (result == DialogResult.Yes)
                     {
-
-
-                        taVehicle.Insert(numPlate, regNum, engineNum, make, model, vehicleSize, vehicleStatus);
-                        taVehicle.Fill(this.wstGrp2DataSet.tblVehicle);
-                        btnClear.PerformClick();
-                        MessageBox.Show("Vehicle successfully added!", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        try
+                        {
+                            taVehicle.Insert(numPlate, regNum, engineNum, make, model, vehicleSize, vehicleStatus);
+                            taVehicle.Fill(this.wstGrp2DataSet.tblVehicle);
+                            btnClear.PerformClick();
+                            MessageBox.Show("Vehicle successfully added!", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error adding vehicle: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                     else
                     {
@@ -171,19 +177,6 @@ namespace DrivingSchoolBookingSystem
             {
                 MessageBox.Show("Please select a Vehicle from the vehicle list!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private void cmbSize_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            cmbSize.Items.Add("Small");
-            cmbSize.Items.Add("Medium");
-            cmbSize.Items.Add("Large");
-        }
-
-        private void cmbVehicleStatus_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            cmbVehicleStatus.Items.Add("Available");
-            cmbVehicleStatus.Items.Add("Not Available");
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -263,7 +256,7 @@ namespace DrivingSchoolBookingSystem
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
             string make = txtSearch.Text;
-            taVehicle.SearchByMake(this.wstGrp2DataSet.tblVehicle, make);
+            taVehicle.FillByMake(this.wstGrp2DataSet.tblVehicle, make);
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
@@ -278,6 +271,16 @@ namespace DrivingSchoolBookingSystem
             this.Hide();
             LoginForm login = new LoginForm();
             login.Show();
+        }
+
+        private void txtSearch_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

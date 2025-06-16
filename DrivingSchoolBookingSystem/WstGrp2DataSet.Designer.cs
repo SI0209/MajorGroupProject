@@ -10710,7 +10710,7 @@ VALUES (@Learner_Name,@Learner_Surname,@Learner_IDNumber,@Learner_Age,@Learner_G
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[9];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[10];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT VehicleID, Vehicle_NumberPlate, Vehicle_RegNum, Vehicle_EngineNum, Vehicle" +
@@ -10742,36 +10742,41 @@ VALUES (@Learner_Name,@Learner_Surname,@Learner_IDNumber,@Learner_Age,@Learner_G
             this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[5] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[5].Connection = this.Connection;
-            this._commandCollection[5].CommandText = "SELECT VehicleID, Vehicle_EngineNum, Vehicle_Make, Vehicle_Model, Vehicle_NumberP" +
-                "late, Vehicle_RegNum, Vehicle_Size, Vehicle_Status FROM tblVehicle WHERE (Vehicl" +
-                "e_Make LIKE @make + \'%\')";
+            this._commandCollection[5].CommandText = "SELECT * FROM tblVehicle WHERE Vehicle_Make LIKE @make + \'%\'\r\n";
             this._commandCollection[5].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@make", global::System.Data.SqlDbType.VarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, "Vehicle_Make", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[6] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[6].Connection = this.Connection;
-            this._commandCollection[6].CommandText = "SELECT COUNT(*) AS cars FROM tblVehicle";
+            this._commandCollection[6].CommandText = "SELECT VehicleID, Vehicle_EngineNum, Vehicle_Make, Vehicle_Model, Vehicle_NumberP" +
+                "late, Vehicle_RegNum, Vehicle_Size, Vehicle_Status FROM tblVehicle WHERE (Vehicl" +
+                "e_Make LIKE @make + \'%\')";
             this._commandCollection[6].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[6].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@make", global::System.Data.SqlDbType.VarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, "Vehicle_Make", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[7] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[7].Connection = this.Connection;
-            this._commandCollection[7].CommandText = "\r\n\t\t\t\t\t\t\t\t\t\t\tSELECT        COUNT(*) AS Expr1\r\n\t\t\t\t\t\t\t\t\t\t\tFROM            tblVehic" +
-                "le\r\n\t\t\t\t\t\t\t\t\t\t";
+            this._commandCollection[7].CommandText = "SELECT COUNT(*) AS cars FROM tblVehicle";
             this._commandCollection[7].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[8] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[8].Connection = this.Connection;
-            this._commandCollection[8].CommandText = @"
+            this._commandCollection[8].CommandText = "\r\n\t\t\t\t\t\t\t\t\t\t\tSELECT        COUNT(*) AS Expr1\r\n\t\t\t\t\t\t\t\t\t\t\tFROM            tblVehic" +
+                "le\r\n\t\t\t\t\t\t\t\t\t\t";
+            this._commandCollection[8].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[9] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[9].Connection = this.Connection;
+            this._commandCollection[9].CommandText = @"
 											UPDATE tblVehicle
 											SET          Vehicle_NumberPlate = @NumPlate, Vehicle_RegNum = @RegNum, Vehicle_EngineNum = @EngineNum, Vehicle_Make = @Make, Vehicle_Model = @Model, Vehicle_Size = @Size, Vehicle_Status = @status
 											WHERE  (VehicleID = @ID)
 										";
-            this._commandCollection[8].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[8].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NumPlate", global::System.Data.SqlDbType.VarChar, 8, global::System.Data.ParameterDirection.Input, 0, 0, "Vehicle_NumberPlate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[8].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RegNum", global::System.Data.SqlDbType.NChar, 7, global::System.Data.ParameterDirection.Input, 0, 0, "Vehicle_RegNum", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[8].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EngineNum", global::System.Data.SqlDbType.VarChar, 9, global::System.Data.ParameterDirection.Input, 0, 0, "Vehicle_EngineNum", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[8].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Make", global::System.Data.SqlDbType.VarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, "Vehicle_Make", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[8].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Model", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "Vehicle_Model", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[8].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Size", global::System.Data.SqlDbType.VarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "Vehicle_Size", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[8].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@status", global::System.Data.SqlDbType.VarChar, 15, global::System.Data.ParameterDirection.Input, 0, 0, "Vehicle_Status", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[8].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "VehicleID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[9].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[9].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NumPlate", global::System.Data.SqlDbType.VarChar, 8, global::System.Data.ParameterDirection.Input, 0, 0, "Vehicle_NumberPlate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[9].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RegNum", global::System.Data.SqlDbType.NChar, 7, global::System.Data.ParameterDirection.Input, 0, 0, "Vehicle_RegNum", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[9].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EngineNum", global::System.Data.SqlDbType.VarChar, 9, global::System.Data.ParameterDirection.Input, 0, 0, "Vehicle_EngineNum", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[9].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Make", global::System.Data.SqlDbType.VarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, "Vehicle_Make", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[9].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Model", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "Vehicle_Model", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[9].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Size", global::System.Data.SqlDbType.VarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "Vehicle_Size", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[9].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@status", global::System.Data.SqlDbType.VarChar, 15, global::System.Data.ParameterDirection.Input, 0, 0, "Vehicle_Status", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[9].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "VehicleID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10874,7 +10879,7 @@ VALUES (@Learner_Name,@Learner_Surname,@Learner_IDNumber,@Learner_Age,@Learner_G
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int SearchByMake(WstGrp2DataSet.tblVehicleDataTable dataTable, string make) {
+        public virtual int FillByMake(WstGrp2DataSet.tblVehicleDataTable dataTable, string make) {
             this.Adapter.SelectCommand = this.CommandCollection[5];
             if ((make == null)) {
                 throw new global::System.ArgumentNullException("make");
@@ -10893,8 +10898,44 @@ VALUES (@Learner_Name,@Learner_Surname,@Learner_IDNumber,@Learner_Age,@Learner_G
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual WstGrp2DataSet.tblVehicleDataTable GetDataBy4(string make) {
+        public virtual WstGrp2DataSet.tblVehicleDataTable GetDataBy8(string make) {
             this.Adapter.SelectCommand = this.CommandCollection[5];
+            if ((make == null)) {
+                throw new global::System.ArgumentNullException("make");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(make));
+            }
+            WstGrp2DataSet.tblVehicleDataTable dataTable = new WstGrp2DataSet.tblVehicleDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int SearchByMake(WstGrp2DataSet.tblVehicleDataTable dataTable, string make) {
+            this.Adapter.SelectCommand = this.CommandCollection[6];
+            if ((make == null)) {
+                throw new global::System.ArgumentNullException("make");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(make));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual WstGrp2DataSet.tblVehicleDataTable GetDataBy4(string make) {
+            this.Adapter.SelectCommand = this.CommandCollection[6];
             if ((make == null)) {
                 throw new global::System.ArgumentNullException("make");
             }
@@ -11221,7 +11262,7 @@ VALUES (@Learner_Name,@Learner_Surname,@Learner_IDNumber,@Learner_Age,@Learner_G
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual global::System.Nullable<int> TotalCars() {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[6];
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[7];
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -11249,7 +11290,7 @@ VALUES (@Learner_Name,@Learner_Surname,@Learner_IDNumber,@Learner_Age,@Learner_G
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual global::System.Nullable<int> TotalVehicles() {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[7];
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[8];
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -11278,7 +11319,7 @@ VALUES (@Learner_Name,@Learner_Surname,@Learner_IDNumber,@Learner_Age,@Learner_G
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
         public virtual int UpdateVehicle(string NumPlate, string RegNum, string EngineNum, string Make, string Model, string Size, string status, int ID) {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[8];
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[9];
             if ((NumPlate == null)) {
                 throw new global::System.ArgumentNullException("NumPlate");
             }

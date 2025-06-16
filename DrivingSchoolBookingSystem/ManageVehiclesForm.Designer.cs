@@ -30,6 +30,7 @@ namespace DrivingSchoolBookingSystem
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
             this.btnClear = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.txtEngineNum = new System.Windows.Forms.TextBox();
@@ -37,16 +38,6 @@ namespace DrivingSchoolBookingSystem
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dgvVehicles = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vehicleRegNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vehicleEngineNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vehicleSizeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vehicleStatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tblVehicleBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.wstGrp2DataSet = new DrivingSchoolBookingSystem.WstGrp2DataSet();
             this.label9 = new System.Windows.Forms.Label();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
@@ -69,18 +60,27 @@ namespace DrivingSchoolBookingSystem
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vehicleRegNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vehicleEngineNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vehicleSizeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vehicleStatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tblVehicleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.wstGrp2DataSet = new DrivingSchoolBookingSystem.WstGrp2DataSet();
             this.taVehicle = new DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters.tblVehicleTableAdapter();
-            this.label11 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVehicles)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblVehicleBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wstGrp2DataSet)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblVehicleBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wstGrp2DataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -116,6 +116,19 @@ namespace DrivingSchoolBookingSystem
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1154, 838);
             this.panel1.TabIndex = 0;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Comic Sans MS", 8F, System.Drawing.FontStyle.Bold);
+            this.label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label11.Location = new System.Drawing.Point(453, 183);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(176, 19);
+            this.label11.TabIndex = 44;
+            this.label11.Text = "Search Vehicle By Make";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // btnClear
             // 
@@ -156,6 +169,7 @@ namespace DrivingSchoolBookingSystem
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(174, 26);
             this.txtSearch.TabIndex = 40;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged_1);
             // 
             // label1
             // 
@@ -201,81 +215,6 @@ namespace DrivingSchoolBookingSystem
             this.dgvVehicles.RowHeadersWidth = 51;
             this.dgvVehicles.Size = new System.Drawing.Size(832, 554);
             this.dgvVehicles.TabIndex = 37;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "VehicleID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "VehicleID";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Vehicle_NumberPlate";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Vehicle_NumberPlate";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 125;
-            // 
-            // vehicleRegNumDataGridViewTextBoxColumn
-            // 
-            this.vehicleRegNumDataGridViewTextBoxColumn.DataPropertyName = "Vehicle_RegNum";
-            this.vehicleRegNumDataGridViewTextBoxColumn.HeaderText = "Vehicle_RegNum";
-            this.vehicleRegNumDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.vehicleRegNumDataGridViewTextBoxColumn.Name = "vehicleRegNumDataGridViewTextBoxColumn";
-            this.vehicleRegNumDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // vehicleEngineNumDataGridViewTextBoxColumn
-            // 
-            this.vehicleEngineNumDataGridViewTextBoxColumn.DataPropertyName = "Vehicle_EngineNum";
-            this.vehicleEngineNumDataGridViewTextBoxColumn.HeaderText = "Vehicle_EngineNum";
-            this.vehicleEngineNumDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.vehicleEngineNumDataGridViewTextBoxColumn.Name = "vehicleEngineNumDataGridViewTextBoxColumn";
-            this.vehicleEngineNumDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Vehicle_Make";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Vehicle_Make";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Vehicle_Model";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Vehicle_Model";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Width = 125;
-            // 
-            // vehicleSizeDataGridViewTextBoxColumn
-            // 
-            this.vehicleSizeDataGridViewTextBoxColumn.DataPropertyName = "Vehicle_Size";
-            this.vehicleSizeDataGridViewTextBoxColumn.HeaderText = "Vehicle_Size";
-            this.vehicleSizeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.vehicleSizeDataGridViewTextBoxColumn.Name = "vehicleSizeDataGridViewTextBoxColumn";
-            this.vehicleSizeDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // vehicleStatusDataGridViewTextBoxColumn
-            // 
-            this.vehicleStatusDataGridViewTextBoxColumn.DataPropertyName = "Vehicle_Status";
-            this.vehicleStatusDataGridViewTextBoxColumn.HeaderText = "Vehicle_Status";
-            this.vehicleStatusDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.vehicleStatusDataGridViewTextBoxColumn.Name = "vehicleStatusDataGridViewTextBoxColumn";
-            this.vehicleStatusDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // tblVehicleBindingSource
-            // 
-            this.tblVehicleBindingSource.DataMember = "tblVehicle";
-            this.tblVehicleBindingSource.DataSource = this.wstGrp2DataSet;
-            // 
-            // wstGrp2DataSet
-            // 
-            this.wstGrp2DataSet.DataSetName = "WstGrp2DataSet";
-            this.wstGrp2DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label9
             // 
@@ -342,11 +281,13 @@ namespace DrivingSchoolBookingSystem
             // 
             this.cmbVehicleStatus.Font = new System.Drawing.Font("Comic Sans MS", 8F, System.Drawing.FontStyle.Bold);
             this.cmbVehicleStatus.FormattingEnabled = true;
+            this.cmbVehicleStatus.Items.AddRange(new object[] {
+            "Available",
+            "Unavailable"});
             this.cmbVehicleStatus.Location = new System.Drawing.Point(23, 577);
             this.cmbVehicleStatus.Name = "cmbVehicleStatus";
             this.cmbVehicleStatus.Size = new System.Drawing.Size(121, 27);
             this.cmbVehicleStatus.TabIndex = 13;
-            this.cmbVehicleStatus.SelectedIndexChanged += new System.EventHandler(this.cmbVehicleStatus_SelectedIndexChanged);
             // 
             // label7
             // 
@@ -363,11 +304,14 @@ namespace DrivingSchoolBookingSystem
             // 
             this.cmbSize.Font = new System.Drawing.Font("Comic Sans MS", 8F, System.Drawing.FontStyle.Bold);
             this.cmbSize.FormattingEnabled = true;
+            this.cmbSize.Items.AddRange(new object[] {
+            "Small",
+            "Medium",
+            "Large"});
             this.cmbSize.Location = new System.Drawing.Point(25, 500);
             this.cmbSize.Name = "cmbSize";
             this.cmbSize.Size = new System.Drawing.Size(121, 27);
             this.cmbSize.TabIndex = 11;
-            this.cmbSize.SelectedIndexChanged += new System.EventHandler(this.cmbSize_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -524,21 +468,84 @@ namespace DrivingSchoolBookingSystem
             this.pictureBox5.TabStop = false;
             this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "VehicleID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "VehicleID";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Vehicle_NumberPlate";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Vehicle_NumberPlate";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 125;
+            // 
+            // vehicleRegNumDataGridViewTextBoxColumn
+            // 
+            this.vehicleRegNumDataGridViewTextBoxColumn.DataPropertyName = "Vehicle_RegNum";
+            this.vehicleRegNumDataGridViewTextBoxColumn.HeaderText = "Vehicle_RegNum";
+            this.vehicleRegNumDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.vehicleRegNumDataGridViewTextBoxColumn.Name = "vehicleRegNumDataGridViewTextBoxColumn";
+            this.vehicleRegNumDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // vehicleEngineNumDataGridViewTextBoxColumn
+            // 
+            this.vehicleEngineNumDataGridViewTextBoxColumn.DataPropertyName = "Vehicle_EngineNum";
+            this.vehicleEngineNumDataGridViewTextBoxColumn.HeaderText = "Vehicle_EngineNum";
+            this.vehicleEngineNumDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.vehicleEngineNumDataGridViewTextBoxColumn.Name = "vehicleEngineNumDataGridViewTextBoxColumn";
+            this.vehicleEngineNumDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Vehicle_Make";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Vehicle_Make";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Vehicle_Model";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Vehicle_Model";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 125;
+            // 
+            // vehicleSizeDataGridViewTextBoxColumn
+            // 
+            this.vehicleSizeDataGridViewTextBoxColumn.DataPropertyName = "Vehicle_Size";
+            this.vehicleSizeDataGridViewTextBoxColumn.HeaderText = "Vehicle_Size";
+            this.vehicleSizeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.vehicleSizeDataGridViewTextBoxColumn.Name = "vehicleSizeDataGridViewTextBoxColumn";
+            this.vehicleSizeDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // vehicleStatusDataGridViewTextBoxColumn
+            // 
+            this.vehicleStatusDataGridViewTextBoxColumn.DataPropertyName = "Vehicle_Status";
+            this.vehicleStatusDataGridViewTextBoxColumn.HeaderText = "Vehicle_Status";
+            this.vehicleStatusDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.vehicleStatusDataGridViewTextBoxColumn.Name = "vehicleStatusDataGridViewTextBoxColumn";
+            this.vehicleStatusDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // tblVehicleBindingSource
+            // 
+            this.tblVehicleBindingSource.DataMember = "tblVehicle";
+            this.tblVehicleBindingSource.DataSource = this.wstGrp2DataSet;
+            // 
+            // wstGrp2DataSet
+            // 
+            this.wstGrp2DataSet.DataSetName = "WstGrp2DataSet";
+            this.wstGrp2DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // taVehicle
             // 
             this.taVehicle.ClearBeforeFill = true;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Comic Sans MS", 8F, System.Drawing.FontStyle.Bold);
-            this.label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label11.Location = new System.Drawing.Point(453, 183);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(176, 19);
-            this.label11.TabIndex = 44;
-            this.label11.Text = "Search Vehicle By Make";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // ManageVehiclesForm
             // 
@@ -559,14 +566,14 @@ namespace DrivingSchoolBookingSystem
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVehicles)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblVehicleBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wstGrp2DataSet)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblVehicleBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wstGrp2DataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
