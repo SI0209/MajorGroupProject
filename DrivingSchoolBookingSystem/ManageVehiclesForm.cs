@@ -261,9 +261,12 @@ namespace DrivingSchoolBookingSystem
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            HomeForm home = new HomeForm(loginform);
-            home.Show();
             this.Hide();
+            HomeForm home = new HomeForm(loginform);
+            home.Employee_Name = loginform.Employee_Name;
+            home.Employee_Surname = loginform.Employee_Surname;
+            home.Employee_Type = loginform.Employee_Type;
+            home.ShowDialog();
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
@@ -273,14 +276,50 @@ namespace DrivingSchoolBookingSystem
             login.Show();
         }
 
-        private void txtSearch_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void label11_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton2.Checked)
+            {
+                txtNumberPlate.Enabled = false;
+                txtRegNum.Enabled = false;
+                txtEngineNum.Enabled = false;
+                txtMake.Enabled = false;
+                txtModel.Enabled = false;
+                cmbSize.Enabled = false;
+                cmbVehicleStatus.Enabled = false;
+                btnAdd.Visible = false;
+                btnUpdate.Visible = false;
+                btnDelete.Visible = false;
+                btnClear.Visible = false;
+            }
+            else
+            {
+                txtNumberPlate.Enabled = true;
+                txtRegNum.Enabled = true;
+                txtEngineNum.Enabled = true;
+                txtMake.Enabled = true;
+                txtModel.Enabled = true;
+                cmbSize.Enabled = true;
+                cmbVehicleStatus.Enabled = true;
+                btnAdd.Visible = true;
+                btnUpdate.Visible = true;
+                btnDelete.Visible = true;
+                btnClear.Visible = true;
+            }
         }
     }
 }

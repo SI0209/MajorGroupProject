@@ -22,7 +22,8 @@ namespace DrivingSchoolBookingSystem
         public int dashIndex;
         ErrorControl errorControl = new ErrorControl();
         private decimal originalTotalCost;
-        public ManageBooking()
+        public string employeeName, employeeSurname, employeeType;
+        public ManageBooking(LoginForm loginForm)
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
@@ -32,7 +33,7 @@ namespace DrivingSchoolBookingSystem
             taVehicle.Fill(dsBookingSystem.tblVehicle);
             taLearner.Fill(dsBookingSystem.tblLearner);
             taBookingInnerJoin.Fill(dsBookingSystem.tblBookingInnerJoin);
-
+            loginForm = loginform;
             foreach (DataRow row in dsBookingSystem.tblLessonCode.Rows)
             {
                 LessonCodeID = Convert.ToInt16(row["Code_Type"]);

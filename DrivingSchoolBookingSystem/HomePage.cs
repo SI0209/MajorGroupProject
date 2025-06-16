@@ -101,7 +101,10 @@ namespace DrivingSchoolBookingSystem
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ManageBooking lesson = new ManageBooking();
+            ManageBooking lesson = new ManageBooking(loginForm);
+            lesson.employeeName = Employee_Name;
+            lesson.employeeSurname = Employee_Surname;
+            lesson.employeeType = Employee_Type;
             lesson.ShowDialog();
         }
 
@@ -115,7 +118,10 @@ namespace DrivingSchoolBookingSystem
         private void pictureBox14_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ManageInstruc instructor = new ManageInstruc();
+            ManageInstruc instructor = new ManageInstruc(loginForm);
+            instructor.employeename = Employee_Name;
+            instructor.employeesurname = Employee_Surname;
+            instructor.employeetype = Employee_Type;
             instructor.ShowDialog();
         }
 

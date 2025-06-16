@@ -29,15 +29,20 @@ namespace DrivingSchoolBookingSystem
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tblVehicleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.wstGrp2DataSet = new DrivingSchoolBookingSystem.WstGrp2DataSet();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.taVehicle = new DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters.tblVehicleTableAdapter();
             this.txtNumberPlate = new System.Windows.Forms.TextBox();
             this.txtRegNum = new System.Windows.Forms.TextBox();
@@ -55,14 +60,6 @@ namespace DrivingSchoolBookingSystem
             this.btnDelete = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.dgvVehicles = new System.Windows.Forms.DataGridView();
-            this.vehicleStatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vehicleSizeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vehicleEngineNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vehicleRegNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
@@ -71,13 +68,21 @@ namespace DrivingSchoolBookingSystem
             this.btnClear = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vehicleRegNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vehicleSizeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vehicleStatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.tblVehicleBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wstGrp2DataSet)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVehicles)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -95,19 +100,94 @@ namespace DrivingSchoolBookingSystem
             // 
             // panel2
             // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Controls.Add(this.pictureBox5);
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.pictureBox4);
-            this.panel2.Controls.Add(this.pictureBox3);
-            this.panel2.Controls.Add(this.pictureBox5);
             this.panel2.Location = new System.Drawing.Point(0, 2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(186, 1058);
             this.panel2.TabIndex = 17;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Transparent;
+            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel3.Controls.Add(this.pictureBox3);
+            this.panel3.Controls.Add(this.label19);
+            this.panel3.Controls.Add(this.radioButton1);
+            this.panel3.Controls.Add(this.radioButton2);
+            this.panel3.Font = new System.Drawing.Font("Comic Sans MS", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel3.Location = new System.Drawing.Point(10, 263);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(157, 121);
+            this.panel3.TabIndex = 73;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::DrivingSchoolBookingSystem.Properties.Resources.d96d3352_b857_4aa9_ab18_05236196ade2_removebg_preview;
+            this.pictureBox3.Location = new System.Drawing.Point(4, 6);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(32, 35);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 72;
+            this.pictureBox3.TabStop = false;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(37, 16);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(97, 25);
+            this.label19.TabIndex = 71;
+            this.label19.Text = "Edit Mode";
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.radioButton1.Location = new System.Drawing.Point(42, 44);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(55, 25);
+            this.radioButton1.TabIndex = 67;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "ON";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.radioButton2.Location = new System.Drawing.Point(42, 75);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(61, 25);
+            this.radioButton2.TabIndex = 68;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "OFF";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox5.BackgroundImage = global::DrivingSchoolBookingSystem.Properties.Resources.image_removebg_preview__13_;
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox5.Location = new System.Drawing.Point(19, 170);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(145, 76);
+            this.pictureBox5.TabIndex = 16;
+            this.pictureBox5.TabStop = false;
             // 
             // pictureBox2
             // 
@@ -115,9 +195,9 @@ namespace DrivingSchoolBookingSystem
             this.pictureBox2.BackgroundImage = global::DrivingSchoolBookingSystem.Properties.Resources.logo_transparent;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox2.Location = new System.Drawing.Point(30, 24);
+            this.pictureBox2.Location = new System.Drawing.Point(16, 17);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(116, 105);
+            this.pictureBox2.Size = new System.Drawing.Size(148, 133);
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
@@ -133,18 +213,6 @@ namespace DrivingSchoolBookingSystem
             this.label5.TabIndex = 15;
             this.label5.Text = "Log out";
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(72, 163);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(57, 25);
-            this.label10.TabIndex = 12;
-            this.label10.Text = "Home";
-            // 
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
@@ -157,74 +225,54 @@ namespace DrivingSchoolBookingSystem
             this.pictureBox4.TabStop = false;
             this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.BackgroundImage = global::DrivingSchoolBookingSystem.Properties.Resources.home_icon;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(42, 163);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(24, 25);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox3.TabIndex = 13;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.BackgroundImage = global::DrivingSchoolBookingSystem.Properties.Resources.button;
-            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox5.Location = new System.Drawing.Point(30, 135);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(116, 85);
-            this.pictureBox5.TabIndex = 11;
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
-            // 
             // taVehicle
             // 
             this.taVehicle.ClearBeforeFill = true;
             // 
             // txtNumberPlate
             // 
-            this.txtNumberPlate.Font = new System.Drawing.Font("Comic Sans MS", 8F, System.Drawing.FontStyle.Bold);
-            this.txtNumberPlate.Location = new System.Drawing.Point(29, 171);
+            this.txtNumberPlate.Enabled = false;
+            this.txtNumberPlate.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
+            this.txtNumberPlate.Location = new System.Drawing.Point(356, 237);
             this.txtNumberPlate.Name = "txtNumberPlate";
-            this.txtNumberPlate.Size = new System.Drawing.Size(130, 26);
+            this.txtNumberPlate.Size = new System.Drawing.Size(220, 31);
             this.txtNumberPlate.TabIndex = 0;
             // 
             // txtRegNum
             // 
-            this.txtRegNum.Font = new System.Drawing.Font("Comic Sans MS", 8F, System.Drawing.FontStyle.Bold);
-            this.txtRegNum.Location = new System.Drawing.Point(27, 238);
+            this.txtRegNum.Enabled = false;
+            this.txtRegNum.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
+            this.txtRegNum.Location = new System.Drawing.Point(356, 276);
             this.txtRegNum.Name = "txtRegNum";
-            this.txtRegNum.Size = new System.Drawing.Size(130, 26);
+            this.txtRegNum.Size = new System.Drawing.Size(220, 31);
             this.txtRegNum.TabIndex = 1;
             // 
             // txtMake
             // 
-            this.txtMake.Font = new System.Drawing.Font("Comic Sans MS", 8F, System.Drawing.FontStyle.Bold);
-            this.txtMake.Location = new System.Drawing.Point(22, 379);
+            this.txtMake.Enabled = false;
+            this.txtMake.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
+            this.txtMake.Location = new System.Drawing.Point(356, 355);
             this.txtMake.Name = "txtMake";
-            this.txtMake.Size = new System.Drawing.Size(130, 26);
+            this.txtMake.Size = new System.Drawing.Size(220, 31);
             this.txtMake.TabIndex = 2;
             // 
             // txtModel
             // 
-            this.txtModel.Font = new System.Drawing.Font("Comic Sans MS", 8F, System.Drawing.FontStyle.Bold);
-            this.txtModel.Location = new System.Drawing.Point(23, 440);
+            this.txtModel.Enabled = false;
+            this.txtModel.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
+            this.txtModel.Location = new System.Drawing.Point(356, 396);
             this.txtModel.Name = "txtModel";
-            this.txtModel.Size = new System.Drawing.Size(129, 26);
+            this.txtModel.Size = new System.Drawing.Size(220, 31);
             this.txtModel.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 8F, System.Drawing.FontStyle.Bold);
+            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(23, 137);
+            this.label2.Location = new System.Drawing.Point(22, 240);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(155, 19);
+            this.label2.Size = new System.Drawing.Size(191, 25);
             this.label2.TabIndex = 6;
             this.label2.Text = "Vehicle Number Plate";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -232,216 +280,175 @@ namespace DrivingSchoolBookingSystem
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Comic Sans MS", 8F, System.Drawing.FontStyle.Bold);
+            this.label3.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(23, 216);
+            this.label3.Location = new System.Drawing.Point(22, 279);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(203, 19);
+            this.label3.Size = new System.Drawing.Size(317, 25);
             this.label3.TabIndex = 7;
-            this.label3.Text = "Vehicle Registration Number";
+            this.label3.Text = "Vehicle Identification Number (VIN)";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Comic Sans MS", 8F, System.Drawing.FontStyle.Bold);
+            this.label4.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(19, 408);
+            this.label4.Location = new System.Drawing.Point(22, 399);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(102, 19);
+            this.label4.Size = new System.Drawing.Size(128, 25);
             this.label4.TabIndex = 8;
             this.label4.Text = "Vehicle Model";
             // 
             // cmbSize
             // 
-            this.cmbSize.Font = new System.Drawing.Font("Comic Sans MS", 8F, System.Drawing.FontStyle.Bold);
+            this.cmbSize.Enabled = false;
+            this.cmbSize.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
             this.cmbSize.FormattingEnabled = true;
             this.cmbSize.Items.AddRange(new object[] {
             "Small",
             "Medium",
             "Large"});
-            this.cmbSize.Location = new System.Drawing.Point(25, 500);
+            this.cmbSize.Location = new System.Drawing.Point(356, 438);
             this.cmbSize.Name = "cmbSize";
-            this.cmbSize.Size = new System.Drawing.Size(121, 27);
+            this.cmbSize.Size = new System.Drawing.Size(220, 33);
             this.cmbSize.TabIndex = 11;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Comic Sans MS", 8F, System.Drawing.FontStyle.Bold);
+            this.label7.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(23, 469);
+            this.label7.Location = new System.Drawing.Point(22, 441);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(93, 19);
+            this.label7.Size = new System.Drawing.Size(115, 25);
             this.label7.TabIndex = 12;
             this.label7.Text = "Vehicle Size";
             // 
             // cmbVehicleStatus
             // 
-            this.cmbVehicleStatus.Font = new System.Drawing.Font("Comic Sans MS", 8F, System.Drawing.FontStyle.Bold);
+            this.cmbVehicleStatus.Enabled = false;
+            this.cmbVehicleStatus.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
             this.cmbVehicleStatus.FormattingEnabled = true;
             this.cmbVehicleStatus.Items.AddRange(new object[] {
             "Available",
             "Unavailable"});
-            this.cmbVehicleStatus.Location = new System.Drawing.Point(23, 577);
+            this.cmbVehicleStatus.Location = new System.Drawing.Point(356, 480);
             this.cmbVehicleStatus.Name = "cmbVehicleStatus";
-            this.cmbVehicleStatus.Size = new System.Drawing.Size(121, 27);
+            this.cmbVehicleStatus.Size = new System.Drawing.Size(220, 33);
             this.cmbVehicleStatus.TabIndex = 13;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Comic Sans MS", 8F, System.Drawing.FontStyle.Bold);
+            this.label8.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label8.Location = new System.Drawing.Point(19, 546);
+            this.label8.Location = new System.Drawing.Point(22, 483);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(109, 19);
+            this.label8.Size = new System.Drawing.Size(133, 25);
             this.label8.TabIndex = 14;
             this.label8.Text = "Vehicle Status";
             // 
             // btnAdd
             // 
-            this.btnAdd.Font = new System.Drawing.Font("Comic Sans MS", 8F, System.Drawing.FontStyle.Bold);
-            this.btnAdd.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnAdd.Image = global::DrivingSchoolBookingSystem.Properties.Resources.dark_blue;
-            this.btnAdd.Location = new System.Drawing.Point(7, 638);
+            this.btnAdd.BackColor = System.Drawing.Color.Lavender;
+            this.btnAdd.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
+            this.btnAdd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
+            this.btnAdd.Location = new System.Drawing.Point(27, 610);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(191, 43);
+            this.btnAdd.Size = new System.Drawing.Size(116, 57);
             this.btnAdd.TabIndex = 15;
-            this.btnAdd.Text = "ADD NEW VEHICLE";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Text = "ADD";
+            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Visible = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click_1);
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Font = new System.Drawing.Font("Comic Sans MS", 8F, System.Drawing.FontStyle.Bold);
-            this.btnUpdate.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnUpdate.Image = global::DrivingSchoolBookingSystem.Properties.Resources.dark_blue;
-            this.btnUpdate.Location = new System.Drawing.Point(7, 697);
+            this.btnUpdate.BackColor = System.Drawing.Color.Lavender;
+            this.btnUpdate.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
+            this.btnUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
+            this.btnUpdate.Location = new System.Drawing.Point(162, 610);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(191, 43);
+            this.btnUpdate.Size = new System.Drawing.Size(138, 57);
             this.btnUpdate.TabIndex = 16;
-            this.btnUpdate.Text = "UPDATE VEHICLE";
-            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Text = "UPDATE";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Visible = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click_1);
             // 
             // btnDelete
             // 
-            this.btnDelete.Font = new System.Drawing.Font("Comic Sans MS", 8F, System.Drawing.FontStyle.Bold);
-            this.btnDelete.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnDelete.Image = global::DrivingSchoolBookingSystem.Properties.Resources.dark_blue;
-            this.btnDelete.Location = new System.Drawing.Point(7, 746);
+            this.btnDelete.BackColor = System.Drawing.Color.Lavender;
+            this.btnDelete.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
+            this.btnDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
+            this.btnDelete.Location = new System.Drawing.Point(323, 607);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(191, 43);
+            this.btnDelete.Size = new System.Drawing.Size(138, 63);
             this.btnDelete.TabIndex = 17;
-            this.btnDelete.Text = "DELETE VEHICLE";
-            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Text = "DELETE";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Visible = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click_1);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Comic Sans MS", 8F, System.Drawing.FontStyle.Bold);
+            this.label9.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label9.Location = new System.Drawing.Point(19, 347);
+            this.label9.Location = new System.Drawing.Point(22, 358);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(99, 19);
+            this.label9.Size = new System.Drawing.Size(122, 25);
             this.label9.TabIndex = 20;
             this.label9.Text = "Vehicle Make";
             // 
             // dgvVehicles
             // 
+            this.dgvVehicles.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvVehicles.AutoGenerateColumns = false;
             this.dgvVehicles.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvVehicles.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Comic Sans MS", 8F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvVehicles.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvVehicles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVehicles.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.vehicleRegNumDataGridViewTextBoxColumn,
-            this.vehicleEngineNumDataGridViewTextBoxColumn,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
             this.vehicleSizeDataGridViewTextBoxColumn,
             this.vehicleStatusDataGridViewTextBoxColumn});
             this.dgvVehicles.DataSource = this.tblVehicleBindingSource;
-            this.dgvVehicles.Location = new System.Drawing.Point(438, 238);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Comic Sans MS", 8F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvVehicles.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvVehicles.Location = new System.Drawing.Point(646, 237);
             this.dgvVehicles.Margin = new System.Windows.Forms.Padding(4);
             this.dgvVehicles.Name = "dgvVehicles";
             this.dgvVehicles.RowHeadersWidth = 51;
-            this.dgvVehicles.Size = new System.Drawing.Size(1052, 433);
+            this.dgvVehicles.Size = new System.Drawing.Size(951, 433);
             this.dgvVehicles.TabIndex = 37;
-            // 
-            // vehicleStatusDataGridViewTextBoxColumn
-            // 
-            this.vehicleStatusDataGridViewTextBoxColumn.DataPropertyName = "Vehicle_Status";
-            this.vehicleStatusDataGridViewTextBoxColumn.HeaderText = "Vehicle_Status";
-            this.vehicleStatusDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.vehicleStatusDataGridViewTextBoxColumn.Name = "vehicleStatusDataGridViewTextBoxColumn";
-            this.vehicleStatusDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // vehicleSizeDataGridViewTextBoxColumn
-            // 
-            this.vehicleSizeDataGridViewTextBoxColumn.DataPropertyName = "Vehicle_Size";
-            this.vehicleSizeDataGridViewTextBoxColumn.HeaderText = "Vehicle_Size";
-            this.vehicleSizeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.vehicleSizeDataGridViewTextBoxColumn.Name = "vehicleSizeDataGridViewTextBoxColumn";
-            this.vehicleSizeDataGridViewTextBoxColumn.Width = 114;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Vehicle_Model";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Vehicle_Model";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Width = 126;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Vehicle_Make";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Vehicle_Make";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 122;
-            // 
-            // vehicleEngineNumDataGridViewTextBoxColumn
-            // 
-            this.vehicleEngineNumDataGridViewTextBoxColumn.DataPropertyName = "Vehicle_EngineNum";
-            this.vehicleEngineNumDataGridViewTextBoxColumn.HeaderText = "Vehicle_EngineNum";
-            this.vehicleEngineNumDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.vehicleEngineNumDataGridViewTextBoxColumn.Name = "vehicleEngineNumDataGridViewTextBoxColumn";
-            this.vehicleEngineNumDataGridViewTextBoxColumn.Width = 158;
-            // 
-            // vehicleRegNumDataGridViewTextBoxColumn
-            // 
-            this.vehicleRegNumDataGridViewTextBoxColumn.DataPropertyName = "Vehicle_RegNum";
-            this.vehicleRegNumDataGridViewTextBoxColumn.HeaderText = "Vehicle_RegNum";
-            this.vehicleRegNumDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.vehicleRegNumDataGridViewTextBoxColumn.Name = "vehicleRegNumDataGridViewTextBoxColumn";
-            this.vehicleRegNumDataGridViewTextBoxColumn.Width = 142;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Vehicle_NumberPlate";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Vehicle_NumberPlate";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 167;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "VehicleID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "VehicleID";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 94;
+            this.dgvVehicles.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvVehicles_RowHeaderMouseClick);
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::DrivingSchoolBookingSystem.Properties.Resources.vehicle;
-            this.pictureBox1.Location = new System.Drawing.Point(410, 52);
+            this.pictureBox1.Location = new System.Drawing.Point(457, 19);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(133, 96);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -450,65 +457,70 @@ namespace DrivingSchoolBookingSystem
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 10.25F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(549, 85);
+            this.label1.Location = new System.Drawing.Point(596, 52);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(191, 25);
+            this.label1.Size = new System.Drawing.Size(213, 29);
             this.label1.TabIndex = 39;
             this.label1.Text = "MANAGE VEHICLES";
             // 
             // txtSearch
             // 
+            this.txtSearch.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtSearch.Font = new System.Drawing.Font("Comic Sans MS", 8F, System.Drawing.FontStyle.Bold);
-            this.txtSearch.Location = new System.Drawing.Point(936, 196);
+            this.txtSearch.Location = new System.Drawing.Point(1144, 195);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(174, 26);
             this.txtSearch.TabIndex = 40;
-            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged_1);
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // txtEngineNum
             // 
-            this.txtEngineNum.Font = new System.Drawing.Font("Comic Sans MS", 8F, System.Drawing.FontStyle.Bold);
-            this.txtEngineNum.Location = new System.Drawing.Point(22, 318);
+            this.txtEngineNum.Enabled = false;
+            this.txtEngineNum.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
+            this.txtEngineNum.Location = new System.Drawing.Point(356, 314);
             this.txtEngineNum.Name = "txtEngineNum";
-            this.txtEngineNum.Size = new System.Drawing.Size(130, 26);
+            this.txtEngineNum.Size = new System.Drawing.Size(220, 31);
             this.txtEngineNum.TabIndex = 41;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Comic Sans MS", 8F, System.Drawing.FontStyle.Bold);
+            this.label6.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(19, 282);
+            this.label6.Location = new System.Drawing.Point(22, 317);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(163, 19);
+            this.label6.Size = new System.Drawing.Size(203, 25);
             this.label6.TabIndex = 42;
             this.label6.Text = "Vehicle Engine Number";
             // 
             // btnClear
             // 
-            this.btnClear.Font = new System.Drawing.Font("Comic Sans MS", 8F, System.Drawing.FontStyle.Bold);
-            this.btnClear.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnClear.Image = global::DrivingSchoolBookingSystem.Properties.Resources.dark_blue;
-            this.btnClear.Location = new System.Drawing.Point(537, 796);
+            this.btnClear.BackColor = System.Drawing.Color.Lavender;
+            this.btnClear.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
+            this.btnClear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
+            this.btnClear.Location = new System.Drawing.Point(482, 607);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(191, 43);
+            this.btnClear.Size = new System.Drawing.Size(128, 63);
             this.btnClear.TabIndex = 43;
-            this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Text = "CLEAR";
+            this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Visible = false;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // label11
             // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Comic Sans MS", 8F, System.Drawing.FontStyle.Bold);
+            this.label11.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
             this.label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label11.Location = new System.Drawing.Point(646, 196);
+            this.label11.Location = new System.Drawing.Point(915, 196);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(176, 19);
+            this.label11.Size = new System.Drawing.Size(214, 25);
             this.label11.TabIndex = 44;
             this.label11.Text = "Search Vehicle By Make";
             this.label11.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -548,6 +560,63 @@ namespace DrivingSchoolBookingSystem
             this.panel1.Size = new System.Drawing.Size(1741, 1058);
             this.panel1.TabIndex = 0;
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "VehicleID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "VehicleID";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 104;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Vehicle_NumberPlate";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Vehicle_NumberPlate";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 181;
+            // 
+            // vehicleRegNumDataGridViewTextBoxColumn
+            // 
+            this.vehicleRegNumDataGridViewTextBoxColumn.DataPropertyName = "Vehicle_VIN";
+            this.vehicleRegNumDataGridViewTextBoxColumn.HeaderText = "Vehicle_RegNum";
+            this.vehicleRegNumDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.vehicleRegNumDataGridViewTextBoxColumn.Name = "vehicleRegNumDataGridViewTextBoxColumn";
+            this.vehicleRegNumDataGridViewTextBoxColumn.Width = 148;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Vehicle_Make";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Vehicle_Make";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 131;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Vehicle_Model";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Vehicle_Model";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 134;
+            // 
+            // vehicleSizeDataGridViewTextBoxColumn
+            // 
+            this.vehicleSizeDataGridViewTextBoxColumn.DataPropertyName = "Vehicle_Size";
+            this.vehicleSizeDataGridViewTextBoxColumn.HeaderText = "Vehicle_Size";
+            this.vehicleSizeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.vehicleSizeDataGridViewTextBoxColumn.Name = "vehicleSizeDataGridViewTextBoxColumn";
+            this.vehicleSizeDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // vehicleStatusDataGridViewTextBoxColumn
+            // 
+            this.vehicleStatusDataGridViewTextBoxColumn.DataPropertyName = "Vehicle_Status";
+            this.vehicleStatusDataGridViewTextBoxColumn.HeaderText = "Vehicle_Status";
+            this.vehicleStatusDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.vehicleStatusDataGridViewTextBoxColumn.Name = "vehicleStatusDataGridViewTextBoxColumn";
+            this.vehicleStatusDataGridViewTextBoxColumn.Width = 141;
+            // 
             // ManageVehiclesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -555,9 +624,9 @@ namespace DrivingSchoolBookingSystem
             this.BackColor = System.Drawing.Color.Blue;
             this.BackgroundImage = global::DrivingSchoolBookingSystem.Properties.Resources.Background_final;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1924, 1055);
-            this.Controls.Add(this.panel2);
+            this.ClientSize = new System.Drawing.Size(1924, 814);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
             this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ManageVehiclesForm";
@@ -567,10 +636,12 @@ namespace DrivingSchoolBookingSystem
             ((System.ComponentModel.ISupportInitialize)(this.wstGrp2DataSet)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVehicles)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -583,10 +654,7 @@ namespace DrivingSchoolBookingSystem
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.BindingSource tblVehicleBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn vehicleIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn vehicleNumberPlateDataGridViewTextBoxColumn;
@@ -612,14 +680,6 @@ namespace DrivingSchoolBookingSystem
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DataGridView dgvVehicles;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn vehicleRegNumDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn vehicleEngineNumDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn vehicleSizeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn vehicleStatusDataGridViewTextBoxColumn;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtSearch;
@@ -628,6 +688,19 @@ namespace DrivingSchoolBookingSystem
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn vehicleRegNumDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn vehicleSizeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn vehicleStatusDataGridViewTextBoxColumn;
     }
 }
 

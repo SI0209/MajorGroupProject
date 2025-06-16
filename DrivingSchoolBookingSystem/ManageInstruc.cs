@@ -12,7 +12,7 @@ using DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters;
 
 namespace DrivingSchoolBookingSystem
 {
-   public partial class ManageInstruc : Form
+    public partial class ManageInstruc : Form
     {
         private int employeeID = -1;
         private string originalName;
@@ -26,10 +26,14 @@ namespace DrivingSchoolBookingSystem
         private string originalSuburb;
         private string originalEmployeeType;
         private string originalEmail;
+        public string employeename;
+        public string employeesurname;
+        public string employeetype;
 
         private LoginForm loginForm1;
-      
-        public ManageInstruc(LoginForm loginForm) {
+
+        public ManageInstruc(LoginForm loginForm)
+        {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
             loginForm1 = loginForm;
@@ -56,7 +60,7 @@ namespace DrivingSchoolBookingSystem
 
         private void Form3_Load(object sender, EventArgs e)
         {
-           
+
 
 
 
@@ -99,7 +103,7 @@ namespace DrivingSchoolBookingSystem
             vehiclesForm.Show();
         }
 
-        
+
 
         private void pbUnavailableSlot_Click(object sender, EventArgs e)
         {
@@ -133,7 +137,7 @@ namespace DrivingSchoolBookingSystem
             cbxRace.Text = originalRace = (string)dgvEmployee.CurrentRow.Cells[6].Value;
             numericUpDownAge.Value = originalAge = (int)(dgvEmployee.CurrentRow.Cells[4].Value);
             txtUsername.Text = originalEmail = (string)dgvEmployee.CurrentRow.Cells[11].Value;
-            
+
         }
 
         private void ClearFields()
@@ -184,8 +188,8 @@ namespace DrivingSchoolBookingSystem
                 cbxType.Text == null ||
                 cbxGender.Text == null ||
                 cbxRace.Text == null ||
-                numericUpDownAge.Value == 0 )
-                
+                numericUpDownAge.Value == 0)
+
             {
                 return false;
             }
@@ -234,7 +238,7 @@ namespace DrivingSchoolBookingSystem
         }
 
 
-        
+
 
         private bool HaveFieldsChanged()
         {
@@ -286,9 +290,9 @@ namespace DrivingSchoolBookingSystem
                     MessageBox.Show("Invalid phone number. Please enter a valid 10-digit phone number.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
-                if(!validateEmail(username))
+                if (!validateEmail(username))
                 {
-                    MessageBox.Show("Invalid Gmail address!","Error",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                    MessageBox.Show("Invalid Gmail address!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
                 if (!ValidateNoDupUsername(username, -1))
@@ -297,7 +301,7 @@ namespace DrivingSchoolBookingSystem
                     return;
                 }
 
-               
+
                 DialogResult result = MessageBox.Show("Are you sure you want to add this employee?", "Confirm Add", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.No)
                 {
@@ -366,7 +370,7 @@ namespace DrivingSchoolBookingSystem
                         return;
                     }
 
-                    
+
                     if (!validateEmail(email))
                     {
                         MessageBox.Show("Invalid gmail address!", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -387,10 +391,10 @@ namespace DrivingSchoolBookingSystem
                     string cbxEmployeeGender = cbxGender.Text.ToString();
                     string cbxEmployeeRace = cbxRace.Text.ToString();
                     int age = (int)(numericUpDownAge.Value);
-                    
 
 
-                    tblEmployeeTableAdapter.UpdateEmployeeQuery(name, surname, idNum, age, cbxEmployeeGender, cbxEmployeeRace, phone, address, suburb, cbxTypeEmployee,email, employeeID);
+
+                    tblEmployeeTableAdapter.UpdateEmployeeQuery(name, surname, idNum, age, cbxEmployeeGender, cbxEmployeeRace, phone, address, suburb, cbxTypeEmployee, email, employeeID);
                     tblEmployeeTableAdapter.Fill(dsBookingSystem.tblEmployee);
                     MessageBox.Show("Employee updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     ClearFields();
@@ -442,36 +446,36 @@ namespace DrivingSchoolBookingSystem
 
                     if (isEmployeeRelatedInABooking())
                         message += "Please delete all booking records containing the employee you want to delete, first!" + '\n';
-                    if(isEmployeeRelatedInAnUnavailableSlot())
+                    if (isEmployeeRelatedInAnUnavailableSlot())
                         message += "Please delete all unavailable slots relating to this employee you want to delete, first!";
                     if (message == null)
+                    {
+                        DialogResult result = MessageBox.Show("Are you sure you want to delete this employee?", "Confirm Add", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (result == DialogResult.No)
                         {
-                            DialogResult result = MessageBox.Show("Are you sure you want to delete this employee?", "Confirm Add", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                            if (result == DialogResult.No)
-                            {
-                                return;
-                            }
-
-                            string name = txtName.Text;
-                            string surname = txtSurname.Text;
-                            string address = txtStreetAddress.Text;
-                            string suburb = txtSuburb.Text;
-                            string cbxTypeEmployee = cbxType.Text.ToString();
-                            string cbxEmployeeGender = cbxGender.Text.ToString();
-                            string cbxEmployeeRace = cbxRace.Text.ToString();
-                            int age = (int)(numericUpDownAge.Value);
-
-
-                            tblEmployeeTableAdapter.DeleteEmployeeQuery(employeeID);
-                            tblEmployeeTableAdapter.Fill(dsBookingSystem.tblEmployee);
-                            MessageBox.Show("Employee deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            ClearFields();
-                        } 
-                        else
-                        {
-                            MessageBox.Show(message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            ClearFields();
+                            return;
                         }
+
+                        string name = txtName.Text;
+                        string surname = txtSurname.Text;
+                        string address = txtStreetAddress.Text;
+                        string suburb = txtSuburb.Text;
+                        string cbxTypeEmployee = cbxType.Text.ToString();
+                        string cbxEmployeeGender = cbxGender.Text.ToString();
+                        string cbxEmployeeRace = cbxRace.Text.ToString();
+                        int age = (int)(numericUpDownAge.Value);
+
+
+                        tblEmployeeTableAdapter.DeleteEmployeeQuery(employeeID);
+                        tblEmployeeTableAdapter.Fill(dsBookingSystem.tblEmployee);
+                        MessageBox.Show("Employee deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        ClearFields();
+                    }
+                    else
+                    {
+                        MessageBox.Show(message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        ClearFields();
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -536,9 +540,9 @@ namespace DrivingSchoolBookingSystem
                       "- 'No changes detected. Please modify at least one field before updating.': Ensure you have made some changes before trying to update.\n";
 
             MessageBox.Show(helpText, "Help", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        
 
-    }
+
+        }
         private int CalculateAge(string idNumber)
         {
             if (idNumber.Length != 13)
@@ -595,6 +599,95 @@ namespace DrivingSchoolBookingSystem
         }
 
         private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton2.Checked)
+            {
+                txtName.Enabled = false;
+                txtSurname.Enabled = false;
+                txtIDNum.Enabled = false;
+                txtPhoneNum.Enabled = false;
+                txtStreetAddress.Enabled = false;
+                txtSuburb.Enabled = false;
+                cbxType.Enabled = false;
+                cbxGender.Enabled = false;
+                cbxRace.Enabled = false;
+                numericUpDownAge.Enabled = false;
+                txtUsername.Enabled = false;
+                txtPassword.Enabled = false;
+                btnAdd.Visible = false;
+                btnUpdate.Visible = false;
+                btnDelete.Visible = false;
+                button2.Visible = false;
+            }
+            else
+            {
+                txtName.Enabled = true;
+                txtSurname.Enabled = true;
+                txtIDNum.Enabled = true;
+                txtPhoneNum.Enabled = true;
+                txtStreetAddress.Enabled = true;
+                txtSuburb.Enabled = true;
+                cbxType.Enabled = true;
+                cbxGender.Enabled = true;
+                cbxRace.Enabled = true;
+                numericUpDownAge.Enabled = true;
+                txtUsername.Enabled = true;
+                txtPassword.Enabled = true;
+                btnAdd.Visible = true;
+                btnUpdate.Visible = true;
+                btnDelete.Visible = true;
+                button2.Visible = true;
+            }
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton1.Checked)
+            {
+                txtName.Enabled = true;
+                txtSurname.Enabled = true;
+                txtIDNum.Enabled = true;
+                txtPhoneNum.Enabled = true;
+                txtStreetAddress.Enabled = true;
+                txtSuburb.Enabled = true;
+                cbxType.Enabled = true;
+                cbxGender.Enabled = true;
+                cbxRace.Enabled = true;
+                numericUpDownAge.Enabled = true;
+                txtUsername.Enabled = true;
+                txtPassword.Enabled = true;
+                btnAdd.Visible = true;
+                btnUpdate.Visible = true;
+                btnDelete.Visible = true;
+                button2.Visible = true;
+            }
+            else
+            {
+                txtName.Enabled = false;
+                txtSurname.Enabled = false;
+                txtIDNum.Enabled = false;
+                txtPhoneNum.Enabled = false;
+                txtStreetAddress.Enabled = false;
+                txtSuburb.Enabled = false;
+                cbxType.Enabled = false;
+                cbxGender.Enabled = false;
+                cbxRace.Enabled = false;
+                numericUpDownAge.Enabled = false;
+                txtUsername.Enabled = false;
+                txtPassword.Enabled = false;
+                btnAdd.Visible = false;
+                btnUpdate.Visible = false;
+                btnDelete.Visible = false;
+                button2.Visible = false;
+            }
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
         {
 
         }

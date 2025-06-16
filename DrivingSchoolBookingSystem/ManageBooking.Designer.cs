@@ -45,7 +45,6 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.dgvLearner = new System.Windows.Forms.DataGridView();
             this.bookingIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bookingDateDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -105,12 +104,12 @@
             this.taLearner = new DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters.tblLearnerTableAdapter();
             this.taBookingInnerJoin = new DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters.tblBookingInnerJoinTableAdapter();
             this.taUnavailableSlot1 = new DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters.taUnavailableSlot();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLearner)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblBookingInnerJoinBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsBookingSystem)).BeginInit();
@@ -120,6 +119,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudStartTime)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -239,18 +239,6 @@
             this.pictureBox4.Size = new System.Drawing.Size(128, 123);
             this.pictureBox4.TabIndex = 14;
             this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.BackgroundImage = global::DrivingSchoolBookingSystem.Properties.Resources.image_removebg_preview__13_;
-            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox5.Location = new System.Drawing.Point(27, 212);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(145, 76);
-            this.pictureBox5.TabIndex = 11;
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // dgvLearner
             // 
@@ -934,6 +922,18 @@
             // 
             this.taUnavailableSlot1.ClearBeforeFill = true;
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox5.BackgroundImage = global::DrivingSchoolBookingSystem.Properties.Resources.image_removebg_preview__13_;
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox5.Location = new System.Drawing.Point(27, 212);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(145, 76);
+            this.pictureBox5.TabIndex = 11;
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
+            // 
             // ManageBooking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -966,7 +966,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLearner)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblBookingInnerJoinBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsBookingSystem)).EndInit();
@@ -977,6 +976,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -995,7 +995,6 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.BindingSource tblBookingBindingSource;
         private System.Windows.Forms.BindingSource tblBookingInnerJoinBindingSource;
         private System.Windows.Forms.DataGridView dgvLearner;
@@ -1053,5 +1052,6 @@
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
         private WstGrp2DataSetTableAdapters.taUnavailableSlot taUnavailableSlot1;
+        private System.Windows.Forms.PictureBox pictureBox5;
     }
 }
