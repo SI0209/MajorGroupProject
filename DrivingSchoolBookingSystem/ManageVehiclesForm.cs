@@ -1,3 +1,4 @@
+using PdfSharp.Drawing;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace DrivingSchoolBookingSystem
 {
@@ -26,247 +28,302 @@ namespace DrivingSchoolBookingSystem
 
 
         }
-
-        private void dgvVehicles_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        public Boolean AllDataEntered()
         {
-            if (e.RowIndex < 0) return;
-
-            DataGridViewRow row = dgvVehicles.Rows[e.RowIndex];
-            VehicleID = Convert.ToInt32(row.Cells["VehicleID"].Value);
-
-            txtVehicleMake.Text = row.Cells["Vehicle_Make"].Value?.ToString();
-            txtVehicleModel.Text = row.Cells["Vehicle_Model"].Value?.ToString();
-            txtVehicleYear.Text = row.Cells["Vehicle_Year"].Value?.ToString();
-            txtVehicleReg.Text = row.Cells["Vehicle_Registration"].Value?.ToString();
-            txtVIN.Text = row.Cells["Vehicle_EngineNumber"].Value?.ToString();
-            cmbVehicleType.Text = row.Cells["Vehicle_Size"].Value?.ToString();
-            cmbVehicleStatus.Text = row.Cells["Vehicle_Status"].Value?.ToString();
-        }
-
-        private bool AllDataEntered()
-        {
-            return !string.IsNullOrWhiteSpace(txtVehicleMake.Text) &&
-                   !string.IsNullOrWhiteSpace(txtVehicleModel.Text) &&
-                   !string.IsNullOrWhiteSpace(txtVehicleYear.Text) &&
-                   !string.IsNullOrWhiteSpace(txtVehicleReg.Text) &&
-                   !string.IsNullOrWhiteSpace(txtVIN.Text) &&
-                   !string.IsNullOrWhiteSpace(cmbVehicleType.Text) &&
-                   !string.IsNullOrWhiteSpace(cmbVehicleStatus.Text);
-        }
-
-        private bool RegNumberExists(string regNum)
-        {
-            foreach (DataRow row in wstGrp2DataSet.tblVehicle.Rows)
+            if (txtNumberPlate.Text != "" && txtRegNum.Text != "" && txtMake.Text != "" && txtModel.Text != ""
+               && txtEngineNum.Text != "" && cmbSize.Text != "" && cmbVehicleStatus.Text != "")
             {
-                if (row["Vehicle_Registration"].ToString().Equals(regNum, StringComparison.OrdinalIgnoreCase))
+                return true;
+            }
+            return false;
+        }
+
+        private Boolean RegNumberExists(string regNum)
+        {
+            foreach (DataRow row in this.wstGrp2DataSet.tblVehicle)
+            {
+                if (row["Vehicle_RegNum"].ToString().Equals(regNum))
                     return true;
             }
             return false;
         }
 
-        private void ClearForm()
+        private void btnAdd_Click_1(object sender, EventArgs e)
         {
-            txtVehicleMake.Clear();
-            txtVehicleModel.Clear();
-            txtVehicleYear.Clear();
-            txtVehicleReg.Clear();
-            txtVIN.Clear();
-            cmbVehicleType.SelectedIndex = -1;
+            string message = null;
+            if (!AllDataEntered())
+            {
+                MessageBox.Show("Please enter data in all fields!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                string numPlate = txtNumberPlate.Text;
+                string regNum = txtRegNum.Text;
+                string make = txtMake.Text;
+                string model = txtModel.Text;
+                string engineNum = txtEngineNum.Text;
+                string vehicleSize = cmbSize.SelectedItem.ToString();
+                string vehicleStatus = cmbVehicleStatus.SelectedItem.ToString();
+                if (errorControl.ValidateNumberPlate(numPlate) != null)
+                    message += errorControl.ValidateNumberPlate(numPlate) + "\n";
+                if (errorControl.ValidateRegNum(regNum) != null)
+                    message += errorControl.ValidateRegNum(regNum) + "\n";
+                if (errorControl.ValidateEngineNum(engineNum) != null)
+                    message += errorControl.ValidateEngineNum(engineNum) + "\n";
+                if (errorControl.ValidateMake(make) != null)
+                    message += errorControl.ValidateMake(make) + "\n";
+                if (errorControl.ValidateModel(model) != null)
+                    message += errorControl.ValidateModel(model) + "\n";
+                if (RegNumberExists(regNum))
+                    message += "Invalid! Cannot have two vehicles with the same registration number";
+                if (message != null)
+                {
+                    MessageBox.Show(message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    DialogResult result = MessageBox.Show("Are you sure you would like to add this Vehicle?", "Confirmation", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+                    if (result == DialogResult.Yes)
+                    {
+
+
+                        taVehicle.Insert(numPlate, regNum, engineNum, make, model, vehicleSize, vehicleStatus);
+                        taVehicle.Fill(this.wstGrp2DataSet.tblVehicle);
+                        btnClear.PerformClick();
+                        MessageBox.Show("Vehicle successfully added!", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Vehicle not added!", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+
+            }
+        }
+
+        private Boolean isVehicleRelatedInABooking()
+        {
+            taBooking.Fill(this.wstGrp2DataSet.tblBooking);
+            foreach (DataRow row in this.wstGrp2DataSet.tblVehicle.Rows)
+            {
+                if (Convert.ToInt16(row["VehicleID"]) == VehicleID)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        private void dgvVehicles_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if ((int)dgvVehicles.CurrentRow.Cells[0].Value < 0)
+                return;
+            VehicleID = (int)dgvVehicles.CurrentRow.Cells[0].Value;
+            txtNumberPlate.Text = dgvVehicles.CurrentRow.Cells[1].Value.ToString();
+            txtRegNum.Text = dgvVehicles.CurrentRow.Cells[2].Value.ToString();
+            txtEngineNum.Text = dgvVehicles.CurrentRow.Cells[3].Value.ToString();
+            txtMake.Text = dgvVehicles.CurrentRow.Cells[4].Value.ToString();
+            txtModel.Text = dgvVehicles.CurrentRow.Cells[5].Value.ToString();
+            cmbSize.Text = dgvVehicles.CurrentRow.Cells[6].Value.ToString();
+            cmbVehicleStatus.Text = dgvVehicles.CurrentRow.Cells[7].Value.ToString();
+
+        }
+
+        private void btnDelete_Click_1(object sender, EventArgs e)
+        {
+            if (VehicleID != -1)
+            {
+                if (!AllDataEntered())
+                {
+                    MessageBox.Show("Please enter data in all fields!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    if (!isVehicleRelatedInABooking())
+                    {
+                        DialogResult result = MessageBox.Show("Are you sure you would like to DELETE this Vehicle details?", "Confirmation", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+                        if (result == DialogResult.Yes)
+                        {
+                            taVehicle.DeleteVehicle(VehicleID);
+                            taVehicle.Fill(this.wstGrp2DataSet.tblVehicle);
+                            btnClear.PerformClick();
+                            MessageBox.Show("Vehicle details successfully deleted!", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("Vehicle details not deleted!", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            btnClear.PerformClick();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Please delete all booking records containing the vehicle you want to delete, first!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        btnClear.PerformClick();
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a Vehicle from the vehicle list!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void cmbSize_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cmbSize.Items.Add("Small");
+            cmbSize.Items.Add("Medium");
+            cmbSize.Items.Add("Large");
+        }
+
+        private void cmbVehicleStatus_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cmbVehicleStatus.Items.Add("Available");
+            cmbVehicleStatus.Items.Add("Not Available");
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            Clear();
+        }
+
+        private void Clear()
+        {
+            txtNumberPlate.Text = "";
+            txtRegNum.Text = "";
+            txtMake.Text = "";
+            txtModel.Text = "";
+            txtEngineNum.Text = "";
+            cmbSize.SelectedIndex = -1;
             cmbVehicleStatus.SelectedIndex = -1;
+            txtSearch.Text = "";
+            txtNumberPlate.Focus();
+
             VehicleID = -1;
-            txtVehicleMake.Focus();
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
+        private void btnUpdate_Click_1(object sender, EventArgs e)
         {
-            string message = null;
-            if (!AllDataEntered())
+            if (VehicleID != -1)
             {
-                MessageBox.Show("Please enter data in all fields!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            string make = txtVehicleMake.Text.Trim();
-            string model = txtVehicleModel.Text.Trim();
-            string year = txtVehicleYear.Text.Trim();
-            string regNum = txtVehicleReg.Text.Trim();
-            string engineNum = txtVIN.Text.Trim();
-            string size = cmbVehicleType.Text;
-            string status = cmbVehicleStatus.Text;
-
-            // Perform validations similar to your earlier code (adapted for your field names)
-            if (errorControl.ValidateMake(make) != null)
-                message += errorControl.ValidateMake(make) + "\n";
-            if (errorControl.ValidateModel(model) != null)
-                message += errorControl.ValidateModel(model) + "\n";
-            if (errorControl.ValidateRegNum(regNum) != null)
-                message += errorControl.ValidateRegNum(regNum) + "\n";
-            if (errorControl.ValidateEngineNum(engineNum) != null)
-                message += errorControl.ValidateEngineNum(engineNum) + "\n";
-            if (RegNumberExists(regNum))
-                message += "Invalid! Cannot have two vehicles with the same registration number.\n";
-
-            if (message != null)
-            {
-                MessageBox.Show(message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            DialogResult result = MessageBox.Show("Are you sure you would like to add this Vehicle?", "Confirmation", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
-            {
-                try
+                string message = null;
+                if (!AllDataEntered())
                 {
-                    taVehicle.Insert(txtVehicleMake.Text, txtVehicleModel.Text, txtVehicleYear.Text, txtVehicleReg.Text,
-                                     txtVIN.Text, cmbVehicleType.Text, cmbVehicleStatus.Text);
-                    taVehicle.Fill(wstGrp2DataSet.tblVehicle);
-                    ClearForm();
-                    MessageBox.Show("Vehicle successfully added!", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Please enter data in all fields!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                catch (Exception ex)
+                else
                 {
-                    MessageBox.Show("Error adding vehicle: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    string numPlate = txtNumberPlate.Text;
+                    string regNum = txtRegNum.Text;
+                    string make = txtMake.Text;
+                    string model = txtModel.Text;
+                    string engineNum = txtEngineNum.Text;
+                    string vehicleSize = cmbSize.SelectedItem.ToString();
+                    string vehicleStatus = cmbVehicleStatus.SelectedItem.ToString();
+                    if (errorControl.ValidateNumberPlate(numPlate) != null)
+                        message += errorControl.ValidateNumberPlate(numPlate) + "\n";
+                    if (errorControl.ValidateRegNum(regNum) != null)
+                        message += errorControl.ValidateRegNum(regNum) + "\n";
+                    if (errorControl.ValidateEngineNum(engineNum) != null)
+                        message += errorControl.ValidateEngineNum(engineNum) + "\n";
+                    if (errorControl.ValidateMake(make) != null)
+                        message += errorControl.ValidateMake(make) + "\n";
+                    if (errorControl.ValidateModel(model) != null)
+                        message += errorControl.ValidateModel(model) + "\n";
+                    if (message != null)
+                    {
+                        MessageBox.Show(message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        DialogResult result = MessageBox.Show("Are you sure you would like to update this Vehicle details?", "Confirmation", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+                        if (result == DialogResult.Yes)
+                        {
+                            taVehicle.UpdateVehicle(numPlate, regNum, engineNum, make, model, vehicleSize, vehicleStatus, VehicleID);
+                            taVehicle.Fill(this.wstGrp2DataSet.tblVehicle);
+                            btnClear.PerformClick();
+                            MessageBox.Show("Vehicle detailes successfully updated!", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Vehicle details remain unchanged!", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            btnClear.PerformClick();
+                        }
+                    }
+
                 }
             }
             else
-            {
-                MessageBox.Show("Vehicle not added!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+                MessageBox.Show("Please select a Vehicle from the vehicle list!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
-        private void dgvVehicles_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void pbUnavailableSlot_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            UnavailableTimeSlots unavailableTimeSlots = new UnavailableTimeSlots();
+            unavailableTimeSlots.Show();
         }
 
-        private void btnSearch_Click(object sender, EventArgs e)
+        private void pbLearner_Click(object sender, EventArgs e)
         {
-            string searchText = txtVehicleMake.Text.Trim().ToLower();
-
-            if (string.IsNullOrEmpty(searchText))
-            {
-                MessageBox.Show("Please enter a vehicle make or model to search.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
-
-            // Filter rows in tblVehicle based on Make or Model containing search text
-            var filteredRows = wstGrp2DataSet.tblVehicle
-                .Where(v =>
-                    v.Vehicle_Make != null && v.Vehicle_Make.ToLower().Contains(searchText) ||
-                    v.Vehicle_Model != null && v.Vehicle_Model.ToLower().Contains(searchText))
-                .ToList();
-
-            if (filteredRows.Count == 0)
-            {
-                MessageBox.Show("No matching vehicles found.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
-
-            // Create a new DataTable to display filtered results
-            DataTable dt = wstGrp2DataSet.tblVehicle.Clone(); // clone structure only
-
-            foreach (var row in filteredRows)
-            {
-                dt.ImportRow(row);
-            }
-
-            dgvVehicles.DataSource = dt;
+            this.Hide();
+            ManageLearners manageLearners = new ManageLearners();
+            manageLearners.Show();
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
+        private void pbAnalytics_Click(object sender, EventArgs e)
         {
-            if (VehicleID == -1)
-            {
-                MessageBox.Show("Please select a vehicle from the list!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            if (!AllDataEntered())
-            {
-                MessageBox.Show("Please enter data in all fields!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            DialogResult result = MessageBox.Show("Are you sure you would like to DELETE this Vehicle details?", "Confirmation", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
-            {
-                try
-                {
-                    taVehicle.DeleteVehicle(VehicleID);
-                    taVehicle.Fill(wstGrp2DataSet.tblVehicle);
-                    ClearForm();
-                    MessageBox.Show("Vehicle details successfully deleted!", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error deleting vehicle: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            else
-            {
-                MessageBox.Show("Vehicle details not deleted!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                ClearForm();
-            }
+            this.Hide();
+            AnalyticsForm analyticsForm = new AnalyticsForm();
+            analyticsForm.Show();
         }
 
-        private void btnUpdate_Click(object sender, EventArgs e)
+        private void pbEmployee_Click(object sender, EventArgs e)
         {
-            if (VehicleID == -1)
-            {
-                MessageBox.Show("Please select a vehicle from the list!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+            this.Hide();
+            ManageInstruc manageEmployees = new ManageInstruc();
+            manageEmployees.Show();
+        }
 
-            string message = null;
-            if (!AllDataEntered())
-            {
-                MessageBox.Show("Please enter data in all fields!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+        private void pbBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LoginForm loginForm = new LoginForm();
+            loginForm.Show();
+        }
 
-            string make = txtVehicleMake.Text.Trim();
-            string model = txtVehicleModel.Text.Trim();
-            string year = txtVehicleYear.Text.Trim();
-            string regNum = txtVehicleReg.Text.Trim();
-            string engineNum = txtVIN.Text.Trim();
-            string size = cmbVehicleType.Text;
-            string status = cmbVehicleStatus.Text;
+        private void pbBooking_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            ManageBooking manageBooking = new ManageBooking();
+            manageBooking.Show();
+        }
 
-            if (errorControl.ValidateMake(make) != null)
-                message += errorControl.ValidateMake(make) + "\n";
-            if (errorControl.ValidateModel(model) != null)
-                message += errorControl.ValidateModel(model) + "\n";
-            if (errorControl.ValidateRegNum(regNum) != null)
-                message += errorControl.ValidateRegNum(regNum) + "\n";
-            if (errorControl.ValidateEngineNum(engineNum) != null)
-                message += errorControl.ValidateEngineNum(engineNum) + "\n";
+        private void pbLessonCode_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LessonCodeForm lessonCodes = new LessonCodeForm();
+            lessonCodes.Show();
+        }
 
-            if (message != null)
-            {
-                MessageBox.Show(message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            string make = txtSearch.Text;
+            taVehicle.SearchByMake(this.wstGrp2DataSet.tblVehicle, make);
+        }
 
-            DialogResult result = MessageBox.Show("Are you sure you would like to update this Vehicle details?", "Confirmation", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
-            {
-                try
-                {
-                    taVehicle.UpdateVehicle(regNum, engineNum, make, model, size, year, status, VehicleID);
-                    taVehicle.Fill(wstGrp2DataSet.tblVehicle);
-                    ClearForm();
-                    MessageBox.Show("Vehicle details successfully updated!", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error updating vehicle: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            else
-            {
-                MessageBox.Show("Vehicle details remain unchanged!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                ClearForm();
-            }
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            HomeForm home = new HomeForm();
+            home.Show();
+            this.Hide();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LoginForm login = new LoginForm();
+            login.Show();
         }
     }
 }

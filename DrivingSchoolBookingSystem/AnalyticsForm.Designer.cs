@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AnalyticsForm));
             this.label9 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -159,6 +159,7 @@
             this.button3.TabIndex = 49;
             this.button3.Text = "Print Daily Report";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label7
             // 
@@ -324,6 +325,7 @@
             this.button1.TabIndex = 48;
             this.button1.Text = "Print Weekly Report";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_2);
             // 
             // panel2
             // 
@@ -380,13 +382,13 @@
             // 
             // pieChart
             // 
-            chartArea5.AxisX.TitleFont = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea5.AxisY.TitleFont = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea5.AxisY2.TitleFont = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea5.Name = "ChartArea1";
-            this.pieChart.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            this.pieChart.Legends.Add(legend5);
+            chartArea1.AxisX.TitleFont = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea1.AxisY.TitleFont = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea1.AxisY2.TitleFont = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea1.Name = "ChartArea1";
+            this.pieChart.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.pieChart.Legends.Add(legend1);
             this.pieChart.Location = new System.Drawing.Point(887, 248);
             this.pieChart.Margin = new System.Windows.Forms.Padding(4);
             this.pieChart.Name = "pieChart";
@@ -399,39 +401,39 @@
         System.Drawing.Color.DarkBlue,
         System.Drawing.Color.MidnightBlue,
         System.Drawing.Color.SlateBlue};
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series5.Legend = "Legend1";
-            series5.Name = "s1";
-            this.pieChart.Series.Add(series5);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.Legend = "Legend1";
+            series1.Name = "s1";
+            this.pieChart.Series.Add(series1);
             this.pieChart.Size = new System.Drawing.Size(509, 318);
             this.pieChart.TabIndex = 60;
             this.pieChart.Text = "chart2";
             // 
             // chart1
             // 
-            chartArea6.BackColor = System.Drawing.Color.DimGray;
-            chartArea6.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.DiagonalLeft;
-            chartArea6.BackSecondaryColor = System.Drawing.Color.Transparent;
-            chartArea6.BorderColor = System.Drawing.Color.Transparent;
-            chartArea6.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea6);
-            legend6.Name = "Legend1";
-            this.chart1.Legends.Add(legend6);
+            chartArea2.BackColor = System.Drawing.Color.DimGray;
+            chartArea2.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.DiagonalLeft;
+            chartArea2.BackSecondaryColor = System.Drawing.Color.Transparent;
+            chartArea2.BorderColor = System.Drawing.Color.Transparent;
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
             this.chart1.Location = new System.Drawing.Point(113, 248);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             this.chart1.PaletteCustomColors = new System.Drawing.Color[] {
         System.Drawing.Color.Blue};
-            series6.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.TopBottom;
-            series6.BackSecondaryColor = System.Drawing.Color.MidnightBlue;
-            series6.BorderColor = System.Drawing.Color.Black;
-            series6.BorderWidth = 2;
-            series6.ChartArea = "ChartArea1";
-            series6.Color = System.Drawing.Color.Blue;
-            series6.Legend = "Legend1";
-            series6.Name = "Series1";
-            this.chart1.Series.Add(series6);
+            series2.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.TopBottom;
+            series2.BackSecondaryColor = System.Drawing.Color.MidnightBlue;
+            series2.BorderColor = System.Drawing.Color.Black;
+            series2.BorderWidth = 2;
+            series2.ChartArea = "ChartArea1";
+            series2.Color = System.Drawing.Color.Blue;
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chart1.Series.Add(series2);
             this.chart1.Size = new System.Drawing.Size(714, 300);
             this.chart1.TabIndex = 58;
             this.chart1.Text = "chart1";
@@ -615,7 +617,6 @@
             this.pictureBox5.Size = new System.Drawing.Size(116, 85);
             this.pictureBox5.TabIndex = 11;
             this.pictureBox5.TabStop = false;
-            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // AnalyticsForm
             // 
@@ -636,7 +637,6 @@
             this.DoubleBuffered = true;
             this.Name = "AnalyticsForm";
             this.Text = "Form8";
-            this.Load += new System.EventHandler(this.Form8_Load);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.panel5.ResumeLayout(false);
