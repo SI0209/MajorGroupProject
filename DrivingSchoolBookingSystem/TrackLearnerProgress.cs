@@ -22,6 +22,35 @@ namespace DrivingSchoolBookingSystem
         public LearnerProgressForm()
         {
             InitializeComponent();
+            
+            /*tip.IsBalloon = true;
+            tip.ShowAlways = true;
+
+            // GridViews
+            tip.SetToolTip(dataGridView1, "Click a learner row to view or update progress.");
+            tip.SetToolTip(dataGridView2, "Shows learners not yet added to progress tracking.");
+
+            // Textboxes & Fields
+            tip.SetToolTip(txtSearch1, "Enter learner first name or lesson topic to search.");
+            tip.SetToolTip(txtSearch2, "Enter learner's name to filter new learners.");
+            tip.SetToolTip(txtLessonTopic, "Enter the topic covered in the lesson.");
+            tip.SetToolTip(txtAttendance, "Mark attendance status (e.g., Present, Late).");
+            tip.SetToolTip(txtRating, "Rate learner's performance (e.g., Good, Poor).");
+            tip.SetToolTip(txtErrors, "Describe any errors made during the lesson.");
+            tip.SetToolTip(txtComments, "Add any additional remarks about the session.");
+            tip.SetToolTip(txtStatus, "Optional: overall progress note.");
+
+            // Buttons
+            tip.SetToolTip(btnReset1, "Clears the search box and reloads all progress data.");
+            tip.SetToolTip(btnReset2, "Reloads new learners into the grid.");
+            tip.SetToolTip(btnAdd, "Adds a new learner progress entry.");
+            tip.SetToolTip(btnUpdate, "Update progress details for the selected learner.");
+            tip.SetToolTip(btnClear, "Clears all progress entry fields.");
+
+            // Edit Mode and Logout
+            tip.SetToolTip(radioEditOn, "Turn ON to allow updates.");
+            tip.SetToolTip(radioEditOff, "Turn OFF to prevent changes.");
+            tip.SetToolTip(btnLogout, "Click here to log out safely.");*/
         }
 
         private void label11_Click(object sender, EventArgs e)
@@ -643,5 +672,10 @@ namespace DrivingSchoolBookingSystem
 
             }
             }
+
+        private void toolTip2_Popup(object sender, PopupEventArgs e)
+        {
+
+        }
     }
 }

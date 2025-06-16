@@ -36,6 +36,11 @@
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LearnerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -98,16 +103,15 @@
             this.tblNewLearnerTableAdapter = new DrivingSchoolBookingSystem.WstGrp2DS2TableAdapters.tblNewLearnerTableAdapter();
             this.learnerProgressBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.trackLearnerTableAdapter = new DrivingSchoolBookingSystem.WstGrp2DS2TableAdapters.TrackLearnerTableAdapter();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label19 = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackLearnerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wstGrp2DS2)).BeginInit();
@@ -120,8 +124,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.learnerProgressBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.learnerProgressBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.learnerProgressBindingSource1)).BeginInit();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label11
@@ -213,6 +215,70 @@
             this.pictureBox5.TabIndex = 11;
             this.pictureBox5.TabStop = false;
             this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.label19);
+            this.panel1.Controls.Add(this.radioButton1);
+            this.panel1.Controls.Add(this.radioButton2);
+            this.panel1.Font = new System.Drawing.Font("Comic Sans MS", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel1.Location = new System.Drawing.Point(21, 383);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(157, 121);
+            this.panel1.TabIndex = 70;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::DrivingSchoolBookingSystem.Properties.Resources.d96d3352_b857_4aa9_ab18_05236196ade2_removebg_preview;
+            this.pictureBox2.Location = new System.Drawing.Point(4, 6);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(32, 35);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 72;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(37, 16);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(97, 25);
+            this.label19.TabIndex = 71;
+            this.label19.Text = "Edit Mode";
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.radioButton1.Location = new System.Drawing.Point(42, 44);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(55, 25);
+            this.radioButton1.TabIndex = 67;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "ON";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.radioButton2.Location = new System.Drawing.Point(42, 75);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(61, 25);
+            this.radioButton2.TabIndex = 68;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "OFF";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // dataGridView1
             // 
@@ -835,69 +901,9 @@
             // 
             this.trackLearnerTableAdapter.ClearBeforeFill = true;
             // 
-            // radioButton1
+            // toolTip2
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.radioButton1.Location = new System.Drawing.Point(42, 44);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(55, 25);
-            this.radioButton1.TabIndex = 67;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "ON";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.radioButton2.Location = new System.Drawing.Point(42, 75);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(61, 25);
-            this.radioButton2.TabIndex = 68;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "OFF";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.label19);
-            this.panel1.Controls.Add(this.radioButton1);
-            this.panel1.Controls.Add(this.radioButton2);
-            this.panel1.Font = new System.Drawing.Font("Comic Sans MS", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel1.Location = new System.Drawing.Point(21, 383);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(157, 121);
-            this.panel1.TabIndex = 70;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::DrivingSchoolBookingSystem.Properties.Resources.d96d3352_b857_4aa9_ab18_05236196ade2_removebg_preview;
-            this.pictureBox2.Location = new System.Drawing.Point(4, 6);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(32, 35);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 72;
-            this.pictureBox2.TabStop = false;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(37, 16);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(97, 25);
-            this.label19.TabIndex = 71;
-            this.label19.Text = "Edit Mode";
+            this.toolTip2.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip2_Popup);
             // 
             // LearnerProgressForm
             // 
@@ -935,6 +941,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackLearnerBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wstGrp2DS2)).EndInit();
@@ -949,9 +958,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.learnerProgressBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.learnerProgressBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.learnerProgressBindingSource1)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1039,5 +1045,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.ToolTip toolTip2;
     }
 }
