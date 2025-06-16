@@ -159,6 +159,7 @@
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.pictureBox4);
             this.panel2.Controls.Add(this.pictureBox5);
+            this.panel2.Controls.Add(this.panel1);
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(211, 1059);
@@ -873,7 +874,7 @@
             this.panel1.Controls.Add(this.radioButton2);
             this.panel1.Font = new System.Drawing.Font("Comic Sans MS", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel1.Location = new System.Drawing.Point(265, 253);
+            this.panel1.Location = new System.Drawing.Point(21, 383);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(157, 121);
             this.panel1.TabIndex = 70;
@@ -925,7 +926,6 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
             this.Name = "LearnerProgressForm";
             this.Load += new System.EventHandler(this.Form7_Load);

@@ -49,20 +49,8 @@ namespace DrivingSchoolBookingSystem
             //this.learnerProgressTableAdapter.Fill(this.wstGrp2DS2.LearnerProgress);
             // TODO: This line of code loads data into the 'bookingSystemDataSet.tblLearners' table. You can move, or remove it, as needed.
             // this.tblLearnersTableAdapter.Fill(this.bookingSystemDataSet.tblLearners);
-            button1.Enabled= false;
-            button2.Enabled = false;
-            button3.Enabled = false;
-            textBox1.Enabled = false; // LearnerID should not be editable
-            textBox2.Enabled = false; // LearnerName should not be editable
-            textBox3.Enabled = false;
-            textBox6.Enabled = false; // Comments should not be editable
-            textBox5.Enabled = false; // ErrorsMade should not be editable
-            comboBox1.Enabled = false; // LessonTopic should not be editable
-            comboBox2.Enabled = false; // Attendance should not be editable
-            comboBox3.Enabled = false; // Rating should not be editable
-            comboBox4.Enabled = false; // PassStatus should not be editable
-            dateTimePicker1.Enabled = false; // LessonDate should not be editable
-
+           
+            radioButton2.Checked = true; // Default to "View Learner Progress" mode    
 
             comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox2.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -608,10 +596,10 @@ namespace DrivingSchoolBookingSystem
         {
             if (radioButton2.Checked)
             {
-                button1.Enabled = false;
-                button2.Enabled = false;
-                button3.Enabled = false;
-                textBox1.Enabled = false; // LearnerID should not be editable
+                button1.Visible = false;
+                button2.Visible = false;
+                button3.Visible = false;
+               
                 textBox2.Enabled = false; // LearnerName should not be editable
                 textBox3.Enabled = false;
                 textBox6.Enabled = false; // Comments should not be editable
@@ -629,13 +617,13 @@ namespace DrivingSchoolBookingSystem
         {
             if (radioButton1.Checked)
             {
-                button1.Enabled = true;
-                button2.Enabled = true;
-                button3.Enabled = true;
+                button1.Visible = true;
+                button2.Visible = true;
+                button3.Visible = true;
 
-                textBox1.Enabled = true; // LearnerID now editable
-                textBox2.Enabled = true; // LearnerName now editable
-                textBox3.Enabled = true;
+
+                textBox2.Enabled = false; // LearnerName should not be editable
+                textBox3.Enabled = false;
                 textBox6.Enabled = true; // Comments now editable
                 textBox5.Enabled = true; // ErrorsMade now editable
 

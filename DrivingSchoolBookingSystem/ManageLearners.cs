@@ -38,7 +38,7 @@ namespace DrivingSchoolBookingSystem
             comboBox2.KeyPress += combox2_KeyPress;
             comboBox3.KeyPress += combox3_KeyPress;
             comboBox4.KeyPress += combox4_KeyPress;
-
+            radioButton2.Checked = true;
             //gender combox
 
             IssuedateTimePicker1.MinDate = DateTime.Today.AddYears(-2);
@@ -646,6 +646,49 @@ namespace DrivingSchoolBookingSystem
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            button1.Visible = false;
+            button2.Visible = false;
+            button3.Visible = false;
+            button5.Visible = false;
+
+           textBox1.Enabled = false;
+            textBox2.Enabled = false;
+            textBox3.Enabled = false;
+            textBox4.Enabled = false;
+            textBox5.Enabled = false;
+            textBox6.Enabled = false;
+            comboBox1.Enabled = false;
+            comboBox2.Enabled = false;
+            comboBox3.Enabled = false;
+            IssuedateTimePicker1.Enabled = false;
+            textBox9.Enabled = false;
+            comboBox4.Enabled = false;
+
+
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            button1.Visible = true;
+            button2.Visible = true;
+            button3.Visible = true;
+            button5.Visible = true;
+            textBox1.Enabled = true;
+            textBox2.Enabled = true;
+            textBox3.Enabled = true;
+            textBox4.Enabled = true;
+            textBox5.Enabled = true;
+            textBox6.Enabled = true;
+            comboBox1.Enabled = true;
+            comboBox2.Enabled = true;
+            comboBox3.Enabled = true;
+            IssuedateTimePicker1.Enabled = true;
+            textBox9.Enabled = true;
+            comboBox4.Enabled = true;
         }
     }
 }
