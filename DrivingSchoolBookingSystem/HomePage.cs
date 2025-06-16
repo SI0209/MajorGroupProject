@@ -57,9 +57,7 @@ namespace DrivingSchoolBookingSystem
 
         private void pictureBox16_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            ManageBooking lesson = new ManageBooking();
-            lesson.ShowDialog();
+           ;
         }
 
         private void pictureBox8_Click(object sender, EventArgs e)
@@ -86,6 +84,18 @@ namespace DrivingSchoolBookingSystem
         private void lblUserType_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ManageBooking lesson = new ManageBooking();
+            lesson.ShowDialog();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)

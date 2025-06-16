@@ -613,6 +613,16 @@ namespace DrivingSchoolBookingSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Screenshot_2025_06_16_204837_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot_2025-06-16_204837-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Transparent_logo {
             get {
                 object obj = ResourceManager.GetObject("Transparent logo", resourceCulture);
