@@ -373,7 +373,7 @@ namespace DrivingSchoolBookingSystem
                 label15.Visible = true;
                 textBox8.Visible = true;
                 textBox8.Enabled = false;
-                button1.Visible = false; // Disable Add button when editing a row
+                
 
                 // Disable automatic date handling during row population  
                 suppressDateEvents = true;
@@ -406,7 +406,8 @@ namespace DrivingSchoolBookingSystem
                 // Get the selected LearnerID from the DataGridView  
                 int learnerID = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value);
 
-                DialogResult confirm = MessageBox.Show("Are you sure you want to delete" + " " + "Learner ID:" + textBox8.Text.ToString() + "," + " " + textBox1.Text.ToString() + " " + textBox2.Text.ToString() + " ?",
+                DialogResult confirm = MessageBox.Show("Are you sure you want to delete" + " " + "Learner ID:" + textBox8.Text.ToString() + "," + " " + textBox1.Text.ToString() + " " + textBox2.Text.ToString() +
+                    " and their related progress record ?" ,
                                                        "Confirm Deletion",
                                                        MessageBoxButtons.YesNo, // Corrected argument  
                                                        MessageBoxIcon.Warning);
@@ -441,23 +442,64 @@ namespace DrivingSchoolBookingSystem
         }
         private void DeleteLearnerFromDatabase(int learnerID)
         {
-            string connectionString = "Data Source=146.230.177.46;Initial Catalog=WstGrp2;Persist Security Info=True;User ID=WstGrp2;Password=d9jdh;TrustServerCertificate=True"; // Replace with your actual DB connection string
+            /*  string connectionString = "Data Source=146.230.177.46;Initial Catalog=WstGrp2;Persist Security Info=True;User ID=WstGrp2;Password=d9jdh;TrustServerCertificate=True"; // Replace with your actual DB connection string
 
-            using (SqlConnection conn = new SqlConnection(connectionString))
+              using (SqlConnection conn = new SqlConnection(connectionString))
+              {
+                  string query = "DELETE FROM tblLearner WHERE LearnerID = @LearnerID";
+
+                  using (SqlCommand cmd = new SqlCommand(query, conn))
+                  {
+                      cmd.Parameters.AddWithValue("@LearnerID", learnerID);
+
+                      conn.Open();
+                      cmd.ExecuteNonQuery();
+                      conn.Close();
+                  }
+              }
+
+              MessageBox.Show("Learner deleted successfully.");*/
+            string connectionString = "Data Source=146.230.177.46;Initial Catalog=WstGrp2;Persist Security Info=True;User ID=WstGrp2;Password=d9jdh;TrustServerCertificate=True";
+
+            try
             {
-                string query = "DELETE FROM tblLearner WHERE LearnerID = @LearnerID";
-
-                using (SqlCommand cmd = new SqlCommand(query, conn))
+                using (SqlConnection conn = new SqlConnection(connectionString))
                 {
-                    cmd.Parameters.AddWithValue("@LearnerID", learnerID);
-
                     conn.Open();
-                    cmd.ExecuteNonQuery();
+
+                    // First delete from TrackLearner
+                    string deleteTracking = "DELETE FROM TrackLearner WHERE LearnerID = @LearnerID";
+                    using (SqlCommand cmdTracking = new SqlCommand(deleteTracking, conn))
+                    {
+                        cmdTracking.Parameters.AddWithValue("@LearnerID", learnerID);
+                        cmdTracking.ExecuteNonQuery();
+                    }
+
+                    // Then delete from tblLearner
+                    string deleteLearner = "DELETE FROM tblLearner WHERE LearnerID = @LearnerID";
+                    using (SqlCommand cmdLearner = new SqlCommand(deleteLearner, conn))
+                    {
+                        cmdLearner.Parameters.AddWithValue("@LearnerID", learnerID);
+                        cmdLearner.ExecuteNonQuery();
+                    }
+
                     conn.Close();
                 }
-            }
 
-            MessageBox.Show("Learner deleted successfully.");
+                MessageBox.Show("The learner and all related progress records were successfully deleted.",
+                                "Deletion Complete",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Oops! Something went wrong while trying to delete the learner.\n\n" +
+                                "Please check your connection or try again later.\n\n" +
+                                "Details: " + ex.Message,
+                                "Error",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+            }
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -597,7 +639,7 @@ namespace DrivingSchoolBookingSystem
                         command.Parameters.AddWithValue("@learner_LearnersExpiryDate", Convert.ToDateTime(textBox9.Text));
                         command.Parameters.AddWithValue("@code_Type", Convert.ToInt32(comboBox4.Text));
 
-                        DialogResult dialogResult = MessageBox.Show("Are you sure you want to update learner " + textBox8.Text + "?", "Confirm Update", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        DialogResult dialogResult = MessageBox.Show("Are you sure you want to update learner " + textBox8.Text + "," + textBox1.Text + " " + textBox2.Text + "?", "Confirm Update", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                         if (dialogResult == DialogResult.Yes)
                         {
                             command.ExecuteNonQuery();
