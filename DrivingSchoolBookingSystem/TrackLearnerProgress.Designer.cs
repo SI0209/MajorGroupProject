@@ -183,7 +183,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(50, 907);
+            this.label5.Location = new System.Drawing.Point(50, 886);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(96, 32);
             this.label5.TabIndex = 15;
@@ -845,6 +845,7 @@
             this.label6.Size = new System.Drawing.Size(298, 24);
             this.label6.TabIndex = 65;
             this.label6.Text = "Click here for further instructions";
+            this.label6.Click += new System.EventHandler(this.label6_Click_1);
             this.label6.MouseEnter += new System.EventHandler(this.label6_MouseEnter);
             this.label6.MouseLeave += new System.EventHandler(this.label6_MouseLeave);
             // 
@@ -906,6 +907,8 @@
             this.Controls.Add(this.pictureBox1);
             this.DoubleBuffered = true;
             this.Name = "LearnerProgressForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form7_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
