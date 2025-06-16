@@ -208,7 +208,7 @@ namespace DrivingSchoolBookingSystem
         {
             foreach (var employee in dsBookingSystem.tblEmployee)
             {
-                if (employee.Employee_ID == idNum)
+                if (employee.Employee_IDNumber == idNum)
                 {
                     return false;
                 }

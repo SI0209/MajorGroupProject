@@ -77,6 +77,7 @@ namespace DrivingSchoolBookingSystem
             taVehicle.Fill(dsBookingSystem.tblVehicle);
             taLearner.Fill(dsBookingSystem.tblLearner);
             taBookingInnerJoin.Fill(dsBookingSystem.tblBookingInnerJoin);
+            radioButton2.Checked = true;
         }
         private void cbxLearnerID_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -566,5 +567,65 @@ namespace DrivingSchoolBookingSystem
         {
 
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton1.Checked)
+            {
+               nudStartTime.Enabled = true;
+               nudEndTime.Enabled = true;
+               dtpBooking.Enabled = true;
+                cbxBookingStatus.Enabled = true;
+                cbxLessonCodes.Enabled = true;
+                cbxLearnerID.Enabled = true;
+                cbxVehicleID.Enabled = true;
+                cbxEmployeeID.Enabled = true;
+                btnAdd.Enabled = true;
+                btnUpdate.Enabled = true;
+                btnDelete.Enabled = true;
+                btnClear.Enabled = true;
+            }
+            else
+            {
+                nudStartTime.Enabled = false;
+                nudEndTime.Enabled = false;
+                dtpBooking.Enabled = false;
+                cbxBookingStatus.Enabled = false;
+                cbxLessonCodes.Enabled = false;
+                cbxLearnerID.Enabled = false;
+                cbxVehicleID.Enabled = false;
+                cbxEmployeeID.Enabled = false;
+                btnAdd.Enabled = false;
+                btnUpdate.Enabled = false;
+                btnDelete.Enabled = false;
+                btnClear.Enabled = false;
+            }
+
+
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!radioButton2.Checked)
+            {
+                nudStartTime.Enabled = false;
+                nudEndTime.Enabled = false;
+                dtpBooking.Enabled = false;
+                cbxBookingStatus.Enabled = false;
+                cbxLessonCodes.Enabled = false;
+                cbxLearnerID.Enabled = false;
+                cbxVehicleID.Enabled = false;
+                cbxEmployeeID.Enabled = false;
+                btnAdd.Enabled = false;
+                btnUpdate.Enabled = false;
+                btnDelete.Enabled = false;
+                btnClear.Enabled = false;
+            }
+            }
     }
 }
