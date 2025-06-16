@@ -27,58 +27,6 @@ namespace DrivingSchoolBookingSystem
             this.taLessonCodes.Fill(this.dsBookingSystem.tblLessonCode);
 
         }
-
-        private void pbLearner_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            ManageLearners manageLearners = new ManageLearners();
-            manageLearners.Show();
-        }
-
-        private void pbBook_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            ManageBooking booking = new ManageBooking();
-            booking.Show();
-        }
-
-        private void pbUnavailableSlot_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            UnavailableTimeSlots unavailableTimeSlots = new UnavailableTimeSlots();
-            unavailableTimeSlots.Show();
-        }
-
-
-
-        private void pbVehicle_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            ManageVehiclesForm manageVehiclesForm = new ManageVehiclesForm();
-            manageVehiclesForm.Show();
-        }
-
-        private void pbAnalytics_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            AnalyticsForm analyticsForm = new AnalyticsForm();
-            analyticsForm.Show();
-        }
-
-        private void pbEmployee_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            ManageInstruc manageEmployee = new ManageInstruc();
-            manageEmployee.Show();
-        }
-
-        private void pbBack_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            LoginForm loginForm = new LoginForm();
-            loginForm.Show();
-        }
-
         private Boolean AllDateEntered()
         {
             if (txtCodeType.Text != "" && txtPricePerHour.Text != "")
@@ -91,6 +39,15 @@ namespace DrivingSchoolBookingSystem
             txtCodeType.Text = "";
             txtPricePerHour.Text = "";
             txtCodeType.Focus();
+        }
+
+        private Boolean checkIfCodeAlreadyExists(int CodeType)
+
+        {
+            foreach (DataRow row in dsBookingSystem.tblLessonCode.Rows)
+                if (Convert.ToInt16(row["Code_Type"]) == CodeType)
+                    return true;
+            return false;
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -183,6 +140,23 @@ namespace DrivingSchoolBookingSystem
             }
         }
 
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            Clear();
+        }
+
+        private Boolean isCodeTypeRelatedInABooking(int codeType)
+        {
+            taBooking.Fill(dsBookingSystem.tblBooking);
+            foreach (DataRow row in dsBookingSystem.tblBooking.Rows)
+            {
+                if (Convert.ToInt16(row["Code_Type"]) == codeType)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
         private void btnDelete_Click(object sender, EventArgs e)
         {
             string message = null;
@@ -232,49 +206,5 @@ namespace DrivingSchoolBookingSystem
                 }
             }
         }
-
-        private void btnClear_Click(object sender, EventArgs e)
-        {
-            Clear();
-        }
-
-        private void dgvLessonCode_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            txtCodeType.Text = dgvLessonCode.CurrentRow.Cells[0].Value.ToString();
-            txtPricePerHour.Text = dgvLessonCode.CurrentRow.Cells[1].Value.ToString();
-            if (txtCodeType.Text.Equals("8"))
-                taVehicle.FillByCode8(dsBookingSystem.tblVehicle);
-            if (txtCodeType.Text.Equals("10"))
-                taVehicle.FillByCode10(dsBookingSystem.tblVehicle);
-            if (Convert.ToInt16(dgvLessonCode.CurrentRow.Cells[0].Value) > 10)
-                taVehicle.FillByCodeGreaterThan10(dsBookingSystem.tblVehicle);
-        }
-
-        private Boolean checkIfCodeAlreadyExists(int CodeType)
-
-        {
-            foreach (DataRow row in dsBookingSystem.tblLessonCode.Rows)
-                if (Convert.ToInt16(row["Code_Type"]) == CodeType)
-                    return true;
-            return false;
-        }
-
-        private Boolean isCodeTypeRelatedInABooking(int codeType)
-        {
-            taBooking.Fill(dsBookingSystem.tblBooking);
-            foreach (DataRow row in dsBookingSystem.tblBooking.Rows)
-            {
-                if (Convert.ToInt16(row["Code_Type"]) == codeType)
-                {
-                    return true;
-                }
-            }
-            return false;
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
-}
+} 
