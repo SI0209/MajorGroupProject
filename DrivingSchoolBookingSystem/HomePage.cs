@@ -24,7 +24,7 @@ namespace DrivingSchoolBookingSystem
         private void HomeForm_Load(object sender, EventArgs e)
         {
             lblUsernameInfo.Text = "Welcome " + Employee_Name + " " + Employee_Surname + "!";
-              lblUserType.Text = Employee_Type;
+              lblUserType.Text = "Role:" + " " +  Employee_Type;
         }
         
 
@@ -81,6 +81,11 @@ namespace DrivingSchoolBookingSystem
             this.Hide();
             LearnerProgressForm LearnerProgress = new LearnerProgressForm();
             LearnerProgress.ShowDialog();
+        }
+
+        private void lblUserType_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)

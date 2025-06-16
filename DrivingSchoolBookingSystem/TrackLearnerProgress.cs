@@ -522,6 +522,29 @@ namespace DrivingSchoolBookingSystem
                         foreach (var row in rowsToRemove)
                             wstGrp2DS2.tblNewLearner.Rows.Remove(row);
                     }
+
+                    // Check if any learners remain after filtering
+                    if (wstGrp2DS2.tblNewLearner.Rows.Count == 0)
+                    {
+                        MessageBox.Show("No learner found matching your search. The full list will now be reloaded.",
+                                        "No Results", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        // Reload default list
+                        tblNewLearnerTableAdapter.FillByNewLearner(this.wstGrp2DS2.tblNewLearner);
+                        textBox7.Clear();
+                        // Remove already tracked learners again
+                        foreach (DataRow trackRow in wstGrp2DS2.TrackLearner.Rows)
+                        {
+                            string learnerId = trackRow["LearnerID"].ToString();
+
+                            var rowsToRemove = wstGrp2DS2.tblNewLearner
+                                .Where(row => row["LearnerID"].ToString() == learnerId)
+                                .ToList();
+
+                            foreach (var row in rowsToRemove)
+                                wstGrp2DS2.tblNewLearner.Rows.Remove(row);
+                        }
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -554,7 +577,6 @@ namespace DrivingSchoolBookingSystem
                     MessageBox.Show("Unable to reset the learner list. Please try again.\n\nDetails: " + ex.Message,
                                     "Reset Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-
 
 
             }
