@@ -117,7 +117,7 @@ namespace DrivingSchoolBookingSystem
             else
             {
                 string message = null;
-                DateTime startDate = dtpStartDate.Value.Date;
+                DateTime startDate = dtpDate.Value.Date;
                 DateTime endDate = dtpEndDate.Value.Date;
                 int startTime = Convert.ToInt16(nudStartTime.Value);
                 int endTime = Convert.ToInt16(nudEndTime.Value);
@@ -176,7 +176,7 @@ namespace DrivingSchoolBookingSystem
                 else
                 {
                     string message = null;
-                    string startDate = dtpStartDate.Value.Date.ToString();
+                    string startDate = dtpDate.Value.Date.ToString();
                     string endDate = dtpEndDate.Value.Date.ToString();
                     int startTime = Convert.ToInt16(nudStartTime.Value);
                     int endTime = Convert.ToInt16(nudEndTime.Value);
@@ -195,8 +195,8 @@ namespace DrivingSchoolBookingSystem
                         return;
                     }
 
-                    if (errorControl.validateUnavailbleSlotDates(dtpStartDate.Value.Date, dtpEndDate.Value.Date) != null)
-                        message += errorControl.validateUnavailbleSlotDates(dtpStartDate.Value.Date, dtpEndDate.Value.Date) + "\n";
+                    if (errorControl.validateUnavailbleSlotDates(dtpDate.Value.Date, dtpEndDate.Value.Date) != null)
+                        message += errorControl.validateUnavailbleSlotDates(dtpDate.Value.Date, dtpEndDate.Value.Date) + "\n";
                     if (errorControl.ValidateUnavailableSlotTimes(startTime, endTime) != null)
                         message += errorControl.ValidateUnavailableSlotTimes(startTime, endTime) + "\n";
                     if (errorControl.ValidateUnavailableSlotReason(reason) != null)
@@ -277,7 +277,7 @@ namespace DrivingSchoolBookingSystem
             if (Convert.ToInt16(dgvUnavailableSlot.CurrentRow.Cells[0].Value) < 0)
                 return;
             unavailableSlotId = Convert.ToInt16(dgvUnavailableSlot.CurrentRow.Cells[0].Value);
-            dtpStartDate.Text = dgvUnavailableSlot.CurrentRow.Cells[1].Value.ToString();
+            dtpDate.Text = dgvUnavailableSlot.CurrentRow.Cells[1].Value.ToString();
             dtpEndDate.Text = dgvUnavailableSlot.CurrentRow.Cells[2].Value.ToString();
             nudStartTime.Text = dgvUnavailableSlot.CurrentRow.Cells[3].Value.ToString().Substring(0, 2);
             nudEndTime.Text = dgvUnavailableSlot.CurrentRow.Cells[4].Value.ToString().Substring(0, 2);
