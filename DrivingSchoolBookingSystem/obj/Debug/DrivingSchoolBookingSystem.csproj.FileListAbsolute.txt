@@ -87,10 +87,8 @@ D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bi
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\System.Threading.Tasks.Extensions.xml
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\System.ValueTuple.xml
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.csproj.AssemblyReference.cache
-D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.exe.config
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.StartUp.resources
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.InstructorSchedule.resources
-D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.LessonCodeForm.resources
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.ManageBooking.resources
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.Password.resources
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.ManageLearners.resources
@@ -107,6 +105,7 @@ D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\ob
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\obj\Debug\DrivingS.9670A750.Up2Date
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.exe
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.pdb
+<<<<<<< HEAD
 C:\Users\Strini\Source\Repos\MajorGroupProjectth\DrivingSchoolBookingSystem\bin\Debug\DrivingSchoolBookingSystem.exe.config
 C:\Users\Strini\Source\Repos\MajorGroupProjectth\DrivingSchoolBookingSystem\bin\Debug\DrivingSchoolBookingSystem.exe
 C:\Users\Strini\Source\Repos\MajorGroupProjectth\DrivingSchoolBookingSystem\bin\Debug\DrivingSchoolBookingSystem.pdb
@@ -233,3 +232,6 @@ C:\Users\OEM\source\repos\MajorGroupProject1\DrivingSchoolBookingSystem\obj\Debu
 C:\Users\OEM\source\repos\MajorGroupProject1\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.Properties.Resources.resources
 C:\Users\OEM\source\repos\MajorGroupProject1\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.csproj.GenerateResource.cache
 C:\Users\OEM\source\repos\MajorGroupProject1\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.csproj.CoreCompileInputs.cache
+=======
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.exe.config
+>>>>>>> 0c4980a (Redesigning forms)

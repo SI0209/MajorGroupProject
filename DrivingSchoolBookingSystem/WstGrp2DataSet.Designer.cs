@@ -6198,14 +6198,14 @@ ORDER BY
             this._commandCollection[24].CommandText = @"UPDATE tblBooking
 SET          Booking_Date = @Booking_Date, Booking_StartTime = @Booking_StartTime, Booking_EndTime = @Booking_EndTime, Booking_Status = @Booking_Status, LearnerID = @LearnerID, Code_Type = @Code_Type, VehicleID = @VehicleID, 
                   EmployeeID = @EmployeeID
-WHERE  (BookingID = @BookingID);  
-SELECT BookingID, Booking_Date, Booking_StartTime, Booking_EndTime, Booking_Status, Booking_TotalCost, Booking_FeeDue, LearnerID, Code_Type, VehicleID, EmployeeID FROM tblBooking WHERE (BookingID = @BookingID)";
+WHERE  (BookingID = @BookingID); 
+SELECT BookingID, Booking_Date, Booking_StartTime, Booking_EndTime, Booking_Status, LearnerID, Code_Type, VehicleID, EmployeeID FROM tblBooking";
             this._commandCollection[24].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[24].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Booking_Date", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "Booking_Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[24].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Booking_StartTime", global::System.Data.SqlDbType.Time, 5, global::System.Data.ParameterDirection.Input, 0, 0, "Booking_StartTime", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[24].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Booking_EndTime", global::System.Data.SqlDbType.Time, 5, global::System.Data.ParameterDirection.Input, 0, 0, "Booking_EndTime", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[24].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Booking_Status", global::System.Data.SqlDbType.VarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, "Booking_Status", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[24].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LearnerID", global::System.Data.SqlDbType.NVarChar, 128, global::System.Data.ParameterDirection.Input, 0, 0, "LearnerID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[24].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LearnerID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "LearnerID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[24].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Code_Type", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Code_Type", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[24].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@VehicleID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "VehicleID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[24].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EmployeeID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "EmployeeID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -7216,7 +7216,8 @@ SELECT BookingID, Booking_Date, Booking_StartTime, Booking_EndTime, Booking_Stat
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int UpdateBooking(string Booking_Date, string Booking_StartTime, string Booking_EndTime, string Booking_Status, string LearnerID, int Code_Type, int VehicleID, int EmployeeID, int BookingID) {
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
+        public virtual int UpdateBooking(string Booking_Date, string Booking_StartTime, string Booking_EndTime, string Booking_Status, int LearnerID, int Code_Type, int VehicleID, int EmployeeID, int BookingID) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[24];
             if ((Booking_Date == null)) {
                 throw new global::System.ArgumentNullException("Booking_Date");
@@ -7242,12 +7243,7 @@ SELECT BookingID, Booking_Date, Booking_StartTime, Booking_EndTime, Booking_Stat
             else {
                 command.Parameters[3].Value = ((string)(Booking_Status));
             }
-            if ((LearnerID == null)) {
-                throw new global::System.ArgumentNullException("LearnerID");
-            }
-            else {
-                command.Parameters[4].Value = ((string)(LearnerID));
-            }
+            command.Parameters[4].Value = ((int)(LearnerID));
             command.Parameters[5].Value = ((int)(Code_Type));
             command.Parameters[6].Value = ((int)(VehicleID));
             command.Parameters[7].Value = ((int)(EmployeeID));

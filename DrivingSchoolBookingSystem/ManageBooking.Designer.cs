@@ -32,22 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManageBooking));
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvLearner = new System.Windows.Forms.DataGridView();
-            this.bookingIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bookingDateDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bookingStartTimeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bookingEndTimeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bookingStatusDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.learnerIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codeTypeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vehicleIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.employeeIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.employeeNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.employeeSurnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.learnerNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.learnerSurnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vehicleMakeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vehicleModelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tblBookingInnerJoinBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dsBookingSystem = new DrivingSchoolBookingSystem.WstGrp2DataSet();
             this.nudEndTime = new System.Windows.Forms.NumericUpDown();
             this.nudStartTime = new System.Windows.Forms.NumericUpDown();
@@ -100,9 +84,24 @@
             this.taLearner = new DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters.tblLearnerTableAdapter();
             this.taBookingInnerJoin = new DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters.tblBookingInnerJoinTableAdapter();
             this.taUnavailableSlot = new DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters.tblUnavailableSlotTableAdapter();
+            this.tblBookingInnerJoinBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bookingIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bookingDateDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bookingStartTimeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bookingEndTimeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bookingStatusDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.learnerIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codeTypeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vehicleIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.employeeIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.employeeNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.employeeSurnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.learnerNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.learnerSurnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vehicleMakeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vehicleModelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLearner)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblBookingInnerJoinBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsBookingSystem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudEndTime)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudStartTime)).BeginInit();
@@ -113,6 +112,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblBookingInnerJoinBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -188,132 +188,6 @@
             this.dgvLearner.Size = new System.Drawing.Size(867, 198);
             this.dgvLearner.TabIndex = 109;
             // 
-            // bookingIDDataGridViewTextBoxColumn1
-            // 
-            this.bookingIDDataGridViewTextBoxColumn1.DataPropertyName = "BookingID";
-            this.bookingIDDataGridViewTextBoxColumn1.HeaderText = "BookingID";
-            this.bookingIDDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.bookingIDDataGridViewTextBoxColumn1.Name = "bookingIDDataGridViewTextBoxColumn1";
-            this.bookingIDDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.bookingIDDataGridViewTextBoxColumn1.Width = 99;
-            // 
-            // bookingDateDataGridViewTextBoxColumn1
-            // 
-            this.bookingDateDataGridViewTextBoxColumn1.DataPropertyName = "Booking_Date";
-            this.bookingDateDataGridViewTextBoxColumn1.HeaderText = "Booking_Date";
-            this.bookingDateDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.bookingDateDataGridViewTextBoxColumn1.Name = "bookingDateDataGridViewTextBoxColumn1";
-            this.bookingDateDataGridViewTextBoxColumn1.Width = 122;
-            // 
-            // bookingStartTimeDataGridViewTextBoxColumn1
-            // 
-            this.bookingStartTimeDataGridViewTextBoxColumn1.DataPropertyName = "Booking_StartTime";
-            this.bookingStartTimeDataGridViewTextBoxColumn1.HeaderText = "Booking_StartTime";
-            this.bookingStartTimeDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.bookingStartTimeDataGridViewTextBoxColumn1.Name = "bookingStartTimeDataGridViewTextBoxColumn1";
-            this.bookingStartTimeDataGridViewTextBoxColumn1.Width = 151;
-            // 
-            // bookingEndTimeDataGridViewTextBoxColumn1
-            // 
-            this.bookingEndTimeDataGridViewTextBoxColumn1.DataPropertyName = "Booking_EndTime";
-            this.bookingEndTimeDataGridViewTextBoxColumn1.HeaderText = "Booking_EndTime";
-            this.bookingEndTimeDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.bookingEndTimeDataGridViewTextBoxColumn1.Name = "bookingEndTimeDataGridViewTextBoxColumn1";
-            this.bookingEndTimeDataGridViewTextBoxColumn1.Width = 148;
-            // 
-            // bookingStatusDataGridViewTextBoxColumn1
-            // 
-            this.bookingStatusDataGridViewTextBoxColumn1.DataPropertyName = "Booking_Status";
-            this.bookingStatusDataGridViewTextBoxColumn1.HeaderText = "Booking_Status";
-            this.bookingStatusDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.bookingStatusDataGridViewTextBoxColumn1.Name = "bookingStatusDataGridViewTextBoxColumn1";
-            this.bookingStatusDataGridViewTextBoxColumn1.Width = 130;
-            // 
-            // learnerIDDataGridViewTextBoxColumn1
-            // 
-            this.learnerIDDataGridViewTextBoxColumn1.DataPropertyName = "LearnerID";
-            this.learnerIDDataGridViewTextBoxColumn1.HeaderText = "LearnerID";
-            this.learnerIDDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.learnerIDDataGridViewTextBoxColumn1.Name = "learnerIDDataGridViewTextBoxColumn1";
-            this.learnerIDDataGridViewTextBoxColumn1.Width = 95;
-            // 
-            // codeTypeDataGridViewTextBoxColumn1
-            // 
-            this.codeTypeDataGridViewTextBoxColumn1.DataPropertyName = "Code_Type";
-            this.codeTypeDataGridViewTextBoxColumn1.HeaderText = "Code_Type";
-            this.codeTypeDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.codeTypeDataGridViewTextBoxColumn1.Name = "codeTypeDataGridViewTextBoxColumn1";
-            this.codeTypeDataGridViewTextBoxColumn1.Width = 108;
-            // 
-            // vehicleIDDataGridViewTextBoxColumn1
-            // 
-            this.vehicleIDDataGridViewTextBoxColumn1.DataPropertyName = "VehicleID";
-            this.vehicleIDDataGridViewTextBoxColumn1.HeaderText = "VehicleID";
-            this.vehicleIDDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.vehicleIDDataGridViewTextBoxColumn1.Name = "vehicleIDDataGridViewTextBoxColumn1";
-            this.vehicleIDDataGridViewTextBoxColumn1.Width = 94;
-            // 
-            // employeeIDDataGridViewTextBoxColumn1
-            // 
-            this.employeeIDDataGridViewTextBoxColumn1.DataPropertyName = "EmployeeID";
-            this.employeeIDDataGridViewTextBoxColumn1.HeaderText = "EmployeeID";
-            this.employeeIDDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.employeeIDDataGridViewTextBoxColumn1.Name = "employeeIDDataGridViewTextBoxColumn1";
-            this.employeeIDDataGridViewTextBoxColumn1.Width = 111;
-            // 
-            // employeeNameDataGridViewTextBoxColumn
-            // 
-            this.employeeNameDataGridViewTextBoxColumn.DataPropertyName = "Employee_Name";
-            this.employeeNameDataGridViewTextBoxColumn.HeaderText = "Employee_Name";
-            this.employeeNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.employeeNameDataGridViewTextBoxColumn.Name = "employeeNameDataGridViewTextBoxColumn";
-            this.employeeNameDataGridViewTextBoxColumn.Width = 142;
-            // 
-            // employeeSurnameDataGridViewTextBoxColumn
-            // 
-            this.employeeSurnameDataGridViewTextBoxColumn.DataPropertyName = "Employee_Surname";
-            this.employeeSurnameDataGridViewTextBoxColumn.HeaderText = "Employee_Surname";
-            this.employeeSurnameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.employeeSurnameDataGridViewTextBoxColumn.Name = "employeeSurnameDataGridViewTextBoxColumn";
-            this.employeeSurnameDataGridViewTextBoxColumn.Width = 159;
-            // 
-            // learnerNameDataGridViewTextBoxColumn
-            // 
-            this.learnerNameDataGridViewTextBoxColumn.DataPropertyName = "Learner_Name";
-            this.learnerNameDataGridViewTextBoxColumn.HeaderText = "Learner_Name";
-            this.learnerNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.learnerNameDataGridViewTextBoxColumn.Name = "learnerNameDataGridViewTextBoxColumn";
-            this.learnerNameDataGridViewTextBoxColumn.Width = 126;
-            // 
-            // learnerSurnameDataGridViewTextBoxColumn
-            // 
-            this.learnerSurnameDataGridViewTextBoxColumn.DataPropertyName = "Learner_Surname";
-            this.learnerSurnameDataGridViewTextBoxColumn.HeaderText = "Learner_Surname";
-            this.learnerSurnameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.learnerSurnameDataGridViewTextBoxColumn.Name = "learnerSurnameDataGridViewTextBoxColumn";
-            this.learnerSurnameDataGridViewTextBoxColumn.Width = 143;
-            // 
-            // vehicleMakeDataGridViewTextBoxColumn
-            // 
-            this.vehicleMakeDataGridViewTextBoxColumn.DataPropertyName = "Vehicle_Make";
-            this.vehicleMakeDataGridViewTextBoxColumn.HeaderText = "Vehicle_Make";
-            this.vehicleMakeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.vehicleMakeDataGridViewTextBoxColumn.Name = "vehicleMakeDataGridViewTextBoxColumn";
-            this.vehicleMakeDataGridViewTextBoxColumn.Width = 122;
-            // 
-            // vehicleModelDataGridViewTextBoxColumn
-            // 
-            this.vehicleModelDataGridViewTextBoxColumn.DataPropertyName = "Vehicle_Model";
-            this.vehicleModelDataGridViewTextBoxColumn.HeaderText = "Vehicle_Model";
-            this.vehicleModelDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.vehicleModelDataGridViewTextBoxColumn.Name = "vehicleModelDataGridViewTextBoxColumn";
-            this.vehicleModelDataGridViewTextBoxColumn.Width = 126;
-            // 
-            // tblBookingInnerJoinBindingSource
-            // 
-            this.tblBookingInnerJoinBindingSource.DataMember = "tblBookingInnerJoin";
-            this.tblBookingInnerJoinBindingSource.DataSource = this.dsBookingSystem;
-            // 
             // dsBookingSystem
             // 
             this.dsBookingSystem.DataSetName = "WstGrp2DataSet";
@@ -370,7 +244,7 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Font = new System.Drawing.Font("Yu Gothic UI", 12F);
-            this.dateTimePicker1.Location = new System.Drawing.Point(744, 505);
+            this.dateTimePicker1.Location = new System.Drawing.Point(727, 510);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(375, 34);
@@ -383,7 +257,7 @@
             this.label17.BackColor = System.Drawing.Color.Transparent;
             this.label17.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label17.Location = new System.Drawing.Point(552, 510);
+            this.label17.Location = new System.Drawing.Point(535, 515);
             this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(141, 28);
@@ -514,7 +388,6 @@
             // 
             // cbxLessonCodes
             // 
-            this.cbxLessonCodes.DisplayMember = "Code_Type";
             this.cbxLessonCodes.Font = new System.Drawing.Font("Yu Gothic UI", 10F);
             this.cbxLessonCodes.FormattingEnabled = true;
             this.cbxLessonCodes.Location = new System.Drawing.Point(19, 352);
@@ -522,7 +395,6 @@
             this.cbxLessonCodes.Name = "cbxLessonCodes";
             this.cbxLessonCodes.Size = new System.Drawing.Size(167, 31);
             this.cbxLessonCodes.TabIndex = 70;
-            this.cbxLessonCodes.ValueMember = "Code_Type";
             this.cbxLessonCodes.SelectedIndexChanged += new System.EventHandler(this.cbxLessonCodes_SelectedIndexChanged);
             // 
             // label12
@@ -770,7 +642,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Ebrima", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label8.Location = new System.Drawing.Point(768, 34);
+            this.label8.Location = new System.Drawing.Point(767, 34);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(129, 28);
@@ -897,6 +769,132 @@
             // 
             this.taUnavailableSlot.ClearBeforeFill = true;
             // 
+            // tblBookingInnerJoinBindingSource
+            // 
+            this.tblBookingInnerJoinBindingSource.DataMember = "tblBookingInnerJoin";
+            this.tblBookingInnerJoinBindingSource.DataSource = this.dsBookingSystem;
+            // 
+            // bookingIDDataGridViewTextBoxColumn1
+            // 
+            this.bookingIDDataGridViewTextBoxColumn1.DataPropertyName = "BookingID";
+            this.bookingIDDataGridViewTextBoxColumn1.HeaderText = "BookingID";
+            this.bookingIDDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.bookingIDDataGridViewTextBoxColumn1.Name = "bookingIDDataGridViewTextBoxColumn1";
+            this.bookingIDDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.bookingIDDataGridViewTextBoxColumn1.Width = 99;
+            // 
+            // bookingDateDataGridViewTextBoxColumn1
+            // 
+            this.bookingDateDataGridViewTextBoxColumn1.DataPropertyName = "Booking_Date";
+            this.bookingDateDataGridViewTextBoxColumn1.HeaderText = "Booking_Date";
+            this.bookingDateDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.bookingDateDataGridViewTextBoxColumn1.Name = "bookingDateDataGridViewTextBoxColumn1";
+            this.bookingDateDataGridViewTextBoxColumn1.Width = 122;
+            // 
+            // bookingStartTimeDataGridViewTextBoxColumn1
+            // 
+            this.bookingStartTimeDataGridViewTextBoxColumn1.DataPropertyName = "Booking_StartTime";
+            this.bookingStartTimeDataGridViewTextBoxColumn1.HeaderText = "Booking_StartTime";
+            this.bookingStartTimeDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.bookingStartTimeDataGridViewTextBoxColumn1.Name = "bookingStartTimeDataGridViewTextBoxColumn1";
+            this.bookingStartTimeDataGridViewTextBoxColumn1.Width = 151;
+            // 
+            // bookingEndTimeDataGridViewTextBoxColumn1
+            // 
+            this.bookingEndTimeDataGridViewTextBoxColumn1.DataPropertyName = "Booking_EndTime";
+            this.bookingEndTimeDataGridViewTextBoxColumn1.HeaderText = "Booking_EndTime";
+            this.bookingEndTimeDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.bookingEndTimeDataGridViewTextBoxColumn1.Name = "bookingEndTimeDataGridViewTextBoxColumn1";
+            this.bookingEndTimeDataGridViewTextBoxColumn1.Width = 148;
+            // 
+            // bookingStatusDataGridViewTextBoxColumn1
+            // 
+            this.bookingStatusDataGridViewTextBoxColumn1.DataPropertyName = "Booking_Status";
+            this.bookingStatusDataGridViewTextBoxColumn1.HeaderText = "Booking_Status";
+            this.bookingStatusDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.bookingStatusDataGridViewTextBoxColumn1.Name = "bookingStatusDataGridViewTextBoxColumn1";
+            this.bookingStatusDataGridViewTextBoxColumn1.Width = 130;
+            // 
+            // learnerIDDataGridViewTextBoxColumn1
+            // 
+            this.learnerIDDataGridViewTextBoxColumn1.DataPropertyName = "LearnerID";
+            this.learnerIDDataGridViewTextBoxColumn1.HeaderText = "LearnerID";
+            this.learnerIDDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.learnerIDDataGridViewTextBoxColumn1.Name = "learnerIDDataGridViewTextBoxColumn1";
+            this.learnerIDDataGridViewTextBoxColumn1.Width = 95;
+            // 
+            // codeTypeDataGridViewTextBoxColumn1
+            // 
+            this.codeTypeDataGridViewTextBoxColumn1.DataPropertyName = "Code_Type";
+            this.codeTypeDataGridViewTextBoxColumn1.HeaderText = "Code_Type";
+            this.codeTypeDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.codeTypeDataGridViewTextBoxColumn1.Name = "codeTypeDataGridViewTextBoxColumn1";
+            this.codeTypeDataGridViewTextBoxColumn1.Width = 108;
+            // 
+            // vehicleIDDataGridViewTextBoxColumn1
+            // 
+            this.vehicleIDDataGridViewTextBoxColumn1.DataPropertyName = "VehicleID";
+            this.vehicleIDDataGridViewTextBoxColumn1.HeaderText = "VehicleID";
+            this.vehicleIDDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.vehicleIDDataGridViewTextBoxColumn1.Name = "vehicleIDDataGridViewTextBoxColumn1";
+            this.vehicleIDDataGridViewTextBoxColumn1.Width = 94;
+            // 
+            // employeeIDDataGridViewTextBoxColumn1
+            // 
+            this.employeeIDDataGridViewTextBoxColumn1.DataPropertyName = "EmployeeID";
+            this.employeeIDDataGridViewTextBoxColumn1.HeaderText = "EmployeeID";
+            this.employeeIDDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.employeeIDDataGridViewTextBoxColumn1.Name = "employeeIDDataGridViewTextBoxColumn1";
+            this.employeeIDDataGridViewTextBoxColumn1.Width = 111;
+            // 
+            // employeeNameDataGridViewTextBoxColumn
+            // 
+            this.employeeNameDataGridViewTextBoxColumn.DataPropertyName = "Employee_Name";
+            this.employeeNameDataGridViewTextBoxColumn.HeaderText = "Employee_Name";
+            this.employeeNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.employeeNameDataGridViewTextBoxColumn.Name = "employeeNameDataGridViewTextBoxColumn";
+            this.employeeNameDataGridViewTextBoxColumn.Width = 142;
+            // 
+            // employeeSurnameDataGridViewTextBoxColumn
+            // 
+            this.employeeSurnameDataGridViewTextBoxColumn.DataPropertyName = "Employee_Surname";
+            this.employeeSurnameDataGridViewTextBoxColumn.HeaderText = "Employee_Surname";
+            this.employeeSurnameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.employeeSurnameDataGridViewTextBoxColumn.Name = "employeeSurnameDataGridViewTextBoxColumn";
+            this.employeeSurnameDataGridViewTextBoxColumn.Width = 159;
+            // 
+            // learnerNameDataGridViewTextBoxColumn
+            // 
+            this.learnerNameDataGridViewTextBoxColumn.DataPropertyName = "Learner_Name";
+            this.learnerNameDataGridViewTextBoxColumn.HeaderText = "Learner_Name";
+            this.learnerNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.learnerNameDataGridViewTextBoxColumn.Name = "learnerNameDataGridViewTextBoxColumn";
+            this.learnerNameDataGridViewTextBoxColumn.Width = 126;
+            // 
+            // learnerSurnameDataGridViewTextBoxColumn
+            // 
+            this.learnerSurnameDataGridViewTextBoxColumn.DataPropertyName = "Learner_Surname";
+            this.learnerSurnameDataGridViewTextBoxColumn.HeaderText = "Learner_Surname";
+            this.learnerSurnameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.learnerSurnameDataGridViewTextBoxColumn.Name = "learnerSurnameDataGridViewTextBoxColumn";
+            this.learnerSurnameDataGridViewTextBoxColumn.Width = 143;
+            // 
+            // vehicleMakeDataGridViewTextBoxColumn
+            // 
+            this.vehicleMakeDataGridViewTextBoxColumn.DataPropertyName = "Vehicle_Make";
+            this.vehicleMakeDataGridViewTextBoxColumn.HeaderText = "Vehicle_Make";
+            this.vehicleMakeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.vehicleMakeDataGridViewTextBoxColumn.Name = "vehicleMakeDataGridViewTextBoxColumn";
+            this.vehicleMakeDataGridViewTextBoxColumn.Width = 122;
+            // 
+            // vehicleModelDataGridViewTextBoxColumn
+            // 
+            this.vehicleModelDataGridViewTextBoxColumn.DataPropertyName = "Vehicle_Model";
+            this.vehicleModelDataGridViewTextBoxColumn.HeaderText = "Vehicle_Model";
+            this.vehicleModelDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.vehicleModelDataGridViewTextBoxColumn.Name = "vehicleModelDataGridViewTextBoxColumn";
+            this.vehicleModelDataGridViewTextBoxColumn.Width = 126;
+            // 
             // ManageBooking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -914,7 +912,6 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLearner)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblBookingInnerJoinBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsBookingSystem)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudEndTime)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudStartTime)).EndInit();
@@ -926,6 +923,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblBookingInnerJoinBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

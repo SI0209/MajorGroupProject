@@ -185,12 +185,6 @@
     <Compile Include="InstructorSchedule.Designer.cs">
       <DependentUpon>InstructorSchedule.cs</DependentUpon>
     </Compile>
-    <Compile Include="LessonCodeForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LessonCodeForm.Designer.cs">
-      <DependentUpon>LessonCodeForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="ManageBooking.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -269,9 +263,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InstructorSchedule.resx">
       <DependentUpon>InstructorSchedule.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LessonCodeForm.resx">
-      <DependentUpon>LessonCodeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManageBooking.resx">
       <DependentUpon>ManageBooking.cs</DependentUpon>

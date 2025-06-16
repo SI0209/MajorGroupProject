@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Password));
             this.passwordUpdatetxtbox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.confirmpasswordtxtbox = new System.Windows.Forms.TextBox();
@@ -54,12 +55,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.SteelBlue;
-            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 8F);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label1.Location = new System.Drawing.Point(227, 204);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(118, 19);
+            this.label1.Size = new System.Drawing.Size(112, 19);
             this.label1.TabIndex = 1;
             this.label1.Text = "Create Password";
             // 
@@ -74,21 +75,21 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.SteelBlue;
-            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 8F);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Location = new System.Drawing.Point(227, 282);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(124, 19);
+            this.label2.Size = new System.Drawing.Size(120, 19);
             this.label2.TabIndex = 3;
             this.label2.Text = "Confirm Password";
             // 
             // updatePasswordbtn
             // 
             this.updatePasswordbtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.updatePasswordbtn.BackgroundImage = global::DrivingSchoolBookingSystem.Properties.Resources.Background_final;
-            this.updatePasswordbtn.Font = new System.Drawing.Font("Comic Sans MS", 8F);
-            this.updatePasswordbtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.updatePasswordbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.updatePasswordbtn.Font = new System.Drawing.Font("Comic Sans MS", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updatePasswordbtn.ForeColor = System.Drawing.SystemColors.ControlText;
             this.updatePasswordbtn.Location = new System.Drawing.Point(298, 405);
             this.updatePasswordbtn.Name = "updatePasswordbtn";
             this.updatePasswordbtn.Size = new System.Drawing.Size(175, 46);
@@ -101,10 +102,10 @@
             // 
             this.passwordformcheckboc.AutoSize = true;
             this.passwordformcheckboc.BackColor = System.Drawing.Color.Transparent;
-            this.passwordformcheckboc.Font = new System.Drawing.Font("Comic Sans MS", 8F);
+            this.passwordformcheckboc.Font = new System.Drawing.Font("Comic Sans MS", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passwordformcheckboc.Location = new System.Drawing.Point(583, 303);
             this.passwordformcheckboc.Name = "passwordformcheckboc";
-            this.passwordformcheckboc.Size = new System.Drawing.Size(129, 23);
+            this.passwordformcheckboc.Size = new System.Drawing.Size(126, 23);
             this.passwordformcheckboc.TabIndex = 5;
             this.passwordformcheckboc.Text = "Show Password";
             this.passwordformcheckboc.UseVisualStyleBackColor = false;
@@ -112,11 +113,11 @@
             // 
             // clearbuttonpasswordform
             // 
-            this.clearbuttonpasswordform.BackColor = System.Drawing.Color.Transparent;
-            this.clearbuttonpasswordform.BackgroundImage = global::DrivingSchoolBookingSystem.Properties.Resources.Background_final;
-            this.clearbuttonpasswordform.Font = new System.Drawing.Font("Comic Sans MS", 8F);
-            this.clearbuttonpasswordform.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.clearbuttonpasswordform.Location = new System.Drawing.Point(640, 405);
+            this.clearbuttonpasswordform.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.clearbuttonpasswordform.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.clearbuttonpasswordform.Font = new System.Drawing.Font("Comic Sans MS", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clearbuttonpasswordform.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.clearbuttonpasswordform.Location = new System.Drawing.Point(626, 403);
             this.clearbuttonpasswordform.Name = "clearbuttonpasswordform";
             this.clearbuttonpasswordform.Size = new System.Drawing.Size(131, 48);
             this.clearbuttonpasswordform.TabIndex = 6;
@@ -126,15 +127,16 @@
             // 
             // backbtnpasswordform
             // 
-            this.backbtnpasswordform.BackgroundImage = global::DrivingSchoolBookingSystem.Properties.Resources.Background_final;
-            this.backbtnpasswordform.Font = new System.Drawing.Font("Comic Sans MS", 8F);
-            this.backbtnpasswordform.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.backbtnpasswordform.Location = new System.Drawing.Point(10, 405);
+            this.backbtnpasswordform.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.backbtnpasswordform.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.backbtnpasswordform.Font = new System.Drawing.Font("Comic Sans MS", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backbtnpasswordform.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.backbtnpasswordform.Location = new System.Drawing.Point(40, 403);
             this.backbtnpasswordform.Name = "backbtnpasswordform";
             this.backbtnpasswordform.Size = new System.Drawing.Size(126, 48);
             this.backbtnpasswordform.TabIndex = 7;
             this.backbtnpasswordform.Text = "BACK";
-            this.backbtnpasswordform.UseVisualStyleBackColor = true;
+            this.backbtnpasswordform.UseVisualStyleBackColor = false;
             this.backbtnpasswordform.Click += new System.EventHandler(this.backbtnpasswordform_Click);
             // 
             // taEmployee
@@ -150,10 +152,10 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox1.Image = global::DrivingSchoolBookingSystem.Properties.Resources.logo_transparent;
-            this.pictureBox1.Location = new System.Drawing.Point(298, 30);
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(298, 24);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(175, 150);
+            this.pictureBox1.Size = new System.Drawing.Size(160, 139);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
@@ -162,7 +164,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::DrivingSchoolBookingSystem.Properties.Resources.Background_final;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 510);
             this.Controls.Add(this.pictureBox1);

@@ -49,10 +49,12 @@ namespace DrivingSchoolBookingSystem
                             isManager = true;
                             Employee_Name = row["Employee_Name"].ToString();
                             Employee_Surname = row["Employee_Surname"].ToString();
+                            Employee_username = row["Employee_Username"].ToString();
                         }
                         isFound = true;
                         Employee_Name = row["Employee_Name"].ToString();
                         Employee_Surname = row["Employee_Surname"].ToString();
+                        Employee_username = row["Employee_Username"].ToString();
                         break;
                     }
 
@@ -94,10 +96,6 @@ namespace DrivingSchoolBookingSystem
             /*this.Hide();
             ManageInstruc mngEmployee = new ManageInstruc();
             mngEmployee.Show();*/
-        }
-        private void pbExit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
 
         private void chkBxShowPas_CheckedChanged(object sender, EventArgs e)

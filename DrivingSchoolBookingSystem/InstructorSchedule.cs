@@ -22,11 +22,10 @@ namespace DrivingSchoolBookingSystem
             InitializeComponent();
             loginForm = login;
             login = loginForm;
-            username = login.Employee_username;
             taEmployee.Fill(dsBookingSystem.tblEmployee);
             foreach (DataRow row in dsBookingSystem.tblEmployee.Rows)
             {
-                if (row["Employee_Username"].ToString().Equals(username))
+                if (row["Employee_Username"].ToString().Equals(login.Employee_username))
                 {
                     name = row["Employee_Name"].ToString();
                     surname = row["Employee_Surname"].ToString();

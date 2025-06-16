@@ -15,6 +15,11 @@ namespace DrivingSchoolBookingSystem
     {
 
         public int BookingID = -1;
+        public int VehicleID;
+        public int EmployeeID;
+        public int LearnerID;
+        public int LessonCodeID;
+        public int dashIndex;
         ErrorControl errorControl = new ErrorControl();
         private decimal originalTotalCost;
         public ManageBooking()
@@ -27,6 +32,13 @@ namespace DrivingSchoolBookingSystem
             taVehicle.Fill(dsBookingSystem.tblVehicle);
             taLearner.Fill(dsBookingSystem.tblLearner);
             taBookingInnerJoin.Fill(dsBookingSystem.tblBookingInnerJoin);
+
+            foreach (DataRow row in dsBookingSystem.tblLessonCode.Rows)
+            {
+                LessonCodeID = Convert.ToInt16(row["Code_Type"]);
+                string displayText = $"{row["Code_Type"]}";
+                cbxLessonCodes.Items.Add(displayText);
+            }
             foreach (DataRow row in dsBookingSystem.tblEmployee.Rows)
             {
                 if (row["Employee_Type"].ToString().Equals("Instructor"))
@@ -59,8 +71,12 @@ namespace DrivingSchoolBookingSystem
 
         private void ManageBooking_Load(object sender, EventArgs e)
         {
-
-
+            taBooking.Fill(dsBookingSystem.tblBooking);
+            taLessonCode.Fill(dsBookingSystem.tblLessonCode);
+            taEmployee.Fill(dsBookingSystem.tblEmployee);
+            taVehicle.Fill(dsBookingSystem.tblVehicle);
+            taLearner.Fill(dsBookingSystem.tblLearner);
+            taBookingInnerJoin.Fill(dsBookingSystem.tblBookingInnerJoin);
         }
         private void cbxLearnerID_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -80,15 +96,26 @@ namespace DrivingSchoolBookingSystem
                 int startTime = Convert.ToInt16(nudStartTime.Value);
                 int endTime = Convert.ToInt16(nudEndTime.Value);
                 string bookingStatus = cbxBookingStatus.Text.ToString();
-                int lessonCodeID = Convert.ToInt32(cbxLessonCodes.Text);
+                int lessonCodeID = Convert.ToInt16(cbxLessonCodes.Text);
                 int learnerID;
                 int vehicleID;
                 int employeeID;
                 try
                 {
-                    learnerID = Convert.ToInt32(cbxLearnerID.Text.ToString().Substring(0, 2));
-                    vehicleID = Convert.ToInt32(cbxVehicleID.Text.ToString().Substring(0, 2));
-                    employeeID = Convert.ToInt32(cbxEmployeeID.Text.ToString().Substring(0, 2));
+                    if (cbxLearnerID.Text.ToString().Contains("-"))
+                       dashIndex = cbxLearnerID.Text.ToString().IndexOf("-");
+                        learnerID = Convert.ToInt32(cbxLearnerID.Text.Substring(0, dashIndex).Trim());
+
+
+                    if (cbxVehicleID.Text.ToString().Contains("-"))
+                        dashIndex = cbxVehicleID.Text.ToString().IndexOf("-");
+                        vehicleID = Convert.ToInt32(cbxVehicleID.Text.Substring(0, dashIndex).Trim());
+                    
+                     if (cbxEmployeeID.Text.ToString().Contains("-"))                   
+                        dashIndex = cbxEmployeeID.Text.ToString().IndexOf("-");
+                        employeeID = Convert.ToInt32(cbxEmployeeID.Text.Substring(0, dashIndex).Trim());
+                    
+                        
                 }
                 catch
                 {
@@ -230,9 +257,18 @@ namespace DrivingSchoolBookingSystem
                     int employeeID;
                     try
                     {
-                        learnerID = Convert.ToInt32(cbxLearnerID.Text.ToString().Substring(0, 2));
-                        vehicleID = Convert.ToInt32(cbxVehicleID.Text.ToString().Substring(0, 2));
-                        employeeID = Convert.ToInt32(cbxEmployeeID.Text.ToString().Substring(0, 2));
+                        if (cbxLearnerID.Text.ToString().Contains("-"))
+                            dashIndex = cbxLearnerID.Text.ToString().IndexOf("-");
+                        learnerID = Convert.ToInt32(cbxLearnerID.Text.Substring(0, dashIndex).Trim());
+
+
+                        if (cbxVehicleID.Text.ToString().Contains("-"))
+                            dashIndex = cbxVehicleID.Text.ToString().IndexOf("-");
+                        vehicleID = Convert.ToInt32(cbxVehicleID.Text.Substring(0, dashIndex).Trim());
+
+                        if (cbxEmployeeID.Text.ToString().Contains("-"))
+                            dashIndex = cbxEmployeeID.Text.ToString().IndexOf("-");
+                        employeeID = Convert.ToInt32(cbxEmployeeID.Text.Substring(0, dashIndex).Trim());
                     }
                     catch
                     {
@@ -274,7 +310,7 @@ namespace DrivingSchoolBookingSystem
                         DialogResult result = MessageBox.Show("Are you sure you would like to update this Booking details?", "Confirmation", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
                         if (result == DialogResult.Yes)
                         {
-                            taBooking.UpdateBooking(date, startTime, endTime, bookingStatus, learnerID.ToString(), lessonCodeID, vehicleID, employeeID, BookingID);
+                            taBooking.UpdateBooking(date, startTime, endTime, bookingStatus, learnerID, lessonCodeID, vehicleID, employeeID, BookingID);
                             taBooking.Fill(dsBookingSystem.tblBooking);
                             taBookingInnerJoin.Fill(dsBookingSystem.tblBookingInnerJoin);
                             btnClear.PerformClick();

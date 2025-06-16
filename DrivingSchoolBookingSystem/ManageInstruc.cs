@@ -538,11 +538,6 @@ namespace DrivingSchoolBookingSystem
         
 
     }
-
-        private void dgvEmployee_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
         private int CalculateAge(string idNumber)
         {
             if (idNumber.Length != 13)
@@ -597,5 +592,7 @@ namespace DrivingSchoolBookingSystem
         {
 
         }
+
+        
     }
 }

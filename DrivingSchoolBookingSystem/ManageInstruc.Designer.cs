@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManageInstruc));
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtSearch = new System.Windows.Forms.TextBox();
@@ -43,7 +44,22 @@
             this.button2 = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.dgvEmployee = new System.Windows.Forms.DataGridView();
-            this.Employee_Username = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.employeeIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.employeeNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.employeeSurnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.employeeIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.employeeAgeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.employeeGenderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.employeeRaceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.employeeCellNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.employeeStreetAddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.employeeSuburbDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.employeeTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.employeeUsernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.employeePasswordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codeTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tblEmployeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dsBookingSystem = new DrivingSchoolBookingSystem.WstGrp2DataSet();
             this.cbxRace = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.cbxGender = new System.Windows.Forms.ComboBox();
@@ -65,15 +81,15 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.dsBookingSystem = new DrivingSchoolBookingSystem.WstGrp2DataSet();
             this.tblEmployeeTableAdapter = new DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters.tblEmployeeTableAdapter();
             this.taBooking = new DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters.tblBookingTableAdapter();
             this.taUnavailableSlot = new DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters.tblUnavailableSlotTableAdapter();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAge)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployee)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblEmployeeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsBookingSystem)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -232,6 +248,7 @@
             this.btnUpdate.TabIndex = 80;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnDelete
             // 
@@ -244,6 +261,7 @@
             this.btnDelete.TabIndex = 79;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // button2
             // 
@@ -256,6 +274,7 @@
             this.button2.TabIndex = 78;
             this.button2.Text = "Clear";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnAdd
             // 
@@ -268,13 +287,29 @@
             this.btnAdd.TabIndex = 77;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // dgvEmployee
             // 
+            this.dgvEmployee.AutoGenerateColumns = false;
             this.dgvEmployee.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEmployee.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Employee_Username});
+            this.employeeIDDataGridViewTextBoxColumn,
+            this.employeeNameDataGridViewTextBoxColumn,
+            this.employeeSurnameDataGridViewTextBoxColumn,
+            this.employeeIDDataGridViewTextBoxColumn1,
+            this.employeeAgeDataGridViewTextBoxColumn,
+            this.employeeGenderDataGridViewTextBoxColumn,
+            this.employeeRaceDataGridViewTextBoxColumn,
+            this.employeeCellNumberDataGridViewTextBoxColumn,
+            this.employeeStreetAddressDataGridViewTextBoxColumn,
+            this.employeeSuburbDataGridViewTextBoxColumn,
+            this.employeeTypeDataGridViewTextBoxColumn,
+            this.employeeUsernameDataGridViewTextBoxColumn,
+            this.employeePasswordDataGridViewTextBoxColumn,
+            this.codeTypeDataGridViewTextBoxColumn});
+            this.dgvEmployee.DataSource = this.tblEmployeeBindingSource;
             this.dgvEmployee.Location = new System.Drawing.Point(383, 85);
             this.dgvEmployee.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvEmployee.Name = "dgvEmployee";
@@ -282,14 +317,131 @@
             this.dgvEmployee.RowTemplate.Height = 24;
             this.dgvEmployee.Size = new System.Drawing.Size(1033, 670);
             this.dgvEmployee.TabIndex = 53;
+            this.dgvEmployee.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvEmployee_RowHeaderMouseClick);
+            this.dgvEmployee.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvEmployee_RowHeaderMouseClick);
             // 
-            // Employee_Username
+            // employeeIDDataGridViewTextBoxColumn
             // 
-            this.Employee_Username.DataPropertyName = "Employee_Username";
-            this.Employee_Username.HeaderText = "Employee_Email";
-            this.Employee_Username.MinimumWidth = 6;
-            this.Employee_Username.Name = "Employee_Username";
-            this.Employee_Username.Width = 139;
+            this.employeeIDDataGridViewTextBoxColumn.DataPropertyName = "EmployeeID";
+            this.employeeIDDataGridViewTextBoxColumn.HeaderText = "EmployeeID";
+            this.employeeIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.employeeIDDataGridViewTextBoxColumn.Name = "employeeIDDataGridViewTextBoxColumn";
+            this.employeeIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.employeeIDDataGridViewTextBoxColumn.Width = 111;
+            // 
+            // employeeNameDataGridViewTextBoxColumn
+            // 
+            this.employeeNameDataGridViewTextBoxColumn.DataPropertyName = "Employee_Name";
+            this.employeeNameDataGridViewTextBoxColumn.HeaderText = "Employee_Name";
+            this.employeeNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.employeeNameDataGridViewTextBoxColumn.Name = "employeeNameDataGridViewTextBoxColumn";
+            this.employeeNameDataGridViewTextBoxColumn.Width = 142;
+            // 
+            // employeeSurnameDataGridViewTextBoxColumn
+            // 
+            this.employeeSurnameDataGridViewTextBoxColumn.DataPropertyName = "Employee_Surname";
+            this.employeeSurnameDataGridViewTextBoxColumn.HeaderText = "Employee_Surname";
+            this.employeeSurnameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.employeeSurnameDataGridViewTextBoxColumn.Name = "employeeSurnameDataGridViewTextBoxColumn";
+            this.employeeSurnameDataGridViewTextBoxColumn.Width = 159;
+            // 
+            // employeeIDDataGridViewTextBoxColumn1
+            // 
+            this.employeeIDDataGridViewTextBoxColumn1.DataPropertyName = "Employee_ID";
+            this.employeeIDDataGridViewTextBoxColumn1.HeaderText = "Employee_ID";
+            this.employeeIDDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.employeeIDDataGridViewTextBoxColumn1.Name = "employeeIDDataGridViewTextBoxColumn1";
+            this.employeeIDDataGridViewTextBoxColumn1.Width = 118;
+            // 
+            // employeeAgeDataGridViewTextBoxColumn
+            // 
+            this.employeeAgeDataGridViewTextBoxColumn.DataPropertyName = "Employee_Age";
+            this.employeeAgeDataGridViewTextBoxColumn.HeaderText = "Employee_Age";
+            this.employeeAgeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.employeeAgeDataGridViewTextBoxColumn.Name = "employeeAgeDataGridViewTextBoxColumn";
+            this.employeeAgeDataGridViewTextBoxColumn.Width = 130;
+            // 
+            // employeeGenderDataGridViewTextBoxColumn
+            // 
+            this.employeeGenderDataGridViewTextBoxColumn.DataPropertyName = "Employee_Gender";
+            this.employeeGenderDataGridViewTextBoxColumn.HeaderText = "Employee_Gender";
+            this.employeeGenderDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.employeeGenderDataGridViewTextBoxColumn.Name = "employeeGenderDataGridViewTextBoxColumn";
+            this.employeeGenderDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // employeeRaceDataGridViewTextBoxColumn
+            // 
+            this.employeeRaceDataGridViewTextBoxColumn.DataPropertyName = "Employee_Race";
+            this.employeeRaceDataGridViewTextBoxColumn.HeaderText = "Employee_Race";
+            this.employeeRaceDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.employeeRaceDataGridViewTextBoxColumn.Name = "employeeRaceDataGridViewTextBoxColumn";
+            this.employeeRaceDataGridViewTextBoxColumn.Width = 138;
+            // 
+            // employeeCellNumberDataGridViewTextBoxColumn
+            // 
+            this.employeeCellNumberDataGridViewTextBoxColumn.DataPropertyName = "Employee_CellNumber";
+            this.employeeCellNumberDataGridViewTextBoxColumn.HeaderText = "Employee_CellNumber";
+            this.employeeCellNumberDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.employeeCellNumberDataGridViewTextBoxColumn.Name = "employeeCellNumberDataGridViewTextBoxColumn";
+            this.employeeCellNumberDataGridViewTextBoxColumn.Width = 176;
+            // 
+            // employeeStreetAddressDataGridViewTextBoxColumn
+            // 
+            this.employeeStreetAddressDataGridViewTextBoxColumn.DataPropertyName = "Employee_StreetAddress";
+            this.employeeStreetAddressDataGridViewTextBoxColumn.HeaderText = "Employee_StreetAddress";
+            this.employeeStreetAddressDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.employeeStreetAddressDataGridViewTextBoxColumn.Name = "employeeStreetAddressDataGridViewTextBoxColumn";
+            this.employeeStreetAddressDataGridViewTextBoxColumn.Width = 191;
+            // 
+            // employeeSuburbDataGridViewTextBoxColumn
+            // 
+            this.employeeSuburbDataGridViewTextBoxColumn.DataPropertyName = "Employee_Suburb";
+            this.employeeSuburbDataGridViewTextBoxColumn.HeaderText = "Employee_Suburb";
+            this.employeeSuburbDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.employeeSuburbDataGridViewTextBoxColumn.Name = "employeeSuburbDataGridViewTextBoxColumn";
+            this.employeeSuburbDataGridViewTextBoxColumn.Width = 148;
+            // 
+            // employeeTypeDataGridViewTextBoxColumn
+            // 
+            this.employeeTypeDataGridViewTextBoxColumn.DataPropertyName = "Employee_Type";
+            this.employeeTypeDataGridViewTextBoxColumn.HeaderText = "Employee_Type";
+            this.employeeTypeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.employeeTypeDataGridViewTextBoxColumn.Name = "employeeTypeDataGridViewTextBoxColumn";
+            this.employeeTypeDataGridViewTextBoxColumn.Width = 137;
+            // 
+            // employeeUsernameDataGridViewTextBoxColumn
+            // 
+            this.employeeUsernameDataGridViewTextBoxColumn.DataPropertyName = "Employee_Username";
+            this.employeeUsernameDataGridViewTextBoxColumn.HeaderText = "Employee_Username";
+            this.employeeUsernameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.employeeUsernameDataGridViewTextBoxColumn.Name = "employeeUsernameDataGridViewTextBoxColumn";
+            this.employeeUsernameDataGridViewTextBoxColumn.Width = 168;
+            // 
+            // employeePasswordDataGridViewTextBoxColumn
+            // 
+            this.employeePasswordDataGridViewTextBoxColumn.DataPropertyName = "Employee_Password";
+            this.employeePasswordDataGridViewTextBoxColumn.HeaderText = "Employee_Password";
+            this.employeePasswordDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.employeePasswordDataGridViewTextBoxColumn.Name = "employeePasswordDataGridViewTextBoxColumn";
+            this.employeePasswordDataGridViewTextBoxColumn.Width = 165;
+            // 
+            // codeTypeDataGridViewTextBoxColumn
+            // 
+            this.codeTypeDataGridViewTextBoxColumn.DataPropertyName = "Code_Type";
+            this.codeTypeDataGridViewTextBoxColumn.HeaderText = "Code_Type";
+            this.codeTypeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.codeTypeDataGridViewTextBoxColumn.Name = "codeTypeDataGridViewTextBoxColumn";
+            this.codeTypeDataGridViewTextBoxColumn.Width = 108;
+            // 
+            // tblEmployeeBindingSource
+            // 
+            this.tblEmployeeBindingSource.DataMember = "tblEmployee";
+            this.tblEmployeeBindingSource.DataSource = this.dsBookingSystem;
+            // 
+            // dsBookingSystem
+            // 
+            this.dsBookingSystem.DataSetName = "WstGrp2DataSet";
+            this.dsBookingSystem.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // cbxRace
             // 
@@ -422,6 +574,7 @@
             this.txtIDNum.Name = "txtIDNum";
             this.txtIDNum.Size = new System.Drawing.Size(164, 34);
             this.txtIDNum.TabIndex = 42;
+            this.txtIDNum.Leave += new System.EventHandler(this.txtIDNum_Leave);
             // 
             // txtSurname
             // 
@@ -544,11 +697,6 @@
             this.label3.TabIndex = 22;
             this.label3.Text = "Manage Employees";
             // 
-            // dsBookingSystem
-            // 
-            this.dsBookingSystem.DataSetName = "WstGrp2DataSet";
-            this.dsBookingSystem.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // tblEmployeeTableAdapter
             // 
             this.tblEmployeeTableAdapter.ClearBeforeFill = true;
@@ -565,7 +713,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::DrivingSchoolBookingSystem.Properties.Resources.Background_final;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1545, 895);
             this.Controls.Add(this.panel1);
@@ -576,8 +724,9 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAge)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployee)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblEmployeeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsBookingSystem)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -599,7 +748,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.DataGridView dgvEmployee;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Employee_Username;
         private System.Windows.Forms.ComboBox cbxRace;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.ComboBox cbxGender;
@@ -625,5 +773,20 @@
         private WstGrp2DataSetTableAdapters.tblEmployeeTableAdapter tblEmployeeTableAdapter;
         private WstGrp2DataSetTableAdapters.tblBookingTableAdapter taBooking;
         private WstGrp2DataSetTableAdapters.tblUnavailableSlotTableAdapter taUnavailableSlot;
+        private System.Windows.Forms.BindingSource tblEmployeeBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn employeeIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn employeeNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn employeeSurnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn employeeIDDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn employeeAgeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn employeeGenderDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn employeeRaceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn employeeCellNumberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn employeeStreetAddressDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn employeeSuburbDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn employeeTypeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn employeeUsernameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn employeePasswordDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codeTypeDataGridViewTextBoxColumn;
     }
 }
