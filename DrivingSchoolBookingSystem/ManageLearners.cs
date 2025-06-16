@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace DrivingSchoolBookingSystem
@@ -22,6 +23,48 @@ namespace DrivingSchoolBookingSystem
         {
             InitializeComponent();
             SetIssueDatePickerRange();
+
+            // Make label16 look like a hyperlinkAdd commentMore actions
+            label16.Text = "Click here for instructions";
+            label16.ForeColor = Color.Blue;
+            label16.Font = new Font(label16.Font, FontStyle.Underline);
+            label16.Cursor = Cursors.Hand;
+
+            // Configure tooltip timing and behavior
+            toolTip1.AutoPopDelay = 5000;     // Time the tooltip stays visible
+            toolTip1.InitialDelay = 500;      // Delay before it appears
+            toolTip1.ReshowDelay = 100;       // Delay before showing again
+            toolTip1.ShowAlways = true;       // Show even when form isn't active
+
+            toolTip1.SetToolTip(textBox1, "Enter the learner's first name.");
+            toolTip1.SetToolTip(textBox2, "Enter the learner's surname.");
+            toolTip1.SetToolTip(textBox3, "Enter the learner's ID number.");
+            toolTip1.SetToolTip(textBox4, "Enter the learner's age.");
+            toolTip1.SetToolTip(comboBox1, "Select the learner's gender.");
+            toolTip1.SetToolTip(comboBox2, "Select the learner's race group.");
+            toolTip1.SetToolTip(textBox5, "Enter the learner's cellphone number.");
+            toolTip1.SetToolTip(textBox6, "Enter the learner's street address.");
+            toolTip1.SetToolTip(comboBox3, "Select the suburb where the learner lives.");
+            toolTip1.SetToolTip(IssuedateTimePicker1, "Select the date the learner license was issued.");
+            toolTip1.SetToolTip(textBox9, "Displays the license expiry date.");
+            toolTip1.SetToolTip(comboBox4, "Select the code type for the learner's license.");
+
+
+
+            toolTip1.SetToolTip(button1, "Click to add a new learner.");
+            toolTip1.SetToolTip(button5, "Click to update selected learner details.");
+            toolTip1.SetToolTip(button2, "Click to delete selected learner.");
+            toolTip1.SetToolTip(button4, "Clear the search field and reload the table.");
+            toolTip1.SetToolTip(button3, "Clear all fields.");
+            toolTip1.SetToolTip(pictureBox5, "Logout of the system.");
+            toolTip1.SetToolTip(pictureBox2, "Redirect back to home page");
+
+
+            toolTip1.SetToolTip(radioButton1, "Enable edit mode to allow changes.");
+            toolTip1.SetToolTip(radioButton2, "Disable edit mode to prevent changes.");
+            toolTip1.SetToolTip(textBox7, "Search by learner ID, name or surname.");
+
+            toolTip1.SetToolTip(label16, "Click to view help and usage guidance.");
         }
 
         private void LearnerForm2_Load(object sender, EventArgs e)
@@ -775,6 +818,57 @@ namespace DrivingSchoolBookingSystem
             IssuedateTimePicker1.Enabled = true;
             textBox9.Enabled = true;
             comboBox4.Enabled = true;
+        }
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+            string instructions = "📋 Learner Management Instructions:\n\n" +
+                          "🔍 Search:\n" +
+                          " - Enter a learner's ID, name, or surname in the search box.\n" +
+                          " - Matching learners will appear in the table below.\n\n" +
+                          "🧾 Viewing Learners:\n" +
+                          " - Click on a row in the table to load that learner's details into the form.\n" +
+                          " - Their info will appear in the fields on the left.\n\n" +
+                          "🖋️ Edit Mode:\n" +
+                          " - Turn Edit Mode ON to enable changes to learner info.\n" +
+                          " - Turn it OFF to prevent accidental edits.\n\n" +
+                          "➕ Add:\n" +
+                          " - Fill out all fields.\n" +
+                          " - Click **Add** to create a new learner record.\n\n" +
+                          "🔄 Update:\n" +
+                          " - Select a learner from the grid.\n" +
+                          " - Make the desired changes (Edit Mode must be ON).\n" +
+                          " - Click Update to save changes.\n\n" +
+                          "❌ Delete:\n" +
+                          " - Select a learner in the grid.\n" +
+                          " - Click Delete to remove them permanently.\n\n" +
+                          "🧽 Clear:\n" +
+                          " - Clears all the fields in the form.\n\n" +
+                          "🔁 Reset:\n" +
+                          " - Clears the search box and reloads all learners in the table.\n\n" +
+                          "📅 Issue/Expiry Dates:\n" +
+                          " - Set the Issue Date, and the **Expiry Date** is calculated automatically.\n\n" +
+                          "🚪 Logout:\n" +
+                          " - Logs out of the system and returns to the login screen.\n\n" +
+                          "💡 Tip: Hover your mouse over any field or button for a helpful tooltip.";
+
+            MessageBox.Show(instructions, "How to Use This Form", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
+        private void label16_MouseEnter(object sender, EventArgs e)
+        {
+            label16.ForeColor = Color.DarkRed; // or a hover color you prefer
+        }
+
+        private void label16_MouseLeave(object sender, EventArgs e)
+        {
+            label16.ForeColor = Color.Blue;
+        }
+        
+
+        private void toolTip2_Popup(object sender, PopupEventArgs e)
+        {
+
         }
     }
 }
