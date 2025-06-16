@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace DrivingSchoolBookingSystem
 {
     public partial class HomeForm : Form
@@ -30,35 +31,26 @@ namespace DrivingSchoolBookingSystem
             toolTip1.SetToolTip(pictureBox4, "View all instructor schedules");
             toolTip1.SetToolTip(pictureBox2, "Generate analytics and progress reports");
 
+           
             toolTip1.IsBalloon = true;
+            toolTip1.AutoPopDelay = 3000;   // Tooltip stays visible for 3 seconds
+            toolTip1.InitialDelay = 500;    // Wait 0.5 seconds before showing tooltip
+            toolTip1.ReshowDelay = 500;     // Delay before showing again when moving quickly
+
+
+           
+
+
         }
 
         private void HomeForm_Load(object sender, EventArgs e)
         {
             lblUsernameInfo.Text = "Welcome " + Employee_Name + " " + Employee_Surname + "!";
               lblUserType.Text = "Role:" + " " +  Employee_Type;
-        }
-        
-
-        private void pictureBox6_Click(object sender, EventArgs e)
-        {
 
         }
+       
 
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox6_Click_1(object sender, EventArgs e)
-        {
-
-        }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
