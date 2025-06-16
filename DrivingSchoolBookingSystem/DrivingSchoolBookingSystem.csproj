@@ -203,9 +203,7 @@
     <Compile Include="Password.Designer.cs">
       <DependentUpon>Password.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManageLearners.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="ManageLearners.cs" />
     <Compile Include="ManageLearners.Designer.cs">
       <DependentUpon>ManageLearners.cs</DependentUpon>
     </Compile>
