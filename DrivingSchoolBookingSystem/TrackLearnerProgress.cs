@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.IO;
 /*using MigraDoc.DocumentObjectModel;
 using MigraDoc.DocumentObjectModel.Tables;
 using MigraDoc.Rendering;
@@ -19,6 +20,7 @@ namespace DrivingSchoolBookingSystem
 {
     public partial class LearnerProgressForm : Form
     {
+        LoginForm loginform;
         public LearnerProgressForm()
         {
             InitializeComponent();
@@ -552,7 +554,7 @@ namespace DrivingSchoolBookingSystem
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            HomeForm home = new HomeForm();
+            HomeForm home = new HomeForm(loginform);
             home.Show();
             this.Hide();
         }

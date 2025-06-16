@@ -13,7 +13,7 @@ namespace DrivingSchoolBookingSystem
 {
     public partial class ManageBooking : Form
     {
-
+        LoginForm loginform;
         public int BookingID = -1;
         public int VehicleID;
         public int EmployeeID;
@@ -260,16 +260,16 @@ namespace DrivingSchoolBookingSystem
                     {
                         if (cbxLearnerID.Text.ToString().Contains("-"))
                             dashIndex = cbxLearnerID.Text.ToString().IndexOf("-");
-                        learnerID = Convert.ToInt32(cbxLearnerID.Text.Substring(0, dashIndex).Trim());
+                        learnerID = Convert.ToInt32(cbxLearnerID.Text.Substring(0, dashIndex));
 
 
                         if (cbxVehicleID.Text.ToString().Contains("-"))
                             dashIndex = cbxVehicleID.Text.ToString().IndexOf("-");
-                        vehicleID = Convert.ToInt32(cbxVehicleID.Text.Substring(0, dashIndex).Trim());
+                        vehicleID = Convert.ToInt32(cbxVehicleID.Text.Substring(0, dashIndex));
 
                         if (cbxEmployeeID.Text.ToString().Contains("-"))
                             dashIndex = cbxEmployeeID.Text.ToString().IndexOf("-");
-                        employeeID = Convert.ToInt32(cbxEmployeeID.Text.Substring(0, dashIndex).Trim());
+                        employeeID = Convert.ToInt32(cbxEmployeeID.Text.Substring(0, dashIndex));
                     }
                     catch
                     {
@@ -519,7 +519,7 @@ namespace DrivingSchoolBookingSystem
         private void pictureBox5_Click(object sender, EventArgs e)
         {
             this.Hide();
-            HomeForm home = new HomeForm();
+            HomeForm home = new HomeForm(loginform);
             home.ShowDialog();
         }
 
@@ -585,10 +585,10 @@ namespace DrivingSchoolBookingSystem
                 cbxLearnerID.Enabled = true;
                 cbxVehicleID.Enabled = true;
                 cbxEmployeeID.Enabled = true;
-                btnAdd.Enabled = true;
-                btnUpdate.Enabled = true;
-                btnDelete.Enabled = true;
-                btnClear.Enabled = true;
+                btnAdd.Visible = true;
+                btnUpdate.Visible = true;
+                btnDelete.Visible = true;
+                btnClear.Visible = true;
             }
             else
             {
@@ -600,10 +600,10 @@ namespace DrivingSchoolBookingSystem
                 cbxLearnerID.Enabled = false;
                 cbxVehicleID.Enabled = false;
                 cbxEmployeeID.Enabled = false;
-                btnAdd.Enabled = false;
-                btnUpdate.Enabled = false;
-                btnDelete.Enabled = false;
-                btnClear.Enabled = false;
+                btnAdd.Visible = false;
+                btnUpdate.Visible = false;
+                btnDelete.Visible = false;
+                btnClear.Visible= false;
             }
 
 
@@ -621,10 +621,10 @@ namespace DrivingSchoolBookingSystem
                 cbxLearnerID.Enabled = false;
                 cbxVehicleID.Enabled = false;
                 cbxEmployeeID.Enabled = false;
-                btnAdd.Enabled = false;
-                btnUpdate.Enabled = false;
-                btnDelete.Enabled = false;
-                btnClear.Enabled = false;
+                btnAdd.Visible = false;
+                btnUpdate.Visible = false;
+                btnDelete.Visible = false;
+                btnClear.Visible = false;
             }
             }
     }

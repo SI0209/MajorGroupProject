@@ -87,6 +87,7 @@ D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bi
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\System.Threading.Tasks.Extensions.xml
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\System.ValueTuple.xml
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.csproj.AssemblyReference.cache
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.exe.config
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.StartUp.resources
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.InstructorSchedule.resources
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.ManageBooking.resources
@@ -105,6 +106,7 @@ D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\ob
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\obj\Debug\DrivingS.9670A750.Up2Date
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.exe
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.pdb
+<<<<<<< HEAD
 <<<<<<< HEAD
 C:\Users\Strini\Source\Repos\MajorGroupProjectth\DrivingSchoolBookingSystem\bin\Debug\DrivingSchoolBookingSystem.exe.config
 C:\Users\Strini\Source\Repos\MajorGroupProjectth\DrivingSchoolBookingSystem\bin\Debug\DrivingSchoolBookingSystem.exe
@@ -433,3 +435,5 @@ C:\Users\OEM\Source\Repos\MajorGroupProject1\DrivingSchoolBookingSystem\bin\Debu
 C:\Users\OEM\Source\Repos\MajorGroupProject1\DrivingSchoolBookingSystem\obj\Debug\DrivingS.9670A750.Up2Date
 C:\Users\OEM\Source\Repos\MajorGroupProject1\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.exe
 C:\Users\OEM\Source\Repos\MajorGroupProject1\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.pdb
+=======
+>>>>>>> c2bc003 (Fixing Instructor Schedule Form)

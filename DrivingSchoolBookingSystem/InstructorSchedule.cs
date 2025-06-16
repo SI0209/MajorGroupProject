@@ -12,16 +12,14 @@ namespace DrivingSchoolBookingSystem
 {
     public partial class InstructorSchedule : Form
     {
-        LoginForm loginForm;
-        string username;
+        LoginForm loginform;
         string name;
         string surname;
         int EmployeeID;
         public InstructorSchedule(LoginForm login)
         {
             InitializeComponent();
-            loginForm = login;
-            login = loginForm;
+            loginform = login;
             taEmployee.Fill(dsBookingSystem.tblEmployee);
             foreach (DataRow row in dsBookingSystem.tblEmployee.Rows)
             {
@@ -38,7 +36,7 @@ namespace DrivingSchoolBookingSystem
             //MessageBox.Show(today);
             taInstructorSchedule.Fill(dsBookingSystem.tblInstuctorSchedule, EmployeeID, today);
             this.StartPosition = FormStartPosition.CenterScreen;
-
+            
         }
 
         
@@ -48,7 +46,7 @@ namespace DrivingSchoolBookingSystem
         private void dtpDate_ValueChanged(object sender, EventArgs e)
         {
             string searchDate = dtpDate.Value.Date.ToShortDateString();
-            taInstructorSchedule.SearchByDate(dsBookingSystem.tblInstuctorSchedule, EmployeeID, searchDate);
+            taInstructorSchedule.SearchByDate(dsBookingSystem.tblInstuctorSchedule, EmployeeID, dtpDate.Value.ToShortDateString());
         }
 
         private void pbBack_Click_1(object sender, EventArgs e)
@@ -65,7 +63,7 @@ namespace DrivingSchoolBookingSystem
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            HomeForm home = new HomeForm();
+            HomeForm home = new HomeForm(loginform);
             home.Show();
             this.Hide();
         }

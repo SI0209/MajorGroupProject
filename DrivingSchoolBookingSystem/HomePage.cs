@@ -13,16 +13,17 @@ namespace DrivingSchoolBookingSystem
 {
     public partial class HomeForm : Form
     {
-        LoginForm login;
-        public string Employee_Name, Employee_Surname, Employee_Type;
-        public HomeForm()
+        LoginForm loginForm;
+        public string Employee_Name, Employee_Surname, Employee_Type, Employee_Username;
+        public HomeForm(LoginForm Loginform)
         {
             InitializeComponent();
+            loginForm = Loginform;
         }
 
         private void HomeForm_Load(object sender, EventArgs e)
         {
-              lblUsernameInfo.Text = "Welcome " + Employee_Name + " " + Employee_Surname + "!";
+            lblUsernameInfo.Text = "Welcome " + Employee_Name + " " + Employee_Surname + "!";
               lblUserType.Text = Employee_Type;
         }
         
@@ -50,7 +51,7 @@ namespace DrivingSchoolBookingSystem
         private void pictureBox4_Click(object sender, EventArgs e)
         {
             this.Hide();
-            InstructorSchedule instructorschedule = new InstructorSchedule(login);
+            InstructorSchedule instructorschedule = new InstructorSchedule(loginForm);
             instructorschedule.ShowDialog();
         }
 
@@ -92,8 +93,8 @@ namespace DrivingSchoolBookingSystem
         private void pictureBox14_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ManageInstruc instuctor = new ManageInstruc();
-            instuctor.ShowDialog();
+            ManageInstruc instructor = new ManageInstruc();
+            instructor.ShowDialog();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)

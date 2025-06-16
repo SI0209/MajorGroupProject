@@ -12,6 +12,7 @@ namespace DrivingSchoolBookingSystem
 {
     public partial class AnalyticsForm : Form
     {
+        LoginForm loginform;
         public AnalyticsForm()
         {
             InitializeComponent();
@@ -25,14 +26,14 @@ namespace DrivingSchoolBookingSystem
         private void pictureBox5_Click(object sender, EventArgs e)
         {
             this.Hide();
-            HomeForm home = new HomeForm();
+            HomeForm home = new HomeForm(loginform);
             home.ShowDialog();
         }
 
         private void label2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            HomeForm home = new HomeForm();
+            HomeForm home = new HomeForm(loginform);
             home.ShowDialog();
         }
 

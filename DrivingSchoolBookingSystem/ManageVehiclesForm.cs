@@ -19,7 +19,7 @@ namespace DrivingSchoolBookingSystem
         private int VehicleID = -1;
         private ErrorControl errorControl = new ErrorControl();
         tblBookingTableAdapter taBooking = new tblBookingTableAdapter();
-
+        LoginForm loginform;
         public ManageVehiclesForm()
         {
             InitializeComponent();
@@ -261,7 +261,7 @@ namespace DrivingSchoolBookingSystem
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            HomeForm home = new HomeForm();
+            HomeForm home = new HomeForm(loginform);
             home.Show();
             this.Hide();
         }

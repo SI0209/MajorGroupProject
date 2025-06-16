@@ -18,7 +18,7 @@ namespace DrivingSchoolBookingSystem
     {
         private bool autoDateHandlingEnabled = true;
         private bool suppressDateEvents = false;
-
+        LoginForm Loginform;
         public ManageLearners()
         {
             InitializeComponent();
@@ -768,7 +768,7 @@ namespace DrivingSchoolBookingSystem
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-           HomeForm home = new HomeForm(); 
+           HomeForm home = new HomeForm(Loginform); 
             home.Show();                             
             this.Hide();
         }
