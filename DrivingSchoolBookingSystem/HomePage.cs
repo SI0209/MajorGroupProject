@@ -19,6 +19,18 @@ namespace DrivingSchoolBookingSystem
         {
             InitializeComponent();
             loginForm = Loginform;
+
+
+            toolTip1.SetToolTip(pictureBox8, "Manage all learner records");
+            toolTip1.SetToolTip(pictureBox14, "Manage all employee records");
+            toolTip1.SetToolTip(pictureBox10, "Manage all vehicle records");
+            toolTip1.SetToolTip(pictureBox1, "Create and assign lesson bookings to learners");
+            toolTip1.SetToolTip(pictureBox12, "Track learner performance");
+            toolTip1.SetToolTip(pictureBox3, "View instructor unavailable time slots");
+            toolTip1.SetToolTip(pictureBox4, "View all instructor schedules");
+            toolTip1.SetToolTip(pictureBox2, "Generate analytics and progress reports");
+
+            toolTip1.IsBalloon = true;
         }
 
         private void HomeForm_Load(object sender, EventArgs e)

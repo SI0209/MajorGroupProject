@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
@@ -40,6 +41,7 @@
             this.lblUserType = new System.Windows.Forms.Label();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
@@ -77,7 +79,7 @@
             // 
             this.pictureBox10.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox10.Image = global::DrivingSchoolBookingSystem.Properties.Resources.image_removebg_preview__1_1;
-            this.pictureBox10.Location = new System.Drawing.Point(603, 254);
+            this.pictureBox10.Location = new System.Drawing.Point(603, 170);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(275, 199);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -89,7 +91,7 @@
             // 
             this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox8.Image = global::DrivingSchoolBookingSystem.Properties.Resources.image_removebg_preview__2_1;
-            this.pictureBox8.Location = new System.Drawing.Point(208, 265);
+            this.pictureBox8.Location = new System.Drawing.Point(221, 183);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(271, 158);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -101,7 +103,7 @@
             // 
             this.pictureBox12.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox12.Image = global::DrivingSchoolBookingSystem.Properties.Resources.image_removebg_preview__6_1;
-            this.pictureBox12.Location = new System.Drawing.Point(208, 439);
+            this.pictureBox12.Location = new System.Drawing.Point(221, 347);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(271, 186);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -113,7 +115,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::DrivingSchoolBookingSystem.Properties.Resources.image_removebg_preview__8_;
-            this.pictureBox2.Location = new System.Drawing.Point(834, 660);
+            this.pictureBox2.Location = new System.Drawing.Point(847, 553);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(271, 159);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -125,7 +127,7 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = global::DrivingSchoolBookingSystem.Properties.Resources.image_removebg_preview__9_;
-            this.pictureBox3.Location = new System.Drawing.Point(603, 474);
+            this.pictureBox3.Location = new System.Drawing.Point(612, 394);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(275, 139);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -137,7 +139,7 @@
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.Image = global::DrivingSchoolBookingSystem.Properties.Resources.image_removebg_preview__11_;
-            this.pictureBox4.Location = new System.Drawing.Point(401, 656);
+            this.pictureBox4.Location = new System.Drawing.Point(406, 539);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(284, 173);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -176,7 +178,7 @@
             // 
             this.pictureBox14.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox14.Image = global::DrivingSchoolBookingSystem.Properties.Resources.image_removebg_preview__14_1;
-            this.pictureBox14.Location = new System.Drawing.Point(939, 442);
+            this.pictureBox14.Location = new System.Drawing.Point(939, 360);
             this.pictureBox14.Name = "pictureBox14";
             this.pictureBox14.Size = new System.Drawing.Size(237, 149);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -188,7 +190,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::DrivingSchoolBookingSystem.Properties.Resources.Screenshot_2025_06_16_204837_removebg_preview1;
-            this.pictureBox1.Location = new System.Drawing.Point(926, 265);
+            this.pictureBox1.Location = new System.Drawing.Point(939, 183);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(277, 171);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -248,5 +250,6 @@
         public System.Windows.Forms.Label lblUserType;
         private System.Windows.Forms.PictureBox pictureBox14;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
