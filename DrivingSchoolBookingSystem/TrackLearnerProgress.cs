@@ -478,30 +478,86 @@ namespace DrivingSchoolBookingSystem
 
         private void textBox7_TextChanged(object sender, EventArgs e)
         {
-             string input = textBox7.Text.Trim();
+            /*string input = textBox7.Text.Trim();
 
-             if (input.Length >= 1)
-             {
-                 try
-                 {
-                     this.tblNewLearnerTableAdapter.FillByLearnerName(this.wstGrp2DS2.tblNewLearner, textBox7.Text.Trim());
+            if (input.Length >= 1)
+            {
+                try
+                {
+                    this.tblNewLearnerTableAdapter.FillByLearnerName(this.wstGrp2DS2.tblNewLearner, textBox7.Text.Trim());
 
-                 
+
+               }
+
+
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error searching learners: " + ex.Message);
+                }
+            }
+            else
+            {
+               tblNewLearnerTableAdapter.FillByNewLearner(this.wstGrp2DS2.tblNewLearner);
+           }*/
+
+
+            string input = textBox7.Text.Trim();
+
+            if (input.Length >= 1)
+            {
+                try
+                {
+                    // Try searching for learners matching the name
+                    this.tblNewLearnerTableAdapter.FillByLearnerName(this.wstGrp2DS2.tblNewLearner, input);
+
+                    // Exclude learners that are already being tracked
+                    foreach (DataRow trackRow in wstGrp2DS2.TrackLearner.Rows)
+                    {
+                        string learnerId = trackRow["LearnerID"].ToString();
+
+                        var rowsToRemove = wstGrp2DS2.tblNewLearner
+                            .Where(row => row["LearnerID"].ToString() == learnerId)
+                            .ToList();
+
+                        foreach (var row in rowsToRemove)
+                            wstGrp2DS2.tblNewLearner.Rows.Remove(row);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Something went wrong while searching. Please try again.\n\nDetails: " + ex.Message,
+                                    "Search Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            else
+            {
+                try
+                {
+                    // Reload all learners who are not already being tracked
+                    tblNewLearnerTableAdapter.FillByNewLearner(this.wstGrp2DS2.tblNewLearner);
+
+                    // Exclude learners that are already being tracked
+                    foreach (DataRow trackRow in wstGrp2DS2.TrackLearner.Rows)
+                    {
+                        string learnerId = trackRow["LearnerID"].ToString();
+
+                        var rowsToRemove = wstGrp2DS2.tblNewLearner
+                            .Where(row => row["LearnerID"].ToString() == learnerId)
+                            .ToList();
+
+                        foreach (var row in rowsToRemove)
+                            wstGrp2DS2.tblNewLearner.Rows.Remove(row);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Unable to reset the learner list. Please try again.\n\nDetails: " + ex.Message,
+                                    "Reset Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
 
 
-                 catch (Exception ex)
-                 {
-                     MessageBox.Show("Error searching learners: " + ex.Message);
-                 }
-             }
-             else
-             {
-                tblNewLearnerTableAdapter.FillByNewLearner(this.wstGrp2DS2.tblNewLearner);
+
             }
-
-           
-
         }
 
         private void textBox8_TextChanged(object sender, EventArgs e)
