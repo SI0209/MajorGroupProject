@@ -99,37 +99,51 @@ namespace DrivingSchoolBookingSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(string.IsNullOrWhiteSpace(textBox1.Text)||string.IsNullOrWhiteSpace(textBox2.Text)||string.IsNullOrWhiteSpace(textBox3.Text)||
-                string.IsNullOrWhiteSpace(textBox4.Text) || string.IsNullOrWhiteSpace(textBox5.Text) || string.IsNullOrWhiteSpace(textBox6.Text))
+            if (string.IsNullOrWhiteSpace(textBox1.Text) || string.IsNullOrWhiteSpace(textBox2.Text) || string.IsNullOrWhiteSpace(textBox3.Text) ||
+     string.IsNullOrWhiteSpace(textBox4.Text) || string.IsNullOrWhiteSpace(textBox5.Text) || string.IsNullOrWhiteSpace(textBox6.Text))
             {
                 MessageBox.Show("Please fill in all required fields.");
                 return;
             }
-            if (textBox1.Text.Any(char.IsDigit)||textBox2.Text.Any(char.IsDigit))
+
+            // Name fields should not contain digits
+            if (textBox1.Text.Any(char.IsDigit) || textBox2.Text.Any(char.IsDigit))
             {
                 MessageBox.Show("Name fields cannot contain numbers.");
                 return;
             }
-            if (textBox3.Text.Length>13)
+
+            // ID number must be exactly 13 digits and all numeric
+            if (textBox3.Text.Length != 13)
             {
-                MessageBox.Show("ID number cannot contain more than 13 digits");
+                MessageBox.Show("ID number must be exactly 13 digits.");
                 return;
             }
-            else if (textBox3.Text.Any(char.IsLetter))
+            else if (!textBox3.Text.All(char.IsDigit))
             {
-                MessageBox.Show("ID number cannot contain letters.");
+                MessageBox.Show("ID number must contain only digits.");
                 return;
             }
-            if (textBox4.Text.Any(char.IsLetter))
+
+            // Age must be numeric and between 16 and 99
+            if (!int.TryParse(textBox4.Text, out int age))
             {
-                MessageBox.Show("Age cannot contain letters.");
+                MessageBox.Show("Age must be a number.");
                 return;
             }
-            if (textBox5.Text.Length > 10)
+            else if (age < 16 || age > 99)
             {
-                MessageBox.Show("Cell phone number can only contain 10 digits.");
+                MessageBox.Show("Age must be between 16 and 99.");
                 return;
-            }else if (textBox5.Text.Any(char.IsLetter))
+            }
+
+            // Cell phone number must be 10 digits and all numeric
+            if (textBox5.Text.Length != 10)
+            {
+                MessageBox.Show("Cell phone number must be exactly 10 digits.");
+                return;
+            }
+            else if (!textBox5.Text.All(char.IsDigit))
             {
                 MessageBox.Show("Cell phone number cannot contain letters.");
                 return;
@@ -383,19 +397,20 @@ namespace DrivingSchoolBookingSystem
                 label15.Visible = true;
                 textBox8.Visible = true;
                 textBox8.Enabled = false;
-                
 
-                // Disable automatic date handling during row population  
-                suppressDateEvents = true;
-                autoDateHandlingEnabled = false;
 
-                // Temporarily remove restrictions to set historical values  
-                IssuedateTimePicker1.MinDate = DateTimePicker.MinimumDateTime;
-                IssuedateTimePicker1.MaxDate = DateTimePicker.MaximumDateTime;
+                /*  // Disable automatic date handling during row population  
+                  suppressDateEvents = true;
+                  autoDateHandlingEnabled = false;
 
-                DateTime issueDate = Convert.ToDateTime(dataGridView1.CurrentRow.Cells[10].Value);
-                IssuedateTimePicker1.Value = issueDate;
+                  // Temporarily remove restrictions to set historical values  
+                  IssuedateTimePicker1.MinDate = DateTimePicker.MinimumDateTime;
+                  IssuedateTimePicker1.MaxDate = DateTimePicker.MaximumDateTime;
 
+                  DateTime issueDate = Convert.ToDateTime(dataGridView1.CurrentRow.Cells[10].Value);
+                  IssuedateTimePicker1.Value = issueDate;*/
+                UpdateExpiryDate();
+                IssuedateTimePicker1.Value = Convert.ToDateTime(dataGridView1.CurrentRow.Cells[10].Value);
                 textBox9.Text = Convert.ToDateTime(dataGridView1.CurrentRow.Cells[11].Value).ToString("yyyy-MM-dd");
               
             }
@@ -437,13 +452,14 @@ namespace DrivingSchoolBookingSystem
                     textBox5.Clear();
                     textBox6.Clear();
                     textBox8.Clear();
-                    textBox9.Clear();
+                    
                     IssuedateTimePicker1.Value = DateTime.Today;
 
                     comboBox1.SelectedIndex = -1;
                     comboBox2.SelectedIndex = -1;
                     comboBox3.SelectedIndex = -1;
                     comboBox4.SelectedIndex = -1;
+                    textBox9.Clear();
                 }
             }
             else
@@ -665,13 +681,13 @@ namespace DrivingSchoolBookingSystem
                             textBox5.Clear();
                             textBox6.Clear();
                             textBox8.Clear();
-                            textBox9.Clear();
+                            
                             IssuedateTimePicker1.Value = DateTime.Today;
                             comboBox1.SelectedIndex = -1; // Reset to no selection
                             comboBox2.SelectedIndex = -1; // Reset to no selection
                             comboBox3.SelectedIndex = -1; // Reset to no selection
                             comboBox4.SelectedIndex = -1; // Reset to no selection
-
+                            textBox9.Clear(); // Clear expiry date textbox
 
                         }
                     }
