@@ -26,20 +26,24 @@ namespace DrivingSchoolBookingSystem
             label6.ForeColor = Color.Blue;
             label6.Font = new Font(label6.Font, FontStyle.Underline);
             label6.Cursor = Cursors.Hand;
-            // ToolTip settings (optional but helpful)
-            toolTip1.IsBalloon = true;
-            toolTip1.ShowAlways = true;
+            // Configure tooltip timing and behavior
+            toolTip1.AutoPopDelay = 5000;     // Time the tooltip stays visible
+            toolTip1.InitialDelay = 500;      // Delay before it appears
+            toolTip1.ReshowDelay = 100;       // Delay before showing again
+            toolTip1.ShowAlways = true;       // Show even when form isn't active
 
             // GridViews
             toolTip1.SetToolTip(dataGridView1, "Click a learner row to view or update progress.");
             toolTip1.SetToolTip(dataGridView2, "Shows learners not yet added to progress tracking.");
+            toolTip1.SetToolTip(textBox7, "Search by learner first name.");
+            toolTip1.SetToolTip(textBox8, "Search by learner first name or lesson topic.");
 
             // Textboxes & Fields
             toolTip1.SetToolTip(textBox1, "Enter learner first name or lesson topic to search.");
             toolTip1.SetToolTip(textBox2, "Enter learner's name to filter new learners.");
             toolTip1.SetToolTip(comboBox1, "Enter the topic covered in the lesson.");
             toolTip1.SetToolTip(comboBox2, "Mark attendance status.");
-            toolTip1.SetToolTip(comboBox3, "Rate learner's performance (e.g., Good, Poor).");
+            toolTip1.SetToolTip(comboBox3, "Rate learner's performance.");
             toolTip1.SetToolTip(textBox5, "Describe any errors made during the lesson.");
             toolTip1.SetToolTip(textBox6, "Add any additional remarks about the session.");
             toolTip1.SetToolTip(comboBox4, "Choose the overall progress note.");
@@ -692,30 +696,32 @@ namespace DrivingSchoolBookingSystem
         {
             label6.ForeColor = Color.Blue;
         }
-        private void label6_Click(object sender, EventArgs e)
+       
+
+        private void label6_Click_1(object sender, EventArgs e)
         {
             string instructions = "📘 Track Learner Progress – Instructions:\n\n" +
-                                  "🔍 **Searching Progress Records**:\n" +
-                                  " - Use the top search box to find progress by learner name or lesson topic.\n" +
-                                  " - Click **Reset** to reload all progress entries.\n\n" +
-                                  "📋 **Viewing & Editing Progress**:\n" +
-                                  " - Click a row in the progress table (top grid) to view their full details.\n" +
-                                  " - Learner details (ID, Name, Surname) are read-only.\n" +
-                                  " - Enable **Edit Mode ON** to make changes to progress fields.\n\n" +
-                                  "✏️ **Updating Progress**:\n" +
-                                  " - Select a learner from the top grid.\n" +
-                                  " - Make updates to progress info (topic, rating, errors, etc.).\n" +
-                                  " - Click **Update** to save changes.\n\n" +
-                                  "🆕 **New Learners**:\n" +
-                                  " - Bottom grid shows learners not yet tracked.\n" +
-                                  " - Search for them using the lower search box.\n" +
-                                  " - Select a row, then click **Add** to include them in progress tracking.\n\n" +
-                                  "🧽 **Clear**: Clears all progress entry fields.\n\n" +
-                                  "🔁 **Auto Cleanup**:\n" +
-                                  " - If a learner is deleted from the Learner Management form,\n" +
-                                  "   their progress record is automatically removed here.\n\n" +
-                                  "🚪 **Logout**: Safely logs you out of the system.\n\n" +
-                                  "💡 **Tip**: Hover over buttons and fields for helpful tooltips.";
+                      "🔍 Searching Progress Records:\n" +
+                      " - Use the top search box to find progress by learner name or lesson topic.\n" +
+                      " - Click Reset to reload all progress entries.\n\n" +
+                      "📋 Viewing & Editing Progress:\n" +
+                      " - Click a row in the progress table (top grid) to view their full details.\n" +
+                      " - Learner details (ID, Name, Surname) are read-only.\n" +
+                      " - Enable Edit Mode ON to make changes to progress fields.\n\n" +
+                      "✏️ Updating Progress:\n" +
+                      " - Select a learner from the top grid.\n" +
+                      " - Make updates to progress info (topic, rating, errors, etc.).\n" +
+                      " - Click Update to save changes.\n\n" +
+                      "🆕 New Learners:\n" +
+                      " - Bottom grid shows learners not yet tracked.\n" +
+                      " - Search for them using the lower search box.\n" +
+                      " - Select a row, then click Add to include them in progress tracking.\n\n" +
+                      "🧽 Clear: Clears all progress entry fields.\n\n" +
+                      "🔁 Auto Cleanup:\n" +
+                      " - If a learner is deleted from the Learner Management form,\n" +
+                      "   their progress record is automatically removed here.\n\n" +
+                      "🚪 Logout: Safely logs you out of the system.\n\n" +
+                      "💡 Tip: Hover over buttons and fields for helpful tooltips.";
 
             MessageBox.Show(instructions, "Track Learner Progress – Help", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
