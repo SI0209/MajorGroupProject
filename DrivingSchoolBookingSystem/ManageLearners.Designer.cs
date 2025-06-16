@@ -99,8 +99,7 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
+            this.label17 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblLearnerBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wstGrp2DataSet1BindingSource)).BeginInit();
@@ -871,18 +870,23 @@
             this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(1553, 79);
+            this.label16.Location = new System.Drawing.Point(1451, 62);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(273, 24);
+            this.label16.Size = new System.Drawing.Size(298, 24);
             this.label16.TabIndex = 44;
-            this.label16.Text = "Click here for further guidance";
-            this.label16.Click += new System.EventHandler(this.label16_Click);
-            this.label16.MouseEnter += new System.EventHandler(this.label16_MouseEnter);
-            this.label16.MouseLeave += new System.EventHandler(this.label16_MouseLeave);
+            this.label16.Text = "Click here for further instructions";
             // 
-            // toolTip2
+            // label17
             // 
-            this.toolTip2.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip2_Popup);
+            this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.Color.Transparent;
+            this.label17.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.White;
+            this.label17.Location = new System.Drawing.Point(1375, 153);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(298, 24);
+            this.label17.TabIndex = 45;
+            this.label17.Text = "Click here for further instructions";
             // 
             // ManageLearners
             // 

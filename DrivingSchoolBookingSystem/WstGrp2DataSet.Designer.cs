@@ -992,7 +992,7 @@ namespace DrivingSchoolBookingSystem {
             
             private global::System.Data.DataColumn columnEmployee_Surname;
             
-            private global::System.Data.DataColumn columnEmployee_ID;
+            private global::System.Data.DataColumn columnEmployee_IDNumber;
             
             private global::System.Data.DataColumn columnEmployee_Age;
             
@@ -1073,9 +1073,9 @@ namespace DrivingSchoolBookingSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn Employee_IDColumn {
+            public global::System.Data.DataColumn Employee_IDNumberColumn {
                 get {
-                    return this.columnEmployee_ID;
+                    return this.columnEmployee_IDNumber;
                 }
             }
             
@@ -1196,13 +1196,13 @@ namespace DrivingSchoolBookingSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public tblEmployeeRow AddtblEmployeeRow(string Employee_Name, string Employee_Surname, string Employee_ID, int Employee_Age, string Employee_Gender, string Employee_Race, string Employee_CellNumber, string Employee_StreetAddress, string Employee_Suburb, string Employee_Type, string Employee_Username, string Employee_Password, int Code_Type) {
+            public tblEmployeeRow AddtblEmployeeRow(string Employee_Name, string Employee_Surname, string Employee_IDNumber, int Employee_Age, string Employee_Gender, string Employee_Race, string Employee_CellNumber, string Employee_StreetAddress, string Employee_Suburb, string Employee_Type, string Employee_Username, string Employee_Password, int Code_Type) {
                 tblEmployeeRow rowtblEmployeeRow = ((tblEmployeeRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         Employee_Name,
                         Employee_Surname,
-                        Employee_ID,
+                        Employee_IDNumber,
                         Employee_Age,
                         Employee_Gender,
                         Employee_Race,
@@ -1245,7 +1245,7 @@ namespace DrivingSchoolBookingSystem {
                 this.columnEmployeeID = base.Columns["EmployeeID"];
                 this.columnEmployee_Name = base.Columns["Employee_Name"];
                 this.columnEmployee_Surname = base.Columns["Employee_Surname"];
-                this.columnEmployee_ID = base.Columns["Employee_ID"];
+                this.columnEmployee_IDNumber = base.Columns["Employee_IDNumber"];
                 this.columnEmployee_Age = base.Columns["Employee_Age"];
                 this.columnEmployee_Gender = base.Columns["Employee_Gender"];
                 this.columnEmployee_Race = base.Columns["Employee_Race"];
@@ -1267,8 +1267,8 @@ namespace DrivingSchoolBookingSystem {
                 base.Columns.Add(this.columnEmployee_Name);
                 this.columnEmployee_Surname = new global::System.Data.DataColumn("Employee_Surname", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEmployee_Surname);
-                this.columnEmployee_ID = new global::System.Data.DataColumn("Employee_ID", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnEmployee_ID);
+                this.columnEmployee_IDNumber = new global::System.Data.DataColumn("Employee_IDNumber", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEmployee_IDNumber);
                 this.columnEmployee_Age = new global::System.Data.DataColumn("Employee_Age", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEmployee_Age);
                 this.columnEmployee_Gender = new global::System.Data.DataColumn("Employee_Gender", typeof(string), null, global::System.Data.MappingType.Element);
@@ -1301,8 +1301,8 @@ namespace DrivingSchoolBookingSystem {
                 this.columnEmployee_Name.MaxLength = 35;
                 this.columnEmployee_Surname.AllowDBNull = false;
                 this.columnEmployee_Surname.MaxLength = 35;
-                this.columnEmployee_ID.AllowDBNull = false;
-                this.columnEmployee_ID.MaxLength = 13;
+                this.columnEmployee_IDNumber.AllowDBNull = false;
+                this.columnEmployee_IDNumber.MaxLength = 13;
                 this.columnEmployee_Age.AllowDBNull = false;
                 this.columnEmployee_Gender.AllowDBNull = false;
                 this.columnEmployee_Gender.MaxLength = 10;
@@ -2917,13 +2917,7 @@ namespace DrivingSchoolBookingSystem {
             
             private global::System.Data.DataColumn columnBooking_Status;
             
-            private global::System.Data.DataColumn columnLearnerID;
-            
             private global::System.Data.DataColumn columnCode_Type;
-            
-            private global::System.Data.DataColumn columnVehicleID;
-            
-            private global::System.Data.DataColumn columnEmployeeID;
             
             private global::System.Data.DataColumn columnEmployee_Name;
             
@@ -3012,33 +3006,9 @@ namespace DrivingSchoolBookingSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn LearnerIDColumn {
-                get {
-                    return this.columnLearnerID;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public global::System.Data.DataColumn Code_TypeColumn {
                 get {
                     return this.columnCode_Type;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn VehicleIDColumn {
-                get {
-                    return this.columnVehicleID;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn EmployeeIDColumn {
-                get {
-                    return this.columnEmployeeID;
                 }
             }
             
@@ -3127,7 +3097,7 @@ namespace DrivingSchoolBookingSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public tblBookingInnerJoinRow AddtblBookingInnerJoinRow(System.DateTime Booking_Date, System.TimeSpan Booking_StartTime, System.TimeSpan Booking_EndTime, string Booking_Status, int LearnerID, int Code_Type, int VehicleID, int EmployeeID, string Employee_Name, string Employee_Surname, string Learner_Name, string Learner_Surname, string Vehicle_Make, string Vehicle_Model) {
+            public tblBookingInnerJoinRow AddtblBookingInnerJoinRow(System.DateTime Booking_Date, System.TimeSpan Booking_StartTime, System.TimeSpan Booking_EndTime, string Booking_Status, int Code_Type, string Employee_Name, string Employee_Surname, string Learner_Name, string Learner_Surname, string Vehicle_Make, string Vehicle_Model) {
                 tblBookingInnerJoinRow rowtblBookingInnerJoinRow = ((tblBookingInnerJoinRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -3135,10 +3105,7 @@ namespace DrivingSchoolBookingSystem {
                         Booking_StartTime,
                         Booking_EndTime,
                         Booking_Status,
-                        LearnerID,
                         Code_Type,
-                        VehicleID,
-                        EmployeeID,
                         Employee_Name,
                         Employee_Surname,
                         Learner_Name,
@@ -3179,10 +3146,7 @@ namespace DrivingSchoolBookingSystem {
                 this.columnBooking_StartTime = base.Columns["Booking_StartTime"];
                 this.columnBooking_EndTime = base.Columns["Booking_EndTime"];
                 this.columnBooking_Status = base.Columns["Booking_Status"];
-                this.columnLearnerID = base.Columns["LearnerID"];
                 this.columnCode_Type = base.Columns["Code_Type"];
-                this.columnVehicleID = base.Columns["VehicleID"];
-                this.columnEmployeeID = base.Columns["EmployeeID"];
                 this.columnEmployee_Name = base.Columns["Employee_Name"];
                 this.columnEmployee_Surname = base.Columns["Employee_Surname"];
                 this.columnLearner_Name = base.Columns["Learner_Name"];
@@ -3204,14 +3168,8 @@ namespace DrivingSchoolBookingSystem {
                 base.Columns.Add(this.columnBooking_EndTime);
                 this.columnBooking_Status = new global::System.Data.DataColumn("Booking_Status", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnBooking_Status);
-                this.columnLearnerID = new global::System.Data.DataColumn("LearnerID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnLearnerID);
                 this.columnCode_Type = new global::System.Data.DataColumn("Code_Type", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCode_Type);
-                this.columnVehicleID = new global::System.Data.DataColumn("VehicleID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnVehicleID);
-                this.columnEmployeeID = new global::System.Data.DataColumn("EmployeeID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnEmployeeID);
                 this.columnEmployee_Name = new global::System.Data.DataColumn("Employee_Name", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEmployee_Name);
                 this.columnEmployee_Surname = new global::System.Data.DataColumn("Employee_Surname", typeof(string), null, global::System.Data.MappingType.Element);
@@ -3237,10 +3195,7 @@ namespace DrivingSchoolBookingSystem {
                 this.columnBooking_EndTime.AllowDBNull = false;
                 this.columnBooking_Status.AllowDBNull = false;
                 this.columnBooking_Status.MaxLength = 20;
-                this.columnLearnerID.AllowDBNull = false;
                 this.columnCode_Type.AllowDBNull = false;
-                this.columnVehicleID.AllowDBNull = false;
-                this.columnEmployeeID.AllowDBNull = false;
                 this.columnEmployee_Name.AllowDBNull = false;
                 this.columnEmployee_Name.MaxLength = 35;
                 this.columnEmployee_Surname.AllowDBNull = false;
@@ -4348,12 +4303,12 @@ namespace DrivingSchoolBookingSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Employee_ID {
+            public string Employee_IDNumber {
                 get {
-                    return ((string)(this[this.tabletblEmployee.Employee_IDColumn]));
+                    return ((string)(this[this.tabletblEmployee.Employee_IDNumberColumn]));
                 }
                 set {
-                    this[this.tabletblEmployee.Employee_IDColumn] = value;
+                    this[this.tabletblEmployee.Employee_IDNumberColumn] = value;
                 }
             }
             
@@ -5057,45 +5012,12 @@ namespace DrivingSchoolBookingSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int LearnerID {
-                get {
-                    return ((int)(this[this.tabletblBookingInnerJoin.LearnerIDColumn]));
-                }
-                set {
-                    this[this.tabletblBookingInnerJoin.LearnerIDColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public int Code_Type {
                 get {
                     return ((int)(this[this.tabletblBookingInnerJoin.Code_TypeColumn]));
                 }
                 set {
                     this[this.tabletblBookingInnerJoin.Code_TypeColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int VehicleID {
-                get {
-                    return ((int)(this[this.tabletblBookingInnerJoin.VehicleIDColumn]));
-                }
-                set {
-                    this[this.tabletblBookingInnerJoin.VehicleIDColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int EmployeeID {
-                get {
-                    return ((int)(this[this.tabletblBookingInnerJoin.EmployeeIDColumn]));
-                }
-                set {
-                    this[this.tabletblBookingInnerJoin.EmployeeIDColumn] = value;
                 }
             }
             
@@ -7390,7 +7312,7 @@ SELECT BookingID, Booking_Date, Booking_StartTime, Booking_EndTime, Booking_Stat
             tableMapping.ColumnMappings.Add("EmployeeID", "EmployeeID");
             tableMapping.ColumnMappings.Add("Employee_Name", "Employee_Name");
             tableMapping.ColumnMappings.Add("Employee_Surname", "Employee_Surname");
-            tableMapping.ColumnMappings.Add("Employee_ID", "Employee_ID");
+            tableMapping.ColumnMappings.Add("Employee_ID", "Employee_IDNumber");
             tableMapping.ColumnMappings.Add("Employee_Age", "Employee_Age");
             tableMapping.ColumnMappings.Add("Employee_Gender", "Employee_Gender");
             tableMapping.ColumnMappings.Add("Employee_Race", "Employee_Race");
@@ -7401,15 +7323,16 @@ SELECT BookingID, Booking_Date, Booking_StartTime, Booking_EndTime, Booking_Stat
             tableMapping.ColumnMappings.Add("Employee_Username", "Employee_Username");
             tableMapping.ColumnMappings.Add("Employee_Password", "Employee_Password");
             tableMapping.ColumnMappings.Add("Code_Type", "Code_Type");
+            tableMapping.ColumnMappings.Add("Employee_IDNumber", "Employee_IDNumber");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[tblEmployee] WHERE (([EmployeeID] = @Original_EmployeeID) AND ([Employee_Name] = @Original_Employee_Name) AND ([Employee_Surname] = @Original_Employee_Surname) AND ([Employee_ID] = @Original_Employee_ID) AND ([Employee_Age] = @Original_Employee_Age) AND ([Employee_Gender] = @Original_Employee_Gender) AND ([Employee_Race] = @Original_Employee_Race) AND ([Employee_CellNumber] = @Original_Employee_CellNumber) AND ([Employee_StreetAddress] = @Original_Employee_StreetAddress) AND ([Employee_Suburb] = @Original_Employee_Suburb) AND ([Employee_Type] = @Original_Employee_Type) AND ([Employee_Username] = @Original_Employee_Username) AND ([Employee_Password] = @Original_Employee_Password) AND ([Code_Type] = @Original_Code_Type))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [tblEmployee] WHERE (([EmployeeID] = @Original_EmployeeID) AND ([Employee_Name] = @Original_Employee_Name) AND ([Employee_Surname] = @Original_Employee_Surname) AND ([Employee_IDNumber] = @Original_Employee_IDNumber) AND ([Employee_Age] = @Original_Employee_Age) AND ([Employee_Gender] = @Original_Employee_Gender) AND ([Employee_Race] = @Original_Employee_Race) AND ([Employee_CellNumber] = @Original_Employee_CellNumber) AND ([Employee_StreetAddress] = @Original_Employee_StreetAddress) AND ([Employee_Suburb] = @Original_Employee_Suburb) AND ([Employee_Type] = @Original_Employee_Type) AND ([Employee_Username] = @Original_Employee_Username) AND ([Employee_Password] = @Original_Employee_Password) AND ([Code_Type] = @Original_Code_Type))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_EmployeeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EmployeeID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Employee_Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Employee_Name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Employee_Surname", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Employee_Surname", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Employee_ID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Employee_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Employee_IDNumber", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Employee_IDNumber", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Employee_Age", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Employee_Age", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Employee_Gender", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Employee_Gender", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Employee_Race", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Employee_Race", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -7442,30 +7365,30 @@ SELECT BookingID, Booking_Date, Booking_StartTime, Booking_EndTime, Booking_Stat
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Code_Type", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Code_Type", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "\r\n\t\t\t\t\t\t\t\t\t\t\tUPDATE [dbo].[tblEmployee] SET [Employee_Name] = @Employee_Name, [Em" +
-                "ployee_Surname] = @Employee_Surname, [Employee_ID] = @Employee_ID, [Employee_Age" +
-                "] = @Employee_Age, [Employee_Gender] = @Employee_Gender, [Employee_Race] = @Empl" +
-                "oyee_Race, [Employee_CellNumber] = @Employee_CellNumber, [Employee_StreetAddress" +
-                "] = @Employee_StreetAddress, [Employee_Suburb] = @Employee_Suburb, [Employee_Typ" +
-                "e] = @Employee_Type, [Employee_Username] = @Employee_Username, [Employee_Passwor" +
-                "d] = @Employee_Password, [Code_Type] = @Code_Type WHERE (([EmployeeID] = @Origin" +
-                "al_EmployeeID) AND ([Employee_Name] = @Original_Employee_Name) AND ([Employee_Su" +
-                "rname] = @Original_Employee_Surname) AND ([Employee_ID] = @Original_Employee_ID)" +
-                " AND ([Employee_Age] = @Original_Employee_Age) AND ([Employee_Gender] = @Origina" +
-                "l_Employee_Gender) AND ([Employee_Race] = @Original_Employee_Race) AND ([Employe" +
-                "e_CellNumber] = @Original_Employee_CellNumber) AND ([Employee_StreetAddress] = @" +
-                "Original_Employee_StreetAddress) AND ([Employee_Suburb] = @Original_Employee_Sub" +
-                "urb) AND ([Employee_Type] = @Original_Employee_Type) AND ([Employee_Username] = " +
-                "@Original_Employee_Username) AND ([Employee_Password] = @Original_Employee_Passw" +
-                "ord) AND ([Code_Type] = @Original_Code_Type));\r\n\t\t\t\t\t\t\t\t\t\t\tSELECT EmployeeID, Em" +
-                "ployee_Name, Employee_Surname, Employee_ID, Employee_Age, Employee_Gender, Emplo" +
+            this._adapter.UpdateCommand.CommandText = "UPDATE [tblEmployee] SET [Employee_Name] = @Employee_Name, [Employee_Surname] = @" +
+                "Employee_Surname, [Employee_IDNumber] = @Employee_IDNumber, [Employee_Age] = @Em" +
+                "ployee_Age, [Employee_Gender] = @Employee_Gender, [Employee_Race] = @Employee_Ra" +
+                "ce, [Employee_CellNumber] = @Employee_CellNumber, [Employee_StreetAddress] = @Em" +
+                "ployee_StreetAddress, [Employee_Suburb] = @Employee_Suburb, [Employee_Type] = @E" +
+                "mployee_Type, [Employee_Username] = @Employee_Username, [Employee_Password] = @E" +
+                "mployee_Password, [Code_Type] = @Code_Type WHERE (([EmployeeID] = @Original_Empl" +
+                "oyeeID) AND ([Employee_Name] = @Original_Employee_Name) AND ([Employee_Surname] " +
+                "= @Original_Employee_Surname) AND ([Employee_IDNumber] = @Original_Employee_IDNu" +
+                "mber) AND ([Employee_Age] = @Original_Employee_Age) AND ([Employee_Gender] = @Or" +
+                "iginal_Employee_Gender) AND ([Employee_Race] = @Original_Employee_Race) AND ([Em" +
+                "ployee_CellNumber] = @Original_Employee_CellNumber) AND ([Employee_StreetAddress" +
+                "] = @Original_Employee_StreetAddress) AND ([Employee_Suburb] = @Original_Employe" +
+                "e_Suburb) AND ([Employee_Type] = @Original_Employee_Type) AND ([Employee_Usernam" +
+                "e] = @Original_Employee_Username) AND ([Employee_Password] = @Original_Employee_" +
+                "Password) AND ([Code_Type] = @Original_Code_Type));\r\nSELECT EmployeeID, Employee" +
+                "_Name, Employee_Surname, Employee_IDNumber, Employee_Age, Employee_Gender, Emplo" +
                 "yee_Race, Employee_CellNumber, Employee_StreetAddress, Employee_Suburb, Employee" +
                 "_Type, Employee_Username, Employee_Password, Code_Type FROM tblEmployee WHERE (E" +
-                "mployeeID = @EmployeeID)\r\n\t\t\t\t\t\t\t\t\t\t";
+                "mployeeID = @EmployeeID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Employee_Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Employee_Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Employee_Surname", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Employee_Surname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Employee_ID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Employee_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Employee_IDNumber", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Employee_IDNumber", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Employee_Age", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Employee_Age", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Employee_Gender", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Employee_Gender", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Employee_Race", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Employee_Race", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -7479,7 +7402,7 @@ SELECT BookingID, Booking_Date, Booking_StartTime, Booking_EndTime, Booking_Stat
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_EmployeeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EmployeeID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Employee_Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Employee_Name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Employee_Surname", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Employee_Surname", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Employee_ID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Employee_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Employee_IDNumber", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Employee_IDNumber", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Employee_Age", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Employee_Age", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Employee_Gender", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Employee_Gender", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Employee_Race", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Employee_Race", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -7506,7 +7429,9 @@ SELECT BookingID, Booking_Date, Booking_StartTime, Booking_EndTime, Booking_Stat
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[8];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT EmployeeID, Employee_Name, Employee_Surname, Employee_ID, Employee_Age, Employee_Gender, Employee_Race, Employee_CellNumber, Employee_StreetAddress, Employee_Suburb, Employee_Type, Employee_Username, Employee_Password, Code_Type FROM dbo.tblEmployee";
+            this._commandCollection[0].CommandText = @"SELECT EmployeeID, Employee_Name, Employee_Surname, Employee_IDNumber, Employee_Age, Employee_Gender, Employee_Race, Employee_CellNumber, Employee_StreetAddress, Employee_Suburb, Employee_Type, Employee_Username, 
+                  Employee_Password, Code_Type
+FROM     tblEmployee";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
@@ -7543,7 +7468,7 @@ SELECT BookingID, Booking_Date, Booking_StartTime, Booking_EndTime, Booking_Stat
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Employee_Password", global::System.Data.SqlDbType.VarChar, 35, global::System.Data.ParameterDirection.Input, 0, 0, "Employee_Password", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[4].Connection = this.Connection;
-            this._commandCollection[4].CommandText = @"SELECT Code_Type, EmployeeID, Employee_Age, Employee_CellNumber, Employee_Gender, Employee_ID, Employee_Name, Employee_Password, Employee_Race, Employee_StreetAddress, Employee_Suburb, Employee_Surname, Employee_Type, Employee_Username FROM tblEmployee WHERE (Employee_Surname LIKE @Surname + '%')";
+            this._commandCollection[4].CommandText = @"SELECT Code_Type, EmployeeID, Employee_Age, Employee_CellNumber, Employee_Gender, Employee_IDNumber, Employee_Name, Employee_Password, Employee_Race, Employee_StreetAddress, Employee_Suburb, Employee_Surname, Employee_Type, Employee_Username FROM tblEmployee WHERE (Employee_Surname LIKE @Surname + '%')";
             this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Surname", global::System.Data.SqlDbType.VarChar, 35, global::System.Data.ParameterDirection.Input, 0, 0, "Employee_Surname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[5] = new global::System.Data.SqlClient.SqlCommand();
@@ -7674,7 +7599,7 @@ WHERE  (EmployeeID = @ID);
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_EmployeeID, string Original_Employee_Name, string Original_Employee_Surname, string Original_Employee_ID, int Original_Employee_Age, string Original_Employee_Gender, string Original_Employee_Race, string Original_Employee_CellNumber, string Original_Employee_StreetAddress, string Original_Employee_Suburb, string Original_Employee_Type, string Original_Employee_Username, string Original_Employee_Password, int Original_Code_Type) {
+        public virtual int Delete(int Original_EmployeeID, string Original_Employee_Name, string Original_Employee_Surname, string Original_Employee_IDNumber, int Original_Employee_Age, string Original_Employee_Gender, string Original_Employee_Race, string Original_Employee_CellNumber, string Original_Employee_StreetAddress, string Original_Employee_Suburb, string Original_Employee_Type, string Original_Employee_Username, string Original_Employee_Password, int Original_Code_Type) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_EmployeeID));
             if ((Original_Employee_Name == null)) {
                 throw new global::System.ArgumentNullException("Original_Employee_Name");
@@ -7688,11 +7613,11 @@ WHERE  (EmployeeID = @ID);
             else {
                 this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Employee_Surname));
             }
-            if ((Original_Employee_ID == null)) {
-                throw new global::System.ArgumentNullException("Original_Employee_ID");
+            if ((Original_Employee_IDNumber == null)) {
+                throw new global::System.ArgumentNullException("Original_Employee_IDNumber");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_Employee_ID));
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_Employee_IDNumber));
             }
             this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_Employee_Age));
             if ((Original_Employee_Gender == null)) {
@@ -7856,7 +7781,7 @@ WHERE  (EmployeeID = @ID);
         public virtual int Update(
                     string Employee_Name, 
                     string Employee_Surname, 
-                    string Employee_ID, 
+                    string Employee_IDNumber, 
                     int Employee_Age, 
                     string Employee_Gender, 
                     string Employee_Race, 
@@ -7870,7 +7795,7 @@ WHERE  (EmployeeID = @ID);
                     int Original_EmployeeID, 
                     string Original_Employee_Name, 
                     string Original_Employee_Surname, 
-                    string Original_Employee_ID, 
+                    string Original_Employee_IDNumber, 
                     int Original_Employee_Age, 
                     string Original_Employee_Gender, 
                     string Original_Employee_Race, 
@@ -7894,11 +7819,11 @@ WHERE  (EmployeeID = @ID);
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Employee_Surname));
             }
-            if ((Employee_ID == null)) {
-                throw new global::System.ArgumentNullException("Employee_ID");
+            if ((Employee_IDNumber == null)) {
+                throw new global::System.ArgumentNullException("Employee_IDNumber");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Employee_ID));
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Employee_IDNumber));
             }
             this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Employee_Age));
             if ((Employee_Gender == null)) {
@@ -7963,11 +7888,11 @@ WHERE  (EmployeeID = @ID);
             else {
                 this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_Employee_Surname));
             }
-            if ((Original_Employee_ID == null)) {
-                throw new global::System.ArgumentNullException("Original_Employee_ID");
+            if ((Original_Employee_IDNumber == null)) {
+                throw new global::System.ArgumentNullException("Original_Employee_IDNumber");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_Employee_ID));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_Employee_IDNumber));
             }
             this.Adapter.UpdateCommand.Parameters[17].Value = ((int)(Original_Employee_Age));
             if ((Original_Employee_Gender == null)) {
@@ -8043,7 +7968,7 @@ WHERE  (EmployeeID = @ID);
         public virtual int Update(
                     string Employee_Name, 
                     string Employee_Surname, 
-                    string Employee_ID, 
+                    string Employee_IDNumber, 
                     int Employee_Age, 
                     string Employee_Gender, 
                     string Employee_Race, 
@@ -8057,7 +7982,7 @@ WHERE  (EmployeeID = @ID);
                     int Original_EmployeeID, 
                     string Original_Employee_Name, 
                     string Original_Employee_Surname, 
-                    string Original_Employee_ID, 
+                    string Original_Employee_IDNumber, 
                     int Original_Employee_Age, 
                     string Original_Employee_Gender, 
                     string Original_Employee_Race, 
@@ -8068,7 +7993,7 @@ WHERE  (EmployeeID = @ID);
                     string Original_Employee_Username, 
                     string Original_Employee_Password, 
                     int Original_Code_Type) {
-            return this.Update(Employee_Name, Employee_Surname, Employee_ID, Employee_Age, Employee_Gender, Employee_Race, Employee_CellNumber, Employee_StreetAddress, Employee_Suburb, Employee_Type, Employee_Username, Employee_Password, Code_Type, Original_EmployeeID, Original_Employee_Name, Original_Employee_Surname, Original_Employee_ID, Original_Employee_Age, Original_Employee_Gender, Original_Employee_Race, Original_Employee_CellNumber, Original_Employee_StreetAddress, Original_Employee_Suburb, Original_Employee_Type, Original_Employee_Username, Original_Employee_Password, Original_Code_Type, Original_EmployeeID);
+            return this.Update(Employee_Name, Employee_Surname, Employee_IDNumber, Employee_Age, Employee_Gender, Employee_Race, Employee_CellNumber, Employee_StreetAddress, Employee_Suburb, Employee_Type, Employee_Username, Employee_Password, Code_Type, Original_EmployeeID, Original_Employee_Name, Original_Employee_Surname, Original_Employee_IDNumber, Original_Employee_Age, Original_Employee_Gender, Original_Employee_Race, Original_Employee_CellNumber, Original_Employee_StreetAddress, Original_Employee_Suburb, Original_Employee_Type, Original_Employee_Username, Original_Employee_Password, Original_Code_Type, Original_EmployeeID);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11467,15 +11392,12 @@ VALUES (@Learner_Name,@Learner_Surname,@Learner_IDNumber,@Learner_Age,@Learner_G
             tableMapping.ColumnMappings.Add("Booking_EndTime", "Booking_EndTime");
             tableMapping.ColumnMappings.Add("Booking_Status", "Booking_Status");
             tableMapping.ColumnMappings.Add("Code_Type", "Code_Type");
-            tableMapping.ColumnMappings.Add("VehicleID", "VehicleID");
-            tableMapping.ColumnMappings.Add("EmployeeID", "EmployeeID");
             tableMapping.ColumnMappings.Add("Employee_Name", "Employee_Name");
             tableMapping.ColumnMappings.Add("Employee_Surname", "Employee_Surname");
             tableMapping.ColumnMappings.Add("Learner_Name", "Learner_Name");
             tableMapping.ColumnMappings.Add("Learner_Surname", "Learner_Surname");
             tableMapping.ColumnMappings.Add("Vehicle_Make", "Vehicle_Make");
             tableMapping.ColumnMappings.Add("Vehicle_Model", "Vehicle_Model");
-            tableMapping.ColumnMappings.Add("LearnerID", "LearnerID");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -11492,7 +11414,7 @@ VALUES (@Learner_Name,@Learner_Surname,@Learner_IDNumber,@Learner_Age,@Learner_G
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT tblBooking.BookingID, tblBooking.Booking_Date, tblBooking.Booking_StartTime, tblBooking.Booking_EndTime, tblBooking.Booking_Status, tblBooking.LearnerID, tblBooking.Code_Type, tblBooking.VehicleID, tblBooking.EmployeeID, 
+            this._commandCollection[0].CommandText = @"SELECT tblBooking.BookingID, tblBooking.Booking_Date, tblBooking.Booking_StartTime, tblBooking.Booking_EndTime, tblBooking.Booking_Status, tblBooking.Code_Type, 
                   tblEmployee.Employee_Name, tblEmployee.Employee_Surname, tblLearner.Learner_Name, tblLearner.Learner_Surname, tblVehicle.Vehicle_Make, tblVehicle.Vehicle_Model
 FROM     tblBooking INNER JOIN
                   tblEmployee ON tblBooking.EmployeeID = tblEmployee.EmployeeID INNER JOIN

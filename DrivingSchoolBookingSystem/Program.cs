@@ -16,7 +16,11 @@ namespace DrivingSchoolBookingSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+<<<<<<< HEAD
             Application.Run(new LearnerProgressForm());
+=======
+            Application.Run(new ManageBooking());
+>>>>>>> b1bdf3f (Designing Mange Bookings Form)
         }
     }
 }
