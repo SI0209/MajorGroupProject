@@ -22,35 +22,35 @@ namespace DrivingSchoolBookingSystem
         public LearnerProgressForm()
         {
             InitializeComponent();
-            
-            /*tip.IsBalloon = true;
-            tip.ShowAlways = true;
+            // ToolTip settings (optional but helpful)
+            toolTip1.IsBalloon = true;
+            toolTip1.ShowAlways = true;
 
             // GridViews
-            tip.SetToolTip(dataGridView1, "Click a learner row to view or update progress.");
-            tip.SetToolTip(dataGridView2, "Shows learners not yet added to progress tracking.");
+            toolTip1.SetToolTip(dataGridView1, "Click a learner row to view or update progress.");
+            toolTip1.SetToolTip(dataGridView2, "Shows learners not yet added to progress tracking.");
 
             // Textboxes & Fields
-            tip.SetToolTip(txtSearch1, "Enter learner first name or lesson topic to search.");
-            tip.SetToolTip(txtSearch2, "Enter learner's name to filter new learners.");
-            tip.SetToolTip(txtLessonTopic, "Enter the topic covered in the lesson.");
-            tip.SetToolTip(txtAttendance, "Mark attendance status (e.g., Present, Late).");
-            tip.SetToolTip(txtRating, "Rate learner's performance (e.g., Good, Poor).");
-            tip.SetToolTip(txtErrors, "Describe any errors made during the lesson.");
-            tip.SetToolTip(txtComments, "Add any additional remarks about the session.");
-            tip.SetToolTip(txtStatus, "Optional: overall progress note.");
+            toolTip1.SetToolTip(textBox1, "Enter learner first name or lesson topic to search.");
+            toolTip1.SetToolTip(textBox2, "Enter learner's name to filter new learners.");
+            toolTip1.SetToolTip(txtLessonTopic, "Enter the topic covered in the lesson.");
+            toolTip1.SetToolTip(txtAttendance, "Mark attendance status (e.g., Present, Late).");
+            toolTip1.SetToolTip(txtRating, "Rate learner's performance (e.g., Good, Poor).");
+            toolTip1.SetToolTip(txtErrors, "Describe any errors made during the lesson.");
+            toolTip1.SetToolTip(txtComments, "Add any additional remarks about the session.");
+            toolTip1.SetToolTip(txtStatus, "Optional: overall progress note.");
 
             // Buttons
-            tip.SetToolTip(btnReset1, "Clears the search box and reloads all progress data.");
-            tip.SetToolTip(btnReset2, "Reloads new learners into the grid.");
-            tip.SetToolTip(btnAdd, "Adds a new learner progress entry.");
-            tip.SetToolTip(btnUpdate, "Update progress details for the selected learner.");
-            tip.SetToolTip(btnClear, "Clears all progress entry fields.");
+            toolTip1.SetToolTip(btnReset1, "Clears the search box and reloads all progress data.");
+            toolTip1.SetToolTip(btnReset2, "Reloads new learners into the grid.");
+            toolTip1.SetToolTip(btnAdd, "Adds a new learner progress entry.");
+            toolTip1.SetToolTip(btnUpdate, "Update progress details for the selected learner.");
+            toolTip1.SetToolTip(btnClear, "Clears all progress entry fields.");
 
             // Edit Mode and Logout
-            tip.SetToolTip(radioEditOn, "Turn ON to allow updates.");
-            tip.SetToolTip(radioEditOff, "Turn OFF to prevent changes.");
-            tip.SetToolTip(btnLogout, "Click here to log out safely.");*/
+            toolTip1.SetToolTip(radioEditOn, "Turn ON to allow updates.");
+            toolTip1.SetToolTip(radioEditOff, "Turn OFF to prevent changes.");
+            toolTip1.SetToolTip(btnLogout, "Click here to log out safely.");
         }
 
         private void label11_Click(object sender, EventArgs e)

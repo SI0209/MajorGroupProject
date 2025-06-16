@@ -484,13 +484,15 @@
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(167, 28);
             this.comboBox3.TabIndex = 20;
+            this.comboBox3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.comboBox3_MouseClick);
             // 
             // IssuedateTimePicker1
             // 
-            this.IssuedateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IssuedateTimePicker1.Location = new System.Drawing.Point(210, 473);
+            this.IssuedateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IssuedateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.IssuedateTimePicker1.Location = new System.Drawing.Point(232, 473);
             this.IssuedateTimePicker1.Name = "IssuedateTimePicker1";
-            this.IssuedateTimePicker1.Size = new System.Drawing.Size(204, 24);
+            this.IssuedateTimePicker1.Size = new System.Drawing.Size(167, 27);
             this.IssuedateTimePicker1.TabIndex = 21;
             this.IssuedateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
@@ -732,9 +734,9 @@
             // textBox9
             // 
             this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(210, 515);
+            this.textBox9.Location = new System.Drawing.Point(232, 515);
             this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(204, 27);
+            this.textBox9.Size = new System.Drawing.Size(167, 27);
             this.textBox9.TabIndex = 38;
             // 
             // panel1

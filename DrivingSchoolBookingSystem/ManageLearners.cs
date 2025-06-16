@@ -57,7 +57,7 @@ namespace DrivingSchoolBookingSystem
             toolTip1.SetToolTip(button2, "Click to delete selected learner.");
             toolTip1.SetToolTip(button4, "Clear the search field and reload the table.");
             toolTip1.SetToolTip(button3, "Clear all fields.");
-            toolTip1.SetToolTip(pictureBox5, "Logout of the system.");
+            toolTip1.SetToolTip(pictureBox5, "Click here to log out safely.");
             toolTip1.SetToolTip(pictureBox2, "Redirect back to home page");
 
 
@@ -89,7 +89,7 @@ namespace DrivingSchoolBookingSystem
             IssuedateTimePicker1.MaxDate = DateTime.Today;
             IssuedateTimePicker1.Value = DateTime.Today;
             textBox9.Clear();
-            UpdateExpiryDate(); // Optional: set expiry on form load
+           // UpdateExpiryDate(); // Optional: set expiry on form load
 
 
         }
@@ -224,13 +224,18 @@ namespace DrivingSchoolBookingSystem
                     textBox4.Clear();
                     textBox5.Clear();
                     textBox6.Clear(); 
-                    textBox9.Clear();
+                    
                     comboBox1.SelectedIndex = -1; // Reset to no selection          
                     comboBox2.SelectedIndex = -1; // Reset to no selection
                     comboBox3.SelectedIndex = -1; // Reset to no selection
                     comboBox4.SelectedIndex = -1; // Reset to no selection
                 
                     IssuedateTimePicker1.Value = DateTime.Today; // Reset issue date to today
+                    textBox9.Clear(); // Clear expiry date textbox
+
+
+
+
                 }
                 catch (Exception ex)
                 {
@@ -359,7 +364,7 @@ namespace DrivingSchoolBookingSystem
                 DateTime expiryDate = issueDate.AddYears(2);
                 /*/ExpdateTimePicker2.MinDate = expiryDate;
                  ExpdateTimePicker2.MaxDate = expiryDate;*/
-                textBox9.Text = expiryDate.ToLongDateString();
+                textBox9.Text = expiryDate.ToShortDateString();
             }
 
 
@@ -455,7 +460,7 @@ namespace DrivingSchoolBookingSystem
                   IssuedateTimePicker1.Value = issueDate;*/
                 UpdateExpiryDate();
                 IssuedateTimePicker1.Value = Convert.ToDateTime(dataGridView1.CurrentRow.Cells[10].Value);
-                textBox9.Text = Convert.ToDateTime(dataGridView1.CurrentRow.Cells[11].Value).ToString("yyyy-MM-dd");
+                textBox9.Text = Convert.ToDateTime(dataGridView1.CurrentRow.Cells[11].Value).ToString(" M/ d/yyyy");
               
             }
             catch (Exception ex)
@@ -868,6 +873,11 @@ namespace DrivingSchoolBookingSystem
         
 
         private void toolTip2_Popup(object sender, PopupEventArgs e)
+        {
+
+        }
+
+        private void comboBox3_MouseClick(object sender, MouseEventArgs e)
         {
 
         }
