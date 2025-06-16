@@ -73,14 +73,17 @@ namespace DrivingSchoolBookingSystem
                         homepage.Show();
 
                     }
-                    else
+                    
+                    if (!isManager)
                     {
+                        MessageBox.Show("Welcome to Araf's Driving School! ", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Hide();
                         HomeForm homepage = new HomeForm(this);
                         homepage.Employee_Username = Employee_username;
                         homepage.Employee_Name = Employee_Name;
                         homepage.Employee_Surname = Employee_Surname;
                         homepage.Employee_Type = "Instructor";
+                        homepage.Show();
 
                         //MessageBox.Show("Instructor Access Denied", "Security", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }

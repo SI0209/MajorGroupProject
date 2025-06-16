@@ -31,7 +31,6 @@ namespace DrivingSchoolBookingSystem
                     break;
                 }
             }
-            lblName.Text = "Welcome " + name + " " + surname;
             string today = DateTime.Now.Date.ToString("yyyy-MM-dd");
             //MessageBox.Show(today);
             taInstructorSchedule.Fill(dsBookingSystem.tblInstuctorSchedule, EmployeeID, today);
@@ -64,6 +63,8 @@ namespace DrivingSchoolBookingSystem
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             HomeForm home = new HomeForm(loginform);
+            home.lblUsernameInfo.Text = "Welcome " + loginform.Employee_Name + " " + loginform.Employee_Surname + "!";
+            home.lblUserType.Text = loginform.Employee_Type;
             home.Show();
             this.Hide();
         }

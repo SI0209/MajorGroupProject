@@ -107,6 +107,7 @@ D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\ob
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.exe
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.pdb
 <<<<<<< HEAD
+<<<<<<< HEAD
 C:\Users\Strini\Source\Repos\MajorGroupProjectth\DrivingSchoolBookingSystem\bin\Debug\DrivingSchoolBookingSystem.exe.config
 C:\Users\Strini\Source\Repos\MajorGroupProjectth\DrivingSchoolBookingSystem\bin\Debug\DrivingSchoolBookingSystem.exe
 C:\Users\Strini\Source\Repos\MajorGroupProjectth\DrivingSchoolBookingSystem\bin\Debug\DrivingSchoolBookingSystem.pdb
@@ -541,3 +542,5 @@ C:\Users\Strini\Source\Repos\MajorGroupProject8745\DrivingSchoolBookingSystem\ob
 C:\Users\Strini\Source\Repos\MajorGroupProject8745\DrivingSchoolBookingSystem\obj\Debug\DrivingS.9670A750.Up2Date
 C:\Users\Strini\Source\Repos\MajorGroupProject8745\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.exe
 C:\Users\Strini\Source\Repos\MajorGroupProject8745\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.pdb
+=======
+>>>>>>> 874faa6 (Instructor Schedule Form and Login Form)
