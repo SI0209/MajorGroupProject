@@ -22,6 +22,10 @@ namespace DrivingSchoolBookingSystem
         public LearnerProgressForm()
         {
             InitializeComponent();
+            label6.Text = "Click here for further instructions";
+            label6.ForeColor = Color.Blue;
+            label6.Font = new Font(label6.Font, FontStyle.Underline);
+            label6.Cursor = Cursors.Hand;
             // ToolTip settings (optional but helpful)
             toolTip1.IsBalloon = true;
             toolTip1.ShowAlways = true;
@@ -33,24 +37,26 @@ namespace DrivingSchoolBookingSystem
             // Textboxes & Fields
             toolTip1.SetToolTip(textBox1, "Enter learner first name or lesson topic to search.");
             toolTip1.SetToolTip(textBox2, "Enter learner's name to filter new learners.");
-            toolTip1.SetToolTip(txtLessonTopic, "Enter the topic covered in the lesson.");
-            toolTip1.SetToolTip(txtAttendance, "Mark attendance status (e.g., Present, Late).");
-            toolTip1.SetToolTip(txtRating, "Rate learner's performance (e.g., Good, Poor).");
-            toolTip1.SetToolTip(txtErrors, "Describe any errors made during the lesson.");
-            toolTip1.SetToolTip(txtComments, "Add any additional remarks about the session.");
-            toolTip1.SetToolTip(txtStatus, "Optional: overall progress note.");
+            toolTip1.SetToolTip(comboBox1, "Enter the topic covered in the lesson.");
+            toolTip1.SetToolTip(comboBox2, "Mark attendance status.");
+            toolTip1.SetToolTip(comboBox3, "Rate learner's performance (e.g., Good, Poor).");
+            toolTip1.SetToolTip(textBox5, "Describe any errors made during the lesson.");
+            toolTip1.SetToolTip(textBox6, "Add any additional remarks about the session.");
+            toolTip1.SetToolTip(comboBox4, "Choose the overall progress note.");
+            toolTip1.SetToolTip(dateTimePicker1, "Pick the lesson date");
 
             // Buttons
-            toolTip1.SetToolTip(btnReset1, "Clears the search box and reloads all progress data.");
-            toolTip1.SetToolTip(btnReset2, "Reloads new learners into the grid.");
-            toolTip1.SetToolTip(btnAdd, "Adds a new learner progress entry.");
-            toolTip1.SetToolTip(btnUpdate, "Update progress details for the selected learner.");
-            toolTip1.SetToolTip(btnClear, "Clears all progress entry fields.");
+            toolTip1.SetToolTip(button5, "Clears the search box and reloads all progress data.");
+            toolTip1.SetToolTip(button4, "Clears the search box and reloads new learners into the grid.");
+            toolTip1.SetToolTip(button1, "Adds a new learner progress entry.");
+            toolTip1.SetToolTip(button2, "Update progress details for the selected learner.");
+            toolTip1.SetToolTip(button3, "Clears all progress entry fields.");
 
             // Edit Mode and Logout
-            toolTip1.SetToolTip(radioEditOn, "Turn ON to allow updates.");
-            toolTip1.SetToolTip(radioEditOff, "Turn OFF to prevent changes.");
-            toolTip1.SetToolTip(btnLogout, "Click here to log out safely.");
+            toolTip1.SetToolTip(radioButton1, "Turn ON to allow updates.");
+            toolTip1.SetToolTip(radioButton2, "Turn OFF to prevent changes.");
+            toolTip1.SetToolTip(pictureBox4, "Click here to log out safely.");
+            toolTip1.SetToolTip(pictureBox5, "Redirect back to home page");
         }
 
         private void label11_Click(object sender, EventArgs e)
@@ -676,6 +682,42 @@ namespace DrivingSchoolBookingSystem
         private void toolTip2_Popup(object sender, PopupEventArgs e)
         {
 
+        }
+        private void label6_MouseEnter(object sender, EventArgs e)
+        {
+            label6.ForeColor = Color.DarkRed;
+        }
+
+        private void label6_MouseLeave(object sender, EventArgs e)
+        {
+            label6.ForeColor = Color.Blue;
+        }
+        private void label6_Click(object sender, EventArgs e)
+        {
+            string instructions = "📘 Track Learner Progress – Instructions:\n\n" +
+                                  "🔍 **Searching Progress Records**:\n" +
+                                  " - Use the top search box to find progress by learner name or lesson topic.\n" +
+                                  " - Click **Reset** to reload all progress entries.\n\n" +
+                                  "📋 **Viewing & Editing Progress**:\n" +
+                                  " - Click a row in the progress table (top grid) to view their full details.\n" +
+                                  " - Learner details (ID, Name, Surname) are read-only.\n" +
+                                  " - Enable **Edit Mode ON** to make changes to progress fields.\n\n" +
+                                  "✏️ **Updating Progress**:\n" +
+                                  " - Select a learner from the top grid.\n" +
+                                  " - Make updates to progress info (topic, rating, errors, etc.).\n" +
+                                  " - Click **Update** to save changes.\n\n" +
+                                  "🆕 **New Learners**:\n" +
+                                  " - Bottom grid shows learners not yet tracked.\n" +
+                                  " - Search for them using the lower search box.\n" +
+                                  " - Select a row, then click **Add** to include them in progress tracking.\n\n" +
+                                  "🧽 **Clear**: Clears all progress entry fields.\n\n" +
+                                  "🔁 **Auto Cleanup**:\n" +
+                                  " - If a learner is deleted from the Learner Management form,\n" +
+                                  "   their progress record is automatically removed here.\n\n" +
+                                  "🚪 **Logout**: Safely logs you out of the system.\n\n" +
+                                  "💡 **Tip**: Hover over buttons and fields for helpful tooltips.";
+
+            MessageBox.Show(instructions, "Track Learner Progress – Help", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

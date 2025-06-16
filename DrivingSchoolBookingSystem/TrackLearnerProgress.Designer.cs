@@ -94,9 +94,7 @@
             this.button5 = new System.Windows.Forms.Button();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.learnerProgressBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.learnerProgressBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.learnerProgressTableAdapter = new DrivingSchoolBookingSystem.WstGrp2DS2TableAdapters.LearnerProgressTableAdapter();
@@ -835,19 +833,6 @@
             this.label17.TabIndex = 61;
             this.label17.Text = "Search by learner first name or lesson topic:";
             // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.Lavender;
-            this.button6.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button6.Location = new System.Drawing.Point(1318, 887);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(147, 54);
-            this.button6.TabIndex = 64;
-            this.button6.Text = "Save as PDF";
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -860,19 +845,8 @@
             this.label6.Size = new System.Drawing.Size(298, 24);
             this.label6.TabIndex = 65;
             this.label6.Text = "Click here for further instructions";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
-                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(1427, 88);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(485, 24);
-            this.label10.TabIndex = 66;
-            this.label10.Text = "Auto deletes learners that were deleted in learner table";
+            this.label6.MouseEnter += new System.EventHandler(this.label6_MouseEnter);
+            this.label6.MouseLeave += new System.EventHandler(this.label6_MouseLeave);
             // 
             // learnerProgressBindingSource2
             // 
@@ -912,9 +886,7 @@
             this.BackgroundImage = global::DrivingSchoolBookingSystem.Properties.Resources.Background_final;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1924, 1008);
-            this.Controls.Add(this.label10);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.textBox8);
             this.Controls.Add(this.label17);
@@ -1025,7 +997,6 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn LearnerName;
@@ -1038,7 +1009,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn commentsDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn passStatusDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.BindingSource learnerProgressBindingSource2;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
