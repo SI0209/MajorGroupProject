@@ -45,7 +45,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
@@ -136,7 +136,7 @@
             this.pictureBox3.Image = global::DrivingSchoolBookingSystem.Properties.Resources.image_removebg_preview__9_;
             this.pictureBox3.Location = new System.Drawing.Point(47, 72);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(241, 99);
+            this.pictureBox3.Size = new System.Drawing.Size(225, 96);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 49;
             this.pictureBox3.TabStop = false;
@@ -146,9 +146,9 @@
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.Image = global::DrivingSchoolBookingSystem.Properties.Resources.image_removebg_preview__11_;
-            this.pictureBox4.Location = new System.Drawing.Point(47, 177);
+            this.pictureBox4.Location = new System.Drawing.Point(47, 164);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(241, 143);
+            this.pictureBox4.Size = new System.Drawing.Size(225, 121);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 50;
             this.pictureBox4.TabStop = false;
@@ -174,7 +174,7 @@
             this.lblUserType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblUserType.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUserType.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lblUserType.Location = new System.Drawing.Point(1207, 57);
+            this.lblUserType.Location = new System.Drawing.Point(1246, 54);
             this.lblUserType.Name = "lblUserType";
             this.lblUserType.Size = new System.Drawing.Size(118, 32);
             this.lblUserType.TabIndex = 9;
@@ -187,7 +187,7 @@
             this.pictureBox1.Image = global::DrivingSchoolBookingSystem.Properties.Resources.Screenshot_2025_06_16_204837_removebg_preview1;
             this.pictureBox1.Location = new System.Drawing.Point(73, 255);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(249, 125);
+            this.pictureBox1.Size = new System.Drawing.Size(249, 113);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 51;
             this.pictureBox1.TabStop = false;
@@ -202,7 +202,7 @@
             this.groupBox1.Controls.Add(this.pictureBox10);
             this.groupBox1.Font = new System.Drawing.Font("Comic Sans MS", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox1.Location = new System.Drawing.Point(512, 153);
+            this.groupBox1.Location = new System.Drawing.Point(517, 242);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(399, 499);
             this.groupBox1.TabIndex = 52;
@@ -216,7 +216,7 @@
             this.groupBox2.Controls.Add(this.pictureBox3);
             this.groupBox2.Font = new System.Drawing.Font("Comic Sans MS", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox2.Location = new System.Drawing.Point(45, 225);
+            this.groupBox2.Location = new System.Drawing.Point(50, 361);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(336, 380);
             this.groupBox2.TabIndex = 53;
@@ -242,25 +242,26 @@
             this.groupBox3.Controls.Add(this.pictureBox2);
             this.groupBox3.Font = new System.Drawing.Font("Comic Sans MS", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox3.Location = new System.Drawing.Point(1021, 225);
+            this.groupBox3.Location = new System.Drawing.Point(1028, 361);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(336, 380);
             this.groupBox3.TabIndex = 54;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "📊 Reporting";
             // 
-            // label2
+            // label4
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(635, 390);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(152, 65);
-            this.label2.TabIndex = 55;
-            this.label2.Text = "Home";
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label4.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(46, 153);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(381, 72);
+            this.label4.TabIndex = 56;
+            this.label4.Text = "🧭 Welcome Back!  \r\nTo get started, please select an option below.\r\nEach button w" +
+    "ill open its own dedicated form.";
             // 
             // HomeForm
             // 
@@ -269,7 +270,7 @@
             this.BackgroundImage = global::DrivingSchoolBookingSystem.Properties.Resources.Background_final;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1422, 844);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.lblUserType);
             this.Controls.Add(this.lblUsernameInfo);
             this.Controls.Add(this.label1);
@@ -317,6 +318,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.PictureBox pictureBox14;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label4;
     }
 }
