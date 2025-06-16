@@ -99,6 +99,8 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label16 = new System.Windows.Forms.Label();
+            this.toolTip3 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip4 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblLearnerBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wstGrp2DataSet1BindingSource)).BeginInit();
@@ -874,9 +876,9 @@
             this.label16.Size = new System.Drawing.Size(298, 24);
             this.label16.TabIndex = 44;
             this.label16.Text = "Click here for further instructions";
-            // 
-            // label17
-            // 
+            this.label16.Click += new System.EventHandler(this.label16_Click_1);
+            this.label16.MouseEnter += new System.EventHandler(this.label16_MouseEnter);
+            this.label16.MouseLeave += new System.EventHandler(this.label16_MouseLeave);
             // 
             // ManageLearners
             // 
@@ -1003,5 +1005,7 @@
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.ToolTip toolTip2;
+        private System.Windows.Forms.ToolTip toolTip3;
+        private System.Windows.Forms.ToolTip toolTip4;
     }
 }
