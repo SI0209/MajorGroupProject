@@ -9,3 +9,11 @@
         }
     }
 }
+
+namespace DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters {
+    
+    
+    public partial class tblUnavailableSlotTableAdapter
+    {
+    }
+}

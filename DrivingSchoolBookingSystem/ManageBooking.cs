@@ -431,7 +431,7 @@ namespace DrivingSchoolBookingSystem
         {
             string message = null;
             int count = 0;
-            count = (int)taUnavailableSlot.CheckEmployeeUnavailable(employeeID, bookingDate, bookingEndTime, bookingStartTime);
+            count = (int)taUnavailableSlot1.CheckEmployeeUnavailable(employeeID, bookingDate, bookingEndTime, bookingStartTime);
             if (count > 0)
                 message = "The Employee chosen is unavailable during the chosen date and times!";
             return message;

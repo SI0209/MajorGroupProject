@@ -104,7 +104,7 @@
             this.taLessonCode = new DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters.tblLessonCodeTableAdapter();
             this.taLearner = new DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters.tblLearnerTableAdapter();
             this.taBookingInnerJoin = new DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters.tblBookingInnerJoinTableAdapter();
-            this.taUnavailableSlot = new DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters.tblUnavailableSlotTableAdapter();
+            this.taUnavailableSlot1 = new DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters.taUnavailableSlot();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -930,9 +930,9 @@
             // 
             this.taBookingInnerJoin.ClearBeforeFill = true;
             // 
-            // taUnavailableSlot
+            // taUnavailableSlot1
             // 
-            this.taUnavailableSlot.ClearBeforeFill = true;
+            this.taUnavailableSlot1.ClearBeforeFill = true;
             // 
             // ManageBooking
             // 
@@ -990,7 +990,7 @@
         private WstGrp2DataSetTableAdapters.tblLessonCodeTableAdapter taLessonCode;
         private WstGrp2DataSetTableAdapters.tblLearnerTableAdapter taLearner;
         private WstGrp2DataSetTableAdapters.tblBookingInnerJoinTableAdapter taBookingInnerJoin;
-        private WstGrp2DataSetTableAdapters.tblUnavailableSlotTableAdapter taUnavailableSlot;
+        private WstGrp2DataSetTableAdapters.tblUnavailableSlotTableAdapter UnavailableSlotTableAdapter;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label7;
@@ -1052,5 +1052,6 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
+        private WstGrp2DataSetTableAdapters.taUnavailableSlot taUnavailableSlot1;
     }
 }

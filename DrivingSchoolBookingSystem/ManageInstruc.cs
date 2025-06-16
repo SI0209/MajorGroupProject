@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
+using DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters;
 
 namespace DrivingSchoolBookingSystem
 {
@@ -499,7 +500,7 @@ namespace DrivingSchoolBookingSystem
 
         private Boolean isEmployeeRelatedInAnUnavailableSlot()
         {
-            taUnavailableSlot.Fill(dsBookingSystem.tblUnavailableSlot);
+            taUnavailableSlot1.Fill(dsBookingSystem.tblUnavailableSlot);
             foreach (DataRow row in dsBookingSystem.tblUnavailableSlot.Rows)
             {
                 if (Convert.ToInt16(row["EmployeeID"]) == employeeID)
@@ -593,6 +594,9 @@ namespace DrivingSchoolBookingSystem
 
         }
 
-        
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

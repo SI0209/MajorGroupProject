@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UnavailableTimeSlots));
+            this.components = new System.ComponentModel.Container();
             this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -39,6 +39,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dtpEndDate = new System.Windows.Forms.DateTimePicker();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.nudEndTime = new System.Windows.Forms.NumericUpDown();
@@ -49,11 +50,7 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-<<<<<<< HEAD
             this.dtpDate = new System.Windows.Forms.DateTimePicker();
-=======
-            this.dtpStartDate = new System.Windows.Forms.DateTimePicker();
->>>>>>> 5338b28 (Adjusted UnavailableTimeSlot table)
             this.rtbReason = new System.Windows.Forms.RichTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -63,11 +60,19 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.dsBookingSystem = new DrivingSchoolBookingSystem.WstGrp2DataSet();
-            this.taUnavailableSlot = new DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters.tblUnavailableSlotTableAdapter();
+            this.taUnavailableSlot = new DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters.taUnavailableSlot();
             this.taUnavailableSlotInnerJoin = new DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters.tblUnavailableSlotInnerJoinTableAdapter();
             this.taEmployee = new DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters.tblEmployeeTableAdapter();
-            this.dtpEndDate = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.tblUnavailableSlotBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.unavailableSlotIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.startDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.endDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.startTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.endTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.reasonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.employeeIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -79,6 +84,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUnavailableSlot)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsBookingSystem)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblUnavailableSlotBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label7
@@ -97,12 +103,12 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label3.Font = new System.Drawing.Font("Comic Sans MS", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(130, 54);
+            this.label3.Location = new System.Drawing.Point(950, 20);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(178, 29);
+            this.label3.Size = new System.Drawing.Size(268, 42);
             this.label3.TabIndex = 22;
             this.label3.Text = "Unavailable Slots";
             // 
@@ -195,10 +201,10 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.dtpEndDate);
             this.panel1.Controls.Add(this.txtSearch);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.nudEndTime);
-            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.nudStartTime);
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.cbxEmployeeID);
@@ -210,17 +216,26 @@
             this.panel1.Controls.Add(this.rtbReason);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.dgvUnavailableSlot);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Location = new System.Drawing.Point(200, 63);
+            this.panel1.Location = new System.Drawing.Point(209, 79);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1440, 769);
+            this.panel1.Size = new System.Drawing.Size(1618, 811);
             this.panel1.TabIndex = 133;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // dtpEndDate
+            // 
+            this.dtpEndDate.Font = new System.Drawing.Font("Comic Sans MS", 12F);
+            this.dtpEndDate.Location = new System.Drawing.Point(187, 233);
+            this.dtpEndDate.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpEndDate.Name = "dtpEndDate";
+            this.dtpEndDate.Size = new System.Drawing.Size(333, 35);
+            this.dtpEndDate.TabIndex = 63;
             // 
             // txtSearch
             // 
@@ -246,8 +261,8 @@
             // 
             // nudEndTime
             // 
-            this.nudEndTime.Font = new System.Drawing.Font("Yu Gothic UI", 12F);
-            this.nudEndTime.Location = new System.Drawing.Point(43, 367);
+            this.nudEndTime.Font = new System.Drawing.Font("Comic Sans MS", 12F);
+            this.nudEndTime.Location = new System.Drawing.Point(187, 343);
             this.nudEndTime.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nudEndTime.Maximum = new decimal(new int[] {
             17,
@@ -260,7 +275,7 @@
             0,
             0});
             this.nudEndTime.Name = "nudEndTime";
-            this.nudEndTime.Size = new System.Drawing.Size(333, 34);
+            this.nudEndTime.Size = new System.Drawing.Size(333, 35);
             this.nudEndTime.TabIndex = 60;
             this.nudEndTime.Value = new decimal(new int[] {
             12,
@@ -270,8 +285,8 @@
             // 
             // nudStartTime
             // 
-            this.nudStartTime.Font = new System.Drawing.Font("Yu Gothic UI", 12F);
-            this.nudStartTime.Location = new System.Drawing.Point(42, 289);
+            this.nudStartTime.Font = new System.Drawing.Font("Comic Sans MS", 12F);
+            this.nudStartTime.Location = new System.Drawing.Point(187, 286);
             this.nudStartTime.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nudStartTime.Maximum = new decimal(new int[] {
             16,
@@ -284,7 +299,7 @@
             0,
             0});
             this.nudStartTime.Name = "nudStartTime";
-            this.nudStartTime.Size = new System.Drawing.Size(333, 34);
+            this.nudStartTime.Size = new System.Drawing.Size(333, 35);
             this.nudStartTime.TabIndex = 59;
             this.nudStartTime.Value = new decimal(new int[] {
             11,
@@ -296,20 +311,20 @@
             // 
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label12.Location = new System.Drawing.Point(46, 549);
+            this.label12.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(46, 547);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(117, 28);
+            this.label12.Size = new System.Drawing.Size(126, 29);
             this.label12.TabIndex = 58;
             this.label12.Text = "EmployeeID";
             // 
             // cbxEmployeeID
             // 
-            this.cbxEmployeeID.Font = new System.Drawing.Font("Yu Gothic UI", 12F);
+            this.cbxEmployeeID.Font = new System.Drawing.Font("Comic Sans MS", 12F);
             this.cbxEmployeeID.FormattingEnabled = true;
-            this.cbxEmployeeID.Location = new System.Drawing.Point(42, 581);
+            this.cbxEmployeeID.Location = new System.Drawing.Point(187, 539);
             this.cbxEmployeeID.Margin = new System.Windows.Forms.Padding(4);
             this.cbxEmployeeID.Name = "cbxEmployeeID";
             this.cbxEmployeeID.Size = new System.Drawing.Size(333, 36);
@@ -317,76 +332,69 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.ForeColor = System.Drawing.Color.MediumBlue;
-            this.btnUpdate.Location = new System.Drawing.Point(161, 638);
+            this.btnUpdate.BackColor = System.Drawing.Color.Lavender;
+            this.btnUpdate.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
+            this.btnUpdate.Location = new System.Drawing.Point(181, 645);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(103, 49);
             this.btnUpdate.TabIndex = 56;
             this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.UseVisualStyleBackColor = false;
             // 
             // btnDelete
             // 
-            this.btnDelete.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.ForeColor = System.Drawing.Color.MediumBlue;
-            this.btnDelete.Location = new System.Drawing.Point(272, 638);
+            this.btnDelete.BackColor = System.Drawing.Color.Lavender;
+            this.btnDelete.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
+            this.btnDelete.Location = new System.Drawing.Point(292, 645);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(103, 49);
             this.btnDelete.TabIndex = 55;
             this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.UseVisualStyleBackColor = false;
             // 
             // btnClear
             // 
-            this.btnClear.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.ForeColor = System.Drawing.Color.MediumBlue;
-            this.btnClear.Location = new System.Drawing.Point(161, 706);
+            this.btnClear.BackColor = System.Drawing.Color.Lavender;
+            this.btnClear.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
+            this.btnClear.Location = new System.Drawing.Point(403, 645);
             this.btnClear.Margin = new System.Windows.Forms.Padding(4);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(103, 49);
             this.btnClear.TabIndex = 54;
             this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.UseVisualStyleBackColor = false;
             // 
             // btnAdd
             // 
-            this.btnAdd.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.ForeColor = System.Drawing.Color.MediumBlue;
-            this.btnAdd.Location = new System.Drawing.Point(51, 638);
+            this.btnAdd.BackColor = System.Drawing.Color.Lavender;
+            this.btnAdd.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
+            this.btnAdd.Location = new System.Drawing.Point(71, 645);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(103, 49);
             this.btnAdd.TabIndex = 53;
             this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.UseVisualStyleBackColor = false;
             // 
-<<<<<<< HEAD
             // dtpDate
             // 
-            this.dtpDate.Font = new System.Drawing.Font("Yu Gothic UI", 12F);
-            this.dtpDate.Location = new System.Drawing.Point(42, 151);
+            this.dtpDate.Font = new System.Drawing.Font("Comic Sans MS", 12F);
+            this.dtpDate.Location = new System.Drawing.Point(187, 179);
             this.dtpDate.Margin = new System.Windows.Forms.Padding(4);
             this.dtpDate.Name = "dtpDate";
-            this.dtpDate.Size = new System.Drawing.Size(333, 34);
+            this.dtpDate.Size = new System.Drawing.Size(333, 35);
             this.dtpDate.TabIndex = 48;
-=======
-            // dtpStartDate
-            // 
-            this.dtpStartDate.Font = new System.Drawing.Font("Yu Gothic UI", 12F);
-            this.dtpStartDate.Location = new System.Drawing.Point(42, 151);
-            this.dtpStartDate.Margin = new System.Windows.Forms.Padding(4);
-            this.dtpStartDate.Name = "dtpStartDate";
-            this.dtpStartDate.Size = new System.Drawing.Size(333, 34);
-            this.dtpStartDate.TabIndex = 48;
->>>>>>> 5338b28 (Adjusted UnavailableTimeSlot table)
             // 
             // rtbReason
             // 
-            this.rtbReason.Font = new System.Drawing.Font("Yu Gothic UI", 12F);
-            this.rtbReason.Location = new System.Drawing.Point(42, 450);
+            this.rtbReason.Font = new System.Drawing.Font("Comic Sans MS", 12F);
+            this.rtbReason.Location = new System.Drawing.Point(187, 402);
             this.rtbReason.Margin = new System.Windows.Forms.Padding(4);
             this.rtbReason.Name = "rtbReason";
             this.rtbReason.Size = new System.Drawing.Size(333, 95);
@@ -397,12 +405,12 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label2.Location = new System.Drawing.Point(46, 418);
+            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(47, 398);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 28);
+            this.label2.Size = new System.Drawing.Size(79, 29);
             this.label2.TabIndex = 46;
             this.label2.Text = "Reason";
             // 
@@ -410,12 +418,12 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label1.Location = new System.Drawing.Point(45, 337);
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(46, 341);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 28);
+            this.label1.Size = new System.Drawing.Size(103, 29);
             this.label1.TabIndex = 44;
             this.label1.Text = "End Time";
             // 
@@ -423,20 +431,20 @@
             // 
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label10.Location = new System.Drawing.Point(46, 119);
+            this.label10.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(47, 184);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(53, 28);
+            this.label10.Size = new System.Drawing.Size(120, 29);
             this.label10.TabIndex = 43;
-            this.label10.Text = "Date";
+            this.label10.Text = "Start Date";
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(33, 34);
+            this.pictureBox1.Image = global::DrivingSchoolBookingSystem.Properties.Resources.Untitled_design__12__removebg_preview1;
+            this.pictureBox1.Location = new System.Drawing.Point(853, 7);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(67, 62);
@@ -447,13 +455,23 @@
             // dgvUnavailableSlot
             // 
             this.dgvUnavailableSlot.AllowUserToOrderColumns = true;
+            this.dgvUnavailableSlot.AutoGenerateColumns = false;
             this.dgvUnavailableSlot.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvUnavailableSlot.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUnavailableSlot.Location = new System.Drawing.Point(383, 85);
+            this.dgvUnavailableSlot.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.unavailableSlotIDDataGridViewTextBoxColumn,
+            this.startDateDataGridViewTextBoxColumn,
+            this.endDateDataGridViewTextBoxColumn,
+            this.startTimeDataGridViewTextBoxColumn,
+            this.endTimeDataGridViewTextBoxColumn,
+            this.reasonDataGridViewTextBoxColumn,
+            this.employeeIDDataGridViewTextBoxColumn});
+            this.dgvUnavailableSlot.DataSource = this.tblUnavailableSlotBindingSource;
+            this.dgvUnavailableSlot.Location = new System.Drawing.Point(569, 122);
             this.dgvUnavailableSlot.Margin = new System.Windows.Forms.Padding(4);
             this.dgvUnavailableSlot.Name = "dgvUnavailableSlot";
             this.dgvUnavailableSlot.RowHeadersWidth = 51;
-            this.dgvUnavailableSlot.Size = new System.Drawing.Size(1033, 671);
+            this.dgvUnavailableSlot.Size = new System.Drawing.Size(1017, 671);
             this.dgvUnavailableSlot.TabIndex = 36;
             // 
             // label8
@@ -462,7 +480,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(769, 55);
+            this.label8.Location = new System.Drawing.Point(768, 89);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(213, 29);
@@ -473,18 +491,18 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label5.Location = new System.Drawing.Point(46, 259);
+            this.label5.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(47, 288);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(101, 28);
+            this.label5.Size = new System.Drawing.Size(122, 29);
             this.label5.TabIndex = 26;
             this.label5.Text = "Start Time";
             // 
             // dsBookingSystem
             // 
-            this.dsBookingSystem.DataSetName = "WstGrp2DataSet";
+            this.dsBookingSystem.DataSetName = "wstGrp2DataSet";
             this.dsBookingSystem.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // taUnavailableSlot
@@ -499,15 +517,6 @@
             // 
             this.taEmployee.ClearBeforeFill = true;
             // 
-            // dtpEndDate
-            // 
-            this.dtpEndDate.Font = new System.Drawing.Font("Yu Gothic UI", 12F);
-            this.dtpEndDate.Location = new System.Drawing.Point(42, 221);
-            this.dtpEndDate.Margin = new System.Windows.Forms.Padding(4);
-            this.dtpEndDate.Name = "dtpEndDate";
-            this.dtpEndDate.Size = new System.Drawing.Size(333, 34);
-            this.dtpEndDate.TabIndex = 49;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -521,6 +530,81 @@
             this.label6.TabIndex = 28;
             this.label6.Text = "End Date";
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(47, 240);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(101, 29);
+            this.label13.TabIndex = 43;
+            this.label13.Text = "End Date";
+            // 
+            // tblUnavailableSlotBindingSource
+            // 
+            this.tblUnavailableSlotBindingSource.DataMember = "tblUnavailableSlot";
+            this.tblUnavailableSlotBindingSource.DataSource = this.dsBookingSystem;
+            // 
+            // unavailableSlotIDDataGridViewTextBoxColumn
+            // 
+            this.unavailableSlotIDDataGridViewTextBoxColumn.DataPropertyName = "UnavailableSlotID";
+            this.unavailableSlotIDDataGridViewTextBoxColumn.HeaderText = "UnavailableSlotID";
+            this.unavailableSlotIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.unavailableSlotIDDataGridViewTextBoxColumn.Name = "unavailableSlotIDDataGridViewTextBoxColumn";
+            this.unavailableSlotIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.unavailableSlotIDDataGridViewTextBoxColumn.Width = 145;
+            // 
+            // startDateDataGridViewTextBoxColumn
+            // 
+            this.startDateDataGridViewTextBoxColumn.DataPropertyName = "Start_Date";
+            this.startDateDataGridViewTextBoxColumn.HeaderText = "Start_Date";
+            this.startDateDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.startDateDataGridViewTextBoxColumn.Name = "startDateDataGridViewTextBoxColumn";
+            this.startDateDataGridViewTextBoxColumn.Width = 99;
+            // 
+            // endDateDataGridViewTextBoxColumn
+            // 
+            this.endDateDataGridViewTextBoxColumn.DataPropertyName = "End_Date";
+            this.endDateDataGridViewTextBoxColumn.HeaderText = "End_Date";
+            this.endDateDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.endDateDataGridViewTextBoxColumn.Name = "endDateDataGridViewTextBoxColumn";
+            this.endDateDataGridViewTextBoxColumn.Width = 96;
+            // 
+            // startTimeDataGridViewTextBoxColumn
+            // 
+            this.startTimeDataGridViewTextBoxColumn.DataPropertyName = "Start_Time";
+            this.startTimeDataGridViewTextBoxColumn.HeaderText = "Start_Time";
+            this.startTimeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.startTimeDataGridViewTextBoxColumn.Name = "startTimeDataGridViewTextBoxColumn";
+            this.startTimeDataGridViewTextBoxColumn.Width = 101;
+            // 
+            // endTimeDataGridViewTextBoxColumn
+            // 
+            this.endTimeDataGridViewTextBoxColumn.DataPropertyName = "End_Time";
+            this.endTimeDataGridViewTextBoxColumn.HeaderText = "End_Time";
+            this.endTimeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.endTimeDataGridViewTextBoxColumn.Name = "endTimeDataGridViewTextBoxColumn";
+            this.endTimeDataGridViewTextBoxColumn.Width = 98;
+            // 
+            // reasonDataGridViewTextBoxColumn
+            // 
+            this.reasonDataGridViewTextBoxColumn.DataPropertyName = "Reason";
+            this.reasonDataGridViewTextBoxColumn.HeaderText = "Reason";
+            this.reasonDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.reasonDataGridViewTextBoxColumn.Name = "reasonDataGridViewTextBoxColumn";
+            this.reasonDataGridViewTextBoxColumn.Width = 84;
+            // 
+            // employeeIDDataGridViewTextBoxColumn
+            // 
+            this.employeeIDDataGridViewTextBoxColumn.DataPropertyName = "EmployeeID";
+            this.employeeIDDataGridViewTextBoxColumn.HeaderText = "EmployeeID";
+            this.employeeIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.employeeIDDataGridViewTextBoxColumn.Name = "employeeIDDataGridViewTextBoxColumn";
+            this.employeeIDDataGridViewTextBoxColumn.Width = 111;
+            // 
             // UnavailableTimeSlots
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -531,6 +615,8 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.label7);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.pictureBox1);
             this.DoubleBuffered = true;
             this.Name = "UnavailableTimeSlots";
             this.Text = "Form9";
@@ -548,6 +634,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUnavailableSlot)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsBookingSystem)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblUnavailableSlotBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -575,11 +662,7 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnAdd;
-<<<<<<< HEAD
         private System.Windows.Forms.DateTimePicker dtpDate;
-=======
-        private System.Windows.Forms.DateTimePicker dtpStartDate;
->>>>>>> 5338b28 (Adjusted UnavailableTimeSlot table)
         private System.Windows.Forms.RichTextBox rtbReason;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
@@ -589,10 +672,19 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label5;
         private WstGrp2DataSet dsBookingSystem;
-        private WstGrp2DataSetTableAdapters.tblUnavailableSlotTableAdapter taUnavailableSlot;
+        private WstGrp2DataSetTableAdapters.taUnavailableSlot taUnavailableSlot;
         private WstGrp2DataSetTableAdapters.tblUnavailableSlotInnerJoinTableAdapter taUnavailableSlotInnerJoin;
         private WstGrp2DataSetTableAdapters.tblEmployeeTableAdapter taEmployee;
-        private System.Windows.Forms.DateTimePicker dtpEndDate;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DateTimePicker dtpEndDate;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn unavailableSlotIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn startDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn endDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn startTimeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn endTimeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn reasonDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn employeeIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource tblUnavailableSlotBindingSource;
     }
 }

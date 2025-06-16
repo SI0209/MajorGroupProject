@@ -249,11 +249,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WstGrp2DataSet.cs">
       <DependentUpon>WstGrp2DataSet.xsd</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="WstGrp2DataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>WstGrp2DataSet.xsd</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="WstGrp2DS2.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -319,14 +321,17 @@
     </Compile>
     <None Include="WstGrp2DataSet.xsc">
       <DependentUpon>WstGrp2DataSet.xsd</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="WstGrp2DataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>WstGrp2DataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="WstGrp2DataSet.xss">
       <DependentUpon>WstGrp2DataSet.xsd</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="WstGrp2DS2.xsc">
       <DependentUpon>WstGrp2DS2.xsd</DependentUpon>
