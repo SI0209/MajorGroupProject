@@ -43,9 +43,18 @@ namespace DrivingSchoolBookingSystem
 
             IssuedateTimePicker1.MinDate = DateTime.Today.AddYears(-2);
             IssuedateTimePicker1.MaxDate = DateTime.Today;
+            IssuedateTimePicker1.Value = DateTime.Today;
             textBox9.Clear();
+            UpdateExpiryDate(); // Optional: set expiry on form load
 
 
+        }
+        private void UpdateExpiryDate()
+        {
+            IssuedateTimePicker1.MinDate = DateTime.Today.AddYears(-2);
+            IssuedateTimePicker1.MaxDate = DateTime.Today;
+            IssuedateTimePicker1.Value = DateTime.Today;
+            textBox9.Text = IssuedateTimePicker1.Value.AddYears(2).ToShortDateString();
         }
         private void SetIssueDatePickerRange()
         {
@@ -275,6 +284,7 @@ namespace DrivingSchoolBookingSystem
                  ExpdateTimePicker2.MinDate = expiryDate;
                  ExpdateTimePicker2.MaxDate = expiryDate;
                  ExpdateTimePicker2.Value = expiryDate;*/
+            
 
             if (!autoDateHandlingEnabled || suppressDateEvents)
                 return;
@@ -387,6 +397,7 @@ namespace DrivingSchoolBookingSystem
                 IssuedateTimePicker1.Value = issueDate;
 
                 textBox9.Text = Convert.ToDateTime(dataGridView1.CurrentRow.Cells[11].Value).ToString("yyyy-MM-dd");
+              
             }
             catch (Exception ex)
             {
@@ -645,6 +656,23 @@ namespace DrivingSchoolBookingSystem
                             command.ExecuteNonQuery();
                             MessageBox.Show("Learner information has been updated successfully.", "Update Complete", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             tblLearnerTableAdapter.Fill(wstGrp2DataSet1.tblLearner);
+
+                            // Clear all textboxes and combo boxes after successful update
+                            textBox1.Clear();
+                            textBox2.Clear();
+                            textBox3.Clear();
+                            textBox4.Clear();
+                            textBox5.Clear();
+                            textBox6.Clear();
+                            textBox8.Clear();
+                            textBox9.Clear();
+                            IssuedateTimePicker1.Value = DateTime.Today;
+                            comboBox1.SelectedIndex = -1; // Reset to no selection
+                            comboBox2.SelectedIndex = -1; // Reset to no selection
+                            comboBox3.SelectedIndex = -1; // Reset to no selection
+                            comboBox4.SelectedIndex = -1; // Reset to no selection
+
+
                         }
                     }
                 }
