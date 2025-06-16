@@ -4414,7 +4414,7 @@ SELECT LearnerID, Learner_Name, Learner_Surname FROM tblLearner WHERE (LearnerID
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
             this._commandCollection[1].CommandText = "SELECT LearnerID, Learner_Name, Learner_Surname\r\nFROM     tblLearner\r\nWHERE  (Lea" +
-                "rner_Name LIKE @name + \'%\')";
+                "rner_Name LIKE @name + \'%\')\r\n";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Learner_Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();

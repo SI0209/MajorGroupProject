@@ -871,9 +871,9 @@
             this.label16.ForeColor = System.Drawing.Color.White;
             this.label16.Location = new System.Drawing.Point(1451, 95);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(298, 24);
+            this.label16.Size = new System.Drawing.Size(273, 24);
             this.label16.TabIndex = 44;
-            this.label16.Text = "Click here for further instructions";
+            this.label16.Text = "Click here for further guidance";
             this.label16.Click += new System.EventHandler(this.label16_Click);
             this.label16.MouseEnter += new System.EventHandler(this.label16_MouseEnter);
             this.label16.MouseLeave += new System.EventHandler(this.label16_MouseLeave);

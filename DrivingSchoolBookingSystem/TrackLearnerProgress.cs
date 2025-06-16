@@ -437,17 +437,24 @@ namespace DrivingSchoolBookingSystem
 
         private void textBox7_TextChanged(object sender, EventArgs e)
         {
-            string input = textBox7.Text.Trim();
-            if (input.All(char.IsLetter))
-            {
-                tblNewLearnerTableAdapter.FillByNewLearner(this.wstGrp2DS2.tblNewLearner);
+             string input = textBox7.Text.Trim();
 
-            }
-            else
-            {
-                MessageBox.Show("Please enter a valid name.");
-            }
-
+             if (input.Length >= 1)
+             {
+                 try
+                 {
+                     this.tblNewLearnerTableAdapter.FillByLearnerName(this.wstGrp2DS2.tblNewLearner, textBox7.Text.Trim());
+                 }
+                 catch (Exception ex)
+                 {
+                     MessageBox.Show("Error searching learners: " + ex.Message);
+                 }
+             }
+             else
+             {
+                 this.tblNewLearnerTableAdapter.Fill(this.wstGrp2DS2.tblNewLearner);
+             }
+            
         }
 
         private void textBox8_TextChanged(object sender, EventArgs e)
