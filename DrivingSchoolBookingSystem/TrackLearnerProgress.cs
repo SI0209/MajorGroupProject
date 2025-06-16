@@ -483,7 +483,11 @@ namespace DrivingSchoolBookingSystem
                  try
                  {
                      this.tblNewLearnerTableAdapter.FillByLearnerName(this.wstGrp2DS2.tblNewLearner, textBox7.Text.Trim());
-                 }
+
+                 
+                }
+
+
                  catch (Exception ex)
                  {
                      MessageBox.Show("Error searching learners: " + ex.Message);
@@ -491,9 +495,11 @@ namespace DrivingSchoolBookingSystem
              }
              else
              {
-                 this.tblNewLearnerTableAdapter.Fill(this.wstGrp2DS2.tblNewLearner);
-             }
-            
+                tblNewLearnerTableAdapter.FillByNewLearner(this.wstGrp2DS2.tblNewLearner);
+            }
+
+           
+
         }
 
         private void textBox8_TextChanged(object sender, EventArgs e)
@@ -716,7 +722,7 @@ namespace DrivingSchoolBookingSystem
                       " - Bottom grid shows learners not yet tracked.\n" +
                       " - Search for them using the lower search box.\n" +
                       " - Select a row, then click Add to include them in progress tracking.\n\n" +
-                      "🧽 Clear: Clears all progress entry fields.\n\n" +
+                      "🧽 Clear: Clears all entry fields.\n\n" +
                       "🔁 Auto Cleanup:\n" +
                       " - If a learner is deleted from the Learner Management form,\n" +
                       "   their progress record is automatically removed here.\n\n" +
