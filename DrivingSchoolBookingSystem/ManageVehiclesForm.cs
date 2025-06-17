@@ -321,5 +321,10 @@ namespace DrivingSchoolBookingSystem
                 btnClear.Visible = true;
             }
         }
+
+        private void label10_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
