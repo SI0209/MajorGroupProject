@@ -456,7 +456,9 @@ namespace DrivingSchoolBookingSystem
 
         private void button4_Click(object sender, EventArgs e)
         {
-            /* tblNewLearnerTableAdapter.FillByNewLearner(this.wstGrp2DS2.tblNewLearner);
+            textBox3.Clear();
+            textBox2.Clear();
+            textBox1.Clear();/* tblNewLearnerTableAdapter.FillByNewLearner(this.wstGrp2DS2.tblNewLearner);
              textBox7.Text = "";*/
 
             // Clear the search box
@@ -628,6 +630,19 @@ namespace DrivingSchoolBookingSystem
         {
             trackLearnerTableAdapter.FillBy(this.wstGrp2DS2.TrackLearner);
             textBox8.Text = "";
+            textBox3.Clear();
+            textBox2.Clear();
+            textBox1.Clear();
+            dateTimePicker1.Value = DateTime.Now; // Reset to current date
+            comboBox1.SelectedIndex = -1; // Clear selection
+            comboBox2.SelectedIndex = -1; // Clear selection
+            comboBox3.SelectedIndex = -1; // Clear selection
+            comboBox4.SelectedIndex = -1; // Clear selection
+            textBox5.Clear(); // Clear ErrorsMade
+            textBox6.Clear(); // Clear Comments
+            
+            
+
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
