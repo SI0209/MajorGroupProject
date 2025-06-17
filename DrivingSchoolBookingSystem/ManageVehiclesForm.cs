@@ -1,4 +1,4 @@
-using DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters;
+﻿using DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters;
 using DrivingSchoolBookingSystem.WstGrp2DS2TableAdapters;
 using System;
 using System.Collections.Generic;
@@ -261,7 +261,7 @@ namespace DrivingSchoolBookingSystem
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            
+
             HomeForm home = new HomeForm(loginform);
             home.Employee_Name = loginform.Employee_Name;
             home.Employee_Surname = loginform.Employee_Surname;
@@ -277,7 +277,7 @@ namespace DrivingSchoolBookingSystem
             login.Show();
         }
 
-        
+
 
         private void label11_Click(object sender, EventArgs e)
         {
@@ -289,7 +289,7 @@ namespace DrivingSchoolBookingSystem
 
         }
 
-        
+
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
@@ -335,6 +335,37 @@ namespace DrivingSchoolBookingSystem
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
+
+        }
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+            string instructions = "📋 Vehicle Management Instructions:\n\n" +
+                        "🔍 Search:\n" +
+                        " - Enter the vehicle's make in the search box.\n" +
+                        " - Matching vehicles will appear in the table below.\n\n" +
+                        "🧾 Viewing Vehicles:\n" +
+                        " - Click on a row in the table to load that learner's details into the form.\n" +
+                        " - Their info will appear in the fields on the left.\n\n" +
+                        "🖋️ Edit Mode:\n" +
+                        " - Turn Edit Mode ON to enable changes to learner info.\n" +
+                        " - Turn it OFF to prevent accidental edits.\n\n" +
+                        "➕ Add:\n" +
+                        " - Fill out all fields.\n" +
+                        " - Click **Add** to create a new vehicle record.\n\n" +
+                        "🔄 Update:\n" +
+                        " - Select a vehicle from the grid.\n" +
+                        " - Make the desired changes (Edit Mode must be ON).\n" +
+                        " - Click Update to save changes.\n\n" +
+                        "❌ Delete:\n" +
+                        " - Select a vehicle in the grid.\n" +
+                        " - Click Delete to remove them permanently.\n\n" +
+                        "🧽 Clear:\n" +
+                        " - Clears all the fields in the form.\n\n" +
+                        "🚪 Logout:\n" +
+                        " - Logs out of the system and returns to the login screen.\n\n";
+
+            MessageBox.Show(instructions, "How to Use This Form", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
     }
