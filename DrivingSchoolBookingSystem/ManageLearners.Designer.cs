@@ -902,6 +902,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.fillBy2ToolStrip);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ManageLearners";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LearnerForm2";
