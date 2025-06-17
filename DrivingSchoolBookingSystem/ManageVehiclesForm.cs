@@ -328,7 +328,6 @@ namespace DrivingSchoolBookingSystem
 
         }
 
-<<<<<<< HEAD
         private void pictureBox5_Click_1(object sender, EventArgs e)
         {
 
@@ -338,8 +337,5 @@ namespace DrivingSchoolBookingSystem
         {
 
         }
-=======
-        
->>>>>>> 00ce2c6 (Fixed Home buttons)
     }
 }
