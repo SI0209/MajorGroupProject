@@ -655,8 +655,6 @@ namespace DrivingSchoolBookingSystem
             this.label16.TabIndex = 46;
             this.label16.Text = "Click here for further instructions";
             this.label16.Click += new System.EventHandler(this.label16_Click);
-            this.label16.MouseEnter += new System.EventHandler(this.label16_MouseEnter);
-            this.label16.MouseLeave += new System.EventHandler(this.label16_MouseLeave);
             // 
             // ManageVehiclesForm
             // 
