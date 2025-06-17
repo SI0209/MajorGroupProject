@@ -20,10 +20,10 @@ namespace DrivingSchoolBookingSystem
         private ErrorControl errorControl = new ErrorControl();
         tblBookingTableAdapter taBooking = new tblBookingTableAdapter();
         LoginForm loginform;
-        public ManageVehiclesForm()
+        public ManageVehiclesForm(LoginForm Loginform)
         {
             InitializeComponent();
-
+            loginform = Loginform;
             cmbSize.Items.AddRange(new string[] { "Small", "Medium", "Large" });
             cmbVehicleStatus.Items.AddRange(new string[] { "Available", "Unavailable" });
         }
@@ -261,12 +261,13 @@ namespace DrivingSchoolBookingSystem
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            
             HomeForm home = new HomeForm(loginform);
             home.Employee_Name = loginform.Employee_Name;
             home.Employee_Surname = loginform.Employee_Surname;
             home.Employee_Type = loginform.Employee_Type;
             home.ShowDialog();
+            this.Hide();
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
@@ -327,6 +328,7 @@ namespace DrivingSchoolBookingSystem
 
         }
 
+<<<<<<< HEAD
         private void pictureBox5_Click_1(object sender, EventArgs e)
         {
 
@@ -336,5 +338,8 @@ namespace DrivingSchoolBookingSystem
         {
 
         }
+=======
+        
+>>>>>>> 00ce2c6 (Fixed Home buttons)
     }
 }

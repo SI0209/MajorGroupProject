@@ -16,9 +16,10 @@ namespace DrivingSchoolBookingSystem
     public partial class AnalyticsForm : Form
     {
         LoginForm loginForm;
-        public AnalyticsForm()
+        public AnalyticsForm(LoginForm Loginform)
         {
             InitializeComponent();
+            loginForm = Loginform;
             this.StartPosition = FormStartPosition.CenterScreen;
             DrawChart();
             // pieChart.Titles.Add("Pie Chart");

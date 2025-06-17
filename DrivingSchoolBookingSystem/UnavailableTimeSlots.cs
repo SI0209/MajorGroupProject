@@ -17,9 +17,10 @@ namespace DrivingSchoolBookingSystem
         LoginForm loginform;
         ErrorControl errorControl = new ErrorControl();
         int unavailableSlotId = -1;
-        public UnavailableTimeSlots()
+        public UnavailableTimeSlots(LoginForm loginForm)
         {
             InitializeComponent();
+            loginform = loginForm;
             this.StartPosition = FormStartPosition.CenterScreen;
             taUnavailableSlot.Fill(dsBookingSystem.tblUnavailableSlot);
             taUnavailableSlotInnerJoin.Fill(dsBookingSystem.tblUnavailableSlotInnerJoin);

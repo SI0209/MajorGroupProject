@@ -111,14 +111,14 @@ namespace DrivingSchoolBookingSystem
         private void pictureBox10_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ManageVehiclesForm vehicles = new ManageVehiclesForm();
+            ManageVehiclesForm vehicles = new ManageVehiclesForm(loginForm);
             vehicles.ShowDialog();
         }
 
         private void pictureBox12_Click(object sender, EventArgs e)
         {
             this.Hide();
-            LearnerProgressForm LearnerProgress = new LearnerProgressForm();
+            LearnerProgressForm LearnerProgress = new LearnerProgressForm(loginForm);
             LearnerProgress.ShowDialog();
         }
 
@@ -142,7 +142,7 @@ namespace DrivingSchoolBookingSystem
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            AnalyticsForm analytics = new AnalyticsForm();
+            AnalyticsForm analytics = new AnalyticsForm(loginForm);
             analytics.ShowDialog();
         }
 
@@ -156,7 +156,7 @@ namespace DrivingSchoolBookingSystem
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             this.Hide();
-            UnavailableTimeSlots unavailableTimeSlots = new UnavailableTimeSlots();
+            UnavailableTimeSlots unavailableTimeSlots = new UnavailableTimeSlots(loginForm);
             unavailableTimeSlots.ShowDialog();
         }
     }

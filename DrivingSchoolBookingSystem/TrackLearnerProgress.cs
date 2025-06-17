@@ -21,9 +21,12 @@ namespace DrivingSchoolBookingSystem
     public partial class LearnerProgressForm : Form
     {
         LoginForm loginform;
-        public LearnerProgressForm()
+        public LearnerProgressForm(LoginForm Loginform)
         {
             InitializeComponent();
+
+            loginform = Loginform;
+
             label6.Text = "Click here for further instructions";
             label6.ForeColor = Color.Blue;
             label6.Font = new Font(label6.Font, FontStyle.Underline);
