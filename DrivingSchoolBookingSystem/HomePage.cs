@@ -56,9 +56,6 @@ namespace DrivingSchoolBookingSystem
         {
             this.Hide();
             InstructorSchedule instructorschedule = new InstructorSchedule(loginForm);
-            instructorschedule.name = Employee_Name;
-            instructorschedule.surname = Employee_Surname;
-            instructorschedule.Employee_Type = Employee_Type;
             instructorschedule.ShowDialog();
         }
 
@@ -70,7 +67,7 @@ namespace DrivingSchoolBookingSystem
         private void pictureBox8_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ManageLearners learnerform = new ManageLearners();
+            ManageLearners learnerform = new ManageLearners(loginForm);
             learnerform.ShowDialog();
         }
 
@@ -102,9 +99,6 @@ namespace DrivingSchoolBookingSystem
         {
             this.Hide();
             ManageBooking lesson = new ManageBooking(loginForm);
-            lesson.employeeName = Employee_Name;
-            lesson.employeeSurname = Employee_Surname;
-            lesson.employeeType = Employee_Type;
             lesson.ShowDialog();
         }
 
@@ -119,9 +113,6 @@ namespace DrivingSchoolBookingSystem
         {
             this.Hide();
             ManageInstruc instructor = new ManageInstruc(loginForm);
-            instructor.employeename = Employee_Name;
-            instructor.employeesurname = Employee_Surname;
-            instructor.employeetype = Employee_Type;
             instructor.ShowDialog();
         }
 

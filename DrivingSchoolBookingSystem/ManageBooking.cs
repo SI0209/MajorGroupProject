@@ -33,7 +33,7 @@ namespace DrivingSchoolBookingSystem
             taVehicle.Fill(dsBookingSystem.tblVehicle);
             taLearner.Fill(dsBookingSystem.tblLearner);
             taBookingInnerJoin.Fill(dsBookingSystem.tblBookingInnerJoin);
-            loginForm = loginform;
+            loginform = loginForm;
             foreach (DataRow row in dsBookingSystem.tblLessonCode.Rows)
             {
                 LessonCodeID = Convert.ToInt16(row["Code_Type"]);
@@ -80,9 +80,14 @@ namespace DrivingSchoolBookingSystem
             taBookingInnerJoin.Fill(dsBookingSystem.tblBookingInnerJoin);
             radioButton2.Checked = true;
         }
-        private void cbxLearnerID_SelectedIndexChanged(object sender, EventArgs e)
+        private void label3_MouseEnter(object sender, EventArgs e)
         {
+            label16.ForeColor = Color.DarkRed; // or a hover color you prefer
+        }
 
+        private void label3_MouseLeave(object sender, EventArgs e)
+        {
+            label16.ForeColor = Color.Blue;
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -454,24 +459,7 @@ namespace DrivingSchoolBookingSystem
 
         private void pbHelpBooking_Click(object sender, EventArgs e)
         {
-            string helpText = "Manage Bookings Help:\n\n" +
-                      "Add Booking: Fill in the booking details and click 'Add' to create a new booking.\n" +
-                      "Update Booking: Select a booking from the list, make changes to the booking details, and click 'Update' to save changes.\n" +
-                      "Delete Booking: Select a booking from the list and click 'Delete' to remove it.\n" +
-                      "Clear Fields: Click 'Clear' to reset all booking details fields.\n" +
-                      "Search Booking: Use the search box or date time picker to find bookings. The results update as you type or select a date.\n\n" +
-                      "Possible Errors:\n" +
-                      "- 'Please fill in all fields.': Ensure all booking details fields are filled out before submitting.\n" +
-                      "- 'Invalid booking date. Please enter a valid date.': Ensure the booking date is in the correct format and is a valid date.\n" +
-                      "- 'Booking conflict. This slot is already booked.': Ensure the booking slot is not already taken.\n" +
-                      "- 'No changes detected. Please modify at least one field before updating.': Ensure you have made some changes before trying to update.\n" +
-                      "- 'The Employee chosen is already booked during the chosen date and times!': Ensure the selected employee is available during the specified times.\n" +
-                      "- 'The Vehicle chosen is already booked during the chosen date and times!': Ensure the selected vehicle is available during the specified times.\n" +
-                      "- 'The Learner chosen is already booked during the chosen date and times!': Ensure the selected learner is available during the specified times.\n" +
-                      "- 'The Employee chosen is unavailable during the chosen date and times!': Ensure the selected employee is not marked as unavailable during the specified times.\n" +
-                      "- 'Vehicle chosen is unavailable at the moment!': Ensure the selected vehicle is marked as available.\n";
-
-            MessageBox.Show(helpText, "Help", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            
         }
 
         
@@ -519,9 +507,12 @@ namespace DrivingSchoolBookingSystem
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            this.Hide();
             HomeForm home = new HomeForm(loginform);
+            home.Employee_Name = loginform.Employee_Name;
+            home.Employee_Surname = loginform.Employee_Surname;
+            home.Employee_Type = loginform.Employee_Type;
             home.ShowDialog();
+            this.Hide();
         }
 
         private void label8_Click(object sender, EventArgs e)
@@ -572,6 +563,28 @@ namespace DrivingSchoolBookingSystem
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            string helpText = "Manage Bookings Help:\n\n" +
+                      "Add Booking: Fill in the booking details and click 'Add' to create a new booking.\n" +
+                      "Update Booking: Select a booking from the list, make changes to the booking details, and click 'Update' to save changes.\n" +
+                      "Delete Booking: Select a booking from the list and click 'Delete' to remove it.\n" +
+                      "Clear Fields: Click 'Clear' to reset all booking details fields.\n" +
+                      "Search Booking: Use the search box or date time picker to find bookings. The results update as you type or select a date.\n\n" +
+                      "Possible Errors:\n" +
+                      "- 'Please fill in all fields.': Ensure all booking details fields are filled out before submitting.\n" +
+                      "- 'Invalid booking date. Please enter a valid date.': Ensure the booking date is in the correct format and is a valid date.\n" +
+                      "- 'Booking conflict. This slot is already booked.': Ensure the booking slot is not already taken.\n" +
+                      "- 'No changes detected. Please modify at least one field before updating.': Ensure you have made some changes before trying to update.\n" +
+                      "- 'The Employee chosen is already booked during the chosen date and times!': Ensure the selected employee is available during the specified times.\n" +
+                      "- 'The Vehicle chosen is already booked during the chosen date and times!': Ensure the selected vehicle is available during the specified times.\n" +
+                      "- 'The Learner chosen is already booked during the chosen date and times!': Ensure the selected learner is available during the specified times.\n" +
+                      "- 'The Employee chosen is unavailable during the chosen date and times!': Ensure the selected employee is not marked as unavailable during the specified times.\n" +
+                      "- 'Vehicle chosen is unavailable at the moment!': Ensure the selected vehicle is marked as available.\n";
+
+            MessageBox.Show(helpText, "Help", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)

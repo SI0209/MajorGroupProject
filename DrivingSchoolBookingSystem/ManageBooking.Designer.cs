@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManageBooking));
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -105,6 +105,9 @@
             this.taBookingInnerJoin = new DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters.tblBookingInnerJoinTableAdapter();
             this.taUnavailableSlot1 = new DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters.taUnavailableSlot();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.toolTip3 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip4 = new System.Windows.Forms.ToolTip(this.components);
+            this.label3 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -154,6 +157,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(157, 121);
             this.panel1.TabIndex = 72;
+            this.toolTip3.SetToolTip(this.panel1, "Enable edit to make changes and disable to prevent changes");
             // 
             // pictureBox1
             // 
@@ -186,6 +190,7 @@
             this.radioButton1.TabIndex = 67;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "ON";
+            this.toolTip3.SetToolTip(this.radioButton1, "Enables changes to be made");
             this.radioButton1.UseVisualStyleBackColor = true;
             this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
@@ -200,6 +205,7 @@
             this.radioButton2.TabIndex = 68;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "OFF";
+            this.toolTip3.SetToolTip(this.radioButton2, "Prevents changes being made");
             this.radioButton2.UseVisualStyleBackColor = true;
             this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
@@ -239,6 +245,7 @@
             this.pictureBox4.Size = new System.Drawing.Size(128, 123);
             this.pictureBox4.TabIndex = 14;
             this.pictureBox4.TabStop = false;
+            this.toolTip3.SetToolTip(this.pictureBox4, "Log out of the page");
             // 
             // dgvLearner
             // 
@@ -247,14 +254,14 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvLearner.AutoGenerateColumns = false;
             this.dgvLearner.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Comic Sans MS", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvLearner.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Comic Sans MS", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvLearner.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.dgvLearner.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvLearner.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.bookingIDDataGridViewTextBoxColumn1,
@@ -272,17 +279,17 @@
             this.dgvLearner.DataSource = this.tblBookingInnerJoinBindingSource;
             this.dgvLearner.Location = new System.Drawing.Point(828, 641);
             this.dgvLearner.Name = "dgvLearner";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Comic Sans MS", 8F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvLearner.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Comic Sans MS", 8F);
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvLearner.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.dgvLearner.RowHeadersWidth = 51;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Comic Sans MS", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvLearner.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Comic Sans MS", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvLearner.RowsDefaultCellStyle = dataGridViewCellStyle15;
             this.dgvLearner.RowTemplate.Height = 24;
             this.dgvLearner.Size = new System.Drawing.Size(704, 127);
             this.dgvLearner.TabIndex = 136;
@@ -401,14 +408,14 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvBooking.AutoGenerateColumns = false;
             this.dgvBooking.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Comic Sans MS", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvBooking.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Comic Sans MS", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBooking.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
             this.dgvBooking.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBooking.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.bookingIDDataGridViewTextBoxColumn,
@@ -424,19 +431,20 @@
             this.dgvBooking.Location = new System.Drawing.Point(828, 164);
             this.dgvBooking.Margin = new System.Windows.Forms.Padding(4);
             this.dgvBooking.Name = "dgvBooking";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Comic Sans MS", 8F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvBooking.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Comic Sans MS", 8F);
+            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBooking.RowHeadersDefaultCellStyle = dataGridViewCellStyle17;
             this.dgvBooking.RowHeadersWidth = 51;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Comic Sans MS", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvBooking.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Comic Sans MS", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvBooking.RowsDefaultCellStyle = dataGridViewCellStyle18;
             this.dgvBooking.Size = new System.Drawing.Size(704, 387);
             this.dgvBooking.TabIndex = 112;
+            this.toolTip3.SetToolTip(this.dgvBooking, "Select the booking you would like to display");
             this.dgvBooking.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvBooking_RowHeaderMouseClick);
             // 
             // bookingIDDataGridViewTextBoxColumn
@@ -535,6 +543,7 @@
             this.nudEndTime.Name = "nudEndTime";
             this.nudEndTime.Size = new System.Drawing.Size(120, 35);
             this.nudEndTime.TabIndex = 135;
+            this.toolTip3.SetToolTip(this.nudEndTime, "Select the time learners wants to end the lesson");
             this.nudEndTime.Value = new decimal(new int[] {
             12,
             0,
@@ -560,6 +569,7 @@
             this.nudStartTime.Name = "nudStartTime";
             this.nudStartTime.Size = new System.Drawing.Size(120, 35);
             this.nudStartTime.TabIndex = 134;
+            this.toolTip3.SetToolTip(this.nudStartTime, "Select the time learner prefers to start the lesson");
             this.nudStartTime.Value = new decimal(new int[] {
             11,
             0,
@@ -575,6 +585,7 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(375, 35);
             this.dateTimePicker1.TabIndex = 133;
+            this.toolTip3.SetToolTip(this.dateTimePicker1, "Search for a booking by date");
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // label17
@@ -602,6 +613,7 @@
             this.btnUpdate.Size = new System.Drawing.Size(103, 49);
             this.btnUpdate.TabIndex = 131;
             this.btnUpdate.Text = "Update";
+            this.toolTip3.SetToolTip(this.btnUpdate, "Update any information on a specific booking");
             this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Visible = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
@@ -617,6 +629,7 @@
             this.btnDelete.Size = new System.Drawing.Size(103, 49);
             this.btnDelete.TabIndex = 130;
             this.btnDelete.Text = "Delete";
+            this.toolTip3.SetToolTip(this.btnDelete, "Delete a specific booking");
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Visible = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -632,6 +645,7 @@
             this.btnClear.Size = new System.Drawing.Size(103, 49);
             this.btnClear.TabIndex = 129;
             this.btnClear.Text = "Clear";
+            this.toolTip3.SetToolTip(this.btnClear, "Clear up the Textboxes");
             this.btnClear.UseVisualStyleBackColor = false;
             this.btnClear.Visible = false;
             this.btnClear.Click += new System.EventHandler(this.button2_Click);
@@ -647,6 +661,7 @@
             this.btnAdd.Size = new System.Drawing.Size(103, 49);
             this.btnAdd.TabIndex = 128;
             this.btnAdd.Text = "Add";
+            this.toolTip3.SetToolTip(this.btnAdd, "Add the Booking");
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Visible = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -661,6 +676,7 @@
             this.cbxVehicleID.Name = "cbxVehicleID";
             this.cbxVehicleID.Size = new System.Drawing.Size(353, 33);
             this.cbxVehicleID.TabIndex = 127;
+            this.toolTip3.SetToolTip(this.cbxVehicleID, "Select the vehicle the student will learn on");
             // 
             // label15
             // 
@@ -685,6 +701,7 @@
             this.cbxEmployeeID.Name = "cbxEmployeeID";
             this.cbxEmployeeID.Size = new System.Drawing.Size(353, 33);
             this.cbxEmployeeID.TabIndex = 125;
+            this.toolTip3.SetToolTip(this.cbxEmployeeID, "Select the Instructor who will teach the student");
             // 
             // label16
             // 
@@ -709,6 +726,7 @@
             this.cbxLearnerID.Name = "cbxLearnerID";
             this.cbxLearnerID.Size = new System.Drawing.Size(353, 33);
             this.cbxLearnerID.TabIndex = 123;
+            this.toolTip3.SetToolTip(this.cbxLearnerID, "Select the Learner that wants to book");
             // 
             // label13
             // 
@@ -733,6 +751,7 @@
             this.cbxLessonCodes.Name = "cbxLessonCodes";
             this.cbxLessonCodes.Size = new System.Drawing.Size(353, 33);
             this.cbxLessonCodes.TabIndex = 121;
+            this.toolTip3.SetToolTip(this.cbxLessonCodes, "Select which licence code the student will learn");
             // 
             // label12
             // 
@@ -743,9 +762,9 @@
             this.label12.Location = new System.Drawing.Point(11, 260);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(137, 28);
+            this.label12.Size = new System.Drawing.Size(143, 28);
             this.label12.TabIndex = 120;
-            this.label12.Text = "Lesson Codes";
+            this.label12.Text = "Licence Codes";
             // 
             // cbxBookingStatus
             // 
@@ -761,6 +780,7 @@
             this.cbxBookingStatus.Name = "cbxBookingStatus";
             this.cbxBookingStatus.Size = new System.Drawing.Size(353, 36);
             this.cbxBookingStatus.TabIndex = 119;
+            this.toolTip3.SetToolTip(this.cbxBookingStatus, "Set the booking status to either Complete or Not Complete");
             // 
             // dtpBooking
             // 
@@ -771,6 +791,7 @@
             this.dtpBooking.Name = "dtpBooking";
             this.dtpBooking.Size = new System.Drawing.Size(353, 35);
             this.dtpBooking.TabIndex = 118;
+            this.toolTip3.SetToolTip(this.dtpBooking, "Select a date the student prefers to book a lesson on");
             // 
             // label9
             // 
@@ -829,7 +850,7 @@
             this.pictureBox12.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox12.BackColor = System.Drawing.Color.RoyalBlue;
             this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
-            this.pictureBox12.Location = new System.Drawing.Point(740, 11);
+            this.pictureBox12.Location = new System.Drawing.Point(693, 13);
             this.pictureBox12.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(67, 62);
@@ -858,7 +879,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(821, 24);
+            this.label1.Location = new System.Drawing.Point(774, 26);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(247, 42);
@@ -932,7 +953,24 @@
             this.pictureBox5.Size = new System.Drawing.Size(145, 76);
             this.pictureBox5.TabIndex = 11;
             this.pictureBox5.TabStop = false;
+            this.toolTip3.SetToolTip(this.pictureBox5, "Home page");
             this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(1223, 40);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(298, 24);
+            this.label3.TabIndex = 138;
+            this.label3.Text = "Click here for further instructions";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.label3.MouseEnter += new System.EventHandler(this.label3_MouseEnter);
+            this.label3.MouseLeave += new System.EventHandler(this.label3_MouseLeave);
             // 
             // ManageBooking
             // 
@@ -942,6 +980,7 @@
             this.BackgroundImage = global::DrivingSchoolBookingSystem.Properties.Resources.Background_final;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1582, 897);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.dgvLearner);
             this.Controls.Add(this.dgvBooking);
             this.Controls.Add(this.dateTimePicker1);
@@ -1053,5 +1092,8 @@
         private System.Windows.Forms.RadioButton radioButton2;
         private WstGrp2DataSetTableAdapters.taUnavailableSlot taUnavailableSlot1;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.ToolTip toolTip3;
+        private System.Windows.Forms.ToolTip toolTip4;
+        private System.Windows.Forms.Label label3;
     }
 }

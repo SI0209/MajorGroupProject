@@ -13,9 +13,6 @@ namespace DrivingSchoolBookingSystem
     public partial class InstructorSchedule : Form
     {
         LoginForm loginform;
-        public string name;
-        public string surname;
-        public string Employee_Type;
         int EmployeeID;
         public InstructorSchedule(LoginForm login)
         {
@@ -57,8 +54,9 @@ namespace DrivingSchoolBookingSystem
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             HomeForm home = new HomeForm(loginform);
-            home.lblUsernameInfo.Text = "Welcome " + name + " " + surname + "!";
-            home.lblUserType.Text = Employee_Type;
+            home.Employee_Name = loginform.Employee_Name;
+            home.Employee_Surname = loginform.Employee_Surname;
+            home.Employee_Type = loginform.Employee_Type;
             home.Show();
             this.Hide();
         }

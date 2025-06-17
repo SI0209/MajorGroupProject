@@ -61,9 +61,9 @@
             // FgtPassbtn
             // 
             this.FgtPassbtn.Font = new System.Drawing.Font("Comic Sans MS", 8F);
-            this.FgtPassbtn.Location = new System.Drawing.Point(269, 433);
+            this.FgtPassbtn.Location = new System.Drawing.Point(269, 432);
             this.FgtPassbtn.Name = "FgtPassbtn";
-            this.FgtPassbtn.Size = new System.Drawing.Size(133, 37);
+            this.FgtPassbtn.Size = new System.Drawing.Size(146, 48);
             this.FgtPassbtn.TabIndex = 25;
             this.FgtPassbtn.Text = "Forgot Password?";
             this.FgtPassbtn.UseVisualStyleBackColor = true;
@@ -72,9 +72,9 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Comic Sans MS", 8F);
-            this.button1.Location = new System.Drawing.Point(188, 433);
+            this.button1.Location = new System.Drawing.Point(167, 432);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 37);
+            this.button1.Size = new System.Drawing.Size(96, 48);
             this.button1.TabIndex = 24;
             this.button1.Text = "Clear";
             this.button1.UseVisualStyleBackColor = true;
@@ -83,9 +83,9 @@
             // LoginButton
             // 
             this.LoginButton.Font = new System.Drawing.Font("Comic Sans MS", 11F, System.Drawing.FontStyle.Bold);
-            this.LoginButton.Location = new System.Drawing.Point(187, 377);
+            this.LoginButton.Location = new System.Drawing.Point(167, 376);
             this.LoginButton.Name = "LoginButton";
-            this.LoginButton.Size = new System.Drawing.Size(214, 50);
+            this.LoginButton.Size = new System.Drawing.Size(248, 50);
             this.LoginButton.TabIndex = 23;
             this.LoginButton.Text = "Login";
             this.LoginButton.UseVisualStyleBackColor = true;
@@ -96,7 +96,7 @@
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.BackgroundImage = global::DrivingSchoolBookingSystem.Properties.Resources.password;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(49, 294);
+            this.pictureBox3.Location = new System.Drawing.Point(49, 291);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(37, 32);
             this.pictureBox3.TabIndex = 22;
@@ -107,7 +107,7 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.BackgroundImage = global::DrivingSchoolBookingSystem.Properties.Resources.user_icon;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(49, 236);
+            this.pictureBox2.Location = new System.Drawing.Point(49, 233);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(37, 36);
             this.pictureBox2.TabIndex = 21;
@@ -131,7 +131,7 @@
             this.viewpasswordcheckBox.BackColor = System.Drawing.Color.Transparent;
             this.viewpasswordcheckBox.Font = new System.Drawing.Font("Comic Sans MS", 8F);
             this.viewpasswordcheckBox.ForeColor = System.Drawing.Color.White;
-            this.viewpasswordcheckBox.Location = new System.Drawing.Point(438, 303);
+            this.viewpasswordcheckBox.Location = new System.Drawing.Point(438, 300);
             this.viewpasswordcheckBox.Name = "viewpasswordcheckBox";
             this.viewpasswordcheckBox.Size = new System.Drawing.Size(126, 23);
             this.viewpasswordcheckBox.TabIndex = 19;
@@ -142,7 +142,7 @@
             // passwordtextBox
             // 
             this.passwordtextBox.Font = new System.Drawing.Font("Comic Sans MS", 8F);
-            this.passwordtextBox.Location = new System.Drawing.Point(202, 301);
+            this.passwordtextBox.Location = new System.Drawing.Point(202, 298);
             this.passwordtextBox.Name = "passwordtextBox";
             this.passwordtextBox.PasswordChar = '*';
             this.passwordtextBox.Size = new System.Drawing.Size(213, 26);
@@ -151,7 +151,7 @@
             // usernametextBox
             // 
             this.usernametextBox.Font = new System.Drawing.Font("Comic Sans MS", 8F);
-            this.usernametextBox.Location = new System.Drawing.Point(202, 244);
+            this.usernametextBox.Location = new System.Drawing.Point(202, 241);
             this.usernametextBox.Name = "usernametextBox";
             this.usernametextBox.Size = new System.Drawing.Size(213, 26);
             this.usernametextBox.TabIndex = 17;
@@ -162,7 +162,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Comic Sans MS", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(90, 298);
+            this.label2.Location = new System.Drawing.Point(90, 295);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(99, 25);
             this.label2.TabIndex = 16;
@@ -174,7 +174,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(90, 244);
+            this.label1.Location = new System.Drawing.Point(90, 241);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(104, 25);
             this.label1.TabIndex = 14;

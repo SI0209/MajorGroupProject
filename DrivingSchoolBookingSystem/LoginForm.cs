@@ -49,12 +49,14 @@ namespace DrivingSchoolBookingSystem
                             isManager = true;
                             Employee_Name = row["Employee_Name"].ToString();
                             Employee_Surname = row["Employee_Surname"].ToString();
+                            Employee_Type = row["Employee_Type"].ToString();
                             Employee_username = row["Employee_Username"].ToString();
                         }
                         isFound = true;
                         Employee_Name = row["Employee_Name"].ToString();
                         Employee_Surname = row["Employee_Surname"].ToString();
                         Employee_username = row["Employee_Username"].ToString();
+                        Employee_Type = row["Employee_Type"].ToString();
                         break;
                     }
 
@@ -69,7 +71,7 @@ namespace DrivingSchoolBookingSystem
                         homepage.Employee_Username = Employee_username;
                         homepage.Employee_Name = Employee_Name;
                         homepage.Employee_Surname = Employee_Surname;
-                        homepage.Employee_Type = "Manager";
+                        homepage.Employee_Type = Employee_Type;
                         homepage.Show();
 
                     }
@@ -82,7 +84,7 @@ namespace DrivingSchoolBookingSystem
                         homepage.Employee_Username = Employee_username;
                         homepage.Employee_Name = Employee_Name;
                         homepage.Employee_Surname = Employee_Surname;
-                        homepage.Employee_Type = "Instructor";
+                        homepage.Employee_Type = Employee_Type;
                         homepage.Show();
 
                         //MessageBox.Show("Instructor Access Denied", "Security", MessageBoxButtons.OK, MessageBoxIcon.Error);

@@ -42,8 +42,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -54,8 +54,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -159,11 +159,11 @@
             this.lblUsernameInfo.AutoSize = true;
             this.lblUsernameInfo.BackColor = System.Drawing.Color.Transparent;
             this.lblUsernameInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblUsernameInfo.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsernameInfo.Font = new System.Drawing.Font("Comic Sans MS", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.lblUsernameInfo.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.lblUsernameInfo.Location = new System.Drawing.Point(24, 54);
             this.lblUsernameInfo.Name = "lblUsernameInfo";
-            this.lblUsernameInfo.Size = new System.Drawing.Size(230, 32);
+            this.lblUsernameInfo.Size = new System.Drawing.Size(269, 38);
             this.lblUsernameInfo.TabIndex = 9;
             this.lblUsernameInfo.Text = "Welcome Username";
             // 
@@ -172,11 +172,11 @@
             this.lblUserType.AutoSize = true;
             this.lblUserType.BackColor = System.Drawing.Color.Transparent;
             this.lblUserType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblUserType.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserType.Font = new System.Drawing.Font("Comic Sans MS", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.lblUserType.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.lblUserType.Location = new System.Drawing.Point(1246, 54);
             this.lblUserType.Name = "lblUserType";
-            this.lblUserType.Size = new System.Drawing.Size(118, 32);
+            this.lblUserType.Size = new System.Drawing.Size(139, 38);
             this.lblUserType.TabIndex = 9;
             this.lblUserType.Text = "User role";
             this.lblUserType.Click += new System.EventHandler(this.lblUserType_Click);
@@ -209,6 +209,18 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "📋 Management";
             // 
+            // pictureBox14
+            // 
+            this.pictureBox14.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox14.Image = global::DrivingSchoolBookingSystem.Properties.Resources.image_removebg_preview__14_1;
+            this.pictureBox14.Location = new System.Drawing.Point(73, 374);
+            this.pictureBox14.Name = "pictureBox14";
+            this.pictureBox14.Size = new System.Drawing.Size(249, 108);
+            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox14.TabIndex = 45;
+            this.pictureBox14.TabStop = false;
+            this.pictureBox14.Click += new System.EventHandler(this.pictureBox14_Click);
+            // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
@@ -222,18 +234,6 @@
             this.groupBox2.TabIndex = 53;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "⏰ Scheduling";
-            // 
-            // pictureBox14
-            // 
-            this.pictureBox14.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox14.Image = global::DrivingSchoolBookingSystem.Properties.Resources.image_removebg_preview__14_1;
-            this.pictureBox14.Location = new System.Drawing.Point(73, 374);
-            this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(249, 108);
-            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox14.TabIndex = 45;
-            this.pictureBox14.TabStop = false;
-            this.pictureBox14.Click += new System.EventHandler(this.pictureBox14_Click);
             // 
             // groupBox3
             // 
@@ -292,8 +292,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
+            this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

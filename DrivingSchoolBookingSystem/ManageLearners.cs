@@ -19,11 +19,11 @@ namespace DrivingSchoolBookingSystem
         private bool autoDateHandlingEnabled = true;
         private bool suppressDateEvents = false;
         LoginForm Loginform;
-        public ManageLearners()
+        public ManageLearners(LoginForm loginform)
         {
             InitializeComponent();
             SetIssueDatePickerRange();
-
+            Loginform = loginform;
 
             // Make label16 look like a hyperlinkAdd commentMore actions
             label16.Text = "Click here for instructions";
@@ -769,6 +769,9 @@ namespace DrivingSchoolBookingSystem
         private void pictureBox2_Click(object sender, EventArgs e)
         {
            HomeForm home = new HomeForm(Loginform); 
+            home.Employee_Name = Loginform.Employee_Name;
+            home.Employee_Surname = Loginform.Employee_Surname;
+            home.Employee_Type = Loginform.Employee_Type;
             home.Show();                             
             this.Hide();
         }

@@ -58,66 +58,7 @@ namespace DrivingSchoolBookingSystem
         }
 
 
-        private void Form3_Load(object sender, EventArgs e)
-        {
-
-
-
-
-
-
-        }
-
-        private void pbBooking_Click_1(object sender, EventArgs e)
-        {
-            this.Hide();
-            /*ManageBooking mngBooking = new ManageBooking();
-            mngBooking.Show();*/
-        }
-
-        private void pbBack_Click_1(object sender, EventArgs e)
-        {
-            this.Hide();
-            LoginForm loginForm = new LoginForm();
-            loginForm.Show();
-        }
-
-        private void pbLearner_Click_1(object sender, EventArgs e)
-        {
-            this.Hide();
-            ManageLearners learner = new ManageLearners();
-            learner.Show();
-        }
-
-        private void pbAnalytics_Click_1(object sender, EventArgs e)
-        {
-            this.Hide();
-            AnalyticsForm analytics = new AnalyticsForm();
-            analytics.Show();
-        }
-
-        private void pbVehicle_Click_1(object sender, EventArgs e)
-        {
-            this.Hide();
-            ManageVehiclesForm vehiclesForm = new ManageVehiclesForm();
-            vehiclesForm.Show();
-        }
-
-
-
-        private void pbUnavailableSlot_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            UnavailableTimeSlots unavailableTimeSlots = new UnavailableTimeSlots();
-            unavailableTimeSlots.Show();
-        }
-
-        private void pbLessonCode_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            /*LessonCode lessonCode = new LessonCode();   
-            lessonCode.Show();*/
-        }
+       
 
         private void dgvEmployee_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
@@ -254,7 +195,15 @@ namespace DrivingSchoolBookingSystem
                    numericUpDownAge.Value != originalAge || txtUsername.Text != originalEmail;
         }
 
+        private void label3_MouseEnter(object sender, EventArgs e)
+        {
+            label2.ForeColor = Color.DarkRed; // or a hover color you prefer
+        }
 
+        private void label3_MouseLeave(object sender, EventArgs e)
+        {
+            label2.ForeColor = Color.Blue;
+        }
         private void button2_Click(object sender, EventArgs e)
         {
             ClearFields();
@@ -522,27 +471,7 @@ namespace DrivingSchoolBookingSystem
             tblEmployeeTableAdapter.SearchBySurname(dsBookingSystem.tblEmployee, surname);
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            string helpText = "Manage Instructors Help:\n\n" +
-                      "Add: Fills in the form fields and click 'Add' to add a new instructor.\n" +
-                      "Update: Select an instructor from the list, make changes to the form fields, and click 'Update' to save changes.\n" +
-                      "Delete: Select an instructor from the list and click 'Delete' to remove them.\n" +
-                      "Clear: Click 'Clear' to reset all form fields.\n" +
-                      "Search: Type in the search box to find instructors by surname. The results update as you type.\n\n" +
-                      "Possible Errors:\n" +
-                      "- 'Please fill in all fields.': Ensure all fields are filled out before submitting.\n" +
-                      "- 'Invalid ID number. Please enter a valid 13-digit ID number.': Ensure the ID number is exactly 13 digits.\n" +
-                      "- 'Invalid phone number. Please enter a valid 10-digit phone number.': Ensure the phone number is exactly 10 digits.\n" +
-                      "- 'This ID number already exists. Please enter a unique ID number.': Use a unique ID number not already in use.\n" +
-                      "- 'This username already exists. Please enter a unique username.': Use a unique username not already in use.\n" +
-                      "- 'This password already exists. Please enter a unique password.': Use a unique password not already in use.\n" +
-                      "- 'No changes detected. Please modify at least one field before updating.': Ensure you have made some changes before trying to update.\n";
-
-            MessageBox.Show(helpText, "Help", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-
-        }
+      
         private int CalculateAge(string idNumber)
         {
             if (idNumber.Length != 13)
@@ -689,7 +618,32 @@ namespace DrivingSchoolBookingSystem
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
+            HomeForm home = new HomeForm(loginForm1);
+            home.Employee_Name = loginForm1.Employee_Name;
+            home.Employee_Surname = loginForm1.Employee_Surname;
+            home.Employee_Type = loginForm1.Employee_Type;
+            home.ShowDialog();
+            this.Hide();
+        }
 
+        private void label2_Click(object sender, EventArgs e)
+        {
+            string helpText = "Manage Instructors Help:\n\n" +
+                      "Add: Fills in the form fields and click 'Add' to add a new instructor.\n" +
+                      "Update: Select an instructor from the list, make changes to the form fields, and click 'Update' to save changes.\n" +
+                      "Delete: Select an instructor from the list and click 'Delete' to remove them.\n" +
+                      "Clear: Click 'Clear' to reset all form fields.\n" +
+                      "Search: Type in the search box to find instructors by surname. The results update as you type.\n\n" +
+                      "Possible Errors:\n" +
+                      "- 'Please fill in all fields.': Ensure all fields are filled out before submitting.\n" +
+                      "- 'Invalid ID number. Please enter a valid 13-digit ID number.': Ensure the ID number is exactly 13 digits.\n" +
+                      "- 'Invalid phone number. Please enter a valid 10-digit phone number.': Ensure the phone number is exactly 10 digits.\n" +
+                      "- 'This ID number already exists. Please enter a unique ID number.': Use a unique ID number not already in use.\n" +
+                      "- 'This username already exists. Please enter a unique username.': Use a unique username not already in use.\n" +
+                      "- 'This password already exists. Please enter a unique password.': Use a unique password not already in use.\n" +
+                      "- 'No changes detected. Please modify at least one field before updating.': Ensure you have made some changes before trying to update.\n";
+
+            MessageBox.Show(helpText, "Help", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
