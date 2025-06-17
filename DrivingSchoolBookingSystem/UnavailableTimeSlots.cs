@@ -64,6 +64,7 @@ namespace DrivingSchoolBookingSystem
         //Correct add button
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            int employeeID = -1; // Initialize employeeID to -1 to handle cases where no employee is selected
             if (!AllDataEntered())
             {
                 MessageBox.Show("Please enter data in all fields!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -81,7 +82,11 @@ namespace DrivingSchoolBookingSystem
 
                 if (cbxEmployeeID.SelectedIndex != -1)
                 {
-                    int employeeID = Convert.ToInt32(cbxEmployeeID.Text.ToString().Substring(0, 2));
+                    if (cbxEmployeeID.Text.ToString().Contains("-"))
+                    { 
+                       int dashIndex = cbxEmployeeID.Text.IndexOf('-');
+                       employeeID = Convert.ToInt32(cbxEmployeeID.Text.Substring(0, dashIndex)); // Extract only the EmployeeID part
+                    }
                     if (errorControl.ValidateUnavailableSlotStartDate(startDate) != null)
                         message += errorControl.ValidateUnavailableSlotStartDate(startDate) + "\n";
                     if (errorControl.validateUnavailbleSlotDates(startDate, endDate) != null)
@@ -321,6 +326,16 @@ namespace DrivingSchoolBookingSystem
         {
             LoginForm login = new LoginForm();
             login.ShowDialog();
+            this.Hide();
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            HomeForm home = new HomeForm(loginform);
+            home.Employee_Name = loginform.Employee_Name;
+            home.Employee_Surname = loginform.Employee_Surname;
+            home.Employee_Type = loginform.Employee_Type;
+            home.ShowDialog();
             this.Hide();
         }
     }

@@ -16,7 +16,6 @@ namespace DrivingSchoolBookingSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new UnavailableTimeSlots());
             Application.Run(new StartUp());
         }
     }
