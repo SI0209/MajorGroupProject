@@ -29,13 +29,11 @@ namespace DrivingSchoolBookingSystem
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-<<<<<<< HEAD
+ 
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-=======
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
->>>>>>> 00ce2c6 (Fixed Home buttons)
             this.tblVehicleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.wstGrp2DataSet = new DrivingSchoolBookingSystem.WstGrp2DataSet();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -81,10 +79,9 @@ namespace DrivingSchoolBookingSystem
             this.btnClear = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-<<<<<<< HEAD
+ 
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-=======
->>>>>>> 00ce2c6 (Fixed Home buttons)
+ 
             ((System.ComponentModel.ISupportInitialize)(this.tblVehicleBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wstGrp2DataSet)).BeginInit();
             this.panel2.SuspendLayout();
@@ -199,11 +196,10 @@ namespace DrivingSchoolBookingSystem
             this.pictureBox5.Size = new System.Drawing.Size(145, 76);
             this.pictureBox5.TabIndex = 16;
             this.pictureBox5.TabStop = false;
-<<<<<<< HEAD
+ 
             this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click_1);
-=======
+ 
             this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
->>>>>>> 00ce2c6 (Fixed Home buttons)
             // 
             // pictureBox2
             // 
@@ -425,7 +421,7 @@ namespace DrivingSchoolBookingSystem
             this.dgvVehicles.AutoGenerateColumns = false;
             this.dgvVehicles.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvVehicles.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-<<<<<<< HEAD
+ 
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle7.Font = new System.Drawing.Font("Comic Sans MS", 8F, System.Drawing.FontStyle.Bold);
@@ -434,7 +430,7 @@ namespace DrivingSchoolBookingSystem
             dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvVehicles.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
-=======
+ 
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Comic Sans MS", 8F, System.Drawing.FontStyle.Bold);
@@ -443,7 +439,6 @@ namespace DrivingSchoolBookingSystem
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvVehicles.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
->>>>>>> 00ce2c6 (Fixed Home buttons)
             this.dgvVehicles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVehicles.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -455,7 +450,7 @@ namespace DrivingSchoolBookingSystem
             this.vehicleSizeDataGridViewTextBoxColumn,
             this.vehicleStatusDataGridViewTextBoxColumn});
             this.dgvVehicles.DataSource = this.tblVehicleBindingSource;
-<<<<<<< HEAD
+ 
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle8.Font = new System.Drawing.Font("Comic Sans MS", 8F);
@@ -464,7 +459,7 @@ namespace DrivingSchoolBookingSystem
             dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvVehicles.DefaultCellStyle = dataGridViewCellStyle8;
-=======
+ 
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Comic Sans MS", 8F);
@@ -473,7 +468,6 @@ namespace DrivingSchoolBookingSystem
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvVehicles.DefaultCellStyle = dataGridViewCellStyle4;
->>>>>>> 00ce2c6 (Fixed Home buttons)
             this.dgvVehicles.Location = new System.Drawing.Point(646, 237);
             this.dgvVehicles.Margin = new System.Windows.Forms.Padding(4);
             this.dgvVehicles.Name = "dgvVehicles";
@@ -552,15 +546,14 @@ namespace DrivingSchoolBookingSystem
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::DrivingSchoolBookingSystem.Properties.Resources.vehicle;
-<<<<<<< HEAD
+ 
             this.pictureBox1.Location = new System.Drawing.Point(628, 40);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(115, 65);
-=======
+ 
             this.pictureBox1.Location = new System.Drawing.Point(457, 19);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(133, 96);
->>>>>>> 00ce2c6 (Fixed Home buttons)
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 38;
             this.pictureBox1.TabStop = false;
@@ -570,7 +563,7 @@ namespace DrivingSchoolBookingSystem
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-<<<<<<< HEAD
+ 
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(749, 52);
@@ -578,7 +571,7 @@ namespace DrivingSchoolBookingSystem
             this.label1.Size = new System.Drawing.Size(257, 41);
             this.label1.TabIndex = 39;
             this.label1.Text = "Manage Vehicles";
-=======
+ 
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(596, 52);
@@ -586,7 +579,6 @@ namespace DrivingSchoolBookingSystem
             this.label1.Size = new System.Drawing.Size(213, 29);
             this.label1.TabIndex = 39;
             this.label1.Text = "MANAGE VEHICLES";
->>>>>>> 00ce2c6 (Fixed Home buttons)
             // 
             // txtSearch
             // 
@@ -601,29 +593,27 @@ namespace DrivingSchoolBookingSystem
             // 
             this.txtEngineNum.Enabled = false;
             this.txtEngineNum.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
-<<<<<<< HEAD
+ 
             this.txtEngineNum.Location = new System.Drawing.Point(371, 140);
             this.txtEngineNum.Name = "txtEngineNum";
             this.txtEngineNum.Size = new System.Drawing.Size(176, 31);
-=======
+ 
             this.txtEngineNum.Location = new System.Drawing.Point(390, 314);
             this.txtEngineNum.Name = "txtEngineNum";
             this.txtEngineNum.Size = new System.Drawing.Size(220, 31);
->>>>>>> 00ce2c6 (Fixed Home buttons)
             this.txtEngineNum.TabIndex = 41;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-<<<<<<< HEAD
+ 
             this.label6.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label6.Location = new System.Drawing.Point(25, 147);
-=======
+ 
             this.label6.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label6.Location = new System.Drawing.Point(22, 317);
->>>>>>> 00ce2c6 (Fixed Home buttons)
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(203, 25);
             this.label6.TabIndex = 42;
@@ -634,11 +624,10 @@ namespace DrivingSchoolBookingSystem
             this.btnClear.BackColor = System.Drawing.Color.Lavender;
             this.btnClear.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
             this.btnClear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
-<<<<<<< HEAD
+ 
             this.btnClear.Location = new System.Drawing.Point(511, 824);
-=======
+ 
             this.btnClear.Location = new System.Drawing.Point(482, 607);
->>>>>>> 00ce2c6 (Fixed Home buttons)
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(128, 63);
             this.btnClear.TabIndex = 43;
@@ -650,19 +639,18 @@ namespace DrivingSchoolBookingSystem
             // label11
             // 
             this.label11.AutoSize = true;
-<<<<<<< HEAD
+ 
             this.label11.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label11.Location = new System.Drawing.Point(848, 195);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(252, 29);
-=======
+ 
             this.label11.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
             this.label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label11.Location = new System.Drawing.Point(915, 196);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(214, 25);
->>>>>>> 00ce2c6 (Fixed Home buttons)
             this.label11.TabIndex = 44;
             this.label11.Text = "Search Vehicle By Make";
             this.label11.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -675,16 +663,15 @@ namespace DrivingSchoolBookingSystem
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.btnClear);
-<<<<<<< HEAD
-=======
+ 
+ 
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.txtEngineNum);
->>>>>>> 00ce2c6 (Fixed Home buttons)
             this.panel1.Controls.Add(this.txtSearch);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.dgvVehicles);
-<<<<<<< HEAD
+ 
             this.panel1.Controls.Add(this.btnDelete);
             this.panel1.Controls.Add(this.btnUpdate);
             this.panel1.Controls.Add(this.btnAdd);
@@ -721,7 +708,7 @@ namespace DrivingSchoolBookingSystem
             this.groupBox1.Text = "Vehicle Details";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-=======
+ 
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.btnDelete);
             this.panel1.Controls.Add(this.btnUpdate);
@@ -743,7 +730,6 @@ namespace DrivingSchoolBookingSystem
             this.panel1.Size = new System.Drawing.Size(1741, 1058);
             this.panel1.TabIndex = 0;
             // 
->>>>>>> 00ce2c6 (Fixed Home buttons)
             // ManageVehiclesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
