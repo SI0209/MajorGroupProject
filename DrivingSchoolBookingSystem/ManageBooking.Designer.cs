@@ -685,10 +685,10 @@
             this.cbxVehicleID.Enabled = false;
             this.cbxVehicleID.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxVehicleID.FormattingEnabled = true;
-            this.cbxVehicleID.Location = new System.Drawing.Point(171, 410);
+            this.cbxVehicleID.Location = new System.Drawing.Point(181, 410);
             this.cbxVehicleID.Margin = new System.Windows.Forms.Padding(4);
             this.cbxVehicleID.Name = "cbxVehicleID";
-            this.cbxVehicleID.Size = new System.Drawing.Size(353, 33);
+            this.cbxVehicleID.Size = new System.Drawing.Size(343, 33);
             this.cbxVehicleID.TabIndex = 127;
             this.toolTip3.SetToolTip(this.cbxVehicleID, "Select the vehicle the student will learn on");
             // 
@@ -710,10 +710,10 @@
             this.cbxEmployeeID.Enabled = false;
             this.cbxEmployeeID.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxEmployeeID.FormattingEnabled = true;
-            this.cbxEmployeeID.Location = new System.Drawing.Point(171, 358);
+            this.cbxEmployeeID.Location = new System.Drawing.Point(181, 358);
             this.cbxEmployeeID.Margin = new System.Windows.Forms.Padding(4);
             this.cbxEmployeeID.Name = "cbxEmployeeID";
-            this.cbxEmployeeID.Size = new System.Drawing.Size(353, 33);
+            this.cbxEmployeeID.Size = new System.Drawing.Size(343, 33);
             this.cbxEmployeeID.TabIndex = 125;
             this.toolTip3.SetToolTip(this.cbxEmployeeID, "Select the Instructor who will teach the student");
             // 
@@ -735,10 +735,10 @@
             this.cbxLearnerID.Enabled = false;
             this.cbxLearnerID.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxLearnerID.FormattingEnabled = true;
-            this.cbxLearnerID.Location = new System.Drawing.Point(171, 305);
+            this.cbxLearnerID.Location = new System.Drawing.Point(181, 305);
             this.cbxLearnerID.Margin = new System.Windows.Forms.Padding(4);
             this.cbxLearnerID.Name = "cbxLearnerID";
-            this.cbxLearnerID.Size = new System.Drawing.Size(353, 33);
+            this.cbxLearnerID.Size = new System.Drawing.Size(343, 33);
             this.cbxLearnerID.TabIndex = 123;
             this.toolTip3.SetToolTip(this.cbxLearnerID, "Select the Learner that wants to book");
             // 
@@ -760,10 +760,10 @@
             this.cbxLessonCodes.Enabled = false;
             this.cbxLessonCodes.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxLessonCodes.FormattingEnabled = true;
-            this.cbxLessonCodes.Location = new System.Drawing.Point(171, 256);
+            this.cbxLessonCodes.Location = new System.Drawing.Point(181, 256);
             this.cbxLessonCodes.Margin = new System.Windows.Forms.Padding(4);
             this.cbxLessonCodes.Name = "cbxLessonCodes";
-            this.cbxLessonCodes.Size = new System.Drawing.Size(353, 33);
+            this.cbxLessonCodes.Size = new System.Drawing.Size(343, 33);
             this.cbxLessonCodes.TabIndex = 121;
             this.toolTip3.SetToolTip(this.cbxLessonCodes, "Select which licence code the student will learn");
             // 
@@ -789,10 +789,10 @@
             this.cbxBookingStatus.Items.AddRange(new object[] {
             "Not Complete",
             "Complete"});
-            this.cbxBookingStatus.Location = new System.Drawing.Point(171, 201);
+            this.cbxBookingStatus.Location = new System.Drawing.Point(181, 201);
             this.cbxBookingStatus.Margin = new System.Windows.Forms.Padding(4);
             this.cbxBookingStatus.Name = "cbxBookingStatus";
-            this.cbxBookingStatus.Size = new System.Drawing.Size(353, 36);
+            this.cbxBookingStatus.Size = new System.Drawing.Size(343, 36);
             this.cbxBookingStatus.TabIndex = 119;
             this.toolTip3.SetToolTip(this.cbxBookingStatus, "Set the booking status to either Complete or Not Complete");
             // 
@@ -800,10 +800,10 @@
             // 
             this.dtpBooking.Enabled = false;
             this.dtpBooking.Font = new System.Drawing.Font("Comic Sans MS", 12F);
-            this.dtpBooking.Location = new System.Drawing.Point(171, 147);
+            this.dtpBooking.Location = new System.Drawing.Point(181, 147);
             this.dtpBooking.Margin = new System.Windows.Forms.Padding(4);
             this.dtpBooking.Name = "dtpBooking";
-            this.dtpBooking.Size = new System.Drawing.Size(353, 35);
+            this.dtpBooking.Size = new System.Drawing.Size(343, 35);
             this.dtpBooking.TabIndex = 118;
             this.toolTip3.SetToolTip(this.dtpBooking, "Select a date the student prefers to book a lesson on");
             // 
@@ -896,7 +896,7 @@
             this.label1.Location = new System.Drawing.Point(823, 26);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(279, 48);
+            this.label1.Size = new System.Drawing.Size(269, 45);
             this.label1.TabIndex = 110;
             this.label1.Text = "Manage Booking";
             // 
