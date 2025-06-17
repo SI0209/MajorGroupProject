@@ -488,5 +488,15 @@ namespace DrivingSchoolBookingSystem
             LoginForm loginForm = new LoginForm();
             loginForm.ShowDialog();
         }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
