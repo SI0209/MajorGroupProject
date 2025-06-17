@@ -58,9 +58,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pieChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chartBookings = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pbVehicle = new System.Windows.Forms.PictureBox();
             this.pbBooking = new System.Windows.Forms.PictureBox();
             this.pbLessonCode = new System.Windows.Forms.PictureBox();
@@ -77,13 +77,14 @@
             this.taEmployee = new DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters.tblEmployeeTableAdapter();
             this.taVehicle = new DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters.tblVehicleTableAdapter();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel7.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pieChart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartBookings)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbVehicle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBooking)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLessonCode)).BeginInit();
@@ -385,19 +386,6 @@
             this.panel1.TabIndex = 120;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // pictureBox7
-            // 
-            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox7.BackgroundImage = global::DrivingSchoolBookingSystem.Properties.Resources.progress;
-            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox7.Location = new System.Drawing.Point(651, -13);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(130, 130);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 62;
-            this.pictureBox7.TabStop = false;
-            // 
             // pieChart
             // 
             chartArea5.AxisX.TitleFont = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -455,6 +443,19 @@
             this.chartBookings.Size = new System.Drawing.Size(714, 300);
             this.chartBookings.TabIndex = 58;
             this.chartBookings.Text = "chart1";
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox7.BackgroundImage = global::DrivingSchoolBookingSystem.Properties.Resources.progress;
+            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox7.Location = new System.Drawing.Point(651, -13);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(130, 130);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 62;
+            this.pictureBox7.TabStop = false;
             // 
             // pbVehicle
             // 
@@ -624,6 +625,19 @@
             this.label1.TabIndex = 132;
             this.label1.Text = "Generate Analytics Report";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(1393, 59);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(298, 24);
+            this.label2.TabIndex = 61;
+            this.label2.Text = "Click here for further instructions";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
             // AnalyticsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -631,6 +645,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1906, 961);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.panel3);
@@ -656,9 +671,9 @@
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pieChart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartBookings)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbVehicle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBooking)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLessonCode)).EndInit();
@@ -719,5 +734,6 @@
         private WstGrp2DataSetTableAdapters.tblVehicleTableAdapter taVehicle;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

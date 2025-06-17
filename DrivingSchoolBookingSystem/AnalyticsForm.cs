@@ -90,7 +90,7 @@ namespace DrivingSchoolBookingSystem
                 string[] result = new string[] { "0", "0" };
 
 
-                
+
 
                 if (taBooking != null)
                 {
@@ -156,7 +156,7 @@ namespace DrivingSchoolBookingSystem
                 string[] result = new string[] { "0", "0" };
 
 
-              
+
 
                 if (taBooking != null)
                 {
@@ -226,7 +226,7 @@ namespace DrivingSchoolBookingSystem
                 string[] result = new string[] { "0", "0" };
 
 
-                
+
 
                 if (taBooking != null)
                 {
@@ -498,6 +498,42 @@ namespace DrivingSchoolBookingSystem
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            string instructions = "📊 Analytics Report Instructions\n\n" +
+            "Welcome to the Analytics Report section! Here's how to understand and use the information on this screen:\n\n" +
+
+            "🔢 Top Summary Counters:\n" +
+            " - Number of Bookings: Total driving lesson bookings made.\n" +
+            " - Lessons Completed: Total number of lessons completed successfully.\n\n" +
+
+            "📈 Bar Chart – Number of Bookings:\n" +
+            " - Displays booking activity across different days or categories.\n" +
+            " - Each bar represents the volume of bookings (e.g., per day or per instructor).\n" +
+            " - Hover over bars for exact numbers (if tooltips enabled).\n\n" +
+
+            "🥇 Pie Chart – Top 3 Instructors:\n" +
+            " - Shows the top instructors based on the number of bookings completed.\n" +
+            " - The legend indicates instructor IDs or ranks.\n" +
+            " - Each slice's size reflects how many bookings that instructor completed.\n\n" +
+
+            "🧮 Total Counters Section:\n" +
+            " - Displays total counts of:\n" +
+            "     • Bookings\n" +
+            "     • Instructors\n" +
+            "     • Vehicles\n" +
+            " - These give you a quick system overview.\n\n" +
+
+            "🖨️ Report Buttons:\n" +
+            " - Print Daily Report – Generates and prints a report of today’s bookings and completions.\n" +
+            " - Print Weekly Report – Summary of analytics for the current week.\n" +
+            " - Print Monthly Report – Full analytics breakdown for the month.\n\n" +
+
+            "✅ Use these reports for performance tracking, decision making, or presenting data to management.";
+
+            MessageBox.Show(instructions, "How to Use the Analytics Report", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
