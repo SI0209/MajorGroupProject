@@ -645,5 +645,12 @@ namespace DrivingSchoolBookingSystem
 
             MessageBox.Show(helpText, "Help", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            LoginForm login = new LoginForm();
+            login.ShowDialog();
+            this.Hide();
+        }
     }
 }

@@ -454,13 +454,7 @@ namespace DrivingSchoolBookingSystem
             return message;
         }
 
-     
-       
-
-        private void pbHelpBooking_Click(object sender, EventArgs e)
-        {
-            
-        }
+    
 
         
 
@@ -515,55 +509,7 @@ namespace DrivingSchoolBookingSystem
             this.Hide();
         }
 
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dgvBooking_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void label17_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dgvLearner_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void cbxVehicleID_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label15_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cbxEmployeeID_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label13_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cbxBookingStatus_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void label3_Click(object sender, EventArgs e)
         {
@@ -585,6 +531,13 @@ namespace DrivingSchoolBookingSystem
                       "- 'Vehicle chosen is unavailable at the moment!': Ensure the selected vehicle is marked as available.\n";
 
             MessageBox.Show(helpText, "Help", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            LoginForm login = new LoginForm();
+            login.ShowDialog();
+            this.Hide();
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)

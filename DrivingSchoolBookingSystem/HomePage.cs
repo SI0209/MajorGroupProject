@@ -48,6 +48,43 @@ namespace DrivingSchoolBookingSystem
             lblUsernameInfo.Text = "Welcome " + Employee_Name + " " + Employee_Surname + "!";
               lblUserType.Text = "Role:" + " " +  Employee_Type;
 
+            if (Employee_Type == "Admin")
+            {
+                pictureBox1.Enabled = true;
+                pictureBox2.Enabled = true;
+                pictureBox3.Enabled = true;
+                pictureBox8.Enabled = true;
+                pictureBox12.Enabled = true;
+                pictureBox4.Enabled = false;                                                                
+                pictureBox10.Enabled = false;
+                pictureBox14.Enabled = false;
+                
+            }
+
+            if (Employee_Type == "Manager")
+            {
+                pictureBox1.Enabled = true;
+                pictureBox2.Enabled = true;
+                pictureBox3.Enabled = true;
+                pictureBox8.Enabled = true;
+                pictureBox12.Enabled = true;
+                pictureBox4.Enabled = true;                                                                
+                pictureBox10.Enabled = true;
+                pictureBox14.Enabled = true;
+            }
+
+            if (Employee_Type == "Instructor")
+            {
+                pictureBox1.Enabled = true;
+                pictureBox2.Enabled = false;
+                pictureBox3.Enabled = true;
+                pictureBox8.Enabled = false;
+                pictureBox12.Enabled = true;
+                pictureBox4.Enabled = true;                                                                
+                pictureBox10.Enabled = false;
+                pictureBox14.Enabled = false;
+            }
+
         }
        
 

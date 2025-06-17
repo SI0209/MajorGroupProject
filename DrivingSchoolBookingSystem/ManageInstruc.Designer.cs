@@ -793,6 +793,7 @@
             this.pictureBox4.TabIndex = 14;
             this.pictureBox4.TabStop = false;
             this.toolTip3.SetToolTip(this.pictureBox4, "Log out of the system");
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // pictureBox5
             // 

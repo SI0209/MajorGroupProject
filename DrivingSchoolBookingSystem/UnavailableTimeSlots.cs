@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,6 +14,7 @@ namespace DrivingSchoolBookingSystem
 {
     public partial class UnavailableTimeSlots : Form
     {
+        LoginForm loginform;
         ErrorControl errorControl = new ErrorControl();
         int unavailableSlotId = -1;
         public UnavailableTimeSlots()
@@ -39,54 +41,6 @@ namespace DrivingSchoolBookingSystem
             lessonCode.Show();*/
         }
 
-
-
-        private void pbVehicle_Click_1(object sender, EventArgs e)
-        {
-            this.Hide();
-            ManageVehiclesForm manageVehiclesForm = new ManageVehiclesForm();
-            manageVehiclesForm.Show();
-        }
-
-        private void pbAnalytics_Click_1(object sender, EventArgs e)
-        {
-            this.Hide();
-            AnalyticsForm analyticsForm = new AnalyticsForm();
-            analyticsForm.Show();
-        }
-
-        private void pbEmployee_Click_1(object sender, EventArgs e)
-        {
-            this.Hide();
-            ManageInstruc manageEmployee = new ManageInstruc();
-            manageEmployee.Show();
-        }
-
-        private void pbBack_Click_1(object sender, EventArgs e)
-        {
-            this.Hide();
-            LoginForm loginForm = new LoginForm();
-            loginForm.Show();
-        }
-
-        private void pbBooking_Click_1(object sender, EventArgs e)
-        {
-            this.Hide();
-            /*manageBooking manageBooking = new ManageBooking();
-            manageBooking.Show();*/
-        }
-
-        private void pbLearner_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            ManageLearners manageLearners = new ManageLearners();
-            manageLearners.Show();
-        }
-
-        private void UnavailableTimeSlots_Load(object sender, EventArgs e)
-        {
-
-        }
 
         public Boolean AllDataEntered()
         {
@@ -304,6 +258,15 @@ namespace DrivingSchoolBookingSystem
             return false;
 
         }
+        private void label3_MouseEnter(object sender, EventArgs e)
+        {
+            label14.ForeColor = Color.DarkRed; // or a hover color you prefer
+        }
+
+        private void label3_MouseLeave(object sender, EventArgs e)
+        {
+            label14.ForeColor = Color.Blue;
+        }
 
         private void dgvUnavailableSlot_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -312,21 +275,7 @@ namespace DrivingSchoolBookingSystem
 
         private void pbHelpUnavSlots_Click(object sender, EventArgs e)
         {
-            string helpText = "Unavailable Time Slots Form Help:\n\n" +
-                     "Add Unavailable Time Slot: Enter the start date, end date, start time, end time, reason, and select an employee. Then click 'Add' to record a new unavailable time slot.\n" +
-                     "Update Unavailable Time Slot: Select a time slot from the list, make changes to the details, and click 'Update' to save the changes.\n" +
-                     "Delete Unavailable Time Slot: Select a time slot from the list and click 'Delete' to remove it.\n" +
-                     "Clear Fields: Click 'Clear' to reset all fields.\n\n" +
-                     "Possible Errors:\n" +
-                     "- 'Please enter data in all fields!': Ensure all fields are filled out before submitting.\n" +
-                     "- 'Unavailable slot for employee already exists!': This error occurs when attempting to add a time slot that overlaps with an existing one for the same employee.\n" +
-                     "- 'Please select a Unavailable slot to update from the unavailable slots list!': This error occurs when trying to update without selecting a time slot.\n" +
-                     "- 'Please select a Unavailable slot to delete from the unavailable slots list!': This error occurs when trying to delete without selecting a time slot.\n" +
-                     "- 'Invalid dates, Unavailable end date cannot be before the start date!': Ensure that the end date of the unavailable slot is not before the start date.\n" +
-                     "- 'Unavailable slot end time has to be greater than the start time!': The end time of the unavailable slot must be greater than the start time.\n" +
-                     "- 'Unavailable slot end time cannot be the same as the start time!': The end time of the unavailable slot cannot be the same as the start time.\n" +
-                     "- 'Invalid Reason!,Please enter only letters!': Please ensure that the reason for the unavailable slot contains only letters.";
-            MessageBox.Show(helpText, "Help", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
         }
 
         private void cbxEmployeeID_SelectedIndexChanged(object sender, EventArgs e)
@@ -347,6 +296,32 @@ namespace DrivingSchoolBookingSystem
         private void txtSearch_TextChanged_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+            string helpText = "Unavailable Time Slots Form Help:\n\n" +
+         "Add Unavailable Time Slot: Enter the start date, end date, start time, end time, reason, and select an employee. Then click 'Add' to record a new unavailable time slot.\n" +
+         "Update Unavailable Time Slot: Select a time slot from the list, make changes to the details, and click 'Update' to save the changes.\n" +
+         "Delete Unavailable Time Slot: Select a time slot from the list and click 'Delete' to remove it.\n" +
+         "Clear Fields: Click 'Clear' to reset all fields.\n\n" +
+         "Possible Errors:\n" +
+         "- 'Please enter data in all fields!': Ensure all fields are filled out before submitting.\n" +
+         "- 'Unavailable slot for employee already exists!': This error occurs when attempting to add a time slot that overlaps with an existing one for the same employee.\n" +
+         "- 'Please select a Unavailable slot to update from the unavailable slots list!': This error occurs when trying to update without selecting a time slot.\n" +
+         "- 'Please select a Unavailable slot to delete from the unavailable slots list!': This error occurs when trying to delete without selecting a time slot.\n" +
+         "- 'Invalid dates, Unavailable end date cannot be before the start date!': Ensure that the end date of the unavailable slot is not before the start date.\n" +
+         "- 'Unavailable slot end time has to be greater than the start time!': The end time of the unavailable slot must be greater than the start time.\n" +
+         "- 'Unavailable slot end time cannot be the same as the start time!': The end time of the unavailable slot cannot be the same as the start time.\n" +
+         "- 'Invalid Reason!,Please enter only letters!': Please ensure that the reason for the unavailable slot contains only letters.";
+            MessageBox.Show(helpText, "Help", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            LoginForm login = new LoginForm();
+            login.ShowDialog();
+            this.Hide();
         }
     }
 }
