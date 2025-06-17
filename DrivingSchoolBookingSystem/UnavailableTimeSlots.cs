@@ -339,15 +339,5 @@ namespace DrivingSchoolBookingSystem
             home.ShowDialog();
             this.Hide();
         }
-
-        private void pictureBox5_Click(object sender, EventArgs e)
-        {
-            HomeForm home = new HomeForm(loginform);
-            home.Employee_Name = loginform.Employee_Name;
-            home.Employee_Surname = loginform.Employee_Surname;
-            home.Employee_Type = loginform.Employee_Type;
-            home.ShowDialog();
-            this.Hide();
-        }
     }
 }

@@ -29,8 +29,8 @@ namespace DrivingSchoolBookingSystem
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tblVehicleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.wstGrp2DataSet = new DrivingSchoolBookingSystem.WstGrp2DataSet();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -70,7 +70,8 @@ namespace DrivingSchoolBookingSystem
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vehicleRegNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Vehicle_RegNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Vehicle_EngineNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vehicleSizeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -233,7 +234,7 @@ namespace DrivingSchoolBookingSystem
             // 
             this.txtNumberPlate.Enabled = false;
             this.txtNumberPlate.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
-            this.txtNumberPlate.Location = new System.Drawing.Point(356, 237);
+            this.txtNumberPlate.Location = new System.Drawing.Point(390, 237);
             this.txtNumberPlate.Name = "txtNumberPlate";
             this.txtNumberPlate.Size = new System.Drawing.Size(220, 31);
             this.txtNumberPlate.TabIndex = 0;
@@ -242,7 +243,7 @@ namespace DrivingSchoolBookingSystem
             // 
             this.txtRegNum.Enabled = false;
             this.txtRegNum.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
-            this.txtRegNum.Location = new System.Drawing.Point(356, 276);
+            this.txtRegNum.Location = new System.Drawing.Point(390, 276);
             this.txtRegNum.Name = "txtRegNum";
             this.txtRegNum.Size = new System.Drawing.Size(220, 31);
             this.txtRegNum.TabIndex = 1;
@@ -251,7 +252,7 @@ namespace DrivingSchoolBookingSystem
             // 
             this.txtMake.Enabled = false;
             this.txtMake.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
-            this.txtMake.Location = new System.Drawing.Point(356, 355);
+            this.txtMake.Location = new System.Drawing.Point(390, 355);
             this.txtMake.Name = "txtMake";
             this.txtMake.Size = new System.Drawing.Size(220, 31);
             this.txtMake.TabIndex = 2;
@@ -260,7 +261,7 @@ namespace DrivingSchoolBookingSystem
             // 
             this.txtModel.Enabled = false;
             this.txtModel.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
-            this.txtModel.Location = new System.Drawing.Point(356, 396);
+            this.txtModel.Location = new System.Drawing.Point(390, 396);
             this.txtModel.Name = "txtModel";
             this.txtModel.Size = new System.Drawing.Size(220, 31);
             this.txtModel.TabIndex = 3;
@@ -282,7 +283,7 @@ namespace DrivingSchoolBookingSystem
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(22, 279);
+            this.label3.Location = new System.Drawing.Point(22, 273);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(317, 25);
             this.label3.TabIndex = 7;
@@ -309,7 +310,7 @@ namespace DrivingSchoolBookingSystem
             "Small",
             "Medium",
             "Large"});
-            this.cmbSize.Location = new System.Drawing.Point(356, 438);
+            this.cmbSize.Location = new System.Drawing.Point(390, 438);
             this.cmbSize.Name = "cmbSize";
             this.cmbSize.Size = new System.Drawing.Size(220, 33);
             this.cmbSize.TabIndex = 11;
@@ -333,7 +334,7 @@ namespace DrivingSchoolBookingSystem
             this.cmbVehicleStatus.Items.AddRange(new object[] {
             "Available",
             "Unavailable"});
-            this.cmbVehicleStatus.Location = new System.Drawing.Point(356, 480);
+            this.cmbVehicleStatus.Location = new System.Drawing.Point(390, 480);
             this.cmbVehicleStatus.Name = "cmbVehicleStatus";
             this.cmbVehicleStatus.Size = new System.Drawing.Size(220, 33);
             this.cmbVehicleStatus.TabIndex = 13;
@@ -409,37 +410,38 @@ namespace DrivingSchoolBookingSystem
             this.dgvVehicles.AutoGenerateColumns = false;
             this.dgvVehicles.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvVehicles.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Comic Sans MS", 8F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvVehicles.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Comic Sans MS", 8F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvVehicles.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvVehicles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVehicles.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
-            this.vehicleRegNumDataGridViewTextBoxColumn,
+            this.Vehicle_RegNum,
+            this.Vehicle_EngineNum,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
             this.vehicleSizeDataGridViewTextBoxColumn,
             this.vehicleStatusDataGridViewTextBoxColumn});
             this.dgvVehicles.DataSource = this.tblVehicleBindingSource;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Comic Sans MS", 8F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvVehicles.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Comic Sans MS", 8F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvVehicles.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvVehicles.Location = new System.Drawing.Point(646, 237);
             this.dgvVehicles.Margin = new System.Windows.Forms.Padding(4);
             this.dgvVehicles.Name = "dgvVehicles";
             this.dgvVehicles.RowHeadersWidth = 51;
-            this.dgvVehicles.Size = new System.Drawing.Size(951, 433);
+            this.dgvVehicles.Size = new System.Drawing.Size(1033, 433);
             this.dgvVehicles.TabIndex = 37;
             this.dgvVehicles.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvVehicles_RowHeaderMouseClick);
             // 
@@ -470,7 +472,6 @@ namespace DrivingSchoolBookingSystem
             // 
             // txtSearch
             // 
-            this.txtSearch.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtSearch.Font = new System.Drawing.Font("Comic Sans MS", 8F, System.Drawing.FontStyle.Bold);
             this.txtSearch.Location = new System.Drawing.Point(1144, 195);
             this.txtSearch.Name = "txtSearch";
@@ -482,7 +483,7 @@ namespace DrivingSchoolBookingSystem
             // 
             this.txtEngineNum.Enabled = false;
             this.txtEngineNum.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
-            this.txtEngineNum.Location = new System.Drawing.Point(356, 314);
+            this.txtEngineNum.Location = new System.Drawing.Point(390, 314);
             this.txtEngineNum.Name = "txtEngineNum";
             this.txtEngineNum.Size = new System.Drawing.Size(220, 31);
             this.txtEngineNum.TabIndex = 41;
@@ -514,7 +515,6 @@ namespace DrivingSchoolBookingSystem
             // 
             // label11
             // 
-            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
             this.label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -577,13 +577,21 @@ namespace DrivingSchoolBookingSystem
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.Width = 181;
             // 
-            // vehicleRegNumDataGridViewTextBoxColumn
+            // Vehicle_RegNum
             // 
-            this.vehicleRegNumDataGridViewTextBoxColumn.DataPropertyName = "Vehicle_VIN";
-            this.vehicleRegNumDataGridViewTextBoxColumn.HeaderText = "Vehicle_RegNum";
-            this.vehicleRegNumDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.vehicleRegNumDataGridViewTextBoxColumn.Name = "vehicleRegNumDataGridViewTextBoxColumn";
-            this.vehicleRegNumDataGridViewTextBoxColumn.Width = 148;
+            this.Vehicle_RegNum.DataPropertyName = "Vehicle_RegNum";
+            this.Vehicle_RegNum.HeaderText = "Vehicle_RegNum";
+            this.Vehicle_RegNum.MinimumWidth = 6;
+            this.Vehicle_RegNum.Name = "Vehicle_RegNum";
+            this.Vehicle_RegNum.Width = 148;
+            // 
+            // Vehicle_EngineNum
+            // 
+            this.Vehicle_EngineNum.DataPropertyName = "Vehicle_EngineNum";
+            this.Vehicle_EngineNum.HeaderText = "Vehicle_EngineNum";
+            this.Vehicle_EngineNum.MinimumWidth = 6;
+            this.Vehicle_EngineNum.Name = "Vehicle_EngineNum";
+            this.Vehicle_EngineNum.Width = 166;
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -694,9 +702,11 @@ namespace DrivingSchoolBookingSystem
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn vehicleRegNumDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn vehicleRegNumDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Vehicle_RegNum;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Vehicle_EngineNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn vehicleSizeDataGridViewTextBoxColumn;
