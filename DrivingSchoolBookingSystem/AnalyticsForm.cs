@@ -481,5 +481,12 @@ namespace DrivingSchoolBookingSystem
             homeForm.Show();
             this.Hide();
         }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LoginForm loginForm = new LoginForm();
+            loginForm.ShowDialog();
+        }
     }
 }

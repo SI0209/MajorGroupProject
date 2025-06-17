@@ -535,9 +535,9 @@ namespace DrivingSchoolBookingSystem
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            LoginForm login = new LoginForm();
-            login.ShowDialog();
             this.Hide();
+            LoginForm login = new LoginForm();
+            login.ShowDialog();  
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)

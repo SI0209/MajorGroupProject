@@ -46,9 +46,10 @@ namespace DrivingSchoolBookingSystem
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
+            this.Hide();
             LoginForm login = new LoginForm();
             login.Show();
-            this.Hide();
+            
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
