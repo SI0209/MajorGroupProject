@@ -29,9 +29,6 @@ namespace DrivingSchoolBookingSystem
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
- 
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tblVehicleBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -79,9 +76,7 @@ namespace DrivingSchoolBookingSystem
             this.btnClear = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
- 
             this.groupBox1 = new System.Windows.Forms.GroupBox();
- 
             ((System.ComponentModel.ISupportInitialize)(this.tblVehicleBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wstGrp2DataSet)).BeginInit();
             this.panel2.SuspendLayout();
@@ -196,9 +191,6 @@ namespace DrivingSchoolBookingSystem
             this.pictureBox5.Size = new System.Drawing.Size(145, 76);
             this.pictureBox5.TabIndex = 16;
             this.pictureBox5.TabStop = false;
- 
-            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click_1);
- 
             this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // pictureBox2
@@ -245,7 +237,7 @@ namespace DrivingSchoolBookingSystem
             // 
             this.txtNumberPlate.Enabled = false;
             this.txtNumberPlate.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
-            this.txtNumberPlate.Location = new System.Drawing.Point(371, 66);
+            this.txtNumberPlate.Location = new System.Drawing.Point(335, 49);
             this.txtNumberPlate.Name = "txtNumberPlate";
             this.txtNumberPlate.Size = new System.Drawing.Size(176, 31);
             this.txtNumberPlate.TabIndex = 0;
@@ -254,7 +246,7 @@ namespace DrivingSchoolBookingSystem
             // 
             this.txtRegNum.Enabled = false;
             this.txtRegNum.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
-            this.txtRegNum.Location = new System.Drawing.Point(371, 103);
+            this.txtRegNum.Location = new System.Drawing.Point(335, 103);
             this.txtRegNum.Name = "txtRegNum";
             this.txtRegNum.Size = new System.Drawing.Size(176, 31);
             this.txtRegNum.TabIndex = 1;
@@ -263,7 +255,7 @@ namespace DrivingSchoolBookingSystem
             // 
             this.txtMake.Enabled = false;
             this.txtMake.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
-            this.txtMake.Location = new System.Drawing.Point(371, 177);
+            this.txtMake.Location = new System.Drawing.Point(335, 153);
             this.txtMake.Name = "txtMake";
             this.txtMake.Size = new System.Drawing.Size(176, 31);
             this.txtMake.TabIndex = 2;
@@ -272,7 +264,7 @@ namespace DrivingSchoolBookingSystem
             // 
             this.txtModel.Enabled = false;
             this.txtModel.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
-            this.txtModel.Location = new System.Drawing.Point(371, 214);
+            this.txtModel.Location = new System.Drawing.Point(335, 203);
             this.txtModel.Name = "txtModel";
             this.txtModel.Size = new System.Drawing.Size(176, 31);
             this.txtModel.TabIndex = 3;
@@ -282,7 +274,7 @@ namespace DrivingSchoolBookingSystem
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(25, 70);
+            this.label2.Location = new System.Drawing.Point(15, 55);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(191, 25);
             this.label2.TabIndex = 6;
@@ -294,7 +286,7 @@ namespace DrivingSchoolBookingSystem
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(25, 103);
+            this.label3.Location = new System.Drawing.Point(17, 106);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(317, 25);
             this.label3.TabIndex = 7;
@@ -305,7 +297,7 @@ namespace DrivingSchoolBookingSystem
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(25, 220);
+            this.label4.Location = new System.Drawing.Point(17, 209);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(128, 25);
@@ -321,7 +313,7 @@ namespace DrivingSchoolBookingSystem
             "Small",
             "Medium",
             "Large"});
-            this.cmbSize.Location = new System.Drawing.Point(371, 251);
+            this.cmbSize.Location = new System.Drawing.Point(336, 308);
             this.cmbSize.Name = "cmbSize";
             this.cmbSize.Size = new System.Drawing.Size(176, 33);
             this.cmbSize.TabIndex = 11;
@@ -331,7 +323,7 @@ namespace DrivingSchoolBookingSystem
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(25, 259);
+            this.label7.Location = new System.Drawing.Point(17, 316);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(115, 25);
             this.label7.TabIndex = 12;
@@ -345,7 +337,7 @@ namespace DrivingSchoolBookingSystem
             this.cmbVehicleStatus.Items.AddRange(new object[] {
             "Available",
             "Unavailable"});
-            this.cmbVehicleStatus.Location = new System.Drawing.Point(371, 290);
+            this.cmbVehicleStatus.Location = new System.Drawing.Point(336, 361);
             this.cmbVehicleStatus.Name = "cmbVehicleStatus";
             this.cmbVehicleStatus.Size = new System.Drawing.Size(176, 33);
             this.cmbVehicleStatus.TabIndex = 13;
@@ -355,7 +347,7 @@ namespace DrivingSchoolBookingSystem
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label8.Location = new System.Drawing.Point(29, 293);
+            this.label8.Location = new System.Drawing.Point(17, 369);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(133, 25);
             this.label8.TabIndex = 14;
@@ -408,7 +400,7 @@ namespace DrivingSchoolBookingSystem
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label9.Location = new System.Drawing.Point(25, 183);
+            this.label9.Location = new System.Drawing.Point(17, 159);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(122, 25);
             this.label9.TabIndex = 20;
@@ -421,16 +413,6 @@ namespace DrivingSchoolBookingSystem
             this.dgvVehicles.AutoGenerateColumns = false;
             this.dgvVehicles.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvVehicles.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
- 
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Comic Sans MS", 8F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvVehicles.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
- 
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Comic Sans MS", 8F, System.Drawing.FontStyle.Bold);
@@ -450,16 +432,6 @@ namespace DrivingSchoolBookingSystem
             this.vehicleSizeDataGridViewTextBoxColumn,
             this.vehicleStatusDataGridViewTextBoxColumn});
             this.dgvVehicles.DataSource = this.tblVehicleBindingSource;
- 
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Comic Sans MS", 8F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvVehicles.DefaultCellStyle = dataGridViewCellStyle8;
- 
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Comic Sans MS", 8F);
@@ -546,11 +518,6 @@ namespace DrivingSchoolBookingSystem
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::DrivingSchoolBookingSystem.Properties.Resources.vehicle;
- 
-            this.pictureBox1.Location = new System.Drawing.Point(628, 40);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(115, 65);
- 
             this.pictureBox1.Location = new System.Drawing.Point(457, 19);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(133, 96);
@@ -563,15 +530,6 @@ namespace DrivingSchoolBookingSystem
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
- 
-            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(749, 52);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(257, 41);
-            this.label1.TabIndex = 39;
-            this.label1.Text = "Manage Vehicles";
- 
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(596, 52);
@@ -593,27 +551,17 @@ namespace DrivingSchoolBookingSystem
             // 
             this.txtEngineNum.Enabled = false;
             this.txtEngineNum.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
- 
-            this.txtEngineNum.Location = new System.Drawing.Point(371, 140);
+            this.txtEngineNum.Location = new System.Drawing.Point(335, 256);
             this.txtEngineNum.Name = "txtEngineNum";
             this.txtEngineNum.Size = new System.Drawing.Size(176, 31);
- 
-            this.txtEngineNum.Location = new System.Drawing.Point(390, 314);
-            this.txtEngineNum.Name = "txtEngineNum";
-            this.txtEngineNum.Size = new System.Drawing.Size(220, 31);
             this.txtEngineNum.TabIndex = 41;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
- 
-            this.label6.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(25, 147);
- 
             this.label6.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(22, 317);
+            this.label6.Location = new System.Drawing.Point(15, 262);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(203, 25);
             this.label6.TabIndex = 42;
@@ -624,9 +572,6 @@ namespace DrivingSchoolBookingSystem
             this.btnClear.BackColor = System.Drawing.Color.Lavender;
             this.btnClear.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
             this.btnClear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
- 
-            this.btnClear.Location = new System.Drawing.Point(511, 824);
- 
             this.btnClear.Location = new System.Drawing.Point(482, 607);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(128, 63);
@@ -639,13 +584,6 @@ namespace DrivingSchoolBookingSystem
             // label11
             // 
             this.label11.AutoSize = true;
- 
-            this.label11.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label11.Location = new System.Drawing.Point(848, 195);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(252, 29);
- 
             this.label11.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
             this.label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label11.Location = new System.Drawing.Point(915, 196);
@@ -663,72 +601,45 @@ namespace DrivingSchoolBookingSystem
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.btnClear);
- 
- 
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.txtEngineNum);
             this.panel1.Controls.Add(this.txtSearch);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.dgvVehicles);
- 
-            this.panel1.Controls.Add(this.btnDelete);
-            this.panel1.Controls.Add(this.btnUpdate);
-            this.panel1.Controls.Add(this.btnAdd);
             this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Location = new System.Drawing.Point(216, 2);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1710, 1058);
-            this.panel1.TabIndex = 0;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.txtEngineNum);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.txtNumberPlate);
-            this.groupBox1.Controls.Add(this.txtRegNum);
-            this.groupBox1.Controls.Add(this.txtMake);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.txtModel);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.cmbVehicleStatus);
-            this.groupBox1.Controls.Add(this.cmbSize);
-            this.groupBox1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox1.Location = new System.Drawing.Point(31, 318);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(575, 366);
-            this.groupBox1.TabIndex = 45;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Vehicle Details";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
-            // 
- 
-            this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.btnDelete);
             this.panel1.Controls.Add(this.btnUpdate);
             this.panel1.Controls.Add(this.btnAdd);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.cmbVehicleStatus);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.cmbSize);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.txtModel);
-            this.panel1.Controls.Add(this.txtMake);
-            this.panel1.Controls.Add(this.txtRegNum);
-            this.panel1.Controls.Add(this.txtNumberPlate);
             this.panel1.Location = new System.Drawing.Point(187, 2);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1741, 1058);
             this.panel1.TabIndex = 0;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.txtEngineNum);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.cmbVehicleStatus);
+            this.groupBox1.Controls.Add(this.cmbSize);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.txtModel);
+            this.groupBox1.Controls.Add(this.txtMake);
+            this.groupBox1.Controls.Add(this.txtNumberPlate);
+            this.groupBox1.Controls.Add(this.txtRegNum);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox1.Location = new System.Drawing.Point(35, 139);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(575, 423);
+            this.groupBox1.TabIndex = 45;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Vehicle Details";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // ManageVehiclesForm
             // 
