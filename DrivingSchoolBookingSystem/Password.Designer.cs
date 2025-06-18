@@ -49,6 +49,7 @@
             this.passwordUpdatetxtbox.Font = new System.Drawing.Font("Comic Sans MS", 8F);
             this.passwordUpdatetxtbox.Location = new System.Drawing.Point(226, 223);
             this.passwordUpdatetxtbox.Name = "passwordUpdatetxtbox";
+            this.passwordUpdatetxtbox.PasswordChar = '*';
             this.passwordUpdatetxtbox.Size = new System.Drawing.Size(294, 26);
             this.passwordUpdatetxtbox.TabIndex = 0;
             // 
@@ -69,6 +70,7 @@
             this.confirmpasswordtxtbox.Font = new System.Drawing.Font("Comic Sans MS", 8F);
             this.confirmpasswordtxtbox.Location = new System.Drawing.Point(226, 301);
             this.confirmpasswordtxtbox.Name = "confirmpasswordtxtbox";
+            this.confirmpasswordtxtbox.PasswordChar = '*';
             this.confirmpasswordtxtbox.Size = new System.Drawing.Size(294, 26);
             this.confirmpasswordtxtbox.TabIndex = 2;
             // 
@@ -89,7 +91,7 @@
             this.updatePasswordbtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.updatePasswordbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.updatePasswordbtn.Font = new System.Drawing.Font("Comic Sans MS", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updatePasswordbtn.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.updatePasswordbtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
             this.updatePasswordbtn.Location = new System.Drawing.Point(298, 405);
             this.updatePasswordbtn.Name = "updatePasswordbtn";
             this.updatePasswordbtn.Size = new System.Drawing.Size(175, 46);
@@ -105,9 +107,9 @@
             this.passwordformcheckboc.Font = new System.Drawing.Font("Comic Sans MS", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passwordformcheckboc.Location = new System.Drawing.Point(583, 303);
             this.passwordformcheckboc.Name = "passwordformcheckboc";
-            this.passwordformcheckboc.Size = new System.Drawing.Size(126, 23);
+            this.passwordformcheckboc.Size = new System.Drawing.Size(122, 23);
             this.passwordformcheckboc.TabIndex = 5;
-            this.passwordformcheckboc.Text = "Show Password";
+            this.passwordformcheckboc.Text = "View Password";
             this.passwordformcheckboc.UseVisualStyleBackColor = false;
             this.passwordformcheckboc.CheckedChanged += new System.EventHandler(this.passwordformcheckboc_CheckedChanged);
             // 
@@ -116,7 +118,7 @@
             this.clearbuttonpasswordform.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.clearbuttonpasswordform.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.clearbuttonpasswordform.Font = new System.Drawing.Font("Comic Sans MS", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clearbuttonpasswordform.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.clearbuttonpasswordform.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
             this.clearbuttonpasswordform.Location = new System.Drawing.Point(626, 403);
             this.clearbuttonpasswordform.Name = "clearbuttonpasswordform";
             this.clearbuttonpasswordform.Size = new System.Drawing.Size(131, 48);
@@ -130,7 +132,7 @@
             this.backbtnpasswordform.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.backbtnpasswordform.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.backbtnpasswordform.Font = new System.Drawing.Font("Comic Sans MS", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.backbtnpasswordform.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.backbtnpasswordform.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
             this.backbtnpasswordform.Location = new System.Drawing.Point(40, 403);
             this.backbtnpasswordform.Name = "backbtnpasswordform";
             this.backbtnpasswordform.Size = new System.Drawing.Size(126, 48);
