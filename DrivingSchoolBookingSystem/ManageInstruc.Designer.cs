@@ -193,7 +193,7 @@
             this.txtPassword.Location = new System.Drawing.Point(243, 737);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(192, 34);
+            this.txtPassword.Size = new System.Drawing.Size(240, 34);
             this.txtPassword.TabIndex = 87;
             this.toolTip3.SetToolTip(this.txtPassword, "Allow employee to choose his/her password");
             // 
@@ -217,7 +217,7 @@
             this.txtUsername.Location = new System.Drawing.Point(242, 676);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(193, 27);
+            this.txtUsername.Size = new System.Drawing.Size(241, 27);
             this.txtUsername.TabIndex = 85;
             this.toolTip3.SetToolTip(this.txtUsername, "enter email of employee");
             // 
@@ -246,7 +246,7 @@
             0,
             0});
             this.numericUpDownAge.Name = "numericUpDownAge";
-            this.numericUpDownAge.Size = new System.Drawing.Size(192, 27);
+            this.numericUpDownAge.Size = new System.Drawing.Size(240, 27);
             this.numericUpDownAge.TabIndex = 83;
             this.toolTip3.SetToolTip(this.numericUpDownAge, "Enter the age of Employee");
             this.numericUpDownAge.Value = new decimal(new int[] {
@@ -511,7 +511,7 @@
             this.cbxRace.Location = new System.Drawing.Point(243, 567);
             this.cbxRace.Margin = new System.Windows.Forms.Padding(4);
             this.cbxRace.Name = "cbxRace";
-            this.cbxRace.Size = new System.Drawing.Size(192, 28);
+            this.cbxRace.Size = new System.Drawing.Size(240, 28);
             this.cbxRace.TabIndex = 52;
             this.toolTip3.SetToolTip(this.cbxRace, "Select race of employee");
             // 
@@ -541,7 +541,7 @@
             this.cbxGender.Location = new System.Drawing.Point(243, 512);
             this.cbxGender.Margin = new System.Windows.Forms.Padding(4);
             this.cbxGender.Name = "cbxGender";
-            this.cbxGender.Size = new System.Drawing.Size(192, 28);
+            this.cbxGender.Size = new System.Drawing.Size(240, 28);
             this.cbxGender.TabIndex = 50;
             this.toolTip3.SetToolTip(this.cbxGender, "Select gender of employee");
             // 
@@ -571,7 +571,7 @@
             this.cbxType.Location = new System.Drawing.Point(243, 458);
             this.cbxType.Margin = new System.Windows.Forms.Padding(4);
             this.cbxType.Name = "cbxType";
-            this.cbxType.Size = new System.Drawing.Size(192, 28);
+            this.cbxType.Size = new System.Drawing.Size(240, 28);
             this.cbxType.TabIndex = 48;
             this.toolTip3.SetToolTip(this.cbxType, "Select Employee Type / Role");
             // 
@@ -595,7 +595,7 @@
             this.txtSuburb.Location = new System.Drawing.Point(243, 400);
             this.txtSuburb.Margin = new System.Windows.Forms.Padding(4);
             this.txtSuburb.Name = "txtSuburb";
-            this.txtSuburb.Size = new System.Drawing.Size(192, 27);
+            this.txtSuburb.Size = new System.Drawing.Size(240, 27);
             this.txtSuburb.TabIndex = 46;
             this.toolTip3.SetToolTip(this.txtSuburb, "Enter suburb where employee resides in");
             // 
@@ -619,7 +619,7 @@
             this.txtPhoneNum.Location = new System.Drawing.Point(243, 292);
             this.txtPhoneNum.Margin = new System.Windows.Forms.Padding(4);
             this.txtPhoneNum.Name = "txtPhoneNum";
-            this.txtPhoneNum.Size = new System.Drawing.Size(192, 27);
+            this.txtPhoneNum.Size = new System.Drawing.Size(240, 27);
             this.txtPhoneNum.TabIndex = 44;
             this.toolTip3.SetToolTip(this.txtPhoneNum, "Enter phone number of employee");
             // 
@@ -630,7 +630,7 @@
             this.txtStreetAddress.Location = new System.Drawing.Point(243, 347);
             this.txtStreetAddress.Margin = new System.Windows.Forms.Padding(4);
             this.txtStreetAddress.Name = "txtStreetAddress";
-            this.txtStreetAddress.Size = new System.Drawing.Size(192, 27);
+            this.txtStreetAddress.Size = new System.Drawing.Size(240, 27);
             this.txtStreetAddress.TabIndex = 43;
             this.toolTip3.SetToolTip(this.txtStreetAddress, "Enter street address of employee");
             // 
@@ -641,7 +641,7 @@
             this.txtIDNum.Location = new System.Drawing.Point(243, 233);
             this.txtIDNum.Margin = new System.Windows.Forms.Padding(4);
             this.txtIDNum.Name = "txtIDNum";
-            this.txtIDNum.Size = new System.Drawing.Size(192, 27);
+            this.txtIDNum.Size = new System.Drawing.Size(240, 27);
             this.txtIDNum.TabIndex = 42;
             this.toolTip3.SetToolTip(this.txtIDNum, "Enter ID number of employee");
             this.txtIDNum.Leave += new System.EventHandler(this.txtIDNum_Leave);
@@ -653,7 +653,7 @@
             this.txtSurname.Location = new System.Drawing.Point(243, 177);
             this.txtSurname.Margin = new System.Windows.Forms.Padding(4);
             this.txtSurname.Name = "txtSurname";
-            this.txtSurname.Size = new System.Drawing.Size(192, 27);
+            this.txtSurname.Size = new System.Drawing.Size(240, 27);
             this.txtSurname.TabIndex = 41;
             this.toolTip3.SetToolTip(this.txtSurname, "Enter surname of employee");
             // 
@@ -664,7 +664,7 @@
             this.txtName.Location = new System.Drawing.Point(243, 123);
             this.txtName.Margin = new System.Windows.Forms.Padding(4);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(192, 27);
+            this.txtName.Size = new System.Drawing.Size(240, 27);
             this.txtName.TabIndex = 40;
             this.toolTip3.SetToolTip(this.txtName, "Enter name of employee");
             // 
@@ -752,7 +752,7 @@
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox1.Location = new System.Drawing.Point(16, 64);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(486, 734);
+            this.groupBox1.Size = new System.Drawing.Size(516, 734);
             this.groupBox1.TabIndex = 90;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Employee Details";
