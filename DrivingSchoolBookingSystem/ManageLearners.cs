@@ -460,7 +460,7 @@ namespace DrivingSchoolBookingSystem
                   IssuedateTimePicker1.Value = issueDate;*/
                 UpdateExpiryDate();
                 IssuedateTimePicker1.Value = Convert.ToDateTime(dataGridView1.CurrentRow.Cells[10].Value);
-                textBox9.Text = Convert.ToDateTime(dataGridView1.CurrentRow.Cells[11].Value).ToString(" M/ d/yyyy");
+                textBox9.Text = Convert.ToDateTime(dataGridView1.CurrentRow.Cells[11].Value).ToString("d");
               
             }
             catch (Exception ex)

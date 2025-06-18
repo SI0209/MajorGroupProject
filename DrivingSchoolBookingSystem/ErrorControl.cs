@@ -40,7 +40,7 @@ namespace DrivingSchoolBookingSystem
         {
             string message = null;
             string pattern = @"[^a-zA-Z0-9]";
-            if (engineNum.Length != 9 || Regex.IsMatch(engineNum, pattern))
+            if (engineNum.Length != 5 || Regex.IsMatch(engineNum, pattern))
             {
                 message = "Invalid Engine Number!";
             }

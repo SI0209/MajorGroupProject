@@ -139,6 +139,13 @@ namespace DrivingSchoolBookingSystem
             lesson.ShowDialog();
         }
 
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LoginForm loginform = new LoginForm();
+            loginform.ShowDialog();
+        }
+
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             this.Hide();
