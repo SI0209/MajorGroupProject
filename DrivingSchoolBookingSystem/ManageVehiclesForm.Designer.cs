@@ -32,10 +32,8 @@ namespace DrivingSchoolBookingSystem
 <<<<<<< HEAD
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-=======
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
->>>>>>> 30c2214 (Manage Vehicles Form)
             this.tblVehicleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.wstGrp2DataSet = new DrivingSchoolBookingSystem.WstGrp2DataSet();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -421,7 +419,6 @@ namespace DrivingSchoolBookingSystem
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvVehicles.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
-=======
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Comic Sans MS", 8F, System.Drawing.FontStyle.Bold);
@@ -430,7 +427,6 @@ namespace DrivingSchoolBookingSystem
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvVehicles.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
->>>>>>> 30c2214 (Manage Vehicles Form)
             this.dgvVehicles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVehicles.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -451,7 +447,6 @@ namespace DrivingSchoolBookingSystem
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvVehicles.DefaultCellStyle = dataGridViewCellStyle4;
-=======
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Comic Sans MS", 8F);
@@ -460,7 +455,6 @@ namespace DrivingSchoolBookingSystem
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvVehicles.DefaultCellStyle = dataGridViewCellStyle2;
->>>>>>> 30c2214 (Manage Vehicles Form)
             this.dgvVehicles.Location = new System.Drawing.Point(646, 237);
             this.dgvVehicles.Margin = new System.Windows.Forms.Padding(4);
             this.dgvVehicles.Name = "dgvVehicles";
