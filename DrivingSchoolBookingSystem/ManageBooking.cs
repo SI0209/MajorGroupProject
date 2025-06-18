@@ -540,6 +540,16 @@ namespace DrivingSchoolBookingSystem
             login.ShowDialog();  
         }
 
+        private void label3_Enter(object sender, EventArgs e)
+        {
+            label6.ForeColor = Color.DarkRed;
+        }
+
+        private void label3_Leave(object sender, EventArgs e)
+        {
+            label6.ForeColor = Color.Blue;
+        }
+
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
             if (radioButton1.Checked)

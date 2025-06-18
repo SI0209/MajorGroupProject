@@ -896,7 +896,7 @@
             this.label1.Location = new System.Drawing.Point(823, 26);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(279, 48);
+            this.label1.Size = new System.Drawing.Size(269, 45);
             this.label1.TabIndex = 110;
             this.label1.Text = "Manage Booking";
             // 
@@ -969,6 +969,8 @@
             this.label3.TabIndex = 138;
             this.label3.Text = "Click here for further instructions";
             this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.label3.Enter += new System.EventHandler(this.label3_Enter);
+            this.label3.Leave += new System.EventHandler(this.label3_Leave);
             this.label3.MouseEnter += new System.EventHandler(this.label3_MouseEnter);
             this.label3.MouseLeave += new System.EventHandler(this.label3_MouseLeave);
             // 
