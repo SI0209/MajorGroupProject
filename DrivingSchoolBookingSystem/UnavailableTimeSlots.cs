@@ -59,7 +59,6 @@ namespace DrivingSchoolBookingSystem
             rtbReason.Text = "";
             taUnavailableSlot.Fill(dsBookingSystem.tblUnavailableSlot);
             taUnavailableSlotInnerJoin.Fill(dsBookingSystem.tblUnavailableSlotInnerJoin);
-            txtSearch.Clear();
             unavailableSlotId = -1;
         }
         //Correct add button
@@ -239,8 +238,23 @@ namespace DrivingSchoolBookingSystem
             unavailableSlotId = Convert.ToInt16(dgvUnavailableSlot.CurrentRow.Cells[0].Value);
             dtpDate.Text = dgvUnavailableSlot.CurrentRow.Cells[1].Value.ToString();
             dtpEndDate.Text = dgvUnavailableSlot.CurrentRow.Cells[2].Value.ToString();
-            nudStartTime.Text = dgvUnavailableSlot.CurrentRow.Cells[3].Value.ToString().Substring(0, 2);
-            nudEndTime.Text = dgvUnavailableSlot.CurrentRow.Cells[4].Value.ToString().Substring(0, 2);
+            if (dgvUnavailableSlot.CurrentRow.Cells[3].Value.ToString().Length < 2)
+            {
+                nudStartTime.Text = null;
+            }
+            else
+            {
+                nudStartTime.Text = dgvUnavailableSlot.CurrentRow.Cells[3].Value.ToString().Substring(0, 2);
+            }
+
+            if (dgvUnavailableSlot.CurrentRow.Cells[4].Value.ToString().Length < 2)
+            {
+                nudEndTime.Text = null;
+            }
+            else
+            {
+                nudEndTime.Text = dgvUnavailableSlot.CurrentRow.Cells[4].Value.ToString().Substring(0, 2);
+            }
             rtbReason.Text = dgvUnavailableSlot.CurrentRow.Cells[5].Value.ToString();
             cbxEmployeeID.Text = dgvUnavailableSlot.CurrentRow.Cells[6].Value.ToString() + " ";
         }
@@ -289,10 +303,7 @@ namespace DrivingSchoolBookingSystem
 
         }
 
-        private void txtSearch_TextChanged(object sender, EventArgs e)
-        {
-            taUnavailableSlotInnerJoin.FillBySurname(dsBookingSystem.tblUnavailableSlotInnerJoin, txtSearch.Text);
-        }
+        
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {

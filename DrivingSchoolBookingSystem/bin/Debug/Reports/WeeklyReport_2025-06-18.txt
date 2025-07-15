@@ -1,0 +1,8 @@
+Weekly Report (15 Jun 2025 - 18 Jun 2025):
+-----------------
+Total Payments Received This Week: R0
+Bookings Made This Week: 7
+Average Number Of Bookings Made This Week: 2
+Percentage Of Bookings Cancelled This Week: 71%
+Employee with Most Lessons Taught This Week: Jane (Employee ID: 1004)
+Total Lessons Taught by the Most Active Instructor This Week:  1

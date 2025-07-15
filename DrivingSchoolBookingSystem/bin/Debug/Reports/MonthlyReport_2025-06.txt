@@ -1,0 +1,8 @@
+Monthly Report (01 Jun 2025 - 30 Jun 2025):
+-----------------
+Total Payments Received This Month: R0
+Bookings Made This Month: 10
+Average Number Of Bookings Made This Month: 5
+Percentage Of Bookings Cancelled This Month: 80%
+Employee with Most Lessons Taught This Month: Jane (Employee ID: 1004)
+Total Lessons Taught by the Most Active Instructor This Month:  1

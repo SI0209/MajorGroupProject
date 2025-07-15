@@ -7449,14 +7449,14 @@ FROM     tblEmployee";
             this._commandCollection[3].Connection = this.Connection;
             this._commandCollection[3].CommandText = @"
 											INSERT INTO tblEmployee
-											(Employee_Name, Employee_Surname, Employee_ID, Employee_Age, Employee_Gender, Employee_Race, Employee_CellNumber, Employee_StreetAddress, Employee_Suburb, Employee_Type, Employee_Username,
+											(Employee_Name, Employee_Surname, Employee_IDNumber, Employee_Age, Employee_Gender, Employee_Race, Employee_CellNumber, Employee_StreetAddress, Employee_Suburb, Employee_Type, Employee_Username,
 											Employee_Password)
 											VALUES (@Employee_Name,@Employee_Surname,@Employee_ID,@Employee_Age,@Employee_Gender,@Employee_Race,@Employee_CellNumber,@Employee_StreetAddress,@Employee_Suburb,@Employee_Type,@Employee_Username,@Employee_Password);
 										";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Employee_Name", global::System.Data.SqlDbType.VarChar, 35, global::System.Data.ParameterDirection.Input, 0, 0, "Employee_Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Employee_Surname", global::System.Data.SqlDbType.VarChar, 35, global::System.Data.ParameterDirection.Input, 0, 0, "Employee_Surname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Employee_ID", global::System.Data.SqlDbType.VarChar, 13, global::System.Data.ParameterDirection.Input, 0, 0, "Employee_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Employee_ID", global::System.Data.SqlDbType.VarChar, 13, global::System.Data.ParameterDirection.Input, 0, 0, "Employee_IDNumber", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Employee_Age", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Employee_Age", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Employee_Gender", global::System.Data.SqlDbType.VarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "Employee_Gender", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Employee_Race", global::System.Data.SqlDbType.VarChar, 15, global::System.Data.ParameterDirection.Input, 0, 0, "Employee_Race", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
