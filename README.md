@@ -8,3 +8,14 @@ At present, all business operations such as booking and keeping track of learner
 At Araf's Driving School, they go beyond just offering a service – they prioritize personalized attention for every learner. Their commitment to excellence ensures that everyone receives the focused guidance they need to succeed. Additionally, customer satisfaction is at the heart of their approach, ensuring that all learners leave with a positive experience.
 
 [Project Documentation](https://github.com/user-attachments/files/21842115/ISTN3AS.M1.DOCUMENT.1.pdf)
+
+<H3>Authors</H3>
+<a href="https://github.com/SI0209">Suhail Ismail</a>
+<br>
+<a href="https://github.com/yusuf7786">Yusuf Seedat</a>
+<br>
+<a href="https://github.com/msnakooda17">Moosa Suliman Nakooda</a>
+<br>
+<a href="https://github.com/ollafathimah">Fathimah Olla</a>
+<br>
+<a href="https://github.com/MichaelaChetty">Michaela Chetty</a>
