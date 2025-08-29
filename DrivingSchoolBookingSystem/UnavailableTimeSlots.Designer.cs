@@ -59,11 +59,12 @@
             this.startTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.endTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.reasonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tblUnavailableSlotInnerJoinBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.employeeIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BSUnavailableSlots = new System.Windows.Forms.BindingSource(this.components);
             this.dsBookingSystem = new DrivingSchoolBookingSystem.WstGrp2DataSet();
             this.label8 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.tblUnavailableSlotBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tblUnavailableSlotInnerJoinBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.taUnavailableSlot = new DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters.taUnavailableSlot();
             this.taUnavailableSlotInnerJoin = new DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters.tblUnavailableSlotInnerJoinTableAdapter();
@@ -78,9 +79,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudEndTime)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudStartTime)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUnavailableSlot)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblUnavailableSlotInnerJoinBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BSUnavailableSlots)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsBookingSystem)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblUnavailableSlotBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblUnavailableSlotInnerJoinBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -209,6 +210,7 @@
             this.dtpEndDate.Name = "dtpEndDate";
             this.dtpEndDate.Size = new System.Drawing.Size(333, 35);
             this.dtpEndDate.TabIndex = 63;
+            this.dtpEndDate.ValueChanged += new System.EventHandler(this.dtpEndDate_ValueChanged);
             // 
             // nudEndTime
             // 
@@ -345,6 +347,7 @@
             this.dtpDate.Name = "dtpDate";
             this.dtpDate.Size = new System.Drawing.Size(333, 35);
             this.dtpDate.TabIndex = 48;
+            this.dtpDate.ValueChanged += new System.EventHandler(this.dtpDate_ValueChanged);
             // 
             // rtbReason
             // 
@@ -422,8 +425,9 @@
             this.endDateDataGridViewTextBoxColumn,
             this.startTimeDataGridViewTextBoxColumn,
             this.endTimeDataGridViewTextBoxColumn,
-            this.reasonDataGridViewTextBoxColumn});
-            this.dgvUnavailableSlot.DataSource = this.tblUnavailableSlotBindingSource;
+            this.reasonDataGridViewTextBoxColumn,
+            this.employeeIDDataGridViewTextBoxColumn});
+            this.dgvUnavailableSlot.DataSource = this.BSUnavailableSlots;
             this.dgvUnavailableSlot.Location = new System.Drawing.Point(569, 179);
             this.dgvUnavailableSlot.Margin = new System.Windows.Forms.Padding(4);
             this.dgvUnavailableSlot.Name = "dgvUnavailableSlot";
@@ -481,10 +485,18 @@
             this.reasonDataGridViewTextBoxColumn.Name = "reasonDataGridViewTextBoxColumn";
             this.reasonDataGridViewTextBoxColumn.Width = 84;
             // 
-            // tblUnavailableSlotInnerJoinBindingSource
+            // employeeIDDataGridViewTextBoxColumn
             // 
-            this.tblUnavailableSlotInnerJoinBindingSource.DataMember = "tblUnavailableSlotInnerJoin";
-            this.tblUnavailableSlotInnerJoinBindingSource.DataSource = this.dsBookingSystem;
+            this.employeeIDDataGridViewTextBoxColumn.DataPropertyName = "EmployeeID";
+            this.employeeIDDataGridViewTextBoxColumn.HeaderText = "EmployeeID";
+            this.employeeIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.employeeIDDataGridViewTextBoxColumn.Name = "employeeIDDataGridViewTextBoxColumn";
+            this.employeeIDDataGridViewTextBoxColumn.Width = 111;
+            // 
+            // BSUnavailableSlots
+            // 
+            this.BSUnavailableSlots.DataMember = "tblUnavailableSlot";
+            this.BSUnavailableSlots.DataSource = this.dsBookingSystem;
             // 
             // dsBookingSystem
             // 
@@ -517,10 +529,10 @@
             this.label5.TabIndex = 26;
             this.label5.Text = "Start Time";
             // 
-            // tblUnavailableSlotBindingSource
+            // tblUnavailableSlotInnerJoinBindingSource
             // 
-            this.tblUnavailableSlotBindingSource.DataMember = "tblUnavailableSlot";
-            this.tblUnavailableSlotBindingSource.DataSource = this.dsBookingSystem;
+            this.tblUnavailableSlotInnerJoinBindingSource.DataMember = "tblUnavailableSlotInnerJoin";
+            this.tblUnavailableSlotInnerJoinBindingSource.DataSource = this.dsBookingSystem;
             // 
             // pictureBox1
             // 
@@ -589,6 +601,7 @@
             this.DoubleBuffered = true;
             this.Name = "UnavailableTimeSlots";
             this.Text = "Form9";
+            this.Load += new System.EventHandler(this.UnavailableTimeSlots_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -599,9 +612,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudEndTime)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudStartTime)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUnavailableSlot)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblUnavailableSlotInnerJoinBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BSUnavailableSlots)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsBookingSystem)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblUnavailableSlotBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblUnavailableSlotInnerJoinBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -641,15 +654,16 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DateTimePicker dtpEndDate;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.BindingSource tblUnavailableSlotInnerJoinBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn unavailableSlotIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn startDateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn endDateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn startTimeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn endTimeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn reasonDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource tblUnavailableSlotBindingSource;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.BindingSource tblUnavailableSlotInnerJoinBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn employeeIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource BSUnavailableSlots;
     }
 }

@@ -145,7 +145,7 @@ namespace DrivingSchoolBookingSystem
                     int employeeID;
                     try
                     {
-                        employeeID = Convert.ToInt32(cbxEmployeeID.Text.ToString().Substring(0, 2));
+                        employeeID = Convert.ToInt32(cbxEmployeeID.Text.ToString());
                     }
                     catch
                     {
@@ -234,7 +234,9 @@ namespace DrivingSchoolBookingSystem
         private void dgvUnavailableSlot_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             if (Convert.ToInt16(dgvUnavailableSlot.CurrentRow.Cells[0].Value) < 0)
+            {
                 return;
+            }
             unavailableSlotId = Convert.ToInt16(dgvUnavailableSlot.CurrentRow.Cells[0].Value);
             dtpDate.Text = dgvUnavailableSlot.CurrentRow.Cells[1].Value.ToString();
             dtpEndDate.Text = dgvUnavailableSlot.CurrentRow.Cells[2].Value.ToString();
@@ -350,6 +352,31 @@ namespace DrivingSchoolBookingSystem
             home.Employee_Type = loginform.Employee_Type;
             home.ShowDialog();
             this.Hide();
+        }
+
+        
+
+        private void dtpEndDate_ValueChanged(object sender, EventArgs e)
+        {
+            if (dtpEndDate.Value.Date < dtpDate.Value.Date)
+            {
+                MessageBox.Show("End date cannot be before start date!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void UnavailableTimeSlots_Load(object sender, EventArgs e)
+        {
+            dtpDate.MinDate = DateTime.Today;
+            dtpEndDate.MinDate = DateTime.Today;
+        }
+
+        private void dtpDate_ValueChanged(object sender, EventArgs e)
+        {
+            if (dtpDate.Value.Date == DateTime.Today)
+            {
+                nudStartTime.Minimum = DateTime.Now.Hour;
+                nudEndTime.Minimum = DateTime.Now.Hour + 1; // Ensure end time is always after start time
+            }
         }
     }
 }
