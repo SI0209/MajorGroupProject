@@ -268,7 +268,6 @@ namespace DrivingSchoolBookingSystem
                             dashIndex = cbxLearnerID.Text.ToString().IndexOf("-");
                         learnerID = Convert.ToInt32(cbxLearnerID.Text.Substring(0, dashIndex));
 
-
                         if (cbxVehicleID.Text.ToString().Contains("-"))
                             dashIndex = cbxVehicleID.Text.ToString().IndexOf("-");
                         vehicleID = Convert.ToInt32(cbxVehicleID.Text.Substring(0, dashIndex));

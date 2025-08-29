@@ -368,15 +368,30 @@ namespace DrivingSchoolBookingSystem
         {
             dtpDate.MinDate = DateTime.Today;
             dtpEndDate.MinDate = DateTime.Today;
-        }
 
-        private void dtpDate_ValueChanged(object sender, EventArgs e)
-        {
-            if (dtpDate.Value.Date == DateTime.Today)
+            if (dtpDate.Value.Date == DateTime.Now.Date)
             {
                 nudStartTime.Minimum = DateTime.Now.Hour;
                 nudEndTime.Minimum = DateTime.Now.Hour + 1; // Ensure end time is always after start time
             }
+        }
+
+        private void dtpDate_ValueChanged(object sender, EventArgs e)
+        {
+            if (dtpDate.Value.Date == DateTime.Now.Date)
+            {
+                nudStartTime.Minimum = DateTime.Now.Hour;
+                nudEndTime.Minimum = DateTime.Now.Hour + 1; // Ensure end time is always after start time
+            }
+            else
+            {
+                nudStartTime.Minimum = 8;
+                nudEndTime.Maximum = 15;
+                nudEndTime.Minimum = 9;
+                nudEndTime.Maximum = 16;
+            }
+
+            dtpEndDate.MinDate = dtpDate.Value.Date; // Ensure end date is not before start date
         }
     }
 }
