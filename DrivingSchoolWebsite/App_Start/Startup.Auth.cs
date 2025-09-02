@@ -7,9 +7,9 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.DataProtection;
 using Microsoft.Owin.Security.Google;
 using Owin;
-using wyebankwebsite.Models;
+using DrivingSchoolWebsite.Models;
 
-namespace wyebankwebsite
+namespace DrivingSchoolWebsite
 {
     public partial class Startup {
 

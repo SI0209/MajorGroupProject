@@ -7,10 +7,10 @@ using System.Web.Optimization;
 using System.Web.Routing;
 using System.Web.Security;
 using System.Web.SessionState;
-using wyebankwebsite.Logic;
-using wyebankwebsite.Models;
+using DrivingSchoolWebsite.Logic;
+using DrivingSchoolWebsite.Models;
 
-namespace wyebankwebsite
+namespace DrivingSchoolWebsite
 {
     public class Global : HttpApplication
     {

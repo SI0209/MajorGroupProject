@@ -10,11 +10,11 @@ using SendGrid;
 using SendGrid.Helpers.Mail;
 using System.Configuration;
 using System.Diagnostics;
-using wyebankwebsite.Models;
+using DrivingSchoolWebsite.Models;
 using System.Net;
 
 
-namespace wyebankwebsite
+namespace DrivingSchoolWebsite
 {
     public class EmailService : IIdentityMessageService
     {

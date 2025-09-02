@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace wyebankwebsite.Account
+namespace DrivingSchoolWebsite.Account
 {
 
 
@@ -84,6 +84,6 @@ namespace wyebankwebsite.Account
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::wyebankwebsite.Account.OpenAuthProviders OpenAuthLogin;
+        protected global::DrivingSchoolWebsite.Account.OpenAuthProviders OpenAuthLogin;
     }
 }

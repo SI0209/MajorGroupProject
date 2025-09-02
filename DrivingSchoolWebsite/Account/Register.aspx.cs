@@ -5,9 +5,9 @@ using System.Web.UI;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Owin;
-using wyebankwebsite.Models;
+using DrivingSchoolWebsite.Models;
 
-namespace wyebankwebsite.Account
+namespace DrivingSchoolWebsite.Account
 {
     public partial class Register : Page
     {

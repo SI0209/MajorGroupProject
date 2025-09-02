@@ -8,10 +8,10 @@ using System.Web.UI;
 using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 using Microsoft.AspNet.Identity;
-using wyebankwebsite.Logic;
-using wyebankwebsite.Private_Pages;
+using DrivingSchoolWebsite.Logic;
+using DrivingSchoolWebsite.Private_Pages;
 
-namespace wyebankwebsite
+namespace DrivingSchoolWebsite
 {
     public partial class SiteMaster : MasterPage
     {

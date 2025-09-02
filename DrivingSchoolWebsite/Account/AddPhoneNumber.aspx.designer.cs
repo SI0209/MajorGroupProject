@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace wyebankwebsite.Account {
+namespace DrivingSchoolWebsite.Account {
     
     
     public partial class AddPhoneNumber {
