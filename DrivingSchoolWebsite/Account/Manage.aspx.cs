@@ -8,9 +8,9 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Owin;
-using DrivingSchoolWebsite.Models;
+using wyebankwebsite.Models;
 
-namespace DrivingSchoolWebsite.Account
+namespace wyebankwebsite.Account
 {
     public partial class Manage : System.Web.UI.Page
     {

@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DrivingSchoolWebsite {
+namespace wyebankwebsite {
     
     
     public partial class ViewSwitcher {

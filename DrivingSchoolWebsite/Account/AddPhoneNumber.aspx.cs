@@ -7,9 +7,9 @@ using System.Web.UI.WebControls;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using System.Threading.Tasks;
-using DrivingSchoolWebsite.Models;
+using wyebankwebsite.Models;
 
-namespace DrivingSchoolWebsite.Account
+namespace wyebankwebsite.Account
 {
     public partial class AddPhoneNumber : System.Web.UI.Page
     {

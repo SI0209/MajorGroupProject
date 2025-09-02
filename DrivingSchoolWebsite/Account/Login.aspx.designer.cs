@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DrivingSchoolWebsite.Account {
-    
-    
-    public partial class Login {
-        
+namespace wyebankwebsite.Account
+{
+
+
+    public partial class Login
+    {
+
         /// <summary>
         /// ErrorMessage control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace DrivingSchoolWebsite.Account {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.PlaceHolder ErrorMessage;
-        
+
         /// <summary>
         /// FailureText control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace DrivingSchoolWebsite.Account {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal FailureText;
-        
+
         /// <summary>
         /// Email control.
         /// </summary>
@@ -38,7 +40,7 @@ namespace DrivingSchoolWebsite.Account {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox Email;
-        
+
         /// <summary>
         /// Password control.
         /// </summary>
@@ -47,7 +49,7 @@ namespace DrivingSchoolWebsite.Account {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox Password;
-        
+
         /// <summary>
         /// RememberMe control.
         /// </summary>
@@ -56,7 +58,7 @@ namespace DrivingSchoolWebsite.Account {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBox RememberMe;
-        
+
         /// <summary>
         /// RegisterHyperLink control.
         /// </summary>
@@ -65,7 +67,16 @@ namespace DrivingSchoolWebsite.Account {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink RegisterHyperLink;
-        
+
+        /// <summary>
+        /// ForgotPasswordHyperLink control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink ForgotPasswordHyperLink;
+
         /// <summary>
         /// OpenAuthLogin control.
         /// </summary>
@@ -73,6 +84,6 @@ namespace DrivingSchoolWebsite.Account {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DrivingSchoolWebsite.Account.OpenAuthProviders OpenAuthLogin;
+        protected global::wyebankwebsite.Account.OpenAuthProviders OpenAuthLogin;
     }
 }

@@ -6,16 +6,50 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
-using DrivingSchoolWebsite.Models;
+using SendGrid;
+using SendGrid.Helpers.Mail;
+using System.Configuration;
+using System.Diagnostics;
+using wyebankwebsite.Models;
+using System.Net;
 
-namespace DrivingSchoolWebsite
+
+namespace wyebankwebsite
 {
     public class EmailService : IIdentityMessageService
     {
-        public Task SendAsync(IdentityMessage message)
+        public async Task SendAsync(IdentityMessage message)
         {
-            // Plug in your email service here to send an email.
-            return Task.FromResult(0);
+            await configSendGridAsync(message);
+        }
+
+        private async Task configSendGridAsync(IdentityMessage message)
+        {
+            // Create the email message
+            var sendGridMessage = new SendGridMessage
+            {
+                From = new EmailAddress("kriven.govender07@gmail.com", "WyeBank Admin"),
+                Subject = message.Subject,
+                PlainTextContent = message.Body,
+                HtmlContent = message.Body
+            };
+
+            // Add recipient
+            sendGridMessage.AddTo(new EmailAddress(message.Destination));
+
+            // Get the SendGrid API key from web.config
+            var apiKey = ConfigurationManager.AppSettings["SendGridApiKey"];
+
+            var client = new SendGridClient(apiKey);
+
+            // Send the email
+            var response = await client.SendEmailAsync(sendGridMessage);
+
+            // Log if sending fails
+            if (response.StatusCode != System.Net.HttpStatusCode.OK)
+            {
+                Trace.TraceError($"Failed to send email to {message.Destination}: {response.StatusCode}");
+            }
         }
     }
 
@@ -56,8 +90,7 @@ namespace DrivingSchoolWebsite
                 RequireUppercase = true,
             };
 
-            // Register two factor authentication providers. This application uses Phone and Emails as a step of receiving a code for verifying the user
-            // You can write your own provider and plug it in here.
+            // Register two factor authentication providers
             manager.RegisterTwoFactorProvider("Phone Code", new PhoneNumberTokenProvider<ApplicationUser>
             {
                 MessageFormat = "Your security code is {0}"
@@ -87,7 +120,8 @@ namespace DrivingSchoolWebsite
     public class ApplicationSignInManager : SignInManager<ApplicationUser, string>
     {
         public ApplicationSignInManager(ApplicationUserManager userManager, IAuthenticationManager authenticationManager) :
-            base(userManager, authenticationManager) { }
+            base(userManager, authenticationManager)
+        { }
 
         public override Task<ClaimsIdentity> CreateUserIdentityAsync(ApplicationUser user)
         {

@@ -1,6 +1,6 @@
 ﻿using System.Web.UI;
 
-namespace DrivingSchoolWebsite.Account
+namespace wyebankwebsite.Account
 {
     public partial class ResetPasswordConfirmation : Page
     {

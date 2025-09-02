@@ -1,6 +1,6 @@
-﻿/* Wrapping element */
+﻿/**/ /* Wrapping element */
 /* Set some basic padding to keep content from hitting the edges */
-.body-content {
+/**/ .body-content {
     margin-top: 25px;
     padding-left: 15px;
     padding-right: 15px;
@@ -13,18 +13,41 @@
     white-space: normal;
 }
 
-/* Set widths on the form inputs since otherwise they're 100% wide */
+/* Responsive form inputs */
 input[type="text"],
 input[type="password"],
 input[type="email"],
 input[type="tel"],
-input[type="select"] {
-    max-width: 280px;
+select {
+    width: 100%; /* Make inputs responsive */
+    max-width: 600px; /* Ensure they don't stretch too wide */
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box; /* Include padding in the width */
 }
 
-/* Responsive: Portrait tablets and up */
+/* Adjust the form input width for larger screens */
 @media screen and (min-width: 768px) {
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="tel"],
+    select {
+        width: 100%; /* Full width on larger screens */
+        max-width: 500px; /* Limit width on larger screens */
+    }
+
     .body-content {
         padding: 0;
     }
 }
+.footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+    .footer a:hover {
+        color: #ddd;
+    }
+

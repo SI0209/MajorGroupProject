@@ -5,9 +5,9 @@ using System.Web.UI;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Owin;
-using DrivingSchoolWebsite.Models;
+using wyebankwebsite.Models;
 
-namespace DrivingSchoolWebsite.Account
+namespace wyebankwebsite.Account
 {
     public partial class ResetPassword : Page
     {

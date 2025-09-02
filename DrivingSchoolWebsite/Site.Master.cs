@@ -5,10 +5,13 @@ using System.Security.Principal;
 using System.Web;
 using System.Web.Security;
 using System.Web.UI;
+using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 using Microsoft.AspNet.Identity;
+using wyebankwebsite.Logic;
+using wyebankwebsite.Private_Pages;
 
-namespace DrivingSchoolWebsite
+namespace wyebankwebsite
 {
     public partial class SiteMaster : MasterPage
     {
@@ -69,13 +72,120 @@ namespace DrivingSchoolWebsite
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (HttpContext.Current.User.IsInRole(RoleActions.Role_Admin))
+            {
+                adminLink.Visible = true;
+            }
+            if (HttpContext.Current.User.IsInRole(RoleActions.Role_Client))
+            {
+                clientLink.Visible = true;
+               
+            }
+            if (HttpContext.Current.User.IsInRole(RoleActions.Role_Instructor))
+            {
+                instructorLink.Visible = true;
+            }
         }
 
         protected void Unnamed_LoggingOut(object sender, LoginCancelEventArgs e)
         {
             Context.GetOwinContext().Authentication.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
         }
+        //clientpages
+
+        protected void addReviewLink_PreRender(object sender, EventArgs e)
+        {
+            if (sender is HtmlAnchor anchor)
+            {
+                anchor.Visible = (HttpContext.Current.User.IsInRole(RoleActions.Role_Client));
+                    
+            }
+        }
+        protected void RescheduleBooking_PreRender(object sender, EventArgs e)
+        {
+            if (sender is HtmlAnchor anchor)
+            {
+                anchor.Visible = (HttpContext.Current.User.IsInRole(RoleActions.Role_Client));
+
+            }
+        }
+
+        protected void BookOnline_PreRender(object sender, EventArgs e)
+        {
+            if (sender is HtmlAnchor anchor) {
+                anchor.Visible = (HttpContext.Current.User.IsInRole(RoleActions.Role_Client));
+            }
+        }
+        protected void MakePayment_PreRender(object sender, EventArgs e)
+        {
+            if (sender is HtmlAnchor anchor)
+            {
+                anchor.Visible = (HttpContext.Current.User.IsInRole(RoleActions.Role_Client));
+            }
+        }
+        protected void ClientViewLesson_PreRender(object sender, EventArgs e)
+        {
+            if (sender is HtmlAnchor anchor)
+            {
+                anchor.Visible = (HttpContext.Current.User.IsInRole(RoleActions.Role_Client));
+            }
+        }
+
+
+        //admin pages
+
+        protected void UnavailableSlots_PreRender(object sender, EventArgs e)
+        {
+            if (sender is HtmlAnchor anchor)
+            {
+                anchor.Visible = (HttpContext.Current.User.IsInRole(RoleActions.Role_Admin));
+            }
+        }
+        protected void ViewLessonSchedule_PreRender(object sender, EventArgs e)
+        {
+            if (sender is HtmlAnchor anchor)
+            {
+                anchor.Visible = (HttpContext.Current.User.IsInRole(RoleActions.Role_Admin));
+            }
+        }
+        protected void ViewReports_PreRender(object sender, EventArgs e)
+        {
+            if (sender is HtmlAnchor anchor)
+            {
+                anchor.Visible = (HttpContext.Current.User.IsInRole(RoleActions.Role_Admin));
+            }
+        }
+        protected void ReportTwo_PreRender(object sender, EventArgs e)
+        {
+            if (sender is HtmlAnchor anchor)
+            {
+                anchor.Visible = (HttpContext.Current.User.IsInRole(RoleActions.Role_Admin));
+            }
+        }
+        protected void ReportThree_PreRender(object sender, EventArgs e)
+        {
+            if (sender is HtmlAnchor anchor)
+            {
+                anchor.Visible = (HttpContext.Current.User.IsInRole(RoleActions.Role_Admin));
+            }
+        }
+        //instructor pages
+
+        protected void InstructorUnvailableDate_PreRender(object sender, EventArgs e)
+        {
+            if (sender is HtmlAnchor anchor)
+            {
+                anchor.Visible = (HttpContext.Current.User.IsInRole(RoleActions.Role_Instructor));
+            }
+        }
+        protected void InstructorViewLessonSchedule_PreRender(object sender, EventArgs e)
+        {
+            if (sender is HtmlAnchor anchor)
+            {
+                anchor.Visible = (HttpContext.Current.User.IsInRole(RoleActions.Role_Instructor));
+            }
+        }
+        
     }
 
 }

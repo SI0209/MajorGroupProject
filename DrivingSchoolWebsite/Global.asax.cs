@@ -1,13 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Optimization;
 using System.Web.Routing;
 using System.Web.Security;
 using System.Web.SessionState;
+using wyebankwebsite.Logic;
+using wyebankwebsite.Models;
 
-namespace DrivingSchoolWebsite
+namespace wyebankwebsite
 {
     public class Global : HttpApplication
     {
@@ -16,6 +19,12 @@ namespace DrivingSchoolWebsite
             // Code that runs on application startup
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            // Initialize the product database.
+           // Database.SetInitializer(new ProductDatabaseInitializer());
+
+            RoleActions roleActions = new RoleActions();
+            roleActions.AddUserAndRole();
         }
     }
 }

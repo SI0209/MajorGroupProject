@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Optimization;
 using System.Web.UI;
 
-namespace DrivingSchoolWebsite
+namespace wyebankwebsite
 {
     public class BundleConfig
     {

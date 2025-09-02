@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DrivingSchoolWebsite.Account {
+namespace wyebankwebsite.Account {
     
     
     public partial class Confirm {

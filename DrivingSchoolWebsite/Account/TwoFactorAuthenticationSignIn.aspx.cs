@@ -7,9 +7,9 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
-using DrivingSchoolWebsite.Models;
+using wyebankwebsite.Models;
 
-namespace DrivingSchoolWebsite.Account
+namespace wyebankwebsite.Account
 {
     public partial class TwoFactorAuthenticationSignIn : System.Web.UI.Page
     {

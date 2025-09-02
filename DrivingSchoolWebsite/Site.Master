@@ -12,6 +12,15 @@
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
     <webopt:bundlereference runat="server" path="~/Content/css" />
+     <!-- Link to your CSS file -->
+    <link rel="stylesheet" type="text/css" href="~/Content/style.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/contactus.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/services.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
 </head>
@@ -38,27 +47,79 @@
 
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
             <div class="container">
-                <a class="navbar-brand" runat="server" href="~/">Application name</a>
+                <a class="navbar-brand" runat="server" href="~/">WYEBANK DRIVING SCHOOL</a>
+
                 <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Toggle navigation" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item"><a class="nav-link" runat="server" href="~/">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" runat="server" href="~/About">About</a></li>
-                        <li class="nav-item"><a class="nav-link" runat="server" href="~/Contact">Contact</a></li>
+
+                        <!--Admin Private Pages -->
+                        <li class="nav-item"><a class="nav-link" runat="server" id="adminLink" visible="false"  href="~/Admin/AdminPage">ADMIN</a></li>
+                        <!-- <li><a class="nav-link" runat="server" id="UnavSlotLink"  href="~/Admin/UnavailableSlots.aspx" onprerender="UnavailableSlots_PreRender">Unavailable Slots</a></li>-->
+                        <li><a class="nav-link" runat="server" id="ViewLessonScheduleLink"  href="~/Admin/ViewLessonSchedule.aspx" onprerender="ViewLessonSchedule_PreRender">LESSON SCHEDULE </a></li>
+                        <li><a class="nav-link" runat="server" id="ViewReportsLink"  href="~/Admin/ViewReports.aspx" onprerender="ViewReports_PreRender">VIEW REPORT </a></li>
+                        <li><a class="nav-link" runat="server" id="ReportTwo"  href="~/Admin/ReportTwo.aspx" onprerender="ReportTwo_PreRender">ANALYTICS REPORT </a></li>
+                        <li><a class="nav-link" runat="server" id="ReportThree"  href="~/Admin/ReportThree.aspx" onprerender="ReportThree_PreRender">LEARNER AND SUBURB REPORT </a></li>
+
+
+
+
+
+
+
+
+
+
+                       
+                         <!--Client Private Pages -->
+                        <li class="nav-item"><a class="nav-link" runat="server" id="clientLink" visible="false"  href="~/Client/ClientPage">CLIENT</a></li>
+                       
+                        <li><a class="nav-link" runat="server" id="addReviewLink"  href="~/Private Pages/AddReview.aspx" onprerender="addReviewLink_PreRender">ADD REVIEW</a></li>
+                        <li><a class="nav-link" runat="server" id="BookOnlineLink"  href="~/Client/ClientBookingOnline.aspx" onprerender="BookOnline_PreRender">BOOK ONLINE</a></li>
+                       <!-- <li><a class="nav-link" runat="server" id="MakePaymentLink"  href="~/Client/ClientMakePayment.aspx" onprerender="MakePayment_PreRender">Make a Payment</a></li> -->
+                        <li><a class="nav-link" runat="server" id="ClientViewLessonLink"  href="~/Client/ClientViewLessonSchedule.aspx" onprerender="ClientViewLesson_PreRender">CLIENT LESSON SCHEDULE</a></li>
+                        <li><a class="nav-link" runat="server" id="RescheduleBookingLink"  href="~/Client/RescheduleBooking.aspx" onprerender="RescheduleBooking_PreRender">RESCHEDULE BOOKING</a></li>
+
+                        <!-- Instructor Pages-->
+                        <li class="nav-item"><a class="nav-link" runat="server" id="instructorLink" visible="false"  href="~/Instructor/InstructorPage">INSTRUCTOR</a></li>
+                         <!--<li><a class="nav-link" runat="server" id="UnavSlotInstrucLink"  href="~/Instructor/InstructorUnvailableDate.aspx" onprerender="InstructorUnvailableDate_PreRender">Unavailable Slots Instructor</a></li> -->
+
+                        <li><a class="nav-link" runat="server" id="InstrucViewLessonScheduleLink"  href="~/Instructor/InstructorViewLessonSchedule.aspx" onprerender="InstructorViewLessonSchedule_PreRender"> VIEW LESSON SCHEDULE</a></li>
+
+                        <!--Public Pages 
+                        <li class="nav-item"><a class="nav-link" runat="server" href="~/Default.aspx">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" runat="server" href="~/Public Pages/Services.aspx">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" runat="server" href="~/About.aspx">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" runat="server" href="~/Contact.aspx">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" runat="server" href="~/Public Pages/BookOnline.aspx">Book Online</a></li>
+                        <li class="nav-item"><a class="nav-link" runat="server" href="~/Public Pages/Review.aspx">Review</a></li>
+                        -->
+
+
+
                     </ul>
-                    <asp:LoginView runat="server" ViewStateMode="Disabled">
+                    <asp:LoginView runat="server" id="loginView" ViewStateMode="Disabled">
                         <AnonymousTemplate>
                             <ul class="navbar-nav navbar-right">
-                                <li><a runat="server" class="nav-link" href="~/Account/Register">Register</a></li>
-                                <li><a runat="server" class="nav-link" href="~/Account/Login">Log in</a></li>
+                                <!-- Public Pages -->
+                                <li class="nav-item"><a class="nav-link" runat="server" href="~/Default.aspx">HOME</a></li>
+                                <li class="nav-item"><a class="nav-link" runat="server" href="~/Public Pages/Services.aspx">SERVICES</a></li>
+                                <li class="nav-item"><a class="nav-link" runat="server" href="~/About.aspx">ABOUT US</a></li>
+                                <li class="nav-item"><a class="nav-link" runat="server" href="~/Contact.aspx">CONTACT US</a></li>
+                                <li class="nav-item"><a class="nav-link" runat="server" href="~/Public Pages/BookOnline.aspx">BOOK ONLINE</a></li>
+                                <li class="nav-item"><a class="nav-link" runat="server" href="~/Public Pages/Review.aspx">REVIEW</a></li>
+        
+                                <li><a runat="server" class="nav-link" href="~/Account/Register">REGISTER</a></li>
+                                <li><a runat="server" class="nav-link" href="~/Account/Login">LOG IN</a></li>
                             </ul>
                         </AnonymousTemplate>
                         <LoggedInTemplate>
                             <ul class="navbar-nav navbar-right">
                                 <li><a runat="server" class="nav-link" href="~/Account/Manage" title="Manage your account">Hello, <%: Context.User.Identity.GetUserName()  %> !</a></li>
+                             
                                 <li>
                                     <asp:LoginStatus runat="server" CssClass="nav-link" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
                                 </li>
@@ -68,13 +129,27 @@
                 </div>
             </div>
         </nav>
-        <div class="container body-content">
+
+        <div class="container-fluid body-content mt-0">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
-            <hr />
-            <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
+            <!-- <hr /> -->
+            <footer class="footer bg-dark text-white py-4">
+                <div class="container text-center">
+                    <p>Connect with us:</p>
+                    <a href="https://www.instagram.com/yourprofile" target="_blank" class="text-white me-3">
+                        <i class="fab fa-instagram"></i> Instagram
+                    </a>
+                    <a href="https://www.facebook.com/yourprofile" target="_blank" class="text-white me-3">
+                        <i class="fab fa-facebook"></i> Facebook
+                    </a>
+                    <a href="https://www.twitter.com/yourprofile" target="_blank" class="text-white me-3">
+                        <i class="fab fa-twitter"></i> Twitter
+                    </a>
+                    <p class="mt-3">© 2024 Wyebank Driving School. All rights reserved.</p>
+                </div>
             </footer>
+
         </div>
     </form>
     <asp:PlaceHolder runat="server">
