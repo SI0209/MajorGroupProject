@@ -115,7 +115,7 @@
             <li>Allows driving light commercial vehicles, including small trucks.</li>
         </ul>
         <p><strong>Training Duration:</strong> 10 hours of theoretical training and 5 hours of practical driving lessons.</p>
-        <p><strong>Pricing:</strong> R 100 for 1 hour of practical lessons.</p>
+        <p><strong>Pricing:</strong> R 200 for 1 hour of practical lessons.</p>
     </div>
 </div>
 
@@ -138,30 +138,7 @@
             <li>Allows driving vehicles used in commercial and industrial sectors.</li>
         </ul>
         <p><strong>Training Duration:</strong> 15 hours of theoretical training and 10 hours of practical driving lessons.</p>
-        <p><strong>Pricing:</strong> R 200 for 1 hour of practical lessons.</p>
-    </div>
-</div>
-
-
-<!-- Modal Code 14 -->
-<div id="modalCode14" class="modal">
-    <div class="modal-content" style="background-color: #444; color: white; font-family: Arial, sans-serif;">
-        <span class="close" onclick="closeModal('modalCode14')" style="color: #fff; font-size: 24px;">&times;</span>
-        <h3 style="font-weight: bold; font-size: 24px;">Code 14 (Heavy Motor Vehicles)</h3>
-        <p><strong>Description:</strong> The Code 14 license allows the holder to drive heavy motor vehicles, including articulated trucks and buses with a GVM exceeding 16,000 kg.</p>
-        <p><strong>Requirements:</strong></p>
-        <ul>
-            <li>Minimum age: 21 years.</li>
-            <li>Valid Code 10 license for at least 1 year.</li>
-            <li>Completion of a specialized driving test for heavy vehicles.</li>
-        </ul>
-        <p><strong>Benefits:</strong></p>
-        <ul>
-            <li>High demand for heavy vehicle drivers in various industries.</li>
-            <li>Opportunity to earn a higher salary due to the specialized nature of the license.</li>
-        </ul>
-        <p><strong>Training Duration:</strong> 20 hours of theoretical training and 15 hours of practical driving lessons.</p>
-        <p><strong>Pricing:</strong> R 400 for 1 hour of practical lessons.</p>
+        <p><strong>Pricing:</strong> R 350 for 1 hour of practical lessons.</p>
     </div>
 </div>
 

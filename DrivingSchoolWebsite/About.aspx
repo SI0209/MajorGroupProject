@@ -12,7 +12,7 @@
                     We envision Araf's Driving School as a leader in driving education, where technology and tradition combine to provide an unparalleled learning experience. By implementing this digital solution, we are ensuring that the school stays competitive and continues to drive student success into the future.
                 </p>
                 <p>
-                    Araf's Driving School, located at 1 Zinnia Road, is dedicated to helping students obtain their licenses. Offering lessons seven days a week, the school provides the flexibility needed for today's busy schedules. The school is owned and managed by Ernest Govender, who is committed to ensuring each student receives the best possible instruction.
+                    Araf's Driving School, located at 53 Cranbrook Road, Clayfiend, Phoenix, is dedicated to helping students obtain their licenses. Offering lessons seven days a week, the school provides the flexibility needed for today's busy schedules. The school is owned and managed by Ernest Govender, who is committed to ensuring each student receives the best possible instruction.
                 </p>
             </div>
         </div>
