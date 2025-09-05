@@ -5,7 +5,7 @@
         <h2 class="contact-title">CONTACT US</h2>
         <div class="contact-container">
             <div class="contact-info">
-                <p><strong>Address:</strong> 68 Cranbrook Road, Clayfield</p>
+                <p><strong>Address:</strong> 53 Cranbrook Road, Clayfield</p>
                 <p><strong>Contact Number:</strong> 084 6786530</p>
                 <h4>OFFICE HOURS:</h4>
                 <p>Mon - Sat: 11am - 5pm</p>
@@ -13,7 +13,7 @@
                 <p>Public Holidays: Closed</p>
                 <h4>Location:</h4>
                 <div class="map-container">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3465.194249385676!2d31.0238242!3d-29.714132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef70457dca718fb%3A0xef7d508f06c19adc!2s68%20Cranbrook%20Rd%2C%20Clayfield%2C%20Phoenix%2C%204156!5e0!3m2!1sen!2sza!4v1757057489535!5m2!1sen!2sza" 
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3465.1727212932165!2d31.023642299999995!3d-29.714755699999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef70457c2d22cad%3A0x7414ebc8965f683d!2s53%20Cranbrook%20Rd%2C%20Clayfield%2C%20Phoenix%2C%204156!5e0!3m2!1sen!2sza!4v1757081228366!5m2!1sen!2sza" 
                     width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>

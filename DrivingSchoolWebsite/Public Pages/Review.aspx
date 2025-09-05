@@ -10,7 +10,7 @@
             <div class="review-container">
                 <img src='<%= ResolveUrl("~/Images/AnonPic.png") %>' alt="Anonymous Icon" class="anon-icon">
                 <div class="review-content">
-                    <h4>Anonymous</h4>
+                    <h4>Yusuf</h4>
                     <p>"Araf's Driving School is amazing! The instructors were very patient, and I gained a lot of confidence behind the wheel. Highly recommended!"</p>
                     <p style="text-align: right; font-style: italic;">Rating: ★★★★★</p>
                 </div>
@@ -20,7 +20,7 @@
             <div class="review-container">
                 <img src='<%= ResolveUrl("~/Images/AnonPic.png") %>' alt="Anonymous Icon" class="anon-icon">
                 <div class="review-content">
-                    <h4>Anonymous</h4>
+                    <h4>Moosa</h4>
                     <p>"I had a great experience. The lessons were well-structured and the instructors made sure to address all my concerns. I passed my driving test on the first try!"</p>
                     <p style="text-align: right; font-style: italic;">Rating: ★★★★☆</p>
                 </div>

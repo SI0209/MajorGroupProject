@@ -90,8 +90,7 @@
                     <button type="button" onclick="redirectToLogin()" class="book-now-button">BOOK NOW</button>
                 </div>
             </div>
-
-            <!-- Third Vehicle (Code 14) -->
+          
             
         </div>
     </section>
