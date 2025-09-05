@@ -74,7 +74,7 @@
                     <h3>Code 8 (Light Motor Vehicles)</h3>
                     <p><span class="read-more-link" onclick="showModal('modalCode8')">Read More</span></p>
                     <p>1 hr</p>
-                    <p>R 100</p>
+                    <p>R 200</p>
                     <button type="button" onclick="redirectToLogin()" class="book-now-button">BOOK NOW</button>
                 </div>
             </div>
@@ -86,7 +86,7 @@
                     <h3>Code 10 (Medium Motor Vehicles)</h3>
                     <p><span class="read-more-link" onclick="showModal('modalCode10')">Read More</span></p>
                     <p>1 hr</p>
-                    <p>R 200</p>
+                    <p>R 350</p>
                     <button type="button" onclick="redirectToLogin()" class="book-now-button">BOOK NOW</button>
                 </div>
             </div>
