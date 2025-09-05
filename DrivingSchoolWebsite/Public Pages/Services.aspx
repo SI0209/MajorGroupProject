@@ -20,16 +20,6 @@
                 <p>Code 10 (Medium Motor Vehicles)</p>
                 <p>Get your Code 10 license with our comprehensive training. Ideal for those looking to drive medium-sized vehicles like minibuses and trucks.</p>
             </div>
-
-            <!-- Vertical Divider -->
-            <div class="divider"></div>
-
-            <!-- Code 14 Service Block -->
-            <div class="service-block">
-                <img src='<%= ResolveUrl("~/Images/Code14Icon.png") %>' alt="Code 14 Icon" class="vehicle-image">
-                <p>Code 14 (Heavy Motor Vehicles)</p>
-                <p>Master the skills needed to drive heavy vehicles with our specialized Code 14 lessons. Suitable for aspiring truck and bus drivers.</p>
-            </div>
         </div>
     </section>
 

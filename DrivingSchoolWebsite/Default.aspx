@@ -4,7 +4,7 @@
     <style>
         .hero-section {
             position: relative;
-            background-image: url(); /* Use a relevant background image */
+            background-image: url('../Images/Home_Page_Background.png'); /* Use a relevant background image */
             background-size: cover;
             background-position: center;
             height: 100vh;
