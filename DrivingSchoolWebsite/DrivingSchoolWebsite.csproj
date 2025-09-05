@@ -196,8 +196,10 @@
     <Content Include="Images\code14en.png" />
     <Content Include="Images\code8.png" />
     <Content Include="Images\Home_Page_Background.png" />
+    <Content Include="Images\Logo_Transparent.png" />
     <Content Include="Images\school-bus_11957993.png" />
     <Content Include="Images\Screenshot_2.png" />
+    <Content Include="Images\Transparent logo.png" />
     <Content Include="Images\transport_15484129.png" />
     <Content Include="Instructor\InstructorPage.aspx" />
     <Content Include="Instructor\InstructorUnvailableDate.aspx" />
