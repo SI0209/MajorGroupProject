@@ -4,7 +4,7 @@
     <style>
         .hero-section {
             position: relative;
-            background-image: url('../Images/HomePagePic.png'); /* Use a relevant background image */
+            background-image: url(); /* Use a relevant background image */
             background-size: cover;
             background-position: center;
             height: 100vh;
@@ -47,7 +47,7 @@
 
     <div class="hero-section">
         <div class="overlay">
-            <h1>WYEBANK DRIVING SCHOOL</h1>
+            <h1>ARAF'S DRIVING SCHOOL</h1>
             <p>LEARN TO DRIVE WITH CONFIDENCE</p>
             
         </div>

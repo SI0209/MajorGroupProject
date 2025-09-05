@@ -28,7 +28,7 @@ namespace DrivingSchoolWebsite
             // Create the email message
             var sendGridMessage = new SendGridMessage
             {
-                From = new EmailAddress("kriven.govender07@gmail.com", "WyeBank Admin"),
+                From = new EmailAddress("suh.ism0209@gmail.com", "Araf's Admin"),
                 Subject = message.Subject,
                 PlainTextContent = message.Body,
                 HtmlContent = message.Body

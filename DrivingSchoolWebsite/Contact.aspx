@@ -5,16 +5,15 @@
         <h2 class="contact-title">CONTACT US</h2>
         <div class="contact-container">
             <div class="contact-info">
-                <p><strong>Address:</strong> 1 Zinnia Road, WyeBank</p>
-                <p><strong>Email:</strong> <a href="mailto:info@wyebankdrivingschool.com">info@wyebankdrivingschool.com</a></p>
-                <p><strong>Contact Number:</strong> 084 5695478</p>
+                <p><strong>Address:</strong> 68 Cranbrook Road, Clayfield</p>
+                <p><strong>Contact Number:</strong> 084 6786530</p>
                 <h4>OFFICE HOURS:</h4>
                 <p>Mon - Sat: 11am - 5pm</p>
                 <p>Sunday: Closed</p>
                 <p>Public Holidays: Closed</p>
                 <h4>Location:</h4>
                 <div class="map-container">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3301.3997169323585!2d29.89865131521295!3d-26.07275458310067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef8a70ff73cbb05%3A0x41d1f27b49d0dc2e!2s1%20Zinnia%20Road%2C%20WyeBank!5e0!3m2!1sen!2sza!4v1696114545924!5m2!1sen!2sza" 
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3465.194249385676!2d31.0238242!3d-29.714132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef70457dca718fb%3A0xef7d508f06c19adc!2s68%20Cranbrook%20Rd%2C%20Clayfield%2C%20Phoenix%2C%204156!5e0!3m2!1sen!2sza!4v1757057489535!5m2!1sen!2sza" 
                     width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
