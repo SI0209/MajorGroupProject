@@ -52,9 +52,9 @@ namespace DrivingSchoolWebsite.Logic
             // a single line of code, rather than using multiple lines of code, as you did
             // for the RoleManager object.
             var userMgr = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(context));
-            CreateUser(Role_Admin, "adminRoleUser@wingtiptoys.com");
-            CreateUser(Role_Client, "clientRoleUser@wingtiptoys.com");
-            CreateUser(Role_Instructor, "InstructorRoleUser@wingtiptoys.com");
+            CreateUser(Role_Admin, "adminRoleUser@arafdrivingschool.com");
+            CreateUser(Role_Client, "clientRoleUser@arafdrivingschool.com");
+            CreateUser(Role_Instructor, "InstructorRoleUser@arafdrivingschool.com");
             CreateUser(Role_Instructor, "Eva@gmail.com");
             CreateUser(Role_Instructor, "billy@gmail.com");
             CreateUser(Role_Instructor, "jane@gmail.com");

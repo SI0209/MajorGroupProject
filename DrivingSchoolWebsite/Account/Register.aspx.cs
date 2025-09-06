@@ -1,11 +1,12 @@
-﻿using System;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
+﻿using DrivingSchoolWebsite.Logic;
+using DrivingSchoolWebsite.Models;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Owin;
-using DrivingSchoolWebsite.Models;
+using System;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
 
 namespace DrivingSchoolWebsite.Account
 {
@@ -59,7 +60,14 @@ namespace DrivingSchoolWebsite.Account
             IdentityResult result = manager.Create(user, Password.Text);
             if (result.Succeeded)
             {
-                // Redirect to the login page after successful registration
+                // Assign default role so menus show
+                var userId = user.Id; // populated after Create
+                const string defaultRole = RoleActions.Role_Client; // "clientRole"
+                if (!manager.IsInRole(userId, defaultRole))
+                {
+                    manager.AddToRole(userId, defaultRole);
+                }
+
                 Response.Redirect("~/Account/Login.aspx");
             }
             else
