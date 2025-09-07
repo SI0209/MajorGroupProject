@@ -45,9 +45,9 @@ namespace DrivingSchoolBookingSystem
             toolTip3.SetToolTip(comboBox2, "Select the learner's race group.");
             toolTip3.SetToolTip(textBox5, "Enter the learner's cellphone number.");
             toolTip3.SetToolTip(textBox6, "Enter the learner's street address.");
-            toolTip3        .SetToolTip(comboBox3, "Select the suburb where the learner lives.");
+            toolTip3.SetToolTip(comboBox3, "Select the suburb where the learner lives.");
             toolTip3.SetToolTip(IssuedateTimePicker1, "Select the date the learner license was issued.");
-            toolTip3.SetToolTip(textBox9, "Displays the license expiry date.");
+            toolTip3.SetToolTip(dateTimePicker1, "Displays the license expiry date.");
             toolTip3.SetToolTip(comboBox4, "Select the code type for the learner's license.");
 
 
@@ -58,7 +58,7 @@ namespace DrivingSchoolBookingSystem
             toolTip3.SetToolTip(button4, "Clear the search field and reload the table.");
             toolTip3.SetToolTip(button3, "Clear all fields.");
             toolTip3.SetToolTip(pictureBox5, "Click here to log out safely.");
-            toolTip3    .SetToolTip(pictureBox2, "Redirect back to home page");
+            toolTip3.SetToolTip(pictureBox2, "Redirect back to home page");
 
 
             toolTip3.SetToolTip(radioButton1, "Enable edit mode to allow changes.");
@@ -67,13 +67,13 @@ namespace DrivingSchoolBookingSystem
 
             toolTip3.SetToolTip(label16, "Click to view help and usage guidance.");
         }
-            
+
         private void LearnerForm2_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'wstGrp2DataSet1.tblLearner' table. You can move, or remove it, as needed.
             this.tblLearnerTableAdapter.Fill(this.wstGrp2DataSet1.tblLearner);
             // TODO: This line of code loads data into the 'wstGrp2DataSet.tblBooking' table. You can move, or remove it, as needed.
-            
+
             // TODO: This line of code loads data into the 'wstGrp2DataSet.tblLearner' table. You can move, or remove it, as needed.
             this.tblLearnerTableAdapter.Fill(this.wstGrp2DataSet.tblLearner);
             label15.Visible = false;
@@ -88,8 +88,7 @@ namespace DrivingSchoolBookingSystem
             IssuedateTimePicker1.MinDate = DateTime.Today.AddYears(-2);
             IssuedateTimePicker1.MaxDate = DateTime.Today;
             IssuedateTimePicker1.Value = DateTime.Today;
-            textBox9.Clear();
-           // UpdateExpiryDate(); // Optional: set expiry on form load
+            // UpdateExpiryDate(); // Optional: set expiry on form load
 
 
         }
@@ -98,7 +97,7 @@ namespace DrivingSchoolBookingSystem
             IssuedateTimePicker1.MinDate = DateTime.Today.AddYears(-2);
             IssuedateTimePicker1.MaxDate = DateTime.Today;
             IssuedateTimePicker1.Value = DateTime.Today;
-            textBox9.Text = IssuedateTimePicker1.Value.AddYears(2).ToShortDateString();
+            dateTimePicker1.Value = IssuedateTimePicker1.Value.AddYears(2);
         }
         private void SetIssueDatePickerRange()
         {
@@ -212,7 +211,7 @@ namespace DrivingSchoolBookingSystem
                         textBox6.Text,
                         comboBox3.Text.ToString(),
                         IssuedateTimePicker1.Value.ToString("yyyy-MM-dd"),
-                       Convert.ToString(textBox9.Text),
+                       Convert.ToString(dateTimePicker1.Value),
                         Convert.ToInt16(comboBox4.Text)
                     );
 
@@ -223,15 +222,14 @@ namespace DrivingSchoolBookingSystem
                     textBox3.Clear();
                     textBox4.Clear();
                     textBox5.Clear();
-                    textBox6.Clear(); 
-                    
+                    textBox6.Clear();
+
                     comboBox1.SelectedIndex = -1; // Reset to no selection          
                     comboBox2.SelectedIndex = -1; // Reset to no selection
                     comboBox3.SelectedIndex = -1; // Reset to no selection
                     comboBox4.SelectedIndex = -1; // Reset to no selection
-                
+
                     IssuedateTimePicker1.Value = DateTime.Today; // Reset issue date to today
-                    textBox9.Clear(); // Clear expiry date textbox
 
 
 
@@ -245,7 +243,7 @@ namespace DrivingSchoolBookingSystem
             else if (confirm == DialogResult.No)
             { }
 
-                
+
 
 
 
@@ -302,7 +300,6 @@ namespace DrivingSchoolBookingSystem
             comboBox3.SelectedIndex = -1;
             comboBox4.SelectedIndex = -1;
             IssuedateTimePicker1.Value = DateTime.Today;
-            textBox9.Clear();
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
@@ -347,7 +344,7 @@ namespace DrivingSchoolBookingSystem
                  ExpdateTimePicker2.MinDate = expiryDate;
                  ExpdateTimePicker2.MaxDate = expiryDate;
                  ExpdateTimePicker2.Value = expiryDate;*/
-            
+
 
             if (!autoDateHandlingEnabled || suppressDateEvents)
                 return;
@@ -364,7 +361,7 @@ namespace DrivingSchoolBookingSystem
                 DateTime expiryDate = issueDate.AddYears(2);
                 /*/ExpdateTimePicker2.MinDate = expiryDate;
                  ExpdateTimePicker2.MaxDate = expiryDate;*/
-                textBox9.Text = expiryDate.ToShortDateString();
+                dateTimePicker1.Value = expiryDate;
             }
 
 
@@ -406,7 +403,6 @@ namespace DrivingSchoolBookingSystem
                 // Set Issue Date picker range and value  
                 SetIssueDatePickerRange();
                 IssuedateTimePicker1.Value = DateTime.Today;
-                textBox9.Clear();
 
             }
             catch (Exception ex)
@@ -460,8 +456,8 @@ namespace DrivingSchoolBookingSystem
                   IssuedateTimePicker1.Value = issueDate;*/
                 UpdateExpiryDate();
                 IssuedateTimePicker1.Value = Convert.ToDateTime(dataGridView1.CurrentRow.Cells[10].Value);
-                textBox9.Text = Convert.ToDateTime(dataGridView1.CurrentRow.Cells[11].Value).ToString("d");
-              
+                dateTimePicker1.Value = Convert.ToDateTime(dataGridView1.CurrentRow.Cells[11].Value);
+
             }
             catch (Exception ex)
             {
@@ -482,7 +478,7 @@ namespace DrivingSchoolBookingSystem
                 int learnerID = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value);
 
                 DialogResult confirm = MessageBox.Show("Are you sure you want to delete" + " " + "Learner ID:" + textBox8.Text.ToString() + "," + " " + textBox1.Text.ToString() + " " + textBox2.Text.ToString() +
-                    " and their related progress record ?" ,
+                    " and their related progress record ?",
                                                        "Confirm Deletion",
                                                        MessageBoxButtons.YesNo, // Corrected argument  
                                                        MessageBoxIcon.Warning);
@@ -501,14 +497,13 @@ namespace DrivingSchoolBookingSystem
                     textBox5.Clear();
                     textBox6.Clear();
                     textBox8.Clear();
-                    
+
                     IssuedateTimePicker1.Value = DateTime.Today;
 
                     comboBox1.SelectedIndex = -1;
                     comboBox2.SelectedIndex = -1;
                     comboBox3.SelectedIndex = -1;
                     comboBox4.SelectedIndex = -1;
-                    textBox9.Clear();
                 }
             }
             else
@@ -611,7 +606,7 @@ namespace DrivingSchoolBookingSystem
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
+
         }
 
         private void fillByToolStripButton_Click(object sender, EventArgs e)
@@ -633,7 +628,7 @@ namespace DrivingSchoolBookingSystem
             if (string.IsNullOrWhiteSpace(textBox1.Text) || string.IsNullOrWhiteSpace(textBox2.Text) || string.IsNullOrWhiteSpace(textBox3.Text)
      || string.IsNullOrWhiteSpace(textBox4.Text) || string.IsNullOrWhiteSpace(comboBox1.Text) || string.IsNullOrWhiteSpace(comboBox2.Text)
      || string.IsNullOrWhiteSpace(textBox5.Text) || string.IsNullOrWhiteSpace(textBox6.Text) || string.IsNullOrWhiteSpace(comboBox3.Text)
-     || IssuedateTimePicker1.Value == IssuedateTimePicker1.MinDate || string.IsNullOrWhiteSpace(textBox9.Text) || string.IsNullOrWhiteSpace(comboBox4.Text)
+     || IssuedateTimePicker1.Value == IssuedateTimePicker1.MinDate || string.IsNullOrWhiteSpace(comboBox4.Text)
      || string.IsNullOrWhiteSpace(textBox8.Text))
             {
                 MessageBox.Show("Please complete all required fields before updating.", "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -666,7 +661,7 @@ namespace DrivingSchoolBookingSystem
                                 hasChanges |= !reader["Learner_StreetAddress"].ToString().Trim().Equals(textBox6.Text.Trim());
                                 hasChanges |= !reader["Learner_Suburb"].ToString().Trim().Equals(comboBox3.Text.Trim());
                                 hasChanges |= Convert.ToDateTime(reader["Learner_LearnersIssueDate"]).Date != IssuedateTimePicker1.Value.Date;
-                                hasChanges |= Convert.ToDateTime(reader["Learner_LearnersExpiryDate"]).Date != Convert.ToDateTime(textBox9.Text).Date;
+                                hasChanges |= Convert.ToDateTime(reader["Learner_LearnersExpiryDate"]).Date != dateTimePicker1.Value.Date;
                                 hasChanges |= Convert.ToInt32(reader["Code_Type"]) != Convert.ToInt32(comboBox4.Text);
 
                                 if (!hasChanges)
@@ -712,7 +707,7 @@ namespace DrivingSchoolBookingSystem
                         command.Parameters.AddWithValue("@learner_StreetAddress", textBox6.Text.Trim());
                         command.Parameters.AddWithValue("@learner_Suburb", comboBox3.Text.Trim());
                         command.Parameters.AddWithValue("@learner_LearnersIssueDate", IssuedateTimePicker1.Value);
-                        command.Parameters.AddWithValue("@learner_LearnersExpiryDate", Convert.ToDateTime(textBox9.Text));
+                        command.Parameters.AddWithValue("@learner_LearnersExpiryDate", dateTimePicker1.Value);
                         command.Parameters.AddWithValue("@code_Type", Convert.ToInt32(comboBox4.Text));
 
                         DialogResult dialogResult = MessageBox.Show("Are you sure you want to update learner " + textBox8.Text + "," + textBox1.Text + " " + textBox2.Text + "?", "Confirm Update", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -730,13 +725,12 @@ namespace DrivingSchoolBookingSystem
                             textBox5.Clear();
                             textBox6.Clear();
                             textBox8.Clear();
-                            
+
                             IssuedateTimePicker1.Value = DateTime.Today;
                             comboBox1.SelectedIndex = -1; // Reset to no selection
                             comboBox2.SelectedIndex = -1; // Reset to no selection
                             comboBox3.SelectedIndex = -1; // Reset to no selection
                             comboBox4.SelectedIndex = -1; // Reset to no selection
-                            textBox9.Clear(); // Clear expiry date textbox
 
                         }
                     }
@@ -758,7 +752,7 @@ namespace DrivingSchoolBookingSystem
             this.Hide();
             LoginForm login = new LoginForm();
             login.Show();
-            
+
         }
 
         private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
@@ -768,11 +762,11 @@ namespace DrivingSchoolBookingSystem
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-           HomeForm home = new HomeForm(Loginform); 
+            HomeForm home = new HomeForm(Loginform);
             home.Employee_Name = Loginform.Employee_Name;
             home.Employee_Surname = Loginform.Employee_Surname;
             home.Employee_Type = Loginform.Employee_Type;
-            home.Show();                             
+            home.Show();
             this.Hide();
         }
 
@@ -793,7 +787,7 @@ namespace DrivingSchoolBookingSystem
             button3.Visible = false;
             button5.Visible = false;
 
-           textBox1.Enabled = false;
+            textBox1.Enabled = false;
             textBox2.Enabled = false;
             textBox3.Enabled = false;
             textBox4.Enabled = false;
@@ -803,7 +797,7 @@ namespace DrivingSchoolBookingSystem
             comboBox2.Enabled = false;
             comboBox3.Enabled = false;
             IssuedateTimePicker1.Enabled = false;
-            textBox9.Enabled = false;
+            dateTimePicker1.Enabled = false;
             comboBox4.Enabled = false;
 
 
@@ -825,13 +819,13 @@ namespace DrivingSchoolBookingSystem
             comboBox2.Enabled = true;
             comboBox3.Enabled = true;
             IssuedateTimePicker1.Enabled = true;
-            textBox9.Enabled = true;
+            dateTimePicker1.Enabled = true;
             comboBox4.Enabled = true;
         }
 
         private void label16_Click(object sender, EventArgs e)
         {
-           
+
         }
         private void label16_MouseEnter(object sender, EventArgs e)
         {
@@ -842,7 +836,7 @@ namespace DrivingSchoolBookingSystem
         {
             label16.ForeColor = Color.Blue;
         }
-        
+
 
         private void toolTip2_Popup(object sender, PopupEventArgs e)
         {
@@ -888,6 +882,34 @@ namespace DrivingSchoolBookingSystem
 
             MessageBox.Show(instructions, "How to Use This Form", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+            string yy, mm, dd, year;
+            DateTime DOB;
+            if (textBox3.Text.Length == 13)
+            {
+                yy = textBox3.Text.Substring(0, 2);
+                mm = textBox3.Text.Substring(2, 2);
+                dd = textBox3.Text.Substring(4, 2);
+                year = "19" + yy;
+                DOB = Convert.ToDateTime(dd + "/" + mm + "/" + yy);
+                DateTime today = DateTime.Today;
+                int age = today.Year - DOB.Year;
+                if (DOB > today.AddYears(-age)) age--;
+                textBox4.Text = age.ToString();
+
+                if (int.Parse(textBox3.Text.Substring(6, 4)) >= 5000)
+                {
+                    comboBox1.SelectedItem = "Male";
+                }
+                else
+                {
+                    comboBox1.SelectedItem = "Female";
+                }
+
+            }
         }
     }
 }
