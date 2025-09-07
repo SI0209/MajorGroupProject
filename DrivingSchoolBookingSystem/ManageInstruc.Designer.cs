@@ -608,6 +608,7 @@
             this.txtPhoneNum.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhoneNum.Location = new System.Drawing.Point(243, 292);
             this.txtPhoneNum.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPhoneNum.MaxLength = 10;
             this.txtPhoneNum.Name = "txtPhoneNum";
             this.txtPhoneNum.Size = new System.Drawing.Size(240, 31);
             this.txtPhoneNum.TabIndex = 44;
@@ -630,6 +631,7 @@
             this.txtIDNum.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIDNum.Location = new System.Drawing.Point(243, 233);
             this.txtIDNum.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIDNum.MaxLength = 13;
             this.txtIDNum.Name = "txtIDNum";
             this.txtIDNum.Size = new System.Drawing.Size(240, 31);
             this.txtIDNum.TabIndex = 42;

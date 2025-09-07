@@ -893,8 +893,11 @@ namespace DrivingSchoolBookingSystem
                 yy = textBox3.Text.Substring(0, 2);
                 mm = textBox3.Text.Substring(2, 2);
                 dd = textBox3.Text.Substring(4, 2);
-                year = "19" + yy;
-                DOB = Convert.ToDateTime(dd + "/" + mm + "/" + yy);
+                if (int.Parse(yy) >= 0 && int.Parse(yy) <= 25)
+                    year = "20" + yy;
+                else
+                    year = "19" + yy;
+                DOB = new DateTime(int.Parse(year), int.Parse(mm), int.Parse(dd));
                 DateTime today = DateTime.Today;
                 int age = today.Year - DOB.Year;
                 if (DOB > today.AddYears(-age)) age--;
@@ -910,6 +913,13 @@ namespace DrivingSchoolBookingSystem
                 }
 
             }
+
+            if (textBox3.Text == "")
+            {
+                textBox4.Text = "";
+                comboBox1.SelectedIndex = -1;
+            }
+
         }
     }
 }

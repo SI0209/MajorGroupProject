@@ -669,8 +669,11 @@ namespace DrivingSchoolBookingSystem
                 yy = txtIDNum.Text.Substring(0, 2);
                 mm = txtIDNum.Text.Substring(2, 2);
                 dd = txtIDNum.Text.Substring(4, 2);
-                year = "19" + yy;
-                DOB = Convert.ToDateTime(dd + "/" + mm + "/" + yy);
+                if (int.Parse(yy) >= 0 && int.Parse(yy) <= 25)
+                    year = "20" + yy;
+                else
+                    year = "19" + yy;
+                DOB = new DateTime(int.Parse(year), int.Parse(mm), int.Parse(dd));
                 DateTime today = DateTime.Today;
                 int age = today.Year - DOB.Year;
                 if (DOB > today.AddYears(-age)) age--;
@@ -685,6 +688,11 @@ namespace DrivingSchoolBookingSystem
                     cbxGender.SelectedItem = "Female";
                 }
 
+                if (txtIDNum.Text == "")
+                {
+                    numericUpDownAge.Text = "";
+                    cbxGender.SelectedIndex = -1;
+                }
             }
         }
     }
