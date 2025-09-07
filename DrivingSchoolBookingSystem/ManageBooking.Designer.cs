@@ -589,6 +589,7 @@
             0,
             0,
             0});
+            this.nudStartTime.ValueChanged += new System.EventHandler(this.nudStartTime_ValueChanged);
             // 
             // dateTimePicker1
             // 
@@ -806,6 +807,7 @@
             this.dtpBooking.Size = new System.Drawing.Size(353, 35);
             this.dtpBooking.TabIndex = 118;
             this.toolTip3.SetToolTip(this.dtpBooking, "Select a date the student prefers to book a lesson on");
+            this.dtpBooking.ValueChanged += new System.EventHandler(this.dtpBooking_ValueChanged);
             // 
             // label9
             // 

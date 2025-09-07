@@ -79,6 +79,25 @@ namespace DrivingSchoolBookingSystem
             taLearner.Fill(dsBookingSystem.tblLearner);
             taBookingInnerJoin.Fill(dsBookingSystem.tblBookingInnerJoin);
             radioButton2.Checked = true;
+            dtpBooking.MinDate = DateTime.Today;
+            if (dtpBooking.Value == DateTime.Today)
+            {
+                if (DateTime.Now.Minute == 0)
+                {
+                    nudStartTime.Minimum = DateTime.Now.Hour;
+                }
+                else if (DateTime.Now.Minute > 0)
+                {
+                    nudStartTime.Minimum = DateTime.Now.Hour + 1;
+                }
+            }
+            else 
+            { 
+               nudStartTime.Minimum = 11;
+            }
+            nudStartTime.Maximum = nudEndTime.Maximum - 1;
+            nudEndTime.Minimum = nudStartTime.Value + 1;
+            nudEndTime.Maximum = 17;
         }
         private void label3_MouseEnter(object sender, EventArgs e)
         {
@@ -547,6 +566,26 @@ namespace DrivingSchoolBookingSystem
         private void label3_Leave(object sender, EventArgs e)
         {
             label6.ForeColor = Color.Blue;
+        }
+
+        private void nudStartTime_ValueChanged(object sender, EventArgs e)
+        {
+            nudEndTime.Minimum = nudStartTime.Value + 1;
+        }
+
+        private void dtpBooking_ValueChanged(object sender, EventArgs e)
+        {
+            if (dtpBooking.Value == DateTime.Today)
+            {
+                if (DateTime.Now.Minute == 0)
+                {
+                    nudStartTime.Minimum = DateTime.Now.Hour;
+                }
+                else if (DateTime.Now.Minute > 0)
+                {
+                    nudStartTime.Minimum = DateTime.Now.Hour + 1;
+                }
+            }
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)

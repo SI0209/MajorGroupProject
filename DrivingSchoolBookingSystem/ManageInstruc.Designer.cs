@@ -59,7 +59,6 @@
             this.employeeTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.employeeUsernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.employeePasswordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codeTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tblEmployeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dsBookingSystem = new DrivingSchoolBookingSystem.WstGrp2DataSet();
             this.cbxRace = new System.Windows.Forms.ComboBox();
@@ -189,11 +188,11 @@
             // txtPassword
             // 
             this.txtPassword.Enabled = false;
-            this.txtPassword.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(243, 737);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(240, 34);
+            this.txtPassword.Size = new System.Drawing.Size(240, 31);
             this.txtPassword.TabIndex = 87;
             this.toolTip3.SetToolTip(this.txtPassword, "Allow employee to choose his/her password");
             // 
@@ -201,23 +200,23 @@
             // 
             this.label16.AutoSize = true;
             this.label16.BackColor = System.Drawing.Color.Transparent;
-            this.label16.Font = new System.Drawing.Font("Comic Sans MS", 12F);
+            this.label16.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.White;
             this.label16.Location = new System.Drawing.Point(64, 743);
             this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(99, 28);
+            this.label16.Size = new System.Drawing.Size(102, 29);
             this.label16.TabIndex = 86;
             this.label16.Text = "Password";
             // 
             // txtUsername
             // 
             this.txtUsername.Enabled = false;
-            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.Location = new System.Drawing.Point(242, 676);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(241, 27);
+            this.txtUsername.Size = new System.Drawing.Size(241, 31);
             this.txtUsername.TabIndex = 85;
             this.toolTip3.SetToolTip(this.txtUsername, "enter email of employee");
             // 
@@ -237,7 +236,7 @@
             // numericUpDownAge
             // 
             this.numericUpDownAge.Enabled = false;
-            this.numericUpDownAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDownAge.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDownAge.Location = new System.Drawing.Point(243, 623);
             this.numericUpDownAge.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDownAge.Minimum = new decimal(new int[] {
@@ -246,7 +245,7 @@
             0,
             0});
             this.numericUpDownAge.Name = "numericUpDownAge";
-            this.numericUpDownAge.Size = new System.Drawing.Size(240, 27);
+            this.numericUpDownAge.Size = new System.Drawing.Size(240, 31);
             this.numericUpDownAge.TabIndex = 83;
             this.toolTip3.SetToolTip(this.numericUpDownAge, "Enter the age of Employee");
             this.numericUpDownAge.Value = new decimal(new int[] {
@@ -354,13 +353,12 @@
             this.employeeSuburbDataGridViewTextBoxColumn,
             this.employeeTypeDataGridViewTextBoxColumn,
             this.employeeUsernameDataGridViewTextBoxColumn,
-            this.employeePasswordDataGridViewTextBoxColumn,
-            this.codeTypeDataGridViewTextBoxColumn});
+            this.employeePasswordDataGridViewTextBoxColumn});
             this.dgvEmployee.DataSource = this.tblEmployeeBindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Comic Sans MS", 8F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -479,14 +477,6 @@
             this.employeePasswordDataGridViewTextBoxColumn.Name = "employeePasswordDataGridViewTextBoxColumn";
             this.employeePasswordDataGridViewTextBoxColumn.Width = 170;
             // 
-            // codeTypeDataGridViewTextBoxColumn
-            // 
-            this.codeTypeDataGridViewTextBoxColumn.DataPropertyName = "Code_Type";
-            this.codeTypeDataGridViewTextBoxColumn.HeaderText = "Code_Type";
-            this.codeTypeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.codeTypeDataGridViewTextBoxColumn.Name = "codeTypeDataGridViewTextBoxColumn";
-            this.codeTypeDataGridViewTextBoxColumn.Width = 112;
-            // 
             // tblEmployeeBindingSource
             // 
             this.tblEmployeeBindingSource.DataMember = "tblEmployee";
@@ -501,7 +491,7 @@
             // 
             this.cbxRace.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxRace.Enabled = false;
-            this.cbxRace.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxRace.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxRace.FormattingEnabled = true;
             this.cbxRace.Items.AddRange(new object[] {
             "Black",
@@ -511,7 +501,7 @@
             this.cbxRace.Location = new System.Drawing.Point(243, 567);
             this.cbxRace.Margin = new System.Windows.Forms.Padding(4);
             this.cbxRace.Name = "cbxRace";
-            this.cbxRace.Size = new System.Drawing.Size(240, 28);
+            this.cbxRace.Size = new System.Drawing.Size(240, 32);
             this.cbxRace.TabIndex = 52;
             this.toolTip3.SetToolTip(this.cbxRace, "Select race of employee");
             // 
@@ -533,7 +523,7 @@
             // 
             this.cbxGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxGender.Enabled = false;
-            this.cbxGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxGender.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxGender.FormattingEnabled = true;
             this.cbxGender.Items.AddRange(new object[] {
             "Male",
@@ -541,7 +531,7 @@
             this.cbxGender.Location = new System.Drawing.Point(243, 512);
             this.cbxGender.Margin = new System.Windows.Forms.Padding(4);
             this.cbxGender.Name = "cbxGender";
-            this.cbxGender.Size = new System.Drawing.Size(240, 28);
+            this.cbxGender.Size = new System.Drawing.Size(240, 32);
             this.cbxGender.TabIndex = 50;
             this.toolTip3.SetToolTip(this.cbxGender, "Select gender of employee");
             // 
@@ -562,7 +552,7 @@
             // 
             this.cbxType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxType.Enabled = false;
-            this.cbxType.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxType.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxType.FormattingEnabled = true;
             this.cbxType.Items.AddRange(new object[] {
             "Manager",
@@ -571,7 +561,7 @@
             this.cbxType.Location = new System.Drawing.Point(243, 458);
             this.cbxType.Margin = new System.Windows.Forms.Padding(4);
             this.cbxType.Name = "cbxType";
-            this.cbxType.Size = new System.Drawing.Size(240, 28);
+            this.cbxType.Size = new System.Drawing.Size(240, 32);
             this.cbxType.TabIndex = 48;
             this.toolTip3.SetToolTip(this.cbxType, "Select Employee Type / Role");
             // 
@@ -591,11 +581,11 @@
             // txtSuburb
             // 
             this.txtSuburb.Enabled = false;
-            this.txtSuburb.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSuburb.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSuburb.Location = new System.Drawing.Point(243, 400);
             this.txtSuburb.Margin = new System.Windows.Forms.Padding(4);
             this.txtSuburb.Name = "txtSuburb";
-            this.txtSuburb.Size = new System.Drawing.Size(240, 27);
+            this.txtSuburb.Size = new System.Drawing.Size(240, 31);
             this.txtSuburb.TabIndex = 46;
             this.toolTip3.SetToolTip(this.txtSuburb, "Enter suburb where employee resides in");
             // 
@@ -615,56 +605,57 @@
             // txtPhoneNum
             // 
             this.txtPhoneNum.Enabled = false;
-            this.txtPhoneNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPhoneNum.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhoneNum.Location = new System.Drawing.Point(243, 292);
             this.txtPhoneNum.Margin = new System.Windows.Forms.Padding(4);
             this.txtPhoneNum.Name = "txtPhoneNum";
-            this.txtPhoneNum.Size = new System.Drawing.Size(240, 27);
+            this.txtPhoneNum.Size = new System.Drawing.Size(240, 31);
             this.txtPhoneNum.TabIndex = 44;
             this.toolTip3.SetToolTip(this.txtPhoneNum, "Enter phone number of employee");
             // 
             // txtStreetAddress
             // 
             this.txtStreetAddress.Enabled = false;
-            this.txtStreetAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtStreetAddress.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtStreetAddress.Location = new System.Drawing.Point(243, 347);
             this.txtStreetAddress.Margin = new System.Windows.Forms.Padding(4);
             this.txtStreetAddress.Name = "txtStreetAddress";
-            this.txtStreetAddress.Size = new System.Drawing.Size(240, 27);
+            this.txtStreetAddress.Size = new System.Drawing.Size(240, 31);
             this.txtStreetAddress.TabIndex = 43;
             this.toolTip3.SetToolTip(this.txtStreetAddress, "Enter street address of employee");
             // 
             // txtIDNum
             // 
             this.txtIDNum.Enabled = false;
-            this.txtIDNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIDNum.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIDNum.Location = new System.Drawing.Point(243, 233);
             this.txtIDNum.Margin = new System.Windows.Forms.Padding(4);
             this.txtIDNum.Name = "txtIDNum";
-            this.txtIDNum.Size = new System.Drawing.Size(240, 27);
+            this.txtIDNum.Size = new System.Drawing.Size(240, 31);
             this.txtIDNum.TabIndex = 42;
             this.toolTip3.SetToolTip(this.txtIDNum, "Enter ID number of employee");
+            this.txtIDNum.TextChanged += new System.EventHandler(this.txtIDNum_TextChanged);
             this.txtIDNum.Leave += new System.EventHandler(this.txtIDNum_Leave);
             // 
             // txtSurname
             // 
             this.txtSurname.Enabled = false;
-            this.txtSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSurname.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSurname.Location = new System.Drawing.Point(243, 177);
             this.txtSurname.Margin = new System.Windows.Forms.Padding(4);
             this.txtSurname.Name = "txtSurname";
-            this.txtSurname.Size = new System.Drawing.Size(240, 27);
+            this.txtSurname.Size = new System.Drawing.Size(240, 31);
             this.txtSurname.TabIndex = 41;
             this.toolTip3.SetToolTip(this.txtSurname, "Enter surname of employee");
             // 
             // txtName
             // 
             this.txtName.Enabled = false;
-            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Location = new System.Drawing.Point(243, 123);
             this.txtName.Margin = new System.Windows.Forms.Padding(4);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(240, 27);
+            this.txtName.Size = new System.Drawing.Size(240, 31);
             this.txtName.TabIndex = 40;
             this.toolTip3.SetToolTip(this.txtName, "Enter name of employee");
             // 

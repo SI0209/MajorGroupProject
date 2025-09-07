@@ -10700,7 +10700,7 @@ FROM     tblBooking INNER JOIN
                   tblVehicle ON tblBooking.VehicleID = tblVehicle.VehicleID
 WHERE  (tblBooking.LearnerID = @LearnerID)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LearnerID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "LearnerID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LearnerID", global::System.Data.SqlDbType.NVarChar, 128, global::System.Data.ParameterDirection.Input, 0, 0, "LearnerID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10767,9 +10767,14 @@ WHERE  (tblBooking.LearnerID = @LearnerID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillByLearner(WstGrp2DataSet.tblBookingInnerJoinDataTable dataTable, int LearnerID) {
+        public virtual int FillBy1(WstGrp2DataSet.tblBookingInnerJoinDataTable dataTable, string LearnerID) {
             this.Adapter.SelectCommand = this.CommandCollection[2];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(LearnerID));
+            if ((LearnerID == null)) {
+                throw new global::System.ArgumentNullException("LearnerID");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(LearnerID));
+            }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -10781,9 +10786,14 @@ WHERE  (tblBooking.LearnerID = @LearnerID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual WstGrp2DataSet.tblBookingInnerJoinDataTable GetDataBy1(int LearnerID) {
+        public virtual WstGrp2DataSet.tblBookingInnerJoinDataTable GetDataBy1(string LearnerID) {
             this.Adapter.SelectCommand = this.CommandCollection[2];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(LearnerID));
+            if ((LearnerID == null)) {
+                throw new global::System.ArgumentNullException("LearnerID");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(LearnerID));
+            }
             WstGrp2DataSet.tblBookingInnerJoinDataTable dataTable = new WstGrp2DataSet.tblBookingInnerJoinDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;

@@ -1,14 +1,15 @@
-﻿using System;
+﻿using DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 using System.Windows.Forms;
-using DrivingSchoolBookingSystem.WstGrp2DataSetTableAdapters;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace DrivingSchoolBookingSystem
 {
@@ -657,6 +658,34 @@ namespace DrivingSchoolBookingSystem
         private void label17_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtIDNum_TextChanged(object sender, EventArgs e)
+        {
+            string yy, mm, dd, year;
+            DateTime DOB;
+            if (txtIDNum.Text.Length == 13)
+            {
+                yy = txtIDNum.Text.Substring(0, 2);
+                mm = txtIDNum.Text.Substring(2, 2);
+                dd = txtIDNum.Text.Substring(4, 2);
+                year = "19" + yy;
+                DOB = Convert.ToDateTime(dd + "/" + mm + "/" + yy);
+                DateTime today = DateTime.Today;
+                int age = today.Year - DOB.Year;
+                if (DOB > today.AddYears(-age)) age--;
+                numericUpDownAge.Text = age.ToString();
+
+                if (int.Parse(txtIDNum.Text.Substring(6, 4)) >= 5000)
+                {
+                    cbxGender.SelectedItem = "Male";
+                }
+                else
+                {
+                    cbxGender.SelectedItem = "Female";
+                }
+
+            }
         }
     }
 }
