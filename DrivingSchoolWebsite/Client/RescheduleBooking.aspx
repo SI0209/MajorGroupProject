@@ -42,7 +42,7 @@
             ID="SqlDataSource1" 
             runat="server" 
             ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" 
-            SelectCommand="SELECT tblBooking.BookingID, tblBooking.Booking_Date, tblBooking.Booking_StartTime, tblBooking.Booking_EndTime, tblBooking.Booking_TotalCost, tblBooking.Booking_FeeDue, tblEmployee.Employee_Name, tblEmployee.Employee_Surname, tblVehicle.Vehicle_Make, tblVehicle.Vehicle_Model FROM tblBooking INNER JOIN tblEmployee ON tblBooking.EmployeeID = tblEmployee.EmployeeID INNER JOIN tblLessonCode ON tblBooking.Code_Type = tblLessonCode.Code_Type INNER JOIN tblVehicle ON tblBooking.VehicleID = tblVehicle.VehicleID WHERE (tblBooking.LearnerID = @LearnerID) AND (tblBooking.Booking_Status = @BookingStatus)" 
+            SelectCommand="SELECT tblBooking.BookingID, tblBooking.Booking_Date, tblBooking.Booking_StartTime, tblBooking.Booking_EndTime, tblEmployee.Employee_Name, tblEmployee.Employee_Surname, tblVehicle.Vehicle_Make, tblVehicle.Vehicle_Model FROM tblBooking INNER JOIN tblEmployee ON tblBooking.EmployeeID = tblEmployee.EmployeeID INNER JOIN tblLessonCode ON tblBooking.Code_Type = tblLessonCode.Code_Type INNER JOIN tblVehicle ON tblBooking.VehicleID = tblVehicle.VehicleID WHERE (tblBooking.LearnerID = @LearnerID) AND (tblBooking.Booking_Status = @BookingStatus)" 
             OnUpdated="SqlDataSource1_Updated">
             <SelectParameters>
                 <asp:Parameter Name="LearnerID" DefaultValue="" />
@@ -245,10 +245,10 @@
                 runat="server" 
                 ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" 
                 DeleteCommand="DELETE FROM tblBooking WHERE (BookingID = @BookingID)" 
-                InsertCommand="INSERT INTO [tblBooking] ([Booking_Date], [Booking_StartTime], [Booking_EndTime], [Booking_Status], [Booking_TotalCost], [Booking_FeeDue], [LearnerID], [Code_Type], [VehicleID], [EmployeeID]) VALUES (@Booking_Date, @Booking_StartTime, @Booking_EndTime, @Booking_Status, @Booking_TotalCost, @Booking_FeeDue, @LearnerID, @Code_Type, @VehicleID, @EmployeeID)" 
+                InsertCommand="INSERT INTO [tblBooking] ([Booking_Date], [Booking_StartTime], [Booking_EndTime], [Booking_Status], [LearnerID], [Code_Type], [VehicleID], [EmployeeID]) VALUES (@Booking_Date, @Booking_StartTime, @Booking_EndTime, @Booking_Status, @Booking_TotalCost, @Booking_FeeDue, @LearnerID, @Code_Type, @VehicleID, @EmployeeID)" 
                 OldValuesParameterFormatString="original_{0}" 
                 SelectCommand="SELECT * FROM [tblBooking]" 
-                UpdateCommand="UPDATE tblBooking SET Booking_Date = @Booking_Date, Booking_StartTime = @Booking_StartTime, Booking_EndTime = @Booking_EndTime, Booking_TotalCost = @Booking_TotalCost, Booking_FeeDue=@Booking_FeeDue, VehicleID = @VehicleID, EmployeeID = @Employee_ID WHERE (BookingID = @BookingID)">
+                UpdateCommand="UPDATE tblBooking SET Booking_Date = @Booking_Date, Booking_StartTime = @Booking_StartTime, Booking_EndTime = @Booking_EndTime, VehicleID = @VehicleID, EmployeeID = @Employee_ID WHERE (BookingID = @BookingID)">
                 <DeleteParameters>
                     <asp:Parameter Name="BookingID" />
                 </DeleteParameters>
@@ -297,10 +297,10 @@
                 runat="server" 
                 ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" 
                 DeleteCommand="DELETE FROM [tblBooking] WHERE [BookingID] = @BookingID" 
-                InsertCommand="INSERT INTO [tblBooking] ([Booking_Date], [Booking_StartTime], [Booking_EndTime], [Booking_Status], [Booking_TotalCost], [Booking_FeeDue], [LearnerID], [Code_Type], [VehicleID], [EmployeeID]) VALUES (@Booking_Date, @Booking_StartTime, @Booking_EndTime, @Booking_Status, @Booking_TotalCost, @Booking_FeeDue, @LearnerID, @Code_Type, @VehicleID, @EmployeeID)" 
+                InsertCommand="INSERT INTO [tblBooking] ([Booking_Date], [Booking_StartTime], [Booking_EndTime], [Booking_Status], [LearnerID], [Code_Type], [VehicleID], [EmployeeID]) VALUES (@Booking_Date, @Booking_StartTime, @Booking_EndTime, @Booking_Status, @Booking_TotalCost, @Booking_FeeDue, @LearnerID, @Code_Type, @VehicleID, @EmployeeID)" 
                 OldValuesParameterFormatString="original_{0}" 
                 SelectCommand="SELECT * FROM [tblBooking]" 
-                UpdateCommand="UPDATE [tblBooking] SET [Booking_Date] = @Booking_Date, [Booking_StartTime] = @Booking_StartTime, [Booking_EndTime] = @Booking_EndTime, [Booking_Status] = @Booking_Status, [Booking_TotalCost] = @Booking_TotalCost, [Booking_FeeDue] = @Booking_FeeDue, [LearnerID] = @LearnerID, [Code_Type] = @Code_Type, [VehicleID] = @VehicleID, [EmployeeID] = @EmployeeID WHERE [BookingID] = @original_BookingID AND [Booking_Date] = @original_Booking_Date AND [Booking_StartTime] = @original_Booking_StartTime AND [Booking_EndTime] = @original_Booking_EndTime AND [Booking_Status] = @original_Booking_Status AND [Booking_TotalCost] = @original_Booking_TotalCost AND [Booking_FeeDue] = @original_Booking_FeeDue AND [LearnerID] = @original_LearnerID AND [Code_Type] = @original_Code_Type AND [VehicleID] = @original_VehicleID AND [EmployeeID] = @original_EmployeeID">
+                UpdateCommand="UPDATE [tblBooking] SET [Booking_Date] = @Booking_Date, [Booking_StartTime] = @Booking_StartTime, [Booking_EndTime] = @Booking_EndTime, [Booking_Status] = @Booking_Status, [LearnerID] = @LearnerID, [Code_Type] = @Code_Type, [VehicleID] = @VehicleID, [EmployeeID] = @EmployeeID WHERE [BookingID] = @original_BookingID AND [Booking_Date] = @original_Booking_Date AND [Booking_StartTime] = @original_Booking_StartTime AND [Booking_EndTime] = @original_Booking_EndTime AND [Booking_Status] = @original_Booking_Status AND [Booking_TotalCost] = @original_Booking_TotalCost AND [Booking_FeeDue] = @original_Booking_FeeDue AND [LearnerID] = @original_LearnerID AND [Code_Type] = @original_Code_Type AND [VehicleID] = @original_VehicleID AND [EmployeeID] = @original_EmployeeID">
                 <DeleteParameters>
                     <asp:ControlParameter ControlID="gvBookingDetails" Name="BookingID" PropertyName="SelectedValue" />
                 </DeleteParameters>
@@ -419,7 +419,7 @@
 
         /* Additional Styles */
         body {
-            background-image: url('/Images/Background.png'); /* Replace with your image path */
+            background-image: url('/Images/Home_Page_Background.png'); /* Replace with your image path */
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;

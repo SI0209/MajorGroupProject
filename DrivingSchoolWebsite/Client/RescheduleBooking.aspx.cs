@@ -28,18 +28,14 @@ namespace DrivingSchoolWebsite.Client
             string codeType = getCodeType();
             if (codeType.Equals("Code1"))
                 txtCodeType.Text = "8";
-            else if (codeType.Equals("Code2"))
-                txtCodeType.Text = "10";
             else
-                txtCodeType.Text = "14";
+                txtCodeType.Text = "10";
             if (!txtCodeType.Text.Equals(""))
             {
                 if (txtCodeType.Text.Equals("8"))
                     SqlDataSource3.SelectParameters["Vehicle_Size"].DefaultValue = "Small";
                 else if (txtCodeType.Text.Equals("10"))
                     SqlDataSource3.SelectParameters["Vehicle_Size"].DefaultValue = "Medium";
-                else if (txtCodeType.Text.Equals("14"))
-                    SqlDataSource3.SelectParameters["Vehicle_Size"].DefaultValue = "Large";
             }
         }
 
@@ -64,14 +60,14 @@ namespace DrivingSchoolWebsite.Client
             SqlDSUpdate.UpdateParameters["Booking_EndTime"].DefaultValue = tEndTime.ToString();
             SqlConnection con = new SqlConnection("Server=146.230.177.46;Database=WstGrp2;User ID= WstGrp2;Password=d9jdh");
             con.Open();
-            SqlCommand cmd = new SqlCommand("Select Code_PricePerHour FROM tblLessonCode Where Code_Type = @Code_Type", con);
+            /*SqlCommand cmd = new SqlCommand("Select Code_PricePerHour FROM tblLessonCode Where Code_Type = @Code_Type", con);
             cmd.Parameters.AddWithValue("@Code_type", txtCodeType.Text);
             cmd.CommandType = CommandType.Text;
             pricePerHour = Convert.ToDecimal(cmd.ExecuteScalar());
             decimal totalCost = pricePerHour * (endTime - startTime);
             decimal feeDue = originalFeeDue + (totalCost - originalTotalCost);
             SqlDSUpdate.UpdateParameters["Booking_TotalCost"].DefaultValue = totalCost.ToString(CultureInfo.InvariantCulture);
-            SqlDSUpdate.UpdateParameters["Booking_FeeDue"].DefaultValue = feeDue.ToString(CultureInfo.InvariantCulture);
+            SqlDSUpdate.UpdateParameters["Booking_FeeDue"].DefaultValue = feeDue.ToString(CultureInfo.InvariantCulture);*/
             GridViewRow row = gvBookingDetails.SelectedRow;
             bookingID = Convert.ToInt32(row.Cells[1].Text);
             SqlDSUpdate.UpdateParameters["BookingID"].DefaultValue = bookingID.ToString();

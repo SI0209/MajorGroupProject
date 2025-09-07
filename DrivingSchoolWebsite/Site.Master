@@ -79,7 +79,6 @@
                        
                         <li><a class="nav-link" runat="server" id="addReviewLink"  href="~/Private Pages/AddReview.aspx" onprerender="addReviewLink_PreRender">ADD REVIEW</a></li>
                         <li><a class="nav-link" runat="server" id="BookOnlineLink"  href="~/Client/ClientBookingOnline.aspx" onprerender="BookOnline_PreRender">BOOK ONLINE</a></li>
-                       <!-- <li><a class="nav-link" runat="server" id="MakePaymentLink"  href="~/Client/ClientMakePayment.aspx" onprerender="MakePayment_PreRender">Make a Payment</a></li> -->
                         <li><a class="nav-link" runat="server" id="ClientViewLessonLink"  href="~/Client/ClientViewLessonSchedule.aspx" onprerender="ClientViewLesson_PreRender">CLIENT LESSON SCHEDULE</a></li>
                         <li><a class="nav-link" runat="server" id="RescheduleBookingLink"  href="~/Client/RescheduleBooking.aspx" onprerender="RescheduleBooking_PreRender">RESCHEDULE BOOKING</a></li>
 
