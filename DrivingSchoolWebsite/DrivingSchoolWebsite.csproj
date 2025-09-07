@@ -181,7 +181,6 @@
     <Content Include="Admin\ViewLessonSchedule.aspx" />
     <Content Include="Admin\ViewReports.aspx" />
     <Content Include="Client\ClientBookingOnline.aspx" />
-    <Content Include="Client\ClientMakePayment.aspx" />
     <Content Include="Client\ClientPage.aspx" />
     <Content Include="Client\ClientViewLessonSchedule.aspx" />
     <Content Include="Client\RescheduleBooking.aspx" />
@@ -488,13 +487,6 @@
     </Compile>
     <Compile Include="Client\ClientBookingOnline.aspx.designer.cs">
       <DependentUpon>ClientBookingOnline.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Client\ClientMakePayment.aspx.cs">
-      <DependentUpon>ClientMakePayment.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Client\ClientMakePayment.aspx.designer.cs">
-      <DependentUpon>ClientMakePayment.aspx</DependentUpon>
     </Compile>
     <Compile Include="Client\ClientPage.aspx.cs">
       <DependentUpon>ClientPage.aspx</DependentUpon>
