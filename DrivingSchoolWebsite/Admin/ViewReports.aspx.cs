@@ -40,7 +40,6 @@ namespace DrivingSchoolWebsite.Admin
                 lblBookings.Text = GetTotalBookings().ToString();
                 lblPopularCode.Text = GetMostPopularCode().ToString();
                 lblVehicles.Text = GetTotalVehicles().ToString();
-                lblPayments.Text = GetTotalUnpaidBookings().ToString();
                 lblMaleInstructors.Text = GetTotalMaleInstructors().ToString();
                 lblFemaleInstructors.Text = GetTotalFemaleInstructors().ToString();
             }

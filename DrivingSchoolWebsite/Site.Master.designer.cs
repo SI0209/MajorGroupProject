@@ -96,15 +96,6 @@ namespace DrivingSchoolWebsite
         protected global::System.Web.UI.HtmlControls.HtmlAnchor BookOnlineLink;
 
         /// <summary>
-        /// MakePaymentLink control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor MakePaymentLink;
-
-        /// <summary>
         /// ClientViewLessonLink control.
         /// </summary>
         /// <remarks>

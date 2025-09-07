@@ -116,13 +116,6 @@ namespace DrivingSchoolWebsite
                 anchor.Visible = (HttpContext.Current.User.IsInRole(RoleActions.Role_Client));
             }
         }
-        protected void MakePayment_PreRender(object sender, EventArgs e)
-        {
-            if (sender is HtmlAnchor anchor)
-            {
-                anchor.Visible = (HttpContext.Current.User.IsInRole(RoleActions.Role_Client));
-            }
-        }
         protected void ClientViewLesson_PreRender(object sender, EventArgs e)
         {
             if (sender is HtmlAnchor anchor)

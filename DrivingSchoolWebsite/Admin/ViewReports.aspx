@@ -123,10 +123,6 @@
                 <td><asp:Label ID="lblVehicles" runat="server" Text="0"></asp:Label></td>
             </tr>
             <tr>
-                <td>Payments Unpaid:</td>
-                <td><asp:Label ID="lblPayments" runat="server" Text="0"></asp:Label></td>
-            </tr>
-            <tr>
                 <td>Male Instructors:</td>
                 <td><asp:Label ID="lblMaleInstructors" runat="server" Text="0"></asp:Label></td>
             </tr>

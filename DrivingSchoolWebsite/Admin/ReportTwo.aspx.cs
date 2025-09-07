@@ -24,7 +24,6 @@ namespace DrivingSchoolWebsite.Admin
             LoadDashboardData();
 
             LblBookings.Text = GetTotalBookings().ToString();
-            LblRev.Text = GetPayments().ToString();
             lblPopularCode.Text = GetMostPopularCode().ToString(); 
         }
 
@@ -215,11 +214,6 @@ namespace DrivingSchoolWebsite.Admin
             }
         }
 
-        private int GetPayments()
-        {
-            return ExecuteScalarQuery("SELECT SUM(Payment_Amount) AS total_payments FROM tblPayment");
-        }
-
         private int GetTotalBookings()
         {
             return ExecuteScalarQuery("SELECT COUNT(*) AS total_bookings FROM tblBooking");
@@ -241,9 +235,7 @@ namespace DrivingSchoolWebsite.Admin
             try
             {
                 Label1.Text = GetTotalBookings().ToString();
-                lblPayments.Text = GetPayments().ToString();
                 lblVehicles.Text = GetTotalVehicles().ToString();
-                lblPayments.Text = GetTotalUnpaidBookings().ToString();
                 lblMaleInstructors.Text = GetTotalMaleInstructors().ToString();
                 lblFemaleInstructors.Text = GetTotalFemaleInstructors().ToString();
             }
@@ -290,11 +282,6 @@ namespace DrivingSchoolWebsite.Admin
         public int GetTotalVehicles()
         {
             return ExecuteScalarQuery("SELECT COUNT(*) AS Expr1 FROM tblVehicle");
-        }
-
-        public int GetTotalUnpaidBookings()
-        {
-            return ExecuteScalarQuery("SELECT SUM(Booking_FeeDue) AS Expr1 FROM tblBooking");
         }
 
         public int GetTotalMaleInstructors()
