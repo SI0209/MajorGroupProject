@@ -53,19 +53,20 @@ namespace DrivingSchoolBookingSystem
             {
                 if (row["Vehicle_Status"].ToString().Equals("Available"))
                 {
-                    if (cbxLessonCodes.SelectedIndex == 0 && row["Vehicle_Size"].ToString().Equals("Small"))
-                    {
                         string displayText = $"{row["VehicleID"]} - {row["Vehicle_Make"]} {row["Vehicle_Model"]} - {row["Vehicle_Size"]} ";
                         cbxVehicleID.Items.Add(displayText);
-                    }
-                    else if (cbxLessonCodes.SelectedIndex == 1 && row["Vehicle_Size"].ToString().Equals("Medium"))
-                    {
-                        string displayText = $"{row["VehicleID"]} - {row["Vehicle_Make"]} {row["Vehicle_Model"]} - {row["Vehicle_Size"]} ";
-                        cbxVehicleID.Items.Add(displayText);
-                    }
-
                 }
+
             }
+
+            foreach (DataRow row in dsBookingSystem.tblLearner.Rows)
+            {
+                string displayText = $"{row["LearnerID"]} - {row["Learner_Name"]} {row["Learner_Surname"]} ";
+                cbxLearnerID.Items.Add(displayText);
+            }
+
+
+
         }
 
 
@@ -477,7 +478,7 @@ namespace DrivingSchoolBookingSystem
 
         private void cbxLessonCodes_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (Convert.ToInt16(cbxLessonCodes.Text) <= 8)
+            if (Convert.ToInt16(cbxLessonCodes.Text) == 8)
             {
                 cbxVehicleID.Items.Clear();
                 foreach (DataRow row in dsBookingSystem.tblVehicle.Rows)
@@ -490,7 +491,7 @@ namespace DrivingSchoolBookingSystem
 
                 }
             }
-            else if (Convert.ToInt16(cbxLessonCodes.Text) < 14)
+            else if (Convert.ToInt16(cbxLessonCodes.Text) == 10)
             {
                 cbxVehicleID.Items.Clear();
                 foreach (DataRow row in dsBookingSystem.tblVehicle.Rows)
@@ -587,6 +588,7 @@ namespace DrivingSchoolBookingSystem
             }
         }
 
+        
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
             if (radioButton1.Checked)
