@@ -53,20 +53,19 @@ namespace DrivingSchoolBookingSystem
             {
                 if (row["Vehicle_Status"].ToString().Equals("Available"))
                 {
-                    string displayText = $"{row["VehicleID"]} - {row["Vehicle_Make"]} {row["Vehicle_Model"]} - {row["Vehicle_Size"]} ";
-                    cbxVehicleID.Items.Add(displayText);
+                    if (cbxLessonCodes.SelectedIndex == 0 && row["Vehicle_Size"].ToString().Equals("Small"))
+                    {
+                        string displayText = $"{row["VehicleID"]} - {row["Vehicle_Make"]} {row["Vehicle_Model"]} - {row["Vehicle_Size"]} ";
+                        cbxVehicleID.Items.Add(displayText);
+                    }
+                    else if (cbxLessonCodes.SelectedIndex == 1 && row["Vehicle_Size"].ToString().Equals("Medium"))
+                    {
+                        string displayText = $"{row["VehicleID"]} - {row["Vehicle_Make"]} {row["Vehicle_Model"]} - {row["Vehicle_Size"]} ";
+                        cbxVehicleID.Items.Add(displayText);
+                    }
+
                 }
-
             }
-
-            foreach (DataRow row in dsBookingSystem.tblLearner.Rows)
-            {
-                string displayText = $"{row["LearnerID"]} - {row["Learner_Name"]} {row["Learner_Surname"]} ";
-                cbxLearnerID.Items.Add(displayText);
-            }
-
-
-
         }
 
 
