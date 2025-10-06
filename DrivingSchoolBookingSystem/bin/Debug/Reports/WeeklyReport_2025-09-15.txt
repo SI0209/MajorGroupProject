@@ -1,0 +1,8 @@
+Weekly Report (2025/09/14 - 2025/09/15):
+-----------------
+Total Payments Received This Week: R0
+Bookings Made This Week: 2
+Average Number Of Bookings Made This Week: 2
+Percentage Of Bookings Cancelled This Week: 100%
+Employee with Most Lessons Taught This Week: NULL (Employee ID: NULL)
+Total Lessons Taught by the Most Active Instructor This Week: NULL

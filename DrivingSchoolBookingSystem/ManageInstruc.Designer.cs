@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManageInstruc));
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtSearch = new System.Windows.Forms.TextBox();
@@ -367,6 +368,8 @@
             this.dgvEmployee.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvEmployee.Name = "dgvEmployee";
             this.dgvEmployee.RowHeadersWidth = 51;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.dgvEmployee.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvEmployee.RowTemplate.Height = 24;
             this.dgvEmployee.Size = new System.Drawing.Size(1040, 568);
             this.dgvEmployee.TabIndex = 53;

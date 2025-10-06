@@ -334,5 +334,4 @@ C:\Users\OEM\Source\Repos\MajorGroupProject\DrivingSchoolBookingSystem\obj\Debug
 C:\Users\OEM\Source\Repos\MajorGroupProject\DrivingSchoolBookingSystem\obj\Debug\DrivingS.9670A750.Up2Date
 C:\Users\OEM\Source\Repos\MajorGroupProject\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.exe
 C:\Users\OEM\Source\Repos\MajorGroupProject\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.pdb
-D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\stdole.dll
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.exe.config
