@@ -219,7 +219,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ErrorControl.cs" />
-    <Compile Include="Helper.cs" />
     <Compile Include="StartUp.cs">
       <SubType>Form</SubType>
     </Compile>
