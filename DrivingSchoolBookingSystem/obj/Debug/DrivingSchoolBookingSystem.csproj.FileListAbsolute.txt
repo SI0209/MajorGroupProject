@@ -89,7 +89,6 @@ D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bi
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\System.Security.Cryptography.Pkcs.xml
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\System.Threading.Tasks.Extensions.xml
-D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\System.ValueTuple.xml
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.csproj.AssemblyReference.cache
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.StartUp.resources
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.InstructorSchedule.resources
@@ -335,3 +334,34 @@ C:\Users\OEM\Source\Repos\MajorGroupProject\DrivingSchoolBookingSystem\obj\Debug
 C:\Users\OEM\Source\Repos\MajorGroupProject\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.exe
 C:\Users\OEM\Source\Repos\MajorGroupProject\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.pdb
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\obj\Debug\DrivingSchoolBookingSystem.exe.config
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\runtimes\win-x86\native\WebView2Loader.dll
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\runtimes\win-x64\native\WebView2Loader.dll
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\runtimes\win-arm64\native\WebView2Loader.dll
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\Azure.Core.dll
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\Microsoft.Bcl.Cryptography.dll
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\Microsoft.Identity.Client.dll
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\Microsoft.IdentityModel.Abstractions.dll
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\Microsoft.Web.WebView2.Core.dll
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\Microsoft.Web.WebView2.WinForms.dll
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\Microsoft.Web.WebView2.Wpf.dll
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\Newtonsoft.Json.dll
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\System.ClientModel.dll
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\System.Formats.Asn1.dll
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\System.IO.Pipelines.dll
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\System.Memory.Data.dll
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\System.Text.Encodings.Web.dll
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\System.Text.Json.dll
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\Azure.Core.xml
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\Microsoft.Bcl.Cryptography.xml
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\Microsoft.Identity.Client.xml
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\Microsoft.IdentityModel.Abstractions.xml
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\Microsoft.Web.WebView2.Core.xml
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\Microsoft.Web.WebView2.WinForms.xml
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\Microsoft.Web.WebView2.Wpf.xml
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\Newtonsoft.Json.xml
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\System.ClientModel.xml
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\System.Formats.Asn1.xml
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\System.IO.Pipelines.xml
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\System.Memory.Data.xml
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\System.Text.Encodings.Web.xml
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\System.Text.Json.xml

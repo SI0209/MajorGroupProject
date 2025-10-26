@@ -1,0 +1,57 @@
+﻿/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Optional: add slight upward movement */
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .fade-in {
+        animation: fadeIn 1s ease-in; /* Adjust duration and easing as needed */
+        opacity: 0; /* Start as invisible */
+    }
+    /* About Us Section */
+    .about-section {
+        padding: 50px;
+        background-color: #1a1a1a; /* Updated to dark background from services section */
+        color: #fff; /* Updated text color for better contrast */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .about-container {
+        max-width: 800px;
+        display: flex;
+        gap: 20px;
+    }
+
+    .about-image {
+        flex: 1;
+    }
+
+    .about-image img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .about-text {
+        flex: 2;
+    }
+
+    .about-text h2 {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .about-text p {
+        font-size: 18px;
+        line-height: 1.6;
+        text-align: justify;
+    }
+}
