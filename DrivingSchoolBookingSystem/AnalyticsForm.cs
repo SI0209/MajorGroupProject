@@ -9,6 +9,8 @@ using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.Web.WebView2.WinForms;
+using static System.Net.WebRequestMethods;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace DrivingSchoolBookingSystem
@@ -468,9 +470,6 @@ namespace DrivingSchoolBookingSystem
             textBox1.Text = booking.ToString();
             textBox2.Text = totalInstructors.ToString();
             textBox3.Text = totalVehicles.ToString();
-
-
-
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
