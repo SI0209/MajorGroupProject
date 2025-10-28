@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Web.WebView2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,6 +10,8 @@ using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
+using static System.Net.WebRequestMethods;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace DrivingSchoolBookingSystem
@@ -451,7 +454,7 @@ namespace DrivingSchoolBookingSystem
             SaveMonthlyReport(monthlyStatsTxtBx.Text, DateTime.Now);
         }
 
-        private void AnalyticsForm_Load(object sender, EventArgs e)
+        private async void AnalyticsForm_Load(object sender, EventArgs e)
         {
             GenerateDailyReport();
             GenerateMonthlyReport();
@@ -468,9 +471,15 @@ namespace DrivingSchoolBookingSystem
             textBox1.Text = booking.ToString();
             textBox2.Text = totalInstructors.ToString();
             textBox3.Text = totalVehicles.ToString();
-
-
-
+            try
+            {
+            await webView21.EnsureCoreWebView2Async(null);
+            webView21.Source = new Uri("https://app.powerbi.com/groups/me/reports/2e7b481e-253f-4a11-b0bc-c9f378a6cff9/879deebd4de3ddcd78b2?experience=power-bi");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred while loading the Power BI report: {ex.Message}");
+            }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
