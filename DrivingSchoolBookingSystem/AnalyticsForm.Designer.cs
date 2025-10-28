@@ -58,6 +58,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.webView21 = new Microsoft.Web.WebView2.WinForms.WebView2();
             this.pieChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chartBookings = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
@@ -83,6 +84,7 @@
             this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.webView21)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pieChart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartBookings)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -389,6 +391,19 @@
             this.panel1.TabIndex = 120;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // webView21
+            // 
+            this.webView21.AllowExternalDrop = true;
+            this.webView21.CreationProperties = null;
+            this.webView21.DefaultBackgroundColor = System.Drawing.Color.White;
+            this.webView21.Location = new System.Drawing.Point(1133, 625);
+            this.webView21.Name = "webView21";
+            this.webView21.Size = new System.Drawing.Size(517, 187);
+            this.webView21.Source = new System.Uri("https://app.powerbi.com/groups/me/reports/2e7b481e-253f-4a11-b0bc-c9f378a6cff9/87" +
+        "9deebd4de3ddcd78b2?experience=power-bi", System.UriKind.Absolute);
+            this.webView21.TabIndex = 62;
+            this.webView21.ZoomFactor = 1D;
+            // 
             // pieChart
             // 
             chartArea13.AxisX.TitleFont = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -685,6 +700,7 @@
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.webView21)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pieChart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartBookings)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2025/10/28-22:20:17.874 7b7c Reusing MANIFEST D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\DrivingSchoolBookingSystem.exe.WebView2\EBWebView\Default\Session Storage/MANIFEST-000001
 2025/10/28-22:20:17.881 7b7c Recovering log #4
 2025/10/28-22:20:17.888 7b7c Reusing old log D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\DrivingSchoolBookingSystem.exe.WebView2\EBWebView\Default\Session Storage/000004.log 
@@ -7,3 +8,7 @@
 2025/10/28-22:21:54.351 1d48 Level-0 table #10: started
 2025/10/28-22:21:54.358 1d48 Level-0 table #10: 39079 bytes OK
 2025/10/28-22:21:54.361 1d48 Delete type=0 #7
+=======
+2025/10/28-21:42:00.560 2024 Creating DB D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\DrivingSchoolBookingSystem.exe.WebView2\EBWebView\Default\Session Storage since it was missing.
+2025/10/28-21:42:00.576 2024 Reusing MANIFEST D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\DrivingSchoolBookingSystem.exe.WebView2\EBWebView\Default\Session Storage/MANIFEST-000001
+>>>>>>> ddcb73d7c7eed93adaf4ff22639e79867d4d0f67

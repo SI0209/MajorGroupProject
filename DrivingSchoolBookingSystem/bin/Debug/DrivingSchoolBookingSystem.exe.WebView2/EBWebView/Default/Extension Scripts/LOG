@@ -1,3 +1,8 @@
+<<<<<<< HEAD
 2025/10/28-22:15:28.044 7bf8 Reusing MANIFEST D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\DrivingSchoolBookingSystem.exe.WebView2\EBWebView\Default\Extension Scripts/MANIFEST-000001
 2025/10/28-22:15:28.045 7bf8 Recovering log #3
 2025/10/28-22:15:28.046 7bf8 Reusing old log D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\DrivingSchoolBookingSystem.exe.WebView2\EBWebView\Default\Extension Scripts/000003.log 
+=======
+2025/10/28-21:41:36.279 fbc Creating DB D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\DrivingSchoolBookingSystem.exe.WebView2\EBWebView\Default\Extension Scripts since it was missing.
+2025/10/28-21:41:36.284 fbc Reusing MANIFEST D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\DrivingSchoolBookingSystem.exe.WebView2\EBWebView\Default\Extension Scripts/MANIFEST-000001
+>>>>>>> ddcb73d7c7eed93adaf4ff22639e79867d4d0f67

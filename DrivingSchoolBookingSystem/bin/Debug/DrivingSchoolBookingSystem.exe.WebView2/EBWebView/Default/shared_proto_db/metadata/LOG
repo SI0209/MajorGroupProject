@@ -1,3 +1,8 @@
+<<<<<<< HEAD
 2025/10/28-22:19:47.383 3814 Reusing MANIFEST D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\DrivingSchoolBookingSystem.exe.WebView2\EBWebView\Default\shared_proto_db\metadata/MANIFEST-000001
 2025/10/28-22:19:47.384 3814 Recovering log #3
 2025/10/28-22:19:47.385 3814 Reusing old log D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\DrivingSchoolBookingSystem.exe.WebView2\EBWebView\Default\shared_proto_db\metadata/000003.log 
+=======
+2025/10/28-21:41:36.284 8a18 Creating DB D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\DrivingSchoolBookingSystem.exe.WebView2\EBWebView\Default\shared_proto_db\metadata since it was missing.
+2025/10/28-21:41:36.289 8a18 Reusing MANIFEST D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\DrivingSchoolBookingSystem.exe.WebView2\EBWebView\Default\shared_proto_db\metadata/MANIFEST-000001
+>>>>>>> ddcb73d7c7eed93adaf4ff22639e79867d4d0f67
