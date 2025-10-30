@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-2025/10/28-22:19:47.348 6818 Reusing MANIFEST D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\DrivingSchoolBookingSystem.exe.WebView2\EBWebView\Default\Site Characteristics Database/MANIFEST-000001
-2025/10/28-22:19:47.369 6818 Recovering log #3
-2025/10/28-22:19:47.369 6818 Reusing old log D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\DrivingSchoolBookingSystem.exe.WebView2\EBWebView\Default\Site Characteristics Database/000003.log 
-=======
-2025/10/28-21:41:36.260 97b8 Creating DB D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\DrivingSchoolBookingSystem.exe.WebView2\EBWebView\Default\Site Characteristics Database since it was missing.
-2025/10/28-21:41:36.267 97b8 Reusing MANIFEST D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\DrivingSchoolBookingSystem.exe.WebView2\EBWebView\Default\Site Characteristics Database/MANIFEST-000001
->>>>>>> ddcb73d7c7eed93adaf4ff22639e79867d4d0f67
+2025/10/30-09:54:54.515 692c Reusing MANIFEST D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\DrivingSchoolBookingSystem.exe.WebView2\EBWebView\Default\Site Characteristics Database/MANIFEST-000001
+2025/10/30-09:54:54.519 692c Recovering log #3
+2025/10/30-09:54:54.520 692c Reusing old log D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\DrivingSchoolBookingSystem.exe.WebView2\EBWebView\Default\Site Characteristics Database/000003.log 

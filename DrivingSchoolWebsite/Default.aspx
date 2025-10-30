@@ -48,7 +48,7 @@
     <div class="hero-section">
         <div class="overlay">
             <h1>ARAF'S DRIVING SCHOOL</h1>
-            <p>LEARN TO DRIVE WITH CONFIDENCE</p>
+            <p>LEARN TO DRIVE WITH FULL CONFIDENCE</p>
             
         </div>
     </div>

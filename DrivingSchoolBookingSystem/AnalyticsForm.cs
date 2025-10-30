@@ -1,4 +1,5 @@
-﻿using Microsoft.Web.WebView2.WinForms;
+﻿using Microsoft.Web.WebView2.Core;
+using Microsoft.Web.WebView2.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,7 +11,6 @@ using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Microsoft.Web.WebView2.WinForms;
 using static System.Net.WebRequestMethods;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
@@ -22,6 +22,7 @@ namespace DrivingSchoolBookingSystem
         public AnalyticsForm(LoginForm Loginform)
         {
             InitializeComponent();
+            InitializeWebView();
             loginForm = Loginform;
             this.StartPosition = FormStartPosition.CenterScreen;
             DrawChart();
@@ -55,6 +56,22 @@ namespace DrivingSchoolBookingSystem
             pieChart.Series["s1"].Points.AddXY(secEmployeeName, secLessonCount);
             pieChart.Series["s1"].Points.AddXY(ThirdEmployeeName, sThirdLessonCount);
             // MessageBox.Show(sTopLessonCount + "  " + secLessonCount + "  " + sThirdLessonCount);
+        }
+
+        private async void InitializeWebView()
+        {
+            try
+            {
+                var userDataFolder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),"CampusAnalyticsProfile");
+                var env = await CoreWebView2Environment.CreateAsync(null, userDataFolder);
+                await webView21.EnsureCoreWebView2Async(env);
+                webView21.Source = new Uri("https://app.powerbi.com/groups/me/reports/2e7b481e-253f-4a11-b0bc-c9f378a6cff9/879deebd4de3ddcd78b2?experience=power-bi");
+            }
+            catch
+            {
+
+            }
+        
         }
 
         static string[] SplitString(string input, char separator)
@@ -454,7 +471,7 @@ namespace DrivingSchoolBookingSystem
             SaveMonthlyReport(monthlyStatsTxtBx.Text, DateTime.Now);
         }
 
-        private async void AnalyticsForm_Load(object sender, EventArgs e)
+        private void AnalyticsForm_Load(object sender, EventArgs e)
         {
             GenerateDailyReport();
             GenerateMonthlyReport();

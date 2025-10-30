@@ -58,7 +58,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.webView21 = new Microsoft.Web.WebView2.WinForms.WebView2();
             this.pieChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chartBookings = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
