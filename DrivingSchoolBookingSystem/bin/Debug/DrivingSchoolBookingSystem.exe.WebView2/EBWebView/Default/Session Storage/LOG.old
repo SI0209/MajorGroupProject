@@ -1,21 +1,21 @@
-2025/10/30-09:24:12.119 1714 Reusing MANIFEST D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\DrivingSchoolBookingSystem.exe.WebView2\EBWebView\Default\Session Storage/MANIFEST-000001
-2025/10/30-09:24:12.128 1714 Recovering log #9
-2025/10/30-09:24:12.141 1714 Reusing old log D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\DrivingSchoolBookingSystem.exe.WebView2\EBWebView\Default\Session Storage/000009.log 
-2025/10/30-09:26:12.160 4d80 Level-0 table #13: started
-2025/10/30-09:26:12.165 4d80 Level-0 table #13: 36386 bytes OK
-2025/10/30-09:26:12.168 4d80 Delete type=0 #9
-2025/10/30-09:27:17.050 4d80 Level-0 table #15: started
-2025/10/30-09:27:17.058 4d80 Level-0 table #15: 48990 bytes OK
-2025/10/30-09:27:17.061 4d80 Delete type=0 #12
-2025/10/30-09:27:41.377 4d80 Level-0 table #17: started
-2025/10/30-09:27:41.384 4d80 Level-0 table #17: 40916 bytes OK
-2025/10/30-09:27:41.387 4d80 Delete type=0 #14
-2025/10/30-09:27:41.389 4d80 Compacting 4@0 + 1@1 files
-2025/10/30-09:27:41.398 4d80 Generated table #18@0: 272 keys, 55805 bytes
-2025/10/30-09:27:41.398 4d80 Compacted 4@0 + 1@1 files => 55805 bytes
-2025/10/30-09:27:41.399 4d80 compacted to: files[ 0 1 1 0 0 0 0 ]
-2025/10/30-09:27:41.401 4d80 Delete type=2 #8
-2025/10/30-09:27:41.401 4d80 Delete type=2 #10
-2025/10/30-09:27:41.401 4d80 Delete type=2 #13
-2025/10/30-09:27:41.401 4d80 Delete type=2 #15
-2025/10/30-09:27:41.401 4d80 Delete type=2 #17
+2025/10/31-15:37:12.805 3564 Reusing MANIFEST D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\DrivingSchoolBookingSystem.exe.WebView2\EBWebView\Default\Session Storage/MANIFEST-000001
+2025/10/31-15:37:12.807 3564 Recovering log #32
+2025/10/31-15:37:12.813 3564 Reusing old log D:\University Work\Major Project\MajorGroupProject\DrivingSchoolBookingSystem\bin\Debug\DrivingSchoolBookingSystem.exe.WebView2\EBWebView\Default\Session Storage/000032.log 
+2025/10/31-15:38:37.840 5544 Level-0 table #36: started
+2025/10/31-15:38:37.849 5544 Level-0 table #36: 49955 bytes OK
+2025/10/31-15:38:37.853 5544 Delete type=0 #32
+2025/10/31-15:39:12.851 5544 Level-0 table #38: started
+2025/10/31-15:39:12.863 5544 Level-0 table #38: 23362 bytes OK
+2025/10/31-15:39:12.867 5544 Delete type=0 #35
+2025/10/31-15:39:12.868 5544 Compacting 4@0 + 1@1 files
+2025/10/31-15:39:12.879 5544 Generated table #39@0: 544 keys, 38541 bytes
+2025/10/31-15:39:12.880 5544 Compacted 4@0 + 1@1 files => 38541 bytes
+2025/10/31-15:39:12.880 5544 compacted to: files[ 0 1 1 0 0 0 0 ]
+2025/10/31-15:39:12.882 5544 Delete type=2 #29
+2025/10/31-15:39:12.882 5544 Delete type=2 #31
+2025/10/31-15:39:12.882 5544 Delete type=2 #33
+2025/10/31-15:39:12.882 5544 Delete type=2 #36
+2025/10/31-15:39:12.882 5544 Delete type=2 #38
+2025/10/31-15:41:47.222 5544 Level-0 table #41: started
+2025/10/31-15:41:47.230 5544 Level-0 table #41: 20802 bytes OK
+2025/10/31-15:41:47.232 5544 Delete type=0 #37

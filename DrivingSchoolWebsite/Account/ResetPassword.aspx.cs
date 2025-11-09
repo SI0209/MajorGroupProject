@@ -42,5 +42,10 @@ namespace DrivingSchoolWebsite.Account
 
             ErrorMessage.Text = "An error has occurred";
         }
+
+        protected void Page_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

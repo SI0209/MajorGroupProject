@@ -62,16 +62,16 @@ namespace DrivingSchoolBookingSystem
         {
             try
             {
-                var userDataFolder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),"CampusAnalyticsProfile");
+                var userDataFolder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "AnalyticsProfile");
                 var env = await CoreWebView2Environment.CreateAsync(null, userDataFolder);
                 await webView21.EnsureCoreWebView2Async(env);
-                webView21.Source = new Uri("https://app.powerbi.com/groups/me/reports/2e7b481e-253f-4a11-b0bc-c9f378a6cff9/879deebd4de3ddcd78b2?experience=power-bi");
+                webView21.Source = new Uri("https://app.powerbi.com/groups/me/reports/c9b84389-f4ba-4c44-b9d8-c7f8d6e829a6/879deebd4de3ddcd78b2?experience=power-bi");
             }
-            catch
+            catch (Exception ex)
             {
-
+                MessageBox.Show(ex.Message);
             }
-        
+
         }
 
         static string[] SplitString(string input, char separator)
@@ -551,6 +551,18 @@ namespace DrivingSchoolBookingSystem
             "✅ Use these reports for performance tracking, decision making, or presenting data to management.";
 
             MessageBox.Show(instructions, "How to Use the Analytics Report", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                webView21.Visible = true;
+            }
+            else
+            {
+                webView21.Visible = false;
+            }
         }
     }
 }
