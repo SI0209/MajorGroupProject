@@ -57,21 +57,39 @@ namespace DrivingSchoolBookingSystem
             pieChart.Series["s1"].Points.AddXY(ThirdEmployeeName, sThirdLessonCount);
             // MessageBox.Show(sTopLessonCount + "  " + secLessonCount + "  " + sThirdLessonCount);
         }
-
+        private bool webViewInitialized = false;
         private async void InitializeWebView()
         {
+            var url = "https://app.powerbi.com/groups/me/reports/c9b84389-f4ba-4c44-b9d8-c7f8d6e829a6/879deebd4de3ddcd78b2?experience=power-bi";
+
             try
             {
-                var userDataFolder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "AnalyticsProfile");
-                var env = await CoreWebView2Environment.CreateAsync(null, userDataFolder);
-                await webView21.EnsureCoreWebView2Async(env);
-                webView21.Source = new Uri("https://app.powerbi.com/groups/me/reports/c9b84389-f4ba-4c44-b9d8-c7f8d6e829a6/879deebd4de3ddcd78b2?experience=power-bi");
+                if (webView21 == null || webView21.IsDisposed)
+                    return;
+
+                // Only initialize once
+                if (!webViewInitialized)
+                {
+                    var userDataFolder = Path.Combine(
+                        Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
+                        "AnalyticsProfile"
+                    );
+
+                    var env = await CoreWebView2Environment.CreateAsync(null, userDataFolder);
+                    await webView21.EnsureCoreWebView2Async(env);
+                    webViewInitialized = true;
+                }
+
+                // Now navigate safely
+                if (webView21.CoreWebView2 != null)
+                    webView21.CoreWebView2.Navigate(url);
+                else
+                    webView21.Source = new Uri(url);
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show($"WebView2 initialization error: {ex.Message}", "WebView2", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-
         }
 
         static string[] SplitString(string input, char separator)
