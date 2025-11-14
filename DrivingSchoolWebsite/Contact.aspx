@@ -6,7 +6,7 @@
         <div class="contact-container">
             <div class="contact-info">
                 <p><strong>Address:</strong> 53 Cranbrook Road, Clayfield</p>
-                <p><strong>Contact Number:</strong> 084 6786530</p>
+                <p><strong>Contact Number:</strong> 084 678 6530</p>
                 <h4>OFFICE HOURS:</h4>
                 <p>Mon - Sat: 11am - 5pm</p>
                 <p>Sunday: Closed</p>
