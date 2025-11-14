@@ -83,14 +83,14 @@ WHERE
             <div class="form-group">
                 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource2" Width="809px">
                     <Columns>
-                        <asp:BoundField DataField="Employee_Surname" HeaderText="Employee_Surname" SortExpression="Employee_Surname" />
                         <asp:BoundField DataField="Employee_Name" HeaderText="Employee_Name" SortExpression="Employee_Name" />
+                        <asp:BoundField DataField="Employee_Surname" HeaderText="Employee_Surname" SortExpression="Employee_Surname" />
                         <asp:BoundField DataField="Employee_Age" HeaderText="Employee_Age" SortExpression="Employee_Age" />
                         <asp:BoundField DataField="Employee_Gender" HeaderText="Employee_Gender" SortExpression="Employee_Gender" />
                         <asp:BoundField DataField="Employee_Race" HeaderText="Employee_Race" SortExpression="Employee_Race" />
                     </Columns>
                 </asp:GridView>
-                <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT [Employee_Surname], [Employee_Name], [Employee_Age], [Employee_Gender], [Employee_Race] FROM [tblEmployee] WHERE ([EmployeeID] = @EmployeeID)">
+                <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT [Employee_Name], [Employee_Surname], [Employee_Age], [Employee_Gender], [Employee_Race] FROM [tblEmployee] WHERE ([EmployeeID] = @EmployeeID)">
                     <SelectParameters>
                         <asp:ControlParameter ControlID="instructorDropDownList" Name="EmployeeID" PropertyName="SelectedValue" Type="Int32" />
                     </SelectParameters>
@@ -166,8 +166,6 @@ WHERE
         <asp:Parameter DbType="Time" Name="Booking_StartTime" />
         <asp:Parameter Name="Booking_EndTime" DbType="Time" />
         <asp:Parameter DefaultValue="Incomplete" Name="Booking_Status" Type="String" />
-        <asp:Parameter Name="Booking_TotalCost" Type="Decimal" DefaultValue="" />
-        <asp:Parameter Name="Booking_FeeDue" Type="Decimal" />
         <asp:Parameter Name="LearnerID" Type="String" />
         <asp:ControlParameter ControlID="txtCodeType" Name="Code_Type" PropertyName="Text" Type="Int32" />
         <asp:ControlParameter ControlID="vehicleDropDownList" Name="VehicleID" PropertyName="SelectedValue" Type="Int32" />
