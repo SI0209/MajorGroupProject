@@ -54,8 +54,6 @@ namespace DrivingSchoolWebsite.Client
                 pricePerHour = Convert.ToDecimal(cmd.ExecuteScalar());
                 decimal totalCost = pricePerHour * (endTime - startTime);
                 decimal feeDue = totalCost;
-                sqlDSInsert.InsertParameters["Booking_TotalCost"].DefaultValue = totalCost.ToString();
-                sqlDSInsert.InsertParameters["Booking_FeeDue"].DefaultValue = feeDue.ToString();
                 SqlCommand cmd2 = new SqlCommand("Select Id FROM AspNetUsers Where Email = @Email", con);
                 cmd2.Parameters.AddWithValue("@Email", User.Identity.Name.ToString());
                 cmd2.CommandType = CommandType.Text;
@@ -182,11 +180,33 @@ namespace DrivingSchoolWebsite.Client
         protected void TimeSlotDropDown_SelectedIndexChanged(object sender, EventArgs e)
         {
             lblStartTimeError.Text = "";
+            DateTime StartTime = Convert.ToDateTime(TimeSlotDropDown.SelectedValue);
+            DateTime EndTime = Convert.ToDateTime(DropDownList1.SelectedValue);
+
+            if (EndTime <= StartTime)
+            {
+                lblEndTimeError.Text = "The end time must be after the start time.";
+            }
+            else
+            {
+                lblEndTimeError.Text = "";
+            }
         }
 
         protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            lblEndTimeError.Text = "";
+            lblStartTimeError.Text = "";
+            DateTime StartTime = Convert.ToDateTime(TimeSlotDropDown.SelectedValue);
+            DateTime EndTime = Convert.ToDateTime(DropDownList1.SelectedValue);
+
+            if (EndTime <= StartTime)
+            {
+                lblEndTimeError.Text = "The end time must be after the start time.";
+            }
+            else
+            {
+                lblEndTimeError.Text = "";
+            }
         }
     }
 }
