@@ -60,8 +60,7 @@
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT * 
 FROM [tblEmployee] e
 WHERE 
-    e.[Code_Type] = @Code_Type 
-    AND e.[Employee_Type] = @Employee_Type 
+    e.[Employee_Type] = @Employee_Type 
     AND e.[EmployeeID] NOT IN (
         SELECT b.[EmployeeID]
         FROM [tblBooking] b

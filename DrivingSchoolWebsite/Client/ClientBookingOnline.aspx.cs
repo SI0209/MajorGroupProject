@@ -13,6 +13,7 @@ namespace DrivingSchoolWebsite.Client
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            int Hours = Convert.ToInt32(DropDownList1.Text.Substring(0, 2)) - Convert.ToInt32(TimeSlotDropDown.Text.Substring(0, 2));
             string codeType = getCodeType();
             if (codeType.Equals("Code1"))
                 txtCodeType.Text = "8";
@@ -22,9 +23,15 @@ namespace DrivingSchoolWebsite.Client
             if (!txtCodeType.Text.Equals(""))
             {
                 if (txtCodeType.Text.Equals("8"))
+                {
                     SqlDataSource3.SelectParameters["Vehicle_Size"].DefaultValue = "Small";
+                    bookingCost.Text = (Hours * 200).ToString("N2");
+                }
                 else if (txtCodeType.Text.Equals("10"))
+                {
                     SqlDataSource3.SelectParameters["Vehicle_Size"].DefaultValue = "Medium";
+                    bookingCost.Text = (Hours * 350).ToString("N2");
+                }
             }
         }
 

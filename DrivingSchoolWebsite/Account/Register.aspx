@@ -94,7 +94,6 @@
                             <asp:ListItem Value="">Select Lesson Code</asp:ListItem>
                             <asp:ListItem Value="Code1">Code 8</asp:ListItem>
                             <asp:ListItem Value="Code2">Code 10</asp:ListItem>
-                            <asp:ListItem Value="Code3">Code 14</asp:ListItem>
                         </asp:DropDownList>
                         <asp:RequiredFieldValidator ControlToValidate="LessonCode" runat="server" 
                             ErrorMessage="Lesson Code is required" CssClass="text-danger"></asp:RequiredFieldValidator>
