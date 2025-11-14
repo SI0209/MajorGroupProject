@@ -25,12 +25,12 @@ namespace DrivingSchoolWebsite.Client
                 if (txtCodeType.Text.Equals("8"))
                 {
                     SqlDataSource3.SelectParameters["Vehicle_Size"].DefaultValue = "Small";
-                    bookingCost.Text = (Hours * 200).ToString("N2");
+                    bookingCost.Text = "R" + (Hours * 200).ToString("N2");
                 }
                 else if (txtCodeType.Text.Equals("10"))
                 {
                     SqlDataSource3.SelectParameters["Vehicle_Size"].DefaultValue = "Medium";
-                    bookingCost.Text = (Hours * 350).ToString("N2");
+                    bookingCost.Text = "R" + (Hours * 350).ToString("N2");
                 }
             }
         }
