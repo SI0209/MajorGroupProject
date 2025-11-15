@@ -9,7 +9,7 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
-    <NameOfLastUsedPublishProfile>D:\University Work\Major Project\MajorGroupProject\DrivingSchoolWebsite\Properties\PublishProfiles\IST-WST-Group-2 - Web Deploy.pubxml</NameOfLastUsedPublishProfile>
+    <NameOfLastUsedPublishProfile>D:\University Work\Major Project\MajorGroupProject\DrivingSchoolWebsite\Properties\PublishProfiles\IST-WST-Group2 - Web Deploy.pubxml</NameOfLastUsedPublishProfile>
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>

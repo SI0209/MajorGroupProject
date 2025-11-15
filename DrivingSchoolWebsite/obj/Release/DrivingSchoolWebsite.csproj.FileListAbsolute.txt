@@ -113,3 +113,7 @@ D:\University Work\Major Project\MajorGroupProject\DrivingSchoolWebsite\obj\Rele
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolWebsite\obj\Release\DrivingS.31D6C03E.Up2Date
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolWebsite\obj\Release\DrivingSchoolWebsite.dll
 D:\University Work\Major Project\MajorGroupProject\DrivingSchoolWebsite\obj\Release\DrivingSchoolWebsite.pdb
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolWebsite\bin\Microsoft.Configuration.ConfigurationBuilders.Base.dll
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolWebsite\bin\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.dll
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolWebsite\bin\Microsoft.Configuration.ConfigurationBuilders.Base.xml
+D:\University Work\Major Project\MajorGroupProject\DrivingSchoolWebsite\bin\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.xml
