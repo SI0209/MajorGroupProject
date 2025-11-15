@@ -23,8 +23,6 @@
                             <asp:BoundField DataField="Booking_StartTime" HeaderText="Booking_StartTime" SortExpression="Booking_StartTime" />
                             <asp:BoundField DataField="Booking_EndTime" HeaderText="Booking_EndTime" SortExpression="Booking_EndTime" />
                             <asp:BoundField DataField="Booking_Status" HeaderText="Booking_Status" SortExpression="Booking_Status" />
-                            <asp:BoundField DataField="Booking_TotalCost" HeaderText="Booking_TotalCost" DataFormatString="{0:c}" SortExpression="Booking_TotalCost" />
-                            <asp:BoundField DataField="Booking_FeeDue" HeaderText="Booking_FeeDue" DataFormatString="{0:c}" SortExpression="Booking_FeeDue" />
                             <asp:BoundField DataField="Employee_Name" HeaderText="Employee_Name" SortExpression="Employee_Name" />
                             <asp:BoundField DataField="Employee_Surname" HeaderText="Employee_Surname" SortExpression="Employee_Surname" />
                             <asp:BoundField DataField="Vehicle_Make" HeaderText="Vehicle_Make" SortExpression="Vehicle_Make" />
@@ -47,7 +45,7 @@
 
         </div>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" 
-            SelectCommand="SELECT tblBooking.Booking_Date, tblBooking.Booking_EndTime, tblBooking.Booking_StartTime, tblBooking.Booking_Status, tblBooking.Booking_TotalCost, tblBooking.Booking_FeeDue, tblEmployee.Employee_Name, tblEmployee.Employee_Surname, tblVehicle.Vehicle_Make, tblVehicle.Vehicle_Model, tblLessonCode.Code_Type FROM tblBooking INNER JOIN tblEmployee ON tblBooking.EmployeeID = tblEmployee.EmployeeID INNER JOIN tblLessonCode ON tblBooking.Code_Type = tblLessonCode.Code_Type INNER JOIN tblVehicle ON tblBooking.VehicleID = tblVehicle.VehicleID WHERE (tblBooking.LearnerID = @LearnerID) AND Booking_Date = @Booking_Date">
+            SelectCommand="SELECT tblBooking.Booking_Date, tblBooking.Booking_EndTime, tblBooking.Booking_StartTime, tblBooking.Booking_Status, tblEmployee.Employee_Name, tblEmployee.Employee_Surname, tblVehicle.Vehicle_Make, tblVehicle.Vehicle_Model, tblLessonCode.Code_Type FROM tblBooking INNER JOIN tblEmployee ON tblBooking.EmployeeID = tblEmployee.EmployeeID INNER JOIN tblLessonCode ON tblBooking.Code_Type = tblLessonCode.Code_Type INNER JOIN tblVehicle ON tblBooking.VehicleID = tblVehicle.VehicleID WHERE (tblBooking.LearnerID = @LearnerID) AND Booking_Date = @Booking_Date">
             <SelectParameters>
                 <asp:Parameter Name="LearnerID" />
                 <asp:Parameter Name="Booking_Date" />
