@@ -23,6 +23,7 @@
 
     <link runat="server" href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <form runat="server">
@@ -128,40 +129,158 @@
                 </div>
             </div>
         </nav>
-        <div id="chatbot-bubble" onclick="toggleChatbot()">💬</div>
-
-      <div id="chat-window">
-
-          <div id="chat-header">Driving School Assistant</div>
-
-          <div id="chat-body">
-
-              <div id="chat-menu">
-
-                  <p id="greeting"></p>
-
-                  <p>How can I help you today?</p>
-
-                  <button class="menu-btn" onclick="showFaqCategories()">📖 See FAQ</button>
-
-                  <button class="menu-btn" onclick="startChat()">💬 Ask a unique question</button>
-
-              </div>
-
-          </div>
-
-          <div id="chat-input" style="display:none;">
-
-              <input type="text" id="userMessage" placeholder="Type a message..." />
-
-              <button type="button" onclick="sendMessage()">Send</button>
-
-          </div>
-
-      </div>
+       
         <div class="container-fluid body-content mt-0">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
+              <div id="chatbot-bubble" onclick="toggleChatbot()">💬</div>
+
+<div id="chat-window">
+
+    <div id="chat-header">Driving School Assistant</div>
+
+    <div id="chat-body">
+
+        <div id="chat-menu">
+
+            <p id="greeting"></p>
+
+            <p>How can I help you today?</p>
+
+            <button class="menu-btn" onclick="showFaqCategories()">📖 See FAQ</button>
+
+            <button class="menu-btn" onclick="startChat()">💬 Ask a unique question</button>
+
+        </div>
+
+    </div>
+
+    <div id="chat-input" style="display:none;">
+
+        <input type="text" id="userMessage" placeholder="Type a message..." />
+
+        <button type="button" onclick="sendMessage()">Send</button>
+
+    </div>
+
+</div>
+ <script>
+     /* ---------- Helper functions ---------- */
+     // Prevent HTML injection in messages
+     function escapeHtml(unsafe) {
+         return unsafe
+             .replace(/&/g, "&amp;")
+             .replace(/</g, "&lt;")
+             .replace(/>/g, "&gt;")
+             .replace(/"/g, "&quot;")
+             .replace(/'/g, "&#039;");
+     }
+
+     function appendUserMessage(text) {
+         const chatBody = document.getElementById("chat-body");
+         chatBody.innerHTML += `<div class='user'><span>${escapeHtml(text)}</span></div>`;
+         chatBody.scrollTop = chatBody.scrollHeight;
+     }
+
+     function appendBotMessage(text) {
+         const chatBody = document.getElementById("chat-body");
+         chatBody.innerHTML += `
+        <div class='bot'>
+            <img src='https://cdn-icons-png.flaticon.com/512/4712/4712027.png' width='28' style='vertical-align:middle;margin-right:8px;'/>
+            <span>${escapeHtml(text)}</span>
+        </div>`;
+         chatBody.scrollTop = chatBody.scrollHeight;
+     }
+
+     function showTyping() {
+         const chatBody = document.getElementById("chat-body");
+         // give typing element an id so we can remove it
+         chatBody.innerHTML += `<div class='bot typing' id='typingIndicator'><span>Araf's Driving School Assistant is typing…</span></div>`;
+         chatBody.scrollTop = chatBody.scrollHeight;
+     }
+
+     function removeTyping() {
+         const el = document.getElementById("typingIndicator");
+         if (el) el.remove();
+     }
+
+     /* ---------- Existing functions (keeps your UX) ---------- */
+     function toggleChatbot() {
+         const chat = document.getElementById("chat-window");
+         if (chat.style.display === "none" || chat.style.display === "") {
+             chat.style.display = "flex"; showGreeting();
+         } else { chat.style.display = "none"; }
+     }
+
+     function showGreeting() {
+         const hour = new Date().getHours();
+         const greeting = hour < 12 ? "Good morning!" : hour < 18 ? "Good afternoon!" : "Good evening!";
+         document.getElementById("greeting").innerText = `${greeting} 👋`;
+     }
+
+     function backToMainMenu() {
+         const chatBody = document.getElementById("chat-body");
+         const chatInput = document.getElementById("chat-input");
+         mode = "menu"; chatInput.style.display = "none";
+         chatBody.innerHTML = `<div id="chat-menu"><p id="greeting"></p><p>How can I help you today?</p>
+        <button class="menu-btn" onclick="showFaqCategories()">📖 See FAQ</button>
+        <button class="menu-btn" onclick="startChat()">💬 Ask a unique question</button></div>`;
+         showGreeting();
+     }
+
+     function startChat() {
+         const chatBody = document.getElementById("chat-body");
+         const chatInput = document.getElementById("chat-input");
+         mode = "chat"; chatInput.style.display = "flex";
+         chatBody.innerHTML = `<div class='bot'><img src='https://cdn-icons-png.flaticon.com/512/4712/4712027.png' width='28'/> 
+        <span>You're now in unique question mode.</span></div>`;
+         // focus input
+         setTimeout(() => document.getElementById("userMessage").focus(), 100);
+     }
+
+     /* Keep your existing showFaqCategories and showCategory functions unchanged (if present) */
+
+     /* ---------- Main sendMessage (AJAX to ASMX) ---------- */
+     function sendMessage() {
+         const input = document.getElementById("userMessage");
+         const msg = input.value.trim();
+         if (!msg) return;
+
+         // append user message to UI
+         appendUserMessage(msg);
+         input.value = "";
+
+         const sendBtn = event && event.target && event.target.tagName === "BUTTON" ? event.target : null;
+         if (sendBtn) sendBtn.disabled = true;
+
+         // show typing indicator
+         showTyping();
+
+         // call ASMX web service
+         $.ajax({
+             type: "POST",
+             url: "/ChatbotService.asmx/Ask",
+             data: JSON.stringify({ message: msg }),
+             contentType: "application/json; charset=utf-8",
+             dataType: "json",
+             timeout: 20000, // 20s
+             success: function (response) {
+                 removeTyping();
+                 // ASMX wraps result in response.d
+                 const reply = (response && response.d) ? response.d : "Sorry, no response.";
+                 appendBotMessage(reply);
+                 if (sendBtn) sendBtn.disabled = false;
+             },
+             error: function (xhr, status, err) {
+                 removeTyping();
+                 appendBotMessage("Sorry — something went wrong. Please try again later.");
+                 if (sendBtn) sendBtn.disabled = false;
+                 console.error("Chatbot ASMX error:", status, err, xhr);
+             }
+         });
+     }
+ </script>
+
             <!-- <hr /> -->
             <footer class="footer bg-dark text-white py-4">
                 <div class="container text-center">
