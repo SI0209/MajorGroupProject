@@ -73,26 +73,51 @@ namespace DrivingSchoolWebsite
                 foreach (var faq in category.Value)
                 {
                     if (lower.Contains(faq.Key.ToLower()))
-                        return faq.Value; // Return exact FAQ answer
+                        return faq.Value;
                 }
             }
 
-            // --- 2. Prepare system prompt for Driving School AI ---
+            // --- 2. Driving School System Prompt ---
             string systemPrompt = @"
-You are a helpful assistant for a Driving School website. 
-Answer all questions based ONLY on the following information:
+You are an AI assistant for *Araf’s Driving School*.
+You must answer ONLY based on the information below:
 
-- Operating hours: Mon-Sat 11:00-17:00, Sundays & Public Holidays: Closed
-- Address: 53 Cranbrook Road, Clayfield, Phoenix, 4068
-- Services: Learning to drive light motor vehicles with our expert instructors to obtain a Code 8 licence. You can also get your Code 10 license with our comprehensive training. Ideal for those looking to drive medium-sized vehicles like minibuses and trucks.
-- Prices: Code 8: R200 per lesson, Code 10: R350 per lesson
-- Contact: 084 678 6530, arafismail075@gmail.com
+OPERATING HOURS:
+- Mon–Sat: 11:00–17:00
+- Sundays & Public Holidays: Closed
 
-Always refer to this information when answering, do not give general answers.
-If you do not know, politely tell the user to contact the school.
+ADDRESS:
+- 53 Cranbrook Road, Clayfield, Phoenix, 4068
+
+LESSON TYPES & PRICES:
+- Code 8: R200 per lesson
+- Code 10: R350 per lesson
+
+SERVICES:
+- Driving lessons for Code 8 (light motor vehicles)
+- Driving lessons for Code 10 (trucks/minibuses)
+- Test preparation
+- Assistance with booking driving tests
+- Choosing your instructor during booking
+
+CONTACT:
+- Phone: 084 678 6530
+- Email: arafismail075@gmail.com
+
+BOOKING INFO:
+- Lessons are booked ONLINE through the website
+- You must log in or register an account first
+- You can choose date, time, instructor, and licence code
+- Rescheduling allowed up to 24 hours before lesson
+
+RULES:
+- If user asks anything unrelated to driving school services, politely decline
+- Do NOT answer general knowledge questions
+- If info is not listed above, say:
+  'Please contact the driving school for more information at 084 678 6530.'
 ";
 
-            // --- 3. Call OpenAI API for unique questions ---
+            // --- 3. Call OpenAI API ---
             try
             {
                 using (var client = new HttpClient())
@@ -102,14 +127,14 @@ If you do not know, politely tell the user to contact the school.
 
                     var requestBody = new
                     {
-                        model = "gpt-3.5-turbo",
+                        model = "gpt-4o-mini",   // Stable + cheap + fast
                         messages = new[]
                         {
                     new { role = "system", content = systemPrompt },
                     new { role = "user", content = message }
                 },
                         max_tokens = 300,
-                        temperature = 0.7
+                        temperature = 0.4
                     };
 
                     var content = new StringContent(JsonConvert.SerializeObject(requestBody), Encoding.UTF8, "application/json");
@@ -125,8 +150,9 @@ If you do not know, politely tell the user to contact the school.
             catch
             {
                 // --- 4. Fallback if API fails ---
-                return "Sorry, I am having trouble answering that right now. Please try again later or contact us directly at 084 678 6530.";
+                return "Sorry, I am having trouble answering that right now. Please try again later or contact us at 084 678 6530.";
             }
         }
+
     }
 }
