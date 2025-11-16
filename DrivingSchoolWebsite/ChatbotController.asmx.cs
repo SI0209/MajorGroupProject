@@ -1,6 +1,10 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
+using System.Net.Http;
+using System.Text;
 using System.Web;
 using System.Web.Script.Services;
 using System.Web.Services;
@@ -18,35 +22,40 @@ namespace DrivingSchoolWebsite
         private static readonly Dictionary<string, List<KeyValuePair<string, string>>> FaqData =
             new Dictionary<string, List<KeyValuePair<string, string>>>()
             {
-                {
-                    "Courier", new List<KeyValuePair<string, string>>()
-                    {
-                        new KeyValuePair<string, string>("How much does courier cost?", "Prices depend on weight, dimensions and type. Check the courier page."),
-                        new KeyValuePair<string, string>("Do you ship internationally?", "Yes! We offer both domestic and international courier services.")
-                    }
-                },
-                {
-                    "Tracking", new List<KeyValuePair<string, string>>()
-                    {
-                        new KeyValuePair<string, string>("How can I track my parcel?", "Go to the main PostNet website then the Tracking page and enter your parcel number."),
-                        new KeyValuePair<string, string>("My tracking number isn't working.", "Please wait a few hours after shipment.")
-                    }
-                },
-                {
-                    "Store Information", new List<KeyValuePair<string, string>>()
-                    {
-                        new KeyValuePair<string, string>("What are your operating hours?", "Mon-Fri: 08:00-17:00, Sat: 08:00-13:00, Sun: 9:00-13:00"),
-                        new KeyValuePair<string, string>("Where are you located?", "Shop 21, 22 Kings Road Pinewalk Centre, Pinetown Durban, 3610"),
-                        new KeyValuePair<string, string>("How to contact us?", "Phone: 031 702 5687 Email: pinetown@postnet.co.za")
-                    }
-                },
-                {
-                    "Order", new List<KeyValuePair<string, string>>()
-                    {
-                        new KeyValuePair<string, string>("Why is add product not working?", "Check stock if it is more than the number of products you want to add."),
-                        new KeyValuePair<string, string>("How to cancel order?", "Please contact store to get assistance.")
-                    }
-                }
+        {
+            "Booking", new List<KeyValuePair<string, string>>()
+            {
+                new KeyValuePair<string, string>("How do I book a driving lesson?", "You can book lessons through our website by first logging in with your email and password or register an account, select 'BOOK ONLINE' and thereafter you can select your preferred date, time and instructor based on your preferred licence code."),
+                new KeyValuePair<string, string>("Can I reschedule a lesson?", "Yes! You can reschedule up to 24 hours before your lesson by logging into your account or contacting us.")
+            }
+        },
+        {
+            "Pricing", new List<KeyValuePair<string, string>>()
+            {
+                new KeyValuePair<string, string>("How much does a driving lesson cost?", "Code 8: R200 per lesson. Code 10: R350 per lesson.")
+            }
+        },
+        {
+            "Instructors", new List<KeyValuePair<string, string>>()
+            {
+                new KeyValuePair<string, string>("Who are your instructors?", "All our instructors are certified and experienced."),
+                new KeyValuePair<string, string>("Can I choose my instructor?", "Yes! During booking, you can select your preferred instructor if available.")
+            }
+        },
+        {
+            "Driving Test", new List<KeyValuePair<string, string>>()
+            {
+                new KeyValuePair<string, string>("Do you provide test preparation?", "Yes, we offer driving test preparation lessons tailored to your local licensing requirements."),
+                new KeyValuePair<string, string>("Can you help me book my driving test?", "We guide you on booking your test, and we can book with the local licensing authority directly for you if need be.")
+            }
+        },
+        {
+            "General", new List<KeyValuePair<string, string>>()
+            {
+                new KeyValuePair<string, string>("What are your operating hours?", "Mon-Sat: 11:00-17:00, Sundays & Public Holidays: Closed"),
+                new KeyValuePair<string, string>("How can I contact the driving school?", "Phone: 084 678 6530 Email: arafismail075@gmail.com")
+            }
+        }
             };
 
         [WebMethod]
@@ -54,33 +63,70 @@ namespace DrivingSchoolWebsite
         public string Ask(string message)
         {
             if (string.IsNullOrWhiteSpace(message))
-                return "Please enter a message.";
+                return "Please enter a message so I can assist you.";
 
             string lower = message.ToLower();
 
-            // Search in FAQ
+            // --- 1. Check FAQ dictionary first ---
             foreach (var category in FaqData)
             {
                 foreach (var faq in category.Value)
                 {
                     if (lower.Contains(faq.Key.ToLower()))
-                        return faq.Value;
+                        return faq.Value; // Return exact FAQ answer
                 }
             }
 
-            // Fallback
-            return GenerateFallbackResponse(lower);
-        }
+            // --- 2. Prepare system prompt for Driving School AI ---
+            string systemPrompt = @"
+You are a helpful assistant for a Driving School website. 
+Answer all questions based ONLY on the following information:
 
-        private string GenerateFallbackResponse(string msg)
-        {
-            if (msg.Contains("hello") || msg.Contains("hi"))
-                return "Hello! How can I assist you today?";
+- Operating hours: Mon-Sat 11:00-17:00, Sundays & Public Holidays: Closed
+- Address: 53 Cranbrook Road, Clayfield, Phoenix, 4068
+- Services: Learning to drive light motor vehicles with our expert instructors to obtain a Code 8 licence. You can also get your Code 10 license with our comprehensive training. Ideal for those looking to drive medium-sized vehicles like minibuses and trucks.
+- Prices: Code 8: R200 per lesson, Code 10: R350 per lesson
+- Contact: 084 678 6530, arafismail075@gmail.com
 
-            if (msg.Contains("price"))
-                return "Pricing depends on the service. Please specify what you want a price for.";
+Always refer to this information when answering, do not give general answers.
+If you do not know, politely tell the user to contact the school.
+";
 
-            return "I'm not sure about that, but you can call us at 031 702 5687 or email pinetown@postnet.co.za.";
+            // --- 3. Call OpenAI API for unique questions ---
+            try
+            {
+                using (var client = new HttpClient())
+                {
+                    string apiKey = ConfigurationManager.AppSettings["OpenAIKey"];
+                    client.DefaultRequestHeaders.Add("Authorization", $"Bearer {apiKey}");
+
+                    var requestBody = new
+                    {
+                        model = "gpt-3.5-turbo",
+                        messages = new[]
+                        {
+                    new { role = "system", content = systemPrompt },
+                    new { role = "user", content = message }
+                },
+                        max_tokens = 300,
+                        temperature = 0.7
+                    };
+
+                    var content = new StringContent(JsonConvert.SerializeObject(requestBody), Encoding.UTF8, "application/json");
+                    var response = client.PostAsync("https://api.openai.com/v1/chat/completions", content).Result;
+                    var responseJson = response.Content.ReadAsStringAsync().Result;
+
+                    dynamic result = JsonConvert.DeserializeObject(responseJson);
+                    string aiReply = result.choices[0].message.content;
+
+                    return aiReply.Trim();
+                }
+            }
+            catch
+            {
+                // --- 4. Fallback if API fails ---
+                return "Sorry, I am having trouble answering that right now. Please try again later or contact us directly at 084 678 6530.";
+            }
         }
     }
 }

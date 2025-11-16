@@ -195,7 +195,7 @@
      function showTyping() {
          const chatBody = document.getElementById("chat-body");
          // give typing element an id so we can remove it
-         chatBody.innerHTML += `<div class='bot typing' id='typingIndicator'><span>PostNet Assistant is typing…</span></div>`;
+         chatBody.innerHTML += `<div class='bot typing' id='typingIndicator'><span>Araf's Driving School Assistant is typing…</span></div>`;
          chatBody.scrollTop = chatBody.scrollHeight;
      }
 
