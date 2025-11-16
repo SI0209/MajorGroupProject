@@ -128,7 +128,37 @@
                 </div>
             </div>
         </nav>
+        <div id="chatbot-bubble" onclick="toggleChatbot()">💬</div>
 
+      <div id="chat-window">
+
+          <div id="chat-header">Driving School Assistant</div>
+
+          <div id="chat-body">
+
+              <div id="chat-menu">
+
+                  <p id="greeting"></p>
+
+                  <p>How can I help you today?</p>
+
+                  <button class="menu-btn" onclick="showFaqCategories()">📖 See FAQ</button>
+
+                  <button class="menu-btn" onclick="startChat()">💬 Ask a unique question</button>
+
+              </div>
+
+          </div>
+
+          <div id="chat-input" style="display:none;">
+
+              <input type="text" id="userMessage" placeholder="Type a message..." />
+
+              <button type="button" onclick="sendMessage()">Send</button>
+
+          </div>
+
+      </div>
         <div class="container-fluid body-content mt-0">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
@@ -138,7 +168,6 @@
                     <p>&copy; <%: DateTime.Now.Year %> Araf's Driving School. All rights reserved.</p>
                 </div>
             </footer>
-
         </div>
     </form>
     <asp:PlaceHolder runat="server">

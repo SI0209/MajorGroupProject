@@ -128,17 +128,184 @@
                 </div>
             </div>
         </nav>
-
+       
         <div class="container-fluid body-content mt-0">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
+              <div id="chatbot-bubble" onclick="toggleChatbot()">💬</div>
+
+<div id="chat-window">
+
+    <div id="chat-header">Driving School Assistant</div>
+
+    <div id="chat-body">
+
+        <div id="chat-menu">
+
+            <p id="greeting"></p>
+
+            <p>How can I help you today?</p>
+
+            <button class="menu-btn" onclick="showFaqCategories()">📖 See FAQ</button>
+
+            <button class="menu-btn" onclick="startChat()">💬 Ask a unique question</button>
+
+        </div>
+
+    </div>
+
+    <div id="chat-input" style="display:none;">
+
+        <input type="text" id="userMessage" placeholder="Type a message..." />
+
+        <button type="button" onclick="sendMessage()">Send</button>
+
+    </div>
+
+</div>
+            <script>
+
+          // Your existing chatbot script here
+
+          let mode = "menu";
+
+          let currentCategory = null;
+
+          const faqData = {
+
+              /*"Courier": [
+
+                  { q: "How much does courier cost?", a: "Prices depend on weight, dimensions and type. Check the courier page." },
+
+                  { q: "Do you ship internationally?", a: "Yes! We offer both domestic and international courier services." }
+
+              ],
+
+              /*"Tracking": [
+
+                  { q: "How can I track my parcel?", a: "Go to the main postnet website then go to the Tracking page and enter your parcel number." },
+
+                  { q: "My tracking number isn't working.", a: "Please wait a few hours after shipment." }
+
+              ],*/
+
+              "Store Information": [
+
+                  { q: "What are your operating hours?", a: "Mon-Sat: 11:00-17:00, Sundays & Public Holiday: Closed" },
+
+                  { q: "Where are you located?", a: "53 Cranbrook Road, Clayfield, Phoenix, 4068" },
+
+                  { q: "How to contact us?", a: "Phone: 031 702 5687 Email: pinetown@postnet.co.za" }
+
+              ],
+
+              /*"Order": [
+
+                  { q: "Why is add product not working?", a: "Check stock if it is more than the number of products you want to add." },
+
+                  { q: "How to cancel order?", a: "Please contact store to get assistance." }
+
+              ]*/
+
+          };
+
+ 
+
+          function toggleChatbot() {
+
+              const chat = document.getElementById("chat-window");
+
+              if (chat.style.display === "none" || chat.style.display === "") {
+
+                  chat.style.display = "flex"; showGreeting();
+
+              } else { chat.style.display = "none"; }
+
+          }
+
+ 
+
+          function showGreeting() {
+
+              const hour = new Date().getHours();
+
+              const greeting = hour < 12 ? "Good morning!" : hour < 18 ? "Good afternoon!" : "Good evening!";
+
+              document.getElementById("greeting").innerText = `${greeting} 👋`;
+
+          }
+
+ 
+
+          function backToMainMenu() {
+
+              const chatBody = document.getElementById("chat-body");
+
+              const chatInput = document.getElementById("chat-input");
+
+              mode = "menu"; chatInput.style.display = "none";
+
+              chatBody.innerHTML = `<div id="chat-menu"><p id="greeting"></p><p>How can I help you today?</p><button class="menu-btn" onclick="showFaqCategories()">📖 See FAQ</button><button class="menu-btn" onclick="startChat()">💬 Ask a unique question</button></div>`;
+
+              showGreeting();
+
+          }
+
+ 
+
+          function startChat() {
+
+              const chatBody = document.getElementById("chat-body");
+
+              const chatInput = document.getElementById("chat-input");
+
+              mode = "chat"; chatInput.style.display = "flex";
+
+              chatBody.innerHTML = `<div class='bot'><img src='https://cdn-icons-png.flaticon.com/512/4712/4712027.png' width='28'/> <span>You're now in unique question mode.</span></div>`;
+
+          }
+
+ 
+
+          function showFaqCategories() {
+
+              const chatBody = document.getElementById("chat-body");
+
+              const chatInput = document.getElementById("chat-input"); mode = "faq"; chatInput.style.display = "none";
+
+              chatBody.innerHTML = `<div class='bot'><span>Choose a category:</span></div>`;
+
+              for (let category in faqData) chatBody.innerHTML += `<div class='faq-category' onclick="showCategory('${category}')">📁 ${category}</div>`;
+
+              chatBody.innerHTML += `<button class='back-btn' onclick='backToMainMenu()'>⬅️ Back</button>`;
+
+          }
+
+ 
+
+          function showCategory(category) {
+
+              const chatBody = document.getElementById("chat-body");
+
+              chatBody.innerHTML = `<div class='bot'><strong>${category} FAQs</strong></div>`;
+
+              faqData[category].forEach((item, i) => {
+
+                  chatBody.innerHTML += `<div class='faq-item'><strong>❓ ${item.q}</strong><div class='faq-answer'>${item.a}</div></div>`;
+
+              });
+
+              chatBody.innerHTML += `<button class='back-btn' onclick='showFaqCategories()'>⬅️ Back</button>`;
+
+          }
+
+            </script>
             <!-- <hr /> -->
             <footer class="footer bg-dark text-white py-4">
                 <div class="container text-center">
                     <p>&copy; <%: DateTime.Now.Year %> Araf's Driving School. All rights reserved.</p>
                 </div>
             </footer>
-
         </div>
     </form>
     <asp:PlaceHolder runat="server">
