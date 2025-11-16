@@ -255,12 +255,14 @@
                 </div>
             </div>
         </nav>
+        <div class="container body-content">
+    <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        </div>
             <footer class="footer bg-dark text-white py-4">
                 <div class="container text-center">
                     <p>&copy; <%: DateTime.Now.Year %> Araf's Driving School. All rights reserved.</p>
                 </div>
             </footer>
-        </div>
         <!-- Floating Chat Button -->
 <div id="chatbot-button">
     <i class="fa fa-comments"></i>
