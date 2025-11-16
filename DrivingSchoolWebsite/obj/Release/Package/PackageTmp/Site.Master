@@ -135,17 +135,7 @@
             <!-- <hr /> -->
             <footer class="footer bg-dark text-white py-4">
                 <div class="container text-center">
-                    <p>Connect with us:</p>
-                    <a href="https://www.instagram.com/yourprofile" target="_blank" class="text-white me-3">
-                        <i class="fab fa-instagram"></i> Instagram
-                    </a>
-                    <a href="https://www.facebook.com/yourprofile" target="_blank" class="text-white me-3">
-                        <i class="fab fa-facebook"></i> Facebook
-                    </a>
-                    <a href="https://www.twitter.com/yourprofile" target="_blank" class="text-white me-3">
-                        <i class="fab fa-twitter"></i> Twitter
-                    </a>
-                    <p class="mt-3">© 2025 Araf's Driving School. All rights reserved.</p>
+                    <p>&copy; <%: DateTime.Now.Year %> Araf's Driving School. All rights reserved.</p>
                 </div>
             </footer>
 

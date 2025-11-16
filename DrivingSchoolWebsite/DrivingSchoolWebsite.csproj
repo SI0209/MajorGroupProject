@@ -186,6 +186,7 @@
     <Content Include="Admin\UnavailableSlots.aspx" />
     <Content Include="Admin\ViewLessonSchedule.aspx" />
     <Content Include="Admin\ViewReports.aspx" />
+    <Content Include="ArafDrivingSchoo.ico" />
     <Content Include="Client\ClientBookingOnline.aspx" />
     <Content Include="Client\ClientPage.aspx" />
     <Content Include="Client\ClientViewLessonSchedule.aspx" />
@@ -268,7 +269,7 @@
     <Content Include="Admin\Web.config" />
     <Content Include="Client\Web.config" />
     <Content Include="Instructor\Web.config" />
-    <None Include="Properties\PublishProfiles\IST-WST-Group2 - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\IST-WST-Group-2 - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />
@@ -693,6 +694,9 @@
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>ArafDrivingSchoo.ico</ApplicationIcon>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />

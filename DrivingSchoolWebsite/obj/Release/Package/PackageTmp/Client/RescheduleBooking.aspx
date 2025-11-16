@@ -26,8 +26,6 @@
                         <asp:BoundField DataField="Booking_Date" DataFormatString="{0:d}" HeaderText="Booking_Date" SortExpression="Booking_Date" />
                         <asp:BoundField DataField="Booking_StartTime" HeaderText="Booking_StartTime" SortExpression="Booking_StartTime" />
                         <asp:BoundField DataField="Booking_EndTime" HeaderText="Booking_EndTime" SortExpression="Booking_EndTime" />
-                        <asp:BoundField DataField="Booking_TotalCost" HeaderText="Booking_TotalCost" SortExpression="Booking_TotalCost" />
-                        <asp:BoundField DataField="Booking_FeeDue" HeaderText="Booking_FeeDue" SortExpression="Booking_FeeDue" />
                         <asp:BoundField DataField="Employee_Name" HeaderText="Employee_Name" SortExpression="Employee_Name" />
                         <asp:BoundField DataField="Employee_Surname" HeaderText="Employee_Surname" SortExpression="Employee_Surname" />
                         <asp:BoundField DataField="Vehicle_Make" HeaderText="Vehicle_Make" SortExpression="Vehicle_Make" />
@@ -245,7 +243,7 @@
                 runat="server" 
                 ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" 
                 DeleteCommand="DELETE FROM tblBooking WHERE (BookingID = @BookingID)" 
-                InsertCommand="INSERT INTO [tblBooking] ([Booking_Date], [Booking_StartTime], [Booking_EndTime], [Booking_Status], [LearnerID], [Code_Type], [VehicleID], [EmployeeID]) VALUES (@Booking_Date, @Booking_StartTime, @Booking_EndTime, @Booking_Status, @Booking_TotalCost, @Booking_FeeDue, @LearnerID, @Code_Type, @VehicleID, @EmployeeID)" 
+                InsertCommand="INSERT INTO [tblBooking] ([Booking_Date], [Booking_StartTime], [Booking_EndTime], [Booking_Status], [LearnerID], [Code_Type], [VehicleID], [EmployeeID]) VALUES (@Booking_Date, @Booking_StartTime, @Booking_EndTime, @Booking_Status, @LearnerID, @Code_Type, @VehicleID, @EmployeeID)" 
                 OldValuesParameterFormatString="original_{0}" 
                 SelectCommand="SELECT * FROM [tblBooking]" 
                 UpdateCommand="UPDATE tblBooking SET Booking_Date = @Booking_Date, Booking_StartTime = @Booking_StartTime, Booking_EndTime = @Booking_EndTime, VehicleID = @VehicleID, EmployeeID = @Employee_ID WHERE (BookingID = @BookingID)">
@@ -268,8 +266,6 @@
                     <asp:ControlParameter ControlID="bookingDate" Name="Booking_Date" PropertyName="Text" />
                     <asp:Parameter Name="Booking_StartTime" />
                     <asp:Parameter Name="Booking_EndTime" />
-                    <asp:Parameter Name="Booking_TotalCost" />
-                    <asp:Parameter Name="Booking_FeeDue" />
                     <asp:ControlParameter ControlID="vehicleDropDownList" Name="VehicleID" PropertyName="SelectedValue" />
                     <asp:ControlParameter ControlID="instructorDropDownList" Name="Employee_ID" PropertyName="SelectedValue" />
                     <asp:Parameter Name="BookingID" />
@@ -297,10 +293,10 @@
                 runat="server" 
                 ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" 
                 DeleteCommand="DELETE FROM [tblBooking] WHERE [BookingID] = @BookingID" 
-                InsertCommand="INSERT INTO [tblBooking] ([Booking_Date], [Booking_StartTime], [Booking_EndTime], [Booking_Status], [LearnerID], [Code_Type], [VehicleID], [EmployeeID]) VALUES (@Booking_Date, @Booking_StartTime, @Booking_EndTime, @Booking_Status, @Booking_TotalCost, @Booking_FeeDue, @LearnerID, @Code_Type, @VehicleID, @EmployeeID)" 
+                InsertCommand="INSERT INTO [tblBooking] ([Booking_Date], [Booking_StartTime], [Booking_EndTime], [Booking_Status], [LearnerID], [Code_Type], [VehicleID], [EmployeeID]) VALUES (@Booking_Date, @Booking_StartTime, @Booking_EndTime, @Booking_Status, @LearnerID, @Code_Type, @VehicleID, @EmployeeID)" 
                 OldValuesParameterFormatString="original_{0}" 
                 SelectCommand="SELECT * FROM [tblBooking]" 
-                UpdateCommand="UPDATE [tblBooking] SET [Booking_Date] = @Booking_Date, [Booking_StartTime] = @Booking_StartTime, [Booking_EndTime] = @Booking_EndTime, [Booking_Status] = @Booking_Status, [LearnerID] = @LearnerID, [Code_Type] = @Code_Type, [VehicleID] = @VehicleID, [EmployeeID] = @EmployeeID WHERE [BookingID] = @original_BookingID AND [Booking_Date] = @original_Booking_Date AND [Booking_StartTime] = @original_Booking_StartTime AND [Booking_EndTime] = @original_Booking_EndTime AND [Booking_Status] = @original_Booking_Status AND [Booking_TotalCost] = @original_Booking_TotalCost AND [Booking_FeeDue] = @original_Booking_FeeDue AND [LearnerID] = @original_LearnerID AND [Code_Type] = @original_Code_Type AND [VehicleID] = @original_VehicleID AND [EmployeeID] = @original_EmployeeID">
+                UpdateCommand="UPDATE [tblBooking] SET [Booking_Date] = @Booking_Date, [Booking_StartTime] = @Booking_StartTime, [Booking_EndTime] = @Booking_EndTime, [Booking_Status] = @Booking_Status, [LearnerID] = @LearnerID, [Code_Type] = @Code_Type, [VehicleID] = @VehicleID, [EmployeeID] = @EmployeeID WHERE [BookingID] = @original_BookingID AND [Booking_Date] = @original_Booking_Date AND [Booking_StartTime] = @original_Booking_StartTime AND [Booking_EndTime] = @original_Booking_EndTime AND [Booking_Status] = @original_Booking_Status AND [LearnerID] = @original_LearnerID AND [Code_Type] = @original_Code_Type AND [VehicleID] = @original_VehicleID AND [EmployeeID] = @original_EmployeeID">
                 <DeleteParameters>
                     <asp:ControlParameter ControlID="gvBookingDetails" Name="BookingID" PropertyName="SelectedValue" />
                 </DeleteParameters>
@@ -309,8 +305,6 @@
                     <asp:Parameter DbType="Time" Name="Booking_StartTime" />
                     <asp:Parameter DbType="Time" Name="Booking_EndTime" />
                     <asp:Parameter Name="Booking_Status" Type="String" />
-                    <asp:Parameter Name="Booking_TotalCost" Type="Decimal" />
-                    <asp:Parameter Name="Booking_FeeDue" Type="Decimal" />
                     <asp:Parameter Name="LearnerID" Type="String" />
                     <asp:Parameter Name="Code_Type" Type="Int32" />
                     <asp:Parameter Name="VehicleID" Type="Int32" />
@@ -321,8 +315,6 @@
                     <asp:Parameter DbType="Time" Name="Booking_StartTime" />
                     <asp:Parameter DbType="Time" Name="Booking_EndTime" />
                     <asp:Parameter Name="Booking_Status" Type="String" />
-                    <asp:Parameter Name="Booking_TotalCost" Type="Decimal" />
-                    <asp:Parameter Name="Booking_FeeDue" Type="Decimal" />
                     <asp:Parameter Name="LearnerID" Type="String" />
                     <asp:Parameter Name="Code_Type" Type="Int32" />
                     <asp:Parameter Name="VehicleID" Type="Int32" />
@@ -332,8 +324,6 @@
                     <asp:Parameter DbType="Time" Name="original_Booking_StartTime" />
                     <asp:Parameter DbType="Time" Name="original_Booking_EndTime" />
                     <asp:Parameter Name="original_Booking_Status" Type="String" />
-                    <asp:Parameter Name="original_Booking_TotalCost" Type="Decimal" />
-                    <asp:Parameter Name="original_Booking_FeeDue" Type="Decimal" />
                     <asp:Parameter Name="original_LearnerID" Type="String" />
                     <asp:Parameter Name="original_Code_Type" Type="Int32" />
                     <asp:Parameter Name="original_VehicleID" Type="Int32" />
