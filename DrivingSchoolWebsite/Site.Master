@@ -320,7 +320,7 @@
             input.value = "";
 
             // Call ASMX
-            fetch('/ChatbotService.asmx/Ask', {
+            fetch('/ChatbotController.asmx/Ask', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
