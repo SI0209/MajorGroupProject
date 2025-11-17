@@ -51,7 +51,6 @@ namespace DrivingSchoolWebsite.Client
         }
         protected void SubmitButton_Click(object sender, EventArgs e)
         {
-            decimal pricePerHour = 0;
             int startTime = Convert.ToInt32(TimeSlotDropDown.Text.Substring(0, 2));
             int endTime = Convert.ToInt32(DropDownList1.Text.Substring(0, 2));
             TimeSpan tStartTime = TimeSpan.FromHours(startTime);
