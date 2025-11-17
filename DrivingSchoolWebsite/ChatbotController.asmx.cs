@@ -60,7 +60,7 @@ namespace DrivingSchoolWebsite
 
         [WebMethod]
         [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
-        public string Ask(string message)
+        public static string Ask(string message)
         {
             if (string.IsNullOrWhiteSpace(message))
                 return "Please enter a message so I can assist you.";
