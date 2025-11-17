@@ -17,7 +17,7 @@ namespace DrivingSchoolWebsite
     [WebService(Namespace = "http://tempuri.org/")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [ScriptService]
-    public class ChatbotService : WebService
+    public class ChatbotController : WebService
     {
         private static readonly Dictionary<string, List<KeyValuePair<string, string>>> FaqData =
             new Dictionary<string, List<KeyValuePair<string, string>>>()
@@ -59,7 +59,7 @@ namespace DrivingSchoolWebsite
             };
 
         [WebMethod]
-        [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
+        [ScriptMethod(ResponseFormat = ResponseFormat.Xml)]
         public string Ask(string message)
         {
             if (string.IsNullOrWhiteSpace(message))

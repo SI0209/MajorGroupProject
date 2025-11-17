@@ -267,7 +267,7 @@
                     <p>&copy; <%: DateTime.Now.Year %> Araf's Driving School. All rights reserved.</p>
                 </div>
             </footer>
-        <!-- Floating Chat Button -->
+<!-- Floating Chat Button -->
 <div id="chatbot-button">
     <i class="fa fa-comments"></i>
 </div>
@@ -276,14 +276,14 @@
 <div id="chatbot-window">
     <div id="chatbot-header">
         <span>Driving School Assistant</span>
-        <button id="chatbot-close">×</button>
+        <button id="chatbot-close" type="button">×</button>
     </div>
 
     <div id="chatbot-messages"></div>
 
     <div id="chatbot-input-area">
         <input type="text" id="chatbot-input" placeholder="Type your message..." />
-        <button id="chatbot-send">
+        <button id="chatbot-send" type="button">
             <i class="fa fa-paper-plane"></i>
         </button>
     </div>
@@ -292,53 +292,68 @@
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/Scripts/bootstrap.js") %>
     </asp:PlaceHolder>
-    <script>
-        const btn = document.getElementById("chatbot-button");
-        const win = document.getElementById("chatbot-window");
-        const closeBtn = document.getElementById("chatbot-close");
-        const input = document.getElementById("chatbot-input");
-        const send = document.getElementById("chatbot-send");
-        const messages = document.getElementById("chatbot-messages");
+<script>
+    const btn = document.getElementById("chatbot-button");
+    const win = document.getElementById("chatbot-window");
+    const closeBtn = document.getElementById("chatbot-close");
+    const input = document.getElementById("chatbot-input");
+    const send = document.getElementById("chatbot-send");
+    const messages = document.getElementById("chatbot-messages");
 
-        // Toggle window
-        btn.onclick = () => win.style.display = "flex";
-        closeBtn.onclick = () => win.style.display = "none";
+    btn.onclick = () => win.style.display = "flex";
+    closeBtn.onclick = () => win.style.display = "none";
 
-        function addMessage(text, sender) {
-            const msg = document.createElement("div");
-            msg.className = sender === "user" ? "msg-user" : "msg-bot";
-            msg.innerText = text;
-            messages.appendChild(msg);
-            messages.scrollTop = messages.scrollHeight;
-        }
+    function addMessage(text, sender) {
+        const msg = document.createElement("div");
+        msg.className = sender === "user" ? "msg-user" : "msg-bot";
+        msg.innerText = text;
+        messages.appendChild(msg);
+        messages.scrollTop = messages.scrollHeight;
+    }
 
-        function sendMessage() {
-            const text = input.value.trim();
-            if (text === "") return;
+    function sendMessage() {
+        const text = input.value.trim();
+        if (text === "") return;
 
-            addMessage(text, "user");
-            input.value = "";
+        addMessage(text, "user");
+        input.value = "";
 
-            // Call ASMX
-            fetch('/ChatbotService.asmx/Ask', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ message: text })
+        fetch('/ChatbotController.asmx/Ask', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json; charset=utf-8'
+            },
+            body: JSON.stringify({ message: text })
+        })
+            .then(res => res.text())
+            .then(xml => new DOMParser().parseFromString(xml, "text/xml"))
+            .then(data => {
+                const node = data.getElementsByTagName("string")[0];
+                if (!node) {
+                    addMessage("⚠️ Error reading response.", "bot");
+                    return;
+                }
+                addMessage(node.innerHTML, "bot");
             })
-                .then(res => res.text())
-                .then(xml => new DOMParser().parseFromString(xml, "text/xml"))
-                .then(data => {
-                    const reply = data.getElementsByTagName("string")[0].innerHTML;
-                    addMessage(reply, "bot");
-                });
-        }
+            .catch(err => {
+                addMessage("⚠️ Server error.", "bot");
+                console.error(err);
+            });
+    }
 
-        send.onclick = sendMessage;
-        input.addEventListener("keypress", e => {
-            if (e.key === "Enter") sendMessage();
-        });
-    </script>
+    // 🔥 PREVENT ASP.NET POSTBACK
+    send.onclick = (e) => {
+        e.preventDefault();
+        sendMessage();
+    };
+
+    input.addEventListener("keypress", e => {
+        if (e.key === "Enter") {
+            e.preventDefault();
+            sendMessage();
+        }
+    });
+</script>
+
 </body>
 </html>
