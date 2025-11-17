@@ -292,68 +292,7 @@
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/Scripts/bootstrap.js") %>
     </asp:PlaceHolder>
-<script>
-    const btn = document.getElementById("chatbot-button");
-    const win = document.getElementById("chatbot-window");
-    const closeBtn = document.getElementById("chatbot-close");
-    const input = document.getElementById("chatbot-input");
-    const send = document.getElementById("chatbot-send");
-    const messages = document.getElementById("chatbot-messages");
-
-    btn.onclick = () => win.style.display = "flex";
-    closeBtn.onclick = () => win.style.display = "none";
-
-    function addMessage(text, sender) {
-        const msg = document.createElement("div");
-        msg.className = sender === "user" ? "msg-user" : "msg-bot";
-        msg.innerText = text;
-        messages.appendChild(msg);
-        messages.scrollTop = messages.scrollHeight;
-    }
-
-    function sendMessage() {
-        const text = input.value.trim();
-        if (text === "") return;
-
-        addMessage(text, "user");
-        input.value = "";
-
-        fetch('/ChatbotController.asmx/Ask', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json; charset=utf-8'
-            },
-            body: JSON.stringify({ message: text })
-        })
-            .then(res => res.text())
-            .then(xml => new DOMParser().parseFromString(xml, "text/xml"))
-            .then(data => {
-                const node = data.getElementsByTagName("string")[0];
-                if (!node) {
-                    addMessage("⚠️ Error reading response.", "bot");
-                    return;
-                }
-                addMessage(node.innerHTML, "bot");
-            })
-            .catch(err => {
-                addMessage("⚠️ Server error.", "bot");
-                console.error(err);
-            });
-    }
-
-    // 🔥 PREVENT ASP.NET POSTBACK
-    send.onclick = (e) => {
-        e.preventDefault();
-        sendMessage();
-    };
-
-    input.addEventListener("keypress", e => {
-        if (e.key === "Enter") {
-            e.preventDefault();
-            sendMessage();
-        }
-    });
-</script>
-
+    <script src="~/Scripts/chat.js"></script>
+<script src="~/Scripts/chat-fetch.js"></script>
 </body>
 </html>
