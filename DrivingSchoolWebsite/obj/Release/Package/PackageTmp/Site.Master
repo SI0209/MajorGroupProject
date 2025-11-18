@@ -291,69 +291,78 @@
 </div>
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/Scripts/bootstrap.js") %>
-    </asp:PlaceHolder>
-<script>
+    </asp:PlaceHolder><script>
     const btn = document.getElementById("chatbot-button");
     const win = document.getElementById("chatbot-window");
     const closeBtn = document.getElementById("chatbot-close");
-    const input = document.getElementById("chatbot-input");
-    const send = document.getElementById("chatbot-send");
     const messages = document.getElementById("chatbot-messages");
 
+    // Open / close chatbot
     btn.onclick = () => win.style.display = "flex";
     closeBtn.onclick = () => win.style.display = "none";
 
-    function addMessage(text, sender) {
-        const msg = document.createElement("div");
-        msg.className = sender === "user" ? "msg-user" : "msg-bot";
-        msg.innerText = text;
-        messages.appendChild(msg);
-        messages.scrollTop = messages.scrollHeight;
-    }
-
-    function sendMessage() {
-        const text = input.value.trim();
-        if (text === "") return;
-
-        addMessage(text, "user");
-        input.value = "";
-
-        fetch('/ChatbotController.asmx/Ask', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json; charset=utf-8'
-            },
-            body: JSON.stringify({ message: text })
-        })
-            .then(res => res.text())
-            .then(xml => new DOMParser().parseFromString(xml, "text/xml"))
-            .then(data => {
-                const node = data.getElementsByTagName("string")[0];
-                if (!node) {
-                    addMessage("⚠️ Error reading response.", "bot");
-                    return;
-                }
-                addMessage(node.innerHTML, "bot");
-            })
-            .catch(err => {
-                addMessage("⚠️ Server error.", "bot");
-                console.error(err);
-            });
-    }
-
-    // 🔥 PREVENT ASP.NET POSTBACK
-    send.onclick = (e) => {
-        e.preventDefault();
-        sendMessage();
-    };
-
-    input.addEventListener("keypress", e => {
-        if (e.key === "Enter") {
-            e.preventDefault();
-            sendMessage();
+    // Load FAQs from ASMX
+    fetch("/ChatbotController.asmx/GetFaq", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
         }
-    });
-</script>
+    })
+    .then(res => res.text())
+    .then(xml => new DOMParser().parseFromString(xml, "text/xml"))
+    .then(data => {
+        let json = data.getElementsByTagName("string")[0].innerHTML;
+        let faq = JSON.parse(json);
 
+        buildFaqUI(faq);
+    });
+
+    function buildFaqUI(faq) {
+        messages.innerHTML = ""; // Clear previous
+
+        Object.keys(faq).forEach(category => {
+            // Category Header
+            const cat = document.createElement("div");
+            cat.className = "faq-category";
+            cat.innerHTML = `<b>▶ ${category}</b>`;
+            messages.appendChild(cat);
+
+            // Questions container (hidden until clicked)
+            const qContainer = document.createElement("div");
+            qContainer.className = "faq-questions";
+            qContainer.style.display = "none";
+
+            faq[category].forEach(pair => {
+                const q = document.createElement("div");
+                q.className = "faq-question";
+                q.innerText = pair.Key;
+
+                const a = document.createElement("div");
+                a.className = "faq-answer";
+                a.innerHTML = pair.Value;
+                a.style.display = "none";
+
+                // Show/hide answer
+                q.onclick = () => {
+                    a.style.display = a.style.display === "none" ? "block" : "none";
+                };
+
+                qContainer.appendChild(q);
+                qContainer.appendChild(a);
+            });
+
+            // Toggle show/hide questions
+            cat.onclick = () => {
+                const isOpen = qContainer.style.display === "block";
+                qContainer.style.display = isOpen ? "none" : "block";
+                cat.innerHTML = isOpen
+                    ? `<b>▶ ${category}</b>`
+                    : `<b>▼ ${category}</b>`;
+            };
+
+            messages.appendChild(qContainer);
+        });
+    }
+    </script>
 </body>
 </html>
