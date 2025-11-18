@@ -291,8 +291,78 @@
 </div>
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/Scripts/bootstrap.js") %>
-    </asp:PlaceHolder>
-    <script src="~/Scripts/chat.js"></script>
-<script src="~/Scripts/chat-fetch.js"></script>
+    </asp:PlaceHolder><script>
+    const btn = document.getElementById("chatbot-button");
+    const win = document.getElementById("chatbot-window");
+    const closeBtn = document.getElementById("chatbot-close");
+    const messages = document.getElementById("chatbot-messages");
+
+    // Open / close chatbot
+    btn.onclick = () => win.style.display = "flex";
+    closeBtn.onclick = () => win.style.display = "none";
+
+    // Load FAQs from ASMX
+    fetch("/ChatbotController.asmx/GetFaq", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        }
+    })
+    .then(res => res.text())
+    .then(xml => new DOMParser().parseFromString(xml, "text/xml"))
+    .then(data => {
+        let json = data.getElementsByTagName("string")[0].innerHTML;
+        let faq = JSON.parse(json);
+
+        buildFaqUI(faq);
+    });
+
+    function buildFaqUI(faq) {
+        messages.innerHTML = ""; // Clear previous
+
+        Object.keys(faq).forEach(category => {
+            // Category Header
+            const cat = document.createElement("div");
+            cat.className = "faq-category";
+            cat.innerHTML = `<b>▶ ${category}</b>`;
+            messages.appendChild(cat);
+
+            // Questions container (hidden until clicked)
+            const qContainer = document.createElement("div");
+            qContainer.className = "faq-questions";
+            qContainer.style.display = "none";
+
+            faq[category].forEach(pair => {
+                const q = document.createElement("div");
+                q.className = "faq-question";
+                q.innerText = pair.Key;
+
+                const a = document.createElement("div");
+                a.className = "faq-answer";
+                a.innerHTML = pair.Value;
+                a.style.display = "none";
+
+                // Show/hide answer
+                q.onclick = () => {
+                    a.style.display = a.style.display === "none" ? "block" : "none";
+                };
+
+                qContainer.appendChild(q);
+                qContainer.appendChild(a);
+            });
+
+            // Toggle show/hide questions
+            cat.onclick = () => {
+                const isOpen = qContainer.style.display === "block";
+                qContainer.style.display = isOpen ? "none" : "block";
+                cat.innerHTML = isOpen
+                    ? `<b>▶ ${category}</b>`
+                    : `<b>▼ ${category}</b>`;
+            };
+
+            messages.appendChild(qContainer);
+        });
+    }
+    </script>
 </body>
 </html>

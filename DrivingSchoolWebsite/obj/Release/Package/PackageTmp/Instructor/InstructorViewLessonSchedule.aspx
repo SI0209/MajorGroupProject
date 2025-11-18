@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server"> 
 
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT e.Employee_Name, e.Employee_Surname, b.BookingID, b.Booking_Date, b.Booking_StartTime, b.Booking_EndTime, b.Booking_TotalCost, learner.FirstName, learner.LastName, u.Id, b.VehicleID, tblVehicle.Vehicle_NumberPlate, tblVehicle.Vehicle_Make, tblVehicle.Vehicle_Model FROM AspNetUsers AS u INNER JOIN tblEmployee AS e ON u.Email = e.Employee_Username INNER JOIN tblBooking AS b ON e.EmployeeID = b.EmployeeID INNER JOIN tblVehicle ON b.VehicleID = tblVehicle.VehicleID LEFT OUTER JOIN AspNetUsers AS learner ON b.LearnerID = learner.Id WHERE (u.Id = @UserId) AND (@SelectedDate IS NULL) OR (u.Id = @UserId) AND (b.Booking_Date = @SelectedDate) ORDER BY b.Booking_Date DESC">
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT e.Employee_Name, e.Employee_Surname, b.BookingID, b.Booking_Date, b.Booking_StartTime, b.Booking_EndTime, learner.FirstName, learner.LastName, u.Id, b.VehicleID, tblVehicle.Vehicle_NumberPlate, tblVehicle.Vehicle_Make, tblVehicle.Vehicle_Model FROM AspNetUsers AS u INNER JOIN tblEmployee AS e ON u.Email = e.Employee_Username INNER JOIN tblBooking AS b ON e.EmployeeID = b.EmployeeID INNER JOIN tblVehicle ON b.VehicleID = tblVehicle.VehicleID LEFT OUTER JOIN AspNetUsers AS learner ON b.LearnerID = learner.Id WHERE (u.Id = @UserId) AND (@SelectedDate IS NULL) OR (u.Id = @UserId) AND (b.Booking_Date = @SelectedDate) ORDER BY b.Booking_Date DESC">
         <SelectParameters>
             <asp:ControlParameter ControlID="Label1" Name="UserId" PropertyName="Text" />
             <asp:ControlParameter ControlID="Calendar1" Name="SelectedDate" PropertyName="SelectedDate" />
@@ -32,7 +32,6 @@
                     <asp:BoundField DataField="Booking_Date" HeaderText="Booking_Date" SortExpression="Booking_Date" />
                     <asp:BoundField DataField="Booking_StartTime" HeaderText="Booking_StartTime" SortExpression="Booking_StartTime" />
                     <asp:BoundField DataField="Booking_EndTime" HeaderText="Booking_EndTime" SortExpression="Booking_EndTime" />
-                    <asp:BoundField DataField="Booking_TotalCost" HeaderText="Booking_TotalCost" SortExpression="Booking_TotalCost" />
                     <asp:BoundField DataField="FirstName" HeaderText="FirstName" SortExpression="FirstName" />
                     <asp:BoundField DataField="LastName" HeaderText="LastName" SortExpression="LastName" />
                     <asp:BoundField DataField="Id" HeaderText="Id" SortExpression="Id" />
