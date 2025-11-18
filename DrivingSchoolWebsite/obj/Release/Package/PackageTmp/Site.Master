@@ -34,125 +34,85 @@
     padding: 0;
     margin: 0;
 }
-    /* Floating Button */
-    #chatbot-button {
-        position: fixed;
-        bottom: 25px;
-        right: 25px;
-        width: 65px;
-        height: 65px;
-        background: #0078ff;
-        color: white;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 28px;
-        cursor: pointer;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-        transition: 0.2s;
-        z-index: 9999;
-    }
-    #chatbot-button:hover {
-        transform: scale(1.1);
-    }
 
-    /* Chat Window */
-    #chatbot-window {
-        position: fixed;
-        bottom: 100px;
-        right: 25px;
-        width: 340px;
-        height: 430px;
-        background: #fff;
-        border-radius: 14px;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-        display: none;
-        flex-direction: column;
-        overflow: hidden;
-        z-index: 9999;
-        animation: popUp 0.3s ease-out;
-    }
+    /* Chat button */
+#chatbot-button {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: #0078d7;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    cursor: pointer;
+    z-index: 9999;
+}
 
-    @keyframes popUp {
-        from { transform: scale(0.7); opacity: 0; }
-        to { transform: scale(1); opacity: 1; }
-    }
+/* Chat window */
+#chatbot-window {
+    position: fixed;
+    bottom: 100px;
+    right: 25px;
+    width: 320px;
+    height: 450px;
+    background: white;
+    border-radius: 10px;
+    display: none;
+    flex-direction: column;
+    box-shadow: 0 0 12px rgba(0,0,0,0.2);
+    z-index: 9999;
+}
 
-    #chatbot-header {
-        background: #0078ff;
-        color: white;
-        padding: 13px;
-        font-size: 18px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+#chatbot-header {
+    padding: 12px;
+    background: #0078d7;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+}
 
-    #chatbot-header button {
-        background: transparent;
-        border: none;
-        color: white;
-        font-size: 22px;
-        cursor: pointer;
-    }
+#chatbot-messages {
+    padding: 10px;
+    overflow-y: auto;
+}
 
-    #chatbot-messages {
-        flex: 1;
-        padding: 12px;
-        overflow-y: auto;
-        background: #f5f7fa;
-    }
+/* FAQ Styles */
+.faq-category {
+    padding: 10px;
+    background: #eee;
+    margin-top: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
-    /* Messages */
-    .msg-user, .msg-bot {
-        margin-bottom: 12px;
-        padding: 10px 14px;
-        border-radius: 10px;
-        max-width: 80%;
-        font-size: 14px;
-        line-height: 1.4em;
-    }
+.faq-questions {
+    margin-left: 10px;
+    margin-top: 5px;
+}
 
-    .msg-user {
-        background: #0078ff;
-        color: white;
-        margin-left: auto;
-        border-bottom-right-radius: 2px;
-    }
+.faq-question {
+    padding: 6px;
+    background: #f7f7f7;
+    margin: 5px 0;
+    border-radius: 4px;
+    cursor: pointer;
+}
 
-    .msg-bot {
-        background: #e9ecef;
-        color: #333;
-        margin-right: auto;
-        border-bottom-left-radius: 2px;
-    }
+.faq-answer {
+    padding: 8px;
+    background: #fff;
+    border-left: 3px solid #0078d7;
+    margin-bottom: 8px;
+    border-radius: 4px;
+}
 
-    /* Input area */
-    #chatbot-input-area {
-        display: flex;
-        padding: 10px;
-        background: white;
-        border-top: 1px solid #ddd;
-    }
-
-    #chatbot-input {
-        flex: 1;
-        padding: 10px;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        outline: none;
-    }
-
-    #chatbot-send {
-        background: #0078ff;
-        border: none;
-        color: white;
-        margin-left: 8px;
-        padding: 0 18px;
-        border-radius: 8px;
-        cursor: pointer;
-    }
+ 
 </style>
 </head>
 <body>
@@ -267,102 +227,124 @@
                     <p>&copy; <%: DateTime.Now.Year %> Araf's Driving School. All rights reserved.</p>
                 </div>
             </footer>
-    </form>
-    <!-- Floating Chat Button -->
-<div id="chatbot-button">
-    <i class="fa fa-comments"></i>
-</div>
+        <div id="chatbot-button">💬</div>
 
-<!-- Chatbot Popup -->
+<!-- Chatbot Window -->
 <div id="chatbot-window">
     <div id="chatbot-header">
-        <span>Driving School Assistant</span>
-        <button id="chatbot-close" type="button">×</button>
+        Araf's Driving School Assistant
+        <span id="chatbot-close">✖</span>
     </div>
 
     <div id="chatbot-messages"></div>
-
-    <div id="chatbot-input-area">
-        <input type="text" id="chatbot-input" placeholder="Type your message..." />
-        <button id="chatbot-send" type="button">
-            <i class="fa fa-paper-plane"></i>
-        </button>
-    </div>
 </div>
+    </form>
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/Scripts/bootstrap.js") %>
-    </asp:PlaceHolder><script>
-    const btn = document.getElementById("chatbot-button");
-    const win = document.getElementById("chatbot-window");
-    const closeBtn = document.getElementById("chatbot-close");
-    const messages = document.getElementById("chatbot-messages");
+    </asp:PlaceHolder>
+    <script>
+        // FLOATING BUTTON LOGIC
+        const btn = document.getElementById("chatbot-button");
+        const win = document.getElementById("chatbot-window");
+        const closeBtn = document.getElementById("chatbot-close");
+        const messages = document.getElementById("chatbot-messages");
 
-    // Open / close chatbot
-    btn.onclick = () => win.style.display = "flex";
-    closeBtn.onclick = () => win.style.display = "none";
+        btn.onclick = () => win.style.display = "flex";
+        closeBtn.onclick = () => win.style.display = "none";
 
-    // Load FAQs from ASMX
-    fetch("/ChatbotController.asmx/GetFaq", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        }
-    })
-    .then(res => res.text())
-    .then(xml => new DOMParser().parseFromString(xml, "text/xml"))
-    .then(data => {
-        let json = data.getElementsByTagName("string")[0].innerHTML;
-        let faq = JSON.parse(json);
+        // YOUR FAQ DATA (Directly in JS, no server needed)
+        const FaqData = {
+            "Booking": [
+                {
+                    Key: "How do I book a driving lesson?",
+                    Value: "You can book lessons through our website by first logging in with your email and password or registering an account. Select <b>BOOK ONLINE</b> and then choose your preferred date, time, instructor, and licence code."
+                },
+                {
+                    Key: "Can I reschedule a lesson?",
+                    Value: "Yes! You can reschedule up to <b>24 hours</b> before your lesson by logging into your account or contacting us."
+                }
+            ],
+            "Pricing": [
+                {
+                    Key: "How much does a driving lesson cost?",
+                    Value: "Code 8: <b>R200</b> per lesson.<br>Code 10: <b>R350</b> per lesson."
+                }
+            ],
+            "Instructors": [
+                {
+                    Key: "Who are your instructors?",
+                    Value: "All our instructors are <b>certified and experienced</b>."
+                },
+                {
+                    Key: "Can I choose my instructor?",
+                    Value: "Yes! When booking online, you can select your preferred instructor (if available)."
+                }
+            ],
+            "Driving Test": [
+                {
+                    Key: "Do you provide test preparation?",
+                    Value: "Yes, we offer driving test preparation lessons tailored to your local licensing requirements."
+                },
+                {
+                    Key: "Can you help me book my driving test?",
+                    Value: "We can guide you on how to book your test and can also book with the local licensing authority for you if needed."
+                }
+            ],
+            "General": [
+                {
+                    Key: "What are your operating hours?",
+                    Value: "Mon–Sat: <b>11:00–17:00</b><br>Sundays & Public Holidays: Closed"
+                },
+                {
+                    Key: "How can I contact the driving school?",
+                    Value: "Phone: <b>084 678 6530</b><br>Email: <b>arafismail075@gmail.com</b>"
+                }
+            ]
+        };
 
-        buildFaqUI(faq);
-    });
+        // BUILD UI
+        function buildFaqUI() {
+            messages.innerHTML = "";
 
-    function buildFaqUI(faq) {
-        messages.innerHTML = ""; // Clear previous
+            Object.keys(FaqData).forEach(category => {
+                const cat = document.createElement("div");
+                cat.className = "faq-category";
+                cat.innerHTML = `<b>▶ ${category}</b>`;
+                messages.appendChild(cat);
 
-        Object.keys(faq).forEach(category => {
-            // Category Header
-            const cat = document.createElement("div");
-            cat.className = "faq-category";
-            cat.innerHTML = `<b>▶ ${category}</b>`;
-            messages.appendChild(cat);
+                const qContainer = document.createElement("div");
+                qContainer.className = "faq-questions";
+                qContainer.style.display = "none";
 
-            // Questions container (hidden until clicked)
-            const qContainer = document.createElement("div");
-            qContainer.className = "faq-questions";
-            qContainer.style.display = "none";
+                FaqData[category].forEach(item => {
+                    const q = document.createElement("div");
+                    q.className = "faq-question";
+                    q.innerText = item.Key;
 
-            faq[category].forEach(pair => {
-                const q = document.createElement("div");
-                q.className = "faq-question";
-                q.innerText = pair.Key;
+                    const a = document.createElement("div");
+                    a.className = "faq-answer";
+                    a.innerHTML = item.Value;
+                    a.style.display = "none";
 
-                const a = document.createElement("div");
-                a.className = "faq-answer";
-                a.innerHTML = pair.Value;
-                a.style.display = "none";
+                    q.onclick = () => {
+                        a.style.display = a.style.display === "none" ? "block" : "none";
+                    };
 
-                // Show/hide answer
-                q.onclick = () => {
-                    a.style.display = a.style.display === "none" ? "block" : "none";
+                    qContainer.appendChild(q);
+                    qContainer.appendChild(a);
+                });
+
+                cat.onclick = () => {
+                    const open = qContainer.style.display === "block";
+                    qContainer.style.display = open ? "none" : "block";
+                    cat.innerHTML = open ? `<b>▶ ${category}</b>` : `<b>▼ ${category}</b>`;
                 };
 
-                qContainer.appendChild(q);
-                qContainer.appendChild(a);
+                messages.appendChild(qContainer);
             });
+        }
 
-            // Toggle show/hide questions
-            cat.onclick = () => {
-                const isOpen = qContainer.style.display === "block";
-                qContainer.style.display = isOpen ? "none" : "block";
-                cat.innerHTML = isOpen
-                    ? `<b>▶ ${category}</b>`
-                    : `<b>▼ ${category}</b>`;
-            };
-
-            messages.appendChild(qContainer);
-        });
-    }
+        buildFaqUI();
     </script>
 </body>
 </html>
