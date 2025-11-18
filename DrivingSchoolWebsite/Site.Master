@@ -227,20 +227,6 @@
                     <p>&copy; <%: DateTime.Now.Year %> Araf's Driving School. All rights reserved.</p>
                 </div>
             </footer>
-        <%
-    bool showChatbot = true;
-
-    if (Context.User != null && Context.User.Identity.IsAuthenticated)
-    {
-        if (User.IsInRole("adminRole") || User.IsInRole("instructorRole"))
-        {
-            showChatbot = false;
-        }
-    }
-%>
-
-<% if (showChatbot) { %>
-        <div id="chatbot-button">💬</div>
 
 <!-- Chatbot Window -->
 <div id="chatbot-window">
@@ -251,8 +237,7 @@
 
     <div id="chatbot-messages"></div>
 </div>
-        <% } %>
-    </form>
+  </form>
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/Scripts/bootstrap.js") %>
     </asp:PlaceHolder>
