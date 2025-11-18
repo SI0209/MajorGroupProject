@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AnalyticsForm));
             this.label9 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -400,18 +400,17 @@
             this.webView21.Source = new System.Uri("https://app.powerbi.com/groups/me/reports/c9b84389-f4ba-4c44-b9d8-c7f8d6e829a6/87" +
         "9deebd4de3ddcd78b2?experience=power-bi", System.UriKind.Absolute);
             this.webView21.TabIndex = 61;
-            this.webView21.Visible = false;
             this.webView21.ZoomFactor = 1D;
             // 
             // pieChart
             // 
-            chartArea1.AxisX.TitleFont = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea1.AxisY.TitleFont = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea1.AxisY2.TitleFont = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea1.Name = "ChartArea1";
-            this.pieChart.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.pieChart.Legends.Add(legend1);
+            chartArea3.AxisX.TitleFont = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea3.AxisY.TitleFont = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea3.AxisY2.TitleFont = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea3.Name = "ChartArea1";
+            this.pieChart.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.pieChart.Legends.Add(legend3);
             this.pieChart.Location = new System.Drawing.Point(1133, 248);
             this.pieChart.Margin = new System.Windows.Forms.Padding(4);
             this.pieChart.Name = "pieChart";
@@ -424,39 +423,39 @@
         System.Drawing.Color.DarkBlue,
         System.Drawing.Color.MidnightBlue,
         System.Drawing.Color.SlateBlue};
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series1.Legend = "Legend1";
-            series1.Name = "s1";
-            this.pieChart.Series.Add(series1);
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series3.Legend = "Legend1";
+            series3.Name = "s1";
+            this.pieChart.Series.Add(series3);
             this.pieChart.Size = new System.Drawing.Size(509, 318);
             this.pieChart.TabIndex = 60;
             this.pieChart.Text = "chart2";
             // 
             // chartBookings
             // 
-            chartArea2.BackColor = System.Drawing.Color.DimGray;
-            chartArea2.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.DiagonalLeft;
-            chartArea2.BackSecondaryColor = System.Drawing.Color.Transparent;
-            chartArea2.BorderColor = System.Drawing.Color.Transparent;
-            chartArea2.Name = "ChartArea1";
-            this.chartBookings.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chartBookings.Legends.Add(legend2);
+            chartArea4.BackColor = System.Drawing.Color.DimGray;
+            chartArea4.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.DiagonalLeft;
+            chartArea4.BackSecondaryColor = System.Drawing.Color.Transparent;
+            chartArea4.BorderColor = System.Drawing.Color.Transparent;
+            chartArea4.Name = "ChartArea1";
+            this.chartBookings.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.chartBookings.Legends.Add(legend4);
             this.chartBookings.Location = new System.Drawing.Point(245, 259);
             this.chartBookings.Name = "chartBookings";
             this.chartBookings.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             this.chartBookings.PaletteCustomColors = new System.Drawing.Color[] {
         System.Drawing.Color.Blue};
-            series2.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.TopBottom;
-            series2.BackSecondaryColor = System.Drawing.Color.MidnightBlue;
-            series2.BorderColor = System.Drawing.Color.Black;
-            series2.BorderWidth = 2;
-            series2.ChartArea = "ChartArea1";
-            series2.Color = System.Drawing.Color.Blue;
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chartBookings.Series.Add(series2);
+            series4.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.TopBottom;
+            series4.BackSecondaryColor = System.Drawing.Color.MidnightBlue;
+            series4.BorderColor = System.Drawing.Color.Black;
+            series4.BorderWidth = 2;
+            series4.ChartArea = "ChartArea1";
+            series4.Color = System.Drawing.Color.Blue;
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.chartBookings.Series.Add(series4);
             this.chartBookings.Size = new System.Drawing.Size(714, 300);
             this.chartBookings.TabIndex = 58;
             this.chartBookings.Text = "chart1";
