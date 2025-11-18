@@ -203,6 +203,7 @@
     <Content Include="Content\aboutus.css" />
     <Content Include="Content\contactus.css" />
     <Content Include="Content\services.css" />
+    <Content Include="Content\zephyr.css" />
     <Content Include="Images\aboutus.png" />
     <Content Include="Images\AnonPic.png" />
     <Content Include="Images\car_9931499.png" />
