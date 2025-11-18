@@ -571,16 +571,6 @@ namespace DrivingSchoolBookingSystem
             MessageBox.Show(instructions, "How to Use the Analytics Report", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox1.Checked)
-            {
-                webView21.Visible = true;
-            }
-            else
-            {
-                webView21.Visible = false;
-            }
-        }
+      
     }
 }
