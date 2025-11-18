@@ -255,8 +255,6 @@
                     <asp:Parameter DbType="Time" Name="Booking_StartTime" />
                     <asp:Parameter DbType="Time" Name="Booking_EndTime" />
                     <asp:Parameter Name="Booking_Status" Type="String" />
-                    <asp:Parameter Name="Booking_TotalCost" Type="Decimal" />
-                    <asp:Parameter Name="Booking_FeeDue" Type="Decimal" />
                     <asp:Parameter Name="LearnerID" Type="String" />
                     <asp:Parameter Name="Code_Type" Type="Int32" />
                     <asp:Parameter Name="VehicleID" Type="Int32" />

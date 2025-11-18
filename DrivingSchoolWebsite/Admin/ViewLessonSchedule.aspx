@@ -22,7 +22,6 @@
                 <div class="grid-container">
                     <asp:GridView ID="gvLessonSchedule" runat="server" AutoGenerateColumns="False" DataSourceID="dsLessonSchedule" Width="300%" CssClass="gv-with-scroll">
                         <Columns>
-                            <asp:BoundField DataField="Booking_TotalCost" HeaderText="Booking_TotalCost" SortExpression="Booking_TotalCost" ItemStyle-Width="1000px" />
                             <asp:BoundField DataField="BookingID" HeaderText="BookingID" SortExpression="BookingID" ItemStyle-Width="1000px" InsertVisible="False" ReadOnly="True"/>
                             <asp:BoundField DataField="Booking_Date" HeaderText="Booking_Date" SortExpression="Booking_Date" ItemStyle-Width="1000px"/>
                             <asp:BoundField DataField="Booking_StartTime" HeaderText="Booking_StartTime" SortExpression="Booking_StartTime" ItemStyle-Width="1000px"/>
@@ -42,7 +41,7 @@
                 </div>
             </div>
 
-            <asp:SqlDataSource ID="dsLessonSchedule" runat="server" ConnectionString="<%$ ConnectionStrings:WstGrp2ConnectionString %>" SelectCommand="SELECT b.Booking_TotalCost, b.BookingID, b.Booking_Date, b.Booking_StartTime, b.Booking_EndTime, b.Code_Type, e.EmployeeID, e.Employee_Name, e.Employee_Surname, learner.FirstName, learner.LastName, learner.IDNumber, v.Vehicle_NumberPlate, v.Vehicle_Make, v.Vehicle_Model FROM tblBooking AS b INNER JOIN tblEmployee AS e ON b.EmployeeID = e.EmployeeID INNER JOIN tblVehicle AS v ON b.VehicleID = v.VehicleID LEFT OUTER JOIN AspNetUsers AS learner ON b.LearnerID = learner.Id WHERE (e.Employee_Name = @Employee_Name) AND (b.Booking_Date BETWEEN @StartDate AND @EndDate) ORDER BY b.Booking_Date DESC">
+            <asp:SqlDataSource ID="dsLessonSchedule" runat="server" ConnectionString="<%$ ConnectionStrings:WstGrp2ConnectionString %>" SelectCommand="SELECT b.BookingID, b.Booking_Date, b.Booking_StartTime, b.Booking_EndTime, b.Code_Type, e.EmployeeID, e.Employee_Name, e.Employee_Surname, learner.FirstName, learner.LastName, learner.IDNumber, v.Vehicle_NumberPlate, v.Vehicle_Make, v.Vehicle_Model FROM tblBooking AS b INNER JOIN tblEmployee AS e ON b.EmployeeID = e.EmployeeID INNER JOIN tblVehicle AS v ON b.VehicleID = v.VehicleID LEFT OUTER JOIN AspNetUsers AS learner ON b.LearnerID = learner.Id WHERE (e.Employee_Name = @Employee_Name) AND (b.Booking_Date BETWEEN @StartDate AND @EndDate) ORDER BY b.Booking_Date DESC">
                 <SelectParameters>
                     <asp:ControlParameter ControlID="ddlInstructor" Name="Employee_Name" PropertyName="SelectedValue" />
                     <asp:ControlParameter ControlID="txtStartDate" Name="StartDate" PropertyName="Text" />
