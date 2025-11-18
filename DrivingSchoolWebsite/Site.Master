@@ -34,125 +34,85 @@
     padding: 0;
     margin: 0;
 }
-    /* Floating Button */
-    #chatbot-button {
-        position: fixed;
-        bottom: 25px;
-        right: 25px;
-        width: 65px;
-        height: 65px;
-        background: #0078ff;
-        color: white;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 28px;
-        cursor: pointer;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-        transition: 0.2s;
-        z-index: 9999;
-    }
-    #chatbot-button:hover {
-        transform: scale(1.1);
-    }
 
-    /* Chat Window */
-    #chatbot-window {
-        position: fixed;
-        bottom: 100px;
-        right: 25px;
-        width: 340px;
-        height: 430px;
-        background: #fff;
-        border-radius: 14px;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-        display: none;
-        flex-direction: column;
-        overflow: hidden;
-        z-index: 9999;
-        animation: popUp 0.3s ease-out;
-    }
+    /* Chat button */
+#chatbot-button {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: #0078d7;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    cursor: pointer;
+    z-index: 9999;
+}
 
-    @keyframes popUp {
-        from { transform: scale(0.7); opacity: 0; }
-        to { transform: scale(1); opacity: 1; }
-    }
+/* Chat window */
+#chatbot-window {
+    position: fixed;
+    bottom: 100px;
+    right: 25px;
+    width: 320px;
+    height: 450px;
+    background: white;
+    border-radius: 10px;
+    display: none;
+    flex-direction: column;
+    box-shadow: 0 0 12px rgba(0,0,0,0.2);
+    z-index: 9999;
+}
 
-    #chatbot-header {
-        background: #0078ff;
-        color: white;
-        padding: 13px;
-        font-size: 18px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+#chatbot-header {
+    padding: 12px;
+    background: #0078d7;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+}
 
-    #chatbot-header button {
-        background: transparent;
-        border: none;
-        color: white;
-        font-size: 22px;
-        cursor: pointer;
-    }
+#chatbot-messages {
+    padding: 10px;
+    overflow-y: auto;
+}
 
-    #chatbot-messages {
-        flex: 1;
-        padding: 12px;
-        overflow-y: auto;
-        background: #f5f7fa;
-    }
+/* FAQ Styles */
+.faq-category {
+    padding: 10px;
+    background: #eee;
+    margin-top: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
-    /* Messages */
-    .msg-user, .msg-bot {
-        margin-bottom: 12px;
-        padding: 10px 14px;
-        border-radius: 10px;
-        max-width: 80%;
-        font-size: 14px;
-        line-height: 1.4em;
-    }
+.faq-questions {
+    margin-left: 10px;
+    margin-top: 5px;
+}
 
-    .msg-user {
-        background: #0078ff;
-        color: white;
-        margin-left: auto;
-        border-bottom-right-radius: 2px;
-    }
+.faq-question {
+    padding: 6px;
+    background: #f7f7f7;
+    margin: 5px 0;
+    border-radius: 4px;
+    cursor: pointer;
+}
 
-    .msg-bot {
-        background: #e9ecef;
-        color: #333;
-        margin-right: auto;
-        border-bottom-left-radius: 2px;
-    }
+.faq-answer {
+    padding: 8px;
+    background: #fff;
+    border-left: 3px solid #0078d7;
+    margin-bottom: 8px;
+    border-radius: 4px;
+}
 
-    /* Input area */
-    #chatbot-input-area {
-        display: flex;
-        padding: 10px;
-        background: white;
-        border-top: 1px solid #ddd;
-    }
-
-    #chatbot-input {
-        flex: 1;
-        padding: 10px;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        outline: none;
-    }
-
-    #chatbot-send {
-        background: #0078ff;
-        border: none;
-        color: white;
-        margin-left: 8px;
-        padding: 0 18px;
-        border-radius: 8px;
-        cursor: pointer;
-    }
+ 
 </style>
 </head>
 <body>
@@ -267,28 +227,18 @@
                     <p>&copy; <%: DateTime.Now.Year %> Araf's Driving School. All rights reserved.</p>
                 </div>
             </footer>
-    </form>
-    <!-- Floating Chat Button -->
-<div id="chatbot-button">
-    <i class="fa fa-comments"></i>
-</div>
+        <div id="chatbot-button">💬</div>
 
-<!-- Chatbot Popup -->
+<!-- Chatbot Window -->
 <div id="chatbot-window">
     <div id="chatbot-header">
-        <span>Driving School Assistant</span>
-        <button id="chatbot-close" type="button">×</button>
+        Araf's Driving School Assistant
+        <span id="chatbot-close">✖</span>
     </div>
 
     <div id="chatbot-messages"></div>
-
-    <div id="chatbot-input-area">
-        <input type="text" id="chatbot-input" placeholder="Type your message..." />
-        <button id="chatbot-send" type="button">
-            <i class="fa fa-paper-plane"></i>
-        </button>
-    </div>
 </div>
+    </form>
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/Scripts/bootstrap.js") %>
     </asp:PlaceHolder>
