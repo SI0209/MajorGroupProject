@@ -229,15 +229,15 @@
             </footer>
 
 <!-- Chatbot Window -->
-<div id="chatbot-window">
-    <div id="chatbot-header">
-        Araf's Driving School Assistant
+       <!-- <div id="chatbot-window">
+            <div id="chatbot-header">
+                Araf's Driving School Assistant
         <span id="chatbot-close">✖</span>
-    </div>
+            </div>
 
-    <div id="chatbot-messages"></div>
-</div>
-  </form>
+            <div id="chatbot-messages"></div>
+        </div>
+    </form>
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/Scripts/bootstrap.js") %>
     </asp:PlaceHolder>
@@ -342,9 +342,8 @@
                 messages.appendChild(qContainer);
             });
         }
-
         buildFaqUI();
-    </script>
-
+    </script> -->
+        <script src='//uae.fw-cdn.com/40335159/209988.js' chat='true'></script>
 </body>
 </html>
