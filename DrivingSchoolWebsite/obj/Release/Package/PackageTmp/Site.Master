@@ -227,6 +227,17 @@
                     <p>&copy; <%: DateTime.Now.Year %> Araf's Driving School. All rights reserved.</p>
                 </div>
             </footer>
+
+<!-- Chatbot Window -->
+<        <div id="chatbot-window">
+            <div id="chatbot-header">
+                Araf's Driving School Assistant
+        <span id="chatbot-close">✖</span>
+            </div>
+
+            <div id="chatbot-messages"></div>
+        </div>
                 <script src='//uae.fw-cdn.com/40335159/209988.js' chat='true'></script>
+    </form>
 </body>
 </html>
