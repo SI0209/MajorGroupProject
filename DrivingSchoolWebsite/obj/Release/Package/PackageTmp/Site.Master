@@ -229,19 +229,19 @@
             </footer>
 
 <!-- Chatbot Window -->
-<!-- <div id="chatbot-window">
-    <div id="chatbot-header">
-        Araf's Driving School Assistant
+       <!-- <div id="chatbot-window">
+            <div id="chatbot-header">
+                Araf's Driving School Assistant
         <span id="chatbot-close">✖</span>
-    </div>
+            </div>
 
-    <div id="chatbot-messages"></div>
-</div>
-  </form>
-    <asp:PlaceHolder runat="server">-->
+            <div id="chatbot-messages"></div>
+        </div>
+    </form>
+    <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/Scripts/bootstrap.js") %>
     </asp:PlaceHolder>
-    <!-- <script>
+    <script>
         // FLOATING BUTTON LOGIC
         const btn = document.getElementById("chatbot-button");
         const win = document.getElementById("chatbot-window");
@@ -342,23 +342,8 @@
                 messages.appendChild(qContainer);
             });
         }
-
         buildFaqUI();
-    </script>-->
-  <!-- Your Freshchat Widget -->
-<script>
-    function initFreshChat() {
-        window.fcWidget.init({
-            token: "a880b70c-621d-4748-94da-8fc4da08481b",
-            host: "https://wchat.freshchat.com"
-        });
-    }
-    function initialize(i, t) {
-        var e; i.getElementById(t) ?
-            initFreshChat() : ((e = i.createElement("script")).id = t, e.async = !0,
-                e.src = "https://wchat.freshchat.com/js/widget.js", e.onload = initFreshChat,
-                i.head.appendChild(e))
-    } initialize(document, "freshchat-js-sdk");
-</script>
+    </script> -->
+        <script src='//uae.fw-cdn.com/40335159/209988.js' chat='true'></script>
 </body>
 </html>
