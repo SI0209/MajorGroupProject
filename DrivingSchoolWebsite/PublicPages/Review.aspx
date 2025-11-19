@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Review.aspx.cs" Inherits="DrivingSchoolWebsite.Public_Pages.Review" %>
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    
+ 
+
     <section style="padding: 50px; background-color: #000; color: #fff;">
         <h2 style="text-align: center; margin-bottom: 40px;">Customer Reviews</h2>
 
@@ -45,6 +46,16 @@
                 </div>
             </div>
 
+            <asp:Repeater ID="rptReviews" runat="server">
+    <ItemTemplate>
+        <div class="review-card">
+            <h4><%# Eval("UserName") %></h4>
+            <p class="rating">Rating: <%# Eval("Rating") %> / 5</p>
+            <p class="comment"><%# Eval("Comment") %></p>
+            <span class="date"><%# Eval("ReviewDate", "{0:dd MMM yyyy}") %></span>
+        </div>
+    </ItemTemplate>
+</asp:Repeater>
             <!-- Add Review Button -->
             <div style="text-align: center; margin-top: 40px;">
                 <button type="button" onclick="redirectToLogin()" style="padding: 10px 20px; background-color: #3498db; color: #fff; border: none; cursor: pointer;">Add Your Review</button>
@@ -90,6 +101,22 @@
         .review-content p {
             margin-bottom: 10px;
         }
+
+    .review-card {
+    background: #f8f8f8;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.15);
+    }
+    .rating {
+    font-weight: bold;
+    color: #ff9900;
+    }
+    .date {
+    font-size: 12px;
+    color: #777;
+    }
     </style>
 </asp:Content>
 
