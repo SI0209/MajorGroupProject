@@ -280,7 +280,6 @@
     <Content Include="Admin\Web.config" />
     <Content Include="Client\Web.config" />
     <Content Include="Instructor\Web.config" />
-    <None Include="Properties\PublishProfiles\IST-WST-Group-2 - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\chat-fetch.js" />
     <Content Include="Scripts\chat.js" />
@@ -663,6 +662,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Properties\PublishProfiles\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
