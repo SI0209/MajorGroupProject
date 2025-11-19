@@ -17,7 +17,7 @@
                     width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
-            <div class="contact-form">
+            <!--<div class="contact-form">
                 <form>
                     <div class="form-group">
                         <label for="firstName">First Name</label>
@@ -37,7 +37,7 @@
                     </div>
                     <button type="submit" class="submit-button">Send Message</button>
                 </form>
-            </div>
+            </div>-->
         </div>
     </section>
 
